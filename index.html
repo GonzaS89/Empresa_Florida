@@ -10,97 +10,10 @@
     <title>kioraicoletivo?</title>
 </head>
 <body>
-    <header class="header">
-        <p id="nombre"">kioraicoletivo?</p>
-        <p id="firma">Por Gonza Sinhg</p>
-    </header>   
-    <div class="subheader-cont">
-        <div class="subheader">
-            <p id="fecha"></p>
-            <p id="hora"></p>
-        </div>
-    </div> 
-    <main class="contenedor">
-     <div class="botonManual-cont">
-        <button id="botonManual">Cambiar a búsqueda manual</button>
-     </div>
-     <div class="botonAuto-cont">
-        <button id="botonAuto">Cambiar a búsqueda automática</button>
-     </div>
-     <div class="topside">
-     <div class="busquedaAuto-cont" >
-        <div class="busquedaAuto1">
-            <!-- <p>Estas en..</p> -->
-            <form class="menu" name=menu action="">
-                <select id="selector" class="select"name="selector">
-                    <option value="default" disabled selected>Estoy en</option>
-                    <option value="florida" >Florida</option>
-                    <option value="sanM">S.M. de Tucumán</option>
-                </select>
-            </form>
-        </div>
-        <div class="busquedaAuto2">
-            <!-- <p>Queres viajar por..</p> -->
-            <form class="menu2" name=menu2 action="">
-                <select id="selector2" class="select"name="selector2">
-                    <option value="default" disabled selected>Quiero viajar por</option>
-                    <option value="alderetes">Alderetes</option>
-                    <option value="posse">Posse</option>
-                </select>
-            </form>
-        </div>
+    <div class="mensaje">
+        <p id="mensaje">Nueva página para consulta de horarios&#128513. Ingresá al enlace de aquí abajo.<br><br></p>
+        <a id="enlace" href="http://empresafloridasrl.ar/">c' vamo?</a>
     </div>
-        <div class="busquedaManual-cont">
-            <form class="busquedaManual1" name="menu3">
-            <select class="select" name="selector3" id="selector3">
-                <option disabled selected value="default">Elije un día</option>
-                <option value="lunesViernes">Lunes a Viernes</option>
-                <option value="sabado">Sábado</option>
-                <option value="domingo">Domingo / Feriado</option>
-            </select>
-           </form>
-            <div class="busquedaManual2">
-            <input id="busquedaInput2"type="number" max="23" placeholder="Ingresa un horario">
-            </div>
-        </div>
-</div>
-<div class="mensajeError">
-    <p id="mensaje"></p>
-</div>
-
-    <div class="boton-cont">
-        <button id='boton'>Mostrar</button>   
-    </div>
-    <div class="boton-cont2">
-        <button id='boton2'>Mostrar</button>   
-    </div>
-    <div class="anuncio-cont">
-        <p id="anuncio">Próximamente versión oficial de Empresa Florida</p>
-    </div>
-    <div class="mensaje2">
-        <div class="resultados-cont">
-            <h1 id="titulo-resultados"></h1>
-        <div class="resultados">
-            <p id="actual1"></p>
-            <p id="actual2"></p>
-            <p id="actual3"></p>
-        </div>
-        <div class="resultados2">
-            <p id="futuro1"></p>   
-            <p id="futuro2"></p>   
-            <p id="futuro3"></p>   
-        </div>
-            <div class="resultados3">
-                <p id="mostrar1"></p>
-                <p id="mostrar2"></p>
-            </div>
-        </div>
-    </div>
-     </div>
-    </main>
-    
-    
-    </body>
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <script src="main.js"></script>
+   
+</body>
 </html>
