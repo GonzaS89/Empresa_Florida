@@ -6224,8 +6224,7 @@ for(i=0; i < selector.length;i++){
                 }
                 for(i=0;i<horasYMinutosLlegada.length;i++){
                     if(horaEnEnteros >= horasYMinutosLlegada[i] && (horaEnEnteros < horasYMinutosLlegada[i + 1])){
-                        actual5.textContent = diaRango[listaDiferencias.indexOf(anteriorPasado)].recorrido[i].parada
-                        actual6.textContent = diaRango[listaDiferencias.indexOf(anteriorPasado)].recorrido[i + 1].parada
+                        actual5.textContent = `Trayecto actual aproximado: ${diaRango[listaDiferencias.indexOf(anteriorPasado)].recorrido[i].parada} → ${diaRango[listaDiferencias.indexOf(anteriorPasado)].recorrido[i + 1].parada}`
                     }
                 }
             }
