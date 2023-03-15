@@ -614,6 +614,7 @@ border:none;
 border: .5px solid white;
 background-color: var(--blanco);
 min-height: 180px;
+overflow-x: hidden;
 }
 .resultados3,.resultados4{
     height: 300px;
@@ -723,7 +724,7 @@ min-height: 180px;
     height: 100px;
 }
 #señal{
-    width: 100px;
+    width: 75px;
     height: 70px;
     background-size: cover;
     background-image: url(Imagenes/señalciudad.png);
@@ -735,10 +736,11 @@ min-height: 180px;
     justify-content:center;
     align-items: center;
     height: 50px;
-    width:95%;
+    width:400px;
     margin: 10px;
     gap: 5px;
     margin-top: 20px;
+    z-index: 5;
 
 }
 
@@ -746,7 +748,7 @@ min-height: 180px;
 
 #img-bondi{
     width:300px;
-    height:60px;
+    height:50px;
     background-size:contain;
     background-repeat: no-repeat;
     background-image: url(imagenes/bus.webp);
@@ -764,6 +766,23 @@ min-height: 180px;
     }
     50%{
         transform: translateY(-.5px);
+    }
+}
+#ruta{
+    background-image: url(Imagenes/rutita.jpg);
+    width: 1000px;
+    height: 100px;
+    background-position: center;
+    position: relative;
+    bottom: 30px;
+    animation: moverRuta 3s linear infinite;
+}
+@keyframes moverRuta{
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(-300px);
     }
 }
 
@@ -828,10 +847,10 @@ min-height: 180px;
     }
     #actual5,#actual6{
         margin: 10px 5px;
-        font-size: 13px;
+        font-size: 10px;
         flex-basis: 30%;
         position: relative;
-        bottom: 13px;
+        bottom: 19px;
         right: 5px;
         color: var(--blanco);
     }
