@@ -736,12 +736,11 @@ overflow-x: hidden;
     justify-content:center;
     align-items: center;
     height: 50px;
-    width:400px;
+    width:95%;
     margin: 10px;
     gap: 5px;
     margin-top: 20px;
     z-index: 5;
-
 }
 
 
@@ -768,23 +767,7 @@ overflow-x: hidden;
         transform: translateY(-.5px);
     }
 }
-#ruta{
-    background-image: url(Imagenes/rutita.jpg);
-    width: 1000px;
-    height: 100px;
-    background-position: center;
-    position: relative;
-    bottom: 30px;
-    animation: moverRuta 3s linear infinite;
-}
-@keyframes moverRuta{
-    0%{
-        transform: translateX(0px);
-    }
-    100%{
-        transform: translateX(-300px);
-    }
-}
+
 
 
 
@@ -847,12 +830,7 @@ overflow-x: hidden;
     }
     #actual5,#actual6{
         margin: 10px 5px;
-        font-size: 10px;
         flex-basis: 30%;
-        position: relative;
-        bottom: 19px;
-        right: 5px;
-        color: var(--blanco);
     }
     .mensaje2{
         display: none;
