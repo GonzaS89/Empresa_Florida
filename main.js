@@ -6208,8 +6208,6 @@ for(i=0; i < selector.length;i++){
                 }
                 
                 
-                    
-                        
                     else{
                         actual1.textContent = '';
                         actual2.textContent = 'No pasó ningun servicio aún'
