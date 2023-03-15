@@ -108,7 +108,32 @@ const horariosLvFloAl = [
         {
             "nombre":"07:40",
             "salida":7.4,
-            "recorrido":"Finca Mayo → Fortin → Cochuchal → Alderetes → Banda del Río Salí"
+            "recorrido":[
+                {
+                    "parada":"Fortin",
+                    "horaDeLlegada":7.4
+                },
+                {
+                    "parada":"Fonda",
+                    "horaDeLlegada":8
+                },
+                {
+                    "parada":"Cochuchal",
+                    "horaDeLlegada":8.15
+                },
+                {
+                    "parada":"Alderetes",
+                    "horaDeLlegada":8.2
+                },
+                {
+                    "parada":"Banda",
+                    "horaDeLlegada":8.3
+                },
+                {
+                    "parada":"Capital",
+                    "horaDeLlegada":8.4
+                }
+            ]
         },
         {
             "nombre":"07:50",
