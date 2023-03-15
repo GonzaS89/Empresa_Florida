@@ -22,7 +22,18 @@ a{
     font-weight: 400;
     text-shadow: 5px 5px 10px  black;
     font-size: 20px;
+    animation: moverLink 1s linear infinite;
 }
+
+@keyframes moverLink {
+    0%{
+        transform:traslateX(0)
+    }
+    100%{
+        transform:traslateX(10px)
+    }
+}
+
 li{
     list-style: none;
 }
@@ -51,7 +62,7 @@ li{
     background-position: center center;
     background-color:var(--blanco);
     align-self: baseline;
-    animation: moverLogo 1.5s linear forwards;
+    animation: moverLogo 2s linear forwards;
 }
 @keyframes moverLogo{
     0%{
