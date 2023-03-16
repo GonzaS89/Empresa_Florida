@@ -578,7 +578,7 @@ min-height: 180px;
 #indicacion{
     color: var(--blanco);
     font-size: 15px;
-    animation: moverIndicacion 1.5s linear infinite;
+    animation: moverIndicacion 1.5s linear infinite alternate-reverse;
 }
 
 @keyframes moverIndicacion{
