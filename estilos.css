@@ -481,7 +481,7 @@ filter: opacity(25%)
 }
 
 .resultados,.resultados2{
-    min-height: 130px;
+min-height: 130px;
 width: 50%;
 display: none;
 justify-content: center;
@@ -494,7 +494,7 @@ border: .5px solid white;
 background-color: var(--blanco);
 }
 .resultados3,.resultados4{
-    height: 300px;
+    min-height: 130px;
     width: 50%;
     display: none;
     justify-content: center;
@@ -505,7 +505,6 @@ background-color: var(--blanco);
     border:none;
     border: .5px solid white;
     background-color: var(--blanco);
-    min-height: 180px;
 }
 #actual1,#futuro1{
     padding: 0 10px;
@@ -574,7 +573,7 @@ background-color: var(--blanco);
     justify-content: center;
     align-items: center;
     height: 40px;
-    width: 35%;
+    width: 150px;
     margin-top: 50px;
     background-color: #fefbfb;
     border-radius: 20px;
@@ -686,6 +685,9 @@ background-color: var(--blanco);
         border: .5px solid white;
         padding: 10px 0;
         min-height: 130px;
+    }
+    .resultados3{
+        height: 150px;
     }
     
     #actual1,#actual2,#actual3,#actual4,#futuro1,#futuro2,#futuro3,#futuro4{
