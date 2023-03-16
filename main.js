@@ -3157,6 +3157,7 @@ const boton = document.getElementById('boton');
     let futuro3 = document.getElementById('futuro3');
     let futuro4 = document.getElementById('futuro4');
     let tituloResultado = document.getElementById('tituloResultado')
+    const indicacion = document.querySelector('.indicacion-cont')
 
      // Aqui definimos donde localidad de salida y camino
 
@@ -3173,7 +3174,7 @@ const boton = document.getElementById('boton');
     }
     else{
 
-        tituloResultado.textContent =`Hoy, ${diaSemana}, tenés éstos servicios`
+        // tituloResultado.textContent =`Hoy, ${diaSemana}, tenés éstos servicios`
     
  //    Aqui definimos el array dependiendo el dia de la semana
         
@@ -3357,8 +3358,9 @@ const boton = document.getElementById('boton');
 
     $('.resultados').css('display','flex')
     $('.resultados2').css('display','flex')     
-    $('.mensaje2').css('display', 'flex')   
-   mensaje2.addEventListener('click', function(){
+    $('.mensaje2').css('display', 'flex') 
+    })
+    indicacion.addEventListener('click', function(){
     $('.mensaje2').css('display', 'none') 
     $('.resultados').css('display','none')
     $('.resultados2').css('display','none')   
@@ -3380,12 +3382,8 @@ const boton = document.getElementById('boton');
 
     
     
-})
-mensaje2.addEventListener('click', function(){
-    $('.mensaje2').css('display', 'none')  
-    opcionbase.selected = true;
-    opcionbase2.selected = true;
-})
+
+
 
 
 
@@ -6429,6 +6427,8 @@ function busquedaManual(){
         $('.busquedaAuto').css('display', 'none')
         $('.boton-cont').css('display','none');
         $('.boton-cont2').css('display','flex');
+        
+
 
     })
     botonAuto.addEventListener('click', function(){
@@ -6438,7 +6438,16 @@ function busquedaManual(){
         $('.topside2').css('display', 'none');
         $('.boton-cont').css('display','flex');
         $('.boton-cont2').css('display','none');
-        
+        botonCapitalDestino.selected = false;
+        botonOrigenCapital.selected = false;
+        $('#origenCapital').css('background-color', 'var(--blanco');
+        $('#origenCapital').css('color', 'var(--black');
+        $('#capitalDestino').css('background-color', 'var(--blanco');
+        $('#capitalDestino').css('color', 'var(--black');
+        $('#selector3').css('display', 'none');
+        $('#selector4').css('display', 'none');
+        $('#selector5').css('display', 'none');
+        $('#ingHora').css('display', 'none');
     })
 
 
@@ -6609,7 +6618,7 @@ function busquedaManual(){
         })
        
 
-        mensaje2.addEventListener('click', function(){
+        indicacion.addEventListener('click', function(){
             $('.mensaje2').css('display', 'none') 
             $('.resultados3').css('display','none')
             $('#selector3').css('display','none')      

@@ -568,6 +568,27 @@ min-height: 180px;
     margin-bottom: 15px;
     padding: 10px;
 }
+.indicacion-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-top: 20px;
+}
+#indicacion{
+    color: var(--blanco);
+    font-size: 15px;
+    animation: moverIndicacion 1.5s linear infinite;
+}
+
+@keyframes moverIndicacion{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
 /* #mensaje2{
     display: flex;
     justify-content: center;
