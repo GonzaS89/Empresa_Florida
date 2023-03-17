@@ -63,28 +63,28 @@ const horariosLvFloAl = [
     {
         "nombre":"05:35",
         "salida":5.35,
-        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alternativa"
+        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alternativa → Terminal"
     },
     {
         "nombre":"06:10",
         "salida":6.10,
         "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí",
-        "recorrido2":"Colonia 10 → Colonia 4 → Barrio La Cancha → Cochuchal → Alderetes → Autopista"
+        "recorrido2":"Colonia 10 → Colonia 4 → Barrio La Cancha → Cochuchal → Alderetes → Autopista → Terminal"
     },
     {
         "nombre":"06:20",
         "salida":6.2,
-        "recorrido":"Colonia 5 → Fortin → Esquina Lastra → Fonda → Barrio La Cancha → Talar → Alternativa"
+        "recorrido":"Colonia 5 → Fortin → Esquina Lastra → Fonda → Barrio La Cancha → Talar → Alternativa → Terminal"
     },
     {
         "nombre":"06:50",
         "salida":6.5,
-        "recorrido":"Colonia 4 → Fonda →  Talar →Alternativa"
+        "recorrido":"Colonia 4 → Fonda →  Talar → Alternativa → Terminal"
     },
     {
         "nombre":"07:20",
         "salida":7.2,
-        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alternativa",
+        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alternativa → Terminal",
         "recorrido2":"Fortin → Esquina Lastra → Florida → Talar →  Cochuchal → Alderetes → Banda del Río Salí"
     },
     {
@@ -95,14 +95,14 @@ const horariosLvFloAl = [
     {
         "nombre":"07:50",
         "salida":7.5,
-        "recorrido":"Colonia 4 → Fonda → Talar → Alternativa",
-        "recorrido2":"Colonia 4 → Barrio La Cancha → Alderetes → Autopista"
+        "recorrido":"Colonia 4 → Fonda → Talar → Alternativa → Terminal",
+        "recorrido2":"Colonia 4 → Barrio La Cancha → Alderetes → Autopista → Terminal"
     },
     {
         "nombre":"08:45",
         "salida":8.45,
-        "recorrido":"Colonia 4 → Barrio La Cancha → Cochuchal → Alderetes → Autopista",
-        "recorrido2":"Colonia 4 → Barrio La Cancha → Talar → Alternativa"
+        "recorrido":"Colonia 4 → Barrio La Cancha → Cochuchal → Alderetes → Autopista → Terminal",
+        "recorrido2":"Colonia 4 → Barrio La Cancha → Talar → Alternativa → Terminal"
     },
     {
         "nombre":"09:20",
@@ -112,7 +112,7 @@ const horariosLvFloAl = [
     {
         "nombre":"09:50",
         "salida":9.5,
-        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Autopista"
+        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Autopista → Terminal"
     },
     {
         "nombre":"10:30",
@@ -128,17 +128,17 @@ const horariosLvFloAl = [
     {
         "nombre":"12:20",
         "salida":12.2,
-        "recorrido":"Fortin → Colonia 4 → Barrio La Cancha → Talar → Alderetes → Autopista"
+        "recorrido":"Fortin → Colonia 4 → Barrio La Cancha → Talar → Alderetes → Autopista → Terminal"
     },
     {
         "nombre":"12:30",
         "salida":12.3,
-        "recorrido":"Los Perez → Colonia 4 → Barrio La Cancha → Talar → Alternativa"
+        "recorrido":"Los Perez → Colonia 4 → Barrio La Cancha → Talar → Alternativa → Terminal"
     },
     {
         "nombre":"13:15",
         "salida":13.15,
-        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Barrio La Cancha"
+        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Banda del Río Salí"
     },
     {
         "nombre":"13:50",
@@ -148,18 +148,18 @@ const horariosLvFloAl = [
     {
         "nombre":"14:45",
         "salida":14.45,
-        "recorrido" : "Colonia 4 → Barrio La Cancha → Talar → Alderetes → Alternativa",
+        "recorrido" : "Colonia 4 → Barrio La Cancha → Talar → Alderetes → Alternativa → Terminal",
         "recorrido2":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Banda del Río Salí"
     },
     {
         "nombre":"15:47",
         "salida":15.47,
-        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alternativa"
+        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alternativa → Terminal"
     },
     {
         "nombre":"16:20",
         "salida":16.2,
-        "recorrido":"La Marta → Colonia 4 → Barrio La Cancha → Alternativa"
+        "recorrido":"La Marta → Colonia 4 → Barrio La Cancha → Alternativa → Terminal"
     },
     {
         "nombre":"16:50",
@@ -169,7 +169,7 @@ const horariosLvFloAl = [
     {
         "nombre":"17:35",
         "salida":17.35,
-        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alternativa "
+        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alternativa → Terminal "
     },
     {
         "nombre":"17:50",
@@ -179,7 +179,7 @@ const horariosLvFloAl = [
     {
         "nombre":"18:10",
         "salida":18.1,
-        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alternativa"
+        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alternativa → Terminal"
     },
     {
         "nombre":"18:30",
@@ -194,7 +194,7 @@ const horariosLvFloAl = [
     {
         "nombre":"21:05",
         "salida":21.15,
-        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Autopista"
+        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Autopista → Terminal"
     }
    
 ]
@@ -208,12 +208,12 @@ const horariosSFloAl = [
     {
         "nombre":"05:45",
         "salida":5.45,
-        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alderetes → Autopista"
+        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alderetes → Autopista → Terminal"
     },
     {
         "nombre":"06:10",
         "salida":6.10,
-        "recorrido":"Colonia 10 → Barrio La Cancha → Cochuchal→ Alderetes → Autopista"
+        "recorrido":"Colonia 10 → Barrio La Cancha → Cochuchal→ Alderetes → Autopista → Terminal"
     },
     {
         "nombre":"06:25",
@@ -223,12 +223,12 @@ const horariosSFloAl = [
     {
         "nombre":"06:50",
         "salida":6.5,
-        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alternativa"
+        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alternativa → Terminal"
     },
     {
         "nombre":"07:18",
         "salida":7.18,
-        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Autopista"
+        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Autopista → Terminal"
     },
     {
         "nombre":"07:40",
@@ -238,7 +238,7 @@ const horariosSFloAl = [
     {
         "nombre":"07:50",
         "salida":7.5,
-        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Autopista"
+        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Autopista → Terminal"
     },
     {
         "nombre":"08:45",
@@ -269,7 +269,7 @@ const horariosSFloAl = [
     {
         "nombre":"13:15",
         "salida":13.15,
-        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Autopista"
+        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Autopista → Terminal"
     },
     {
         "nombre":"14:50",
@@ -279,7 +279,7 @@ const horariosSFloAl = [
     {
         "nombre":"15:50",
         "salida":15.5,
-        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Autopista"
+        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Autopista → Terminal"
         
     },
     {
