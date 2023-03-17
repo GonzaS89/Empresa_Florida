@@ -18,18 +18,18 @@ function reloj(){
     let dia = momentoActual.getDay()
     let mes = momentoActual.getMonth()
 
-       if(minuto <=9){
+    if(minuto <=9){
         minuto = "0"+minuto
-       } 
-       if(segundo <= 9){
+    } 
+    if(segundo <= 9){
         segundo= "0"+segundo;
-       }
-       if(hora <= 9){
+    }
+    if(hora <= 9){
         hora= "0"+hora;
-       }
-       if(fecha <= 9){
+    }
+    if(fecha <= 9){
         fecha= "0"+fecha;
-       }
+    }
         
     let diaFecha = document.getElementById('dia')  
     let numeroFecha = document.getElementById('fecha')
@@ -1022,6 +1022,11 @@ const horariosDSMAl = [
 
 ]
 const horariosLvSMPo = [
+        {
+            "nombre":"00:30",
+            "salida":0.3,
+            "recorrido":"Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida →    Barrio La Cancha"
+        },
         {
             "nombre":"06:00",
             "salida":6,
@@ -3114,21 +3119,20 @@ const boton = document.getElementById('boton');
         $('.botonDeCambio').css('display','flex');
         opcionbase2.selected = true;
     })
-  
-   
+
     boton.addEventListener('click',function(){
 
         // Definimos la posicion del selector 1
 
         for(opcion of selector){
             if(opcion.selected){
-                   valorSelecionado = opcion
+                valorSelecionado = opcion
                 }
         }
         for(i=0; i < selector.length;i++){
-         valores.push(selector[i])
+        valores.push(selector[i])
         }
-      
+    
         for(i=0; i< valores.length;i++){
             posicion=valores.indexOf(valorSelecionado)
         }
@@ -3137,17 +3141,17 @@ const boton = document.getElementById('boton');
     
         for(opcion of selector2){
             if(opcion.selected){
-                   valorSelecionado2 = opcion;
+                valorSelecionado2 = opcion;
                 }
         }
         for(i=0; i < selector2.length;i++){
-         valores2.push(selector2[i])
+        valores2.push(selector2[i])
         }
-      
+    
         for(i=0; i< valores2.length;i++){
             posicion2=valores2.indexOf(valorSelecionado2)
         }
-           
+    
         // Definimos las variables globales
         
     let momentoActual = new Date();
@@ -3184,7 +3188,7 @@ const boton = document.getElementById('boton');
         ruta = todosTucumanDestino[posicion2-1]
         }
         if(opcionbase2.selected == true && opcionbase.selected == false){
-          ruta = todosDestinoTucuman[posicion-1]
+        ruta = todosDestinoTucuman[posicion-1]
         }
 
     if((fecha == 20 || fecha == 21)  && mes == 1){
@@ -3213,38 +3217,38 @@ const boton = document.getElementById('boton');
     
         
             // Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
-           
-                          for (i=0; i < diaRango.length; i++){
+        
+                        for (i=0; i < diaRango.length; i++){
                         listaDelDia.push(diaRango[i].salida);
             }
 
                 // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
-       
-                          for(let i=0 ; i < listaDelDia.length ; i++){
-              
+    
+                        for(let i=0 ; i < listaDelDia.length ; i++){
+            
                       let horasEnEnteros=  (Math.trunc(listaDelDia[i]))  * 60;
                             let minutosEnEnteros = (listaDelDia[i] - (Math.trunc(listaDelDia[i])))*100;
                             let horaMinutosEnEnteros = horasEnEnteros + minutosEnEnteros;
-                       horariosEnEnteros.push(horaMinutosEnEnteros);
-              }
+                    horariosEnEnteros.push(horaMinutosEnEnteros);
+            }
 
-                             /*Recorremos el array y buscamos coincidencias con el horario actual*/
+                            /*Recorremos el array y buscamos coincidencias con el horario actual*/
                             
-                           for(i = 0; i < horariosEnEnteros.length; i++){
+                        for(i = 0; i < horariosEnEnteros.length; i++){
                 
                                     let difHoraHorarios = horaEnEnteros - horariosEnEnteros[i];
-                                  listaDiferencias.push(difHoraHorarios); 
-              }
+                                listaDiferencias.push(difHoraHorarios); 
+            }
 
-              
-                           for(i=0; i < listaDiferencias.length; i++){
+            
+                        for(i=0; i < listaDiferencias.length; i++){
 
                             if(listaDiferencias[i] > 0){
                             anteriorPasado = Math.min(anteriorPasado,listaDiferencias[i]);
                             }
                         }
                     
-                             
+                            
                                 
                 //  Aqui definimos los mensajes a mostrar en el primer campo       
                 if(anteriorPasado < 3000){
