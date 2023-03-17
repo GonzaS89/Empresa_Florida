@@ -58,7 +58,7 @@ const horariosLvFloAl = [
     {
         "nombre":"04:40",
         "salida":4.4,
-        "recorrido": "Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí"
+        "recorrido": "Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"05:35",
@@ -68,7 +68,7 @@ const horariosLvFloAl = [
     {
         "nombre":"06:10",
         "salida":6.10,
-        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí",
+        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí → Terminal",
         "recorrido2":"Colonia 10 → Colonia 4 → Barrio La Cancha → Cochuchal → Alderetes → Autopista → Terminal"
     },
     {
@@ -85,18 +85,18 @@ const horariosLvFloAl = [
         "nombre":"07:20",
         "salida":7.2,
         "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alternativa → Terminal",
-        "recorrido2":"Fortin → Esquina Lastra → Florida → Talar →  Cochuchal → Alderetes → Banda del Río Salí"
+        "recorrido2":"Fortin → Esquina Lastra → Florida → Talar →  Cochuchal → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"07:40",
         "salida":7.4,
-        "recorrido":"Finca Mayo → Fortin → Esquina Lastra → Florida → Cochuchal → Alderetes → Banda del Río Salí"
+        "recorrido":"Finca Mayo → Fortin → Esquina Lastra → Florida → Cochuchal → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"07:50",
         "salida":7.5,
         "recorrido":"Colonia 4 → Fonda → Talar → Alternativa → Terminal",
-        "recorrido2":"Colonia 4 → Barrio La Cancha → Alderetes → Autopista → Terminal"
+        "recorrido2":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Autopista → Terminal"
     },
     {
         "nombre":"08:45",
@@ -107,7 +107,7 @@ const horariosLvFloAl = [
     {
         "nombre":"09:20",
         "salida":9.2,
-        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí"
+        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"09:50",
@@ -117,13 +117,13 @@ const horariosLvFloAl = [
     {
         "nombre":"10:30",
         "salida":10.3,
-        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí"
+        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí → Terminal"
         
     },
     {
         "nombre":"11:40",
         "salida":11.40,
-        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí"
+        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"12:20",
@@ -143,7 +143,7 @@ const horariosLvFloAl = [
     {
         "nombre":"13:50",
         "salida":13.5,
-        "recorrido":"Barrio La Cancha → Cochuchal → Alderetes → Banda del Río Salí",
+        "recorrido":"Barrio La Cancha → Cochuchal → Alderetes → Banda del Río Salí → Terminal",
     },
     {
         "nombre":"14:45",
@@ -159,22 +159,22 @@ const horariosLvFloAl = [
     {
         "nombre":"16:20",
         "salida":16.2,
-        "recorrido":"La Marta → Colonia 4 → Barrio La Cancha → Alternativa → Terminal"
+        "recorrido":"La Marta → Colonia 4 → Barrio La Cancha → Talar → Alternativa → Terminal"
     },
     {
         "nombre":"16:50",
         "salida":16.5,
-        "recorrido":"Colonia 4 → Talar → Alderetes → Banda del Río Salí"
+        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"17:35",
         "salida":17.35,
-        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alternativa → Terminal "
+        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alternativa → Terminal"
     },
     {
         "nombre":"17:50",
         "salida":17.5,
-        "recorrido":"Fortin → Esquina Lastra → Florida → Talar →  Alderetes → Banda del Río Salí"
+        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"18:10",
@@ -184,12 +184,12 @@ const horariosLvFloAl = [
     {
         "nombre":"18:30",
         "salida":18.3,
-        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí"
+        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"19:00",
         "salida":19,
-        "recorrido":"La Marta → Colonia 3 → Barrio La Cancha → Talar → Alderetes → Banda del Río Salí"
+        "recorrido":"La Marta → Colonia 3 → Barrio La Cancha → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"21:05",
@@ -202,7 +202,7 @@ const horariosSFloAl = [
     {
         "nombre":"04:40",
         "salida":4.4,
-        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí"
+        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí → Terminal"
         
     },
     {
@@ -213,7 +213,7 @@ const horariosSFloAl = [
     {
         "nombre":"06:10",
         "salida":6.10,
-        "recorrido":"Colonia 10 → Barrio La Cancha → Cochuchal→ Alderetes → Autopista → Terminal"
+        "recorrido":"Colonia 10 → Barrio La Cancha → Cochuchal → Alderetes → Autopista → Terminal"
     },
     {
         "nombre":"06:25",
@@ -233,7 +233,7 @@ const horariosSFloAl = [
     {
         "nombre":"07:40",
         "salida":7.4,
-        "recorrido":"Finca Mayo → Fortin → Esquina Lastra → Talar → Alderetes → Banda del Río Salí"
+        "recorrido":"Finca Mayo → Fortin → Esquina Lastra → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"07:50",
@@ -243,28 +243,28 @@ const horariosSFloAl = [
     {
         "nombre":"08:45",
         "salida":8.45,
-        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Banda del Río Salí"
+        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"09:20",
         "salida":9.2,
-        "recorrido":"Fortin → Esquina Lastra → Florida →Talar → Alderetes → Banda del Río Salí"
+        "recorrido":"Fortin → Esquina Lastra → Florida →Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"10:30",
         "salida":10.30,
-        "recorrido":"Fortin → Esquina Lastra → Florida → Talar  → Alderetes → Banda del Río Salí"
+        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"11:40",
         "salida":11.40,
-        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí"
+        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí → Terminal"
         
     },
     {
         "nombre":"12:40",
         "salida":12.4,
-        "recorrido":"Finca Mayo → Colonia 5 → Colonia 4 → Colonia 3 → Colonia 2 → Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí"
+        "recorrido":"Finca Mayo → Colonia 5 → Colonia 4 → Colonia 3 → Colonia 2 → Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"13:15",
@@ -274,7 +274,7 @@ const horariosSFloAl = [
     {
         "nombre":"14:50",
         "salida":14.5,
-        "recorrido":"Barrio La Cancha → Talar →  Alderetes → Banda del Río Salí"
+        "recorrido":"Barrio La Cancha → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"15:50",
@@ -285,18 +285,18 @@ const horariosSFloAl = [
     {
         "nombre":"16:50",
         "salida":16.5,
-        "recorrido":"Colonia 3 → Colonia 2 → Esquina Lastra → Fortin → Florida → Talar → Alderetes → Banda del Río Salí"
+        "recorrido":"Colonia 3 → Colonia 2 → Esquina Lastra → Fortin → Florida → Talar → Alderetes → Banda del Río Salí → Terminal"
         
     },
     {
         "nombre":"17:50",
         "salida":17.5,
-        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí"
+        "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"19:00",
         "salida":19,
-        "recorrido":"La Marta → Colonia 3 → Barrio La Cancha → Talar → Alderetes → Banda del Río Salí"
+        "recorrido":"La Marta → Colonia 3 → Barrio La Cancha → Talar → Alderetes → Banda del Río Salí → Terminal"
     }
 ]
 const horariosDFloAl = [
@@ -304,37 +304,37 @@ const horariosDFloAl = [
     {
         "nombre":"07:40",
         "salida":7.4,
-        "recorrido":"Finca Mayo → Colonia 5 → Colonia 4 → Colonia 3 → Colonia 2 → Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí"
+        "recorrido":"Finca Mayo → Colonia 5 → Colonia 4 → Colonia 3 → Colonia 2 → Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"10:30",
         "salida":10.30,
-        "recorrido":"Colonia 2 → Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí"
+        "recorrido":"Colonia 2 → Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"12:40",
         "salida":12.4,
-        "recorrido":"Finca Mayo → Colonia 5 → Colonia 4 → Colonia 3 → Colonia 2 → Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí"
+        "recorrido":"Finca Mayo → Colonia 5 → Colonia 4 → Colonia 3 → Colonia 2 → Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"14:50",
         "salida":14.5,
-        "recorrido":"Barrio La Cancha → Talar → Alderetes → Banda del Río Salí"
+        "recorrido":"Barrio La Cancha → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"16:50",
         "salida":16.5,
-        "recorrido":"Colonia 3 → Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí"
+        "recorrido":"Colonia 3 → Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"17:50",
         "salida":17.5,
-        "recorrido":["Barrio La Cancha","Talar ","Alderetes","Banda del Río Salí"]
+        "recorrido":"Barrio La Cancha → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"19:10",
         "salida":19.1,
-        "recorrido":"Colonia 10 → Colonia 3 → Barrio La Cancha → Talar → Alderetes → Banda del Río Salí"
+        "recorrido":"Colonia 10 → Colonia 3 → Barrio La Cancha → Talar → Alderetes → Banda del Río Salí → Terminal"
     }
 ]
 const horariosLvFloPo = [
@@ -724,7 +724,7 @@ const horariosLvSMAl = [
     {
         "nombre":"05:20",
         "salida":5.2,
-        "recorrido":"Terminal → Catalinas Park → Autopista → Alderetes → Talar → Barrio La Cancha"
+        "recorrido":"Terminal → Catalinas Park → Autopista → Alderetes → Talar → Florida → Barrio La Cancha"
     },
     {
         "nombre":"06:25",
@@ -734,17 +734,17 @@ const horariosLvSMAl = [
     {
         "nombre":"07:00",
         "salida":7,
-        "recorrido":"Terminal → Alternativa → Talar → Colonia 4 → La Marta"
+        "recorrido":"Terminal → Alternativa → Talar → Florida → Barrio La Cancha → Colonia 4 → La Marta"
     },
     {
         "nombre":"07:15",
         "salida":7.15,
-        "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Fonda → Colonia 4 → Los Perez"
+        "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Fonda → Colonia 4 → Los Perez"
     },
     {
         "nombre":"08:00",
         "salida":8,
-        "recorrido":"Terminal → Catalinas Park → Autopista → Alderetes → Cochuchal → Colonia 4"
+        "recorrido":"Terminal → Catalinas Park → Autopista → Alderetes → Cochuchal → Florida → Colonia 4"
     },
     {
         "nombre":"08:35",
@@ -754,7 +754,7 @@ const horariosLvSMAl = [
     {
         "nombre":"09:00",
         "salida":9,
-        "recorrido":"Terminal → Catalinas Park → Autopista → Talar → Barrio La Cancha → Colonia 4 "
+        "recorrido":"Terminal → Catalinas Park → Autopista → Talar → Florida → Barrio La Cancha → Colonia 4 "
     },
     {
         "nombre":"09:45",
@@ -769,7 +769,7 @@ const horariosLvSMAl = [
     {
         "nombre":"11:15",
         "salida":11.15,
-        "recorrido":"Terminal → Catalinas Park → Autopista → Talar → Barrio La Cancha → La Marta"
+        "recorrido":"Terminal → Catalinas Park → Autopista → Talar → Florida → Barrio La Cancha → La Marta"
     },
     {
         "nombre":"12:15",
@@ -779,12 +779,12 @@ const horariosLvSMAl = [
     {
         "nombre":"12:20",
         "salida":12.2,
-        "recorrido":"Terminal → Catalinas Park → Autopista → Talar → Barrio La Cancha → Colonia 4"
+        "recorrido":"Terminal → Catalinas Park → Autopista → Talar → Florida → Barrio La Cancha → Colonia 4"
     },
     {
         "nombre":"12:45",
         "salida":12.45,
-        "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Colonia 3"
+        "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Colonia 3"
     },
     {
         "nombre":"13:15",
@@ -794,40 +794,40 @@ const horariosLvSMAl = [
     {
         "nombre":"13:30",
         "salida":13.3,
-        "recorrido":"Terminal → Catalinas Park → Autopista → Alderetes → Talar → Barrio La Cancha → Mayo → La Marta"
+        "recorrido":"Terminal → Catalinas Park → Autopista → Alderetes → Talar → Florida → Barrio La Cancha → Mayo → La Marta"
     },
     {
         "nombre":"14:00",
         "salida":14,
-        "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Barrio La Cancha"
+        "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Barrio La Cancha"
     },
     {
         "nombre":"14:50",
         "salida":14.5,
-        "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Barrio La Cancha",
+        "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Barrio La Cancha",
         "recorrido2":"Terminal → Alternativa → Talar → Florida → Esquina Lastra → Fortin"
     },
     {
         "nombre":"15:50",
         "salida":15.5,
-        "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Barrio La Cancha → Colonia 4",
+        "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Barrio La Cancha → Colonia 4",
         "recorrido2":"Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Esquina Lastra → Fortin → Colonia 4"
     },
     {
         "nombre":"16:50",
         "salida":16.5,
         "recorrido":"Terminal → Banda del Río Salí → Alderetes → Cochuchal → Florida → Esquina Lastra → Fortin",
-        "recorrido2":"Terminal → Alternativa → Talar → Barrio La Cancha → Colonia 4"
+        "recorrido2":"Terminal → Alternativa → Talar → Florida → Barrio La Cancha → Colonia 4"
     },
     {
         "nombre":"17:40",
         "salida":17.4,
-        "recorrido":"Terminal → Alternativa → Talar → Barrio La Cancha → Colonia 4"
+        "recorrido":"Terminal → Alternativa → Talar → Florida → Barrio La Cancha → Colonia 4"
     },
     {
         "nombre":"17:45",
         "salida":17.45,
-        "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Barrio La Cancha → Mayo → La Marta"
+        "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Barrio La Cancha → Mayo → La Marta"
     },
     {
         "nombre":"18:20",
@@ -837,17 +837,17 @@ const horariosLvSMAl = [
     {
         "nombre":"18:30",
         "salida":18.3,
-        "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Barrio La Cancha → Colonia 4"
+        "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Barrio La Cancha → Colonia 4"
     },
     {
         "nombre":"19:00",
         "salida":19,
-        "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Barrio La Cancha → Colonia 4"
+        "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Barrio La Cancha → Colonia 4"
     },
     {
         "nombre":"19:45",
         "salida":19.45,
-        "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Mayo(por abajo)"
+        "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Esquina Lastra → Fortin → Mayo(por abajo)"
     },
     {
         "nombre":"20:30",
@@ -857,39 +857,39 @@ const horariosLvSMAl = [
     {
         "nombre":"21:00",
         "salida":21,
-        "recorrido":"Terminal → Autopista → Alderetes → Talar → Barrio La Cancha"
+        "recorrido":"Terminal → Autopista → Alderetes → Talar → Florida → Barrio La Cancha"
     },
     {
         "nombre":"21:30",
         "salida":21.30,
-        "recorrido":"Terminal → Autopista → Alderetes → Talar → Barrio La Cancha → Colonia 4"
+        "recorrido":"Terminal → Autopista → Alderetes → Talar → Florida → Barrio La Cancha → Colonia 4"
     },
     {
         "nombre":"22:30",
         "salida":22.30,
-        "recorrido":"Terminal → Autopista → Alderetes → Talar → Barrio La Cancha → Colonia 4"
+        "recorrido":"Terminal → Autopista → Alderetes → Talar → Florida → Barrio La Cancha → Colonia 4"
     },
     {
         "nombre":"23:30",
         "salida":23.30,
-        "recorrido":"Terminal → Autopista → Alderetes → Talar → Barrio La Cancha → Colonia 4"
+        "recorrido":"Terminal → Autopista → Alderetes → Talar → Florida → Barrio La Cancha → Colonia 4"
     }
 ]
 const horariosSSMAl = [
         {
             "nombre":"05:20",
             "salida":5.2,
-            "recorrido":"Terminal → Autopista → Talar → Barrio La Cancha"
+            "recorrido":"Terminal → Autopista → Talar → Florida → Barrio La Cancha"
         },
         {
             "nombre":"06:25",
             "salida":6.25,
-            "recorrido":"Terminal → Banda del Río Salí →  Talar → Mayo"
+            "recorrido":"Terminal → Banda del Río Salí →  Talar → Florida → Esquina Lastra → Fortin → Mayo"
         },
         {
             "nombre":"07:15",
             "salida":7.15,
-            "recorrido":"Terminal → Banda del Río Salí → Talar → La Marta"
+            "recorrido":"Terminal → Banda del Río Salí → Talar → Florida → La Marta"
         },
         {
             "nombre":"08:00",
@@ -944,17 +944,17 @@ const horariosSSMAl = [
         {
             "nombre":"17:45",
             "salida":17.45,
-            "recorrido":"Terminal → Banda del Río Salí → Barrio La Cancha"
+            "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Barrio La Cancha"
         },
         {
             "nombre":"19:00",
             "salida":19,
-            "recorrido":"Terminal → Banda del Río Salí → Colonia 4"
+            "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Colonia 4"
         },
         {
             "nombre":"19:45",
             "salida":19.45,
-            "recorrido":"Terminal → Banda del Río Salí → Mayo"
+            "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Esquina Lastra → Fortin → Mayo"
         },
         {
             "nombre":"20:30",
@@ -964,7 +964,7 @@ const horariosSSMAl = [
         {
             "nombre":"21:30",
             "salida":21.30,
-            "recorrido":"Terminal → Autopista → Alderetes → Florida → Esquina Lastra → Fortin → Colonia 4"
+            "recorrido":"Terminal → Autopista → Alderetes → Talar → Florida → Esquina Lastra → Fortin → Colonia 4"
         },
         // {
         //     "nombre":"22:00",
@@ -997,7 +997,7 @@ const horariosDSMAl = [
         {
             "nombre":"14:00",
             "salida":14,
-            "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Barrio La Cancha"
+            "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Barrio La Cancha"
         },
         {
             "nombre":"16:00",
@@ -1012,7 +1012,7 @@ const horariosDSMAl = [
         {
             "nombre":"19:45",
             "salida":19.45,
-            "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Mayo"
+            "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Esquina Lastra → Fortin → Mayo"
         },
         {
             "nombre":"20:30",
