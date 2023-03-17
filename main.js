@@ -138,7 +138,7 @@ const horariosLvFloAl = [
     {
         "nombre":"13:15",
         "salida":13.15,
-        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Banda del Río Salí"
+        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"13:50",
@@ -149,7 +149,7 @@ const horariosLvFloAl = [
         "nombre":"14:45",
         "salida":14.45,
         "recorrido" : "Colonia 4 → Barrio La Cancha → Talar → Alderetes → Alternativa → Terminal",
-        "recorrido2":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Banda del Río Salí"
+        "recorrido2":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre":"15:47",
