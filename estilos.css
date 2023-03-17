@@ -10,6 +10,13 @@
     --fuenteSec : 'Dosis', sans-serif;
    
 }
+/* html{
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+} */
+
 h1,p{
     font-family: var(--fuenteSec);
     margin: 0;
@@ -489,8 +496,7 @@ filter: opacity(25%)
 }
 
 .resultados,.resultados2{
-height: 35%;    
-min-height: 130px;
+height: 25%;    
 width: 50%;
 display: none;
 justify-content: center;
@@ -697,7 +703,7 @@ position: relative;
         margin: 30px;
         border: .5px solid white;
         padding: 10px 0;
-        min-height: 130px;
+
     }
     .resultados3{
         height: 150px;
@@ -725,6 +731,17 @@ position: relative;
         background-color: rgba(0, 0, 0, 0.922);   
         height: 100%;
         width: 100%;    
+        animation: aparece .25s linear;
+    }
+
+    @keyframes aparece{
+        0%{
+           transform: scale(0);
+        }
+        100%{
+            transform: scale(1);
+            
+        }
     }
     #mensaje2{
         background-color: rgba(0, 0, 0, 0.401);
