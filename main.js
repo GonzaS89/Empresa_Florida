@@ -112,7 +112,7 @@ const horariosLvFloAl = [
     {
         "nombre":"09:50",
         "salida":9.5,
-        "recorrido":"Colonia 4 → Talar → Alderetes → Autopista"
+        "recorrido":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Autopista"
     },
     {
         "nombre":"10:30",
