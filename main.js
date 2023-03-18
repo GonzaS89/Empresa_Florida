@@ -1025,7 +1025,7 @@ const horariosLvSMPo = [
         {
             "nombre":"00:30",
             "salida":0.3,
-            "recorrido":"Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida →    Barrio La Cancha"
+            "recorrido":"Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida → Barrio La Cancha"
         },
         {
             "nombre":"06:00",
