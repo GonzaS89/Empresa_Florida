@@ -3211,9 +3211,6 @@ const boton = document.getElementById('boton');
             diaRango = ruta[2].slice(0,ruta[2].length);
         }
     }   
-
-    console.log(diaRango)
-
     
         
             // Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
@@ -3243,7 +3240,7 @@ const boton = document.getElementById('boton');
             
                         for(i=0; i < listaDiferencias.length; i++){
 
-                            if(listaDiferencias[i] > 0){
+                            if(listaDiferencias[i] >= 0){
                             anteriorPasado = Math.min(anteriorPasado,listaDiferencias[i]);
                             }
                         }
@@ -3272,6 +3269,9 @@ const boton = document.getElementById('boton');
                         if(anteriorPasado < 5){
                             actual2.textContent = 'Iniciaron sus recorridos hace menos de 5 minutos'
                         }
+                        if(anteriorPasado == 0){
+                            actual2.textContent = 'Están iniciando sus recorridos'
+                        }
                         actual4.textContent = `2° Servicio : ${diaRango[listaDiferencias.indexOf(anteriorPasado)].recorrido2}`
                         actual3.textContent = `1° Servicio : ${diaRango[listaDiferencias.indexOf(anteriorPasado)].recorrido}`
                     }
@@ -3290,7 +3290,7 @@ const boton = document.getElementById('boton');
                 if(anteriorPasado < 60 && anteriorPasado>5){
                     actual2.textContent = `Inició su recorrido hace ${Math.floor(anteriorPasado)} minutos`
                 }
-                if(anteriorPasado < 5){
+                if(anteriorPasado < 5 && anteriorPasado > 0){
                     actual2.textContent = 'Inició su recorrido hace menos de 5 minutos'
                 }
                 if(anteriorPasado == 0){
@@ -3298,8 +3298,10 @@ const boton = document.getElementById('boton');
                 }
                 actual3.textContent = `Recorrido : ${diaRango[listaDiferencias.indexOf(anteriorPasado)].recorrido}`
                     }
+                    console.log(listaDiferencias)
                     
                 }
+                
                         
                     else{
                         actual1.textContent = '';
@@ -3343,9 +3345,7 @@ const boton = document.getElementById('boton');
                                 if(elMasCercano < 5){
                                 futuro2.textContent = 'Iniciarán sus recorridos en menos de 5 minutos'
                                 }
-                                if(elMasCercano == 0){
-                                futuro2.textContent = 'Están iniciando sus recorridos'
-                                }
+                                
                                 futuro3.textContent = `1° Servicio : ${diaRango[listaDiferencias2.indexOf(elMasCercano)].recorrido}`
                                 futuro4.textContent = `2° Servicio : ${diaRango[listaDiferencias2.indexOf(elMasCercano)].recorrido2}`
                             }
@@ -3366,11 +3366,9 @@ const boton = document.getElementById('boton');
                                             futuro2.textContent = `Inicia su recorrido en ${Math.floor(elMasCercano)} minutos`
                                         }
                                             if(elMasCercano < 5){
-                                               futuro2.textContent = 'Iniciará su recorrido en menos de 5 minutos'
+                                            futuro2.textContent = 'Iniciará su recorrido en menos de 5 minutos'
                                             }
-                                            if(elMasCercano == 0){
-                                                futuro2.textContent = 'Está iniciando su recorrido'
-                                            }
+                                            
                                             futuro3.textContent = `Recorrido : ${diaRango[listaDiferencias2.indexOf(elMasCercano)].recorrido}`
                                 }
                                 
