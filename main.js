@@ -3635,30 +3635,27 @@ function busquedaManual(){
             mostrar1.textContent = 'No hay más servicios en éste horario ni en lo que resta del día';
         }
         }
-
         $('.resultados3').css('display','flex')     
         $('.mensaje2').css('display', 'flex')
         }
         })
-       
-
         indicacion.addEventListener('click', function(){
             $('.mensaje2').css('display', 'none') 
             $('.resultados3').css('display','none')
-            $('#selector3').css('display','none')      
-            $('#selector4').css('display','none') 
-            $('#selector5').css('display','none') 
-            $('#ingHora').css('display','none')
-            $('#capitalDestino').css('background-color', 'var(--blanco');
-            $('#capitalDestino').css('color', 'var(--black');
-            $('#origenCapital').css('background-color', 'var(--blanco');
-            $('#origenCapital').css('color', 'var(--black'); 
-            opcionbase3.selected = true;
-            opcionbase4.selected = true;
-            opcionbase5.selected = true;
-            ingHora.value = '';
-            botonOrigenCapital.selected = false;
-            botonCapitalDestino.selected = false;
+            // $('#selector3').css('display','none')      
+            // $('#selector4').css('display','none') 
+            // $('#selector5').css('display','none') 
+            // $('#ingHora').css('display','none')
+            // $('#capitalDestino').css('background-color', 'var(--blanco');
+            // $('#capitalDestino').css('color', 'var(--black');
+            // $('#origenCapital').css('background-color', 'var(--blanco');
+            // $('#origenCapital').css('color', 'var(--black'); 
+            // opcionbase3.selected = true;
+            // opcionbase4.selected = true;
+            // opcionbase5.selected = true;
+            // ingHora.value = '';
+            // botonOrigenCapital.selected = false;
+            // botonCapitalDestino.selected = false;
             })
 }
 
