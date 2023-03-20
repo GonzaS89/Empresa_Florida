@@ -1022,11 +1022,11 @@ const horariosDSMAl = [
 
 ]
 const horariosLvSMPo = [
-        // {
-        //     "nombre":"00:30",
-        //     "salida":0.3,
-        //     "recorrido":"Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida → Barrio La Cancha"
-        // },
+        {
+            "nombre":"00:30",
+            "salida":0.3,
+            "recorrido":"Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida → Barrio La Cancha"
+        },
         {
             "nombre":"06:00",
             "salida":6,
@@ -1204,6 +1204,11 @@ const horariosLvSMPo = [
         }
 ]
 const horariosSSMPo = [
+        {
+            "nombre":"00:30",
+            "salida":0.3,
+            "recorrido":"Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida →   Barrio La Cancha"
+        },
         {
             "nombre":"06:00",
             "salida":6,
@@ -3326,12 +3331,21 @@ const boton = document.getElementById('boton');
                     console.log(listaDiferencias)
                     
                 }
-                
-                        
+
+                                    
                     else{
-                        actual1.textContent = '';
+
+                        if(dia >= 2 && dia <= 6){
+                            actual1.textContent = `Último servicio de ayer ${diaRango[(listaDiferencias.length) - 2].nombre} Hrs`;
+                            actual2.textContent = ''
+                            actual3.textContent = `Recorrido: ${diaRango[(listaDiferencias.length) - 2].recorrido}`
+                        }
+                        else{
+                            actual1.textContent = '';
                         actual2.textContent = 'Ninguna unidad inició su recorrido aún'
                         actual3.textContent =''
+                        }
+                        
                     }
                     
                 
