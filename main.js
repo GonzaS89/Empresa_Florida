@@ -879,22 +879,22 @@ const horariosSSMAl = [
         {
             "nombre":"05:20",
             "salida":5.2,
-            "recorrido":"Terminal → Autopista → Talar → Florida → Barrio La Cancha"
+            "recorrido":"Terminal → Autopista → Alderetes → Talar → Florida → Barrio La Cancha"
         },
         {
             "nombre":"06:25",
             "salida":6.25,
-            "recorrido":"Terminal → Banda del Río Salí →  Talar → Florida → Esquina Lastra → Fortin → Mayo"
+            "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Esquina Lastra → Fortin → Mayo"
         },
         {
             "nombre":"07:15",
             "salida":7.15,
-            "recorrido":"Terminal → Banda del Río Salí → Talar → Florida → La Marta"
+            "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Florida → La Marta"
         },
         {
             "nombre":"08:00",
             "salida":8,
-            "recorrido":"Terminal → Autopista → Cochuchal"
+            "recorrido":"Terminal → Autopista → Alderetes → Cochuchal → Florida"
         },
         {
             "nombre":"08:35",
@@ -914,22 +914,22 @@ const horariosSSMAl = [
         {
             "nombre":"12:20",
             "salida":12.2,
-            "recorrido":"Terminal → Autopista → Barrio La Cancha → Colonia 4"
+            "recorrido":"Terminal → Autopista → Alderetes → Talar → Florida → Barrio La Cancha → Colonia 4"
         },
         {
             "nombre":"13:30",
             "salida":13.3,
-            "recorrido":"Terminal → Autopista → Barrio La Cancha → La Marta"
+            "recorrido":"Terminal → Autopista → Alderetes → Talar → Florida → Barrio La Cancha → La Marta"
         },
         {
             "nombre":"14:00",
             "salida":14,
-            "recorrido":"Terminal → Banda del Río Salí → Barrio La Cancha"
+            "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → FLorida → Barrio La Cancha"
         },
         {
             "nombre":"14:50",
             "salida":14.5,
-            "recorrido":"Terminal → Banda del Río Salí → Barrio La Cancha → Colonia 4"
+            "recorrido":"Terminal → Banda del Río Salí → Alderetes → Barrio La Cancha → Colonia 4"
         },
         {
             "nombre":"16:00",
