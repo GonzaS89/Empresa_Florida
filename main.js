@@ -1466,7 +1466,7 @@ const horariosDSMPo = [
 const posseTerminalLaV = [
     {
         "nombre":"05:00",
-        "salida":6,
+        "salida":5,
         "recorrido":"Dispensario → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
@@ -3253,12 +3253,17 @@ const boton = document.getElementById('boton');
                     if(Object.keys(diaRango[listaDiferencias.indexOf(anteriorPasado)]).length > 3){
 
                         if(listaDiferencias.indexOf(anteriorPasado) == 0){
-                            actual1.textContent = `1° servicios del día ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
+                            actual1.textContent = `Primeros servicios del día ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
                         }
                         if(listaDiferencias.indexOf(anteriorPasado) == (listaDiferencias.length) - 1){
                             actual1.textContent = `Últimos servicio del día ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
                         }
-
+                        if((listaDiferencias.indexOf(anteriorPasado) == 0) && (listaDiferencias.indexOf(anteriorPasado) == (listaDiferencias.length) - 1)){
+                            actual1.textContent = `Únicos servicios del día ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
+                        }
+                        if((listaDiferencias.indexOf(anteriorPasado)) > 0 && ((listaDiferencias.indexOf(anteriorPasado) < (listaDiferencias.length) - 1))){
+                            actual1.textContent = `Servicios de las ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
+                        }
                         if(anteriorPasado >= 120){
                             actual2.textContent = 'Iniciaron sus recorridos hace un par horas'
                         }
@@ -3283,15 +3288,19 @@ const boton = document.getElementById('boton');
                     else{
 
                         if(listaDiferencias.indexOf(anteriorPasado) == 0){
-                            actual1.textContent = `1° servicio del día ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
+                            actual1.textContent = `Primer servicio del día ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
                         }
                         if(listaDiferencias.indexOf(anteriorPasado) == (listaDiferencias.length) - 1){
                             actual1.textContent = `Último servicio del día ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
                         }
-
-                        else{
+                        if((listaDiferencias.indexOf(anteriorPasado) == 0) && (listaDiferencias.indexOf(anteriorPasado) == (listaDiferencias.length) - 1)){
+                            actual1.textContent = `Único servicio del día ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
+                        }
+                        if((listaDiferencias.indexOf(anteriorPasado)) > 0 && ((listaDiferencias.indexOf(anteriorPasado) < (listaDiferencias.length) - 1))){
                             actual1.textContent = `Servicio de las ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
                         }
+
+                        console.log(listaDiferencias.indexOf(anteriorPasado))
 
                         // actual1.textContent = `Servicio de las ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
                 if(anteriorPasado >= 120){
@@ -3345,10 +3354,16 @@ const boton = document.getElementById('boton');
                             if(Object.keys(diaRango[listaDiferencias2.indexOf(elMasCercano)]).length > 3){
 
                                 if(listaDiferencias2.indexOf(elMasCercano) == 0){
-                                    futuro1.textContent = `1° servicios del día a las ${diaRango[listaDiferencias2.indexOf(elMasCercano)].nombre} Hrs`
+                                    futuro1.textContent = `Primeros servicios del día a las ${diaRango[listaDiferencias2.indexOf(elMasCercano)].nombre} Hrs`
                                 }
                                 if(listaDiferencias2.indexOf(elMasCercano) == (listaDiferencias2.length) - 1){
                                     futuro1.textContent = `Últimos servicios del día a las ${diaRango[listaDiferencias2.indexOf(elMasCercano)].nombre} Hrs`
+                                }
+                                if((listaDiferencias2.indexOf(elMasCercano) == 0) && (listaDiferencias2.indexOf(elMasCercano) == (listaDiferencias2.length) - 1)){
+                                    futuro1.textContent = `Únicos servicios del día ${diaRango[listaDiferencias2.indexOf(elMasCercano)].nombre} Hrs`
+                                }
+                                if((listaDiferencias2.indexOf(elMasCercano)) > 0 && ((listaDiferencias2.indexOf(elMasCercano) < (listaDiferencias2.length) - 1))){
+                                    futuro1.textContent = `Servicios de las ${diaRango[listaDiferencias2.indexOf(elMasCercano)].nombre} Hrs`
                                 }
     
                                 if(elMasCercano >= 120){
@@ -3373,15 +3388,20 @@ const boton = document.getElementById('boton');
     
                                 else{
                                     
-                                    if(listaDiferencias2.indexOf(elMasCercano) == 0){
-                                        futuro1.textContent = `1° servicio del día a las ${diaRango[listaDiferencias2.indexOf(elMasCercano)].nombre} Hrs`
+                                    if((listaDiferencias2.indexOf(elMasCercano)) == 0){
+                                        futuro1.textContent = `Primer servicio del día a las ${diaRango[listaDiferencias2.indexOf(elMasCercano)].nombre} Hrs`
                                     }
                                     if(listaDiferencias2.indexOf(elMasCercano) == (listaDiferencias2.length) - 1){
                                         futuro1.textContent = `Último servicio del día a las ${diaRango[listaDiferencias2.indexOf(elMasCercano)].nombre} Hrs`
                                     }
-                                    else{
+                                    if((listaDiferencias2.indexOf(elMasCercano) == 0) && (listaDiferencias2.indexOf(elMasCercano) == (listaDiferencias2.length) - 1)){
+                                        futuro1.textContent = `Único servicio del día a las ${diaRango[listaDiferencias2.indexOf(elMasCercano)].nombre} Hrs`
+                                    }
+                                    if((listaDiferencias2.indexOf(elMasCercano)) > 0 && ((listaDiferencias2.indexOf(elMasCercano) < (listaDiferencias2.length) - 1))){
                                         futuro1.textContent = `Servicio de las ${diaRango[listaDiferencias2.indexOf(elMasCercano)].nombre} Hrs`
                                     }
+
+                            
                             
                                         if(elMasCercano >= 120){
                                             futuro2.textContent = 'Inicia su recorrido en un par horas'
