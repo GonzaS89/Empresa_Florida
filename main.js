@@ -3056,7 +3056,7 @@ const terminalLasCejasD = [
     },
 ]
 const floridaAldTucuman = [horariosDFloAl,horariosLvFloAl,horariosSFloAl];
-const terminalAldFlorida = [horariosDSMAl,horariosSSMAl, horariosLvSMAl];
+const terminalAldFlorida = [horariosDSMAl, horariosLvSMAl,horariosLvSMAl];
 const floridaPosseTucuman = [horariosDFloPo,horariosLvFloPo,horariosSFloPo];
 const terminalPosseFlorida = [horariosDSMPo,horariosLvSMPo,horariosSSMPo];
 const posseLTerminal = [posseTerminalD,posseTerminalLaV,posseTerminalS];
