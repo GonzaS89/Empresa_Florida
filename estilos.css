@@ -579,12 +579,21 @@ position: relative;
 #tituloResultado{
     color: white;
     font-size: 20px;
-    text-transform: uppercase;
     text-align: center;
     font-family: var(--fuenteSec);
     margin-bottom: 15px; 
     padding: 10px;
 }
+#linea1,#linea2{
+    color: var(--blanco);
+    font-family: var(--fuenteSec);
+    font-size: 20px;
+    text-align: center;
+}
+#linea2{
+    margin-top: 10px;
+}
+
 .indicacion-cont{
     display: flex;
     justify-content: center;

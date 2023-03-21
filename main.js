@@ -1022,11 +1022,11 @@ const horariosDSMAl = [
 
 ]
 const horariosLvSMPo = [
-        {
-            "nombre":"00:30",
-            "salida":0.3,
-            "recorrido":"Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida → Barrio La Cancha"
-        },
+        // {
+        //     "nombre":"00:30",
+        //     "salida":0.3,
+        //     "recorrido":"Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida → Barrio La Cancha"
+        // },
         {
             "nombre":"06:00",
             "salida":6,
@@ -3095,9 +3095,8 @@ const boton = document.getElementById('boton');
     let valores2= [];
     let posicion;
     let posicion2;
-
-
-    
+    let label1;   
+    let label2;
 
 
     
@@ -3113,6 +3112,8 @@ const boton = document.getElementById('boton');
         $('.menu').css('display','none');
         $('.botonDeCambio').css('display','none');
         opcionbase.selected = true;
+        linea1.textContent = '';
+        linea2.textContent = '';
 
     })
     botonDeCambio2.addEventListener('click', function (){
@@ -3123,6 +3124,8 @@ const boton = document.getElementById('boton');
         $('.menu').css('display','flex');
         $('.botonDeCambio').css('display','flex');
         opcionbase2.selected = true;
+        linea1.textContent = '';
+        linea2.textContent = '';
     })
 
     boton.addEventListener('click',function(){
@@ -3131,8 +3134,8 @@ const boton = document.getElementById('boton');
 
         for(opcion of selector){
             if(opcion.selected){
-                valorSelecionado = opcion
-                }
+                valorSelecionado = opcion;
+            }
         }
         for(i=0; i < selector.length;i++){
         valores.push(selector[i])
@@ -3142,12 +3145,13 @@ const boton = document.getElementById('boton');
             posicion=valores.indexOf(valorSelecionado)
         }
 
+
         // Definimos la posicion del selector 2
     
         for(opcion of selector2){
             if(opcion.selected){
                 valorSelecionado2 = opcion;
-                }
+            }
         }
         for(i=0; i < selector2.length;i++){
         valores2.push(selector2[i])
@@ -3157,6 +3161,7 @@ const boton = document.getElementById('boton');
             posicion2=valores2.indexOf(valorSelecionado2)
         }
     
+      
         // Definimos las variables globales
         
     let momentoActual = new Date();
@@ -3185,15 +3190,26 @@ const boton = document.getElementById('boton');
     let futuro3 = document.getElementById('futuro3');
     let futuro4 = document.getElementById('futuro4');
     let tituloResultado = document.getElementById('tituloResultado')
+    let linea1 = document.getElementById('linea1')
+    let linea2 = document.getElementById('linea2')
+    let destino = document.getElementById('destino')
+    let origen = document.getElementById('origen')
     const indicacion = document.querySelector('.indicacion-cont')
 
+    
+    
      // Aqui definimos donde localidad de salida y camino
 
     if(opcionbase.selected == true && opcionbase2.selected == false)  {
         ruta = todosTucumanDestino[posicion2-1]
+            linea1.textContent = origen.textContent
+            linea2.textContent = selector2[posicion2].label;
         }
         if(opcionbase2.selected == true && opcionbase.selected == false){
-        ruta = todosDestinoTucuman[posicion-1]
+        ruta = todosDestinoTucuman[posicion-1];
+        linea1.textContent = selector[posicion].label;
+        linea2.textContent = destino.textContent;
+            
         }
 
     if((fecha == 20 || fecha == 21)  && mes == 1){
@@ -3202,9 +3218,11 @@ const boton = document.getElementById('boton');
     }
     else{
 
-        // tituloResultado.textContent =`Hoy, ${diaSemana}, tenés éstos servicios`
+        tituloResultado.textContent =`Hoy, ${diaSemana}, tenés éstos servicios`
     
  //    Aqui definimos el array dependiendo el dia de la semana
+
+        
         
         if(dia == 0){
             diaRango = ruta[0].slice(0,ruta[0].length);
@@ -3305,7 +3323,7 @@ const boton = document.getElementById('boton');
                             actual1.textContent = `Servicio de las ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
                         }
 
-                        console.log(listaDiferencias.indexOf(anteriorPasado))
+                       
 
                         // actual1.textContent = `Servicio de las ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
                 if(anteriorPasado >= 120){
@@ -3328,23 +3346,23 @@ const boton = document.getElementById('boton');
                 }
                 actual3.textContent = `Recorrido : ${diaRango[listaDiferencias.indexOf(anteriorPasado)].recorrido}`
                     }
-                    console.log(listaDiferencias)
+                   
                     
                 }
 
                                     
                     else{
 
-                        if(dia >= 2 && dia <= 6){
-                            actual1.textContent = `Último servicio de ayer ${diaRango[(listaDiferencias.length) - 2].nombre} Hrs`;
-                            actual2.textContent = ''
-                            actual3.textContent = `Recorrido: ${diaRango[(listaDiferencias.length) - 2].recorrido}`
-                        }
-                        else{
+                        // if(dia >= 2 && dia <= 6){
+                        //     actual1.textContent = `Último servicio de ayer ${diaRango[(listaDiferencias.length) - 2].nombre} Hrs`;
+                        //     actual2.textContent = ''
+                        //     actual3.textContent = `Recorrido: ${diaRango[(listaDiferencias.length) - 2].recorrido}`
+                        // }
+                        // else{
                             actual1.textContent = '';
                         actual2.textContent = 'Ninguna unidad inició su recorrido aún'
                         actual3.textContent =''
-                        }
+                    // }
                         
                     }
                     
@@ -3455,6 +3473,8 @@ const boton = document.getElementById('boton');
     $('.resultados2').css('display','none')   
     opcionbase.selected = true;
     opcionbase2.selected = true;
+    linea1.textContent = '';
+    linea2.textContent = '';
 
 })
 // let salidaHEnteros = Math.trunc(diaRango[listaDiferencias.indexOf(anteriorPasado)].salida)  * 60;
@@ -3679,6 +3699,8 @@ function busquedaManual(){
             
          }
           else{
+
+            tituloResultado.textContent = '';
             horaInputAMinutos = (ingHora.value) * 60
             
             for(let i = 0; i < horariosEnEnteros2.length; i++){
