@@ -600,7 +600,7 @@ position: relative;
     align-items: center;
     height: 40px;
     width: 150px;
-    margin-top: 50px;
+    margin-top: 25px;
     background-color: #fefbfb;
     border-radius: 20px;
     animation: moverIndicacion 1.5s linear .5s infinite alternate-reverse;
