@@ -3202,13 +3202,13 @@ const boton = document.getElementById('boton');
 
     if(opcionbase.selected == true && opcionbase2.selected == false)  {
         ruta = todosTucumanDestino[posicion2-1]
-            linea1.textContent = origen.textContent
+            // linea1.textContent = origen.textContent
             linea2.textContent = selector2[posicion2].label;
         }
         if(opcionbase2.selected == true && opcionbase.selected == false){
         ruta = todosDestinoTucuman[posicion-1];
         linea1.textContent = selector[posicion].label;
-        linea2.textContent = destino.textContent;
+        // linea2.textContent = destino.textContent;
             
         }
 
