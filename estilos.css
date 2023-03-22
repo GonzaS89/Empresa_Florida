@@ -481,7 +481,7 @@ background-position: center;
 background-size:40%;
 background-repeat: no-repeat;
 position: absolute;
-filter: opacity(25%)
+filter: opacity(20%)
 
 }
 
@@ -490,7 +490,7 @@ filter: opacity(25%)
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height:400px;
+    height:450px;
     width:100%;  
     margin-top: -20px;
 }
@@ -510,6 +510,8 @@ border: .5px solid white;
 background-color: var(--blanco);
 overflow: hidden;
 position: relative;
+max-height: 40%;
+min-height: 10%;
 }
 /* .resultados3,.resultados4{
     width: 50%;
@@ -592,7 +594,7 @@ position: relative;
 #linea1,#linea2{
     color: var(--blanco);
     font-family: var(--fuenteSec);
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     margin-top: 30px;
 }
