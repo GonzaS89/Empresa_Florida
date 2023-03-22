@@ -12,6 +12,7 @@
 }
 html{
     box-sizing: border-box;
+    height: 100%;
   }
   *, *:before, *:after {
     box-sizing: inherit;
@@ -25,15 +26,15 @@ h1,p{
 body{
     background-color: var(--rojo2);
     position: relative;
-    min-height: 100vh;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .contenedor{
     display: flex;
     flex-direction: column;
-    width:100%;
     overflow: hidden;
-
 }
 
 
@@ -691,13 +692,24 @@ min-height: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
-    height: 50px;
+    background-color: var(--azul);
+    height: 60px;
     margin-top: auto;
+    box-shadow: 10px 10px 10px 10px black;
 }
 #footer-texto{
     color: var(--blanco);
     text-align: center;
+    font-weight: bold;
+    flex-basis: 33.33%;
+}
+#footer-imagen{
+    background-image: url(Imagenes/logoempresa.jpg);
+    height: 100%;
+    width: 100px;
+    background-size: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 @media(max-width:600px){
