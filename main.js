@@ -37,7 +37,7 @@ function reloj(){
     let  horita = document.getElementById('horas')
     let minutitos = document.getElementById('minutos')
     let segunditos = document.getElementById('segundos')
-    let diasDeLaSemana = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
+    let diasDeLaSemana = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
     let mesesDelAño = ['Enero', 'Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre']
     diaFecha.textContent = `${diasDeLaSemana[dia]}`
     numeroFecha.textContent = `${fecha}`;
@@ -3457,7 +3457,7 @@ const boton = document.getElementById('boton');
                         }
                         else{
                             futuro1.textContent ="";
-                            futuro2.textContent = "No hay más unidades por hoy, al menos por ésta ruta"
+                            futuro2.textContent = "No hay más unidades por hoy. Al menos por ésta ruta"
                             futuro3.textContent="";
                         }
 
