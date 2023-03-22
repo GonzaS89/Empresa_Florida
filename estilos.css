@@ -692,13 +692,12 @@ min-height: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--azul);
+    background-color: var(--blanco);
     height: 60px;
     margin-top: auto;
-    box-shadow: 10px 10px 10px 10px black;
+    box-shadow: 10px 10px 10px 10px rgb(255, 255, 255);
 }
 #footer-texto{
-    color: var(--blanco);
     text-align: center;
     font-weight: bold;
     flex-basis: 33.33%;
@@ -710,6 +709,7 @@ min-height: 20%;
     background-size: 75%;
     background-position: center;
     background-repeat: no-repeat;
+    justify-self: baseline;
 }
 
 @media(max-width:600px){
