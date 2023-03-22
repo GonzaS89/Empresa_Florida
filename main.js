@@ -37,7 +37,7 @@ function reloj(){
     let  horita = document.getElementById('horas')
     let minutitos = document.getElementById('minutos')
     let segunditos = document.getElementById('segundos')
-    let diasDeLaSemana = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
+    let diasDeLaSemana = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
     let mesesDelAño = ['Enero', 'Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre']
     diaFecha.textContent = `${diasDeLaSemana[dia]}`
     numeroFecha.textContent = `${fecha}`;
@@ -67,7 +67,7 @@ const horariosLvFloAl = [
     },
     {
         "nombre":"06:10",
-        "salida":6.10,
+        "salida":6.1,
         "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí → Terminal",
         "recorrido2":"Colonia 10 → Colonia 4 → Barrio La Cancha → Cochuchal → Alderetes → Autopista → Terminal"
     },
@@ -879,22 +879,22 @@ const horariosSSMAl = [
         {
             "nombre":"05:20",
             "salida":5.2,
-            "recorrido":"Terminal → Autopista → Talar → Florida → Barrio La Cancha"
+            "recorrido":"Terminal → Autopista → Alderetes → Talar → Florida → Barrio La Cancha"
         },
         {
             "nombre":"06:25",
             "salida":6.25,
-            "recorrido":"Terminal → Banda del Río Salí →  Talar → Florida → Esquina Lastra → Fortin → Mayo"
+            "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Esquina Lastra → Fortin → Mayo"
         },
         {
             "nombre":"07:15",
             "salida":7.15,
-            "recorrido":"Terminal → Banda del Río Salí → Talar → Florida → La Marta"
+            "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → Florida → La Marta"
         },
         {
             "nombre":"08:00",
             "salida":8,
-            "recorrido":"Terminal → Autopista → Cochuchal"
+            "recorrido":"Terminal → Autopista → Alderetes → Cochuchal → Florida"
         },
         {
             "nombre":"08:35",
@@ -914,22 +914,22 @@ const horariosSSMAl = [
         {
             "nombre":"12:20",
             "salida":12.2,
-            "recorrido":"Terminal → Autopista → Barrio La Cancha → Colonia 4"
+            "recorrido":"Terminal → Autopista → Alderetes → Talar → Florida → Barrio La Cancha → Colonia 4"
         },
         {
             "nombre":"13:30",
             "salida":13.3,
-            "recorrido":"Terminal → Autopista → Barrio La Cancha → La Marta"
+            "recorrido":"Terminal → Autopista → Alderetes → Talar → Florida → Barrio La Cancha → La Marta"
         },
         {
             "nombre":"14:00",
             "salida":14,
-            "recorrido":"Terminal → Banda del Río Salí → Barrio La Cancha"
+            "recorrido":"Terminal → Banda del Río Salí → Alderetes → Talar → FLorida → Barrio La Cancha"
         },
         {
             "nombre":"14:50",
             "salida":14.5,
-            "recorrido":"Terminal → Banda del Río Salí → Barrio La Cancha → Colonia 4"
+            "recorrido":"Terminal → Banda del Río Salí → Alderetes → Barrio La Cancha → Colonia 4"
         },
         {
             "nombre":"16:00",
@@ -1022,11 +1022,11 @@ const horariosDSMAl = [
 
 ]
 const horariosLvSMPo = [
-        // {
-        //     "nombre":"00:30",
-        //     "salida":0.3,
-        //     "recorrido":"Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida → Barrio La Cancha"
-        // },
+        {
+            "nombre":"00:30",
+            "salida":0.3,
+            "recorrido":"Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida → Barrio La Cancha"
+        },
         {
             "nombre":"06:00",
             "salida":6,
@@ -1204,6 +1204,11 @@ const horariosLvSMPo = [
         }
 ]
 const horariosSSMPo = [
+        {
+            "nombre":"00:30",
+            "salida":0.3,
+            "recorrido":"Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida →   Barrio La Cancha"
+        },
         {
             "nombre":"06:00",
             "salida":6,
@@ -3090,9 +3095,8 @@ const boton = document.getElementById('boton');
     let valores2= [];
     let posicion;
     let posicion2;
-
-
-    
+    let label1;   
+    let label2;
 
 
     
@@ -3108,6 +3112,8 @@ const boton = document.getElementById('boton');
         $('.menu').css('display','none');
         $('.botonDeCambio').css('display','none');
         opcionbase.selected = true;
+        linea1.textContent = '';
+        linea2.textContent = '';
 
     })
     botonDeCambio2.addEventListener('click', function (){
@@ -3118,6 +3124,8 @@ const boton = document.getElementById('boton');
         $('.menu').css('display','flex');
         $('.botonDeCambio').css('display','flex');
         opcionbase2.selected = true;
+        linea1.textContent = '';
+        linea2.textContent = '';
     })
 
     boton.addEventListener('click',function(){
@@ -3126,8 +3134,8 @@ const boton = document.getElementById('boton');
 
         for(opcion of selector){
             if(opcion.selected){
-                valorSelecionado = opcion
-                }
+                valorSelecionado = opcion;
+            }
         }
         for(i=0; i < selector.length;i++){
         valores.push(selector[i])
@@ -3137,12 +3145,13 @@ const boton = document.getElementById('boton');
             posicion=valores.indexOf(valorSelecionado)
         }
 
+
         // Definimos la posicion del selector 2
     
         for(opcion of selector2){
             if(opcion.selected){
                 valorSelecionado2 = opcion;
-                }
+            }
         }
         for(i=0; i < selector2.length;i++){
         valores2.push(selector2[i])
@@ -3152,6 +3161,7 @@ const boton = document.getElementById('boton');
             posicion2=valores2.indexOf(valorSelecionado2)
         }
     
+      
         // Definimos las variables globales
         
     let momentoActual = new Date();
@@ -3180,15 +3190,24 @@ const boton = document.getElementById('boton');
     let futuro3 = document.getElementById('futuro3');
     let futuro4 = document.getElementById('futuro4');
     let tituloResultado = document.getElementById('tituloResultado')
+    let linea1 = document.getElementById('linea1')
+    let linea2 = document.getElementById('linea2')
     const indicacion = document.querySelector('.indicacion-cont')
 
+    
+    
      // Aqui definimos donde localidad de salida y camino
 
     if(opcionbase.selected == true && opcionbase2.selected == false)  {
         ruta = todosTucumanDestino[posicion2-1]
+            // linea1.textContent = origen.textContent
+            linea2.textContent = selector2[posicion2].label;
         }
         if(opcionbase2.selected == true && opcionbase.selected == false){
-        ruta = todosDestinoTucuman[posicion-1]
+        ruta = todosDestinoTucuman[posicion-1];
+        linea1.textContent = selector[posicion].label;
+        // linea2.textContent = destino.textContent;
+            
         }
 
     if((fecha == 20 || fecha == 21)  && mes == 1){
@@ -3197,9 +3216,11 @@ const boton = document.getElementById('boton');
     }
     else{
 
-        // tituloResultado.textContent =`Hoy, ${diaSemana}, tenés éstos servicios`
+        tituloResultado.textContent =`Hoy, ${diaSemana}, tenés éstos servicios`
     
  //    Aqui definimos el array dependiendo el dia de la semana
+
+        
         
         if(dia == 0){
             diaRango = ruta[0].slice(0,ruta[0].length);
@@ -3276,12 +3297,15 @@ const boton = document.getElementById('boton');
                         if(anteriorPasado < 60 && anteriorPasado>5){
                             actual2.textContent = `Iniciaron sus recorridos hace ${Math.floor(anteriorPasado)} minutos`
                         }
-                        if(anteriorPasado < 5){
+                        if(anteriorPasado < 5 && anteriorPasado > 0){
                             actual2.textContent = 'Iniciaron sus recorridos hace menos de 5 minutos'
                         }
-                        if(anteriorPasado == 0){
+                        if(Math.trunc(anteriorPasado) == 0){
                             actual2.textContent = 'Están iniciando sus recorridos'
+                            
                         }
+
+                        console.log(anteriorPasado)
                         actual4.textContent = `2° Servicio : ${diaRango[listaDiferencias.indexOf(anteriorPasado)].recorrido2}`
                         actual3.textContent = `1° Servicio : ${diaRango[listaDiferencias.indexOf(anteriorPasado)].recorrido}`
                     }
@@ -3300,7 +3324,7 @@ const boton = document.getElementById('boton');
                             actual1.textContent = `Servicio de las ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
                         }
 
-                        console.log(listaDiferencias.indexOf(anteriorPasado))
+                       
 
                         // actual1.textContent = `Servicio de las ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
                 if(anteriorPasado >= 120){
@@ -3323,15 +3347,24 @@ const boton = document.getElementById('boton');
                 }
                 actual3.textContent = `Recorrido : ${diaRango[listaDiferencias.indexOf(anteriorPasado)].recorrido}`
                     }
-                    console.log(listaDiferencias)
+                   
                     
                 }
-                
-                        
+
+                                    
                     else{
+
+                        if((dia >= 2 && dia <= 6) && (opcionbase.selected == true && posicion2 == 2)){
+                            actual1.textContent = `Último servicio de ayer ${diaRango[(listaDiferencias.length) - 2].nombre} Hrs`;
+                            actual2.textContent = ''
+                            actual3.textContent = `Recorrido: ${diaRango[(listaDiferencias.length) - 2].recorrido}`
+                        }
+                        else{
                         actual1.textContent = '';
                         actual2.textContent = 'Ninguna unidad inició su recorrido aún'
                         actual3.textContent =''
+                    }
+                        
                     }
                     
                 
@@ -3425,7 +3458,7 @@ const boton = document.getElementById('boton');
                         }
                         else{
                             futuro1.textContent ="";
-                            futuro2.textContent = "No hay más unidades por hoy, al menos por ésta ruta"
+                            futuro2.textContent = "No hay más unidades por hoy. Al menos por ésta ruta"
                             futuro3.textContent="";
                         }
 
@@ -3441,6 +3474,8 @@ const boton = document.getElementById('boton');
     $('.resultados2').css('display','none')   
     opcionbase.selected = true;
     opcionbase2.selected = true;
+    linea1.textContent = '';
+    linea2.textContent = '';
 
 })
 // let salidaHEnteros = Math.trunc(diaRango[listaDiferencias.indexOf(anteriorPasado)].salida)  * 60;
@@ -3665,6 +3700,8 @@ function busquedaManual(){
             
          }
           else{
+
+            tituloResultado.textContent = '';
             horaInputAMinutos = (ingHora.value) * 60
             
             for(let i = 0; i < horariosEnEnteros2.length; i++){
