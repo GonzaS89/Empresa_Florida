@@ -67,7 +67,7 @@ const horariosLvFloAl = [
     },
     {
         "nombre":"06:10",
-        "salida":6.10,
+        "salida":6.1,
         "recorrido":"Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí → Terminal",
         "recorrido2":"Colonia 10 → Colonia 4 → Barrio La Cancha → Cochuchal → Alderetes → Autopista → Terminal"
     },
@@ -1022,11 +1022,11 @@ const horariosDSMAl = [
 
 ]
 const horariosLvSMPo = [
-        // {
-        //     "nombre":"00:30",
-        //     "salida":0.3,
-        //     "recorrido":"Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida → Barrio La Cancha"
-        // },
+        {
+            "nombre":"00:30",
+            "salida":0.3,
+            "recorrido":"Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida → Barrio La Cancha"
+        },
         {
             "nombre":"06:00",
             "salida":6,
@@ -3192,8 +3192,6 @@ const boton = document.getElementById('boton');
     let tituloResultado = document.getElementById('tituloResultado')
     let linea1 = document.getElementById('linea1')
     let linea2 = document.getElementById('linea2')
-    let destino = document.getElementById('destino')
-    let origen = document.getElementById('origen')
     const indicacion = document.querySelector('.indicacion-cont')
 
     
@@ -3299,12 +3297,15 @@ const boton = document.getElementById('boton');
                         if(anteriorPasado < 60 && anteriorPasado>5){
                             actual2.textContent = `Iniciaron sus recorridos hace ${Math.floor(anteriorPasado)} minutos`
                         }
-                        if(anteriorPasado < 5){
+                        if(anteriorPasado < 5 && anteriorPasado > 0){
                             actual2.textContent = 'Iniciaron sus recorridos hace menos de 5 minutos'
                         }
-                        if(anteriorPasado == 0){
+                        if(Math.trunc(anteriorPasado) == 0){
                             actual2.textContent = 'Están iniciando sus recorridos'
+                            
                         }
+
+                        console.log(anteriorPasado)
                         actual4.textContent = `2° Servicio : ${diaRango[listaDiferencias.indexOf(anteriorPasado)].recorrido2}`
                         actual3.textContent = `1° Servicio : ${diaRango[listaDiferencias.indexOf(anteriorPasado)].recorrido}`
                     }
@@ -3353,16 +3354,16 @@ const boton = document.getElementById('boton');
                                     
                     else{
 
-                        // if(dia >= 2 && dia <= 6){
-                        //     actual1.textContent = `Último servicio de ayer ${diaRango[(listaDiferencias.length) - 2].nombre} Hrs`;
-                        //     actual2.textContent = ''
-                        //     actual3.textContent = `Recorrido: ${diaRango[(listaDiferencias.length) - 2].recorrido}`
-                        // }
-                        // else{
-                            actual1.textContent = '';
+                        if((dia >= 2 && dia <= 6) && (opcionbase.selected == true && posicion2 == 2)){
+                            actual1.textContent = `Último servicio de ayer ${diaRango[(listaDiferencias.length) - 2].nombre} Hrs`;
+                            actual2.textContent = ''
+                            actual3.textContent = `Recorrido: ${diaRango[(listaDiferencias.length) - 2].recorrido}`
+                        }
+                        else{
+                        actual1.textContent = '';
                         actual2.textContent = 'Ninguna unidad inició su recorrido aún'
                         actual3.textContent =''
-                    // }
+                    }
                         
                     }
                     

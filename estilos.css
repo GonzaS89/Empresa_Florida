@@ -488,19 +488,18 @@ filter: opacity(20%)
 .resultados-cont{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height:450px;
+    height:500px;
+    gap: 10px;
     width:100%;  
-    margin-top: -20px;
 }
 
 .resultados,.resultados2,.resultados3{
 /* height: 30%;     */
-width: 50%;
-
+width: 80%;
 display: none;
-justify-content: space-around;
+justify-content: center;
 align-items: center;
 flex-direction: column;
 border-radius: 20px;
@@ -511,7 +510,7 @@ background-color: var(--blanco);
 overflow: hidden;
 position: relative;
 max-height: 40%;
-min-height: 10%;
+min-height: 20%;
 }
 /* .resultados3,.resultados4{
     width: 50%;
@@ -693,7 +692,7 @@ min-height: 10%;
     #fondo{
         width: 100%;
         height:100%;
-        background-size:60%;
+        background-size:45%;
         }
     .input-reloj{
         height:50px;
@@ -718,7 +717,6 @@ min-height: 10%;
     
     .resultados,.resultados2,.resultados3{
         width: 90%;
-        margin: 20px;
         border: .5px solid white;
         padding: 10px 0;
 
