@@ -3443,24 +3443,6 @@ const boton = document.getElementById('boton');
     opcionbase2.selected = true;
 
 })
-// let salidaHEnteros = Math.trunc(diaRango[listaDiferencias.indexOf(anteriorPasado)].salida)  * 60;
-// let salidaMEnteros = ((diaRango[listaDiferencias.indexOf(anteriorPasado)].salida) - (Math.trunc(diaRango[listaDiferencias.indexOf(anteriorPasado)].salida)))  * 100;
-// let llegadaHEnteros = Math.trunc(diaRango[listaDiferencias.indexOf(anteriorPasado)].llegada)  * 60;
-// let llegadaMEnteros = ((diaRango[listaDiferencias.indexOf(anteriorPasado)].llegada) - (Math.trunc(diaRango[listaDiferencias.indexOf(anteriorPasado)].llegada)))  * 100;
-// let salidaEnEnteros = salidaHEnteros + salidaMEnteros;
-// let llegadaEnEnteros = llegadaHEnteros + llegadaMEnteros;
-// let difSalidaLlegada = llegadaEnEnteros - salidaEnEnteros;
-// let avance = (Math.floor(anteriorPasado) / difSalidaLlegada) * 100;
-// console.log(salidaEnEnteros,llegadaEnEnteros)
-//     const progreso = document.getElementById('progreso')
-//     progreso.style.width = `${avance}%`;
-
-    
-    
-
-
-
-
 
 
 function busquedaManual(){
