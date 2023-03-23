@@ -3210,8 +3210,8 @@ const boton = document.getElementById('boton');
             
         }
 
-    if((fecha == 24)  && (mes == 2)){
-        tituloResultado.textContent =`Hoy, ${diasDeLaSemana[dia]} (feriado), hay horarios reducidos )`;
+    if((fecha == 20 || fecha == 21)  && mes == 1){
+        tituloResultado.textContent =`${diasDeLaSemana[dia]} feriado ( horarios reducidos )`;
         diaRango = ruta[0];
     }
     else{
@@ -3340,7 +3340,7 @@ const boton = document.getElementById('boton');
                 if(anteriorPasado < 5 && anteriorPasado > 0){
                     actual2.textContent = 'Inició su recorrido hace menos de 5 minutos'
                 }
-                if(anteriorPasado == 0){
+                if(Math.trunc(anteriorPasado) == 0){
                     actual2.textContent = 'Está iniciando su recorrido'
                 }
                 actual3.textContent = `Recorrido : ${diaRango[listaDiferencias.indexOf(anteriorPasado)].recorrido}`
@@ -3476,24 +3476,6 @@ const boton = document.getElementById('boton');
     linea2.textContent = '';
 
 })
-// let salidaHEnteros = Math.trunc(diaRango[listaDiferencias.indexOf(anteriorPasado)].salida)  * 60;
-// let salidaMEnteros = ((diaRango[listaDiferencias.indexOf(anteriorPasado)].salida) - (Math.trunc(diaRango[listaDiferencias.indexOf(anteriorPasado)].salida)))  * 100;
-// let llegadaHEnteros = Math.trunc(diaRango[listaDiferencias.indexOf(anteriorPasado)].llegada)  * 60;
-// let llegadaMEnteros = ((diaRango[listaDiferencias.indexOf(anteriorPasado)].llegada) - (Math.trunc(diaRango[listaDiferencias.indexOf(anteriorPasado)].llegada)))  * 100;
-// let salidaEnEnteros = salidaHEnteros + salidaMEnteros;
-// let llegadaEnEnteros = llegadaHEnteros + llegadaMEnteros;
-// let difSalidaLlegada = llegadaEnEnteros - salidaEnEnteros;
-// let avance = (Math.floor(anteriorPasado) / difSalidaLlegada) * 100;
-// console.log(salidaEnEnteros,llegadaEnEnteros)
-//     const progreso = document.getElementById('progreso')
-//     progreso.style.width = `${avance}%`;
-
-    
-    
-
-
-
-
 
 
 function busquedaManual(){
