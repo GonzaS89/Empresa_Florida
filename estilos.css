@@ -481,23 +481,23 @@ background-position: center;
 background-size:40%;
 background-repeat: no-repeat;
 position: absolute;
-filter: opacity(25%)
+filter: opacity(20%)
 
 }
 
 .resultados-cont{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height:600px;
+    height:500px;
+    gap: 10px;
     width:100%;  
-    margin: 0px;
 }
 
 .resultados,.resultados2,.resultados3{
-height: 25%;    
-width: 50%;
+/* height: 30%;     */
+width: 80%;
 display: none;
 justify-content: center;
 align-items: center;
@@ -509,6 +509,8 @@ border: .5px solid white;
 background-color: var(--blanco);
 overflow: hidden;
 position: relative;
+max-height: 40%;
+min-height: 20%;
 }
 /* .resultados3,.resultados4{
     width: 50%;
@@ -576,22 +578,35 @@ position: relative;
     height: 100%;
     width: 100%;   
 }
+.texto-resultados{
+    display: flex;
+    flex-direction: column;
+}
 #tituloResultado{
     color: white;
-    font-size: 20px;
-    text-transform: uppercase;
+    font-size: 25px;
     text-align: center;
     font-family: var(--fuenteSec);
-    margin-bottom: 15px; 
+    margin-bottom: 10px; 
     padding: 10px;
 }
+#linea1,#linea2{
+    color: var(--blanco);
+    font-family: var(--fuenteSec);
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+#linea2{
+    margin-top: 10px;
+}
+
 .indicacion-cont{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 40px;
     width: 150px;
-    margin-top: 50px;
     background-color: #fefbfb;
     border-radius: 20px;
     animation: moverIndicacion 1.5s linear .5s infinite alternate-reverse;
@@ -677,7 +692,7 @@ position: relative;
     #fondo{
         width: 100%;
         height:100%;
-        background-size:60%;
+        background-size:45%;
         }
     .input-reloj{
         height:50px;
@@ -702,7 +717,6 @@ position: relative;
     
     .resultados,.resultados2,.resultados3{
         width: 90%;
-        margin: 30px;
         border: .5px solid white;
         padding: 10px 0;
 
@@ -730,7 +744,7 @@ position: relative;
         position: fixed;
         left: 0;
         top: 0; 
-        background-color: rgba(0, 0, 0, 0.922);   
+        background-color: rgba(0, 0, 0, 0.912);   
         height: 100%;
         width: 100%;    
         animation: aparece .25s linear;
