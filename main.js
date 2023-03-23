@@ -3061,7 +3061,7 @@ const terminalLasCejasD = [
     },
 ]
 const floridaAldTucuman = [horariosDFloAl,horariosLvFloAl,horariosSFloAl];
-const terminalAldFlorida = [horariosDSMAl,horariosLvSMAl,horariosSSMAl];
+const terminalAldFlorida = [horariosDSMAl, horariosLvSMAl,horariosSSMAl];
 const floridaPosseTucuman = [horariosDFloPo,horariosLvFloPo,horariosSFloPo];
 const terminalPosseFlorida = [horariosDSMPo,horariosLvSMPo,horariosSSMPo];
 const posseLTerminal = [posseTerminalD,posseTerminalLaV,posseTerminalS];
@@ -3171,7 +3171,7 @@ const boton = document.getElementById('boton');
     let dia = momentoActual.getDay();
     let fecha = momentoActual.getDate();
     let mes = momentoActual.getMonth();
-    let diasDeLaSemana = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
+    let diasDeLaSemana = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
     let diaSemana = diasDeLaSemana[dia]
     let elMasCercano=3000;
     let anteriorPasado = 3000;
@@ -3210,8 +3210,8 @@ const boton = document.getElementById('boton');
             
         }
 
-    if((fecha == 24)  && (mes == 2)){
-        tituloResultado.textContent =`Hoy, ${diasDeLaSemana[dia]} (feriado), hay horarios reducidos )`;
+    if((fecha == 20 || fecha == 21)  && mes == 1){
+        tituloResultado.textContent =`Hoy, ${diasDeLaSemana[dia]}(feriado), hay horarios reducidos )`;
         diaRango = ruta[0];
     }
     else{
@@ -3335,12 +3335,10 @@ return anteriorPasado
                         }
                         if(Math.trunc(a) == 0){
                             actual2.textContent = 'Están iniciando sus recorridos'
-                            
                         }
 
-                        
-                        actual4.textContent = `2° Servicio : ${diaRango[listaDiferencias.indexOf(a)].recorrido2}`
-                        actual3.textContent = `1° Servicio : ${diaRango[listaDiferencias.indexOf(a)].recorrido}`
+                        actual4.textContent = `2° Servicio : ${diaRango[listaDiferencias.indexOf(anteriorPasado)].recorrido2}`
+                        actual3.textContent = `1° Servicio : ${diaRango[listaDiferencias.indexOf(anteriorPasado)].recorrido}`
                     }
                     else{
 
@@ -3375,7 +3373,7 @@ return anteriorPasado
                 if(a < 5 && a > 0){
                     actual2.textContent = 'Inició su recorrido hace menos de 5 minutos'
                 }
-                if(a == 0){
+                if(Math.trunc(anteriorPasado) == 0){
                     actual2.textContent = 'Está iniciando su recorrido'
                 }
                 actual3.textContent = `Recorrido : ${diaRango[listaDiferencias.indexOf(a)].recorrido}`
@@ -3511,24 +3509,6 @@ return anteriorPasado
     linea2.textContent = '';
 
 })
-// let salidaHEnteros = Math.trunc(diaRango[listaDiferencias.indexOf(anteriorPasado)].salida)  * 60;
-// let salidaMEnteros = ((diaRango[listaDiferencias.indexOf(anteriorPasado)].salida) - (Math.trunc(diaRango[listaDiferencias.indexOf(anteriorPasado)].salida)))  * 100;
-// let llegadaHEnteros = Math.trunc(diaRango[listaDiferencias.indexOf(anteriorPasado)].llegada)  * 60;
-// let llegadaMEnteros = ((diaRango[listaDiferencias.indexOf(anteriorPasado)].llegada) - (Math.trunc(diaRango[listaDiferencias.indexOf(anteriorPasado)].llegada)))  * 100;
-// let salidaEnEnteros = salidaHEnteros + salidaMEnteros;
-// let llegadaEnEnteros = llegadaHEnteros + llegadaMEnteros;
-// let difSalidaLlegada = llegadaEnEnteros - salidaEnEnteros;
-// let avance = (Math.floor(anteriorPasado) / difSalidaLlegada) * 100;
-// console.log(salidaEnEnteros,llegadaEnEnteros)
-//     const progreso = document.getElementById('progreso')
-//     progreso.style.width = `${avance}%`;
-
-    
-    
-
-
-
-
 
 
 function busquedaManual(){
