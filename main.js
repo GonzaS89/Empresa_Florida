@@ -148,7 +148,7 @@ const horariosLvFloAl = [
     {
         "nombre":"14:45",
         "salida":14.45,
-        "recorrido" : "Colonia 4 → Barrio La Cancha → Talar → Alderetes → Alternativa → Terminal",
+        "recorrido" : "Colonia 4 → Barrio La Cancha → Talar → Alternativa → Terminal",
         "recorrido2":"Colonia 4 → Barrio La Cancha → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
@@ -3211,7 +3211,7 @@ const boton = document.getElementById('boton');
         }
 
     if((fecha == 24)  && (mes == 2)){
-        tituloResultado.textContent =`Hoy ${diasDeLaSemana[dia]} feriado ( horarios reducidos )`;
+        tituloResultado.textContent =`Hoy, ${diasDeLaSemana[dia]} (feriado), hay horarios reducidos )`;
         diaRango = ruta[0];
     }
     else{
