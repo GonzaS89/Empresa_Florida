@@ -3191,8 +3191,8 @@ const boton = document.getElementById('boton');
         ruta = todosDestinoTucuman[posicion-1]
         }
 
-    if((fecha == 20 || fecha == 21)  && mes == 1){
-        tituloResultado.textContent =`${diasDeLaSemana[dia]} feriado ( horarios reducidos )`;
+    if((fecha == 24)  && (mes == 2)){
+        tituloResultado.textContent =`Hoy ${diasDeLaSemana[dia]} feriado ( horarios reducidos )`;
         diaRango = ruta[0];
     }
     else{
