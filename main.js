@@ -3342,7 +3342,7 @@ const boton = document.getElementById('boton');
                 if(anteriorPasado < 5 && anteriorPasado > 0){
                     actual2.textContent = 'Inició su recorrido hace menos de 5 minutos'
                 }
-                if(anteriorPasado == 0){
+                if(Math.trunc(anteriorPasado) == 0){
                     actual2.textContent = 'Está iniciando su recorrido'
                 }
                 actual3.textContent = `Recorrido : ${diaRango[listaDiferencias.indexOf(anteriorPasado)].recorrido}`
