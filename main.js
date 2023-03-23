@@ -3210,8 +3210,8 @@ const boton = document.getElementById('boton');
             
         }
 
-    if((fecha == 20 || fecha == 21)  && mes == 1){
-        tituloResultado.textContent =`${diasDeLaSemana[dia]} feriado ( horarios reducidos )`;
+    if((fecha == 24)  && (mes == 2)){
+        tituloResultado.textContent =`Hoy ${diasDeLaSemana[dia]} feriado ( horarios reducidos )`;
         diaRango = ruta[0];
     }
     else{
@@ -3233,119 +3233,152 @@ const boton = document.getElementById('boton');
         }
     }   
     
+    function obtenerCercano(x){
+        for (i=0; i < x.length; i++){
+            listaDelDia.push(x[i].salida);
+}
+
+for(let i=0 ; i < listaDelDia.length ; i++){
+            
+    let horasEnEnteros=  (Math.trunc(listaDelDia[i]))  * 60;
+          let minutosEnEnteros = (listaDelDia[i] - (Math.trunc(listaDelDia[i])))*100;
+          let horaMinutosEnEnteros = horasEnEnteros + minutosEnEnteros;
+  horariosEnEnteros.push(horaMinutosEnEnteros);
+}
+
+    
+for(i = 0; i < horariosEnEnteros.length; i++){
+                
+    let difHoraHorarios = horaEnEnteros - horariosEnEnteros[i];
+listaDiferencias.push(difHoraHorarios); 
+}
+
+
+for(i=0; i < listaDiferencias.length; i++){
+
+if(listaDiferencias[i] >= 0){
+anteriorPasado = Math.min(anteriorPasado,listaDiferencias[i]);
+}
+
+
+}
+return anteriorPasado
+    }
+
+    let a = obtenerCercano(diaRango)
         
             // Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
         
-                        for (i=0; i < diaRango.length; i++){
-                        listaDelDia.push(diaRango[i].salida);
-            }
+                    //     for (i=0; i < diaRango.length; i++){
+                    //     listaDelDia.push(diaRango[i].salida);
+                    //  }
 
                 // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
     
-                        for(let i=0 ; i < listaDelDia.length ; i++){
+                //         for(let i=0 ; i < listaDelDia.length ; i++){
             
-                      let horasEnEnteros=  (Math.trunc(listaDelDia[i]))  * 60;
-                            let minutosEnEnteros = (listaDelDia[i] - (Math.trunc(listaDelDia[i])))*100;
-                            let horaMinutosEnEnteros = horasEnEnteros + minutosEnEnteros;
-                    horariosEnEnteros.push(horaMinutosEnEnteros);
-            }
+                //       let horasEnEnteros=  (Math.trunc(listaDelDia[i]))  * 60;
+                //             let minutosEnEnteros = (listaDelDia[i] - (Math.trunc(listaDelDia[i])))*100;
+                //             let horaMinutosEnEnteros = horasEnEnteros + minutosEnEnteros;
+                //     horariosEnEnteros.push(horaMinutosEnEnteros);
+                //  }
 
                             /*Recorremos el array y buscamos coincidencias con el horario actual*/
                             
-                        for(i = 0; i < horariosEnEnteros.length; i++){
+            //             for(i = 0; i < horariosEnEnteros.length; i++){
                 
-                                    let difHoraHorarios = horaEnEnteros - horariosEnEnteros[i];
-                                listaDiferencias.push(difHoraHorarios); 
-            }
+            //                         let difHoraHorarios = horaEnEnteros - horariosEnEnteros[i];
+            //                     listaDiferencias.push(difHoraHorarios); 
+            // }
 
             
-                        for(i=0; i < listaDiferencias.length; i++){
+            //             for(i=0; i < listaDiferencias.length; i++){
 
-                            if(listaDiferencias[i] >= 0){
-                            anteriorPasado = Math.min(anteriorPasado,listaDiferencias[i]);
-                            }
-                        }
+            //                 if(listaDiferencias[i] >= 0){
+            //                 anteriorPasado = Math.min(anteriorPasado,listaDiferencias[i]);
+            //                 }
+            //             }
                     
                             
                                 
                 //  Aqui definimos los mensajes a mostrar en el primer campo       
-                if(anteriorPasado < 3000){
+                if(a < 3000){
 
-                    if(Object.keys(diaRango[listaDiferencias.indexOf(anteriorPasado)]).length > 3){
+                    if(Object.keys(diaRango[listaDiferencias.indexOf(a)]).length > 3){
 
-                        if(listaDiferencias.indexOf(anteriorPasado) == 0){
-                            actual1.textContent = `Primeros servicios del día ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
+                        if(listaDiferencias.indexOf(a) == 0){
+                            actual1.textContent = `Primeros servicios del día ${diaRango[listaDiferencias.indexOf(a)].nombre} Hrs`
                         }
-                        if(listaDiferencias.indexOf(anteriorPasado) == (listaDiferencias.length) - 1){
-                            actual1.textContent = `Últimos servicio del día ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
+                        if(listaDiferencias.indexOf(a) == (listaDiferencias.length) - 1){
+                            actual1.textContent = `Últimos servicio del día ${diaRango[listaDiferencias.indexOf(a)].nombre} Hrs`
                         }
-                        if((listaDiferencias.indexOf(anteriorPasado) == 0) && (listaDiferencias.indexOf(anteriorPasado) == (listaDiferencias.length) - 1)){
-                            actual1.textContent = `Únicos servicios del día ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
+                        if((listaDiferencias.indexOf(a) == 0) && (listaDiferencias.indexOf(a) == (listaDiferencias.length) - 1)){
+                            actual1.textContent = `Únicos servicios del día ${diaRango[listaDiferencias.indexOf(a)].nombre} Hrs`
                         }
-                        if((listaDiferencias.indexOf(anteriorPasado)) > 0 && ((listaDiferencias.indexOf(anteriorPasado) < (listaDiferencias.length) - 1))){
-                            actual1.textContent = `Servicios de las ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
+                        if((listaDiferencias.indexOf(a)) > 0 && ((listaDiferencias.indexOf(a) < (listaDiferencias.length) - 1))){
+                            actual1.textContent = `Servicios de las ${diaRango[listaDiferencias.indexOf(a)].nombre} Hrs`
                         }
-                        if(anteriorPasado >= 120){
+                        if(a >= 120){
                             actual2.textContent = 'Iniciaron sus recorridos hace un par horas'
                         }
-                        if(anteriorPasado>60 && anteriorPasado < 120){
+                        if(a>60 && a < 120){
                             actual2.textContent = 'Iniciaron sus recorridos hace mas de 1 hora'
                         }
-                        if(anteriorPasado==60){
+                        if(a==60){
                             actual2.textContent = 'Iniciaron sus recorridos hace 1 hora'
                         }
-                        if(anteriorPasado < 60 && anteriorPasado>5){
-                            actual2.textContent = `Iniciaron sus recorridos hace ${Math.floor(anteriorPasado)} minutos`
+                        if(a < 60 && a>5){
+                            actual2.textContent = `Iniciaron sus recorridos hace ${Math.floor(a)} minutos`
                         }
-                        if(anteriorPasado < 5 && anteriorPasado > 0){
+                        if(a < 5 && a > 0){
                             actual2.textContent = 'Iniciaron sus recorridos hace menos de 5 minutos'
                         }
-                        if(Math.trunc(anteriorPasado) == 0){
+                        if(Math.trunc(a) == 0){
                             actual2.textContent = 'Están iniciando sus recorridos'
                             
                         }
 
-                        console.log(anteriorPasado)
-                        actual4.textContent = `2° Servicio : ${diaRango[listaDiferencias.indexOf(anteriorPasado)].recorrido2}`
-                        actual3.textContent = `1° Servicio : ${diaRango[listaDiferencias.indexOf(anteriorPasado)].recorrido}`
+                        
+                        actual4.textContent = `2° Servicio : ${diaRango[listaDiferencias.indexOf(a)].recorrido2}`
+                        actual3.textContent = `1° Servicio : ${diaRango[listaDiferencias.indexOf(a)].recorrido}`
                     }
                     else{
 
-                        if(listaDiferencias.indexOf(anteriorPasado) == 0){
-                            actual1.textContent = `Primer servicio del día ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
+                        if(listaDiferencias.indexOf(a) == 0){
+                            actual1.textContent = `Primer servicio del día ${diaRango[listaDiferencias.indexOf(a)].nombre} Hrs`
                         }
-                        if(listaDiferencias.indexOf(anteriorPasado) == (listaDiferencias.length) - 1){
-                            actual1.textContent = `Último servicio del día ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
+                        if(listaDiferencias.indexOf(a) == (listaDiferencias.length) - 1){
+                            actual1.textContent = `Último servicio del día ${diaRango[listaDiferencias.indexOf(a)].nombre} Hrs`
                         }
-                        if((listaDiferencias.indexOf(anteriorPasado) == 0) && (listaDiferencias.indexOf(anteriorPasado) == (listaDiferencias.length) - 1)){
-                            actual1.textContent = `Único servicio del día ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
+                        if((listaDiferencias.indexOf(a) == 0) && (listaDiferencias.indexOf(a) == (listaDiferencias.length) - 1)){
+                            actual1.textContent = `Único servicio del día ${diaRango[listaDiferencias.indexOf(a)].nombre} Hrs`
                         }
-                        if((listaDiferencias.indexOf(anteriorPasado)) > 0 && ((listaDiferencias.indexOf(anteriorPasado) < (listaDiferencias.length) - 1))){
-                            actual1.textContent = `Servicio de las ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
+                        if((listaDiferencias.indexOf(a)) > 0 && ((listaDiferencias.indexOf(a) < (listaDiferencias.length) - 1))){
+                            actual1.textContent = `Servicio de las ${diaRango[listaDiferencias.indexOf(a)].nombre} Hrs`
                         }
 
                        
 
-                        // actual1.textContent = `Servicio de las ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
-                if(anteriorPasado >= 120){
+                        // actual1.textContent = `Servicio de las ${diaRango[listaDiferencias.indexOf(a)].nombre} Hrs`
+                if(a >= 120){
                     actual2.textContent = 'Inició su recorrido hace un par horas'
                 }
-                if(anteriorPasado>60 && anteriorPasado < 120){
+                if(a>60 && a < 120){
                     actual2.textContent = 'Inició su recorrido hace más de 1 hora'
                 }
-                if(anteriorPasado==60){
+                if(a==60){
                     actual2.textContent = 'Inició su recorrido hace 1 hora'
                 }
-                if(anteriorPasado < 60 && anteriorPasado>5){
-                    actual2.textContent = `Inició su recorrido hace ${Math.floor(anteriorPasado)} minutos`
+                if(a < 60 && a>5){
+                    actual2.textContent = `Inició su recorrido hace ${Math.floor(a)} minutos`
                 }
-                if(anteriorPasado < 5 && anteriorPasado > 0){
+                if(a < 5 && a > 0){
                     actual2.textContent = 'Inició su recorrido hace menos de 5 minutos'
                 }
-                if(anteriorPasado == 0){
+                if(a == 0){
                     actual2.textContent = 'Está iniciando su recorrido'
                 }
-                actual3.textContent = `Recorrido : ${diaRango[listaDiferencias.indexOf(anteriorPasado)].recorrido}`
+                actual3.textContent = `Recorrido : ${diaRango[listaDiferencias.indexOf(a)].recorrido}`
                     }
                    
                     
@@ -3371,11 +3404,11 @@ const boton = document.getElementById('boton');
                         //   Aqui en el segundo campo  
                 
 
-                for(i = 0; i < horariosEnEnteros.length; i++){
+                        for(i = 0; i < horariosEnEnteros.length; i++){
                 
-                    let difHorariosHora = horariosEnEnteros[i] - horaEnEnteros;;
+                       let difHorariosHora = horariosEnEnteros[i] - horaEnEnteros;;
                         listaDiferencias2.push(difHorariosHora); 
-            }
+                     }
             
                         for(i=0; i < listaDiferencias2.length; i++){
                             if(listaDiferencias2[i] >0){
