@@ -3171,7 +3171,7 @@ const boton = document.getElementById('boton');
     let dia = momentoActual.getDay();
     let fecha = momentoActual.getDate();
     let mes = momentoActual.getMonth();
-    let diasDeLaSemana = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
+    let diasDeLaSemana = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
     let diaSemana = diasDeLaSemana[dia]
     let elMasCercano=3000;
     let anteriorPasado = 3000;
@@ -3210,8 +3210,8 @@ const boton = document.getElementById('boton');
             
         }
 
-    if((fecha == 20 || fecha == 21)  && mes == 1){
-        tituloResultado.textContent =`${diasDeLaSemana[dia]} feriado ( horarios reducidos )`;
+    if((fecha == 24)  && (mes == 2)){
+        tituloResultado.textContent =`Hoy, ${diasDeLaSemana[dia]} (feriado), hay horarios reducidos )`;
         diaRango = ruta[0];
     }
     else{
@@ -3302,10 +3302,8 @@ const boton = document.getElementById('boton');
                         }
                         if(Math.trunc(anteriorPasado) == 0){
                             actual2.textContent = 'Están iniciando sus recorridos'
-                            
                         }
 
-                        console.log(anteriorPasado)
                         actual4.textContent = `2° Servicio : ${diaRango[listaDiferencias.indexOf(anteriorPasado)].recorrido2}`
                         actual3.textContent = `1° Servicio : ${diaRango[listaDiferencias.indexOf(anteriorPasado)].recorrido}`
                     }
