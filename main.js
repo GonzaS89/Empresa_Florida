@@ -3210,7 +3210,7 @@ const boton = document.getElementById('boton');
             
         }
 
-    if((fecha == 20 || fecha == 21)  && mes == 1){
+    if((fecha == 24) && (mes == 2)){
         tituloResultado.textContent =`Hoy, ${diasDeLaSemana[dia]} (feriado), hay horarios reducidos `;
         diaRango = ruta[0];
     }
