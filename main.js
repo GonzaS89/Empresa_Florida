@@ -3321,7 +3321,7 @@ const boton = document.getElementById('boton');
             if((listaDiferencias.indexOf(anteriorPasado)) > 0 && ((listaDiferencias.indexOf(anteriorPasado) < (listaDiferencias.length) - 1))){
                 actual1.textContent = `Servicio de las ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
             }
-n
+
 
                         // actual1.textContent = `Servicio de las ${diaRango[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
 
