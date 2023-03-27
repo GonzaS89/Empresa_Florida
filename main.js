@@ -3666,37 +3666,38 @@ function busquedaManual(){
             },2000)
             
          }
-    else{
+        else{
 
-        tituloResultado.textContent = '';
-        horaInputAMinutos = (ingHora.value) * 60
+            tituloResultado.textContent = '';
+            horaInputAMinutos = (ingHora.value) * 60
             
-        for(let i = 0; i < horariosEnEnteros2.length; i++){
-            listaDiferencias3.push (horariosEnEnteros2[i] - horaInputAMinutos)
+            for(let i = 0; i < horariosEnEnteros2.length; i++){
+                listaDiferencias3.push (horariosEnEnteros2[i] - horaInputAMinutos)
+            }
+
+            for(let i = 0; i < listaDiferencias3.length; i++){
+                if(listaDiferencias3[i] > 0){
+                    proximo = Math.min(proximo, listaDiferencias3[i])
+                }
+
+                if(proximo < 3000){
+                    mostrar1.textContent = `El servicio más cercano al horario que indicaste, es él de las ${diaRango2[listaDiferencias3.indexOf(proximo)].nombre}Hrs`;
+                    mostrar2.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo)].recorrido}`
+                }
+                else{
+                    console.log(proximo)
+                    mostrar1.textContent = 'No hay más servicios en éste horario ni en lo que resta del día';
+                }
+            }
+
+            $('.resultados3').css('display','flex')     
+            $('.mensaje2').css('display', 'flex')
         }
-
-        for(let i = 0; i < listaDiferencias3.length; i++){
-            if(listaDiferencias3[i] > 0){
-                proximo = Math.min(proximo, listaDiferencias3[i])
-            }
-
-            if(proximo < 3000){
-                mostrar1.textContent = `El servicio más cercano al horario que indicaste, es él de las ${diaRango2[listaDiferencias3.indexOf(proximo)].nombre}Hrs`;
-                mostrar2.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo)].recorrido}`
-            }
-            else{
-                console.log(proximo)
-                mostrar1.textContent = 'No hay más servicios en éste horario ni en lo que resta del día';
-            }
-        }
-
-        $('.resultados3').css('display','flex')     
-        $('.mensaje2').css('display', 'flex')
-    }
-})
-        indicacion.addEventListener('click', function(){
-            $('.mensaje2').css('display', 'none') 
-            $('.resultados3').css('display','none')
+    })
+        
+    indicacion.addEventListener('click', function(){
+        $('.mensaje2').css('display', 'none') 
+        $('.resultados3').css('display','none')
             // $('#selector3').css('display','none')      
             // $('#selector4').css('display','none') 
             // $('#selector5').css('display','none') 
@@ -3711,7 +3712,7 @@ function busquedaManual(){
             // ingHora.value = '';
             // botonOrigenCapital.selected = false;
             // botonCapitalDestino.selected = false;
-        })
+    })
 }
 
 
