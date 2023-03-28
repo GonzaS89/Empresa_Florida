@@ -3703,12 +3703,13 @@ function busquedaManual() {
                 }
 
                 if (proximo < 3000) {
-                    mostrar1.textContent = `El servicio más cercano al horario que indicaste, es él de las ${diaRango2[listaDiferencias3.indexOf(proximo)].nombre}Hrs`;
+                    mostrar1.textContent = `El servicio más cercano al horario que indicaste, es él de las ${diaRango2[listaDiferencias3.indexOf(proximo)].nombre} Hrs`;
                     mostrar2.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo)].recorrido}`
                 }
                 else {
                     console.log(proximo)
                     mostrar1.textContent = 'No hay más servicios en éste horario ni en lo que resta del día';
+                    mostrar2.textContent = '';
                 }
             }
 
