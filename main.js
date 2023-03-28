@@ -3192,8 +3192,7 @@ boton.addEventListener('click', function () {
     let futuro3 = document.getElementById('futuro3');
     let futuro4 = document.getElementById('futuro4');
     let tituloResultado = document.getElementById('tituloResultado')
-    let linea1 = document.getElementById('linea1')
-    let linea2 = document.getElementById('linea2')
+    let linea1 = document.getElementById('linea1');
     const indicacion = document.querySelector('.indicacion-cont');
     let feriado = false;
 
@@ -3203,7 +3202,7 @@ boton.addEventListener('click', function () {
         ruta = todosTucumanDestino[posicion2 - 1]
         // linea1.textContent = origen.textContent
 
-        linea2.textContent = selector2[posicion2].label;
+        linea1.textContent = selector2[posicion2].label;
     }
     if (opcionbase2.selected == true && opcionbase.selected == false) {
         ruta = todosDestinoTucuman[posicion - 1];
@@ -3349,25 +3348,27 @@ boton.addEventListener('click', function () {
 
     }
 
-                                    
-                    // else{
 
-                        // if((dia >= 2 && dia <= 6) && (opcionbase.selected == true && posicion2 == 2)){
-                        //     actual1.textContent = `Último servicio de ayer ${diaRango[(listaDiferencias.length) - 2].nombre} Hrs`;
-                        //     actual2.textContent = ''
-                        //     actual3.textContent = `Recorrido: ${diaRango[(listaDiferencias.length) - 2].recorrido}`
-                        // }
-else{
-        actual1.textContent = '';
-        actual2.textContent = 'Ninguna unidad inició su recorrido aún'
-        actual3.textContent =''
+    else{
+
+
+        if((dia >= 2 && dia <= 6) && (opcionbase.selected == true && posicion2 == 2)){
+            actual1.textContent = `Último servicio de ayer ${diaRango[(listaDiferencias.length) - 2].nombre} Hrs`;
+            actual2.textContent = ''
+            actual3.textContent = `Recorrido: ${diaRango[(listaDiferencias.length) - 2].recorrido}`
+        }
+        else {
+            actual1.textContent = '';
+            actual2.textContent = 'Ninguna unidad inició su recorrido aún'
+            actual3.textContent = ''
+        }
+
+
     }
-                        
-                    // }
-                    
-                
-                        //   Aqui en el segundo campo  
-                
+
+
+    //   Aqui en el segundo campo  
+
 
     for (i = 0; i < horariosEnEnteros.length; i++) {
         let difHorariosHora = horariosEnEnteros[i] - horaEnEnteros;
@@ -3502,6 +3503,10 @@ function busquedaManual() {
     let horaInputAMinutos
     const mensaje2 = document.querySelector('.mensaje2');
     let mensajeError = document.getElementById('mensajeError')
+    let linea2 = document.getElementById('linea2');
+    let linea3 = document.getElementById('linea3');
+    let linea4 = document.getElementById('linea4')
+    
 
     botonManual.addEventListener('click', function () {
         $('.botonesBusquedaCont2').css('display', 'flex');
@@ -3631,11 +3636,13 @@ function busquedaManual() {
         // Aqui definimos donde localidad de salida y camino
 
         if (opcionbase4.selected == true && opcionbase3.selected == false) {
-            ruta2 = todosDestinoTucuman[posicion3 - 1]
+            ruta2 = todosDestinoTucuman[posicion3 - 1];
+            linea2.textContent = selector3[posicion3].label;
         }
 
         if (opcionbase3.selected == true && opcionbase4.selected == false) {
-            ruta2 = todosTucumanDestino[posicion4 - 1]
+            ruta2 = todosTucumanDestino[posicion4 - 1];
+            linea2.textContent = selector4[posicion4].label;
         }
 
 
@@ -3651,7 +3658,13 @@ function busquedaManual() {
             diaRango2 = ruta2[0].slice(0, ruta2[0].length);
         }
 
-
+        if((posicion5 - 1) == 0){
+            linea3.textContent = `De ${selector5[posicion5].label}`;
+        }
+        else{
+            linea3.textContent = `Días ${selector5[posicion5].label}`;
+        }
+        
         // / Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
 
         for (i = 0; i < diaRango2.length; i++) {
@@ -3676,8 +3689,8 @@ function busquedaManual() {
 
         }
         else {
-
             tituloResultado.textContent = '';
+            linea4.textContent = `A partir de las ${ingHora.value} Hrs`;
             horaInputAMinutos = (ingHora.value) * 60
 
             for (let i = 0; i < horariosEnEnteros2.length; i++) {
@@ -3690,12 +3703,13 @@ function busquedaManual() {
                 }
 
                 if (proximo < 3000) {
-                    mostrar1.textContent = `El servicio más cercano al horario que indicaste, es él de las ${diaRango2[listaDiferencias3.indexOf(proximo)].nombre}Hrs`;
+                    mostrar1.textContent = `El servicio más cercano al horario que indicaste, es él de las ${diaRango2[listaDiferencias3.indexOf(proximo)].nombre} Hrs`;
                     mostrar2.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo)].recorrido}`
                 }
                 else {
                     console.log(proximo)
                     mostrar1.textContent = 'No hay más servicios en éste horario ni en lo que resta del día';
+                    mostrar2.textContent = '';
                 }
             }
 
