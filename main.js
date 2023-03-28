@@ -3349,22 +3349,22 @@ boton.addEventListener('click', function () {
     }
 
 
-    // else{
+    else{
 
 
-    // if((dia >= 2 && dia <= 6) && (opcionbase.selected == true && posicion2 == 2)){
-    //     actual1.textContent = `Último servicio de ayer ${diaRango[(listaDiferencias.length) - 2].nombre} Hrs`;
-    //     actual2.textContent = ''
-    //     actual3.textContent = `Recorrido: ${diaRango[(listaDiferencias.length) - 2].recorrido}`
-    // }
-    else {
-        actual1.textContent = '';
-        actual2.textContent = 'Ninguna unidad inició su recorrido aún'
-        actual3.textContent = ''
+        if((dia >= 2 && dia <= 6) && (opcionbase.selected == true && posicion2 == 2)){
+            actual1.textContent = `Último servicio de ayer ${diaRango[(listaDiferencias.length) - 2].nombre} Hrs`;
+            actual2.textContent = ''
+            actual3.textContent = `Recorrido: ${diaRango[(listaDiferencias.length) - 2].recorrido}`
+        }
+        else {
+            actual1.textContent = '';
+            actual2.textContent = 'Ninguna unidad inició su recorrido aún'
+            actual3.textContent = ''
+        }
+
+
     }
-
-
-    // }
 
 
     //   Aqui en el segundo campo  
