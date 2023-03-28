@@ -3192,8 +3192,7 @@ boton.addEventListener('click', function () {
     let futuro3 = document.getElementById('futuro3');
     let futuro4 = document.getElementById('futuro4');
     let tituloResultado = document.getElementById('tituloResultado')
-    let linea1 = document.getElementById('linea1')
-    let linea2 = document.getElementById('linea2')
+    let linea1 = document.getElementById('linea1');
     const indicacion = document.querySelector('.indicacion-cont');
     let feriado = false;
 
@@ -3203,7 +3202,7 @@ boton.addEventListener('click', function () {
         ruta = todosTucumanDestino[posicion2 - 1]
         // linea1.textContent = origen.textContent
 
-        linea2.textContent = selector2[posicion2].label;
+        linea1.textContent = selector2[posicion2].label;
     }
     if (opcionbase2.selected == true && opcionbase.selected == false) {
         ruta = todosDestinoTucuman[posicion - 1];
@@ -3504,6 +3503,10 @@ function busquedaManual() {
     let horaInputAMinutos
     const mensaje2 = document.querySelector('.mensaje2');
     let mensajeError = document.getElementById('mensajeError')
+    let linea2 = document.getElementById('linea2');
+    let linea3 = document.getElementById('linea3');
+    let linea4 = document.getElementById('linea4')
+    
 
     botonManual.addEventListener('click', function () {
         $('.botonesBusquedaCont2').css('display', 'flex');
@@ -3633,11 +3636,13 @@ function busquedaManual() {
         // Aqui definimos donde localidad de salida y camino
 
         if (opcionbase4.selected == true && opcionbase3.selected == false) {
-            ruta2 = todosDestinoTucuman[posicion3 - 1]
+            ruta2 = todosDestinoTucuman[posicion3 - 1];
+            linea2.textContent = selector3[posicion3].label;
         }
 
         if (opcionbase3.selected == true && opcionbase4.selected == false) {
-            ruta2 = todosTucumanDestino[posicion4 - 1]
+            ruta2 = todosTucumanDestino[posicion4 - 1];
+            linea2.textContent = selector4[posicion4].label;
         }
 
 
@@ -3653,7 +3658,13 @@ function busquedaManual() {
             diaRango2 = ruta2[0].slice(0, ruta2[0].length);
         }
 
-
+        if((posicion5 - 1) == 0){
+            linea3.textContent = `De ${selector5[posicion5].label}`;
+        }
+        else{
+            linea3.textContent = `Días ${selector5[posicion5].label}`;
+        }
+        
         // / Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
 
         for (i = 0; i < diaRango2.length; i++) {
@@ -3678,8 +3689,8 @@ function busquedaManual() {
 
         }
         else {
-
             tituloResultado.textContent = '';
+            linea4.textContent = `A partir de las ${ingHora.value} Hrs`;
             horaInputAMinutos = (ingHora.value) * 60
 
             for (let i = 0; i < horariosEnEnteros2.length; i++) {
