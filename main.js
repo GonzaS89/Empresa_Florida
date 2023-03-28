@@ -3689,8 +3689,13 @@ function busquedaManual() {
 
         }
         else {
+            if(ingHora.value < 10){
+                linea4.textContent = `A partir de las 0${ingHora.value}:00 Hrs`;
+            }
+            else{
+                linea4.textContent = `A partir de las ${ingHora.value}:00 Hrs`;
+            }
             tituloResultado.textContent = '';
-            linea4.textContent = `A partir de las ${ingHora.value} Hrs`;
             horaInputAMinutos = (ingHora.value) * 60
 
             for (let i = 0; i < horariosEnEnteros2.length; i++) {
@@ -3721,6 +3726,10 @@ function busquedaManual() {
     indicacion.addEventListener('click', function () {
         $('.mensaje2').css('display', 'none')
         $('.resultados3').css('display', 'none')
+        linea2.textContent = '';
+        linea3.textContent = '';
+        linea4.textContent = '';
+
         // $('#selector3').css('display','none')      
         // $('#selector4').css('display','none') 
         // $('#selector5').css('display','none') 
