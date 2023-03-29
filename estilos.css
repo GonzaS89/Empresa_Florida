@@ -28,11 +28,23 @@ p {
 }
 
 body {
-    background-color: var(--rojo2);
+    
     position: relative;
     min-height: 100%;
     display: flex;
+    justify-content: center;
+    background-color: black;
+    
+}
+.cuerpo{
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--rojo2);
+    width: 50%;
+    border-radius: 50px;
+    margin: 50px;
 }
 
 .contenedor {
@@ -70,13 +82,11 @@ body {
 
 #dia {
     font-size: 20px;
-    background-color: var(--rojo2);
     height: 20%;
 }
 
 #fecha {
     font-size: 70px;
-    background-color: var(--rojo2);
     height: 60%;
 }
 
@@ -837,6 +847,13 @@ body {
 }
 
 @media(max-width:600px) {
+
+    .cuerpo{
+        width: 100%;
+        margin:0;
+        border-radius: 0;
+        justify-content:flex-start;
+    }
 
     #fondo {
         width: 100%;
