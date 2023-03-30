@@ -45,6 +45,7 @@ body {
     width: 50%;
     border-radius: 50px;
     margin: 50px;
+    padding: 20px;
 }
 
 .contenedor {
@@ -587,7 +588,7 @@ body {
 .resultados2,
 .resultados3{
     /* height: 30%;     */
-    width: 80%;
+    width: 50%;
     display: none;
     justify-content: center;
     align-items: center;
@@ -599,8 +600,7 @@ body {
     background-color: var(--blanco);
     overflow: hidden;
     position: relative;
-    max-height: 40%;
-    min-height: 20%;
+    min-height: 50%;
 }
 
 
@@ -620,32 +620,34 @@ body {
 #actual1,
 #futuro1 {
     padding: 0 10px;
-    border-radius: 10px;
+    margin: 10px 0;
+
 }
 
 #actual3,
 #futuro3 {
     padding: 0 10px;
-    border-radius: 10px;
+   
+    margin: 0;
 }
 
 #actual4,
 #futuro4 {
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 #actual2,
 #futuro2 {
     border-radius: 10px;
     padding: 0 10px;
-    margin: 5px;
+    margin: 20px auto;
 }
 
 #actual1,
 #actual2,
 #actual3,
 #actual4 {
-    font-size: 22px;
+    font-size: 18px;
     font-family: var(--fuenteSec);
     text-align: center;
     color: rgb(0, 0, 0);
@@ -657,13 +659,15 @@ body {
 #futuro2,
 #futuro3,
 #futuro4 {
-    font-size: 22px;
+    font-size: 18px;
     font-family: var(--fuenteSec);
     text-align: center;
     font-weight: bold;
     color: rgb(0, 0, 0);
     z-index: 5;
 }
+
+
 
 #mostrar1,
 #mostrar2,
@@ -853,6 +857,7 @@ body {
         margin:0;
         border-radius: 0;
         justify-content:flex-start;
+        padding: 0;
     }
 
     #fondo {
