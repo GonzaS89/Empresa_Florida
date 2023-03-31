@@ -3691,10 +3691,10 @@ function busquedaManual() {
         }
         else {
             if(ingHora.value < 10){
-                linea4.textContent = `A partir de las 0${ingHora.value}:00 Hrs`;
+                linea4.textContent = `Servicios cercanos a las 0${ingHora.value}:00 Hrs`;
             }
             else{
-                linea4.textContent = `A partir de las ${ingHora.value}:00 Hrs`;
+                linea4.textContent = `Servicios cercanos las ${ingHora.value}:00 Hrs`;
             }
             tituloResultado.textContent = '';
             horaInputAMinutos = (ingHora.value) * 60
@@ -3709,8 +3709,11 @@ function busquedaManual() {
                 }
 
                 if (proximo < 3000) {
-                    mostrar1.textContent = `El servicio más cercano al horario que indicaste, es él de las ${diaRango2[listaDiferencias3.indexOf(proximo)].nombre} Hrs`;
-                    mostrar2.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo)].recorrido}`
+
+                    mostrar1.textContent = `Anteriormente al horario que indicaste es el servicio de las ${diaRango2[listaDiferencias3.indexOf(proximo) - 1].nombre} Hrs`;
+                    mostrar2.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo) - 1].recorrido}`
+                    mostrar3.textContent = `El servicio más cercano al horario que indicaste, es él de las ${diaRango2[listaDiferencias3.indexOf(proximo)].nombre} Hrs`;
+                    mostrar4.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo)].recorrido}`
                 }
                 else {
                     console.log(proximo)
@@ -3720,6 +3723,7 @@ function busquedaManual() {
             }
 
             $('.resultados3').css('display', 'flex')
+            $('.resultados4').css('display', 'flex')
             $('.mensaje2').css('display', 'flex')
         }
     })

@@ -585,7 +585,8 @@ body {
 
 .resultados,
 .resultados2,
-.resultados3{
+.resultados3,
+.resultados4{
     /* height: 30%;     */
     width: 40%;
     display: none;
@@ -866,18 +867,20 @@ body {
 
     .resultados,
     .resultados2,
-    .resultados3 {
+    .resultados3,
+    .resultados4 {
         width: 90%;
         border: .5px solid white;
         padding: 10px 0;
-        max-height: 40%;
+        max-height: 30%;
         min-height: 20%;
 
     }
 
-    .resultados3{
+    .resultados3,
+    .resultados4{
         margin-top: 20px;
-        min-height: 150px;
+        /* min-height: 150px; */
     }
 
     #actual1,
@@ -896,8 +899,10 @@ body {
         margin: 5px 0;
     } */
     #mostrar1,
-    #mostrar2 {
-        font-size: 18px;
+    #mostrar2,
+    #mostrar3,
+    #mostrar4 {
+        font-size: 15px;
         margin: 10px 10px;
     }
 
