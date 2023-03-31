@@ -3448,6 +3448,7 @@ boton.addEventListener('click', function () {
             futuro3.textContent = `Recorrido : ${diaRango[listaDiferencias2.indexOf(elMasCercano)].recorrido}`
         }
 
+        
     }
     else {
         futuro1.textContent = "";

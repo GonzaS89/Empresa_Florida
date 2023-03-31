@@ -39,13 +39,13 @@ body {
 .cuerpo{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: var(--rojo2);
-    width: 50%;
+    width: 30%;
     border-radius: 50px;
-    margin: 50px;
-    padding: 20px;
+    margin: 30px auto;
+    padding: 25px 0;
 }
 
 .contenedor {
@@ -61,7 +61,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0 auto 20px;
-    width: 95%;
+    width: 100%;
     height: 150px;
     gap: 20px;
 }
@@ -82,7 +82,7 @@ body {
 }
 
 #dia {
-    font-size: 20px;
+    font-size: 25px;
     height: 20%;
 }
 
@@ -92,7 +92,7 @@ body {
 }
 
 #mes {
-    font-size: 20px;
+    font-size: 25px;
     background-color: var(--azul);
     height: 20%;
     border-radius: 10px;
@@ -137,7 +137,7 @@ body {
 }
 
 #segundos {
-    font-size: 20px;
+    font-size: 25px;
     height: 20%;
 
 }
@@ -148,7 +148,7 @@ body {
 }
 
 #minutos {
-    font-size: 20px;
+    font-size: 25px;
     background-color: var(--azul);
     height: 20%;
     border-radius: 10px;
@@ -192,7 +192,7 @@ body {
     justify-content: center;
     font-family: var(--fuenteSec);
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     color: var(--blanco);
     text-shadow: 1px 0px black;
 }
@@ -216,8 +216,8 @@ body {
 #botonDeCambio,
 #botonDeCambio2 {
     border-radius: 25%;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     background-image: url('Imagenes/pngegg.png');
     background-size: 75%;
     background-repeat: no-repeat;
@@ -286,20 +286,20 @@ body {
 #origenCapital,
 #capitalDestino {
     font-family: var(--fuenteSec);
-    height: 50px;
+    height: 60px;
     border-radius: 5px;
-    font-size: 15px;
+    font-size: 17.5px;
     font-weight: bold;
     background-color: var(--blanco);
 }
 
 #ingHora {
-    height: 50px;
+    height: 60px;
     border-radius: 5px;
     margin-top: 5px;
     text-align: center;
     font-family: var(--fuenteSec);
-    font-size: 15px;
+    font-size: 17.5px;
     font-weight: bold;
 }
 
@@ -316,7 +316,7 @@ body {
 }
 
 ::placeholder {
-    font-size: 15px;
+    font-size: 17.5px;
 }
 
 .botonesBusquedaCont {
@@ -337,14 +337,15 @@ body {
 #busquedaAuto {
     background-color: var(--azul);
     color: var(--blanco);
-    height: 50px;
+    height: 60px;
     width: 300px;
-    padding: 10px;
+    padding: px;
     border-radius: 10px;
-    font-size: 15px;
+    font-size: 17.5px;
     font-weight: bold;
     font-family: var(--fuenteSec);
     text-align-last: center;
+    margin-top: 10px;
 }
 
 .busquedaAuto {
@@ -427,9 +428,8 @@ body {
 }
 
 .select {
-    background-color: transparent;
     font-family: var(--fuenteSec);
-    font-size: 15px;
+    font-size: 17.5px;
     border: none;
     text-align: center;
     width: 250px;
@@ -450,11 +450,10 @@ body {
 
 .select>option {
     font-family: var(--fuenteSec);
-    font-size: 15px;
+    font-size: 17.5px;
     color: white;
     font-weight: bold;
     background-color: var(--azul);
-
 }
 
 #busquedaInput2 {
@@ -523,12 +522,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
-    width: 100px;
+    height: 75px;
+    width: 115px;
     background-color: var(--azul);
     border-radius: 10px;
     font-family: var(--fuenteSec);
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     box-shadow: 2px black;
     color: var(--blanco);
@@ -569,7 +568,7 @@ body {
     border-radius: 100%;
     background-image: url('Imagenes/logosinfondo.png');
     background-position: center;
-    background-size: 40%;
+    background-size: 35%;
     background-repeat: no-repeat;
     position: absolute;
     filter: opacity(20%)
@@ -588,7 +587,7 @@ body {
 .resultados2,
 .resultados3{
     /* height: 30%;     */
-    width: 50%;
+    width: 40%;
     display: none;
     justify-content: center;
     align-items: center;
@@ -600,7 +599,9 @@ body {
     background-color: var(--blanco);
     overflow: hidden;
     position: relative;
-    min-height: 50%;
+    max-height: 50%;
+    min-height: 25%;
+    padding: 20px;
 }
 
 
@@ -620,34 +621,30 @@ body {
 #actual1,
 #futuro1 {
     padding: 0 10px;
-    margin: 10px 0;
-
+    border-radius: 10px;
 }
 
 #actual3,
 #futuro3 {
     padding: 0 10px;
-   
-    margin: 0;
+    border-radius: 10px;
 }
 
 #actual4,
 #futuro4 {
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
 #actual2,
 #futuro2 {
-    border-radius: 10px;
-    padding: 0 10px;
-    margin: 20px auto;
+    margin: 15px 5px;
 }
 
 #actual1,
 #actual2,
 #actual3,
 #actual4 {
-    font-size: 18px;
+    font-size: 20px;
     font-family: var(--fuenteSec);
     text-align: center;
     color: rgb(0, 0, 0);
@@ -659,15 +656,13 @@ body {
 #futuro2,
 #futuro3,
 #futuro4 {
-    font-size: 18px;
+    font-size: 20px;
     font-family: var(--fuenteSec);
     text-align: center;
     font-weight: bold;
     color: rgb(0, 0, 0);
     z-index: 5;
 }
-
-
 
 #mostrar1,
 #mostrar2,
@@ -701,7 +696,7 @@ body {
 
 #tituloResultado {
     color: white;
-    font-size: 25px;
+    font-size: 35px;
     text-align: center;
     font-family: var(--fuenteSec);
     margin-bottom: 10px;
@@ -711,7 +706,7 @@ body {
 #linea1{
     color: var(--blanco);
     font-family: var(--fuenteSec);
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
     margin-top: 30px;
 }
@@ -720,7 +715,7 @@ body {
 #linea4{
     color: var(--blanco);
     font-family: var(--fuenteSec);
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;   
     margin: 0 auto; 
 }
@@ -731,8 +726,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
-    width: 150px;
+    height: 60px;
+    width: 180px;
     background-color: #fefbfb;
     border-radius: 20px;
     margin-top: 20px;
@@ -740,7 +735,7 @@ body {
 }
 
 #indicacion {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -857,7 +852,6 @@ body {
         margin:0;
         border-radius: 0;
         justify-content:flex-start;
-        padding: 0;
     }
 
     #fondo {
@@ -871,25 +865,96 @@ body {
         width: 200px;
     }
 
+    #dia {
+        font-size: 20px;
+    }
+    
+    #fecha {
+        font-size: 70px;
+    }
+    
+    #mes {
+        font-size: 20px;
+    }
+
+    #segundos {
+        font-size: 20px;
+    }
+    
+    #horas {
+        font-size: 70px;
+    }
+    
+    #minutos {
+        font-size: 20px;
+    }
+
     #mensaje {
         width: 75%;
 
     }
 
-    #botonAuto,
-    #botonManual {
+    #busquedaManual,
+    #busquedaAuto {
+        height: 50px;
+        width: 300px;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .select {
+        font-size: 15px;
+    }
+
+    .select>option {
+        font-size: 15px;
+    }
+
+    #botonDeCambio,
+    #botonDeCambio2 {
+        width: 60px;
         height: 60px;
-        width: 85%;
     }
 
-    #botonManual:active {
-        background-color: rgb(0, 0, 0);
-
+    #destino,
+    #origen {
+        font-size: 20px;
     }
 
-    #botonAuto:active {
-        background-color: rgb(0, 0, 0);
+    #boton,
+    #boton2 {
+    height: 60px;
+    width: 100px;
+    font-size: 16px;
+    }
 
+    #origenCapital,
+    #capitalDestino {
+    height: 50px;
+    font-size: 15px;
+    
+    }
+
+    #ingHora {
+        height: 50px;
+        font-size: 15px;
+    }
+
+    ::placeholder {
+        font-size: 15px;
+    }
+
+    #tituloResultado {
+        font-size: 25px;
+    }
+
+    #linea1,
+    #linea2,
+    #linea3,
+    #linea4{
+        font-size: 20px;
     }
 
     .resultados,
@@ -898,6 +963,8 @@ body {
         width: 90%;
         border: .5px solid white;
         padding: 10px 0;
+        max-height: 40%;
+        min-height: 20%;
 
     }
 
@@ -943,6 +1010,15 @@ body {
         height: 100%;
         width: 100%;
         animation: aparece .25s linear;
+    }
+
+    .indicacion-cont {
+        height: 40px;
+        width: 150px;
+    }
+    
+    #indicacion {
+        font-size: 15px;
     }
 
     @keyframes aparece {
