@@ -3728,17 +3728,46 @@ function busquedaManual() {
                 }
 
                 if (proximo < 3000) {
+                    if(listaDiferencias3.indexOf(proximo) == 0){
+                        mostrar1.textContent = 'No hay unidades activas anteriores al horario indicado'
+                        mostrar2.textContent = '';
+                        mostrar3.textContent = `El servicio más cercano al horario indicado es de las ${diaRango2[listaDiferencias3.indexOf(proximo)].nombre} Hrs (Primer servicio del día)`;
+                        mostrar4.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo)].recorrido}`
+                    }
+                    else{
+                        mostrar1.textContent = `Anteriormente al horario que indicaste tenés el servicio de las ${diaRango2[listaDiferencias3.indexOf(proximo) - 1].nombre} Hrs`;
+                        mostrar2.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo) - 1].recorrido}`;
+                        if(listaDiferencias3.indexOf(proximo) == diaRango2.length - 1){
+                            mostrar3.textContent = `El servicio más cercano al horario indicado es de las ${diaRango2[listaDiferencias3.indexOf(proximo)].nombre} Hrs (Último servicio del día)`;
+                            mostrar4.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo)].recorrido}`;
+                        }
+                        else{
+                            mostrar3.textContent = `Y el servicio más cercano a partir del horario que indicaste, es él de las ${diaRango2[listaDiferencias3.indexOf(proximo)].nombre} Hrs`;
+                        mostrar4.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo)].recorrido}`;
+                        }
+                        
+                    }
 
-                    mostrar1.textContent = `Anteriormente al horario que indicaste tenés el servicio de las ${diaRango2[listaDiferencias3.indexOf(proximo) - 1].nombre} Hrs`;
-                    mostrar2.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo) - 1].recorrido}`
-                    mostrar3.textContent = `Y el servicio más cercano a partir del horario que indicaste, es él de las ${diaRango2[listaDiferencias3.indexOf(proximo)].nombre} Hrs`;
-                    mostrar4.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo)].recorrido}`
+                    console.log(diaRango2)
+                    
                 }
                 else {
-                    console.log(proximo)
-                    mostrar1.textContent = 'No hay más servicios en éste horario ni en lo que resta del día';
-                    mostrar2.textContent = '';
+                    mostrar1.textContent = `El servicio más cercano al horario indicado es de las ${diaRango2[diaRango2.length - 1].nombre} Hrs (Último servicio del día)`;
+                    mostrar2.textContent = `Recorrido: ${diaRango2[diaRango2.length - 1].recorrido}`
+                    mostrar3.textContent = 'No hay más servicios en éste horario ni en lo que resta del día. Probá con otra ruta';
+                    mostrar4.textContent = '';
                 }
+                
+
+                if(diaRango2.length == 1){
+                    mostrar1.textContent = `El servicio más cercano al horario indicado es de las ${diaRango2[diaRango2.length - 1].nombre} Hrs (Único servicio del día)`;
+                    mostrar2.textContent = `Recorrido: ${diaRango2[diaRango2.length - 1].recorrido}`;
+                }
+                // if(diaRango2.length == ''){
+                //     $('.resultados3').css('display', 'flex');
+                //     mostrar1.textContent = 'No hay unidades activas en el dia seleccionado'
+                //     mostrar2.textContent = ''
+                // }
             }
 
             $('.resultados3').css('display', 'flex')
