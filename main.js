@@ -3380,7 +3380,7 @@ boton.addEventListener('click', function () {
             actual3.textContent = ''
         }
 
-        console.log(rutaObtenida)
+        
 
 
     }
