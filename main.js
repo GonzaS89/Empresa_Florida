@@ -3704,15 +3704,15 @@ function busquedaManual() {
             }
 
             for (let i = 0; i < listaDiferencias3.length; i++) {
-                if (listaDiferencias3[i] > 0) {
+                if (listaDiferencias3[i] >= 0) {
                     proximo = Math.min(proximo, listaDiferencias3[i])
                 }
 
                 if (proximo < 3000) {
 
-                    mostrar1.textContent = `Anteriormente al horario que indicaste es el servicio de las ${diaRango2[listaDiferencias3.indexOf(proximo) - 1].nombre} Hrs`;
+                    mostrar1.textContent = `Anteriormente al horario que indicaste tenés el servicio de las ${diaRango2[listaDiferencias3.indexOf(proximo) - 1].nombre} Hrs`;
                     mostrar2.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo) - 1].recorrido}`
-                    mostrar3.textContent = `El servicio más cercano al horario que indicaste, es él de las ${diaRango2[listaDiferencias3.indexOf(proximo)].nombre} Hrs`;
+                    mostrar3.textContent = `Y el servicio más cercano al horario que indicaste, es él de las ${diaRango2[listaDiferencias3.indexOf(proximo)].nombre} Hrs`;
                     mostrar4.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo)].recorrido}`
                 }
                 else {
@@ -3729,8 +3729,9 @@ function busquedaManual() {
     })
 
     indicacion.addEventListener('click', function () {
-        $('.mensaje2').css('display', 'none')
-        $('.resultados3').css('display', 'none')
+        $('.mensaje2').css('display', 'none');
+        $('.resultados3').css('display', 'none');
+        $('.resultados4').css('display', 'none');
         linea2.textContent = '';
         linea3.textContent = '';
         linea4.textContent = '';
