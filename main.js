@@ -3748,7 +3748,7 @@ function busquedaManual() {
                         
                     }
 
-                    console.log(diaRango2)
+                    
                     
                 }
                 else {
@@ -3783,6 +3783,10 @@ function busquedaManual() {
         linea2.textContent = '';
         linea3.textContent = '';
         linea4.textContent = '';
+        mostrar1.textContent = '';
+        mostrar2.textContent = '';
+        mostrar3.textContent = '';
+        mostrar4.textContent = '';
 
         // $('#selector3').css('display','none')      
         // $('#selector4').css('display','none') 
