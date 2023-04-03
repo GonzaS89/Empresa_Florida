@@ -532,22 +532,10 @@ body {
     font-weight: bold;
     box-shadow: 2px black;
     color: var(--blanco);
-    animation: ondaBoton 1s linear infinite;
+    
 }
 
-@keyframes ondaBoton{
-    
-    to{
-        outline: 25px solid rgba(0, 0, 0, 0);
-        transform: scale(0.9);
-        
-    }
-    from{       
-        outline: 0 solid var(--azul);
-        outline-offset: 0;
-        outline-offset: 0;
-    }
-}
+
 
 #boton {
     display: flex;
@@ -560,7 +548,7 @@ body {
 #boton:active {
     cursor: pointer;
     color: white;
-    background-color: black;
+    transform: translateY(5px);
 }
 
 #boton:hover {
@@ -574,7 +562,7 @@ body {
 #boton2:active {
     cursor: pointer;
     color: white;
-    background-color: black;
+    transform: translateY(5px);
 
 }
 
@@ -782,12 +770,28 @@ body {
     background-color: #fefbfb;
     border-radius: 20px;
     margin-top: 20px;
-    animation: moverIndicacion 1.5s linear .5s infinite alternate-reverse;
+    /* animation: moverIndicacion 1.5s linear .5s infinite alternate-reverse; */
+    animation: ondaBoton 1s linear .5s infinite;
 }
 
 #indicacion {
     font-size: 20px;
     font-weight: bold;
+    
+}
+
+@keyframes ondaBoton{
+    
+    to{
+        outline: 25px solid rgba(0, 0, 0, 0);
+        transform: scale(0.9);
+        
+    }
+    from{       
+        outline: 0 solid white;
+        outline-offset: 0;
+        outline-offset: 0;
+    }
 }
 
 #indicacion:hover {
