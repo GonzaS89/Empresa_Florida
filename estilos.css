@@ -695,14 +695,14 @@ body {
     left: 0;
     padding: 50px;
     border: 1px solid white;
-    animation: aparece .25s linear forwards;
+    animation: aparece .5s linear forwards;
 }
 
 
 @keyframes aparece {
         0% {
             transform: scale(0);
-            /* filter: opacity(0%); */
+            /* filter: opacity(30%); */
         }
 
         100% {
@@ -768,7 +768,7 @@ body {
     border-radius: 20px;
     margin-top: 20px;
     /* animation: moverIndicacion 1.5s linear .5s infinite alternate-reverse; */
-    /* animation: ondaBoton 1s linear .5s infinite; */
+    animation: ondaBoton 1s linear .5s infinite;
 }
 
 #indicacion {
