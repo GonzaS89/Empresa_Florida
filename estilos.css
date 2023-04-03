@@ -7,6 +7,7 @@
     --fondoAzul: rgb(31, 77, 134);
     --fuentePrincipal: 'Nunito', sans-serif;
     --fuenteSec: 'Dosis', sans-serif;
+    --fuenteTer:'Titan One', cursive;
 
 }
 
@@ -683,13 +684,26 @@ body {
     justify-content: space-evenly;
     align-items: center;
     position: fixed;
-    left: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.912);
+    background-color: black;
     height: 100%;
     width: 100%;
+    top: 0;
+    left: 0;
     padding: 50px;
+    border: 1px solid white;
+    animation: aparece .5s linear forwards;
 }
+
+@keyframes aparece {
+        0% {
+            transform: scale(0);
+        }
+
+        100% {
+            transform: scale(1);
+            background-color: var(--rojo2);
+        }
+    }
 
 .texto-resultados {
     display: flex;
@@ -700,28 +714,31 @@ body {
     color: white;
     font-size: 35px;
     text-align: center;
-    font-family: var(--fuenteSec);
+    font-family: var(--fuenteTer);
     margin-bottom: 10px;
     padding: 10px;
+    -webkit-text-stroke: .5px black;
 }
 
 #linea1{
     color: var(--blanco);
-    font-family: var(--fuenteSec);
+    font-family: var(--fuenteTer);
     font-size: 25px;
     text-align: center;
     margin-top: 30px;
+    color:var(--blanco);
+    -webkit-text-stroke:.5px rgb(0, 0, 0);
 }
 #linea2,
-#linea3,
-#linea4{
+#linea3{
     color: var(--blanco);
-    font-family: var(--fuenteSec);
+    font-family: var(--fuenteTer);
     font-size: 25px;
     text-align: center;   
     margin: 0 auto; 
+    color:var(--azul);
+    -webkit-text-stroke: .5px white;
 }
-
 
 
 .indicacion-cont {
@@ -927,10 +944,6 @@ body {
         position: fixed;
         left: 0;
         top: 0;
-        background-color: rgba(0, 0, 0, 0.912);
-        height: 100%;
-        width: 100%;
-        animation: aparece .25s linear;
         padding: 20px 10px;
     }
 
@@ -943,23 +956,6 @@ body {
         font-size: 15px;
     }
 
-    @keyframes aparece {
-        0% {
-            transform: scale(0);
-        }
-
-        100% {
-            transform: scale(1);
-
-        }
-    }
-
-    #mensaje2 {
-        background-color: rgba(0, 0, 0, 0.401);
-        width: 85%;
-        font-family: 'Nunito', sans-serif;
-        font-size: 30px;
-    }
 
 }
 
