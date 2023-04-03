@@ -3198,15 +3198,23 @@ boton.addEventListener('click', function () {
 
     // Aqui definimos donde localidad de salida y camino
 
+    // if((hora < 10) && (minutos < 10)){
+    //     linea1.textContent = `Servicios cercanos al horario actual ( 0${hora}:0${minutos} Hrs )`
+    // }
+    // else{
+    //     linea1.textContent = `Servicios cercanos al horario actual ( ${hora}:${minutos} Hrs )`
+    // }
+    
+
     if (opcionbase.selected == true && opcionbase2.selected == false) {
         ruta = todosTucumanDestino[posicion2 - 1]
         // linea1.textContent = origen.textContent
 
-        linea1.textContent = selector2[posicion2].label;
+        linea2.textContent = selector2[posicion2].label;
     }
     if (opcionbase2.selected == true && opcionbase.selected == false) {
         ruta = todosDestinoTucuman[posicion - 1];
-        linea1.textContent = selector[posicion].label;
+        linea2.textContent = selector[posicion].label;
         // linea2.textContent = destino.textContent;   
     }
 
@@ -3275,8 +3283,6 @@ boton.addEventListener('click', function () {
             anteriorPasado = Math.min(anteriorPasado, listaDiferencias[i]);
         }
     }
-
-
 
     // Aqui definimos los mensajes a mostrar en el primer campo       
 
@@ -3478,6 +3484,7 @@ boton.addEventListener('click', function () {
     $('.resultados').css('display', 'flex')
     $('.resultados2').css('display', 'flex')
     $('.mensaje2').css('display', 'flex')
+
 })
 indicacion.addEventListener('click', function () {
     actual4.textContent = '';
@@ -3526,6 +3533,7 @@ function busquedaManual() {
     let linea2 = document.getElementById('linea2');
     let linea3 = document.getElementById('linea3');
     let linea4 = document.getElementById('linea4')
+    let tituloResultado = document.getElementById('tituloResultado')
     
 
     botonManual.addEventListener('click', function () {
@@ -3710,12 +3718,12 @@ function busquedaManual() {
         }
         else {
             if(ingHora.value < 10){
-                linea4.textContent = `Servicios cercanos a las 0${ingHora.value}:00 Hrs`;
+                tituloResultado.textContent = `Servicios cercanos a las 0${ingHora.value}:00 Hrs`;
             }
             else{
-                linea4.textContent = `Servicios cercanos las ${ingHora.value}:00 Hrs`;
+                tituloResultado.textContent = `Servicios cercanos a las ${ingHora.value}:00 Hrs`;
             }
-            tituloResultado.textContent = '';
+    
             horaInputAMinutos = (ingHora.value) * 60
 
             for (let i = 0; i < horariosEnEnteros2.length; i++) {
@@ -3748,7 +3756,7 @@ function busquedaManual() {
                         
                     }
 
-                    console.log(diaRango2)
+                    
                     
                 }
                 else {
@@ -3783,6 +3791,10 @@ function busquedaManual() {
         linea2.textContent = '';
         linea3.textContent = '';
         linea4.textContent = '';
+        mostrar1.textContent = '';
+        mostrar2.textContent = '';
+        mostrar3.textContent = '';
+        mostrar4.textContent = '';
 
         // $('#selector3').css('display','none')      
         // $('#selector4').css('display','none') 
