@@ -3484,6 +3484,7 @@ boton.addEventListener('click', function () {
     $('.resultados').css('display', 'flex')
     $('.resultados2').css('display', 'flex')
     $('.mensaje2').css('display', 'flex')
+
 })
 indicacion.addEventListener('click', function () {
     actual4.textContent = '';

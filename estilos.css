@@ -604,6 +604,7 @@ body {
     max-height: 35%;
     min-height: 25%;
     padding: 10px;
+    
 }
 
 
@@ -694,16 +695,32 @@ body {
     animation: aparece .5s linear forwards;
 }
 
+
 @keyframes aparece {
         0% {
             transform: scale(0);
+            filter: opacity(0%);
         }
 
         100% {
             transform: scale(1);
             background-color: var(--rojo2);
         }
-    }
+}
+
+
+
+
+
+/* .mensaje2Oculto{
+    animation: desaparece .5s linear;
+}
+
+@keyframes desaparece {
+    100% {
+        transform: scale(0)
+}
+} */
 
 .texto-resultados {
     display: flex;
