@@ -769,7 +769,7 @@ body {
     border-radius: 20px;
     margin-top: 20px;
     /* animation: moverIndicacion 1.5s linear .5s infinite alternate-reverse; */
-    animation: ondaBoton 1s linear .5s infinite;
+    /* animation: ondaBoton 1s linear .5s infinite; */
 }
 
 #indicacion {
