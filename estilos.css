@@ -585,6 +585,7 @@ body {
     height: 550px;
     gap: 10px;
     width: 100%;
+    margin: 0;
 }
 
 .resultados,
@@ -702,7 +703,8 @@ body {
 @keyframes aparece {
         0% {
             transform: scale(0);
-            /* filter: opacity(30%); */
+            filter: opacity(50%);
+            
         }
 
         100% {
@@ -732,8 +734,8 @@ body {
     font-size: 35px;
     text-align: center;
     font-family: var(--fuenteTer);
-    margin-bottom: 10px;
     padding: 10px;
+    margin: 0;
     -webkit-text-stroke: .5px black;
 }
 
@@ -752,7 +754,7 @@ body {
     font-family: var(--fuenteTer);
     font-size: 25px;
     text-align: center;   
-    margin: 0 auto; 
+    margin: -10px auto 0; 
     color:var(--azul);
     -webkit-text-stroke: .5px white;
 }

@@ -3361,10 +3361,7 @@ boton.addEventListener('click', function () {
             }
             actual3.textContent = `Recorrido : ${rutaObtenida[listaDiferencias.indexOf(anteriorPasado)].recorrido}`
         }
-
-
     }
-
 
     else{
 
