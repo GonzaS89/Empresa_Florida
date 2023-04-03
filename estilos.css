@@ -524,7 +524,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 60px;
-    width: 100px;
+    width: 150px;
     background-color: var(--azul);
     border-radius: 10px;
     font-family: var(--fuenteSec);
@@ -532,6 +532,21 @@ body {
     font-weight: bold;
     box-shadow: 2px black;
     color: var(--blanco);
+    animation: ondaBoton 1s linear infinite;
+}
+
+@keyframes ondaBoton{
+    
+    to{
+        outline: 25px solid rgba(0, 0, 0, 0);
+        transform: scale(0.9);
+        
+    }
+    from{       
+        outline: 0 solid var(--azul);
+        outline-offset: 0;
+        outline-offset: 0;
+    }
 }
 
 #boton {
