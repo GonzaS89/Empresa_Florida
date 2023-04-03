@@ -695,7 +695,7 @@ body {
     left: 0;
     padding: 50px;
     border: 1px solid white;
-    animation: aparece .5s linear forwards;
+    animation: aparece .25s linear forwards;
 }
 
 
@@ -710,8 +710,6 @@ body {
             background-color: var(--rojo2);
         }
 }
-
-
 
 
 

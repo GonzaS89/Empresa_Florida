@@ -3790,7 +3790,6 @@ function busquedaManual() {
         $('.resultados4').css('display', 'none');
         linea2.textContent = '';
         linea3.textContent = '';
-        linea4.textContent = '';
         mostrar1.textContent = '';
         mostrar2.textContent = '';
         mostrar3.textContent = '';
