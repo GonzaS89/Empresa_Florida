@@ -917,11 +917,11 @@ body {
     }
 
     #tituloResultado{
-        font-size:25px;
+        font-size:23px;
     }
 
     #linea1, #linea2, #linea3, #linea4, #linea5{
-        font-size:20px;
+        font-size:18px;
     }
 
     .resultados,
@@ -950,7 +950,7 @@ body {
     #futuro2,
     #futuro3,
     #futuro4 {
-        font-size: 15px;
+        font-size: 13px;
         padding: 0 10px;
     }
 
@@ -961,7 +961,7 @@ body {
     #mostrar2,
     #mostrar3,
     #mostrar4 {
-        font-size: 15px;
+        font-size: 13px;
         margin: 10px 10px;
     }
 
