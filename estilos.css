@@ -932,7 +932,7 @@ body {
         border: .5px solid white;
         padding: 10px 0;
         max-height: 45%;
-        min-height: 20%;
+        min-height: 26%;
 
     }
 
@@ -961,7 +961,7 @@ body {
     #mostrar2,
     #mostrar3,
     #mostrar4 {
-        font-size: 15px;
+        font-size: 13.5px;
         margin: 10px 10px;
     }
 
