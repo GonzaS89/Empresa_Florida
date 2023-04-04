@@ -992,7 +992,7 @@ body {
 
 }
 
-@media (max-width: 400px) {
+/* @media (max-width: 400px) {
     #actual1,
     #actual2,
     #actual3,
@@ -1003,7 +1003,7 @@ body {
     #futuro4 {
         font-size: 14px;
     }
-}
+} */
 
 .barra-cont {
     display: flex;
