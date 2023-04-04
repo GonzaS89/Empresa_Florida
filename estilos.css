@@ -103,10 +103,12 @@ body {
     display: flex;
     justify-content: center;
     width: 130px;
-    height: 130px;
-    background-image: url(Imagenes/logoempresa.jpg);
+    height: 150px;
+    background-image: url(Imagenes/Logo_sinfondo.png);
     background-size: cover;
     border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position:center;
 }
 
 .fecha {
