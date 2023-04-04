@@ -934,9 +934,9 @@ body {
     .resultados4 {
         width: 90%;
         border: .5px solid white;
-        padding: 10px 0;
+        padding: 5px 0;
         max-height: 45%;
-        min-height: 30%;
+        min-height: 25%;
 
     }
 
@@ -956,6 +956,7 @@ body {
     #futuro4 {
         font-size: 15px;
         padding: 0 10px;
+        margin: 0;
     }
 
     /* #actual1,#actual3,#actual4,#futuro1,#futuro3{
