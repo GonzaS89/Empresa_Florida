@@ -917,11 +917,11 @@ body {
     }
 
     #tituloResultado{
-        font-size:23px;
+        font-size:25px;
     }
 
     #linea1, #linea2, #linea3, #linea4, #linea5{
-        font-size:18px;
+        font-size:20px;
     }
 
     .resultados,
@@ -950,7 +950,7 @@ body {
     #futuro2,
     #futuro3,
     #futuro4 {
-        font-size: 13px;
+        font-size: 15px;
         padding: 0 10px;
     }
 
@@ -961,7 +961,7 @@ body {
     #mostrar2,
     #mostrar3,
     #mostrar4 {
-        font-size: 13px;
+        font-size: 15px;
         margin: 10px 10px;
     }
 
@@ -990,6 +990,19 @@ body {
     }
 
 
+}
+
+@media (max-width: 400px) {
+    #actual1,
+    #actual2,
+    #actual3,
+    #actual4,
+    #futuro1,
+    #futuro2,
+    #futuro3,
+    #futuro4 {
+        font-size: 14px;
+    }
 }
 
 .barra-cont {
