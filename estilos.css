@@ -102,10 +102,10 @@ body {
 .logo {
     display: flex;
     justify-content: center;
-    width: 130px;
-    height: 150px;
+    width: 150px;
+    height: 100%;
     background-image: url(Imagenes/Logo_sinfondo.png);
-    background-size: cover;
+    background-size: 100%;
     border-radius: 50%;
     background-repeat: no-repeat;
     background-position:center;
@@ -572,7 +572,7 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 100%;
-    background-image: url('Imagenes/logosinfondo.png');
+    background-image: url('Imagenes/Logo_sinfondo.png');
     background-position: center;
     background-size: 35%;
     background-repeat: no-repeat;
@@ -608,8 +608,10 @@ body {
     position: relative;
     max-height: 35%;
     min-height: 25%;
-    padding: 10px;
     
+}
+.resultados,.resultados2{
+    justify-content: space-between;
 }
 
 
@@ -626,7 +628,7 @@ body {
     border: .5px solid white;
     background-color: var(--blanco);
 } */
-#actual1,
+/* #actual1,
 #futuro1 {
     padding: 0 10px;
     border-radius: 10px;
@@ -646,7 +648,7 @@ body {
 #actual2,
 #futuro2 {
     margin: 15px 5px;
-}
+} */
 
 #actual1,
 #actual2,
@@ -934,7 +936,7 @@ body {
         border: .5px solid white;
         padding: 10px 0;
         max-height: 45%;
-        min-height: 26%;
+        min-height: 30%;
 
     }
 
@@ -952,7 +954,7 @@ body {
     #futuro2,
     #futuro3,
     #futuro4 {
-        font-size: 13.5px;
+        font-size: 15px;
         padding: 0 10px;
     }
 
@@ -963,7 +965,7 @@ body {
     #mostrar2,
     #mostrar3,
     #mostrar4 {
-        font-size: 13.5px;
+        font-size: 15px;
         margin: 10px 10px;
     }
 
