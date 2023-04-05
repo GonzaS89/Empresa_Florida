@@ -361,11 +361,11 @@ body {
 }
 
 #busquedaManual:active{
-    transform: scale(.9);
+    transform: translateY(5px);
 }
 
 #busquedaAuto:active{
-    transform: scale(.9);
+    transform: translateY(5px);
 }
 
 
