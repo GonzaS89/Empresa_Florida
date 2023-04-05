@@ -226,10 +226,11 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     transform: rotate(90deg);
+    animation: rotar 1s linear;
 }
 
 #botonDeCambio:active {
-    transform: rotate(220deg);
+    transform: scale(.9);
 }
 
 #botonDeCambio:hover {
@@ -241,7 +242,7 @@ body {
 }
 
 #botonDeCambio2:active {
-    transform: rotate(220deg)
+    transform: scale(.9);
 }
 
 .options {
@@ -294,6 +295,14 @@ body {
     font-size: 15px;
     font-weight: bold;
     background-color: var(--blanco);
+}
+
+#origenCapital:active{
+    transform: scale(.85);
+}
+
+#capitalDestino:active{
+    transform: scale(.85);
 }
 
 #ingHora {
@@ -350,6 +359,15 @@ body {
     text-align-last: center;
     margin-top: 10px;
 }
+
+#busquedaManual:active{
+    transform: scale(.9);
+}
+
+#busquedaAuto:active{
+    transform: scale(.9);
+}
+
 
 .busquedaAuto {
     display: flex;
