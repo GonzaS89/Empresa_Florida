@@ -3195,16 +3195,8 @@ boton.addEventListener('click', function () {
     let linea1 = document.getElementById('linea1');
     const indicacion = document.querySelector('.indicacion-cont');
     let feriado = false;
-
-    // Aqui definimos donde localidad de salida y camino
-
-    // if((hora < 10) && (minutos < 10)){
-    //     linea1.textContent = `Servicios cercanos al horario actual ( 0${hora}:0${minutos} Hrs )`
-    // }
-    // else{
-    //     linea1.textContent = `Servicios cercanos al horario actual ( ${hora}:${minutos} Hrs )`
-    // }
-    
+    let semiFeriado = false;
+  
 
     if (opcionbase.selected == true && opcionbase2.selected == false) {
         ruta = todosTucumanDestino[posicion2 - 1]
@@ -3235,9 +3227,25 @@ boton.addEventListener('click', function () {
     let rutaObtenida
     
     if ((fecha == 24) && (mes == 2)) {
-        tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia]} (feriado), hay horarios reducidos `;
-        rutaObtenida = obtenerDiaRuta(0)
+        tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia]} (feriado): Circulación como día domingo `;
+        rutaObtenida = obtenerDiaRuta(0);
+        feriado = true;
     }
+
+    else if ((fecha == 6) && (mes == 3)){
+        semiFeriado = true;
+        rutaObtenida = obtenerDiaRuta(6);
+        tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia]} santo: Circulación como día sábado `;
+    }
+
+    else if ((fecha == 7) && (mes == 3)){
+        feriado = true;
+        rutaObtenida = obtenerDiaRuta(0);
+        tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia]} santo: Circulación como día domingo`;
+
+        
+    }
+
 
     else {
 
@@ -3246,6 +3254,8 @@ boton.addEventListener('click', function () {
         // Aqui definimos el array dependiendo el dia de la semana
         rutaObtenida = obtenerDiaRuta(dia)
     }
+
+    console.log(dia,mes)
 
 
     // Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
@@ -3377,14 +3387,16 @@ boton.addEventListener('click', function () {
             actual2.textContent = ''
             actual3.textContent = `Recorrido: ${rutaObtenida[(rutaObtenida.length) - 2].recorrido}`
         }
+        else if((((fecha - 1) && mes) == (feriado == true)) && (opcionbase.selected == true && posicion2 == 2)){
+            actual1.textContent = '';
+            actual2.textContent = 'Ninguna unidad inició su recorrido aún'
+            actual3.textContent = ''
+        }
         else {
             actual1.textContent = '';
             actual2.textContent = 'Ninguna unidad inició su recorrido aún'
             actual3.textContent = ''
         }
-
-        
-
 
     }
 
