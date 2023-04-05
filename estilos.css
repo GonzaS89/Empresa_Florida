@@ -144,6 +144,22 @@ body {
     max-width: 100px;
 }
 
+.fecha,.hora{
+    animation: apareceHora 1s linear forwards;
+    transform: scale(0);
+    filter: opacity(0%);
+}
+
+@keyframes apareceHora{
+    100%{
+        transform: scale(1);
+        filter: opacity(100%);
+    }
+}
+
+
+
+
 
 #horas,
 #minutos,
