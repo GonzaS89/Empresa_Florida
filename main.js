@@ -3227,7 +3227,7 @@ boton.addEventListener('click', function () {
     let rutaObtenida
     
     if ((fecha == 24) && (mes == 2)) {
-        tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia]} (feriado): Circulación como día domingo `;
+        tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo `;
         rutaObtenida = obtenerDiaRuta(0);
         feriado = true;
     }
@@ -3235,13 +3235,13 @@ boton.addEventListener('click', function () {
     else if ((fecha == 6) && (mes == 3)){
         semiFeriado = true;
         rutaObtenida = obtenerDiaRuta(6);
-        tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia]} santo: Circulación como día sábado `;
+        tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} santo: Circulación como día sábado `;
     }
 
     else if ((fecha == 7) && (mes == 3)){
         feriado = true;
         rutaObtenida = obtenerDiaRuta(0);
-        tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia]} santo: Circulación como día domingo`;
+        tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} santo: Circulación como día domingo`;
 
         
     }
@@ -3249,7 +3249,7 @@ boton.addEventListener('click', function () {
 
     else {
 
-        tituloResultado.textContent = `Hoy, ${diaSemana}, tenés éstos servicios`
+        tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
 
         // Aqui definimos el array dependiendo el dia de la semana
         rutaObtenida = obtenerDiaRuta(dia)
