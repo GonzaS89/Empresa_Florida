@@ -774,7 +774,7 @@ const horariosLvSMAl = [
     {
         "nombre": "12:15",
         "salida": 12.15,
-        "recorrido": "Terminal → Catalinas Park → Alternativa → Barrio La Cancha → Colonia 4"
+        "recorrido": "Terminal → Catalinas Park → Alternativa → Talar → FLorida → Barrio La Cancha → Colonia 4"
     },
     {
         "nombre": "12:20",
@@ -805,7 +805,7 @@ const horariosLvSMAl = [
         "nombre": "14:50",
         "salida": 14.5,
         "recorrido": "Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Barrio La Cancha",
-        "recorrido2": "Terminal → Alternativa → Talar → Florida → Esquina Lastra → Fortin"
+        "recorrido2": "Terminal → Comisaria 11 → Cnel Suarez → Shell (Gdor del Campo) → Alternativa → Talar → Florida → Esquina Lastra → Fortin"
     },
     {
         "nombre": "15:50",
@@ -817,12 +817,12 @@ const horariosLvSMAl = [
         "nombre": "16:50",
         "salida": 16.5,
         "recorrido": "Terminal → Banda del Río Salí → Alderetes → Cochuchal → Florida → Esquina Lastra → Fortin",
-        "recorrido2": "Terminal → Alternativa → Talar → Florida → Barrio La Cancha → Colonia 4"
+        "recorrido2": "Terminal → Comisaria 11 → Cnel Suarez → Shell (Gdor del Campo) → Alternativa → Talar → Florida → Barrio La Cancha → Colonia 4"
     },
     {
         "nombre": "17:40",
         "salida": 17.4,
-        "recorrido": "Terminal → Alternativa → Talar → Florida → Barrio La Cancha → Colonia 4"
+        "recorrido": "Terminal → Comisaria 11 → Cnel Suarez → Shell (Gdor del Campo) → Alternativa → Talar → Florida → Barrio La Cancha → Colonia 4"
     },
     {
         "nombre": "17:45",
@@ -832,7 +832,7 @@ const horariosLvSMAl = [
     {
         "nombre": "18:20",
         "salida": 18.2,
-        "recorrido": "Terminal → Alternativa → Barrio La Cancha → Colonia 4"
+        "recorrido": "Terminal → Comisaria 11 → Cnel Suarez → Shell (Gdor del Campo) → Alternativa → Talar → Barrio La Cancha → Colonia 4"
     },
     {
         "nombre": "18:30",
@@ -857,22 +857,22 @@ const horariosLvSMAl = [
     {
         "nombre": "21:00",
         "salida": 21,
-        "recorrido": "Terminal → Autopista → Alderetes → Talar → Florida → Barrio La Cancha"
+        "recorrido": "Terminal → Comisaria 11 → Cnel Suarez → Shell (Gdor del Campo) → Autopista → Alderetes → Talar → Florida → Barrio La Cancha"
     },
     {
         "nombre": "21:30",
         "salida": 21.30,
-        "recorrido": "Terminal → Autopista → Alderetes → Talar → Florida → Barrio La Cancha → Colonia 4"
+        "recorrido": "Terminal → Comisaria 11 → Cnel Suarez → Shell (Gdor del Campo) → Autopista → Alderetes → Talar → Florida → Barrio La Cancha → Colonia 4"
     },
     {
         "nombre": "22:30",
         "salida": 22.30,
-        "recorrido": "Terminal → Autopista → Alderetes → Talar → Florida → Barrio La Cancha → Colonia 4"
+        "recorrido": "Terminal → Comisaria 11 → Cnel Suarez → Shell (Gdor del Campo) → Autopista → Alderetes → Talar → Florida → Barrio La Cancha → Colonia 4"
     },
     {
         "nombre": "23:30",
         "salida": 23.30,
-        "recorrido": "Terminal → Autopista → Alderetes → Talar → Florida → Barrio La Cancha → Colonia 4"
+        "recorrido": "Terminal → Comisaria 11 → Cnel Suarez → Shell (Gdor del Campo) → Autopista → Alderetes → Talar → Florida → Barrio La Cancha → Colonia 4"
     }
 ]
 const horariosSSMAl = [
@@ -964,7 +964,7 @@ const horariosSSMAl = [
     {
         "nombre": "21:30",
         "salida": 21.30,
-        "recorrido": "Terminal → Autopista → Alderetes → Talar → Florida → Esquina Lastra → Fortin → Colonia 4"
+        "recorrido": "Terminal → Comisaria 11 → Cnel Suarez → Shell (Gdor del Campo) → Autopista → Alderetes → Talar → Florida → Esquina Lastra → Fortin → Colonia 4"
     },
     // {
     //     "nombre":"22:00",
@@ -974,7 +974,7 @@ const horariosSSMAl = [
     {
         "nombre": "22:30",
         "salida": 22.30,
-        "recorrido": "Terminal → Autopista → Alderetes → Florida → Esquina Lastra → Fortin → Colonia 4"
+        "recorrido": "Terminal → Comisaria 11 → Cnel Suarez → Shell (Gdor del Campo) → Autopista → Alderetes → Talar → Florida → Esquina Lastra → Fortin → Colonia 4"
     }
 ]
 const horariosDSMAl = [
@@ -3195,16 +3195,8 @@ boton.addEventListener('click', function () {
     let linea1 = document.getElementById('linea1');
     const indicacion = document.querySelector('.indicacion-cont');
     let feriado = false;
-
-    // Aqui definimos donde localidad de salida y camino
-
-    // if((hora < 10) && (minutos < 10)){
-    //     linea1.textContent = `Servicios cercanos al horario actual ( 0${hora}:0${minutos} Hrs )`
-    // }
-    // else{
-    //     linea1.textContent = `Servicios cercanos al horario actual ( ${hora}:${minutos} Hrs )`
-    // }
-    
+    let semiFeriado = false;
+  
 
     if (opcionbase.selected == true && opcionbase2.selected == false) {
         ruta = todosTucumanDestino[posicion2 - 1]
@@ -3235,17 +3227,33 @@ boton.addEventListener('click', function () {
     let rutaObtenida
     
     if ((fecha == 24) && (mes == 2)) {
-        tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia]} (feriado), hay horarios reducidos `;
-        rutaObtenida = obtenerDiaRuta(0)
+        tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo `;
+        rutaObtenida = obtenerDiaRuta(0);
+        feriado = true;
     }
+
+    else if ((fecha == 6) && (mes == 3)){
+        semiFeriado = true;
+        rutaObtenida = obtenerDiaRuta(6);
+        tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} santo: Circulación como día sábado `;
+    }
+
+    else if ((fecha == 7) && (mes == 3)){
+        feriado = true;
+        rutaObtenida = obtenerDiaRuta(0);
+        tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} santo: Circulación como día domingo`;
+
+    }
+
 
     else {
 
-        tituloResultado.textContent = `Hoy, ${diaSemana}, tenés éstos servicios`
+        tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
 
         // Aqui definimos el array dependiendo el dia de la semana
         rutaObtenida = obtenerDiaRuta(dia)
     }
+
 
 
     // Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
@@ -3262,6 +3270,24 @@ boton.addEventListener('click', function () {
     
     let listaObtenida = obtenerLista(rutaObtenida)
 
+
+    function convertirHorarioAMinutos(x){
+        a = (Math.trunc(x)) * 60;
+        b = ((x) - (Math.trunc(x))) * 100;
+        c = a + b; 
+
+        return c
+    } 
+
+    function pasarHoraAMinutos(x,y){
+        a = x * 60;
+        b = a + y;
+        return b
+    }
+    
+    let conversionHorario;
+    let conversionHora;
+    
 
     for (let i = 0; i < listaObtenida.length; i++) {
         let horasEnEnteros = (Math.trunc(listaObtenida[i])) * 60;
@@ -3366,26 +3392,55 @@ boton.addEventListener('click', function () {
     else{
 
 
-        if((dia >= 2 && dia <= 5) && (opcionbase.selected == true && posicion2 == 2)){
+        
+        if(((dia >= 2 && dia <= 5) && (semiFeriado == true)) && (opcionbase.selected == true && posicion2 == 2)){
+            rutaObtenida = obtenerDiaRuta(1)
+            conversionHorario = convertirHorarioAMinutos(rutaObtenida[(rutaObtenida.length) - 2].salida)
+            conversionHora = pasarHoraAMinutos(hora,minutos)
+            let variableUnica = conversionHorario - 1440;
+            let variableDoble = conversionHora - variableUnica;
+            actual1.textContent = `Último servicio de ayer ${rutaObtenida[(rutaObtenida.length) - 2].nombre} Hrs`;
+            if (variableDoble >= 120) {
+                actual2.textContent = 'Inició su recorrido hace un par horas'
+            }
+            if (variableDoble > 60 && anteriorPasado < 120) {
+                actual2.textContent = 'Inició su recorrido hace más de 1 hora'
+            }
+            if (variableDoble == 60) {
+                actual2.textContent = 'Inició su recorrido hace 1 hora'
+            }
+            if (variableDoble < 60) {
+                actual2.textContent = `Inició su recorrido hace ${Math.floor(variableDoble)} minutos`
+            }
+            actual3.textContent = `Recorrido: ${rutaObtenida[(rutaObtenida.length) - 2].recorrido}`;
+        }
+        else if((dia >= 2 && dia <= 5) && (opcionbase.selected == true && posicion2 == 2)){
             actual1.textContent = `Último servicio de ayer ${rutaObtenida[(rutaObtenida.length) - 2].nombre} Hrs`;
             actual2.textContent = ''
             actual3.textContent = `Recorrido: ${rutaObtenida[(rutaObtenida.length) - 2].recorrido}`
         }
-        else if ((dia == 6) && (opcionbase.selected == true && posicion2 == 2)){
+        else if ((dia == 6)  && (opcionbase.selected == true && posicion2 == 2)){
             rutaObtenida = obtenerDiaRuta(1)
             actual1.textContent = `Último servicio de ayer ${rutaObtenida[(rutaObtenida.length) - 2].nombre}`;
             actual2.textContent = ''
             actual3.textContent = `Recorrido: ${rutaObtenida[(rutaObtenida.length) - 2].recorrido}`
+        }
+        
+        // else if((((fecha - 1) && mes) == (feriado == true)) && (opcionbase.selected == true && posicion2 == 2)){
+        //     actual1.textContent = '';
+        //     actual2.textContent = 'Ninguna unidad inició su recorrido aún'
+        //     actual3.textContent = ''
+        // }
+        else if(feriado){
+            actual1.textContent = '';
+            actual2.textContent = 'Ninguna unidad inició su recorrido aún'
+            actual3.textContent = ''
         }
         else {
             actual1.textContent = '';
             actual2.textContent = 'Ninguna unidad inició su recorrido aún'
             actual3.textContent = ''
         }
-
-        
-
-
     }
 
 

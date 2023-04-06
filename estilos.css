@@ -103,13 +103,32 @@ body {
 .logo {
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 75px;
-    background-image: url(Imagenes/logoancho.jpg);
+    width: 130px;
+    height: 130px;
+    background-image: url(Imagenes/logoempresa.jpg);
     background-size: 100%;
+    border-radius: 50%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position:center;
+    animation: rellenar 3s ease .5s forwards;
+    transform: scale(0);
+}
+
+@keyframes rellenar{
+    0%{
+        height: 0;
+        width: 0;
+    }
+    75%{
+        transform: scale(1.1);
+    }
+
+    100%{
+        transform: scale(1);
+        height: 130px;
+        width: 130px;
+        
+    }
 }
 
 .fecha {
@@ -129,6 +148,22 @@ body {
     text-align: center;
     max-width: 100px;
 }
+
+/* .fecha,.hora{
+    animation: apareceHora 1s linear forwards;
+    transform: scale(0);
+    filter: opacity(0%);
+}
+
+@keyframes apareceHora{
+    100%{
+        transform: scale(1);
+        filter: opacity(100%);
+    }
+} */
+
+
+
 
 
 #horas,
@@ -227,10 +262,11 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     transform: rotate(90deg);
+    animation: rotar 1s linear;
 }
 
 #botonDeCambio:active {
-    transform: rotate(220deg);
+    transform: scale(.9);
 }
 
 #botonDeCambio:hover {
@@ -242,7 +278,7 @@ body {
 }
 
 #botonDeCambio2:active {
-    transform: rotate(220deg)
+    transform: scale(.9);
 }
 
 .options {
@@ -351,6 +387,7 @@ body {
     text-align-last: center;
     margin-top: 10px;
 }
+
 
 .busquedaAuto {
     display: flex;
@@ -573,7 +610,7 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 100%;
-    background-image: url('Imagenes/logosinfondo.png');
+    background-image: url(Imagenes/logoempresa.jpg);
     background-position: center;
     background-size: 35%;
     background-repeat: no-repeat;
@@ -609,8 +646,10 @@ body {
     position: relative;
     max-height: 35%;
     min-height: 25%;
-    padding: 10px;
     
+}
+.resultados,.resultados2{
+    justify-content: space-between;
 }
 
 
@@ -627,7 +666,7 @@ body {
     border: .5px solid white;
     background-color: var(--blanco);
 } */
-#actual1,
+/* #actual1,
 #futuro1 {
     padding: 0 10px;
     border-radius: 10px;
@@ -647,7 +686,7 @@ body {
 #actual2,
 #futuro2 {
     margin: 15px 5px;
-}
+} */
 
 #actual1,
 #actual2,
@@ -911,7 +950,7 @@ body {
     #fondo {
         width: 100%;
         height: 100%;
-        background-size: 65%;
+        background-size: 50%;
     }
 
     .input-reloj {
@@ -933,9 +972,9 @@ body {
     .resultados4 {
         width: 90%;
         border: .5px solid white;
-        padding: 10px 0;
+        padding: 5px 0;
         max-height: 45%;
-        min-height: 26%;
+        min-height: 25%;
 
     }
 
@@ -955,6 +994,7 @@ body {
     #futuro4 {
         font-size: 13.5px;
         padding: 0 10px;
+        margin: 0;
     }
 
     /* #actual1,#actual3,#actual4,#futuro1,#futuro3{
