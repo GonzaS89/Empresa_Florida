@@ -110,10 +110,10 @@ body {
     background-repeat: no-repeat;
     background-position:center;
     animation: rellenar 3s ease .5s forwards;
-    transform: scale(0);
+    /* transform: scale(0); */
 }
 
-@keyframes rellenar{
+/* @keyframes rellenar{
     0%{
         height: 0;
         width: 0;
@@ -128,7 +128,7 @@ body {
         width: 131px;
         
     }
-}
+} */
 
 .fecha {
     display: flex;
@@ -148,7 +148,7 @@ body {
     max-width: 100px;
 }
 
-.fecha,.hora{
+/* .fecha,.hora{
     animation: apareceHora 1s linear forwards;
     transform: scale(0);
     filter: opacity(0%);
@@ -159,7 +159,7 @@ body {
         transform: scale(1);
         filter: opacity(100%);
     }
-}
+} */
 
 
 
