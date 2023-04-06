@@ -3243,7 +3243,6 @@ boton.addEventListener('click', function () {
         rutaObtenida = obtenerDiaRuta(0);
         tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} santo: Circulación como día domingo`;
 
-        
     }
 
 
@@ -3255,7 +3254,6 @@ boton.addEventListener('click', function () {
         rutaObtenida = obtenerDiaRuta(dia)
     }
 
-    console.log(dia,mes)
 
 
     // Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
@@ -3272,6 +3270,24 @@ boton.addEventListener('click', function () {
     
     let listaObtenida = obtenerLista(rutaObtenida)
 
+
+    function convertirHorarioAMinutos(x){
+        a = (Math.trunc(x)) * 60;
+        b = ((x) - (Math.trunc(x))) * 100;
+        c = a + b; 
+
+        return c
+    } 
+
+    function pasarHoraAMinutos(x,y){
+        a = x * 60;
+        b = a + y;
+        return b
+    }
+    
+    let conversionHorario;
+    let conversionHora;
+    
 
     for (let i = 0; i < listaObtenida.length; i++) {
         let horasEnEnteros = (Math.trunc(listaObtenida[i])) * 60;
@@ -3376,18 +3392,46 @@ boton.addEventListener('click', function () {
     else{
 
 
-        if((dia >= 2 && dia <= 5) && (opcionbase.selected == true && posicion2 == 2)){
+        
+        if(((dia >= 2 && dia <= 5) && (semiFeriado == true)) && (opcionbase.selected == true && posicion2 == 2)){
+            rutaObtenida = obtenerDiaRuta(1)
+            conversionHorario = convertirHorarioAMinutos(rutaObtenida[(rutaObtenida.length) - 2].salida)
+            conversionHora = pasarHoraAMinutos(hora,minutos)
+            let variableUnica = conversionHorario - 1440;
+            let variableDoble = conversionHora - variableUnica;
+            actual1.textContent = `Último servicio de ayer ${rutaObtenida[(rutaObtenida.length) - 2].nombre} Hrs`;
+            if (variableDoble >= 120) {
+                actual2.textContent = 'Inició su recorrido hace un par horas'
+            }
+            if (variableDoble > 60 && anteriorPasado < 120) {
+                actual2.textContent = 'Inició su recorrido hace más de 1 hora'
+            }
+            if (variableDoble == 60) {
+                actual2.textContent = 'Inició su recorrido hace 1 hora'
+            }
+            if (variableDoble < 60) {
+                actual2.textContent = `Inició su recorrido hace ${Math.floor(variableDoble)} minutos`
+            }
+            actual3.textContent = `Recorrido: ${rutaObtenida[(rutaObtenida.length) - 2].recorrido}`;
+        }
+        else if((dia >= 2 && dia <= 5) && (opcionbase.selected == true && posicion2 == 2)){
             actual1.textContent = `Último servicio de ayer ${rutaObtenida[(rutaObtenida.length) - 2].nombre} Hrs`;
             actual2.textContent = ''
             actual3.textContent = `Recorrido: ${rutaObtenida[(rutaObtenida.length) - 2].recorrido}`
         }
-        else if ((dia == 6) && (opcionbase.selected == true && posicion2 == 2)){
+        else if ((dia == 6)  && (opcionbase.selected == true && posicion2 == 2)){
             rutaObtenida = obtenerDiaRuta(1)
             actual1.textContent = `Último servicio de ayer ${rutaObtenida[(rutaObtenida.length) - 2].nombre}`;
             actual2.textContent = ''
             actual3.textContent = `Recorrido: ${rutaObtenida[(rutaObtenida.length) - 2].recorrido}`
         }
-        else if((((fecha - 1) && mes) == (feriado == true)) && (opcionbase.selected == true && posicion2 == 2)){
+        
+        // else if((((fecha - 1) && mes) == (feriado == true)) && (opcionbase.selected == true && posicion2 == 2)){
+        //     actual1.textContent = '';
+        //     actual2.textContent = 'Ninguna unidad inició su recorrido aún'
+        //     actual3.textContent = ''
+        // }
+        else if(feriado){
             actual1.textContent = '';
             actual2.textContent = 'Ninguna unidad inició su recorrido aún'
             actual3.textContent = ''
@@ -3397,7 +3441,6 @@ boton.addEventListener('click', function () {
             actual2.textContent = 'Ninguna unidad inició su recorrido aún'
             actual3.textContent = ''
         }
-
     }
 
 
