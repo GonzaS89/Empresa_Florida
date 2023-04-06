@@ -774,7 +774,7 @@ const horariosLvSMAl = [
     {
         "nombre": "12:15",
         "salida": 12.15,
-        "recorrido": "Terminal → Catalinas Park → Alternativa → Barrio La Cancha → Colonia 4"
+        "recorrido": "Terminal → Catalinas Park → Alternativa → Talar → FLorida → Barrio La Cancha → Colonia 4"
     },
     {
         "nombre": "12:20",
@@ -805,7 +805,7 @@ const horariosLvSMAl = [
         "nombre": "14:50",
         "salida": 14.5,
         "recorrido": "Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Barrio La Cancha",
-        "recorrido2": "Terminal → Alternativa → Talar → Florida → Esquina Lastra → Fortin"
+        "recorrido2": "Terminal → Comisaria 11 → Cnel Suarez → Shell (Gdor del Campo) → Alternativa → Talar → Florida → Esquina Lastra → Fortin"
     },
     {
         "nombre": "15:50",
@@ -817,12 +817,12 @@ const horariosLvSMAl = [
         "nombre": "16:50",
         "salida": 16.5,
         "recorrido": "Terminal → Banda del Río Salí → Alderetes → Cochuchal → Florida → Esquina Lastra → Fortin",
-        "recorrido2": "Terminal → Alternativa → Talar → Florida → Barrio La Cancha → Colonia 4"
+        "recorrido2": "Terminal → Comisaria 11 → Cnel Suarez → Shell (Gdor del Campo) → Alternativa → Talar → Florida → Barrio La Cancha → Colonia 4"
     },
     {
         "nombre": "17:40",
         "salida": 17.4,
-        "recorrido": "Terminal → Alternativa → Talar → Florida → Barrio La Cancha → Colonia 4"
+        "recorrido": "Terminal → Comisaria 11 → Cnel Suarez → Shell (Gdor del Campo) → Alternativa → Talar → Florida → Barrio La Cancha → Colonia 4"
     },
     {
         "nombre": "17:45",
@@ -832,7 +832,7 @@ const horariosLvSMAl = [
     {
         "nombre": "18:20",
         "salida": 18.2,
-        "recorrido": "Terminal → Alternativa → Barrio La Cancha → Colonia 4"
+        "recorrido": "Terminal → Comisaria 11 → Cnel Suarez → Shell (Gdor del Campo) → Alternativa → Talar → Barrio La Cancha → Colonia 4"
     },
     {
         "nombre": "18:30",
@@ -857,22 +857,22 @@ const horariosLvSMAl = [
     {
         "nombre": "21:00",
         "salida": 21,
-        "recorrido": "Terminal → Autopista → Alderetes → Talar → Florida → Barrio La Cancha"
+        "recorrido": "Terminal → Comisaria 11 → Cnel Suarez → Shell (Gdor del Campo) → Autopista → Alderetes → Talar → Florida → Barrio La Cancha"
     },
     {
         "nombre": "21:30",
         "salida": 21.30,
-        "recorrido": "Terminal → Autopista → Alderetes → Talar → Florida → Barrio La Cancha → Colonia 4"
+        "recorrido": "Terminal → Comisaria 11 → Cnel Suarez → Shell (Gdor del Campo) → Autopista → Alderetes → Talar → Florida → Barrio La Cancha → Colonia 4"
     },
     {
         "nombre": "22:30",
         "salida": 22.30,
-        "recorrido": "Terminal → Autopista → Alderetes → Talar → Florida → Barrio La Cancha → Colonia 4"
+        "recorrido": "Terminal → Comisaria 11 → Cnel Suarez → Shell (Gdor del Campo) → Autopista → Alderetes → Talar → Florida → Barrio La Cancha → Colonia 4"
     },
     {
         "nombre": "23:30",
         "salida": 23.30,
-        "recorrido": "Terminal → Autopista → Alderetes → Talar → Florida → Barrio La Cancha → Colonia 4"
+        "recorrido": "Terminal → Comisaria 11 → Cnel Suarez → Shell (Gdor del Campo) → Autopista → Alderetes → Talar → Florida → Barrio La Cancha → Colonia 4"
     }
 ]
 const horariosSSMAl = [
@@ -964,7 +964,7 @@ const horariosSSMAl = [
     {
         "nombre": "21:30",
         "salida": 21.30,
-        "recorrido": "Terminal → Autopista → Alderetes → Talar → Florida → Esquina Lastra → Fortin → Colonia 4"
+        "recorrido": "Terminal → Comisaria 11 → Cnel Suarez → Shell (Gdor del Campo) → Autopista → Alderetes → Talar → Florida → Esquina Lastra → Fortin → Colonia 4"
     },
     // {
     //     "nombre":"22:00",
@@ -974,7 +974,7 @@ const horariosSSMAl = [
     {
         "nombre": "22:30",
         "salida": 22.30,
-        "recorrido": "Terminal → Autopista → Alderetes → Florida → Esquina Lastra → Fortin → Colonia 4"
+        "recorrido": "Terminal → Comisaria 11 → Cnel Suarez → Shell (Gdor del Campo) → Autopista → Alderetes → Talar → Florida → Esquina Lastra → Fortin → Colonia 4"
     }
 ]
 const horariosDSMAl = [
