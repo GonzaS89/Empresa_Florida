@@ -102,9 +102,9 @@ body {
 .logo {
     display: flex;
     justify-content: center;
-    width: 131px;
-    height: 100%;
-    background-image: url(Imagenes/Logo_sinfondo.png);
+    width: 130px;
+    height: 130px;
+    background-image: url(Imagenes/logoempresa.jpg);
     background-size: 100%;
     border-radius: 50%;
     background-repeat: no-repeat;
