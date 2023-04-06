@@ -102,8 +102,8 @@ body {
 .logo {
     display: flex;
     justify-content: center;
-    width: 0;
-    height: 0;
+    width: 131px;
+    height: 100%;
     background-image: url(Imagenes/Logo_sinfondo.png);
     background-size: 100%;
     border-radius: 50%;
@@ -114,6 +114,10 @@ body {
 }
 
 @keyframes rellenar{
+    0%{
+        height: 0;
+        width: 0;
+    }
     75%{
         transform: scale(1.2);
     }
