@@ -337,8 +337,8 @@ const horariosDFloAl = [
         "recorrido": "Barrio La Cancha → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
-        "nombre": "19:10",
-        "salida": 19.1,
+        "nombre": "19:00",
+        "salida": 19,
         "recorrido": "Mayo → Colonia 3 → Barrio La Cancha → Talar → Alderetes → Banda del Río Salí → Terminal"
     }
 ]
@@ -2139,9 +2139,9 @@ const ralosTerminalD = [
         "recorrido": "Los Ralos → Villa Tercera → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
-        "nombre": "15:40",
-        "salida": 15.4,
-        "recorrido": "Las Cejas → Los Ralos → Villa Tercera → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+        "nombre": "16:20",
+        "salida": 16.2,
+        "recorrido": "Los Ralos → Villa Tercera → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
         "nombre": "17:15",
@@ -2158,11 +2158,11 @@ const ralosTerminalD = [
         "salida": 19,
         "recorrido": "Alabama → Mayo → Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
-    {
-        "nombre": "19:50",
-        "salida": 19.50,
-        "recorrido": "Las Cejas → Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
-    },
+    // {
+    //     "nombre": "19:50",
+    //     "salida": 19.50,
+    //     "recorrido": "Las Cejas → Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+    // },
     {
         "nombre": "20:00",
         "salida": 20,
@@ -2648,7 +2648,12 @@ const terminalRalosD = [
     {
         "nombre": "15:00",
         "salida": 15,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos → Las Cejas → 7 de Abril",
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos → Las Cejas → 7 de Abril"
+    },
+    {
+        "nombre": "15:30",
+        "salida": 15.3,
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos"
     },
     {
         "nombre": "16:15",
@@ -2889,17 +2894,17 @@ const terminalSieteDeAbrilD = [
         "nombre": "15:00",
         "salida": 15,
         "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Las Cejas → 7 de Abril"
-    },
-    {
-        "nombre": "18:30",
-        "salida": 18.3,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Las Cejas → 7 de Abril"
-    },
-    {
-        "nombre": "20:30",
-        "salida": 20.3,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Las Cejas → 7 de Abril"
     }
+    // {
+    //     "nombre": "18:30",
+    //     "salida": 18.3,
+    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Las Cejas → 7 de Abril"
+    // },
+    // {
+    //     "nombre": "20:30",
+    //     "salida": 20.3,
+    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Las Cejas → 7 de Abril"
+    // }
 ]
 const lasCejasTerminalLaV = [
     {
@@ -2967,15 +2972,30 @@ const lasCejasTerminalS = [
 ]
 const lasCejasTerminalD = [
     {
-        "nombre": "12:20",
-        "salida": 12.2,
+        "nombre": "07:50",
+        "salida": 7.5,
+        "recorrido": "Las Cejas → Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+    },
+    {
+        "nombre": "12:00",
+        "salida": 12,
+        "recorrido": "Las Cejas → Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+    },
+    {
+        "nombre": "15:40",
+        "salida": 15.4,
         "recorrido": "Las Cejas → Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
         "nombre": "18:00",
         "salida": 18,
         "recorrido": "7 de Abril → Las Cejas → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
-    }
+    },
+    {
+        "nombre": "19:50",
+        "salida": 19.5,
+        "recorrido": "Las Cejas → Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+    },
 ]
 const terminalLasCejasLaV = [
     {
@@ -3059,14 +3079,19 @@ const terminalLasCejasD = [
         "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos → Las Cejas"
     },
     {
+        "nombre": "15:00",
+        "salida": 15,
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Las Cejas → 7 de Abril"
+    },
+    {
         "nombre": "18:30",
         "salida": 18.3,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos → Las Cejas → 7 de Abril"
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos → Las Cejas"
     },
     {
         "nombre": "20:30",
         "salida": 20.3,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos → Las Cejas → 7 de Abril"
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos → Las Cejas"
     },
 ]
 const floridaAldTucuman = [horariosDFloAl, horariosLvFloAl, horariosSFloAl];
