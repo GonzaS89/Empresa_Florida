@@ -3607,6 +3607,7 @@ function busquedaManual() {
         $('.busquedaAuto').css('display', 'none')
         $('.boton-cont').css('display', 'none');
         $('.boton-cont2').css('display', 'flex');
+        $('.aclaracion').css('display', 'flex');
     })
 
     botonAuto.addEventListener('click', function () {
@@ -3626,6 +3627,10 @@ function busquedaManual() {
         $('#selector4').css('display', 'none');
         $('#selector5').css('display', 'none');
         $('#ingHora').css('display', 'none');
+        $('.aclaracion').css('display', 'none');
+        opcionbase3.selected = true;
+        opcionbase4.selected = true;
+        opcionbase5.selected = true;
     })
 
 

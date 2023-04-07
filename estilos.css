@@ -196,6 +196,32 @@ body {
     width: 100%;
 }
 
+.aclaracion{
+    display:none;
+    flex-direction: column;
+    padding: 7.5px;
+    background-color: white;
+    border-radius: 10px;
+    animation: zoomear .2s linear alternate-reverse infinite;
+    outline: white dashed;
+    background-color: black;
+}
+
+#aclaracion-texto{
+    font-family: var(--fuenteSec);
+    text-align: center;
+    font-size:15px;
+    color:white;
+    font-weight: bold;
+}
+
+@keyframes zoomear{
+    0%{
+        outline-style:groove
+    }
+}
+
+
 .b {
     display: flex;
     align-items: center;
