@@ -3424,6 +3424,11 @@ boton.addEventListener('click', function () {
             }
             actual3.textContent = `Recorrido: ${rutaObtenida[(rutaObtenida.length) - 2].recorrido}`;
         }
+        else if((dia >= 2 && dia <= 5) && (opcionbase.selected == true && posicion2 == 2) && feriado){
+            actual1.textContent = '';
+            actual2.textContent = 'Ninguna unidad inició su recorrido aún'
+            actual3.textContent = '';
+        }
         else if((dia >= 2 && dia <= 5) && (opcionbase.selected == true && posicion2 == 2)){
             actual1.textContent = `Último servicio de ayer ${rutaObtenida[(rutaObtenida.length) - 2].nombre} Hrs`;
             actual2.textContent = ''
@@ -3441,11 +3446,6 @@ boton.addEventListener('click', function () {
         //     actual2.textContent = 'Ninguna unidad inició su recorrido aún'
         //     actual3.textContent = ''
         // }
-        else if(feriado){
-            actual1.textContent = '';
-            actual2.textContent = 'Ninguna unidad inició su recorrido aún'
-            actual3.textContent = ''
-        }
         else {
             actual1.textContent = '';
             actual2.textContent = 'Ninguna unidad inició su recorrido aún'
