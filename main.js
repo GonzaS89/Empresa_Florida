@@ -3205,7 +3205,7 @@ boton.addEventListener('click', function () {
     const indicacion = document.querySelector('.indicacion-cont');
     let feriado = false;
     let semiFeriado = false;
-  
+
 
     if (opcionbase.selected == true && opcionbase2.selected == false) {
         ruta = todosTucumanDestino[posicion2 - 1]
@@ -3233,6 +3233,7 @@ boton.addEventListener('click', function () {
 
         return diaRango
     }
+
     let rutaObtenida
     
     if ((fecha == 24) && (mes == 2)) {
@@ -3574,6 +3575,8 @@ function busquedaManual() {
     const boton2 = document.getElementById('boton2')
     let mostrar1 = document.getElementById('mostrar1')
     let mostrar2 = document.getElementById('mostrar2')
+    let mostrar3 = document.getElementById('mostrar3')
+    let mostrar4 = document.getElementById('mostrar4')
     const opcionbase3 = selector3[0];
     const opcionbase4 = selector4[0];
     const opcionbase5 = selector5[0];
@@ -3604,10 +3607,8 @@ function busquedaManual() {
         $('.busquedaAuto').css('display', 'none')
         $('.boton-cont').css('display', 'none');
         $('.boton-cont2').css('display', 'flex');
-
-
-
     })
+
     botonAuto.addEventListener('click', function () {
         $('.botonesBusquedaCont2').css('display', 'none');
         $('.botonesBusquedaCont').css('display', 'flex');
@@ -3737,15 +3738,23 @@ function busquedaManual() {
 
         //    Aqui definimos el array dependiendo el dia de la semana
 
-        if ((posicion5 - 1) == 0) {
-            diaRango2 = ruta2[1].slice(0, ruta2[1].length);
+        function obtenerRuta2 (x) {
+            if ((posicion5 - 1) == 0) {
+                diaRango2 = x[1].slice(0, x[1].length);
+            }
+            if ((posicion5 - 1) == 1) {
+                diaRango2 = x[2].slice(0, x[2].length);
+            }
+            if ((posicion5 - 1) == 2) {
+                diaRango2 = x[0].slice(0, x[0].length);
+            }
+
+            return diaRango2;
         }
-        if ((posicion5 - 1) == 1) {
-            diaRango2 = ruta2[2].slice(0, ruta2[2].length);
-        }
-        if ((posicion5 - 1) == 2) {
-            diaRango2 = ruta2[0].slice(0, ruta2[0].length);
-        }
+
+        let rutaObtenidaManual = obtenerRuta2(ruta2)
+
+        
 
         if((posicion5 - 1) == 0){
             linea3.textContent = `De ${selector5[posicion5].label}`;
@@ -3756,8 +3765,8 @@ function busquedaManual() {
         
         // / Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
 
-        for (i = 0; i < diaRango2.length; i++) {
-            listaDelDia2.push(diaRango2[i].salida);
+        for (i = 0; i < rutaObtenidaManual.length; i++) {
+            listaDelDia2.push(rutaObtenidaManual[i].salida);
         }
 
         // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
@@ -3790,6 +3799,8 @@ function busquedaManual() {
             for (let i = 0; i < horariosEnEnteros2.length; i++) {
                 listaDiferencias3.push(horariosEnEnteros2[i] - horaInputAMinutos)
             }
+
+            console.log(listaDiferencias3)
 
             for (let i = 0; i < listaDiferencias3.length; i++) {
                 if (listaDiferencias3[i] >= 0) {
@@ -3839,9 +3850,15 @@ function busquedaManual() {
                 // }
             }
 
-            $('.resultados3').css('display', 'flex')
-            $('.resultados4').css('display', 'flex')
-            $('.mensaje2').css('display', 'flex')
+            if(posicion3 == 0 && posicion4 == 0 && posicion5 == 0){
+                $('.mensaje2').css('display', 'none')
+            }
+            else{
+                $('.resultados3').css('display', 'flex')
+                $('.resultados4').css('display', 'flex')
+                $('.mensaje2').css('display', 'flex')
+            }
+            
         }
     })
 
