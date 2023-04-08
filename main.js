@@ -317,9 +317,14 @@ const horariosDFloAl = [
         "recorrido": "Finca Mayo → Colonia 5 → Colonia 4 → Colonia 3 → Colonia 2 → Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
-        "nombre": "14:50",
-        "salida": 14.5,
-        "recorrido": "Barrio La Cancha → Talar → Alderetes → Banda del Río Salí → Terminal"
+        "nombre": "14:45",
+        "salida": 14.45,
+        "recorrido": "Colonia 4 → Barrio La Cancha → Talar → Alderetes → Banda del Río Salí → Terminal"
+    },
+    {
+        "nombre": "15:50",
+        "salida": 15.5,
+        "recorrido": "Colonia 4 → Barrio La Cancha → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
         "nombre": "16:50",
@@ -332,9 +337,9 @@ const horariosDFloAl = [
         "recorrido": "Barrio La Cancha → Talar → Alderetes → Banda del Río Salí → Terminal"
     },
     {
-        "nombre": "19:10",
-        "salida": 19.1,
-        "recorrido": "Colonia 10 → Colonia 3 → Barrio La Cancha → Talar → Alderetes → Banda del Río Salí → Terminal"
+        "nombre": "19:00",
+        "salida": 19,
+        "recorrido": "Mayo → Colonia 3 → Barrio La Cancha → Talar → Alderetes → Banda del Río Salí → Terminal"
     }
 ]
 const horariosLvFloPo = [
@@ -678,23 +683,23 @@ const horariosDFloPo = [
         "recorrido": "Esquina de Lastra → Florida → Paraiso → Posse → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
-        "nombre": "15:55",
-        "salida": 15.55,
+        "nombre": "15:50",
+        "salida": 15.5,
         "recorrido": "Fortin → Esquina Lastra → Florida → Paraiso → Posse → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
-        "nombre": "16:55",
-        "salida": 16.55,
+        "nombre": "16:50",
+        "salida": 16.5,
         "recorrido": "Barrio La Cancha → Paraiso → Posse → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
-        "nombre": "17:55",
-        "salida": 17.55,
+        "nombre": "17:50",
+        "salida": 17.5,
         "recorrido": "Barrio La Cancha → Paraiso → Posse → Dispensario → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
-        "nombre": "18:55",
-        "salida": 18.55,
+        "nombre": "18:50",
+        "salida": 18.5,
         "recorrido": "Barrio La Cancha → Paraiso → Posse → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
@@ -708,8 +713,8 @@ const horariosDFloPo = [
         "recorrido": "Esquina Lastra → Florida → Paraiso → Posse → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
-        "nombre": "20:55",
-        "salida": 20.55,
+        "nombre": "21:00",
+        "salida": 21,
         "recorrido": "Barrio La Cancha → Paraiso → Posse → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
@@ -982,7 +987,7 @@ const horariosDSMAl = [
     {
         "nombre": "06:25",
         "salida": 6.25,
-        "recorrido": "Terminal → Banda del Río Salí → Alderetes → Mayo"
+        "recorrido": "Terminal → Banda del Río Salí → Alderetes Talar → Florida → Esquina Lastra → Fortin → Mayo"
     },
     {
         "nombre": "09:45",
@@ -997,17 +1002,22 @@ const horariosDSMAl = [
     {
         "nombre": "14:00",
         "salida": 14,
-        "recorrido": "Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Barrio La Cancha"
+        "recorrido": "Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Barrio La Cancha → Colonia 4"
     },
     {
-        "nombre": "16:00",
-        "salida": 16,
-        "recorrido": "Terminal → Banda del Río Salí → Alderetes → Cochuchal → Florida → Esquina Lastra → Fortin → Colonia 3"
+        "nombre": "14:50",
+        "salida": 14.5,
+        "recorrido": "Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Barrio La Cancha → Colonia 4"
     },
+    // {
+    //     "nombre": "16:00",
+    //     "salida": 16,
+    //     "recorrido": "Terminal → Banda del Río Salí → Alderetes → Cochuchal → Florida → Esquina Lastra → Fortin → Colonia 3"
+    // },
     {
         "nombre": "17:45",
         "salida": 17.45,
-        "recorrido": "Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Esquina Lastra → Fortin → Mayo"
+        "recorrido": "Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Esquina Lastra → Fortin → Colonia 3 → Mayo"
     },
     {
         "nombre": "19:45",
@@ -1204,11 +1214,11 @@ const horariosLvSMPo = [
     }
 ]
 const horariosSSMPo = [
-    {
-        "nombre":"00:30",
-        "salida":0.3,
-        "recorrido":"Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida →   Barrio La Cancha"
-    },
+    // {
+    //     "nombre":"00:30",
+    //     "salida":0.3,
+    //     "recorrido":"Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida →   Barrio La Cancha"
+    // },
     {
         "nombre": "06:00",
         "salida": 6,
@@ -1359,14 +1369,13 @@ const horariosDSMPo = [
     {
         "nombre": "06:00",
         "salida": 6,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida → Barrio La Cancha → Colonia 4"
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida → Esquina Lastra → Fortin"
     },
     {
         "nombre": "07:00",
         "salida": 7,
         "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida → Esquina Lastra → Fortin"
     },
-
     {
         "nombre": "08:00",
         "salida": 8,
@@ -1390,13 +1399,13 @@ const horariosDSMPo = [
     {
         "nombre": "12:00",
         "salida": 12,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida → Barrio La Cancha"
-    },
-    {
-        "nombre": "12:30",
-        "salida": 12.3,
         "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida → Esquina Lastra"
     },
+    // {
+    //     "nombre": "12:30",
+    //     "salida": 12.3,
+    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida → Esquina Lastra"
+    // },
     {
         "nombre": "13:00",
         "salida": 13,
@@ -1420,7 +1429,7 @@ const horariosDSMPo = [
     {
         "nombre": "17:00",
         "salida": 17,
-        "recorrido": ["Terminal", "Barrio La Cancha"]
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida → Barrio La Cancha"
     },
     {
         "nombre": "18:00",
@@ -1443,15 +1452,15 @@ const horariosDSMPo = [
         "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida → Barrio La Cancha"
     },
     {
-        "nombre": "20:30",
-        "salida": 20.3,
+        "nombre": "20:45",
+        "salida": 20.45,
         "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida → Barrio La Cancha"
     },
-    {
-        "nombre": "21:00",
-        "salida": 21,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida → Barrio La Cancha"
-    },
+    // {
+    //     "nombre": "21:00",
+    //     "salida": 21,
+    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraiso → Florida → Barrio La Cancha"
+    // },
     {
         "nombre": "21:30",
         "salida": 21.3,
@@ -1761,7 +1770,7 @@ const ralosTerminalLaV = [
     {
         "nombre": "06:05",
         "salida": 6.05,
-        "recorrido": "Los Ralos → Villa Tercera → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
         "nombre": "06:10",
@@ -1787,7 +1796,8 @@ const ralosTerminalLaV = [
     {
         "nombre": "06:50",
         "salida": 6.5,
-        "recorrido": "Las Vias → Barrio Trigal → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Las Vias → Barrio Trigal → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal",
+        "recorrido2": "Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
         "nombre": "07:25",
@@ -1845,7 +1855,8 @@ const ralosTerminalLaV = [
     {
         "nombre": "13:10",
         "salida": 13.1,
-        "recorrido": "Mayo → Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Mayo → Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal",
+        "recorrido2":"Alabama → Mayo → Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
         "nombre": "14:05",
@@ -1914,14 +1925,14 @@ const ralosTerminalLaV = [
         "recorrido": "Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
-        "nombre": "19:50",
-        "salida": 19.5,
-        "recorrido": "Las Cejas → Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
-    },
-    {
         "nombre": "20:00",
         "salida": 20,
         "recorrido": "Lolita Sur → Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+    },
+    {
+        "nombre": "20:20",
+        "salida": 20.2,
+        "recorrido": "Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
         "nombre": "21:10",
@@ -1929,8 +1940,8 @@ const ralosTerminalLaV = [
         "recorrido": "Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
-        "nombre": "22:00",
-        "salida": 22,
+        "nombre": "22:20",
+        "salida": 22.2,
         "recorrido": "Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     }
 ]
@@ -2130,9 +2141,9 @@ const ralosTerminalD = [
         "recorrido": "Los Ralos → Villa Tercera → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
-        "nombre": "15:40",
-        "salida": 15.4,
-        "recorrido": "Las Cejas → Los Ralos → Villa Tercera → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+        "nombre": "16:20",
+        "salida": 16.2,
+        "recorrido": "Los Ralos → Villa Tercera → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
         "nombre": "17:15",
@@ -2149,11 +2160,11 @@ const ralosTerminalD = [
         "salida": 19,
         "recorrido": "Alabama → Mayo → Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
-    {
-        "nombre": "19:50",
-        "salida": 19.50,
-        "recorrido": "Las Cejas → Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
-    },
+    // {
+    //     "nombre": "19:50",
+    //     "salida": 19.50,
+    //     "recorrido": "Las Cejas → Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+    // },
     {
         "nombre": "20:00",
         "salida": 20,
@@ -2249,7 +2260,8 @@ const terminalRalosLaV = [
     {
         "nombre": "12:10",
         "salida": 12.1,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos → Mayo → Alabama"
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos → Mayo → Alabama",
+        "recorrido2": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos → Mayo"
     },
     {
         "nombre": "12:30",
@@ -2259,7 +2271,8 @@ const terminalRalosLaV = [
     {
         "nombre": "13:00",
         "salida": 13,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos"
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos",
+        "recorrido2": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos → Villa Tercera"
     },
     {
         "nombre": "13:30",
@@ -2639,7 +2652,12 @@ const terminalRalosD = [
     {
         "nombre": "15:00",
         "salida": 15,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos → Las Cejas → 7 de Abril",
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos → Las Cejas → 7 de Abril"
+    },
+    {
+        "nombre": "15:30",
+        "salida": 15.3,
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos"
     },
     {
         "nombre": "16:15",
@@ -2880,17 +2898,17 @@ const terminalSieteDeAbrilD = [
         "nombre": "15:00",
         "salida": 15,
         "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Las Cejas → 7 de Abril"
-    },
-    {
-        "nombre": "18:30",
-        "salida": 18.3,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Las Cejas → 7 de Abril"
-    },
-    {
-        "nombre": "20:30",
-        "salida": 20.3,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Las Cejas → 7 de Abril"
     }
+    // {
+    //     "nombre": "18:30",
+    //     "salida": 18.3,
+    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Las Cejas → 7 de Abril"
+    // },
+    // {
+    //     "nombre": "20:30",
+    //     "salida": 20.3,
+    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Las Cejas → 7 de Abril"
+    // }
 ]
 const lasCejasTerminalLaV = [
     {
@@ -2958,15 +2976,30 @@ const lasCejasTerminalS = [
 ]
 const lasCejasTerminalD = [
     {
-        "nombre": "12:20",
-        "salida": 12.2,
+        "nombre": "07:50",
+        "salida": 7.5,
+        "recorrido": "Las Cejas → Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+    },
+    {
+        "nombre": "12:00",
+        "salida": 12,
+        "recorrido": "Las Cejas → Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+    },
+    {
+        "nombre": "15:40",
+        "salida": 15.4,
         "recorrido": "Las Cejas → Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
         "nombre": "18:00",
         "salida": 18,
         "recorrido": "7 de Abril → Las Cejas → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
-    }
+    },
+    {
+        "nombre": "19:50",
+        "salida": 19.5,
+        "recorrido": "Las Cejas → Los Ralos → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+    },
 ]
 const terminalLasCejasLaV = [
     {
@@ -3050,14 +3083,19 @@ const terminalLasCejasD = [
         "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos → Las Cejas"
     },
     {
+        "nombre": "15:00",
+        "salida": 15,
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Las Cejas → 7 de Abril"
+    },
+    {
         "nombre": "18:30",
         "salida": 18.3,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos → Las Cejas → 7 de Abril"
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos → Las Cejas"
     },
     {
         "nombre": "20:30",
         "salida": 20.3,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos → Las Cejas → 7 de Abril"
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos → Las Cejas"
     },
 ]
 const floridaAldTucuman = [horariosDFloAl, horariosLvFloAl, horariosSFloAl];
@@ -3196,7 +3234,7 @@ boton.addEventListener('click', function () {
     const indicacion = document.querySelector('.indicacion-cont');
     let feriado = false;
     let semiFeriado = false;
-  
+
 
     if (opcionbase.selected == true && opcionbase2.selected == false) {
         ruta = todosTucumanDestino[posicion2 - 1]
@@ -3224,6 +3262,7 @@ boton.addEventListener('click', function () {
 
         return diaRango
     }
+
     let rutaObtenida
     
     if ((fecha == 24) && (mes == 2)) {
@@ -3414,6 +3453,11 @@ boton.addEventListener('click', function () {
             }
             actual3.textContent = `Recorrido: ${rutaObtenida[(rutaObtenida.length) - 2].recorrido}`;
         }
+        else if((dia >= 2 && dia <= 5) && (opcionbase.selected == true && posicion2 == 2) && feriado){
+            actual1.textContent = '';
+            actual2.textContent = 'Ninguna unidad inició su recorrido aún'
+            actual3.textContent = '';
+        }
         else if((dia >= 2 && dia <= 5) && (opcionbase.selected == true && posicion2 == 2)){
             actual1.textContent = `Último servicio de ayer ${rutaObtenida[(rutaObtenida.length) - 2].nombre} Hrs`;
             actual2.textContent = ''
@@ -3431,11 +3475,6 @@ boton.addEventListener('click', function () {
         //     actual2.textContent = 'Ninguna unidad inició su recorrido aún'
         //     actual3.textContent = ''
         // }
-        else if(feriado){
-            actual1.textContent = '';
-            actual2.textContent = 'Ninguna unidad inició su recorrido aún'
-            actual3.textContent = ''
-        }
         else {
             actual1.textContent = '';
             actual2.textContent = 'Ninguna unidad inició su recorrido aún'
@@ -3565,6 +3604,8 @@ function busquedaManual() {
     const boton2 = document.getElementById('boton2')
     let mostrar1 = document.getElementById('mostrar1')
     let mostrar2 = document.getElementById('mostrar2')
+    let mostrar3 = document.getElementById('mostrar3')
+    let mostrar4 = document.getElementById('mostrar4')
     const opcionbase3 = selector3[0];
     const opcionbase4 = selector4[0];
     const opcionbase5 = selector5[0];
@@ -3595,10 +3636,9 @@ function busquedaManual() {
         $('.busquedaAuto').css('display', 'none')
         $('.boton-cont').css('display', 'none');
         $('.boton-cont2').css('display', 'flex');
-
-
-
+        $('.aclaracion').css('display', 'flex');
     })
+
     botonAuto.addEventListener('click', function () {
         $('.botonesBusquedaCont2').css('display', 'none');
         $('.botonesBusquedaCont').css('display', 'flex');
@@ -3616,6 +3656,10 @@ function busquedaManual() {
         $('#selector4').css('display', 'none');
         $('#selector5').css('display', 'none');
         $('#ingHora').css('display', 'none');
+        $('.aclaracion').css('display', 'none');
+        opcionbase3.selected = true;
+        opcionbase4.selected = true;
+        opcionbase5.selected = true;
     })
 
 
@@ -3728,15 +3772,23 @@ function busquedaManual() {
 
         //    Aqui definimos el array dependiendo el dia de la semana
 
-        if ((posicion5 - 1) == 0) {
-            diaRango2 = ruta2[1].slice(0, ruta2[1].length);
+        function obtenerRuta2 (x) {
+            if ((posicion5 - 1) == 0) {
+                diaRango2 = x[1].slice(0, x[1].length);
+            }
+            if ((posicion5 - 1) == 1) {
+                diaRango2 = x[2].slice(0, x[2].length);
+            }
+            if ((posicion5 - 1) == 2) {
+                diaRango2 = x[0].slice(0, x[0].length);
+            }
+
+            return diaRango2;
         }
-        if ((posicion5 - 1) == 1) {
-            diaRango2 = ruta2[2].slice(0, ruta2[2].length);
-        }
-        if ((posicion5 - 1) == 2) {
-            diaRango2 = ruta2[0].slice(0, ruta2[0].length);
-        }
+
+        let rutaObtenidaManual = obtenerRuta2(ruta2)
+
+        
 
         if((posicion5 - 1) == 0){
             linea3.textContent = `De ${selector5[posicion5].label}`;
@@ -3747,8 +3799,8 @@ function busquedaManual() {
         
         // / Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
 
-        for (i = 0; i < diaRango2.length; i++) {
-            listaDelDia2.push(diaRango2[i].salida);
+        for (i = 0; i < rutaObtenidaManual.length; i++) {
+            listaDelDia2.push(rutaObtenidaManual[i].salida);
         }
 
         // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
@@ -3781,6 +3833,8 @@ function busquedaManual() {
             for (let i = 0; i < horariosEnEnteros2.length; i++) {
                 listaDiferencias3.push(horariosEnEnteros2[i] - horaInputAMinutos)
             }
+
+            console.log(listaDiferencias3)
 
             for (let i = 0; i < listaDiferencias3.length; i++) {
                 if (listaDiferencias3[i] >= 0) {
@@ -3830,9 +3884,15 @@ function busquedaManual() {
                 // }
             }
 
-            $('.resultados3').css('display', 'flex')
-            $('.resultados4').css('display', 'flex')
-            $('.mensaje2').css('display', 'flex')
+            if(posicion3 == 0 && posicion4 == 0 && posicion5 == 0){
+                $('.mensaje2').css('display', 'none')
+            }
+            else{
+                $('.resultados3').css('display', 'flex')
+                $('.resultados4').css('display', 'flex')
+                $('.mensaje2').css('display', 'flex')
+            }
+            
         }
     })
 

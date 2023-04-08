@@ -197,6 +197,13 @@ body {
     width: 100%;
 }
 
+@keyframes zoomear{
+    0%{
+        outline-style:groove
+    }
+}
+
+
 .b {
     display: flex;
     align-items: center;
