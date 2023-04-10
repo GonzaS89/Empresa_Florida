@@ -3342,7 +3342,7 @@ boton.addEventListener('click', function () {
         listaDiferencias.push(difHoraHorarios);
     }
     
-
+    
     for (i = 0; i < listaDiferencias.length; i++) {
         if (listaDiferencias[i] >= 0) {
             anteriorPasado = Math.min(anteriorPasado, listaDiferencias[i]);
@@ -3459,8 +3459,24 @@ boton.addEventListener('click', function () {
             actual3.textContent = '';
         }
         else if((dia >= 2 && dia <= 5) && (opcionbase.selected == true && posicion2 == 2)){
+            rutaObtenida = obtenerDiaRuta(1)
+            conversionHorario = convertirHorarioAMinutos(rutaObtenida[(rutaObtenida.length) - 2].salida)
+            conversionHora = pasarHoraAMinutos(hora,minutos)
+            let variableUnica = conversionHorario - 1440;
+            let variableDoble = conversionHora - variableUnica;
             actual1.textContent = `Último servicio de ayer ${rutaObtenida[(rutaObtenida.length) - 2].nombre} Hrs`;
-            actual2.textContent = ''
+            if (variableDoble >= 120) {
+                actual2.textContent = 'Inició su recorrido hace un par horas'
+            }
+            if (variableDoble > 60 && anteriorPasado < 120) {
+                actual2.textContent = 'Inició su recorrido hace más de 1 hora'
+            }
+            if (variableDoble == 60) {
+                actual2.textContent = 'Inició su recorrido hace 1 hora'
+            }
+            if (variableDoble < 60) {
+                actual2.textContent = `Inició su recorrido hace ${Math.floor(variableDoble)} minutos`
+            }
             actual3.textContent = `Recorrido: ${rutaObtenida[(rutaObtenida.length) - 2].recorrido}`
         }
         else if ((dia == 6)  && (opcionbase.selected == true && posicion2 == 2)){
@@ -3485,11 +3501,23 @@ boton.addEventListener('click', function () {
 
     //   Aqui en el segundo campo  
 
-
-    for (i = 0; i < horariosEnEnteros.length; i++) {
-        let difHorariosHora = horariosEnEnteros[i] - horaEnEnteros;
-        listaDiferencias2.push(difHorariosHora);
+    if(dia == 1){
+        for (i = 2; i < horariosEnEnteros.length; i++) {
+            let difHorariosHora = horariosEnEnteros[i] - horaEnEnteros;
+            listaDiferencias2.push(difHorariosHora);
+        }
+        
     }
+    
+    else{
+        for (i = 0; i < horariosEnEnteros.length; i++) {
+            let difHorariosHora = horariosEnEnteros[i] - horaEnEnteros;
+            listaDiferencias2.push(difHorariosHora);
+        }
+        
+    }
+
+    
 
     for (i = 0; i < listaDiferencias2.length; i++) {
         if (listaDiferencias2[i] > 0) {
@@ -3533,8 +3561,13 @@ boton.addEventListener('click', function () {
 
         else {
 
-            if ((listaDiferencias2.indexOf(elMasCercano)) == 0) {
-                futuro1.textContent = `Primer servicio del día a las ${rutaObtenida[listaDiferencias2.indexOf(elMasCercano)].nombre} Hrs`
+            if(dia == 1){
+                    futuro1.textContent = `Primer servicio del día a las ${rutaObtenida[1].nombre} Hrs`
+            }
+            else{
+                if ((listaDiferencias2.indexOf(elMasCercano)) == 0) {
+                    futuro1.textContent = `Primer servicio del día a las ${rutaObtenida[listaDiferencias2.indexOf(elMasCercano)].nombre} Hrs`
+                }
             }
             if (listaDiferencias2.indexOf(elMasCercano) == (listaDiferencias2.length) - 1) {
                 futuro1.textContent = `Último servicio del día a las ${rutaObtenida[listaDiferencias2.indexOf(elMasCercano)].nombre} Hrs`
@@ -3571,6 +3604,8 @@ boton.addEventListener('click', function () {
         futuro2.textContent = "No hay más unidades por hoy. Al menos por ésta ruta"
         futuro3.textContent = "";
     }
+
+
 
     $('.resultados').css('display', 'flex')
     $('.resultados2').css('display', 'flex')
