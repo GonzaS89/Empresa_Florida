@@ -964,6 +964,12 @@ body {
         width: 200px;
     }
 
+    .botonesBusquedaCont,.botonesBusquedaCont2{
+        width: 85%;
+    }
+    .topside,.topside2{
+        width: 75%;
+    }
     #tituloResultado{
         font-size:25px;
     }
