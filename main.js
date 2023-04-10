@@ -3501,21 +3501,17 @@ boton.addEventListener('click', function () {
 
     //   Aqui en el segundo campo  
 
-    if(dia == 1){
-        for (i = 2; i < horariosEnEnteros.length; i++) {
-            let difHorariosHora = horariosEnEnteros[i] - horaEnEnteros;
-            listaDiferencias2.push(difHorariosHora);
-        }
-        
-    }
     
-    else{
+       
+        
+    
+    
         for (i = 0; i < horariosEnEnteros.length; i++) {
             let difHorariosHora = horariosEnEnteros[i] - horaEnEnteros;
             listaDiferencias2.push(difHorariosHora);
         }
         
-    }
+    
 
     
 
