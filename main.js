@@ -777,9 +777,14 @@ const horariosLvSMAl = [
         "recorrido": "Terminal → Catalinas Park → Autopista → Talar → Florida → Barrio La Cancha → La Marta"
     },
     {
+        "nombre": "11:40",
+        "salida": 11.4,
+        "recorrido": "Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Esquina Lastra → Mayo"
+    },
+    {
         "nombre": "12:15",
         "salida": 12.15,
-        "recorrido": "Terminal → Catalinas Park → Alternativa → Talar → FLorida → Barrio La Cancha → Colonia 4"
+        "recorrido": "Terminal → Catalinas Park → Alternativa → Talar → Florida → Barrio La Cancha → Colonia 4"
     },
     {
         "nombre": "12:20",
