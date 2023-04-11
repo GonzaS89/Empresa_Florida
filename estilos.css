@@ -37,6 +37,22 @@ body {
     background-color: black;
     
 }
+#logo-fondo{
+    background-image: url(Imagenes/Logo_sinfondo.png);
+    height: 100%;
+    width: 100%;
+    background-size: 20%;
+    position: absolute;
+    z-index: -1;
+    filter: opacity(0%);
+    animation: parpadear 5s linear alternate-reverse infinite;
+}
+
+@keyframes parpadear{
+    100%{
+        filter: opacity(100%);
+    }
+}
 .cuerpo{
     display: flex;
     flex-direction: column;
