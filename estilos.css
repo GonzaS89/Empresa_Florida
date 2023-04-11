@@ -41,16 +41,22 @@ body {
     background-image: url(Imagenes/Logo_sinfondo.png);
     height: 100%;
     width: 100%;
-    background-size: 20%;
+    background-size: 10%;
     position: absolute;
     z-index: -1;
-    filter: opacity(0%);
+
     animation: parpadear 5s linear alternate-reverse infinite;
 }
 
 @keyframes parpadear{
+    50%{
+        filter: opacity(0%);
+    }
     100%{
-        filter: opacity(100%);
+        
+        background-size: 100%;
+        background-repeat: no-repeat;
+
     }
 }
 .cuerpo{
