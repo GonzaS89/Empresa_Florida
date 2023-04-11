@@ -10,6 +10,10 @@
     --fuentePrincipal : 'Nunito', sans-serif;
     --fuenteSec : 'Dosis', sans-serif;
 }
+
+body{
+    background: rgb(210, 204, 204);
+}
 h1,p,li{
     font-family: var(--fuenteSec);
     margin: 0;
@@ -41,6 +45,7 @@ li{
 .header{    
     display: flex;
     justify-content: center;
+    background: white;
     height: 90px;
     box-shadow: 0px 0px 20px rgb(49, 44, 24);
 }
