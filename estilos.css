@@ -11,7 +11,9 @@
     --fuenteSec : 'Dosis', sans-serif;
 }
 
-body{
+.body{
+    display: flex;
+    flex-direction: column;
     background: rgb(210, 204, 204);
 }
 h1,p,li{
@@ -91,5 +93,8 @@ li{
     }
 }
 
-
+.footer{
+    height: 20px;
+    background-color: black;
+}
 
