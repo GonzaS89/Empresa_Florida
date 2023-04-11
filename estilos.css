@@ -54,29 +54,36 @@ li{
 }
 
 #logo{
-    background-image: url(Imagenes/logosinfondo.png);
-    width: 90px;
-    height: 90px;
-    background-size: 95%;
+    background-image: url(Imagenes/logoancho.jpg);
+    width: 150px;
+    height: 75px;
+    background-size:100%;
     background-repeat: no-repeat;
-    background-position: center center;
     background-color:var(--blanco);
-    align-self: baseline;
+    background-position: center;
     animation: moverLogo 2s linear forwards;
 }
+#latir{
+    animation: latir 2s linear 2s infinite;
+}
+
 @keyframes moverLogo{
     0%{
         transform:scale(0)
     }
     100%{
         transform:scale(1);
-        border: none;
-        box-shadow: 0 10px 10px 0 rgba(128, 128, 128, 0.392);
-        width: 120px;
-        height: 120px;
-        border-radius: 100%;
+    
     }
      
+}
+@keyframes latir{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1.1);
+    }
 }
 
 
