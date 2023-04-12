@@ -27,8 +27,9 @@ a{
     font-weight: bold;
     font-weight: 400;
     text-shadow: 5px 5px 10px  black;
-    font-size: 20px;
-    animation: moverLink 1s linear infinite;
+    font-size: 30px;
+    animation: moverLink 10s linear infinite;
+    text-transform: uppercase;
 }
 
 @keyframes moverLink {
@@ -48,7 +49,7 @@ li{
     display: flex;
     justify-content: center;
     background: white;
-    height: 90px;
+    height: 150px;
     box-shadow: 0px 0px 20px rgb(49, 44, 24);
 }
 .enlaces-cont{
@@ -62,13 +63,13 @@ li{
 
 #logo{
     background-image: url(Imagenes/logoancho.jpg);
-    width: 150px;
-    height: 75px;
+    /* width: 200px;
+    height: 150px; */
     background-size:100%;
     background-repeat: no-repeat;
     background-color:var(--blanco);
     background-position: center;
-    animation: moverLogo 2s linear forwards;
+    animation: moverLogo 5s linear forwards;
 }
 #latir{
     animation: latir 2s linear 2s infinite;
@@ -76,13 +77,17 @@ li{
 
 @keyframes moverLogo{
     0%{
-        transform:scale(0)
+        transform:scale(0);
+        filter:opacity(0%);
+        width:0;
+        height: 0;
     }
     100%{
         transform:scale(1);
+        width: 200px;
+        height: 150px;
     
     }
-     
 }
 @keyframes latir{
     0%{
@@ -92,9 +97,75 @@ li{
         transform: scale(1.1);
     }
 }
-
-.footer{
-    height: 20px;
-    background-color: black;
+.carousel-cont{
+    overflow: hidden;
+    margin: 0 auto;
+    min-width: 1500px;  
 }
+.carousel{
+    width:300%;
+    display: flex;
+    animation: moverIMG1 30s ease-out infinite;
+    min-height: 600px;
+    margin: 50px 0;
+    
+    
+}
+@keyframes moverIMG1 {
+    0%{
+        transform: translateX(0);
+    }
+    5%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-33.3%);
+        
+    }
+    30%{
+        transform: translateX(-33.3%);
+    }
+    50%{
+        transform: translateX(-66.6%);
+    }
+    55%{
+        transform: translateX(-66.6%);
+    }
+    75%{
+        transform: translateX(-33.3%);
+    }
+    80%{
+        transform: translateX(-33.3%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+#imagen1{
+    background-image: url('Imagenes/F-17\ \(1\).jpg');
+    width:100%;
+    background-size:cover;
+    filter: brightness(25%);
+    background-position: center center;
+}
+
+
+#imagen2{
+    background-image: url('Imagenes/F-18\ \(1\).jpg');
+    background-size:cover;
+    width:100%;
+    filter: brightness(25%);
+    background-position: center center;
+}
+#imagen3{
+    background-image: url(Imagenes/F-4\ \(1\).jpg);
+    background-size:cover;
+    width:100%;
+    filter: brightness(25%);
+    background-position: center center;
+
+}
+
+
 
