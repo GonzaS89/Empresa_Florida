@@ -69,7 +69,7 @@ li{
     background-repeat: no-repeat;
     background-color:var(--blanco);
     background-position: center;
-    animation: moverLogo 5s linear forwards;
+    animation: moverLogo 2s linear forwards;
 }
 #latir{
     animation: latir 2s linear 2s infinite;
@@ -105,7 +105,7 @@ li{
 .carousel{
     width:300%;
     display: flex;
-    animation: moverIMG1 30s ease-out infinite;
+    animation: moverIMG1 30s ease-out 2s infinite;
     min-height: 600px;
     margin: 50px 0;
     
