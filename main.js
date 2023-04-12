@@ -821,7 +821,7 @@ const horariosLvSMAl = [
         "nombre": "15:50",
         "salida": 15.5,
         "recorrido": "Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Barrio La Cancha → Colonia 4",
-        "recorrido2": "Terminal → Banda del Río Salí → Alderetes → Talar → Florida → Esquina Lastra → Fortin → Colonia 4"
+        "recorrido2": "Terminal → Comisaria 11 → Cnel Suarez → Shell (Gdor del Campo) → Alternativa → Talar → Florida → Barrio La Cancha → Colonia 4"
     },
     {
         "nombre": "16:50",
