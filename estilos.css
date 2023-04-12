@@ -118,7 +118,7 @@ li{
 .carousel{
     width:300%;
     display: flex;
-    animation: moverIMG1 30s ease-out infinite;
+    animation: moverIMG1 20s ease-out infinite;
     height: 600px;
 }
 
