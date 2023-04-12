@@ -37,7 +37,7 @@ body {
     background-color: black;
     
 }
-#logo-fondo{
+/* #logo-fondo{
     background-image: url(Imagenes/Logo_sinfondo.png);
     height: 100%;
     width: 100%;
@@ -45,8 +45,8 @@ body {
     position: absolute;
     z-index: -1;
 
-    animation: parpadear 5s linear alternate-reverse infinite;
-}
+    /* animation: parpadear 5s linear alternate-reverse infinite; */
+
 
 @keyframes parpadear{
     50%{
