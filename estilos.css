@@ -112,19 +112,21 @@ li{
 .carousel-cont{
     overflow: hidden;
     margin: 30px auto;
-    width: 85%;
+    width: 900px;
     background-color: #000000;
 }
 .carousel{
     width:300%;
     display: flex;
     animation: moverIMG1 20s ease-out infinite;
-    height: 500px;
 }
 
 @media (max-width:768px){
+    .carousel-cont{
+        width: 600px;
+    }
     .carousel{
-        height: 300px;
+        height: 350px;
     }
 }
 @keyframes moverIMG1 {
@@ -159,24 +161,26 @@ li{
 }
 
 #imagen1{
-    background-image: url('Imagenes/F-17\ \(1\).jpg');
+    background-image: url(Imagenes/bondis\ \(2\).jpg);
     width:100%;
     background-size:cover;
+    object-fit: fill;
     background-position: center center;
 }
 
 
 #imagen2{
-    background-image: url('Imagenes/F-18\ \(1\).jpg');
+    background-image: url('Imagenes/bondis\ \(1\).jpg');
     background-size:cover;
     width:100%;
     background-position: center center;
 }
 #imagen3{
-    background-image: url(Imagenes/F-4\ \(1\).jpg);
+    background-image: url(Imagenes/bondis\ \(3\).jpg);
     background-size:cover;
     width:100%;
     background-position: center center;
+
 }
 
 #imagen1,#imagen2,#imagen3{
@@ -188,10 +192,8 @@ li{
 .nosotros-cont{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 75%;
-    margin: 0 auto;
+    padding: 30px;
 }
 
 .nosotros-lista{
@@ -210,7 +212,6 @@ li{
     text-transform: uppercase;
     text-shadow: 5px 5px 10px  black;
     margin-bottom: 30px;
-    text-align: center;
     animation: sombrear 3s linear alternate-reverse infinite;
 }
 
@@ -257,101 +258,20 @@ li{
     }
 }
 
-.galeria-cont{
-    overflow: hidden;
-    width: 75%;
-    margin: 30px auto;
+.galeria ul{
+    margin: 10px auto;
+    background-color: #f93a3a;
+    width: 95%;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
-
-.galeria{
-    width:500%;
-    /* background-color: red; */
-    height:800px;
-    display:flex;
-    object-fit: fill;
-    /* animation: fotos 30s ease-out alternate-reverse infinite */
-}
-
-@keyframes fotos {
-    0%{
-        transform: translateX(-80%);
-    }
-    100%{
-        transform: translateX(0)
-    }
-
-}
-
-#imagenRecuerdo{
-    background-image: url(imagenes/recuerdos\ \(1\).jpg);
-    background-size: cover;
-    width: 100%;   
-}
-
-#imagenRecuerdo2{
-    background-image: url(imagenes/recuerdos\ \(2\).jpg);
-    background-size: cover;
+.galeria img{
     width: 100%;
-    background-position: center center;
-}
-#imagenRecuerdo3{
-    background-image: url(imagenes/logoviejo.jpg);
-    background-size: cover;
-    width: 100%;
-}
-#imagenRecuerdo4{
-    background-image: url(imagenes/recuerdos\ \(4\).jpg);
-    background-size: cover;
-    width: 100%;
-}
-#imagenRecuerdo5{
-    background-image: url(imagenes/bondi-hoy.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
+    min-height: 200px;
+    max-height: 500px;
 }
 
-#imagenRecuerdo, #imagenRecuerdo2, #imagenRecuerdo3, #imagenRecuerdo4{
-    filter: brightness(50%);
-}
 
-.botones{
-    display: flex;
-    position:relative;
-    z-index: 10;
-    justify-content: space-between;
-    transform: translateY(300px);
-    margin: 0 20px;
-}
 
-#boton1-cont,#boton2-cont{
-    width: 100px;
-    height:100px;
-    border-radius: 50%;
-    background-color: rgba(46, 44, 44, 0.404);
-}
-#boton1-cont{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-}
-#boton1-cont:hover{
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.37)
-}
-#boton2-cont:hover{
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.37)
-}
-#boton1-cont span{
-    font-size:50px;
-}
 
-#boton2-cont{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-}
-#boton2-cont span{
-    font-size:50px;
-}
