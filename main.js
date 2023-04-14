@@ -3122,6 +3122,7 @@ const todosTucumanDestino = [terminalAldFlorida, terminalPosseFlorida, terminalP
 
 /* Funcion para determinar la localidad de posicion*/
 
+
 const selector = document.menu.selector;
 const selector2 = document.menu2.selector2;
 
