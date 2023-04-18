@@ -3145,6 +3145,8 @@ const resultadoscont = document.querySelector('.resultados-cont');
 const todosResultados = document.querySelectorAll('.resultados');
 let globosCargados = false;
 
+
+
 let titulo = document.getElementById('titulo');
 
 botonDeCambio.addEventListener('click', function () {
@@ -3195,15 +3197,23 @@ function globoResultado() {
 }
 
 
-// function borrarGlobos (){
-//    resultadoscont.removeChild('.resultado');
-// }
+function borrarGlobos (){
+//    for (i = 0; i < (x.children.length); i++) {
+//     x.children[0]
+    todosResultados.remove()
+    }
+
+
+
+
 
 
 
 
 
 boton.addEventListener('click', ()=> {
+
+    
 
     // Definimos la posicion del selector 1
 
@@ -3446,7 +3456,7 @@ boton.addEventListener('click', ()=> {
       recorridoServicio2.textContent = `Recorrido: ${rutaObtenida[i].recorrido2}`;
     }
 
-    console.log(listaDiferencias)
+    
    
 
    
@@ -3717,7 +3727,9 @@ indicacion.addEventListener('click',()=> {
     opcionbase.selected = true;
     opcionbase2.selected = true;
     linea1.textContent = '';
-    linea2.textContent = '';
+    linea2.textContent = '';  
+    borrarGlobos()
+    
 })
 
 
