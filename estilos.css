@@ -112,13 +112,12 @@ li{
 .carousel-cont{
     overflow: hidden;
     margin: 30px auto;
-    width: 75%;
-    background-color: #000000;
+    width: 90%;
 }
 .carousel{
     width:300%;
     display: flex;
-    height: 750px;
+    height: 700px;
     animation: moverIMG1 20s ease-out infinite;
 }
 @media (max-width:1500px){
@@ -177,7 +176,6 @@ li{
     background-image: url(Imagenes/bondis\ \(2\).jpg);
     width:100%;
     background-size:cover;
-    object-fit: fill;
     background-position: center center;
 }
 
@@ -199,7 +197,7 @@ li{
 #imagen1,#imagen2,#imagen3{
     padding: 10px;
     outline: 3px solid red;
-    filter: brightness(50%);
+    filter: brightness(35%);
 }
 
 .nosotros-cont{
@@ -304,7 +302,7 @@ li{
 
 li img{
     width: 100%;
-    height: 350px;
+    height: 100%;
     outline: 10px solid var(--rojo2);
     /* border: 5px solid var(--fondoAzul); */
 
@@ -346,6 +344,7 @@ li img:hover{
     border-top-left-radius: 0px 0px;
     animation: entrarContacto 3s ease-in-out;
     gap: 10px;
+    overflow: hidden;
 }
 
 @keyframes entrarContacto{
@@ -359,7 +358,15 @@ li img:hover{
     font-family:var(--fuenteSec);
     font-size: 30px;
     text-align: center;
+    text-transform: uppercase;
     margin: 10px;
+    animation: apareceTexto 3s linear forwards;
+}
+
+@keyframes apareceTexto {
+    100%{
+        transform:scale(1)
+    }
 }
 
 #redes-texto{
@@ -368,6 +375,7 @@ li img:hover{
     font-size: 30px;
     text-align: center;
     margin: 10px;
+    text-transform: uppercase;
 } 
 
 .redes{
@@ -377,6 +385,7 @@ li img:hover{
     background-color: var(--fondoAzul);
     width: 40%;
     border-top-left-radius: 250px 250px;
+    overflow: hidden;
     animation: entrarRedes 3s ease-in-out;
 }
 
@@ -386,6 +395,20 @@ li img:hover{
     }
 }
 
+.redes .face{
+    transform: translateX(600px);
+    animation: entraFace 1s linear 2s forwards;
+}
+.redes .insta{
+    transform: translateX(600px);
+    animation: entraFace 1s linear 2s forwards;
+}
+
+@keyframes entraFace {
+    100%{
+        transform:translateY(0)
+    }
+}
 
 
 .face,.insta{
