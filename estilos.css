@@ -634,7 +634,7 @@ body {
 
 }
 
-#fondo {
+.fondo {
     width: 100%;
     height: 100%;
     border-radius: 100%;
@@ -716,10 +716,10 @@ body {
     margin: 15px 5px;
 } */
 
-#actual1,
-#actual2,
-#actual3,
-#actual4 {
+.actual1,
+.actual2,
+.actual3,
+.actual4 {
     font-size: 18px;
     font-family: var(--fuenteSec);
     text-align: center;
@@ -758,6 +758,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     position: fixed;
+    overflow: scroll;
     background-color: var(--rojo2);
     height: 100%;
     width: 100%;
@@ -1018,10 +1019,10 @@ body {
         /* min-height: 150px; */
     }
 
-    #actual1,
-    #actual2,
-    #actual3,
-    #actual4,
+    .actual1,
+    .actual2,
+    .actual3,
+    .actual4,
     #futuro1,
     #futuro2,
     #futuro3,
