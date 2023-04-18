@@ -653,6 +653,7 @@ body {
     height: 550px;
     gap: 10px;
     width: 100%;
+    overflow: scroll;
 }
 
 .resultados,
