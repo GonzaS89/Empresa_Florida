@@ -3183,13 +3183,13 @@ function globoResultado() {
     p2.classList.add('actual2')
     let p3 = document.createElement('P');
     p3.classList.add('actual3')
-    // let p4 = document.createElement('P');
-    // p4.classList.add('actual4')
+    let p4 = document.createElement('P');
+    p4.classList.add('actual4')
     resultado.appendChild(fondo);
     resultado.appendChild(p1);
     resultado.appendChild(p2);
     resultado.appendChild(p3);
-    // resultado.appendChild(p4);
+    resultado.appendChild(p4);
     resultadoscont.appendChild(resultado);
     globosCargados = true;
 }
@@ -3271,6 +3271,7 @@ boton.addEventListener('click', ()=> {
     let semiFeriado = false;
     let nombreServicio;
     let recorridoServicio;
+    let recorridoServicio2;
     let estadoServicio;
     
 
@@ -3400,6 +3401,7 @@ boton.addEventListener('click', ()=> {
       nombreServicio = (resultadoscont.children[i]).children[1];
       estadoServicio = (resultadoscont.children[i]).children[2];
       recorridoServicio = (resultadoscont.children[i]).children[3];
+      recorridoServicio2 = (resultadoscont.children[i]).children[4];
       nombreServicio.textContent = `Servicio de las ${rutaObtenida[i].nombre} Hrs`;
         if(listaDiferencias[i] > 0){
                 if (listaDiferencias[i] >= 120) {
@@ -3441,6 +3443,7 @@ boton.addEventListener('click', ()=> {
                 }
             
       recorridoServicio.textContent = `Recorrido: ${rutaObtenida[i].recorrido}`;
+      recorridoServicio2.textContent = `Recorrido: ${rutaObtenida[i].recorrido2}`;
     }
 
     console.log(listaDiferencias)
