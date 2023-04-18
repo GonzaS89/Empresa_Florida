@@ -3293,7 +3293,23 @@ boton.addEventListener('click', function () {
         rutaObtenida = obtenerDiaRuta(dia)
     }
 
+    function globoResultado () {
+        const resultadoscont = document.querySelector('.resultados-cont')
+        const resultado = document.createElement('DIV');
+        const fondo = document.createElement('SPAN')
+        let p1 = document.createElement('P');
+        let p2 = document.createElement('P');
+        let p3 = document.createElement('P');
+        let p4 = document.createElement('P');
 
+        resultado.appendChild(fondo);
+        resultado.appendChild(p1);
+        resultado.appendChild(p2);
+        resultado.appendChild(p3);
+        resultado.appendChild(p4);
+
+        resultadoscont.appendChild(resultado)
+    }
 
     // Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
 
