@@ -3141,8 +3141,8 @@ let label2;
 const botonDeCambio = document.querySelector('.botonDeCambio');
 const botonDeCambio2 = document.querySelector('.botonDeCambio2');
 const mensaje2 = document.querySelector('.mensaje2');
-const indicacion = document.querySelector('.indicacion-cont');
-const resultadoscont = mensaje2.children[1];
+const indicacioncont = document.querySelector('.indicacion-cont')
+const resultadoscont = document.querySelector('.resultados-cont')
 let globosCargados = false;
 
 let titulo = document.getElementById('titulo');
@@ -3170,38 +3170,7 @@ botonDeCambio2.addEventListener('click', function () {
     linea1.textContent = '';
     linea2.textContent = '';
 })
-
-function globoResultado() {
-    resultadoscont.classList.add('resultados-cont');
-    const resultado = document.createElement('DIV');
-    resultado.classList.add('resultados')
-    const fondo = document.createElement('SPAN');
-    fondo.classList.add('fondo')
-    let p1 = document.createElement('P');
-    p1.classList.add('actual1')
-    let p2 = document.createElement('P');
-    p2.classList.add('actual2')
-    let p3 = document.createElement('P');
-    p3.classList.add('actual3')
-    let p4 = document.createElement('P');
-    p4.classList.add('actual4')
-    resultado.appendChild(fondo);
-    resultado.appendChild(p1);
-    resultado.appendChild(p2);
-    resultado.appendChild(p3);
-    resultado.appendChild(p4);
-    resultadoscont.appendChild(resultado);
-    mensaje2.appendChild(resultadoscont);
-    globosCargados = true;
-}
-
-
-function borrarGlobos (){
-//    for (i = 0; i < (x.children.length); i++) {
-//     x.children[0]
-    todosResultados.remove()
-    }
-
+    
 
 boton.addEventListener('click', ()=> {
 
@@ -3395,8 +3364,32 @@ boton.addEventListener('click', ()=> {
     // }
 
     for (i = 0; i < rutaObtenida.length; i++){
-        globoResultado();
+    
+    const resultado = document.createElement('DIV')
+    resultado.classList.add('resultados')
+    const fondo = document.createElement('SPAN');
+    fondo.classList.add('fondo')
+    let p1 = document.createElement('P');
+    p1.classList.add('actual1')
+    let p2 = document.createElement('P');
+    p2.classList.add('actual2')
+    let p3 = document.createElement('P');
+    p3.classList.add('actual3')
+    let p4 = document.createElement('P');
+    p4.classList.add('actual4')
+    resultado.appendChild(fondo);
+    resultado.appendChild(p1);
+    resultado.appendChild(p2);
+    resultado.appendChild(p3);
+    resultado.appendChild(p4);
+    resultadoscont.appendChild(resultado);
+    mensaje2.appendChild(resultadoscont)
+    globosCargados = true;
     }
+
+    mensaje2.appendChild(indicacioncont);
+
+    
 
    for (i = 0; i < (resultadoscont.children).length; i++) {
       nombreServicio = (resultadoscont.children[i]).children[1];
@@ -3709,7 +3702,7 @@ boton.addEventListener('click', ()=> {
     $('.mensaje2').css('display', 'flex')
 })
 
-indicacion.addEventListener('click',()=> {
+indicacioncont.addEventListener('click',()=> {
     // actual4.textContent = '';
     // futuro4.textContent = '';
     $('.mensaje2').css('display', 'none')
@@ -3718,7 +3711,7 @@ indicacion.addEventListener('click',()=> {
     opcionbase.selected = true;
     opcionbase2.selected = true;
     linea1.textContent = '';
-    linea2.textContent = '';  
+    linea2.textContent = ''; 
 })
 
 
@@ -4027,7 +4020,7 @@ function busquedaManual() {
         }
     })
 
-    indicacion.addEventListener('click', function () {
+    indicacioncont.addEventListener('click', function () {
         $('.mensaje2').css('display', 'none');
         $('.resultados3').css('display', 'none');
         $('.resultados4').css('display', 'none');
