@@ -654,6 +654,7 @@ body {
     gap: 10px;
     width: 100%;
     overflow: scroll;
+    border-radius: 10px;
 }
 
 .resultados,
@@ -843,10 +844,10 @@ body {
     animation: ondaBoton 1s linear .5s infinite;
 }
 
-#indicacion {
+.indicacion {
     font-size: 20px;
     font-weight: bold;
-    
+    text-align: center;
 }
 
 @keyframes ondaBoton{
@@ -863,7 +864,7 @@ body {
     }
 }
 
-#indicacion:hover {
+.indicacion:hover {
     cursor: pointer;
 }
 
@@ -1064,7 +1065,7 @@ body {
         width: 140px;
     }
     
-    #indicacion {
+    .indicacion {
         font-size: 15px;
     }
 

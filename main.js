@@ -3141,11 +3141,9 @@ let label2;
 const botonDeCambio = document.querySelector('.botonDeCambio');
 const botonDeCambio2 = document.querySelector('.botonDeCambio2');
 const mensaje2 = document.querySelector('.mensaje2');
-const resultadoscont = document.querySelector('.resultados-cont');
-const todosResultados = document.querySelectorAll('.resultados');
+const indicacion = document.querySelector('.indicacion-cont');
+const resultadoscont = mensaje2.children[1];
 let globosCargados = false;
-
-
 
 let titulo = document.getElementById('titulo');
 
@@ -3174,7 +3172,7 @@ botonDeCambio2.addEventListener('click', function () {
 })
 
 function globoResultado() {
-       
+    resultadoscont.classList.add('resultados-cont');
     const resultado = document.createElement('DIV');
     resultado.classList.add('resultados')
     const fondo = document.createElement('SPAN');
@@ -3193,6 +3191,7 @@ function globoResultado() {
     resultado.appendChild(p3);
     resultado.appendChild(p4);
     resultadoscont.appendChild(resultado);
+    mensaje2.appendChild(resultadoscont);
     globosCargados = true;
 }
 
@@ -3202,13 +3201,6 @@ function borrarGlobos (){
 //     x.children[0]
     todosResultados.remove()
     }
-
-
-
-
-
-
-
 
 
 boton.addEventListener('click', ()=> {
@@ -3276,7 +3268,6 @@ boton.addEventListener('click', ()=> {
     let futuro4 = document.getElementById('futuro4');
     let tituloResultado = document.getElementById('tituloResultado')
     let linea1 = document.getElementById('linea1');
-    const indicacion = document.querySelector('.indicacion-cont');
     let feriado = false;
     let semiFeriado = false;
     let nombreServicio;
@@ -3728,8 +3719,6 @@ indicacion.addEventListener('click',()=> {
     opcionbase2.selected = true;
     linea1.textContent = '';
     linea2.textContent = '';  
-    borrarGlobos()
-    
 })
 
 
