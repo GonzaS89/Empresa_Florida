@@ -3778,7 +3778,7 @@ boton.addEventListener('click', ()=> {
 })
 
 
-resultadoscont.addEventListener('scroll', ()=> {
+resultadoscont.addEventListener('click', ()=> {
     resultadoscont.children[5].classList.remove('resaltado');
 })
 indicacioncont.addEventListener('click',()=> {
