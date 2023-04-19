@@ -3394,7 +3394,16 @@ boton.addEventListener('click', ()=> {
     globosCargados = true;
     
     }
+    let a = resultadoscont.children[3];
+    let b = a.getBoundingClientRect();
+        console.log(b.top)
+    resultadoscont.addEventListener('scroll', function (){
+        b = a.getBoundingClientRect()
+        console.log(b.bottom)
+    })
+    
 
+    
     mensaje2.appendChild(indicacioncont);
     let actual4 = document.querySelector('.actual4'); 
 
