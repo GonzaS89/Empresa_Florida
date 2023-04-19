@@ -3368,11 +3368,19 @@ boton.addEventListener('click', ()=> {
     }
 
 
-    // for (i = 0; i < listaDiferencias.length; i++) {
-    //     if (listaDiferencias[i] >= 0) {
-    //         anteriorPasado = Math.min(anteriorPasado, listaDiferencias[i]);
-    //     }
-    // }
+    for (i = 0; i < listaDiferencias.length; i++) {
+        if (listaDiferencias[i] >= 0){
+            anteriorPasado = Math.min(anteriorPasado, listaDiferencias[i]);
+        }
+    }
+    let indiceDeBusqueda;
+    if(anteriorPasado <= 10){
+        indiceDeBusqueda = listaDiferencias.indexOf(anteriorPasado)
+    }
+    else{
+        indiceDeBusqueda = (listaDiferencias.indexOf(anteriorPasado) + 1)
+    }
+     
 
     for (i = 0; i < rutaObtenida.length; i++){
     
@@ -3402,11 +3410,14 @@ boton.addEventListener('click', ()=> {
     }
     
     function irAlObjeto() {
-        var a = resultadoscont.children[5];
+        var a = resultadoscont.children[indiceDeBusqueda];
         a.scrollIntoView({block: 'center'});
+        setTimeout("irAlObjeto()", 1000)
     };
 
-    resultadoscont.children[5].classList.add('resaltado');
+    
+
+    resultadoscont.children[indiceDeBusqueda].classList.add('resaltado');
     resultadoscont.classList.add('opacar')
     
     mensaje2.appendChild(indicacioncont);
