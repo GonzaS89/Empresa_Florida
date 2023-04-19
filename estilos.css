@@ -37,6 +37,10 @@ body {
     background-color: black;
     
 }
+
+body::-webkit-scrollbar-track {
+    background: orange;        /* color of the tracking area */
+  }
 /* #logo-fondo{
     background-image: url(Imagenes/Logo_sinfondo.png);
     height: 100%;
@@ -655,6 +659,7 @@ body {
     width: 100%;
     overflow: scroll;
     border-radius: 10px;
+    margin: 10px 0;
 }
 
 .resultados,
@@ -664,18 +669,16 @@ body {
     /* height: 30%;     */
     width: 65%;
     display: none;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     border-radius: 20px;
     margin: 15px;
     border: none;
     border: .5px solid white;
     background-color: var(--blanco);
-    overflow: hidden;
     position: relative;
     max-height: 60%;
     min-height: 40%;
+    gap: 2.5px;
     
 }
 .resultados,.resultados2{
@@ -978,10 +981,10 @@ body {
         margin: 0;
         padding: 0;
     }
-    #fondo {
+    .fondo {
         width: 100%;
         height: 100%;
-        background-size: 50%;
+        background-size: 70%;
     }
 
     .input-reloj {
@@ -1008,8 +1011,8 @@ body {
     .resultados3,
     .resultados4 {
         width: 90%;
+        padding: 10px 0;
         border: .5px solid white;
-        padding: 5px 0;
         max-height: 45%;
         min-height: 40%;
 
@@ -1033,22 +1036,16 @@ body {
         padding: 0 10px;
         margin: 0;
     }
+    .actual4{
+        margin: 0;
+        padding: 0;
+    }
 
     /* #actual1,#actual3,#actual4,#futuro1,#futuro3{
         margin: 5px 0;
     } */
-    #mostrar1,
-    #mostrar2,
-    #mostrar3,
-    #mostrar4 {
-        font-size: 15px;
-        margin: 10px 10px;
-    }
 
-    #actual2,
-    #futuro2 {
-        margin: 10px 5px;
-    }
+
 
     .mensaje2 {
         display: none;

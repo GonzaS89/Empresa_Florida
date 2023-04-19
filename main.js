@@ -3171,7 +3171,13 @@ botonDeCambio2.addEventListener('click', function () {
     linea2.textContent = '';
 })
     
-
+function borrarGlobos(){
+    let arrayResultados = Array.prototype.slice.call(document.getElementsByClassName("resultados"), 0);
+    for(element of arrayResultados){
+        console.log(element);
+        element.remove();
+    }
+}
 boton.addEventListener('click', ()=> {
 
     
@@ -3230,7 +3236,6 @@ boton.addEventListener('click', ()=> {
     let actual1 = document.getElementById('actual1');
     let actual2 = document.getElementById('actual2');
     let actual3 = document.getElementById('actual3');
-    let actual4 = document.getElementById('actual4');
     let futuro1 = document.getElementById('futuro1');
     let futuro2 = document.getElementById('futuro2');
     let futuro3 = document.getElementById('futuro3');
@@ -3374,22 +3379,24 @@ boton.addEventListener('click', ()=> {
     let p2 = document.createElement('P');
     p2.classList.add('actual2')
     let p3 = document.createElement('P');
-    p3.classList.add('actual3')
-    let p4 = document.createElement('P');
-    p4.classList.add('actual4')
+    p3.classList.add('actual3');
     resultado.appendChild(fondo);
     resultado.appendChild(p1);
     resultado.appendChild(p2);
     resultado.appendChild(p3);
-    resultado.appendChild(p4);
+    if((Object.keys(rutaObtenida[i]).length) > 3){
+        let p4 = document.createElement('P');
+        p4.classList.add('actual4');
+        resultado.appendChild(p4);
+    }
     resultadoscont.appendChild(resultado);
     mensaje2.appendChild(resultadoscont)
     globosCargados = true;
+    
     }
 
     mensaje2.appendChild(indicacioncont);
-
-    
+    let actual4 = document.querySelector('.actual4'); 
 
    for (i = 0; i < (resultadoscont.children).length; i++) {
       nombreServicio = (resultadoscont.children[i]).children[1];
@@ -3398,46 +3405,91 @@ boton.addEventListener('click', ()=> {
       recorridoServicio2 = (resultadoscont.children[i]).children[4];
       nombreServicio.textContent = `Servicio de las ${rutaObtenida[i].nombre} Hrs`;
         if(listaDiferencias[i] > 0){
-                if (listaDiferencias[i] >= 120) {
-                    estadoServicio.textContent = 'Inició su recorrido hace un par horas'
+                if(Object.keys(rutaObtenida[i]).length > 3){
+                    if (listaDiferencias[i] >= 120) {
+                        estadoServicio.textContent = 'Iniciaron sus recorridos hace un par horas'
+                    }
+                    if (listaDiferencias[i] > 60 && listaDiferencias[i] < 120) {
+                        estadoServicio.textContent = 'Iniciaron sus recorridos hace mas de 1 hora'
+                    }
+                    if (listaDiferencias[i] == 60) {
+                        estadoServicio.textContent = 'Iniciaron sus recorridos hace 1 hora'
+                    }
+                    if (listaDiferencias[i] < 60 && listaDiferencias[i] > 5) {
+                        estadoServicio.textContent = `Iniciaron sus recorrido hace ${Math.round(listaDiferencias[i])} minutos`
+                    }
+                    if (listaDiferencias[i] < 5 && listaDiferencias[i] > 0) {
+                        estadoServicio.textContent = 'Iniciaron sus recorridos hace menos de 5 minutos'
+                    }
+                    if (Math.trunc(listaDiferencias[i]) == 0) {
+                        estadoServicio.textContent = 'Están iniciando sus recorridos'
+                    }
+                    recorridoServicio.textContent = `1° Recorrido: ${rutaObtenida[i].recorrido}`
+                    recorridoServicio2.textContent = `2° Recorrido: ${rutaObtenida[i].recorrido2}`;
                 }
-                if (listaDiferencias[i] > 60 && listaDiferencias[i] < 120) {
-                    estadoServicio.textContent = 'Inició su recorrido hace mas de 1 hora'
-                }
-                if (listaDiferencias[i] == 60) {
-                    estadoServicio.textContent = 'Inició su recorrido hace 1 hora'
-                }
-                if (listaDiferencias[i] < 60 && listaDiferencias[i] > 5) {
-                    estadoServicio.textContent = `Inició su recorrido hace ${Math.round(listaDiferencias[i])} minutos`
-                }
-                if (listaDiferencias[i] < 5 && listaDiferencias[i] > 0) {
-                    estadoServicio.textContent = 'Inició su recorrido hace menos de 5 minutos'
-                }
-                if (Math.trunc(listaDiferencias[i]) == 0) {
-                    estadoServicio.textContent = 'Está iniciando su recorrido'
-                }
-            }
-
                 else{
-                    if (Math.abs(listaDiferencias[i]) >= 120) {
-                        estadoServicio.textContent = 'Iniciará su recorrido en un par horas'
+                    if (listaDiferencias[i] >= 120) {
+                        estadoServicio.textContent = 'Inició su recorrido hace un par horas'
                     }
-                    if (Math.abs(listaDiferencias[i]) > 60 && Math.abs(listaDiferencias[i]) < 120) {
-                        estadoServicio.textContent = 'Iniciará su recorrido en poco mas de 1 hora'
+                    if (listaDiferencias[i] > 60 && listaDiferencias[i] < 120) {
+                        estadoServicio.textContent = 'Inició su recorrido hace mas de 1 hora'
                     }
-                    if (Math.abs(listaDiferencias[i]) == 60) {
-                        estadoServicio.textContent = 'Iniciaá su recorrido en 1 hora'
+                    if (listaDiferencias[i] == 60) {
+                        estadoServicio.textContent = 'Inició su recorrido hace 1 hora'
                     }
-                    if (Math.abs(listaDiferencias[i]) < 60 && Math.abs(listaDiferencias[i]) > 5) {
-                        estadoServicio.textContent = `Iniciará su recorrido en ${Math.round(Math.abs(listaDiferencias[i]))} minutos`
+                    if (listaDiferencias[i] < 60 && listaDiferencias[i] > 5) {
+                        estadoServicio.textContent = `Inició su recorrido hace ${Math.round(listaDiferencias[i])} minutos`
                     }
-                    if (Math.abs(listaDiferencias[i]) < 5 && Math.abs(listaDiferencias[i]) > 0) {
-                        estadoServicio.textContent = 'Iniciará su recorrido en menos de 5 minutos'
+                    if (listaDiferencias[i] < 5 && listaDiferencias[i] > 0) {
+                        estadoServicio.textContent = 'Inició su recorrido hace menos de 5 minutos'
+                    }
+                    if (Math.trunc(listaDiferencias[i]) == 0) {
+                        estadoServicio.textContent = 'Está iniciando su recorrido'
+                    }
+                    recorridoServicio.textContent = `Recorrido: ${rutaObtenida[i].recorrido}`;
+            }
+        }
+                else{
+                    if(Object.keys(rutaObtenida[i]).length > 3){
+                        if (Math.abs(listaDiferencias[i]) >= 120) {
+                            estadoServicio.textContent = 'Iniciarán sus recorridos en un par horas'
+                        }
+                        if (Math.abs(listaDiferencias[i]) > 60 && Math.abs(listaDiferencias[i]) < 120) {
+                            estadoServicio.textContent = 'Iniciarán sus recorridos en poco mas de 1 hora'
+                        }
+                        if (Math.abs(listaDiferencias[i]) == 60) {
+                            estadoServicio.textContent = 'Iniciarán sus recorridos en 1 hora'
+                        }
+                        if (Math.abs(listaDiferencias[i]) < 60 && Math.abs(listaDiferencias[i]) > 5) {
+                            estadoServicio.textContent = `Iniciarán sus recorridos en ${Math.round(Math.abs(listaDiferencias[i]))} minutos`
+                        }
+                        if (Math.abs(listaDiferencias[i]) < 5 && Math.abs(listaDiferencias[i]) > 0) {
+                            estadoServicio.textContent = 'Iniciarán sus recorridos en menos de 5 minutos'
+                        }
+                        recorridoServicio.textContent = `1° Recorrido: ${rutaObtenida[i].recorrido}`
+                        recorridoServicio2.textContent = `2° Recorrido: ${rutaObtenida[i].recorrido2}`;
+                    }
+                    else{
+                        if (Math.abs(listaDiferencias[i]) >= 120) {
+                            estadoServicio.textContent = 'Iniciará su recorrido en un par horas'
+                        }
+                        if (Math.abs(listaDiferencias[i]) > 60 && Math.abs(listaDiferencias[i]) < 120) {
+                            estadoServicio.textContent = 'Iniciará su recorrido en poco mas de 1 hora'
+                        }
+                        if (Math.abs(listaDiferencias[i]) == 60) {
+                            estadoServicio.textContent = 'Iniciaá su recorrido en 1 hora'
+                        }
+                        if (Math.abs(listaDiferencias[i]) < 60 && Math.abs(listaDiferencias[i]) > 5) {
+                            estadoServicio.textContent = `Iniciará su recorrido en ${Math.round(Math.abs(listaDiferencias[i]))} minutos`
+                        }
+                        if (Math.abs(listaDiferencias[i]) < 5 && Math.abs(listaDiferencias[i]) > 0) {
+                            estadoServicio.textContent = 'Iniciará su recorrido en menos de 5 minutos'
+                        }
+                        recorridoServicio.textContent = `Recorrido: ${rutaObtenida[i].recorrido}`;
                     }
                 }
             
-      recorridoServicio.textContent = `Recorrido: ${rutaObtenida[i].recorrido}`;
-      recorridoServicio2.textContent = `Recorrido: ${rutaObtenida[i].recorrido2}`;
+      
     }
 
     
@@ -3711,7 +3763,8 @@ indicacioncont.addEventListener('click',()=> {
     opcionbase.selected = true;
     opcionbase2.selected = true;
     linea1.textContent = '';
-    linea2.textContent = ''; 
+    linea2.textContent = '';
+    borrarGlobos();
 })
 
 
@@ -3989,23 +4042,10 @@ function busquedaManual() {
 
 
                 }
-                else {
-                    mostrar1.textContent = `El servicio más cercano al horario indicado es de las ${diaRango2[diaRango2.length - 1].nombre} Hrs (Último servicio del día)`;
-                    mostrar2.textContent = `Recorrido: ${diaRango2[diaRango2.length - 1].recorrido}`
-                    mostrar3.textContent = 'No hay más servicios en éste horario ni en lo que resta del día. Probá con otra ruta';
-                    mostrar4.textContent = '';
-                }
+                
 
 
-                if (diaRango2.length == 1) {
-                    mostrar1.textContent = `El servicio más cercano al horario indicado es de las ${diaRango2[diaRango2.length - 1].nombre} Hrs (Único servicio del día)`;
-                    mostrar2.textContent = `Recorrido: ${diaRango2[diaRango2.length - 1].recorrido}`;
-                }
-                // if(diaRango2.length == ''){
-                //     $('.resultados3').css('display', 'flex');
-                //     mostrar1.textContent = 'No hay unidades activas en el dia seleccionado'
-                //     mostrar2.textContent = ''
-                // }
+                
             }
 
             if (posicion3 == 0 && posicion4 == 0 && posicion5 == 0) {
