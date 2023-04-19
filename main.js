@@ -3174,14 +3174,19 @@ botonDeCambio2.addEventListener('click', function () {
 function borrarGlobos(){
     let arrayResultados = Array.prototype.slice.call(document.getElementsByClassName("resultados"), 0);
     for(element of arrayResultados){
-        console.log(element);
         element.remove();
     }
 }
+
+
+
+
 boton.addEventListener('click', ()=> {
+
 
     
 
+    
     // Definimos la posicion del selector 1
 
     for (opcion of selector) {
@@ -3394,15 +3399,11 @@ boton.addEventListener('click', ()=> {
     globosCargados = true;
     
     }
-    let a = resultadoscont.children[3];
-    let b = a.getBoundingClientRect();
-        console.log(b.top)
-    resultadoscont.addEventListener('scroll', function (){
-        b = a.getBoundingClientRect()
-        console.log(b.bottom)
-    })
     
-
+    function irAlObjeto() {
+        var a = resultadoscont.children[5];
+        a.scrollIntoView({behavior:'smooth', block: 'center'});
+    };
     
     mensaje2.appendChild(indicacioncont);
     let actual4 = document.querySelector('.actual4'); 
@@ -3758,10 +3759,21 @@ boton.addEventListener('click', ()=> {
     //     futuro3.textContent = "";
     // }
 
-    $('.resultados').css('display', 'flex')
+    
+    
+        
+    
+    
+
+    $('.resultados').css('display', 'flex');
     // $('.resultados2').css('display', 'flex')
-    $('.mensaje2').css('display', 'flex')
+    $('.mensaje2').css('display', 'flex');
+    setTimeout( ()=> {
+        irAlObjeto()
+    }, 1000);
 })
+
+
 
 indicacioncont.addEventListener('click',()=> {
     // actual4.textContent = '';
