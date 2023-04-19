@@ -652,10 +652,12 @@ body::-webkit-scrollbar-track {
 
 .resultados-cont {
     display: flex;
+    background-color: rgba(0, 0, 0, 0.063);
     flex-direction: column;
     align-items: center;
     height: 400px;
     gap: 10px;
+    scroll-behavior: smooth;
     width: 100%;
     border-top: 2.5px solid rgba(128, 128, 128, 0.159);
     overflow-y: scroll;
@@ -1019,8 +1021,21 @@ body::-webkit-scrollbar-track {
         padding: 10px 0;
         border: .5px solid white;
         min-height: 40%;
-
     }
+
+    .resaltado{
+        animation: escalar 1s linear alternate-reverse infinite;
+    }
+    /* .opacar{
+        filter: brightness(50%);
+    } */
+
+    @keyframes escalar {
+        100%{
+            transform: scale(1.1);
+        }
+    }
+    
 
     .resultados3,
     .resultados4{

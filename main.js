@@ -3402,8 +3402,12 @@ boton.addEventListener('click', ()=> {
     
     function irAlObjeto() {
         var a = resultadoscont.children[5];
-        a.scrollIntoView({behavior:'smooth', block: 'center'});
+        a.scrollIntoView({block: 'center'});
     };
+
+    resultadoscont.children[5].classList.add('resaltado');
+    resultadoscont.children[5].classList.add('resaltadoTran');
+    resultadoscont.classList.add('opacar')
     
     mensaje2.appendChild(indicacioncont);
     let actual4 = document.querySelector('.actual4'); 
@@ -3770,7 +3774,7 @@ boton.addEventListener('click', ()=> {
     $('.mensaje2').css('display', 'flex');
     setTimeout( ()=> {
         irAlObjeto()
-    }, 1000);
+    }, 750);
 })
 
 
