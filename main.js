@@ -3422,10 +3422,15 @@ boton.addEventListener('click', ()=> {
     
 
     resultadoscont.children[indiceDeBusqueda].classList.add('resaltado');
-    resultadoscont.classList.add('opacar')
     
     mensaje2.appendChild(indicacioncont);
 
+
+    for (i = 0; i < resultadoscont.children.length; i++) {
+        if(i < indiceDeBusqueda || i > indiceDeBusqueda){
+            resultadoscont.children[i].classList.add('opacar')
+        }
+    }
 
     for (i = 0; i < (resultadoscont.children).length; i++) {
       nombreServicio = (resultadoscont.children[i]).children[1];

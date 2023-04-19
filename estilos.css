@@ -1026,9 +1026,9 @@ body::-webkit-scrollbar-track {
     .resaltado{
         animation: escalar 1s linear alternate-reverse infinite;
     }
-    /* .opacar{
-        filter: brightness(50%);
-    } */
+    .opacar{
+        filter: opacity(50%);
+    }
 
     @keyframes escalar {
         100%{
