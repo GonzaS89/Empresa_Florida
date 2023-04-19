@@ -3170,6 +3170,7 @@ botonDeCambio2.addEventListener('click', function () {
     linea1.textContent = '';
     linea2.textContent = '';
 })
+
     
 function borrarGlobos(){
     let arrayResultados = Array.prototype.slice.call(document.getElementsByClassName("resultados"), 0);
@@ -3406,7 +3407,6 @@ boton.addEventListener('click', ()=> {
     };
 
     resultadoscont.children[5].classList.add('resaltado');
-    resultadoscont.children[5].classList.add('resaltadoTran');
     resultadoscont.classList.add('opacar')
     
     mensaje2.appendChild(indicacioncont);
@@ -3778,7 +3778,9 @@ boton.addEventListener('click', ()=> {
 })
 
 
-
+mensaje2.addEventListener('click', ()=> {
+    resultadoscont.children[5].classList.remove('resaltado');
+})
 indicacioncont.addEventListener('click',()=> {
     // actual4.textContent = '';
     // futuro4.textContent = '';
