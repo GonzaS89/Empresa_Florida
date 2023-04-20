@@ -3185,9 +3185,6 @@ let indiceDeBusqueda;
 boton.addEventListener('click', ()=> {
 
 
-    
-
-    
     // Definimos la posicion del selector 1
 
     for (opcion of selector) {
@@ -3419,12 +3416,9 @@ boton.addEventListener('click', ()=> {
         a.scrollIntoView({behavior: 'smooth', block:'center'});
     };
 
-    
-
     resultadoscont.children[indiceDeBusqueda].classList.add('resaltado');
     
     mensaje2.appendChild(indicacioncont);
-
 
     for (i = 0; i < resultadoscont.children.length; i++) {
         if(i < indiceDeBusqueda || i > indiceDeBusqueda){
@@ -3437,20 +3431,34 @@ boton.addEventListener('click', ()=> {
       estadoServicio = (resultadoscont.children[i]).children[2];
       recorridoServicio = (resultadoscont.children[i]).children[3];
       recorridoServicio2 = (resultadoscont.children[i]).children[4];
-      nombreServicio.textContent = `Servicio de las ${rutaObtenida[i].nombre} Hrs`;
+      if(i == 0){
+        nombreServicio.textContent = `Primer servicio del día ${rutaObtenida[i].nombre} Hrs`;
+      }
+      else if(i == (rutaObtenida.length) - 1){
+        nombreServicio.textContent = `Último servicio del día ${rutaObtenida[i].nombre} Hrs`;
+      }
+      else{
+        nombreServicio.textContent = `Servicio de las ${rutaObtenida[i].nombre} Hrs`;
+      }
         if(listaDiferencias[i] > 0){
-                if(Object.keys(rutaObtenida[i]).length > 3){
-                    if (listaDiferencias[i] >= 120) {
-                        estadoServicio.textContent = 'Iniciaron sus recorridos hace un par horas'
-                    }
+            if(Object.keys(rutaObtenida[i]).length > 3){
+                if (listaDiferencias[i] >= 120) {
+                    estadoServicio.textContent = 'Iniciaron sus recorridos hace un par horas'
+                }
                     if (listaDiferencias[i] > 60 && listaDiferencias[i] < 120) {
                         estadoServicio.textContent = 'Iniciaron sus recorridos hace mas de 1 hora'
                     }
                     if (listaDiferencias[i] == 60) {
                         estadoServicio.textContent = 'Iniciaron sus recorridos hace 1 hora'
                     }
-                    if (listaDiferencias[i] < 60 && listaDiferencias[i] > 5) {
-                        estadoServicio.textContent = `Iniciaron sus recorrido hace ${Math.round(listaDiferencias[i])} minutos`
+                    if (listaDiferencias[i] < 60) {
+                        estadoServicio.textContent = `Iniciaron sus recorrido hace menos de 1 hora`
+                    }
+                    if (listaDiferencias[i] < 30) {
+                        estadoServicio.textContent = `Iniciaron sus recorrido hace menos de media hora`
+                    }
+                    if (listaDiferencias[i] < 10) {
+                        estadoServicio.textContent = `Iniciaron sus recorrido hace menos de 10 minutos`
                     }
                     if (listaDiferencias[i] < 5 && listaDiferencias[i] > 0) {
                         estadoServicio.textContent = 'Iniciaron sus recorridos hace menos de 5 minutos'
@@ -3460,7 +3468,7 @@ boton.addEventListener('click', ()=> {
                     }
                     recorridoServicio.textContent = `1° Recorrido: ${rutaObtenida[i].recorrido}`
                     recorridoServicio2.textContent = `2° Recorrido: ${rutaObtenida[i].recorrido2}`;
-                }
+            }
                 else{
                     if (listaDiferencias[i] >= 120) {
                         estadoServicio.textContent = 'Inició su recorrido hace un par horas'
@@ -3471,8 +3479,14 @@ boton.addEventListener('click', ()=> {
                     if (listaDiferencias[i] == 60) {
                         estadoServicio.textContent = 'Inició su recorrido hace 1 hora'
                     }
-                    if (listaDiferencias[i] < 60 && listaDiferencias[i] > 5) {
-                        estadoServicio.textContent = `Inició su recorrido hace ${Math.round(listaDiferencias[i])} minutos`
+                    if (listaDiferencias[i] < 60) {
+                        estadoServicio.textContent = `Inició su recorrido hace menos de 1 hora`
+                    }
+                    if (listaDiferencias[i] < 30) {
+                        estadoServicio.textContent = `Inició su recorrido hace menos de media hora`
+                    }
+                    if (listaDiferencias[i] < 10) {
+                        estadoServicio.textContent = `Inició su recorrido hace menos de 10 minutos`
                     }
                     if (listaDiferencias[i] < 5 && listaDiferencias[i] > 0) {
                         estadoServicio.textContent = 'Inició su recorrido hace menos de 5 minutos'
@@ -3489,13 +3503,19 @@ boton.addEventListener('click', ()=> {
                             estadoServicio.textContent = 'Iniciarán sus recorridos en un par horas'
                         }
                         if (Math.abs(listaDiferencias[i]) > 60 && Math.abs(listaDiferencias[i]) < 120) {
-                            estadoServicio.textContent = 'Iniciarán sus recorridos en poco mas de 1 hora'
+                            estadoServicio.textContent = 'Iniciarán sus recorridos en poco más de 1 hora'
                         }
                         if (Math.abs(listaDiferencias[i]) == 60) {
                             estadoServicio.textContent = 'Iniciarán sus recorridos en 1 hora'
                         }
-                        if (Math.abs(listaDiferencias[i]) < 60 && Math.abs(listaDiferencias[i]) > 5) {
-                            estadoServicio.textContent = `Iniciarán sus recorridos en ${Math.round(Math.abs(listaDiferencias[i]))} minutos`
+                        if (Math.abs(listaDiferencias[i]) < 60) {
+                            estadoServicio.textContent = 'Iniciarán sus recorridos en menos de 1 hora';
+                        }
+                        if (Math.abs(listaDiferencias[i]) < 30) {
+                            estadoServicio.textContent = 'Iniciarán sus recorridos en menos de media hora';
+                        }
+                        if (Math.abs(listaDiferencias[i]) < 10) {
+                            estadoServicio.textContent = 'Iniciarán sus recorridos en menos de 10 minutos';
                         }
                         if (Math.abs(listaDiferencias[i]) < 5 && Math.abs(listaDiferencias[i]) > 0) {
                             estadoServicio.textContent = 'Iniciarán sus recorridos en menos de 5 minutos'
@@ -3513,8 +3533,14 @@ boton.addEventListener('click', ()=> {
                         if (Math.abs(listaDiferencias[i]) == 60) {
                             estadoServicio.textContent = 'Iniciaá su recorrido en 1 hora'
                         }
-                        if (Math.abs(listaDiferencias[i]) < 60 && Math.abs(listaDiferencias[i]) > 5) {
-                            estadoServicio.textContent = `Iniciará su recorrido en ${Math.round(Math.abs(listaDiferencias[i]))} minutos`
+                        if (Math.abs(listaDiferencias[i]) < 60) {
+                            estadoServicio.textContent = 'Iniciará su recorrido en menos de 1 hora'
+                        }
+                        if (Math.abs(listaDiferencias[i]) < 30) {
+                            estadoServicio.textContent = 'Iniciará su recorrido en menos de media hora'
+                        }
+                        if (Math.abs(listaDiferencias[i]) < 10) {
+                            estadoServicio.textContent = 'Iniciará su recorrido en menos de 10 minutos'
                         }
                         if (Math.abs(listaDiferencias[i]) < 5 && Math.abs(listaDiferencias[i]) > 0) {
                             estadoServicio.textContent = 'Iniciará su recorrido en menos de 5 minutos'
@@ -3795,9 +3821,14 @@ boton.addEventListener('click', ()=> {
 })
 
 
-resultadoscont.addEventListener('click', ()=> {
-    resultadoscont.children[indiceDeBusqueda].classList.remove('resaltado');
+resultadoscont.addEventListener('touchstart', ()=> {
+    for (i = 0; i < resultadoscont.children.length; i++) {
+        if(i < indiceDeBusqueda || i > indiceDeBusqueda){
+            resultadoscont.children[i].classList.replace('opacar','normalizar')
+        }
+    }
 })
+
 indicacioncont.addEventListener('click',()=> {
     // actual4.textContent = '';
     // futuro4.textContent = '';

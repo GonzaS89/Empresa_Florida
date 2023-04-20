@@ -1027,7 +1027,10 @@ body::-webkit-scrollbar-track {
         animation: escalar 1s linear alternate-reverse infinite;
     }
     .opacar{
-        filter: opacity(50%);
+        animation: opacar 1s linear .5s forwards;
+    }
+    .normalizar{
+        animation: normalizar 1s linear forwards;
     }
 
     @keyframes escalar {
@@ -1035,7 +1038,21 @@ body::-webkit-scrollbar-track {
             transform: scale(1.1);
         }
     }
-    
+
+    @keyframes opacar {
+        100%{
+            filter: opacity(25%);
+        }
+    }
+
+    @keyframes normalizar {
+        0%{
+            filter: opacity(25%);
+        }
+        100%{
+            filter: opacity(100%);
+        }
+    }
 
     .resultados3,
     .resultados4{
