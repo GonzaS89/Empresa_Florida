@@ -3779,17 +3779,12 @@ boton.addEventListener('click', ()=> {
     // }
 
     
-    
-        
-    
-    
-
     $('.resultados').css('display', 'flex');
     // $('.resultados2').css('display', 'flex')
     $('.mensaje2').css('display', 'flex');
     setTimeout( ()=> {
         irAlObjeto()
-    }, 750);
+    }, 800);
 })
 
 
