@@ -3374,45 +3374,48 @@ boton.addEventListener('click', ()=> {
         }
     }
     let indiceDeBusqueda;
-    if(anteriorPasado <= 10){
-        indiceDeBusqueda = listaDiferencias.indexOf(anteriorPasado)
+
+    if((anteriorPasado <= 10) && (listaDiferencias.indexOf(anteriorPasado) < listaDiferencias.length - 1)){
+        indiceDeBusqueda = listaDiferencias.indexOf(anteriorPasado);
     }
-    else{
-        indiceDeBusqueda = (listaDiferencias.indexOf(anteriorPasado) + 1)
+    else if(((listaDiferencias.indexOf(anteriorPasado)) < (listaDiferencias.length - 1))){
+        indiceDeBusqueda = (listaDiferencias.indexOf(anteriorPasado) + 1);
     }
-     
+    else if(listaDiferencias.indexOf(anteriorPasado) == listaDiferencias.length - 1){
+        indiceDeBusqueda = listaDiferencias.indexOf(anteriorPasado);
+    }
+    
+
+
 
     for (i = 0; i < rutaObtenida.length; i++){
     
-    const resultado = document.createElement('DIV')
-    resultado.classList.add('resultados')
-    const fondo = document.createElement('SPAN');
-    fondo.classList.add('fondo')
-    let p1 = document.createElement('P');
-    p1.classList.add('actual1')
-    let p2 = document.createElement('P');
-    p2.classList.add('actual2')
-    let p3 = document.createElement('P');
-    p3.classList.add('actual3');
-    resultado.appendChild(fondo);
-    resultado.appendChild(p1);
-    resultado.appendChild(p2);
-    resultado.appendChild(p3);
-    if((Object.keys(rutaObtenida[i]).length) > 3){
-        let p4 = document.createElement('P');
-        p4.classList.add('actual4');
-        resultado.appendChild(p4);
-    }
-    resultadoscont.appendChild(resultado);
-    mensaje2.appendChild(resultadoscont)
-    globosCargados = true;
-    
+        const resultado = document.createElement('DIV')
+        resultado.classList.add('resultados')
+        const fondo = document.createElement('SPAN');-
+        fondo.classList.add('fondo')
+        let p1 = document.createElement('P');
+        p1.classList.add('actual1')
+        let p2 = document.createElement('P');
+        p2.classList.add('actual2')
+        let p3 = document.createElement('P');
+        p3.classList.add('actual3');
+        resultado.appendChild(fondo);
+        resultado.appendChild(p1);
+        resultado.appendChild(p2);
+        resultado.appendChild(p3);
+        if((Object.keys(rutaObtenida[i]).length) > 3){
+            let p4 = document.createElement('P');
+            p4.classList.add('actual4');
+            resultado.appendChild(p4);
+        }
+        resultadoscont.appendChild(resultado);
+        mensaje2.appendChild(resultadoscont)
     }
     
     function irAlObjeto() {
         var a = resultadoscont.children[indiceDeBusqueda];
         a.scrollIntoView({block: 'center'});
-        setTimeout("irAlObjeto()", 1000)
     };
 
     
@@ -3421,9 +3424,9 @@ boton.addEventListener('click', ()=> {
     resultadoscont.classList.add('opacar')
     
     mensaje2.appendChild(indicacioncont);
-    let actual4 = document.querySelector('.actual4'); 
 
-   for (i = 0; i < (resultadoscont.children).length; i++) {
+
+    for (i = 0; i < (resultadoscont.children).length; i++) {
       nombreServicio = (resultadoscont.children[i]).children[1];
       estadoServicio = (resultadoscont.children[i]).children[2];
       recorridoServicio = (resultadoscont.children[i]).children[3];
