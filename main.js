@@ -3180,7 +3180,7 @@ function borrarGlobos(){
 }
 
 
-
+let indiceDeBusqueda;
 
 boton.addEventListener('click', ()=> {
 
@@ -3373,8 +3373,8 @@ boton.addEventListener('click', ()=> {
             anteriorPasado = Math.min(anteriorPasado, listaDiferencias[i]);
         }
     }
-    let indiceDeBusqueda;
-    if(anteriorPasado <= 10 && (listaDiferencias.indexOf(anteriorPasado) < listaDiferencias.length - 1)){
+    
+    if(anteriorPasado <= 15 && (listaDiferencias.indexOf(anteriorPasado) < listaDiferencias.length - 1)){
         indiceDeBusqueda = listaDiferencias.indexOf(anteriorPasado);
         console.log(1)
     }
@@ -3415,8 +3415,8 @@ boton.addEventListener('click', ()=> {
     }
     
     function irAlObjeto() {
-        var a = resultadoscont.children[indiceDeBusqueda];
-        a.scrollIntoView({block: 'center'});
+        let a = resultadoscont.children[indiceDeBusqueda];
+        a.scrollIntoView({behavior: 'smooth', block:'center'});
     };
 
     
@@ -3784,12 +3784,12 @@ boton.addEventListener('click', ()=> {
     $('.mensaje2').css('display', 'flex');
     setTimeout( ()=> {
         irAlObjeto()
-    }, 800);
+    }, 900);
 })
 
 
 resultadoscont.addEventListener('click', ()=> {
-    resultadoscont.children[5].classList.remove('resaltado');
+    resultadoscont.children[indiceDeBusqueda].classList.remove('resaltado');
 })
 indicacioncont.addEventListener('click',()=> {
     // actual4.textContent = '';
