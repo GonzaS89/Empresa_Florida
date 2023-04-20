@@ -12,7 +12,7 @@ function reloj() {
 
     let momentoActual = new Date();
     let hora = momentoActual.getHours();
-    let minuto = 20;
+    let minuto = momentoActual.getMinutes();
     let segundo = momentoActual.getSeconds();
     let fecha = momentoActual.getDate();
     let dia = momentoActual.getDay()
