@@ -3821,7 +3821,7 @@ boton.addEventListener('click', ()=> {
 })
 
 
-resultadoscont.addEventListener('touchstart', ()=> {
+resultadoscont.addEventListener('touchmove', ()=> {
     for (i = 0; i < resultadoscont.children.length; i++) {
         if(i < indiceDeBusqueda || i > indiceDeBusqueda){
             resultadoscont.children[i].classList.replace('opacar','normalizar')
