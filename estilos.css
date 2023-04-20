@@ -657,7 +657,6 @@ body::-webkit-scrollbar-track {
     align-items: center;
     height: 400px;
     gap: 10px;
-    scroll-behavior: smooth;
     width: 100%;
     border-top: 2.5px solid rgba(128, 128, 128, 0.159);
     overflow-y: scroll;
