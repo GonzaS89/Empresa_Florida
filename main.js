@@ -3374,18 +3374,19 @@ boton.addEventListener('click', ()=> {
         }
     }
     let indiceDeBusqueda;
-
-    if((anteriorPasado <= 10) && (listaDiferencias.indexOf(anteriorPasado) < listaDiferencias.length - 1)){
+    if(anteriorPasado <= 10 && (listaDiferencias.indexOf(anteriorPasado) < listaDiferencias.length - 1)){
         indiceDeBusqueda = listaDiferencias.indexOf(anteriorPasado);
+        console.log(1)
     }
-    else if(((listaDiferencias.indexOf(anteriorPasado)) < (listaDiferencias.length - 1))){
-        indiceDeBusqueda = (listaDiferencias.indexOf(anteriorPasado) + 1);
+    else if (listaDiferencias.indexOf(anteriorPasado) < listaDiferencias.length - 1){
+        indiceDeBusqueda = (listaDiferencias.indexOf(anteriorPasado)) + 1;
+        console.log(2)
     }
-    else if(listaDiferencias.indexOf(anteriorPasado) == listaDiferencias.length - 1){
+    else if ((listaDiferencias.indexOf(anteriorPasado)) == (listaDiferencias.length - 1)){
         indiceDeBusqueda = listaDiferencias.indexOf(anteriorPasado);
+        console.log(3)
     }
     
-
 
 
     for (i = 0; i < rutaObtenida.length; i++){
@@ -4107,10 +4108,6 @@ function busquedaManual() {
         $('.resultados4').css('display', 'none');
         linea2.textContent = '';
         linea3.textContent = '';
-        mostrar1.textContent = '';
-        mostrar2.textContent = '';
-        mostrar3.textContent = '';
-        mostrar4.textContent = '';
 
         // $('#selector3').css('display','none')      
         // $('#selector4').css('display','none') 
