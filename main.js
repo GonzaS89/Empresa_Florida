@@ -3550,8 +3550,6 @@ boton.addEventListener('click', ()=> {
                 }
 
                 console.log(listaDiferencias[i])
-            
-      
     }
 
     
@@ -3824,7 +3822,8 @@ boton.addEventListener('click', ()=> {
 resultadoscont.addEventListener('touchmove', ()=> {
     for (i = 0; i < resultadoscont.children.length; i++) {
         if(i < indiceDeBusqueda || i > indiceDeBusqueda){
-            resultadoscont.children[i].classList.replace('opacar','normalizar')
+            resultadoscont.children[i].classList.replace('opacar','normalizar');
+            resultadoscont.children[indiceDeBusqueda].classList.replace('resaltado','normalizarResaltado')
         }
     }
 })

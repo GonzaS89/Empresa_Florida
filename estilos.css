@@ -1026,16 +1026,28 @@ body::-webkit-scrollbar-track {
     .resaltado{
         animation: escalar 1s linear alternate-reverse infinite;
     }
+    .normalizarResaltado{
+        animation: normalizarResaltado .5s linear forwards;
+    }
     .opacar{
         animation: opacar 1s linear .5s forwards;
     }
     .normalizar{
-        animation: normalizar 1s linear forwards;
+        animation: normalizar .5s linear forwards;
     }
 
     @keyframes escalar {
         100%{
             transform: scale(1.1);
+        }
+    }
+
+    @keyframes normalizarResaltado {
+        0%{
+            transform: scale(1.1);
+        }
+        100%{
+            transform: scale(1);
         }
     }
 
