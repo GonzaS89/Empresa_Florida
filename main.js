@@ -12,7 +12,7 @@ function reloj() {
 
     let momentoActual = new Date();
     let hora = momentoActual.getHours();
-    let minuto = momentoActual.getMinutes();
+    let minuto = 20;
     let segundo = momentoActual.getSeconds();
     let fecha = momentoActual.getDate();
     let dia = momentoActual.getDay()
@@ -3477,7 +3477,7 @@ boton.addEventListener('click', ()=> {
                     if (listaDiferencias[i] < 5 && listaDiferencias[i] > 0) {
                         estadoServicio.textContent = 'Inició su recorrido hace menos de 5 minutos'
                     }
-                    if (Math.trunc(listaDiferencias[i]) == 0) {
+                    if (Math.abs(listaDiferencias[i]) == 0) {
                         estadoServicio.textContent = 'Está iniciando su recorrido'
                     }
                     recorridoServicio.textContent = `Recorrido: ${rutaObtenida[i].recorrido}`;
@@ -3522,6 +3522,8 @@ boton.addEventListener('click', ()=> {
                         recorridoServicio.textContent = `Recorrido: ${rutaObtenida[i].recorrido}`;
                     }
                 }
+
+                console.log(listaDiferencias[i])
             
       
     }
