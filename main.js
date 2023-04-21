@@ -3485,6 +3485,9 @@ boton.addEventListener('click', ()=> {
                     if (listaDiferencias[i] < 30) {
                         estadoServicio.textContent = `Inició su recorrido hace menos de media hora`
                     }
+                    if (listaDiferencias[i] < 15) {
+                        estadoServicio.textContent = `Inició su recorrido hace menos de 15 minutos`
+                    }
                     if (listaDiferencias[i] < 10) {
                         estadoServicio.textContent = `Inició su recorrido hace menos de 10 minutos`
                     }
@@ -3815,7 +3818,7 @@ boton.addEventListener('click', ()=> {
     $('.mensaje2').css('display', 'flex');
     setTimeout( ()=> {
         irAlObjeto()
-    }, 900);
+    }, 750);
 })
 
 
