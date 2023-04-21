@@ -101,7 +101,7 @@ const horariosLvFloAl = [
     {
         "nombre": "08:45",
         "salida": 8.45,
-        "recorrido": "Colonia 4 → Barrio La Cancha → Cochuchal → Alderetes → Autopista → Terminal",
+        "recorrido": "Colonia 4 → Barrio La Cancha → Cochuchal → Alderetes → Banda R.S. → Terminal",
         "recorrido2": "Colonia 4 → Barrio La Cancha → Talar → Alternativa → Terminal"
     },
     {
