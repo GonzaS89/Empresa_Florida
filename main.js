@@ -3488,10 +3488,10 @@ boton.addEventListener('click', ()=> {
                     if (listaDiferencias[i] < 10) {
                         estadoServicio.textContent = `Inició su recorrido hace menos de 10 minutos`
                     }
-                    if (listaDiferencias[i] < 5 && listaDiferencias[i] > 0) {
+                    if (listaDiferencias[i] < 5 && listaDiferencias[i] > 2) {
                         estadoServicio.textContent = 'Inició su recorrido hace menos de 5 minutos'
                     }
-                    if (Math.abs(listaDiferencias[i]) == 0) {
+                    if (Math.abs(listaDiferencias[i]) >= 0 && listaDiferencias[i] <= 2) {
                         estadoServicio.textContent = 'Está iniciando su recorrido'
                     }
                     recorridoServicio.textContent = `Recorrido: ${rutaObtenida[i].recorrido}`;
