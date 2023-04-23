@@ -655,7 +655,8 @@ body::-webkit-scrollbar-track {
     background-color: rgba(0, 0, 0, 0.063);
     flex-direction: column;
     align-items: center;
-    height: 400px;
+    max-height: 400px;
+    min-height: 200px;
     gap: 10px;
     width: 100%;
     border-top: 2.5px solid rgba(128, 128, 128, 0.159);
@@ -683,8 +684,7 @@ body::-webkit-scrollbar-track {
     border: .5px solid white;
     background-color: var(--blanco);
     position: relative;
-    max-height: 60%;
-    min-height: 40%;
+    height: 80%;
     gap: 2.5px;
     
 }
@@ -1038,7 +1038,7 @@ body::-webkit-scrollbar-track {
 
     @keyframes escalar {
         100%{
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
     }
 
