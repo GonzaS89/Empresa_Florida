@@ -3463,6 +3463,7 @@ boton.addEventListener('click', ()=> {
     };
 
     resultadoscont.children[indiceDeBusqueda].classList.add('resaltado');
+    resultadoscont.children[indiceDeBusqueda].classList.add('manito');
     resultadoscont.classList.add('opacarFondo');
     mensaje2.appendChild(indicacioncont);
 
@@ -3557,7 +3558,7 @@ boton.addEventListener('click', ()=> {
             }
         }
                 else{
-                    if((Object.keys(rutaObtenida[i])).length > 3){
+                    if((Object.keys(rutaObtenida[i])).length > 4){
                         if(i == 0){
                             nombreServicio.textContent = `Primeros servicios del día ${rutaObtenida[i].nombre} Hrs`;
                           }
