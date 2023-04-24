@@ -3415,7 +3415,7 @@ boton.addEventListener('click', ()=> {
     };
 
     resultadoscont.children[indiceDeBusqueda].classList.add('resaltado');
-    
+    resultadoscont.classList.add('opacarFondo');
     mensaje2.appendChild(indicacioncont);
 
     for (i = 0; i < resultadoscont.children.length; i++) {
@@ -3899,6 +3899,7 @@ function busquedaManual() {
             indiceDeBusqueda = listaDiferencias3.indexOf(proximo);
 
             resultadoscont.children[indiceDeBusqueda].classList.add('resaltado');
+            resultadoscont.classList.add('opacarFondo');
             mensaje2.appendChild(indicacioncont);
 
     
