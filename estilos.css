@@ -793,18 +793,6 @@ body::-webkit-scrollbar-track {
         }
 }
 
-
-
-/* .mensaje2Oculto{
-    animation: desaparece .5s linear;
-}
-
-@keyframes desaparece {
-    100% {
-        transform: scale(0)
-}
-} */
-
 .texto-resultados {
     display: flex;
     flex-direction: column;
@@ -888,17 +876,6 @@ body::-webkit-scrollbar-track {
         transform: scale(1);
     }
 }
-
-/* #mensaje2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.401);
-    font-family: var(--fuenteSec);
-    font-size: 50px;
-    color: whitesmoke;
-    text-align: center;
-} */
 
 .alerta {
     display: flex;
@@ -1013,10 +990,7 @@ body::-webkit-scrollbar-track {
         font-size:20px;
     }
 
-    .resultados,
-    .resultados2,
-    .resultados3,
-    .resultados4 {
+    .resultados{
         width: 90%;
         padding: 10px 0;
         border: .5px solid white;

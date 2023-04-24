@@ -3143,7 +3143,7 @@ const botonDeCambio2 = document.querySelector('.botonDeCambio2');
 const mensaje2 = document.querySelector('.mensaje2');
 const indicacioncont = document.querySelector('.indicacion-cont')
 const resultadoscont = document.querySelector('.resultados-cont')
-let globosCargados = false;
+
 
 let titulo = document.getElementById('titulo');
 
@@ -3314,7 +3314,6 @@ boton.addEventListener('click', ()=> {
     //funcion para crear los globos de resultados
 
     
-    console.log(rutaObtenida)
 
 
     // Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
@@ -3373,18 +3372,17 @@ boton.addEventListener('click', ()=> {
     
     if(anteriorPasado <= 15 && (listaDiferencias.indexOf(anteriorPasado) < listaDiferencias.length - 1)){
         indiceDeBusqueda = listaDiferencias.indexOf(anteriorPasado);
-        console.log(1)
     }
     else if (listaDiferencias.indexOf(anteriorPasado) < listaDiferencias.length - 1){
         indiceDeBusqueda = (listaDiferencias.indexOf(anteriorPasado)) + 1;
-        console.log(2)
+        
     }
     else if ((listaDiferencias.indexOf(anteriorPasado)) == (listaDiferencias.length - 1)){
         indiceDeBusqueda = listaDiferencias.indexOf(anteriorPasado);
-        console.log(3)
+        
     }
     
-
+    
 
     for (i = 0; i < rutaObtenida.length; i++){
     
@@ -3552,269 +3550,9 @@ boton.addEventListener('click', ()=> {
                     }
                 }
 
-                console.log(listaDiferencias[i])
     }
-
-    
-   
-
-   
-
-    // Aqui definimos los mensajes a mostrar en el primer campo       
-
-    // if (anteriorPasado < 3000) {
-    //     if (Object.keys(rutaObtenida[listaDiferencias.indexOf(anteriorPasado)]).length > 3) {
-    //         if (listaDiferencias.indexOf(anteriorPasado) == 0) {
-    //             actual1.textContent = `Primeros servicios del día ${rutaObtenida[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
-    //         }
-    //         if (listaDiferencias.indexOf(anteriorPasado) == (listaDiferencias.length) - 1) {
-    //             actual1.textContent = `Últimos servicio del día ${rutaObtenida[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
-    //         }
-    //         if ((listaDiferencias.indexOf(anteriorPasado) == 0) && (listaDiferencias.indexOf(anteriorPasado) == (listaDiferencias.length) - 1)) {
-    //             actual1.textContent = `Únicos servicios del día ${rutaObtenida[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
-    //         }
-    //         if ((listaDiferencias.indexOf(anteriorPasado)) > 0 && ((listaDiferencias.indexOf(anteriorPasado) < (listaDiferencias.length) - 1))) {
-    //             actual1.textContent = `Servicios de las ${rutaObtenida[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
-    //         }
-    //         if (anteriorPasado >= 120) {
-    //             actual2.textContent = 'Iniciaron sus recorridos hace un par horas'
-    //         }
-    //         if (anteriorPasado > 60 && anteriorPasado < 120) {
-    //             actual2.textContent = 'Iniciaron sus recorridos hace mas de 1 hora'
-    //         }
-    //         if (anteriorPasado == 60) {
-    //             actual2.textContent = 'Iniciaron sus recorridos hace 1 hora'
-    //         }
-    //         if (anteriorPasado < 60 && anteriorPasado > 5) {
-    //             actual2.textContent = `Iniciaron sus recorridos hace ${Math.floor(anteriorPasado)} minutos`
-    //         }
-    //         if (anteriorPasado < 5 && anteriorPasado > 0) {
-    //             actual2.textContent = 'Iniciaron sus recorridos hace menos de 5 minutos'
-    //         }
-    //         if (Math.trunc(anteriorPasado) == 0) {
-    //             actual2.textContent = 'Están iniciando sus recorridos'
-    //         }
-
-    //         actual4.textContent = `2° Servicio : ${rutaObtenida[listaDiferencias.indexOf(anteriorPasado)].recorrido2
-    //             }`
-    //         actual3.textContent = `1° Servicio : ${rutaObtenida[listaDiferencias.indexOf(anteriorPasado)].recorrido}`
-    //     }
-    //     else {
-
-    //         if (listaDiferencias.indexOf(anteriorPasado) == 0) {
-    //             actual1.textContent = `Primer servicio del día ${rutaObtenida[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
-    //         }
-    //         if (listaDiferencias.indexOf(anteriorPasado) == (listaDiferencias.length) - 1) {
-    //             actual1.textContent = `Último servicio del día ${rutaObtenida[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
-    //         }
-    //         if ((listaDiferencias.indexOf(anteriorPasado) == 0) && (listaDiferencias.indexOf(anteriorPasado) == (listaDiferencias.length) - 1)) {
-    //             actual1.textContent = `Único servicio del día ${rutaObtenida[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
-    //         }
-    //         if ((listaDiferencias.indexOf(anteriorPasado)) > 0 && ((listaDiferencias.indexOf(anteriorPasado) < (listaDiferencias.length) - 1))) {
-    //             actual1.textContent = `Servicio de las ${rutaObtenida[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
-    //         }
-
-
-    //         // actual1.textContent = `Servicio de las ${rutaObtenida[listaDiferencias.indexOf(anteriorPasado)].nombre} Hrs`
-
-    //         if (anteriorPasado >= 120) {
-    //             actual2.textContent = 'Inició su recorrido hace un par horas'
-    //         }
-    //         if (anteriorPasado > 60 && anteriorPasado < 120) {
-    //             actual2.textContent = 'Inició su recorrido hace más de 1 hora'
-    //         }
-    //         if (anteriorPasado == 60) {
-    //             actual2.textContent = 'Inició su recorrido hace 1 hora'
-    //         }
-    //         if (anteriorPasado < 60 && anteriorPasado > 5) {
-    //             actual2.textContent = `Inició su recorrido hace ${Math.floor(anteriorPasado)} minutos`
-    //         }
-    //         if (anteriorPasado < 5 && anteriorPasado > 0) {
-    //             actual2.textContent = 'Inició su recorrido hace menos de 5 minutos'
-    //         }
-    //         if (Math.trunc(anteriorPasado) == 0) {
-    //             actual2.textContent = 'Está iniciando su recorrido'
-    //         }
-    //         actual3.textContent = `Recorrido : ${rutaObtenida[listaDiferencias.indexOf(anteriorPasado)].recorrido}`
-    //     }
-    // }
-
-    // else {
-
-
-
-    //     if (((dia >= 2 && dia <= 5) && (semiFeriado == true)) && (opcionbase.selected == true && posicion2 == 2)) {
-    //         rutaObtenida = obtenerDiaRuta(1)
-    //         conversionHorario = convertirHorarioAMinutos(rutaObtenida[(rutaObtenida.length) - 2].salida)
-    //         conversionHora = pasarHoraAMinutos(hora, minutos)
-    //         let variableUnica = conversionHorario - 1440;
-    //         let variableDoble = conversionHora - variableUnica;
-    //         actual1.textContent = `Último servicio de ayer ${rutaObtenida[(rutaObtenida.length) - 2].nombre} Hrs`;
-    //         if (variableDoble >= 120) {
-    //             actual2.textContent = 'Inició su recorrido hace un par horas'
-    //         }
-    //         if (variableDoble > 60 && anteriorPasado < 120) {
-    //             actual2.textContent = 'Inició su recorrido hace más de 1 hora'
-    //         }
-    //         if (variableDoble == 60) {
-    //             actual2.textContent = 'Inició su recorrido hace 1 hora'
-    //         }
-    //         if (variableDoble < 60) {
-    //             actual2.textContent = `Inició su recorrido hace ${Math.floor(variableDoble)} minutos`
-    //         }
-    //         actual3.textContent = `Recorrido: ${rutaObtenida[(rutaObtenida.length) - 2].recorrido}`;
-    //     }
-    //     else if ((dia >= 2 && dia <= 5) && (opcionbase.selected == true && posicion2 == 2) && feriado) {
-    //         actual1.textContent = '';
-    //         actual2.textContent = 'Ninguna unidad inició su recorrido aún'
-    //         actual3.textContent = '';
-    //     }
-    //     else if ((dia >= 2 && dia <= 5) && (opcionbase.selected == true && posicion2 == 2)) {
-    //         rutaObtenida = obtenerDiaRuta(1)
-    //         conversionHorario = convertirHorarioAMinutos(rutaObtenida[(rutaObtenida.length) - 2].salida)
-    //         conversionHora = pasarHoraAMinutos(hora, minutos)
-    //         let variableUnica = conversionHorario - 1440;
-    //         let variableDoble = conversionHora - variableUnica;
-    //         actual1.textContent = `Último servicio de ayer ${rutaObtenida[(rutaObtenida.length) - 2].nombre} Hrs`;
-    //         if (variableDoble >= 120) {
-    //             actual2.textContent = 'Inició su recorrido hace un par horas'
-    //         }
-    //         if (variableDoble > 60 && anteriorPasado < 120) {
-    //             actual2.textContent = 'Inició su recorrido hace más de 1 hora'
-    //         }
-    //         if (variableDoble == 60) {
-    //             actual2.textContent = 'Inició su recorrido hace 1 hora'
-    //         }
-    //         if (variableDoble < 60) {
-    //             actual2.textContent = `Inició su recorrido hace ${Math.floor(variableDoble)} minutos`
-    //         }
-    //         actual3.textContent = `Recorrido: ${rutaObtenida[(rutaObtenida.length) - 2].recorrido}`
-    //     }
-    //     else if ((dia == 6) && (opcionbase.selected == true && posicion2 == 2)) {
-    //         rutaObtenida = obtenerDiaRuta(1)
-    //         actual1.textContent = `Último servicio de ayer ${rutaObtenida[(rutaObtenida.length) - 2].nombre}`;
-    //         actual2.textContent = ''
-    //         actual3.textContent = `Recorrido: ${rutaObtenida[(rutaObtenida.length) - 2].recorrido}`
-    //     }
-
-    //     // else if((((fecha - 1) && mes) == (feriado == true)) && (opcionbase.selected == true && posicion2 == 2)){
-    //     //     actual1.textContent = '';
-    //     //     actual2.textContent = 'Ninguna unidad inició su recorrido aún'
-    //     //     actual3.textContent = ''
-    //     // }
-    //     else {
-    //         actual1.textContent = '';
-    //         actual2.textContent = 'Ninguna unidad inició su recorrido aún'
-    //         actual3.textContent = ''
-    //     }
-    // }
-
-
-    // //   Aqui en el segundo campo  
-
-
-
-
-
-
-    // for (i = 0; i < horariosEnEnteros.length; i++) {
-    //     let difHorariosHora = horariosEnEnteros[i] - horaEnEnteros;
-    //     listaDiferencias2.push(difHorariosHora);
-    // }
-
-
-
-
-
-    // for (i = 0; i < listaDiferencias2.length; i++) {
-    //     if (listaDiferencias2[i] > 0) {
-    //         elMasCercano = Math.min(elMasCercano, listaDiferencias2[i]);
-    //     }
-    // }
-
-    // if (elMasCercano < 3000) {
-    //     if (Object.keys(rutaObtenida[listaDiferencias2.indexOf(elMasCercano)]).length > 3) {
-    //         if (listaDiferencias2.indexOf(elMasCercano) == 0) {
-    //             futuro1.textContent = `Primeros servicios del día a las ${rutaObtenida[listaDiferencias2.indexOf(elMasCercano)].nombre} Hrs`
-    //         }
-    //         if (listaDiferencias2.indexOf(elMasCercano) == (listaDiferencias2.length) - 1) {
-    //             futuro1.textContent = `Últimos servicios del día a las ${rutaObtenida[listaDiferencias2.indexOf(elMasCercano)].nombre} Hrs`
-    //         }
-    //         if ((listaDiferencias2.indexOf(elMasCercano) == 0) && (listaDiferencias2.indexOf(elMasCercano) == (listaDiferencias2.length) - 1)) {
-    //             futuro1.textContent = `Únicos servicios del día ${rutaObtenida[listaDiferencias2.indexOf(elMasCercano)].nombre} Hrs`
-    //         }
-    //         if ((listaDiferencias2.indexOf(elMasCercano)) > 0 && ((listaDiferencias2.indexOf(elMasCercano) < (listaDiferencias2.length) - 1))) {
-    //             futuro1.textContent = `Servicios de las ${rutaObtenida[listaDiferencias2.indexOf(elMasCercano)].nombre} Hrs`
-    //         }
-    //         if (elMasCercano >= 120) {
-    //             futuro2.textContent = 'Iniciarán sus recorridos en un par horas'
-    //         }
-    //         if (elMasCercano > 60 && elMasCercano < 120) {
-    //             futuro2.textContent = 'Iniciarán sus recorridos en poco más de 1 hora'
-    //         }
-    //         if (elMasCercano == 60) {
-    //             futuro2.textContent = 'Iniciarán sus recorridos dentro 1 hora'
-    //         }
-    //         if (elMasCercano < 60 && elMasCercano > 5) {
-    //             futuro2.textContent = `Iniciarán sus recorridos en ${Math.floor(elMasCercano)} minutos`
-    //         }
-    //         if (elMasCercano < 5) {
-    //             futuro2.textContent = 'Iniciarán sus recorridos en menos de 5 minutos'
-    //         }
-
-    //         futuro3.textContent = `1° Servicio : ${rutaObtenida[listaDiferencias2.indexOf(elMasCercano)].recorrido}`
-    //         futuro4.textContent = `2° Servicio : ${rutaObtenida[listaDiferencias2.indexOf(elMasCercano)].recorrido2}`
-    //     }
-
-    //     else {
-
-    //         if (dia == 1) {
-    //             futuro1.textContent = `Primer servicio del día a las ${rutaObtenida[1].nombre} Hrs`
-    //         }
-    //         else {
-    //             if ((listaDiferencias2.indexOf(elMasCercano)) == 0) {
-    //                 futuro1.textContent = `Primer servicio del día a las ${rutaObtenida[listaDiferencias2.indexOf(elMasCercano)].nombre} Hrs`
-    //             }
-    //         }
-    //         if (listaDiferencias2.indexOf(elMasCercano) == (listaDiferencias2.length) - 1) {
-    //             futuro1.textContent = `Último servicio del día a las ${rutaObtenida[listaDiferencias2.indexOf(elMasCercano)].nombre} Hrs`
-    //         }
-    //         if ((listaDiferencias2.indexOf(elMasCercano) == 0) && (listaDiferencias2.indexOf(elMasCercano) == (listaDiferencias2.length) - 1)) {
-    //             futuro1.textContent = `Único servicio del día a las ${rutaObtenida[listaDiferencias2.indexOf(elMasCercano)].nombre} Hrs`
-    //         }
-    //         if ((listaDiferencias2.indexOf(elMasCercano)) > 0 && ((listaDiferencias2.indexOf(elMasCercano) < (listaDiferencias2.length) - 1))) {
-    //             futuro1.textContent = `Servicio de las ${rutaObtenida[listaDiferencias2.indexOf(elMasCercano)].nombre} Hrs`
-    //         }
-
-    //         if (elMasCercano >= 120) {
-    //             futuro2.textContent = 'Inicia su recorrido en un par horas'
-    //         }
-    //         if (elMasCercano > 60 && elMasCercano < 120) {
-    //             futuro2.textContent = 'Inicia su recorrido en poco más de 1 hora'
-    //         }
-    //         if (elMasCercano == 60) {
-    //             futuro2.textContent = 'Inicia su recorrido dentro 1 hora'
-    //         }
-    //         if (elMasCercano < 60 && elMasCercano > 5) {
-    //             futuro2.textContent = `Inicia su recorrido en ${Math.floor(elMasCercano)} minutos`
-    //         }
-    //         if (elMasCercano < 5) {
-    //             futuro2.textContent = 'Iniciará su recorrido en menos de 5 minutos'
-    //         }
-    //         futuro3.textContent = `Recorrido : ${rutaObtenida[listaDiferencias2.indexOf(elMasCercano)].recorrido}`
-    //     }
-
-
-    // }
-    // else {
-    //     futuro1.textContent = "";
-    //     futuro2.textContent = "No hay más unidades por hoy. Al menos por ésta ruta"
-    //     futuro3.textContent = "";
-    // }
-
     
     $('.resultados').css('display', 'flex');
-    // $('.resultados2').css('display', 'flex')
     $('.mensaje2').css('display', 'flex');
     setTimeout( ()=> {
         irAlObjeto()
@@ -3830,15 +3568,6 @@ resultadoscont.addEventListener('touchmove', ()=> {
         }
     }
 })
-
-// resultadoscont.addEventListener('mousemove', ()=> {
-//     for (i = 0; i < resultadoscont.children.length; i++) {
-//         if(i < indiceDeBusqueda || i > indiceDeBusqueda){
-//             resultadoscont.children[i].classList.replace('opacar','normalizar');
-//             resultadoscont.children[indiceDeBusqueda].classList.replace('resaltado','normalizarResaltado')
-//         }
-//     }
-// })
 
 indicacioncont.addEventListener('click',()=> {
     // actual4.textContent = '';
@@ -3884,12 +3613,16 @@ function busquedaManual() {
     let valores5 = []
     let diaRango2 = []
     let horaInputAMinutos
-    const mensaje2 = document.querySelector('.mensaje2');
     let mensajeError = document.getElementById('mensajeError')
     let linea2 = document.getElementById('linea2');
     let linea3 = document.getElementById('linea3');
     let linea4 = document.getElementById('linea4')
-    let tituloResultado = document.getElementById('tituloResultado')
+    let tituloResultado = document.getElementById('tituloResultado');
+    let nombreServicioManual;
+    let recorridoServicioManual;
+    let recorridoServicio2Manual;
+    const resultadoscont = document.querySelector('.resultados-cont');
+    const mensaje2 = document.querySelector('.mensaje2');
 
 
     botonManual.addEventListener('click', function () {
@@ -4052,13 +3785,14 @@ function busquedaManual() {
         let rutaObtenidaManual = obtenerRuta2(ruta2)
 
 
-
         if ((posicion5 - 1) == 0) {
             linea3.textContent = `De ${selector5[posicion5].label}`;
         }
         else {
             linea3.textContent = `Días ${selector5[posicion5].label}`;
         }
+
+        
 
         // / Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
 
@@ -4097,59 +3831,123 @@ function busquedaManual() {
                 listaDiferencias3.push(horariosEnEnteros2[i] - horaInputAMinutos)
             }
 
-            console.log(listaDiferencias3)
+
+
+            for (i = 0; i < rutaObtenidaManual.length; i++){
+    
+                const resultado = document.createElement('DIV')
+                resultado.classList.add('resultados')
+                const fondo = document.createElement('SPAN');
+                fondo.classList.add('fondo')
+                let p1 = document.createElement('P');
+                p1.classList.add('actual1')
+                let p2 = document.createElement('P');
+                p2.classList.add('actual2')
+                resultado.appendChild(fondo);
+                resultado.appendChild(p1);
+                resultado.appendChild(p2);
+                if((Object.keys(rutaObtenidaManual[i]).length) > 3){
+                    let p3 = document.createElement('P');
+                    p3.classList.add('actual3');
+                    resultado.appendChild(p3);
+                }
+                resultadoscont.appendChild(resultado);
+                mensaje2.appendChild(resultadoscont)
+                
+            }
+
+            function irAlObjeto() {
+                let a = resultadoscont.children[indiceDeBusqueda];
+                a.scrollIntoView({behavior: 'smooth', block:'center'});
+            };
 
             for (let i = 0; i < listaDiferencias3.length; i++) {
                 if (listaDiferencias3[i] >= 0) {
                     proximo = Math.min(proximo, listaDiferencias3[i])
                 }
+            }
 
-                if (proximo < 3000) {
-                    if (listaDiferencias3.indexOf(proximo) == 0) {
-                        mostrar1.textContent = 'No hay unidades activas anteriores al horario indicado'
-                        mostrar2.textContent = '';
-                        mostrar3.textContent = `El servicio más cercano al horario indicado es de las ${diaRango2[listaDiferencias3.indexOf(proximo)].nombre} Hrs (Primer servicio del día)`;
-                        mostrar4.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo)].recorrido}`
-                    }
-                    else {
-                        mostrar1.textContent = `Anteriormente al horario que indicaste tenés el servicio de las ${diaRango2[listaDiferencias3.indexOf(proximo) - 1].nombre} Hrs`;
-                        mostrar2.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo) - 1].recorrido}`;
-                        if (listaDiferencias3.indexOf(proximo) == diaRango2.length - 1) {
-                            mostrar3.textContent = `El servicio más cercano al horario indicado es de las ${diaRango2[listaDiferencias3.indexOf(proximo)].nombre} Hrs (Último servicio del día)`;
-                            mostrar4.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo)].recorrido}`;
-                        }
-                        else {
-                            mostrar3.textContent = `Y el servicio más cercano a partir del horario que indicaste, es él de las ${diaRango2[listaDiferencias3.indexOf(proximo)].nombre} Hrs`;
-                            mostrar4.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo)].recorrido}`;
-                        }
+            indiceDeBusqueda = listaDiferencias3.indexOf(proximo);
 
-                    }
+            resultadoscont.children[indiceDeBusqueda].classList.add('resaltado');
+            mensaje2.appendChild(indicacioncont);
 
+    
 
-
+            for (i = 0; i < resultadoscont.children.length; i++) {
+                if(i < indiceDeBusqueda || i > indiceDeBusqueda){
+                    resultadoscont.children[i].classList.add('opacar')
                 }
+            }
+
+            for (i = 0; i < (resultadoscont.children).length; i++){
+                nombreServicioManual = (resultadoscont.children[i]).children[1];
+                recorridoServicioManual = (resultadoscont.children[i]).children[2];
+                // recorridoServicio2Manual = (resultadoscont.children[i]).children[3];
+                if(i == 0){
+                    nombreServicioManual.textContent = `Primer servicio del día ${rutaObtenidaManual[i].nombre} Hrs`;
+                  }
+                  else if(i == (rutaObtenidaManual.length) - 1){
+                    nombreServicioManual.textContent = `Último servicio del día ${rutaObtenidaManual[i].nombre} Hrs`;
+                  }
+
+                  else if (i > 0 && i < (rutaObtenidaManual.length) - 1){
+                    nombreServicioManual.textContent = `Servicio de las ${rutaObtenidaManual[i].nombre} Hrs`;
+                  }
+
+               recorridoServicioManual.textContent = `1° Recorrido: ${rutaObtenidaManual[i].recorrido}`;  
+            //    recorridoServicio2Manual.textContent = `2° Recorrido:  ${rutaObtenidaManual[i].recorrido2}`; 
+            }
+
+            
+
+            //     if (proximo < 3000) {
+            //         if (listaDiferencias3.indexOf(proximo) == 0) {
+            //             mostrar1.textContent = 'No hay unidades activas anteriores al horario indicado'
+            //             mostrar2.textContent = '';
+            //             mostrar3.textContent = `El servicio más cercano al horario indicado es de las ${diaRango2[listaDiferencias3.indexOf(proximo)].nombre} Hrs (Primer servicio del día)`;
+            //             mostrar4.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo)].recorrido}`
+            //         }
+            //         else {
+            //             mostrar1.textContent = `Anteriormente al horario que indicaste tenés el servicio de las ${diaRango2[listaDiferencias3.indexOf(proximo) - 1].nombre} Hrs`;
+            //             mostrar2.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo) - 1].recorrido}`;
+            //             if (listaDiferencias3.indexOf(proximo) == diaRango2.length - 1) {
+            //                 mostrar3.textContent = `El servicio más cercano al horario indicado es de las ${diaRango2[listaDiferencias3.indexOf(proximo)].nombre} Hrs (Último servicio del día)`;
+            //                 mostrar4.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo)].recorrido}`;
+            //             }
+            //             else {
+            //                 mostrar3.textContent = `Y el servicio más cercano a partir del horario que indicaste, es él de las ${diaRango2[listaDiferencias3.indexOf(proximo)].nombre} Hrs`;
+            //                 mostrar4.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo)].recorrido}`;
+            //             }
+
+            //         }
+
+
+
+            //     }
                 
 
 
                 
-            }
+            // }
 
-            if (posicion3 == 0 && posicion4 == 0 && posicion5 == 0) {
-                $('.mensaje2').css('display', 'none')
-            }
-            else {
-                $('.resultados3').css('display', 'flex')
-                $('.resultados4').css('display', 'flex')
-                $('.mensaje2').css('display', 'flex')
-            }
+            // if (posicion3 == 0 && posicion4 == 0 && posicion5 == 0) {
+            //     $('.mensaje2').css('display', 'none')
+            // }
+            
+                $('.resultados').css('display', 'flex');
+                $('.mensaje2').css('display', 'flex');
+                setTimeout( ()=> {
+                    irAlObjeto()
+                }, 750);
+            
 
         }
     })
 
     indicacioncont.addEventListener('click', function () {
         $('.mensaje2').css('display', 'none');
-        $('.resultados3').css('display', 'none');
-        $('.resultados4').css('display', 'none');
+        $('.resultados').css('display', 'none');
         linea2.textContent = '';
         linea3.textContent = '';
 
