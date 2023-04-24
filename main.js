@@ -3921,7 +3921,7 @@ function busquedaManual() {
                 recorridoServicioManual = (resultadoscont.children[i]).children[2];
                 recorridoServicio2Manual = (resultadoscont.children[i]).children[3];
                 if((Object.keys(rutaObtenidaManual[i])).length > 3){
-                    if(rutaObtenidaManual.length == 0){
+                    if(rutaObtenidaManual.length == 1){
                         nombreServicioManual.textContent = `Únicos servicios del día ${rutaObtenidaManual[i].nombre} Hrs`;
                     }
                     if(i == 0){
@@ -3937,7 +3937,7 @@ function busquedaManual() {
                     recorridoServicio2Manual.textContent = `2° Recorrido: ${rutaObtenidaManual[i].recorrido2}`;
                 }
                 else{
-                    if(rutaObtenidaManual.length == 0){
+                    if(rutaObtenidaManual.length == 1){
                         nombreServicioManual.textContent = `Único servicio del día ${rutaObtenidaManual[i].nombre} Hrs`;
                     }
                     if(i == 0){
