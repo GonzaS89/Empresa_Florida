@@ -3892,11 +3892,15 @@ function busquedaManual() {
 
             for (let i = 0; i < listaDiferencias3.length; i++) {
                 if (listaDiferencias3[i] >= 0) {
-                    proximo = Math.min(proximo, listaDiferencias3[i])
+                    proximo = Math.min(proximo, listaDiferencias3[i]);
+                    indiceDeBusqueda = listaDiferencias3.indexOf(proximo);
+                }
+                else{
+                    indiceDeBusqueda = (rutaObtenidaManual.length) - 1;
                 }
             }
 
-            indiceDeBusqueda = listaDiferencias3.indexOf(proximo);
+            
 
             resultadoscont.children[indiceDeBusqueda].classList.add('resaltado');
             resultadoscont.classList.add('opacarFondo');
@@ -3917,6 +3921,9 @@ function busquedaManual() {
                 recorridoServicioManual = (resultadoscont.children[i]).children[2];
                 recorridoServicio2Manual = (resultadoscont.children[i]).children[3];
                 if((Object.keys(rutaObtenidaManual[i])).length > 3){
+                    if(rutaObtenidaManual.length == 0){
+                        nombreServicioManual.textContent = `Únicos servicios del día ${rutaObtenidaManual[i].nombre} Hrs`;
+                    }
                     if(i == 0){
                         nombreServicioManual.textContent = `Primeros servicios del día ${rutaObtenidaManual[i].nombre} Hrs`;
                     }
@@ -3930,6 +3937,9 @@ function busquedaManual() {
                     recorridoServicio2Manual.textContent = `2° Recorrido: ${rutaObtenidaManual[i].recorrido2}`;
                 }
                 else{
+                    if(rutaObtenidaManual.length == 0){
+                        nombreServicioManual.textContent = `Único servicio del día ${rutaObtenidaManual[i].nombre} Hrs`;
+                    }
                     if(i == 0){
                         nombreServicioManual.textContent = `Primer servicio del día ${rutaObtenidaManual[i].nombre} Hrs`
                     }
