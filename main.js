@@ -3903,14 +3903,14 @@ function busquedaManual() {
             mensaje2.appendChild(indicacioncont);
 
     
-
+            console.log(proximo)
             for (i = 0; i < resultadoscont.children.length; i++) {
                 if(i < indiceDeBusqueda || i > indiceDeBusqueda){
                     resultadoscont.children[i].classList.add('opacar')
                 }
             }
 
-
+            console.log(rutaObtenidaManual)
 
             for (i = 0; i < (resultadoscont.children).length; i++){
                 nombreServicioManual = (resultadoscont.children[i]).children[1];
