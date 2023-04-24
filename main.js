@@ -3439,6 +3439,7 @@ boton.addEventListener('click', ()=> {
         const fondo = document.createElement('SPAN');-
         fondo.classList.add('fondo')
         const manito = document.createElement('SPAN');
+        manito.classList.add('')
         let p1 = document.createElement('P');
         p1.classList.add('actual1')
         let p2 = document.createElement('P');
