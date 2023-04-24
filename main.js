@@ -3438,8 +3438,6 @@ boton.addEventListener('click', ()=> {
         resultado.classList.add('resultados')
         const fondo = document.createElement('SPAN');-
         fondo.classList.add('fondo')
-        const manito = document.createElement('SPAN');
-        manito.classList.add('manito')
         let p1 = document.createElement('P');
         p1.classList.add('actual1')
         let p2 = document.createElement('P');
@@ -3447,7 +3445,6 @@ boton.addEventListener('click', ()=> {
         let p3 = document.createElement('P');
         p3.classList.add('actual3');
         resultado.appendChild(fondo);
-        resultado.appendChild(manito)
         resultado.appendChild(p1);
         resultado.appendChild(p2);
         resultado.appendChild(p3);
@@ -3476,10 +3473,10 @@ boton.addEventListener('click', ()=> {
     }
 
     for (i = 0; i < (resultadoscont.children).length; i++) {
-      nombreServicio = (resultadoscont.children[i]).children[2];
-      estadoServicio = (resultadoscont.children[i]).children[3];
-      recorridoServicio = (resultadoscont.children[i]).children[4];
-      recorridoServicio2 = (resultadoscont.children[i]).children[5];
+      nombreServicio = (resultadoscont.children[i]).children[1];
+      estadoServicio = (resultadoscont.children[i]).children[2];
+      recorridoServicio = (resultadoscont.children[i]).children[3];
+      recorridoServicio2 = (resultadoscont.children[i]).children[4];
       
         if(listaDiferencias[i] > 0){
             if((Object.keys(rutaObtenida[i])).length > 3){
