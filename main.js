@@ -3846,7 +3846,7 @@ function busquedaManual() {
                 resultado.appendChild(fondo);
                 resultado.appendChild(p1);
                 resultado.appendChild(p2);
-                if((Object.keys(rutaObtenidaManual[i]).length) > 3){
+                if((Object.keys(rutaObtenidaManual[i]).length) == 4){
                     let p3 = document.createElement('P');
                     p3.classList.add('actual3');
                     resultado.appendChild(p3);
@@ -3883,20 +3883,26 @@ function busquedaManual() {
             for (i = 0; i < (resultadoscont.children).length; i++){
                 nombreServicioManual = (resultadoscont.children[i]).children[1];
                 recorridoServicioManual = (resultadoscont.children[i]).children[2];
-                // recorridoServicio2Manual = (resultadoscont.children[i]).children[3];
-                if(i == 0){
-                    nombreServicioManual.textContent = `Primer servicio del día ${rutaObtenidaManual[i].nombre} Hrs`;
-                  }
-                  else if(i == (rutaObtenidaManual.length) - 1){
-                    nombreServicioManual.textContent = `Último servicio del día ${rutaObtenidaManual[i].nombre} Hrs`;
-                  }
-
-                  else if (i > 0 && i < (rutaObtenidaManual.length) - 1){
+                recorridoServicio2Manual = (resultadoscont.children[i]).children[3];
+                if(Object.keys(resultadoscont.children[i]).length > 3){
+                    if(i == 0){
+                        nombreServicioManual.textContent = `Primeros servicios del día ${rutaObtenidaManual[i].nombre} Hrs`;
+                    }
+                    else if(i == (rutaObtenidaManual.length) - 1){
+                        nombreServicioManual.textContent = `Últimos servicios del día ${rutaObtenidaManual[i].nombre} Hrs`;
+                    }
+                    recorridoServicioManual.textContent = `1° Recorrido: ${rutaObtenidaManual[i].recorrido}`;
+                    recorridoServicio2Manual.textContent = `2° Recorrido: ${rutaObtenidaManual[i].recorrido2}`;
+                }
+                else{
+                    
+                }
+                
+                else if (i > 0 && i < (rutaObtenidaManual.length) - 1){
                     nombreServicioManual.textContent = `Servicio de las ${rutaObtenidaManual[i].nombre} Hrs`;
-                  }
-
-               recorridoServicioManual.textContent = `1° Recorrido: ${rutaObtenidaManual[i].recorrido}`;  
-            //    recorridoServicio2Manual.textContent = `2° Recorrido:  ${rutaObtenidaManual[i].recorrido2}`; 
+                }
+                
+               recorridoServicioManual.textContent = `1° Recorrido: ${rutaObtenidaManual[i].recorrido}`;
             }
 
             
