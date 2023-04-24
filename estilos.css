@@ -652,12 +652,13 @@ body::-webkit-scrollbar-track {
 
 .manito {
     background-image: url(Imagenes/manito.png);
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     background-size: 25%;
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
+    filter: opacity(100%);
 }
 
 .resultados-cont {
