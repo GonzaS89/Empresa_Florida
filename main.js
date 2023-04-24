@@ -3429,17 +3429,18 @@ boton.addEventListener('click', ()=> {
       estadoServicio = (resultadoscont.children[i]).children[2];
       recorridoServicio = (resultadoscont.children[i]).children[3];
       recorridoServicio2 = (resultadoscont.children[i]).children[4];
-      if(i == 0){
-        nombreServicio.textContent = `Primer servicio del día ${rutaObtenida[i].nombre} Hrs`;
-      }
-      else if(i == (rutaObtenida.length) - 1){
-        nombreServicio.textContent = `Último servicio del día ${rutaObtenida[i].nombre} Hrs`;
-      }
-      else{
-        nombreServicio.textContent = `Servicio de las ${rutaObtenida[i].nombre} Hrs`;
-      }
+      
         if(listaDiferencias[i] > 0){
-            if(Object.keys(rutaObtenida[i]).length > 3){
+            if((Object.keys(rutaObtenida[i])).length > 3){
+                if(i == 0){
+                    nombreServicio.textContent = `Primeros servicios del día ${rutaObtenida[i].nombre} Hrs`;
+                  }
+                  else if(i == (rutaObtenida.length) - 1){
+                    nombreServicio.textContent = `Últimos servicios del día ${rutaObtenida[i].nombre} Hrs`;
+                  }
+                  else{
+                    nombreServicio.textContent = `Servicios de las ${rutaObtenida[i].nombre} Hrs`;
+                  }
                 if (listaDiferencias[i] >= 120) {
                     estadoServicio.textContent = 'Iniciaron sus recorridos hace un par horas'
                 }
@@ -3468,6 +3469,15 @@ boton.addEventListener('click', ()=> {
                     recorridoServicio2.textContent = `2° Recorrido: ${rutaObtenida[i].recorrido2}`;
             }
                 else{
+                    if(i == 0){
+                        nombreServicio.textContent = `Primer servicio del día ${rutaObtenida[i].nombre} Hrs`;
+                      }
+                      else if(i == (rutaObtenida.length)){
+                        nombreServicio.textContent = `Último servicio del día ${rutaObtenida[i].nombre} Hrs`;
+                      }
+                      else{
+                        nombreServicio.textContent = `Servicio de las ${rutaObtenida[i].nombre} Hrs`;
+                      }
                     if (listaDiferencias[i] >= 120) {
                         estadoServicio.textContent = 'Inició su recorrido hace un par horas'
                     }
@@ -3499,7 +3509,17 @@ boton.addEventListener('click', ()=> {
             }
         }
                 else{
-                    if(Object.keys(rutaObtenida[i]).length > 3){
+                    if((Object.keys(rutaObtenida[i])).length > 3){
+                        if(i == 0){
+                            nombreServicio.textContent = `Primeros servicios del día ${rutaObtenida[i].nombre} Hrs`;
+                          }
+                          else if(i == (rutaObtenida.length)){
+                            nombreServicio.textContent = `Últimos servicio del día ${rutaObtenida[i].nombre} Hrs`;
+                          }
+                          else{
+                            nombreServicio.textContent = `Servicios de las ${rutaObtenida[i].nombre} Hrs`;
+                          }
+                        
                         if (Math.abs(listaDiferencias[i]) >= 120) {
                             estadoServicio.textContent = 'Iniciarán sus recorridos en un par horas'
                         }
@@ -3525,6 +3545,16 @@ boton.addEventListener('click', ()=> {
                         recorridoServicio2.textContent = `2° Recorrido: ${rutaObtenida[i].recorrido2}`;
                     }
                     else{
+                        
+                        if(i == 0){
+                            nombreServicio.textContent = `Primer servicio del día ${rutaObtenida[i].nombre} Hrs`;
+                          }
+                          else if(i == (rutaObtenida.length)- 1){
+                            nombreServicio.textContent = `Último servicio del día ${rutaObtenida[i].nombre} Hrs`;
+                          }
+                          else{
+                            nombreServicio.textContent = `Servicio de las ${rutaObtenida[i].nombre} Hrs`;
+                          }
                         if (Math.abs(listaDiferencias[i]) >= 120) {
                             estadoServicio.textContent = 'Iniciará su recorrido en un par horas'
                         }
@@ -3884,21 +3914,21 @@ function busquedaManual() {
             for (i = 0; i < (resultadoscont.children).length; i++){
                 nombreServicioManual = (resultadoscont.children[i]).children[1];
                 recorridoServicioManual = (resultadoscont.children[i]).children[2];
-                recorridoServicio2Manual = (resultadoscont.children[i]).children[2];
-                // if((Object.keys(resultadoscont.children[i])).length > 3){
-                //     if(i == 0){
-                //         nombreServicioManual.textContent = `Primeros servicios del día ${rutaObtenidaManual[i].nombre} Hrs`;
-                //     }
-                //     else if(i == (rutaObtenidaManual.length) - 1){
-                //         nombreServicioManual.textContent = `Últimos servicios del día ${rutaObtenidaManual[i].nombre} Hrs`;
-                //     }
-                //     else{
-                //         nombreServicioManual.textContent = `Servicios de las ${rutaObtenidaManual[i].nombre} Hrs`
-                //     }
-                //     recorridoServicioManual.textContent = `1° Recorrido: ${rutaObtenidaManual[i].recorrido}`;
-                //     recorridoServicio2Manual.textContent = `2° Recorrido: ${rutaObtenidaManual[i].recorrido2}`;
-                // }
-                
+                recorridoServicio2Manual = (resultadoscont.children[i]).children[3];
+                if((Object.keys(rutaObtenidaManual[i])).length > 3){
+                    if(i == 0){
+                        nombreServicioManual.textContent = `Primeros servicios del día ${rutaObtenidaManual[i].nombre} Hrs`;
+                    }
+                    else if(i == (rutaObtenidaManual.length) - 1){
+                        nombreServicioManual.textContent = `Últimos servicios del día ${rutaObtenidaManual[i].nombre} Hrs`;
+                    }
+                    else{
+                        nombreServicioManual.textContent = `Servicios de las ${rutaObtenidaManual[i].nombre} Hrs`
+                    }
+                    recorridoServicioManual.textContent = `1° Recorrido: ${rutaObtenidaManual[i].recorrido}`;
+                    recorridoServicio2Manual.textContent = `2° Recorrido: ${rutaObtenidaManual[i].recorrido2}`;
+                }
+                else{
                     if(i == 0){
                         nombreServicioManual.textContent = `Primer servicio del día ${rutaObtenidaManual[i].nombre} Hrs`
                     }
@@ -3910,7 +3940,7 @@ function busquedaManual() {
                     }
                     recorridoServicioManual.textContent = `Recorrido: ${rutaObtenidaManual[i].recorrido}`;
                 
-                
+                }  
             //     else if (i > 0 && i < (rutaObtenidaManual.length) - 1){
             //         nombreServicioManual.textContent = `Servicio de las ${rutaObtenidaManual[i].nombre} Hrs`;
             //     }
