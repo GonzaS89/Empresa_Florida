@@ -3313,6 +3313,8 @@ boton.addEventListener('click', function () {
     }
 
     let rutaObtenida
+
+
     
     if ((fecha == 24) && (mes == 2)) {
         tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo `;
@@ -3343,9 +3345,7 @@ boton.addEventListener('click', function () {
     }
 
 
-
     // Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
-
 
     function obtenerLista(x) {
         for (i = 0; i < x.length; i++) {
@@ -3358,7 +3358,7 @@ boton.addEventListener('click', function () {
     
     let listaObtenida = obtenerLista(rutaObtenida)
 
-
+    
     function convertirHorarioAMinutos(x){
         a = (Math.trunc(x)) * 60;
         b = ((x) - (Math.trunc(x))) * 100;
@@ -3376,13 +3376,23 @@ boton.addEventListener('click', function () {
     let conversionHorario;
     let conversionHora;
     
-
-    for (let i = 0; i < listaObtenida.length; i++) {
-        let horasEnEnteros = (Math.trunc(listaObtenida[i])) * 60;
-        let minutosEnEnteros = (listaDelDia[i] - (Math.trunc(listaObtenida[i]))) * 100;
-        let horaMinutosEnEnteros = horasEnEnteros + minutosEnEnteros;
-        horariosEnEnteros.push(horaMinutosEnEnteros);
+    if(dia == 1){
+        for (let i = 1; i < listaObtenida.length; i++) {
+            let horasEnEnteros = (Math.trunc(listaObtenida[i])) * 60;
+            let minutosEnEnteros = (listaDelDia[i] - (Math.trunc(listaObtenida[i]))) * 100;
+            let horaMinutosEnEnteros = horasEnEnteros + minutosEnEnteros;
+            horariosEnEnteros.push(horaMinutosEnEnteros);
+        } 
     }
+    else{
+        for (let i = 0; i < listaObtenida.length; i++) {
+            let horasEnEnteros = (Math.trunc(listaObtenida[i])) * 60;
+            let minutosEnEnteros = (listaDelDia[i] - (Math.trunc(listaObtenida[i]))) * 100;
+            let horaMinutosEnEnteros = horasEnEnteros + minutosEnEnteros;
+            horariosEnEnteros.push(horaMinutosEnEnteros);
+        }
+    }
+    
 
     /*Recorremos el array y buscamos coincidencias con el horario actual*/
 
