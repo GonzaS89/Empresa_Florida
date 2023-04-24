@@ -993,6 +993,12 @@ body::-webkit-scrollbar-track {
         min-height: 50%;
     }
 
+    .scroll-cont{
+        position:absolute;
+        width: 100px;
+        height: 100px;
+    }
+
     .resaltado{
         animation: escalar 1s linear alternate-reverse infinite;
     }
