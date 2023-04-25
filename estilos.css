@@ -650,39 +650,7 @@ body::-webkit-scrollbar-track {
     filter: opacity(20%)
 }
 
-.manito {
-    background-image: url(Imagenes/manito.png);
-    width: 50px;
-    height: 50px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 10;
-    position: relative;
-    filter: opacity(0%);
-    animation: manitoScroll 4s ease-out 2s;
-}
 
-@keyframes manitoScroll {
-    0%{
-        filter: opacity(0%);
-    }
-    50%{
-        filter: opacity(100%);
-        transform: translateY(-100px);
-    }
-    51%{
-        filter: opacity(0%);
-        transform: translateY(0px);
-    }
-    90%{
-        filter: opacity(100%);
-        transform: translateY(100px);
-    }
-    100%{
-        filter: opacity(0%);
-    }
-}
 
 .resultados-container {
     width: 100%;
@@ -708,15 +676,72 @@ body::-webkit-scrollbar-track {
     -webkit-appearance: none;
 }
 
-.manito-cont{
-    width: 90%;
+.scroll-cont{
+    width: 95%;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
     position: absolute;
     height: 350px;
 }
 
+.manito {
+    background-image: url(Imagenes/manito.png);
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+    position: relative;
+    /* filter: opacity(0%); */
+    /* animation: manitoScroll 4s ease-out 2s; */
+}
+
+@keyframes manitoScroll {
+    0%{
+        filter: opacity(0%);
+    }
+    50%{
+        filter: opacity(100%);
+        transform: translateY(-100px);
+    }
+    51%{
+        filter: opacity(0%);
+        transform: translateY(0px);
+    }
+    90%{
+        filter: opacity(100%);
+        transform: translateY(100px);
+    }
+    100%{
+        filter: opacity(0%);
+    }
+}
+
+.flechaUp {
+    background-image: url(Imagenes/flecha\ scroll.png);
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+    position: relative;
+    transform: rotate(180deg);
+}
+
+.flechaDown {
+    background-image: url(Imagenes/flecha\ scroll.png);
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+    position: relative;
+}
 
 .resultados{
     /* height: 30%;     */
@@ -1045,15 +1070,11 @@ body::-webkit-scrollbar-track {
     .resaltados-caja{
         display: flex;
     }
-
-    .scroll-cont{
-        width: 50%;
-    }
     
-    .scroll{
+    /* .scroll{
         width: 20px;
         height: 20px;
-    }
+    } */
 
     .resaltado{
         animation: escalar 1s linear alternate-reverse infinite;
