@@ -711,12 +711,14 @@ body::-webkit-scrollbar-track {
         transform: translateY(-125px);
     }
     51%{
-        transform: translateY(20px);
+        filter: opacity(0%);
+        transform: translateY(0px);
     }
     52%{
         filter: opacity(100%);
     }
     100%{
+        filter: opacity(0%);
         transform: translateY(150px);
     }
    
