@@ -689,8 +689,8 @@ body::-webkit-scrollbar-track {
 
 .manito{
     background-image: url(Imagenes/manito.png);
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -699,7 +699,7 @@ body::-webkit-scrollbar-track {
     filter: opacity(0%);
     transform: translateY(20px);
     /* filter: opacity(0%); */
-    animation: manitoScroll 6s ease-out 2s forwards;
+    animation: manitoScroll 6s ease-out 2s forwards infinite;
 }
 
 @keyframes manitoScroll {
@@ -724,7 +724,7 @@ body::-webkit-scrollbar-track {
    
 }
 
-.flechaUp {
+/* .flechaUp {
     background-image: url(Imagenes/flecha\ scroll.png);
     width: 50px;
     height: 50px;
@@ -735,9 +735,9 @@ body::-webkit-scrollbar-track {
     position: relative;
     filter: opacity(0%);
     transform: rotate(180deg) translateY(-50px);
-    animation: flechaUpEstirada 3s ease-out 2s;
+    animation: flechaUpEstirada 3s ease-out 2s infinite;
     font-size: 20px;
-}
+} */
 
 @keyframes flechaUpEstirada {
     0%{
@@ -747,7 +747,7 @@ body::-webkit-scrollbar-track {
         transform: rotate(180deg) translateY(75px);
     }
 }
-.flechaDown {
+/* .flechaDown {
     background-image: url(Imagenes/flecha\ scroll.png);
     width: 50px;
     height: 50px;
@@ -758,8 +758,8 @@ body::-webkit-scrollbar-track {
     position: relative;
     filter: opacity(0%);
     transform: translateY(-50px);
-    animation: flechaDownEstirada 3s ease-out 5s;
-}
+    animation: flechaDownEstirada 3s ease-out 5s infinite;
+} */
 
 @keyframes flechaDownEstirada {
     0%{
