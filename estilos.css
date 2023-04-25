@@ -652,13 +652,42 @@ body::-webkit-scrollbar-track {
 
 .manito {
     background-image: url(Imagenes/manito.png);
-    width: 100px;
-    height: 100px;
-    background-size: 25%;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    position: absolute;
-    filter: opacity(100%);
+    z-index: 10;
+    position: relative;
+    filter: opacity(0%);
+    animation: manitoScroll 4s ease-out 2s;
+}
+
+@keyframes manitoScroll {
+    0%{
+        filter: opacity(0%);
+    }
+    50%{
+        filter: opacity(100%);
+        transform: translateY(-100px);
+    }
+    51%{
+        filter: opacity(0%);
+        transform: translateY(0px);
+    }
+    90%{
+        filter: opacity(100%);
+        transform: translateY(100px);
+    }
+    100%{
+        filter: opacity(0%);
+    }
+}
+
+.resultados-container {
+    width: 100%;
+    height: 300px;
+    display: flex;
 }
 
 .resultados-cont {
@@ -674,11 +703,20 @@ body::-webkit-scrollbar-track {
     overflow-y: scroll;
     margin: 10px 0;
     border-radius: 20px;
-    
 }
 .resultados-cont::-webkit-scrollbar {
     -webkit-appearance: none;
 }
+
+.manito-cont{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    height: 300px;
+}
+
 
 .resultados{
     /* height: 30%;     */
