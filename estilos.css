@@ -697,6 +697,7 @@ body::-webkit-scrollbar-track {
     z-index: 10;
     position: relative;
     filter: opacity(0%);
+    transform: rotate(-45deg);
     /* filter: opacity(0%); */
     animation: manitoScroll 6s ease-out 2s forwards infinite;
 }
@@ -707,7 +708,7 @@ body::-webkit-scrollbar-track {
     }
     50%{
         filter: opacity(0%);
-        transform: translateY(-125px);
+        transform: translateY(-125px) rotate(-20deg);
     }
     51%{
         filter: opacity(0%);
@@ -715,10 +716,11 @@ body::-webkit-scrollbar-track {
     }
     52%{
         filter: opacity(100%);
+        transform: rotate(-45deg);
     }
     100%{
         filter: opacity(0%);
-        transform: translateY(150px);
+        transform: translateY(150px) rotate(-65deg);
     }
    
 }
