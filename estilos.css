@@ -812,7 +812,7 @@ body::-webkit-scrollbar-track {
 .mensaje2 {
     display: none;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     overflow: scroll;
