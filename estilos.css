@@ -650,7 +650,69 @@ body::-webkit-scrollbar-track {
     filter: opacity(20%)
 }
 
+/* .scroll{
+    width: 20px;
+    height: 20px;
+} */
 
+.resaltado{
+    animation: escalar 1s linear alternate-reverse infinite;
+}
+.normalizarResaltado{
+    animation: normalizarResaltado .5s linear forwards;
+}
+.opacar{
+    animation: opacar 1s linear .5s forwards;
+}
+.opacarFondo{
+    animation: opacarFondo 1s .5s forwards;
+}
+.normalizar{
+    animation: normalizar .5s linear forwards;
+}
+
+@keyframes escalar {
+    100%{
+        transform: scale(1.05);
+    }
+}
+
+@keyframes normalizarResaltado {
+    0%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes opacar {
+    100%{
+        filter: opacity(25%);
+        transform: scale(.8);
+    }
+}
+
+@keyframes opacarFondo {
+    0%{
+        background-color: var(--rojo2);
+    }
+    100%{
+        background-color: rgba(0, 0, 0, 0.063);
+    }
+
+}
+
+@keyframes normalizar {
+    0%{
+        filter: opacity(25%);
+        transform: scale(.8);
+    }
+    100%{
+        filter: opacity(100%);
+        transform: scale(1);
+    }
+}
 
 .resultados-container {
     width: 100%;
@@ -801,7 +863,6 @@ body::-webkit-scrollbar-track {
 }
 
 .resultados{
-    /* height: 30%;     */
     width: 65%;
     display: none;
     flex-direction: column;
@@ -809,7 +870,6 @@ body::-webkit-scrollbar-track {
     border-radius: 20px;
     margin: 15px;
     border: none;
-    overflow: hidden;
     border: .5px solid white;
     background-color: var(--blanco);
     position: relative;
@@ -1124,73 +1184,7 @@ body::-webkit-scrollbar-track {
         min-height: 50%;
     }
 
-    .resaltados-caja{
-        display: flex;
-    }
     
-    /* .scroll{
-        width: 20px;
-        height: 20px;
-    } */
-
-    .resaltado{
-        animation: escalar 1s linear alternate-reverse infinite;
-    }
-    .normalizarResaltado{
-        animation: normalizarResaltado .5s linear forwards;
-    }
-    .opacar{
-        animation: opacar 1s linear .5s forwards;
-    }
-    .opacarFondo{
-        animation: opacarFondo 1s .5s forwards;
-    }
-    .normalizar{
-        animation: normalizar .5s linear forwards;
-    }
-
-    @keyframes escalar {
-        100%{
-            transform: scale(1.05);
-        }
-    }
-
-    @keyframes normalizarResaltado {
-        0%{
-            transform: scale(1.1);
-        }
-        100%{
-            transform: scale(1);
-        }
-    }
-
-    @keyframes opacar {
-        100%{
-            filter: opacity(25%);
-            transform: scale(.8);
-        }
-    }
-
-    @keyframes opacarFondo {
-        0%{
-            background-color: var(--rojo2);
-        }
-        100%{
-            background-color: rgba(0, 0, 0, 0.063);
-        }
-
-    }
-
-    @keyframes normalizar {
-        0%{
-            filter: opacity(25%);
-            transform: scale(.8);
-        }
-        100%{
-            filter: opacity(100%);
-            transform: scale(1);
-        }
-    }
 
     .actual1,
     .actual2,
