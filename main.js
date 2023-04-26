@@ -3472,7 +3472,13 @@ boton.addEventListener('click', () => {
 
     resultadoscont.children[indiceDeBusqueda].classList.add('resaltado');
     // resultadoscont.children[indiceDeBusqueda].classList.add('manito');
-    resultadoscont.classList.add('opacarFondo');
+    if(resultadoscont.classList.contains('normalizarFondo')){
+        resultadoscont.classList.replace('normalizarFondo', 'opacarFondo')
+    }
+    else{
+        resultadoscont.classList.add('opacarFondo');
+    }
+    
     mensaje2.appendChild(indicacioncont);
 
     for (i = 0; i < resultadoscont.children.length; i++) {
@@ -3655,6 +3661,7 @@ resultadoscont.addEventListener('touchmove', () => {
             scrollcont.children[0].classList.remove('manitoAnimacionArriba');
             scrollcont.children[0].classList.remove('manitoAnimacionCentro');
         }
+        resultadoscont.classList.replace('opacarFondo', 'normalizarFondo');
     }
 })
 

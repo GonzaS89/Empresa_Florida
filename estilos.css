@@ -668,6 +668,10 @@ body::-webkit-scrollbar-track {
 .opacarFondo{
     animation: opacarFondo 1s .5s forwards;
 }
+
+.normalizarFondo{
+    animation: normalizarFondo 1s linear forwards;
+}
 .normalizar{
     animation: normalizar .5s linear forwards;
 }
@@ -699,9 +703,17 @@ body::-webkit-scrollbar-track {
         background-color: var(--rojo2);
     }
     100%{
-        background-color: rgba(0, 0, 0, 0.063);
+        background-color: rgba(0, 0, 0, 0.631);
     }
+}
 
+@keyframes normalizarFondo {
+    0%{
+        background-color: rgba(0, 0, 0, 0.631);
+    }
+    100%{
+        background-color: var(--rojo2);
+    }
 }
 
 @keyframes normalizar {
@@ -1183,6 +1195,7 @@ body::-webkit-scrollbar-track {
         padding: 10px 0;
         border: .5px solid white;
         min-height: 50%;
+        max-height: 75%;
     }
 
     
