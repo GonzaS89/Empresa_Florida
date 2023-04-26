@@ -3426,18 +3426,19 @@ boton.addEventListener('click', () => {
     }
     else if ((listaDiferencias.indexOf(anteriorPasado)) == (listaDiferencias.length - 1)) {
         indiceDeBusqueda = listaDiferencias.indexOf(anteriorPasado);
-
     }
 
-    if (indiceDeBusqueda == (rutaObtenida.length) - 1) {
-        scrollcont.children[0].classList.add('manitoAnimacionAbajo');
-    }
-    else if (indiceDeBusqueda == 0){
-        scrollcont.children[0].classList.add('manitoAnimacionArriba');
-    }
-    else {
-        scrollcont.children[0].classList.add('manitoAnimacionCentro');
-    }
+    if((rutaObtenida.length) > 1){
+        if (indiceDeBusqueda == (rutaObtenida.length) - 1) {
+            scrollcont.children[0].classList.add('manitoAnimacionAbajo');
+        }
+        else if (indiceDeBusqueda == 0){
+            scrollcont.children[0].classList.add('manitoAnimacionArriba');
+        }
+        else {
+            scrollcont.children[0].classList.add('manitoAnimacionCentro');
+        }
+    }   
 
 
     for (i = 0; i < rutaObtenida.length; i++) {
@@ -3970,14 +3971,16 @@ function busquedaManual() {
                 }
             }
 
-            if (indiceDeBusqueda == (rutaObtenidaManual.length) - 1) {
-                scrollcont.children[0].classList.add('manitoAnimacionAbajo');
-            }
-            else if (indiceDeBusqueda == 0){
-                scrollcont.children[0].classList.add('manitoAnimacionArriba');
-            }
-            else {
-                scrollcont.children[0].classList.add('manitoAnimacionCentro');
+            if((rutaObtenidaManual.length) > 1){
+                if (indiceDeBusqueda == (rutaObtenidaManual.length) - 1) {
+                    scrollcont.children[0].classList.add('manitoAnimacionAbajo');
+                }
+                else if (indiceDeBusqueda == 0){
+                    scrollcont.children[0].classList.add('manitoAnimacionArriba');
+                }
+                else {
+                    scrollcont.children[0].classList.add('manitoAnimacionCentro');
+                }
             }
 
             resultadoscont.children[indiceDeBusqueda].classList.add('resaltado');
