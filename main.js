@@ -3424,11 +3424,11 @@ boton.addEventListener('click', () => {
     if (indiceDeBusqueda == (rutaObtenida.length) - 1) {
         scrollcont.children[0].classList.add('manitoAnimacionAbajo');
     }
-    else if(indiceDeBusqueda > 0){
-        scrollcont.children[0].classList.add('manitoAnimacionCentro');
-    }
     else if (indiceDeBusqueda == 0){
         scrollcont.children[0].classList.add('manitoAnimacionArriba');
+    }
+    else {
+        scrollcont.children[0].classList.add('manitoAnimacionCentro');
     }
 
 
@@ -3660,6 +3660,9 @@ indicacioncont.addEventListener('click', () => {
     opcionbase2.selected = true;
     linea1.textContent = '';
     linea2.textContent = '';
+    scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
+    scrollcont.children[0].classList.remove('manitoAnimacionArriba');
+    scrollcont.children[0].classList.remove('manitoAnimacionCentro');
     borrarGlobos();
 })
 
