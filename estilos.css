@@ -698,11 +698,13 @@ body::-webkit-scrollbar-track {
     position: relative;
     filter: opacity(0%);
     transform: rotate(-45deg);
-    /* filter: opacity(0%); */
-    animation: manitoScroll 6s ease-out 2s forwards infinite;
 }
 
-@keyframes manitoScroll {
+.manitoAnimacionCentro{
+    animation: manitoScrollCentro 3s ease-out 2s forwards infinite;
+}
+
+@keyframes manitoScrollCentro {
     0%{
         filter: opacity(100%);
     }
@@ -721,7 +723,35 @@ body::-webkit-scrollbar-track {
         filter: opacity(0%);
         transform: translateY(150px) rotate(-70deg);
     }
-   
+}
+
+.manitoAnimacionArriba { 
+    animation: manitoScrollArriba 1.5s ease-out 2s forwards infinite;
+}
+
+@keyframes manitoScrollArriba {
+    0%{
+        filter: opacity(100%);
+    }
+    100%{
+        filter: opacity(0%);
+        transform: translateY(-125px) rotate(-20deg);
+    }
+}
+
+.manitoAnimacionAbajo { 
+    animation: manitoScrollAbajo 1.5s ease-out 2s forwards infinite;
+}
+
+@keyframes manitoScrollAbajo {
+    0%{
+        filter: opacity(100%);
+        transform: rotate(-45deg);
+    }
+    100%{
+        filter: opacity(0%);
+        transform: translateY(150px) rotate(-70deg);
+    }
 }
 
 /* .flechaUp {

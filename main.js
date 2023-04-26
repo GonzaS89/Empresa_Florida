@@ -3189,12 +3189,13 @@ let label2;
 const botonDeCambio = document.querySelector('.botonDeCambio');
 const botonDeCambio2 = document.querySelector('.botonDeCambio2');
 const mensaje2 = document.querySelector('.mensaje2');
-const resultadoscontainer = document.querySelector('.resultados-container')
-const indicacioncont = document.querySelector('.indicacion-cont')
-const resultadoscont = document.querySelector('.resultados-cont')
-
-
+const resultadoscontainer = document.querySelector('.resultados-container');
+const indicacioncont = document.querySelector('.indicacion-cont');
+const resultadoscont = document.querySelector('.resultados-cont');
+const scrollcont = document.querySelector('.scroll-cont');
 let titulo = document.getElementById('titulo');
+
+
 
 botonDeCambio.addEventListener('click', function () {
     $('.menu2').css('display', 'flex');
@@ -3283,15 +3284,7 @@ boton.addEventListener('click', () => {
     let ruta = [];
     let listaDelDia = [];
     let horariosEnEnteros = [];
-    let listaDiferencias = []
-    let listaDiferencias2 = [];
-    let actual1 = document.getElementById('actual1');
-    let actual2 = document.getElementById('actual2');
-    let actual3 = document.getElementById('actual3');
-    let futuro1 = document.getElementById('futuro1');
-    let futuro2 = document.getElementById('futuro2');
-    let futuro3 = document.getElementById('futuro3');
-    let futuro4 = document.getElementById('futuro4');
+    let listaDiferencias = [];
     let tituloResultado = document.getElementById('tituloResultado')
     let linea1 = document.getElementById('linea1');
     let feriado = false;
@@ -3361,10 +3354,7 @@ boton.addEventListener('click', () => {
     }
 
     //funcion para crear los globos de resultados
-
-
-
-
+    
     // Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
 
 
@@ -3431,6 +3421,15 @@ boton.addEventListener('click', () => {
 
     }
 
+    if (indiceDeBusqueda == (rutaObtenida.length) - 1) {
+        scrollcont.children[0].classList.add('manitoAnimacionAbajo');
+    }
+    else if(indiceDeBusqueda > 0){
+        scrollcont.children[0].classList.add('manitoAnimacionCentro');
+    }
+    else if (indiceDeBusqueda == 0){
+        scrollcont.children[0].classList.add('manitoAnimacionArriba');
+    }
 
 
     for (i = 0; i < rutaObtenida.length; i++) {
@@ -3522,7 +3521,7 @@ boton.addEventListener('click', () => {
                 if (i == 0) {
                     nombreServicio.textContent = `Primer servicio del día ${rutaObtenida[i].nombre} Hrs`;
                 }
-                else if (i == (rutaObtenida.length)) {
+                else if (i == (rutaObtenida.length) - 1) {
                     nombreServicio.textContent = `Último servicio del día ${rutaObtenida[i].nombre} Hrs`;
                 }
                 else {
@@ -3629,7 +3628,6 @@ boton.addEventListener('click', () => {
                 recorridoServicio.textContent = `Recorrido: ${rutaObtenida[i].recorrido}`;
             }
         }
-
     }
 
     $('.resultados').css('display', 'flex');
@@ -3644,7 +3642,10 @@ resultadoscont.addEventListener('touchmove', () => {
     for (i = 0; i < resultadoscont.children.length; i++) {
         if (i < indiceDeBusqueda || i > indiceDeBusqueda) {
             resultadoscont.children[i].classList.replace('opacar', 'normalizar');
-            resultadoscont.children[indiceDeBusqueda].classList.replace('resaltado', 'normalizarResaltado')
+            resultadoscont.children[indiceDeBusqueda].classList.replace('resaltado', 'normalizarResaltado');
+            scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
+            scrollcont.children[0].classList.remove('manitoAnimacionArriba');
+            scrollcont.children[0].classList.remove('manitoAnimacionCentro');
         }
     }
 })
