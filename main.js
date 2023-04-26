@@ -3450,14 +3450,17 @@ boton.addEventListener('click', () => {
             let p1 = document.createElement('P');
             p1.classList.add('actual1')
             let p2 = document.createElement('P');
-            p2.classList.add('actual2')
+            p2.classList.add('actual2');
+            let p3 = document.createElement('P');
+            p3.classList.add('actual3');
             resultado.appendChild(fondo);
             resultado.appendChild(p1);
             resultado.appendChild(p2);
+            resultado.appendChild(p3);
             if ((Object.keys(ruta[0])).length > 3) {
-                let p3 = document.createElement('P');
-                p3.classList.add('actual3');
-                resultado.appendChild(p3);
+                let p4 = document.createElement('P');
+                p4.classList.add('actual4');
+                resultado.appendChild(p4);
             }
             contHijo.appendChild(resultado);
             contPadre.appendChild(contHijo)
@@ -3472,14 +3475,17 @@ boton.addEventListener('click', () => {
                 let p1 = document.createElement('P');
                 p1.classList.add('actual1')
                 let p2 = document.createElement('P');
-                p2.classList.add('actual2')
+                p2.classList.add('actual2');
+                let p3 = document.createElement('P');
+                p3.classList.add('actual3');
                 resultado.appendChild(fondo);
                 resultado.appendChild(p1);
                 resultado.appendChild(p2);
+                resultado.appendChild(p3)
                 if ((Object.keys(ruta[i])).length > 3) {
-                    let p3 = document.createElement('P');
-                    p3.classList.add('actual3');
-                    resultado.appendChild(p3);
+                    let p4 = document.createElement('P');
+                    p4.classList.add('actual4');
+                    resultado.appendChild(p4);
                 }
                 contHijo.appendChild(resultado);
                 contPadre.appendChild(contHijo)
@@ -3612,7 +3618,6 @@ boton.addEventListener('click', () => {
                 else {
                     nombreServicio.textContent = `Servicios de las ${rutaObtenida[i].nombre} Hrs`;
                 }
-
                 if (Math.abs(listaDiferencias[i]) >= 120) {
                     estadoServicio.textContent = 'Iniciarán sus recorridos en un par horas'
                 }
@@ -3638,7 +3643,6 @@ boton.addEventListener('click', () => {
                 recorridoServicio2.textContent = `2° Recorrido: ${rutaObtenida[i].recorrido2}`;
             }
             else {
-
                 if (i == 0) {
                     nombreServicio.textContent = `Primer servicio del día ${rutaObtenida[i].nombre} Hrs`;
                 }
@@ -4050,7 +4054,7 @@ function busquedaManual() {
                 }
             }
 
-            console.log(rutaObtenidaManual)
+            
 
             for (i = 0; i < (resultadoscont.children).length; i++) {
                 nombreServicioManual = (resultadoscont.children[i]).children[1];
