@@ -3221,6 +3221,13 @@ botonDeCambio2.addEventListener('click', function () {
     linea2.textContent = '';
 })
 
+addEventListener('load', ()=> {
+    scrollcont.children[0].classList.add('manito')
+})
+
+function borrarManito () {
+    scrollcont.children[0].classList.remove('manito')
+}
 
 function borrarGlobos() {
     let arrayResultados = Array.prototype.slice.call(document.getElementsByClassName("resultados"), 0);
@@ -3228,6 +3235,7 @@ function borrarGlobos() {
         element.remove();
     }
 }
+
 
 
 let indiceDeBusqueda;
@@ -3664,6 +3672,7 @@ indicacioncont.addEventListener('click', () => {
     scrollcont.children[0].classList.remove('manitoAnimacionArriba');
     scrollcont.children[0].classList.remove('manitoAnimacionCentro');
     borrarGlobos();
+    borrarManito();
 })
 
 
@@ -3903,10 +3912,10 @@ function busquedaManual() {
         }
         else {
             if (ingHora.value < 10) {
-                tituloResultado.textContent = `Servicios cercanos a las 0${ingHora.value}:00 Hrs`;
+                tituloResultado.textContent = `Servicios a partir de las 0${ingHora.value}:00 Hrs`;
             }
             else {
-                tituloResultado.textContent = `Servicios cercanos a las ${ingHora.value}:00 Hrs`;
+                tituloResultado.textContent = `Servicios a partir de las ${ingHora.value}:00 Hrs`;
             }
 
             horaInputAMinutos = (ingHora.value) * 60
@@ -3936,7 +3945,7 @@ function busquedaManual() {
                     resultado.appendChild(p3);
                 }
                 resultadoscont.appendChild(resultado);
-                mensaje2.appendChild(resultadoscont)
+                resultadoscontainer.appendChild(resultadoscont)
 
             }
             function irAlObjeto() {
@@ -3954,7 +3963,15 @@ function busquedaManual() {
                 }
             }
 
-
+            if (indiceDeBusqueda == (rutaObtenidaManual.length) - 1) {
+                scrollcont.children[0].classList.add('manitoAnimacionAbajo');
+            }
+            else if (indiceDeBusqueda == 0){
+                scrollcont.children[0].classList.add('manitoAnimacionArriba');
+            }
+            else {
+                scrollcont.children[0].classList.add('manitoAnimacionCentro');
+            }
 
             resultadoscont.children[indiceDeBusqueda].classList.add('resaltado');
             resultadoscont.classList.add('opacarFondo');
@@ -4066,21 +4083,7 @@ function busquedaManual() {
         $('.resultados').css('display', 'none');
         linea2.textContent = '';
         linea3.textContent = '';
-
-        // $('#selector3').css('display','none')      
-        // $('#selector4').css('display','none') 
-        // $('#selector5').css('display','none') 
-        // $('#ingHora').css('display','none')
-        // $('#capitalDestino').css('background-color', 'var(--blanco');
-        // $('#capitalDestino').css('color', 'var(--black');
-        // $('#origenCapital').css('background-color', 'var(--blanco');
-        // $('#origenCapital').css('color', 'var(--black'); 
-        // opcionbase3.selected = true;
-        // opcionbase4.selected = true;
-        // opcionbase5.selected = true;
-        // ingHora.value = '';
-        // botonOrigenCapital.selected = false;
-        // botonCapitalDestino.selected = false;
+        borrarManito();
     })
 }
 
