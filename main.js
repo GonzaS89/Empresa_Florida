@@ -3221,11 +3221,11 @@ botonDeCambio2.addEventListener('click', function () {
     linea2.textContent = '';
 })
 
-addEventListener('load', ()=> {
+addEventListener('load', () => {
     scrollcont.children[0].classList.add('manito')
 })
 
-function borrarManito () {
+function borrarManito() {
     scrollcont.children[0].classList.remove('manito')
 }
 
@@ -3362,7 +3362,7 @@ boton.addEventListener('click', () => {
     }
 
     //funcion para crear los globos de resultados
-    
+
     // Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
 
 
@@ -3428,43 +3428,66 @@ boton.addEventListener('click', () => {
         indiceDeBusqueda = listaDiferencias.indexOf(anteriorPasado);
     }
 
-    if((rutaObtenida.length) > 1){
+    if ((rutaObtenida.length) > 1) {
         if (indiceDeBusqueda == (rutaObtenida.length) - 1) {
             scrollcont.children[0].classList.add('manitoAnimacionAbajo');
         }
-        else if (indiceDeBusqueda == 0){
+        else if (indiceDeBusqueda == 0) {
             scrollcont.children[0].classList.add('manitoAnimacionArriba');
         }
         else {
             scrollcont.children[0].classList.add('manitoAnimacionCentro');
         }
-    }   
-
-
-    for (i = 0; i < rutaObtenida.length; i++) {
-
-        const resultado = document.createElement('DIV')
-        resultado.classList.add('resultados')
-        const fondo = document.createElement('SPAN'); -
-            fondo.classList.add('fondo')
-        let p1 = document.createElement('P');
-        p1.classList.add('actual1')
-        let p2 = document.createElement('P');
-        p2.classList.add('actual2')
-        let p3 = document.createElement('P');
-        p3.classList.add('actual3');
-        resultado.appendChild(fondo);
-        resultado.appendChild(p1);
-        resultado.appendChild(p2);
-        resultado.appendChild(p3);
-        if ((Object.keys(rutaObtenida[i]).length) > 3) {
-            let p4 = document.createElement('P');
-            p4.classList.add('actual4');
-            resultado.appendChild(p4);
-        }
-        resultadoscont.appendChild(resultado);
-        resultadoscontainer.appendChild(resultadoscont)
     }
+
+
+    function contruirGlobos(ruta, contPadre, contHijo) {
+        if (ruta.length == 1) {
+            const resultado = document.createElement('DIV')
+            resultado.classList.add('resultados')
+            const fondo = document.createElement('SPAN');
+            fondo.classList.add('fondo')
+            let p1 = document.createElement('P');
+            p1.classList.add('actual1')
+            let p2 = document.createElement('P');
+            p2.classList.add('actual2')
+            resultado.appendChild(fondo);
+            resultado.appendChild(p1);
+            resultado.appendChild(p2);
+            if ((Object.keys(ruta[0])).length > 3) {
+                let p3 = document.createElement('P');
+                p3.classList.add('actual3');
+                resultado.appendChild(p3);
+            }
+            contHijo.appendChild(resultado);
+            contPadre.appendChild(contHijo)
+        }
+        else{
+            for (i = 0; i < ruta.length; i++) {
+
+                const resultado = document.createElement('DIV')
+                resultado.classList.add('resultados')
+                const fondo = document.createElement('SPAN');
+                fondo.classList.add('fondo')
+                let p1 = document.createElement('P');
+                p1.classList.add('actual1')
+                let p2 = document.createElement('P');
+                p2.classList.add('actual2')
+                resultado.appendChild(fondo);
+                resultado.appendChild(p1);
+                resultado.appendChild(p2);
+                if ((Object.keys(ruta[i])).length > 3) {
+                    let p3 = document.createElement('P');
+                    p3.classList.add('actual3');
+                    resultado.appendChild(p3);
+                }
+                contHijo.appendChild(resultado);
+                contPadre.appendChild(contHijo)
+            }
+        }
+    }
+
+    contruirGlobos(rutaObtenida,resultadoscontainer,resultadoscont);
 
     function irAlObjeto() {
         let a = resultadoscont.children[indiceDeBusqueda];
@@ -3473,13 +3496,13 @@ boton.addEventListener('click', () => {
 
     resultadoscont.children[indiceDeBusqueda].classList.add('resaltado');
     // resultadoscont.children[indiceDeBusqueda].classList.add('manito');
-    if(resultadoscont.classList.contains('normalizarFondo')){
+    if (resultadoscont.classList.contains('normalizarFondo')) {
         resultadoscont.classList.replace('normalizarFondo', 'opacarFondo')
     }
-    else{
+    else {
         resultadoscont.classList.add('opacarFondo');
     }
-    
+
     mensaje2.appendChild(indicacioncont);
 
     for (i = 0; i < resultadoscont.children.length; i++) {
@@ -3496,7 +3519,10 @@ boton.addEventListener('click', () => {
 
         if (listaDiferencias[i] > 0) {
             if ((Object.keys(rutaObtenida[i])).length > 3) {
-                if (i == 0) {
+                if(rutaObtenida.length == 1 && i == 0){
+                    nombreServicio.textContent = `Únicos servicios del día ${rutaObtenida[i].nombre} Hrs`;
+                }
+                else if (i == 0) {
                     nombreServicio.textContent = `Primeros servicios del día ${rutaObtenida[i].nombre} Hrs`;
                 }
                 else if (i == (rutaObtenida.length) - 1) {
@@ -3533,7 +3559,10 @@ boton.addEventListener('click', () => {
                 recorridoServicio2.textContent = `2° Recorrido: ${rutaObtenida[i].recorrido2}`;
             }
             else {
-                if (i == 0) {
+                if(rutaObtenida.length == 1 && i == 0) {
+                    `Único servicio del día ${rutaObtenida[i].nombre} Hrs`;
+                }
+                else if (i == 0) {
                     nombreServicio.textContent = `Primer servicio del día ${rutaObtenida[i].nombre} Hrs`;
                 }
                 else if (i == (rutaObtenida.length) - 1) {
@@ -3679,6 +3708,7 @@ indicacioncont.addEventListener('click', () => {
     scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
     scrollcont.children[0].classList.remove('manitoAnimacionArriba');
     scrollcont.children[0].classList.remove('manitoAnimacionCentro');
+    resultadoscont.children[0].classList.remove('resultadosOpcion2');
     borrarGlobos();
     borrarManito();
 })
@@ -3932,30 +3962,58 @@ function busquedaManual() {
                 listaDiferencias3.push(horariosEnEnteros2[i] - horaInputAMinutos)
             }
 
-
-
-            for (i = 0; i < rutaObtenidaManual.length; i++) {
-
-                const resultado = document.createElement('DIV')
-                resultado.classList.add('resultados')
-                const fondo = document.createElement('SPAN');
-                fondo.classList.add('fondo')
-                let p1 = document.createElement('P');
-                p1.classList.add('actual1')
-                let p2 = document.createElement('P');
-                p2.classList.add('actual2')
-                resultado.appendChild(fondo);
-                resultado.appendChild(p1);
-                resultado.appendChild(p2);
-                if ((Object.keys(rutaObtenidaManual[i])).length > 3) {
-                    let p3 = document.createElement('P');
-                    p3.classList.add('actual3');
-                    resultado.appendChild(p3);
+            function contruirGlobos(ruta, contPadre, contHijo) {
+                if (ruta.length == 1) {
+                    const resultado = document.createElement('DIV')
+                    resultado.classList.add('resultados')
+                    const fondo = document.createElement('SPAN');
+                    fondo.classList.add('fondo')
+                    let p1 = document.createElement('P');
+                    p1.classList.add('actual1')
+                    let p2 = document.createElement('P');
+                    p2.classList.add('actual2')
+                    resultado.appendChild(fondo);
+                    resultado.appendChild(p1);
+                    resultado.appendChild(p2);
+                    if ((Object.keys(ruta[0])).length > 3) {
+                        let p3 = document.createElement('P');
+                        p3.classList.add('actual3');
+                        resultado.appendChild(p3);
+                    }
+                    contHijo.appendChild(resultado);
+                    contPadre.appendChild(contHijo)
                 }
-                resultadoscont.appendChild(resultado);
-                resultadoscontainer.appendChild(resultadoscont)
+                else{
+                    for (i = 0; i < ruta.length; i++) {
 
+                        const resultado = document.createElement('DIV')
+                        resultado.classList.add('resultados')
+                        const fondo = document.createElement('SPAN');
+                        fondo.classList.add('fondo')
+                        let p1 = document.createElement('P');
+                        p1.classList.add('actual1')
+                        let p2 = document.createElement('P');
+                        p2.classList.add('actual2')
+                        resultado.appendChild(fondo);
+                        resultado.appendChild(p1);
+                        resultado.appendChild(p2);
+                        if ((Object.keys(ruta[i])).length > 3) {
+                            let p3 = document.createElement('P');
+                            p3.classList.add('actual3');
+                            resultado.appendChild(p3);
+                        }
+                        contHijo.appendChild(resultado);
+                        contPadre.appendChild(contHijo)
+                    }
+                }
             }
+
+            contruirGlobos(rutaObtenidaManual,resultadoscontainer,resultadoscont);
+
+            
+
+
+
             function irAlObjeto() {
                 let a = resultadoscont.children[indiceDeBusqueda];
                 a.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -3971,24 +4029,21 @@ function busquedaManual() {
                 }
             }
 
-            if((rutaObtenidaManual.length) > 1){
+            if ((rutaObtenidaManual.length) > 1) {
                 if (indiceDeBusqueda == (rutaObtenidaManual.length) - 1) {
                     scrollcont.children[0].classList.add('manitoAnimacionAbajo');
                 }
-                else if (indiceDeBusqueda == 0){
+                else if (indiceDeBusqueda == 0) {
                     scrollcont.children[0].classList.add('manitoAnimacionArriba');
                 }
                 else {
                     scrollcont.children[0].classList.add('manitoAnimacionCentro');
                 }
             }
-
             resultadoscont.children[indiceDeBusqueda].classList.add('resaltado');
             resultadoscont.classList.add('opacarFondo');
             mensaje2.appendChild(indicacioncont);
 
-
-            console.log(proximo)
             for (i = 0; i < resultadoscont.children.length; i++) {
                 if (i < indiceDeBusqueda || i > indiceDeBusqueda) {
                     resultadoscont.children[i].classList.add('opacar')
@@ -4002,10 +4057,10 @@ function busquedaManual() {
                 recorridoServicioManual = (resultadoscont.children[i]).children[2];
                 recorridoServicio2Manual = (resultadoscont.children[i]).children[3];
                 if ((Object.keys(rutaObtenidaManual[i])).length > 3) {
-                    if (rutaObtenidaManual.length == 1) {
+                    if (rutaObtenidaManual.length == 1 && i == 0) {
                         nombreServicioManual.textContent = `Únicos servicios del día ${rutaObtenidaManual[i].nombre} Hrs`;
                     }
-                    if (i == 0) {
+                    else if (i == 0) {
                         nombreServicioManual.textContent = `Primeros servicios del día ${rutaObtenidaManual[i].nombre} Hrs`;
                     }
                     else if (i == (rutaObtenidaManual.length) - 1) {
@@ -4018,10 +4073,10 @@ function busquedaManual() {
                     recorridoServicio2Manual.textContent = `2° Recorrido: ${rutaObtenidaManual[i].recorrido2}`;
                 }
                 else {
-                    if (rutaObtenidaManual.length == 1) {
+                    if (rutaObtenidaManual.length == 1 && i == 0) {
                         nombreServicioManual.textContent = `Único servicio del día ${rutaObtenidaManual[i].nombre} Hrs`;
                     }
-                    if (i == 0) {
+                    else if (i == 0) {
                         nombreServicioManual.textContent = `Primer servicio del día ${rutaObtenidaManual[i].nombre} Hrs`
                     }
                     else if (i == (rutaObtenidaManual.length) - 1) {
@@ -4079,6 +4134,7 @@ function busquedaManual() {
             // }
 
             $('.resultados').css('display', 'flex');
+            $('.resultadosOpcion2').css('display', 'flex');
             $('.mensaje2').css('display', 'flex');
             setTimeout(() => {
                 irAlObjeto()
@@ -4091,6 +4147,8 @@ function busquedaManual() {
     indicacioncont.addEventListener('click', function () {
         $('.mensaje2').css('display', 'none');
         $('.resultados').css('display', 'none');
+        $('.resultadosOpcion2').css('display', 'none');
+        resultadoscont.children[0].classList.remove('resultadosOpcion2')
         linea2.textContent = '';
         linea3.textContent = '';
         borrarManito();
