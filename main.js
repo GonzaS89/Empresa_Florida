@@ -382,28 +382,25 @@ boton.addEventListener('click', () => {
                 else {
                     nombreServicio.textContent = `Servicios de las ${rutaObtenida[i].nombre} Hrs`;
                 }
-                if (listaDiferencias[i] >= 120) {
-                    estadoServicio.textContent = 'Iniciaron sus recorridos hace un par horas'
+                if (listaDiferencias[i] > 60) {
+                    estadoServicio.textContent = 'Finalizaron sus recorridos'
                 }
-                if (listaDiferencias[i] > 60 && listaDiferencias[i] < 120) {
-                    estadoServicio.textContent = 'Iniciaron sus recorridos hace mas de 1 hora'
-                }
-                if (listaDiferencias[i] == 60) {
+                else if (listaDiferencias[i] == 60) {
                     estadoServicio.textContent = 'Iniciaron sus recorridos hace 1 hora'
                 }
-                if (listaDiferencias[i] < 60) {
+                else if (listaDiferencias[i] < 60) {
                     estadoServicio.textContent = `Iniciaron sus recorrido hace menos de 1 hora`
                 }
-                if (listaDiferencias[i] < 30) {
+                else if (listaDiferencias[i] < 30) {
                     estadoServicio.textContent = `Iniciaron sus recorrido hace menos de media hora`
                 }
-                if (listaDiferencias[i] < 10) {
+                else if (listaDiferencias[i] < 10) {
                     estadoServicio.textContent = `Iniciaron sus recorrido hace menos de 10 minutos`
                 }
-                if (listaDiferencias[i] < 5 && listaDiferencias[i] > 0) {
+                else if (listaDiferencias[i] < 5 && listaDiferencias[i] > 0) {
                     estadoServicio.textContent = 'Iniciaron sus recorridos hace menos de 5 minutos'
                 }
-                if (Math.trunc(listaDiferencias[i]) == 0) {
+                else if (Math.trunc(listaDiferencias[i]) == 0) {
                     estadoServicio.textContent = 'Están iniciando sus recorridos'
                 }
                 recorridoServicio.textContent = `1° Recorrido: ${rutaObtenida[i].recorrido}`
@@ -422,25 +419,22 @@ boton.addEventListener('click', () => {
                 else {
                     nombreServicio.textContent = `Servicio de las ${rutaObtenida[i].nombre} Hrs`;
                 }
-                if (listaDiferencias[i] >= 120) {
-                    estadoServicio.textContent = 'Inició su recorrido hace un par horas'
+                if (listaDiferencias[i] > 60) {
+                    estadoServicio.textContent = 'Finalizó su recorrido'
                 }
-                if (listaDiferencias[i] > 60 && listaDiferencias[i] < 120) {
-                    estadoServicio.textContent = 'Inició su recorrido hace mas de 1 hora'
-                }
-                if (listaDiferencias[i] == 60) {
+                else if (listaDiferencias[i] == 60) {
                     estadoServicio.textContent = 'Inició su recorrido hace 1 hora'
                 }
-                if (listaDiferencias[i] < 60) {
+                else if (listaDiferencias[i] < 60) {
                     estadoServicio.textContent = `Inició su recorrido hace menos de 1 hora`
                 }
-                if (listaDiferencias[i] < 30) {
+                else if (listaDiferencias[i] < 30) {
                     estadoServicio.textContent = `Inició su recorrido hace menos de media hora`
                 }
-                if (listaDiferencias[i] < 15) {
+                else if (listaDiferencias[i] < 15) {
                     estadoServicio.textContent = `Inició su recorrido hace menos de 15 minutos`
                 }
-                if (listaDiferencias[i] < 10) {
+                else if (listaDiferencias[i] < 10) {
                     estadoServicio.textContent = `Inició su recorrido hace menos de 10 minutos`
                 }
                 if (listaDiferencias[i] < 5 && listaDiferencias[i] > 2) {
