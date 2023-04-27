@@ -991,20 +991,35 @@ body::-webkit-scrollbar-track {
     left: 0;
     padding: 50px;
     border: 1px solid white;
+    
+}
+
+.mensajeAparece {
     animation: aparece .5s linear forwards;
 }
 
-
 @keyframes aparece {
-        0% {
-            transform: scale(0);
-            filter: opacity(0%);
-        }
+    0% {
+        transform: translateX(-100%);
+        filter: opacity(0%);
+    }
 
-        100% {
-            transform: scale(1);
-        }
+    100% {
+        transform: translateX(0);
+    }
 }
+
+.mensajeIrse {
+    animation: irse .25s linear forwards;
+}
+
+@keyframes irse {
+    
+    100% {
+        transform: translateX(100%);
+    }
+}
+
 
 .texto-resultados {
     display: flex;

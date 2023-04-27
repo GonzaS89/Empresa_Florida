@@ -3680,6 +3680,12 @@ boton.addEventListener('click', () => {
 
     $('.resultados').css('display', 'flex');
     $('.mensaje2').css('display', 'flex');
+    if(mensaje2.classList.contains('mensajeIrse')){
+        mensaje2.classList.replace('mensajeIrse', 'mensajeAparece')
+    }else{
+        mensaje2.classList.add('mensajeAparece')
+    }
+    
     setTimeout(() => {
         irAlObjeto()
     }, 750);
@@ -3702,13 +3708,14 @@ resultadoscont.addEventListener('touchmove', () => {
 indicacioncont.addEventListener('click', () => {
     // actual4.textContent = '';
     // futuro4.textContent = '';
-    $('.mensaje2').css('display', 'none')
-    $('.resultados').css('display', 'none')
-    $('.resultados2').css('display', 'none')
+    // $('.mensaje2').css('display', 'none')
+    // $('.resultados').css('display', 'none')
+    // $('.resultados2').css('display', 'none')
     opcionbase.selected = true;
     opcionbase2.selected = true;
     linea1.textContent = '';
     linea2.textContent = '';
+    mensaje2.classList.replace('mensajeAparece', 'mensajeIrse')
     scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
     scrollcont.children[0].classList.remove('manitoAnimacionArriba');
     scrollcont.children[0].classList.remove('manitoAnimacionCentro');
@@ -3729,10 +3736,6 @@ function busquedaManual() {
     const selector5 = document.menu5.selector5;
     const ingHora = document.getElementById('ingHora')
     const boton2 = document.getElementById('boton2')
-    let mostrar1 = document.getElementById('mostrar1')
-    let mostrar2 = document.getElementById('mostrar2')
-    let mostrar3 = document.getElementById('mostrar3')
-    let mostrar4 = document.getElementById('mostrar4')
     const opcionbase3 = selector3[0];
     const opcionbase4 = selector4[0];
     const opcionbase5 = selector5[0];
@@ -4149,8 +4152,8 @@ function busquedaManual() {
     })
 
     indicacioncont.addEventListener('click', function () {
-        $('.mensaje2').css('display', 'none');
-        $('.resultados').css('display', 'none');
+        // $('.mensaje2').css('display', 'none');
+        // $('.resultados').css('display', 'none');
         $('.resultadosOpcion2').css('display', 'none');
         resultadoscont.children[0].classList.remove('resultadosOpcion2')
         linea2.textContent = '';
