@@ -3720,7 +3720,12 @@ indicacioncont.addEventListener('click', () => {
     scrollcont.children[0].classList.remove('manitoAnimacionArriba');
     scrollcont.children[0].classList.remove('manitoAnimacionCentro');
     resultadoscont.children[0].classList.remove('resultadosOpcion2');
-    resultadoscont.classList.replace('opacarFondo', 'normalizarFondo');
+    if(resultadoscont.classList.contains('opacaFondo')){
+            resultadoscont.classList.replace('opacarFondo', 'normalizarFondo');
+        }
+        else{
+            resultadoscont.classList.add('normalizarFondo')
+        }
     
     setTimeout( ()=> {
         $('.mensaje2').css('display', 'none'),borrarGlobos(),
@@ -4165,7 +4170,12 @@ function busquedaManual() {
         resultadoscont.children[0].classList.remove('resultadosOpcion2')
         linea2.textContent = '';
         linea3.textContent = '';
-        resultadoscont.classList.replace('opacarFondo', 'normalizarFondo');
+        if(resultadoscont.classList.contains('opacaFondo')){
+            resultadoscont.classList.replace('opacarFondo', 'normalizarFondo');
+        }
+        else{
+            resultadoscont.classList.add('normalizarFondo')
+        }
         setTimeout( ()=> {
             $('.mensaje2').css('display', 'none'),borrarGlobos(),
             borrarManito();

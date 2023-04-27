@@ -1012,7 +1012,7 @@ body::-webkit-scrollbar-track {
 }
 
 .mensajeIrse {
-    animation: irse .5s linear forwards;
+    animation: irse .1s linear forwards;
 }
 
 @keyframes irse {
