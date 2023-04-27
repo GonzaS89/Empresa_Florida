@@ -4,8 +4,10 @@
     --azul: #455ff4;
     --rojo: #f56e6e;
     --rojo2: #f93a3a;
+    --rojo2Linear:linear-gradient(180deg, rgba(238,9,9,1) 2%, rgba(249,38,38,1) 24%, rgba(248,38,38,1) 26%, rgba(207,34,34,1) 81%);
     --fondoOpaco: #5b111157;
-    --fondoAzul: rgb(31, 77, 134);
+    --fondoAzul:rgb(69,95,244);
+    --fondoAzulLinear: linear-gradient(180deg, rgba(69,95,244,1) 2%, rgba(29,60,250,1) 29%, rgba(20,47,210,1) 81%);
     --fuentePrincipal: 'Nunito', sans-serif;
     --fuenteSec: 'Dosis', sans-serif;
     --fuenteTer:'Titan One', cursive;
@@ -69,7 +71,7 @@ body::-webkit-scrollbar-track {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: var(--rojo2);
+    background:var(--rojo2Linear);
     width: 50%;
     border-radius: 50px;
     margin: 30px auto;
@@ -214,13 +216,13 @@ body::-webkit-scrollbar-track {
 
 #minutos {
     font-size: 20px;
-    background-color: var(--azul);
     height: 20%;
     border-radius: 10px;
 }
 #minutos,
 #mes{
     width: 100%;
+    background: var(--fondoAzulLinear);
 }
 
 @keyframes zoomear{
@@ -409,7 +411,7 @@ body::-webkit-scrollbar-track {
 
 #busquedaManual,
 #busquedaAuto {
-    background-color: var(--azul);
+    background:var(--fondoAzulLinear);
     color: var(--blanco);
     height: 50px;
     width: 300px;
@@ -599,7 +601,8 @@ body::-webkit-scrollbar-track {
     align-items: center;
     height: 60px;
     width: 150px;
-    background-color: var(--azul);
+    /* background: var(--fondoAzul); */
+    background: var(--fondoAzulLinear);
     border-radius: 10px;
     font-family: var(--fuenteSec);
     font-size: 15px;
@@ -1012,7 +1015,7 @@ body::-webkit-scrollbar-track {
 }
 
 .mensajeIrse {
-    animation: irse 1s linear forwards;
+    animation: irse .5s linear forwards;
 }
 
 @keyframes irse {
