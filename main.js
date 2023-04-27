@@ -3720,8 +3720,12 @@ indicacioncont.addEventListener('click', () => {
     scrollcont.children[0].classList.remove('manitoAnimacionArriba');
     scrollcont.children[0].classList.remove('manitoAnimacionCentro');
     resultadoscont.children[0].classList.remove('resultadosOpcion2');
-    borrarGlobos();
-    borrarManito();
+    resultadoscont.classList.replace('opacarFondo', 'normalizarFondo');
+    
+    setTimeout( ()=> {
+        $('.mensaje2').css('display', 'none'),borrarGlobos(),
+        borrarManito();
+    },1000)
 })
 
 
@@ -4143,6 +4147,11 @@ function busquedaManual() {
             $('.resultados').css('display', 'flex');
             $('.resultadosOpcion2').css('display', 'flex');
             $('.mensaje2').css('display', 'flex');
+            if(mensaje2.classList.contains('mensajeIrse')){
+                mensaje2.classList.replace('mensajeIrse', 'mensajeAparece')
+            }else{
+                mensaje2.classList.add('mensajeAparece')
+            }
             setTimeout(() => {
                 irAlObjeto()
             }, 750);
@@ -4152,13 +4161,15 @@ function busquedaManual() {
     })
 
     indicacioncont.addEventListener('click', function () {
-        // $('.mensaje2').css('display', 'none');
-        // $('.resultados').css('display', 'none');
         $('.resultadosOpcion2').css('display', 'none');
         resultadoscont.children[0].classList.remove('resultadosOpcion2')
         linea2.textContent = '';
         linea3.textContent = '';
-        borrarManito();
+        resultadoscont.classList.replace('opacarFondo', 'normalizarFondo');
+        setTimeout( ()=> {
+            $('.mensaje2').css('display', 'none'),borrarGlobos(),
+            borrarManito();
+        },1000)
     })
 }
 

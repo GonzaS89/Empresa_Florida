@@ -4,6 +4,7 @@
     --azul: #455ff4;
     --rojo: #f56e6e;
     --rojo2: #f93a3a;
+    --fondoOpaco: #5b111157;
     --fondoAzul: rgb(31, 77, 134);
     --fuentePrincipal: 'Nunito', sans-serif;
     --fuenteSec: 'Dosis', sans-serif;
@@ -703,7 +704,7 @@ body::-webkit-scrollbar-track {
         background-color: var(--rojo2);
     }
     100%{
-        background-color: rgba(0, 0, 0, 0.631);
+        background-color: var(--fondoOpaco);
     }
 }
 
@@ -1000,23 +1001,25 @@ body::-webkit-scrollbar-track {
 
 @keyframes aparece {
     0% {
-        transform: translateX(-100%);
+        /* transform: translateX(-100%); */
         filter: opacity(0%);
     }
 
     100% {
-        transform: translateX(0);
+        /* transform: translateX(0); */
+        filter: opacity(100%);
     }
 }
 
 .mensajeIrse {
-    animation: irse .25s linear forwards;
+    animation: irse .5s linear forwards;
 }
 
 @keyframes irse {
     
     100% {
-        transform: translateX(100%);
+        /* transform: translateX(100%); */
+        filter: opacity(0%);
     }
 }
 
