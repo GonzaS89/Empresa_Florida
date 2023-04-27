@@ -870,6 +870,11 @@ const horariosLvSMAl = [
         "recorrido": "Terminal → Banda R.S. → Alderetes → Talar → Florida → Esquina Lastra → Fortín → Mayo(por abajo)"
     },
     {
+        "nombre": "20:20",
+        "salida": 20.3,
+        "recorrido": "Terminal → Comisaria 11 → Cnel. Suarez → Gdor. del Campo → Alternativa → Talar → Florida → B° La Cancha"
+    },
+    {
         "nombre": "20:30",
         "salida": 20.3,
         "recorrido": "Terminal → Banda R.S. → Alderetes → Talar → Florida → Esquina Lastra → Fortín"
