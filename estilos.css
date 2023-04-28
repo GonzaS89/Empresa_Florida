@@ -346,7 +346,7 @@ body::-webkit-scrollbar-track {
 #selector3,
 #selector4,
 #selector5,
-#ingHora {
+#selector6{
     display: none;
 }
 
@@ -365,7 +365,7 @@ body::-webkit-scrollbar-track {
     border-radius: 5px;
     font-size: 15px;
     font-weight: bold;
-    background-color: var(--blanco);
+    background:var(--fondoGrisLinear);
 }
 
 #ingHora {
@@ -888,7 +888,7 @@ body::-webkit-scrollbar-track {
     margin: 15px;
     border: none;
     border: .5px solid white;
-    background-color: var(--blanco);
+    background-color: white;
     position: relative;
     height: 80%;
     gap: 2.5px;

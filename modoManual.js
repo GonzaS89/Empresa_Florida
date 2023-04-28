@@ -8,7 +8,6 @@ function busquedaManual() {
     const selector4 = document.menu4.selector4;
     const selector5 = document.menu5.selector5;
     const selector6 = document.menu6.selector6;
-    const ingHora = document.getElementById('ingHora')
     const boton2 = document.getElementById('boton2')
     const opcionbase3 = selector3[0];
     const opcionbase4 = selector4[0];
@@ -67,7 +66,7 @@ function busquedaManual() {
         $('#selector3').css('display', 'none');
         $('#selector4').css('display', 'none');
         $('#selector5').css('display', 'none');
-        $('#ingHora').css('display', 'none');
+        // $('#ingHora').css('display', 'none');
         $('.aclaracion').css('display', 'none');
         opcionbase3.selected = true;
         opcionbase4.selected = true;
@@ -78,6 +77,7 @@ function busquedaManual() {
     botonOrigenCapital.addEventListener('click', function () {
         $('#selector3').css('display', 'flex');
         $('#selector5').css('display', 'flex');
+        $('#selector6').css('display', 'flex');
         $('#ingHora').css('display', 'flex');
         $('#selector4').css('display', 'none');
         $('#origenCapital').css('background-color', 'black');
@@ -86,12 +86,12 @@ function busquedaManual() {
         $('#capitalDestino').css('color', 'var(--black');
         opcionbase4.selected = true;
         opcionbase5.selected = true;
-        ingHora.value = ''
     })
 
     botonCapitalDestino.addEventListener('click', function () {
         $('#selector4').css('display', 'flex');
         $('#selector5').css('display', 'flex');
+        $('#selector6').css('display', 'flex');
         $('#ingHora').css('display', 'flex');
         $('#selector3').css('display', 'none');
         $('#capitalDestino').css('background-color', 'black');
@@ -100,24 +100,18 @@ function busquedaManual() {
         $('#origenCapital').css('color', 'var(--black');
         opcionbase3.selected = true;
         opcionbase5.selected = true;
-        ingHora.value = ''
     })
 
-    boton2.addEventListener('click', function () {
+    
 
-        let listaDelDia2 = []
-        let listaDiferencias3 = [];
-        let horariosEnEnteros2 = [];
-        let proximo = 3000;
+    // if (opcionbase5.selected == true) {
+    //     posicion5 = 0;
+    // }
 
-        // Definimos la posicion del selector 3
-        if (opcionbase3.selected == true) {
-            posicion3 = 0
-        }
-
-        for (opcion of selector3) {
+    function obtenerPosicion3 () {
+        for (opcion of selector) {
             if (opcion.selected) {
-                valorSeleccionado3 = opcion
+                valorSeleccionado3 = opcion;
             }
         }
 
@@ -128,14 +122,9 @@ function busquedaManual() {
         for (i = 0; i < valores3.length; i++) {
             posicion3 = valores3.indexOf(valorSeleccionado3)
         }
-
-        // Definimos la posicion del selector 4
-
-        if (opcionbase4.selected == true) {
-            posicion4 = 0;
-        }
-
-        for (opcion of selector4) {
+    }
+    function obtenerPosicion4 () {
+        for (opcion of selector) {
             if (opcion.selected) {
                 valorSeleccionado4 = opcion;
             }
@@ -148,14 +137,9 @@ function busquedaManual() {
         for (i = 0; i < valores4.length; i++) {
             posicion4 = valores4.indexOf(valorSeleccionado4)
         }
-
-        // Definimos la posicion del selector 5
-
-        if (opcionbase5.selected == true) {
-            posicion5 = 0;
-        }
-
-        for (opcion of selector5) {
+    }
+    function obtenerPosicion5 () {
+        for (opcion of selector) {
             if (opcion.selected) {
                 valorSeleccionado5 = opcion;
             }
@@ -168,65 +152,69 @@ function busquedaManual() {
         for (i = 0; i < valores5.length; i++) {
             posicion5 = valores5.indexOf(valorSeleccionado5)
         }
-
-        if (opcionbase6.selected == true) {
-            posicion6 = 0;
-        }
-
-        for (opcion of selector6) {
+        return posicion5;
+    }
+    let pos5 = obtenerPosicion5();
+    function obtenerPosicion6 () {
+        for (opcion of selector) {
             if (opcion.selected) {
                 valorSeleccionado6 = opcion;
             }
         }
 
         for (i = 0; i < selector6.length; i++) {
-            valores6.push(selector5[i])
+            valores6.push(selector6[i])
         }
 
         for (i = 0; i < valores6.length; i++) {
             posicion6 = valores6.indexOf(valorSeleccionado6)
         }
+    }
+    // function generarTitulos () {
+    //     if (opcionbase4.selected == true && opcionbase3.selected == false) {
+    //         ruta2 = todosDestinoTucuman[posicion3 - 1];
+    //         linea2.textContent = selector3[posicion3].label;
+    //     }
 
-        // Aqui definimos donde localidad de salida y camino
+    //     if (opcionbase3.selected == true && opcionbase4.selected == false) {
+    //         ruta2 = todosTucumanDestino[posicion4 - 1];
+    //         linea2.textContent = selector4[posicion4].label;
+    //     }
+    //     if ((posicion5 - 1) == 0) {
+    //         linea3.textContent = `De ${selector5[posicion5].label}`;
+    //     }
+    //     else {
+    //         linea3.textContent = `Días ${selector5[posicion5].label}`;
+    //     }
+    // }
+    obtenerPosicion3();
+    obtenerPosicion4();
 
-        if (opcionbase4.selected == true && opcionbase3.selected == false) {
-            ruta2 = todosDestinoTucuman[posicion3 - 1];
-            linea2.textContent = selector3[posicion3].label;
-        }
-
-        if (opcionbase3.selected == true && opcionbase4.selected == false) {
-            ruta2 = todosTucumanDestino[posicion4 - 1];
-            linea2.textContent = selector4[posicion4].label;
-        }
-
-
-        //    Aqui definimos el array dependiendo el dia de la semana
-
-        function obtenerRuta2(x) {
-            if ((posicion5 - 1) == 0) {
-                diaRango2 = x[1].slice(0, x[1].length);
-            }
-            if ((posicion5 - 1) == 1) {
-                diaRango2 = x[2].slice(0, x[2].length);
-            }
-            if ((posicion5 - 1) == 2) {
-                diaRango2 = x[0].slice(0, x[0].length);
-            }
-
-            return diaRango2;
-        }
-
-        let rutaObtenidaManual = obtenerRuta2(ruta2)
-
-
+    function obtenerRuta2(x) {
         if ((posicion5 - 1) == 0) {
-            linea3.textContent = `De ${selector5[posicion5].label}`;
+            diaRango2 = x[1].slice(0, x[1].length);
         }
-        else {
-            linea3.textContent = `Días ${selector5[posicion5].label}`;
+        if ((posicion5 - 1) == 1) {
+            diaRango2 = x[2].slice(0, x[2].length);
         }
+        if ((posicion5 - 1) == 2) {
+            diaRango2 = x[0].slice(0, x[0].length);
+        }
+        return diaRango2;
+    }
+
+    let rutaObtenidaManual = obtenerRuta2(ruta2)
+    
+
+    console.log(rutaObtenidaManual)
 
 
+    boton2.addEventListener('click', function () {
+
+        let listaDelDia2 = []
+        let listaDiferencias3 = [];
+        let horariosEnEnteros2 = [];
+        let proximo = 3000;    
 
         // / Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
 
@@ -243,15 +231,15 @@ function busquedaManual() {
             horariosEnEnteros2.push(horaMinutosEnEnteros);
         }
 
-        if (ingHora.value == '' || ingHora.value > 23) {
-            mensajeError.textContent = 'Ingresa un número entre 0 y 23'
-            $('#mensajeError').css('display', 'flex')
-            setTimeout(() => {
-                mensajeError.remove(), ingHora.value = '';
-            }, 2000)
+        // if (ingHora.value == '' || ingHora.value > 23) {
+        //     mensajeError.textContent = 'Ingresa un número entre 0 y 23'
+        //     $('#mensajeError').css('display', 'flex')
+        //     setTimeout(() => {
+        //         mensajeError.remove(), ingHora.value = '';
+        //     }, 2000)
 
-        }
-        else {
+        // }
+        
             if (ingHora.value < 10) {
                 tituloResultado.textContent = `Servicios a partir de las 0${ingHora.value}:00 Hrs`;
             }
@@ -314,7 +302,10 @@ function busquedaManual() {
             contruirGlobos(rutaObtenidaManual,resultadoscontainer,resultadoscont);
 
             
-
+            for (i = 0; i = rutaObtenidaManual.length; i++){
+                const opcion = document.createElement('OPTION')
+                selector6.appendChild(opcion);
+            }
 
 
             function irAlObjeto() {
@@ -449,7 +440,7 @@ function busquedaManual() {
             }, 750);
 
 
-        }
+        
     })
 
     indicacioncont.addEventListener('click', function () {
