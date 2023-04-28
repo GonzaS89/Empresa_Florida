@@ -8,10 +8,6 @@ function iniciarApp() {
     busquedaManual();
 };
 
-
-
-
-
 /* Funcion para determinar la localidad de posicion*/
 
 
@@ -33,8 +29,6 @@ let posicion;
 let posicion2;
 let label1;
 let label2;
-
-
 
 const botonDeCambio = document.querySelector('.botonDeCambio');
 const botonDeCambio2 = document.querySelector('.botonDeCambio2');
