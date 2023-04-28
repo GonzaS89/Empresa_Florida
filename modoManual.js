@@ -102,12 +102,6 @@ function busquedaManual() {
         opcionbase5.selected = true;
     })
 
-    
-
-    // if (opcionbase5.selected == true) {
-    //     posicion5 = 0;
-    // }
-
     function obtenerPosicion3 () {
         for (opcion of selector) {
             if (opcion.selected) {
@@ -123,6 +117,20 @@ function busquedaManual() {
             posicion3 = valores3.indexOf(valorSeleccionado3)
         }
     }
+    function obtenerPosicion() {
+        selector3.addEventListener('click', (e) => {
+            console.log(e)
+        })
+    }    
+    
+    obtenerPosicion()
+    
+
+    // if(opcionbase5.selected == true) {
+    //     posicion5 = 0;
+    // }
+
+    
     function obtenerPosicion4 () {
         for (opcion of selector) {
             if (opcion.selected) {
@@ -152,9 +160,7 @@ function busquedaManual() {
         for (i = 0; i < valores5.length; i++) {
             posicion5 = valores5.indexOf(valorSeleccionado5)
         }
-        return posicion5;
     }
-    let pos5 = obtenerPosicion5();
     function obtenerPosicion6 () {
         for (opcion of selector) {
             if (opcion.selected) {
@@ -170,25 +176,36 @@ function busquedaManual() {
             posicion6 = valores6.indexOf(valorSeleccionado6)
         }
     }
-    // function generarTitulos () {
-    //     if (opcionbase4.selected == true && opcionbase3.selected == false) {
-    //         ruta2 = todosDestinoTucuman[posicion3 - 1];
-    //         linea2.textContent = selector3[posicion3].label;
-    //     }
+    function generarRuta () {
+        if (opcionbase4.selected == true && opcionbase3.selected == false) {
+            ruta2 = todosDestinoTucuman[posicion3 - 1];
+        }
 
-    //     if (opcionbase3.selected == true && opcionbase4.selected == false) {
-    //         ruta2 = todosTucumanDestino[posicion4 - 1];
-    //         linea2.textContent = selector4[posicion4].label;
-    //     }
-    //     if ((posicion5 - 1) == 0) {
-    //         linea3.textContent = `De ${selector5[posicion5].label}`;
-    //     }
-    //     else {
-    //         linea3.textContent = `Días ${selector5[posicion5].label}`;
-    //     }
-    // }
+        if (opcionbase3.selected == true && opcionbase4.selected == false) {
+            ruta2 = todosTucumanDestino[posicion4 - 1];
+        }
+    }
+
+
+    function generarTitulos (){
+        if (opcionbase4.selected == true && opcionbase3.selected == false) {
+            linea2.textContent = selector3[posicion3].label;
+        }
+        if (opcionbase3.selected == true && opcionbase4.selected == false) {
+            
+            linea2.textContent = selector4[posicion4].label;
+        }
+        if ((posicion5 - 1) == 0) {
+            linea3.textContent = `De ${selector5[posicion5].label}`;
+        }
+        else {
+            linea3.textContent = `Días ${selector5[posicion5].label}`;
+        }
+    }
+    
     obtenerPosicion3();
     obtenerPosicion4();
+
 
     function obtenerRuta2(x) {
         if ((posicion5 - 1) == 0) {
@@ -206,7 +223,7 @@ function busquedaManual() {
     let rutaObtenidaManual = obtenerRuta2(ruta2)
     
 
-    console.log(rutaObtenidaManual)
+    
 
 
     boton2.addEventListener('click', function () {
