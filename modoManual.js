@@ -103,7 +103,7 @@ function busquedaManual() {
     })
 
     function obtenerPosicion3 () {
-        for (opcion of selector) {
+        for (opcion of selector3) {
             if (opcion.selected) {
                 valorSeleccionado3 = opcion;
             }
@@ -116,23 +116,12 @@ function busquedaManual() {
         for (i = 0; i < valores3.length; i++) {
             posicion3 = valores3.indexOf(valorSeleccionado3)
         }
+
+        return posicion3;
     }
-    function obtenerPosicion() {
-        selector3.addEventListener('click', (e) => {
-            console.log(e)
-        })
-    }    
-    
-    obtenerPosicion()
-    
 
-    // if(opcionbase5.selected == true) {
-    //     posicion5 = 0;
-    // }
-
-    
     function obtenerPosicion4 () {
-        for (opcion of selector) {
+        for (opcion of selector4) {
             if (opcion.selected) {
                 valorSeleccionado4 = opcion;
             }
@@ -145,9 +134,11 @@ function busquedaManual() {
         for (i = 0; i < valores4.length; i++) {
             posicion4 = valores4.indexOf(valorSeleccionado4)
         }
+        return posicion4;
     }
+
     function obtenerPosicion5 () {
-        for (opcion of selector) {
+        for (opcion of selector5) {
             if (opcion.selected) {
                 valorSeleccionado5 = opcion;
             }
@@ -160,9 +151,12 @@ function busquedaManual() {
         for (i = 0; i < valores5.length; i++) {
             posicion5 = valores5.indexOf(valorSeleccionado5)
         }
+        return posicion5;
     }
+
+
     function obtenerPosicion6 () {
-        for (opcion of selector) {
+        for (opcion of selector6) {
             if (opcion.selected) {
                 valorSeleccionado6 = opcion;
             }
@@ -175,78 +169,145 @@ function busquedaManual() {
         for (i = 0; i < valores6.length; i++) {
             posicion6 = valores6.indexOf(valorSeleccionado6)
         }
-    }
-    function generarRuta () {
-        if (opcionbase4.selected == true && opcionbase3.selected == false) {
-            ruta2 = todosDestinoTucuman[posicion3 - 1];
-        }
 
-        if (opcionbase3.selected == true && opcionbase4.selected == false) {
-            ruta2 = todosTucumanDestino[posicion4 - 1];
-        }
+        return posicion6;
     }
 
+    // setInterval ( ()=> {
+    //     obtenerPosicion3(),
+    //     obtenerPosicion4(),
+    //     obtenerPosicion5();
+    // },1000)
 
-    function generarTitulos (){
+        function obtenerRuta () {
+            if (opcionbase4.selected == true && opcionbase3.selected == false) {
+                ruta2 = todosDestinoTucuman[obtenerPosicion3() - 1];
+                return ruta2;
+
+            }
+
+
+            if (opcionbase3.selected == true && opcionbase4.selected == false) {
+                ruta2 = todosTucumanDestino[obtenerPosicion4() - 1];
+                return ruta2;
+            }
+        }
+
         if (opcionbase4.selected == true && opcionbase3.selected == false) {
-            linea2.textContent = selector3[posicion3].label;
+            linea2.textContent = selector3[obtenerPosicion3()].label;
         }
         if (opcionbase3.selected == true && opcionbase4.selected == false) {
-            
-            linea2.textContent = selector4[posicion4].label;
+            linea2.textContent = selector4[obtenerPosicion4()].label;
         }
-        if ((posicion5 - 1) == 0) {
-            linea3.textContent = `De ${selector5[posicion5].label}`;
+        if ((obtenerPosicion5() - 1) == 0) {
+            linea3.textContent = `De ${selector5[obtenerPosicion5()].label}`;
         }
         else {
-            linea3.textContent = `Días ${selector5[posicion5].label}`;
+            linea3.textContent = `Días ${selector5[obtenerPosicion5()].label}`;
         }
-    }
-    
-    obtenerPosicion3();
-    obtenerPosicion4();
+
 
 
     function obtenerRuta2(x) {
-        if ((posicion5 - 1) == 0) {
+        if ((obtenerPosicion5() - 1) == 0) {
             diaRango2 = x[1].slice(0, x[1].length);
+            return diaRango2;
         }
-        if ((posicion5 - 1) == 1) {
+        if ((obtenerPosicion5() - 1) == 1) {
             diaRango2 = x[2].slice(0, x[2].length);
+            return diaRango2;
         }
-        if ((posicion5 - 1) == 2) {
+        if ((obtenerPosicion5() - 1) == 2) {
             diaRango2 = x[0].slice(0, x[0].length);
+            return diaRango2;
         }
-        return diaRango2;
     }
 
-    let rutaObtenidaManual = obtenerRuta2(ruta2)
-    
+    let grilla;
 
+    function cargaRuta () {
+        setInterval ( ()=> {
+            obtenerRuta();
+            if(obtenerRuta2(ruta2) == undefined){
+                console.log('no');
+                return false;
+            }
+            else{
+                grilla = obtenerRuta2(ruta2);
+                return true;
+            }
+        },1000);
+    } 
+
+    function pararCarga () {
+        if(cargaRuta() == true) {
+            clearInterval(cargaRuta);
+        }
+    }
     
+    pararCarga();
+    // setInterval(() => {
+        
+    // },1000)
+
+
+    function crearListaHorarios () {
+        for (i = 0; i < grilla.length; i++) {
+            let option = document.createElement('OPTION')
+            option.label = `Servicio de las ${grilla[i].nombre}`;
+            option.classList.add('options')
+            selector6.appendChild(option);
+        }
+    }
+
+    function borrarHorarios () {
+        let arrayOptions = Array.prototype.slice.call(document.getElementsByClassName("options"), 0);
+        for (element of arrayOptions) {
+            element.remove();
+    }
+    }
+
+    // setInterval ( ()=> {
+    //     borrarHorarios()
+    // },5000)
+
+    let creacion = setInterval (()=> {
+        crearListaHorarios();
+        
+    },1000)
+
+    function pararCreacion () {
+        if(grilla.length) {
+            clearInterval(creacion);
+        }
+    }
+
+    setInterval( ()=> {
+        pararCreacion();
+    },1000)
 
 
     boton2.addEventListener('click', function () {
 
-        let listaDelDia2 = []
-        let listaDiferencias3 = [];
-        let horariosEnEnteros2 = [];
-        let proximo = 3000;    
+        // let listaDelDia2 = []
+        // let listaDiferencias3 = [];
+        // let horariosEnEnteros2 = [];
+        // let proximo = 3000;
 
         // / Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
 
-        for (i = 0; i < rutaObtenidaManual.length; i++) {
-            listaDelDia2.push(rutaObtenidaManual[i].salida);
-        }
+        // for (i = 0; i < grilla.length; i++) {
+        //     listaDelDia2.push(grilla[i].salida);
+        // }
 
         // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
 
-        for (let i = 0; i < listaDelDia2.length; i++) {
-            let horasEnEnteros = (Math.trunc(listaDelDia2[i])) * 60;
-            let minutosEnEnteros = (listaDelDia2[i] - (Math.trunc(listaDelDia2[i]))) * 100;
-            let horaMinutosEnEnteros = horasEnEnteros + minutosEnEnteros;
-            horariosEnEnteros2.push(horaMinutosEnEnteros);
-        }
+        // for (let i = 0; i < listaDelDia2.length; i++) {
+        //     let horasEnEnteros = (Math.trunc(listaDelDia2[i])) * 60;
+        //     let minutosEnEnteros = (listaDelDia2[i] - (Math.trunc(listaDelDia2[i]))) * 100;
+        //     let horaMinutosEnEnteros = horasEnEnteros + minutosEnEnteros;
+        //     horariosEnEnteros2.push(horaMinutosEnEnteros);
+        // }
 
         // if (ingHora.value == '' || ingHora.value > 23) {
         //     mensajeError.textContent = 'Ingresa un número entre 0 y 23'
@@ -256,19 +317,19 @@ function busquedaManual() {
         //     }, 2000)
 
         // }
-        
-            if (ingHora.value < 10) {
-                tituloResultado.textContent = `Servicios a partir de las 0${ingHora.value}:00 Hrs`;
-            }
-            else {
-                tituloResultado.textContent = `Servicios a partir de las ${ingHora.value}:00 Hrs`;
-            }
 
-            horaInputAMinutos = (ingHora.value) * 60
+            // if (ingHora.value < 10) {
+            //     tituloResultado.textContent = `Servicios a partir de las 0${ingHora.value}:00 Hrs`;
+            // }
+            // else {
+            //     tituloResultado.textContent = `Servicios a partir de las ${ingHora.value}:00 Hrs`;
+            // }
 
-            for (let i = 0; i < horariosEnEnteros2.length; i++) {
-                listaDiferencias3.push(horariosEnEnteros2[i] - horaInputAMinutos)
-            }
+            // horaInputAMinutos = (ingHora.value) * 60
+
+            // for (let i = 0; i < horariosEnEnteros2.length; i++) {
+            //     listaDiferencias3.push(horariosEnEnteros2[i] - horaInputAMinutos)
+            // }
 
             function contruirGlobos(ruta, contPadre, contHijo) {
                 if (ruta.length == 1) {
@@ -316,32 +377,20 @@ function busquedaManual() {
                 }
             }
 
-            contruirGlobos(rutaObtenidaManual,resultadoscontainer,resultadoscont);
+            contruirGlobos(grilla,resultadoscontainer,resultadoscont);
 
-            
-            for (i = 0; i = rutaObtenidaManual.length; i++){
-                const opcion = document.createElement('OPTION')
-                selector6.appendChild(opcion);
-            }
-
-
-            function irAlObjeto() {
-                let a = resultadoscont.children[indiceDeBusqueda];
-                a.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            };
-
-            for (let i = 0; i < listaDiferencias3.length; i++) {
-                if (listaDiferencias3[i] >= 0) {
-                    proximo = Math.min(proximo, listaDiferencias3[i]);
-                    indiceDeBusqueda = listaDiferencias3.indexOf(proximo);
-                }
-                else {
-                    indiceDeBusqueda = (rutaObtenidaManual.length) - 1;
-                }
-            }
-
-            if ((rutaObtenidaManual.length) > 1) {
-                if (indiceDeBusqueda == (rutaObtenidaManual.length) - 1) {
+            // for (let i = 0; i < listaDiferencias3.length; i++) {
+            //     if (listaDiferencias3[i] >= 0) {
+            //         proximo = Math.min(proximo, listaDiferencias3[i]);
+            //         indiceDeBusqueda = listaDiferencias3.indexOf(proximo);
+            //     }
+            //     else {
+            //         indiceDeBusqueda = (grilla.length) - 1;
+            //     }
+            // }
+            indiceDeBusqueda = obtenerPosicion6() - 1;
+            if ((grilla.length) > 1) {
+                if (indiceDeBusqueda == (grilla.length) - 1) {
                     scrollcont.children[0].classList.add('manitoAnimacionAbajo');
                 }
                 else if (indiceDeBusqueda == 0) {
@@ -351,6 +400,11 @@ function busquedaManual() {
                     scrollcont.children[0].classList.add('manitoAnimacionCentro');
                 }
             }
+
+            function irAlObjeto() {
+                let a = resultadoscont.children[(indiceDeBusqueda)];
+                a.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            };
             resultadoscont.children[indiceDeBusqueda].classList.add('resaltado');
             resultadoscont.classList.add('opacarFondo');
             mensaje2.appendChild(indicacioncont);
@@ -361,49 +415,49 @@ function busquedaManual() {
                 }
             }
 
-            
+
 
             for (i = 0; i < (resultadoscont.children).length; i++) {
                 nombreServicioManual = (resultadoscont.children[i]).children[1];
                 recorridoServicioManual = (resultadoscont.children[i]).children[2];
                 recorridoServicio2Manual = (resultadoscont.children[i]).children[3];
-                if ((Object.keys(rutaObtenidaManual[i])).length > 3) {
-                    if (rutaObtenidaManual.length == 1 && i == 0) {
-                        nombreServicioManual.textContent = `Únicos servicios del día ${rutaObtenidaManual[i].nombre} Hrs`;
+                if ((Object.keys(grilla[i])).length > 3) {
+                    if (grilla.length == 1 && i == 0) {
+                        nombreServicioManual.textContent = `Únicos servicios del día ${grilla[i].nombre} Hrs`;
                     }
                     else if (i == 0) {
-                        nombreServicioManual.textContent = `Primeros servicios del día ${rutaObtenidaManual[i].nombre} Hrs`;
+                        nombreServicioManual.textContent = `Primeros servicios del día ${grilla[i].nombre} Hrs`;
                     }
-                    else if (i == (rutaObtenidaManual.length) - 1) {
-                        nombreServicioManual.textContent = `Últimos servicios del día ${rutaObtenidaManual[i].nombre} Hrs`;
+                    else if (i == (grilla.length) - 1) {
+                        nombreServicioManual.textContent = `Últimos servicios del día ${grilla[i].nombre} Hrs`;
                     }
                     else {
-                        nombreServicioManual.textContent = `Servicios de las ${rutaObtenidaManual[i].nombre} Hrs`
+                        nombreServicioManual.textContent = `Servicios de las ${grilla[i].nombre} Hrs`
                     }
-                    recorridoServicioManual.textContent = `1° Recorrido: ${rutaObtenidaManual[i].recorrido}`;
-                    recorridoServicio2Manual.textContent = `2° Recorrido: ${rutaObtenidaManual[i].recorrido2}`;
+                    recorridoServicioManual.textContent = `1° Recorrido: ${grilla[i].recorrido}`;
+                    recorridoServicio2Manual.textContent = `2° Recorrido: ${grilla[i].recorrido2}`;
                 }
                 else {
-                    if (rutaObtenidaManual.length == 1 && i == 0) {
-                        nombreServicioManual.textContent = `Único servicio del día ${rutaObtenidaManual[i].nombre} Hrs`;
+                    if (grilla.length == 1 && i == 0) {
+                        nombreServicioManual.textContent = `Único servicio del día ${grilla[i].nombre} Hrs`;
                     }
                     else if (i == 0) {
-                        nombreServicioManual.textContent = `Primer servicio del día ${rutaObtenidaManual[i].nombre} Hrs`
+                        nombreServicioManual.textContent = `Primer servicio del día ${grilla[i].nombre} Hrs`
                     }
-                    else if (i == (rutaObtenidaManual.length) - 1) {
-                        nombreServicioManual.textContent = `Último servicio del día ${rutaObtenidaManual[i].nombre} Hrs`;
+                    else if (i == (grilla.length) - 1) {
+                        nombreServicioManual.textContent = `Último servicio del día ${grilla[i].nombre} Hrs`;
                     }
                     else {
-                        nombreServicioManual.textContent = `Servicio de las ${rutaObtenidaManual[i].nombre} Hrs`
+                        nombreServicioManual.textContent = `Servicio de las ${grilla[i].nombre} Hrs`
                     }
-                    recorridoServicioManual.textContent = `Recorrido: ${rutaObtenidaManual[i].recorrido}`;
+                    recorridoServicioManual.textContent = `Recorrido: ${grilla[i].recorrido}`;
 
                 }
-                //     else if (i > 0 && i < (rutaObtenidaManual.length) - 1){
-                //         nombreServicioManual.textContent = `Servicio de las ${rutaObtenidaManual[i].nombre} Hrs`;
+                //     else if (i > 0 && i < (grilla.length) - 1){
+                //         nombreServicioManual.textContent = `Servicio de las ${grilla[i].nombre} Hrs`;
                 //     }
 
-                //    
+                //
             }
 
 
@@ -457,7 +511,7 @@ function busquedaManual() {
             }, 750);
 
 
-        
+
     })
 
     indicacioncont.addEventListener('click', function () {
@@ -471,9 +525,13 @@ function busquedaManual() {
         else{
             resultadoscont.classList.add('normalizarFondo')
         }
+        cargaRuta(),
         setTimeout( ()=> {
-            $('.mensaje2').css('display', 'none'),borrarGlobos(),
+            $('.mensaje2').css('display', 'none'),borrarGlobos(),borrarHorarios(),cargaRuta(),
             borrarManito();
+        },1000)
+        setInterval( ()=> {
+            cargaRuta()
         },1000)
     })
 }
