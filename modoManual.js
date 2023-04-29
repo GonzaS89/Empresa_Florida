@@ -185,8 +185,6 @@ function busquedaManual() {
                 return ruta2;
 
             }
-
-
             if (opcionbase3.selected == true && opcionbase4.selected == false) {
                 ruta2 = todosTucumanDestino[obtenerPosicion4() - 1];
                 return ruta2;
@@ -224,32 +222,33 @@ function busquedaManual() {
     }
 
     let grilla;
+    let contador = 0;
 
-    function cargaRuta () {
-        setInterval ( ()=> {
-            obtenerRuta();
-            if(obtenerRuta2(ruta2) == undefined){
-                console.log('no');
-                return false;
-            }
-            else{
-                grilla = obtenerRuta2(ruta2);
-                return true;
-            }
-        },1000);
+    let cargaRuta =  function cargaRuta () {
+        obtenerRuta();
+        if(obtenerRuta2(ruta2) == undefined){
+            console.log('no');
+            return false;
+        }
+        else{
+            grilla = obtenerRuta2(ruta2);
+            contador = 1;
+            return true;
+        }
     } 
 
-    cargaRuta();
+    
+    setInterval(()=> {
+        cargaRuta();
+    },1000) 
+
 
     function pararCarga () {
-        if(cargaRuta() == true) {
-            console.log(1)
+        if(cargaRuta == true) {
             clearInterval(cargaRuta);
+            console.log(22)
         }
     }
-
-    pararCarga();
-
 
     
     // function stop () {
@@ -288,25 +287,40 @@ function busquedaManual() {
     // setInterval ( ()=> {
     //     borrarHorarios()
     // },5000)
+    
 
-    function dad () {
+    
         let creacion = setInterval (()=> {
             crearListaHorarios();
-            
-        },1000)
-    
-        function pararCreacion () {
-            if(grilla.length) {
-                clearInterval(creacion);
+        },1000);
+
+        function creaLista () {
+            if(contador > 0){
+                crearListaHorarios();
+                contador = 2;
             }
         }
-    
-        setInterval( ()=> {
-            pararCreacion();
+        setInterval ( ()=> {
+            creaLista();
+            ap();
         },1000)
-    }
+        
+        function ap () {
 
-    dad()
+        if(contador > 1){
+            function pararCreacion () {
+                if(grilla.length) {
+                    clearInterval(creacion);
+                }
+            }
+            setInterval( ()=> {
+                pararCreacion();
+            },1000)
+         }
+        }
+    
+
+    
 
     
 
@@ -535,7 +549,7 @@ function busquedaManual() {
             }, 750);
 
 
-
+            console.log(contador);
     })
 
     indicacioncont.addEventListener('click', function () {
