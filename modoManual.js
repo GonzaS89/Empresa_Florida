@@ -194,16 +194,16 @@ function busquedaManual() {
         }
 
         if (opcionbase4.selected == true && opcionbase3.selected == false) {
-            linea2.textContent = selector3[obtenerPosicion3()].label;
+            linea2.textContent = selector3[obtenerPosicion3() - 1].label;
         }
         if (opcionbase3.selected == true && opcionbase4.selected == false) {
-            linea2.textContent = selector4[obtenerPosicion4()].label;
+            linea2.textContent = selector4[obtenerPosicion4() - 1].label;
         }
-        if ((obtenerPosicion5() - 1) == 0) {
-            linea3.textContent = `De ${selector5[obtenerPosicion5()].label}`;
+        if ((obtenerPosicion5()) == 0) {
+            linea3.textContent = `De ${selector5[obtenerPosicion5() + 1].label}`;
         }
         else {
-            linea3.textContent = `Días ${selector5[obtenerPosicion5()].label}`;
+            linea3.textContent = `Días ${selector5[obtenerPosicion5() + 1].label}`;
         }
 
 
@@ -239,16 +239,33 @@ function busquedaManual() {
         },1000);
     } 
 
+    cargaRuta();
+
     function pararCarga () {
         if(cargaRuta() == true) {
+            console.log(1)
             clearInterval(cargaRuta);
         }
     }
-    
+
     pararCarga();
-    // setInterval(() => {
-        
-    // },1000)
+
+
+    
+    // function stop () {
+    //     setInterval(() => {
+    //         pararCarga();
+    //     },1000)
+    // }
+
+    // stop();
+
+    // function detenerStop () {
+    //     clearInterval(stop());
+    //     cargaRuta();
+    //     crearListaHorarios()
+    // }
+    
 
 
     function crearListaHorarios () {
@@ -259,6 +276,7 @@ function busquedaManual() {
             selector6.appendChild(option);
         }
     }
+
 
     function borrarHorarios () {
         let arrayOptions = Array.prototype.slice.call(document.getElementsByClassName("options"), 0);
@@ -271,20 +289,26 @@ function busquedaManual() {
     //     borrarHorarios()
     // },5000)
 
-    let creacion = setInterval (()=> {
-        crearListaHorarios();
-        
-    },1000)
-
-    function pararCreacion () {
-        if(grilla.length) {
-            clearInterval(creacion);
+    function dad () {
+        let creacion = setInterval (()=> {
+            crearListaHorarios();
+            
+        },1000)
+    
+        function pararCreacion () {
+            if(grilla.length) {
+                clearInterval(creacion);
+            }
         }
+    
+        setInterval( ()=> {
+            pararCreacion();
+        },1000)
     }
 
-    setInterval( ()=> {
-        pararCreacion();
-    },1000)
+    dad()
+
+    
 
 
     boton2.addEventListener('click', function () {
@@ -519,6 +543,10 @@ function busquedaManual() {
         resultadoscont.children[0].classList.remove('resultadosOpcion2')
         linea2.textContent = '';
         linea3.textContent = '';
+        opcionbase3.selected = true;
+        opcionbase4.selected = true;
+        opcionbase5.selected = true;
+        opcionbase6.selected = true;
         if(resultadoscont.classList.contains('opacaFondo')){
             resultadoscont.classList.replace('opacarFondo', 'normalizarFondo');
         }
@@ -527,11 +555,8 @@ function busquedaManual() {
         }
         cargaRuta(),
         setTimeout( ()=> {
-            $('.mensaje2').css('display', 'none'),borrarGlobos(),borrarHorarios(),cargaRuta(),
+            $('.mensaje2').css('display', 'none'),borrarGlobos(),borrarHorarios(),
             borrarManito();
-        },1000)
-        setInterval( ()=> {
-            cargaRuta()
-        },1000)
+        },1000);
     })
 }
