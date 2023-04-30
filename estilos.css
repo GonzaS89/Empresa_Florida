@@ -1069,7 +1069,7 @@ body::-webkit-scrollbar-track {
     align-items: center;
     height: 60px;
     width: 180px;
-    background-color: #fefbfb;
+    background:var(--fondoGrisLinear);
     border-radius: 20px;
     margin-top: 20px;
     /* animation: moverIndicacion 1.5s linear .5s infinite alternate-reverse; */
@@ -1310,3 +1310,4 @@ body::-webkit-scrollbar-track {
     height: 100%;
     background-color: rgb(32, 210, 32);
 }
+

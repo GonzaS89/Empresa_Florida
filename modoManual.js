@@ -38,6 +38,7 @@ function busquedaManual() {
     let recorridoServicio2Manual;
     const resultadoscont = document.querySelector('.resultados-cont');
     const mensaje2 = document.querySelector('.mensaje2');
+    let indiceDeBusquedaManual = 0;
 
 
     botonManual.addEventListener('click', function () {
@@ -155,30 +156,18 @@ function busquedaManual() {
     }
 
 
-    function obtenerPosicion6 () {
-        for (opcion of selector6) {
-            if (opcion.selected) {
-                valorSeleccionado6 = opcion;
-            }
-        }
+    
+        
 
-        for (i = 0; i < selector6.length; i++) {
-            valores6.push(selector6[i])
-        }
+        
 
-        for (i = 0; i < valores6.length; i++) {
-            posicion6 = valores6.indexOf(valorSeleccionado6)
-        }
 
-        return posicion6;
-    }
 
     // setInterval ( ()=> {
     //     obtenerPosicion3(),
     //     obtenerPosicion4(),
     //     obtenerPosicion5();
     // },1000)
-
         function obtenerRuta () {
             if (opcionbase4.selected == true && opcionbase3.selected == false) {
                 ruta2 = todosDestinoTucuman[obtenerPosicion3() - 1];
@@ -191,136 +180,82 @@ function busquedaManual() {
             }
         }
 
-        if (opcionbase4.selected == true && opcionbase3.selected == false) {
-            linea2.textContent = selector3[obtenerPosicion3() - 1].label;
-        }
-        if (opcionbase3.selected == true && opcionbase4.selected == false) {
-            linea2.textContent = selector4[obtenerPosicion4() - 1].label;
-        }
-        if ((obtenerPosicion5()) == 0) {
-            linea3.textContent = `De ${selector5[obtenerPosicion5() + 1].label}`;
-        }
-        else {
-            linea3.textContent = `Días ${selector5[obtenerPosicion5() + 1].label}`;
-        }
+        
+
+
+        // if (opcionbase4.selected == true && opcionbase3.selected == false) {
+        //     linea2.textContent = selector3[obtenerPosicion3() - 1].label;
+        // }
+        // if (opcionbase3.selected == true && opcionbase4.selected == false) {
+        //     linea2.textContent = selector4[obtenerPosicion4() - 1].label;
+        // }
+        // if ((obtenerPosicion5()) == 0) {
+        //     linea3.textContent = `De ${selector5[obtenerPosicion5() + 1].label}`;
+        // }
+        // else {
+        //     linea3.textContent = `Días ${selector5[obtenerPosicion5() + 1].label}`;
+        // }
 
 
 
-    function obtenerRuta2(x) {
+    const obtenerRuta2 = ()=> {
         if ((obtenerPosicion5() - 1) == 0) {
-            diaRango2 = x[1].slice(0, x[1].length);
+            diaRango2 = ruta2[1].slice(0, ruta2[1].length);
             return diaRango2;
         }
         if ((obtenerPosicion5() - 1) == 1) {
-            diaRango2 = x[2].slice(0, x[2].length);
+            diaRango2 = ruta2[2].slice(0, ruta2[2].length);
             return diaRango2;
         }
         if ((obtenerPosicion5() - 1) == 2) {
-            diaRango2 = x[0].slice(0, x[0].length);
+            diaRango2 = ruta2[3].slice(0, ruta2[0].length);
             return diaRango2;
-        }
-    }
+        };
+    };
 
-    let grilla;
-    let contador = 0;
-
-    let cargaRuta =  function cargaRuta () {
-        obtenerRuta();
-        if(obtenerRuta2(ruta2) == undefined){
-            console.log('no');
-            return false;
-        }
-        else{
-            grilla = obtenerRuta2(ruta2);
-            contador = 1;
-            return true;
-        }
-    } 
-
-    
-    setInterval(()=> {
-        cargaRuta();
-    },1000) 
-
-
-    function pararCarga () {
-        if(cargaRuta == true) {
-            clearInterval(cargaRuta);
-            console.log(22)
-        }
-    }
-
-    
-    // function stop () {
-    //     setInterval(() => {
-    //         pararCarga();
-    //     },1000)
-    // }
-
-    // stop();
-
-    // function detenerStop () {
-    //     clearInterval(stop());
-    //     cargaRuta();
-    //     crearListaHorarios()
-    // }
-    
-
+    diaRango2 = obtenerRuta2();
 
     function crearListaHorarios () {
-        for (i = 0; i < grilla.length; i++) {
-            let option = document.createElement('OPTION')
-            option.label = `Servicio de las ${grilla[i].nombre}`;
-            option.classList.add('options')
+        for (i = 0; i < diaRango2.length; i++) {
+            let option = document.createElement('OPTION');
+            option.label = `Servicio de las ${diaRango2[i].nombre}`;
+            option.classList.add('options');
             selector6.appendChild(option);
+        }
+    };
+
+    let contador = 0;
+    
+    function llamado () {
+        if(contador == 0) {
+            console.log(obtenerRuta(),obtenerRuta2());
+            if(obtenerRuta2() !== undefined){
+                crearListaHorarios();
+                contador = 1;
+                console.log('Se han cargado los horarios')
+            }
         }
     }
 
+    function stop ()  {
+        if(contador == 1){
+            if((obtenerRuta2().length)){
+                contador = 2
+            }
+            console.log('Se detuvo la carga')
+        }
+    }
 
     function borrarHorarios () {
         let arrayOptions = Array.prototype.slice.call(document.getElementsByClassName("options"), 0);
         for (element of arrayOptions) {
             element.remove();
-    }
-    }
-
-    // setInterval ( ()=> {
-    //     borrarHorarios()
-    // },5000)
+    };
+    };
     
-
-    
-        let creacion = setInterval (()=> {
-            crearListaHorarios();
-        },1000);
-
-        function creaLista () {
-            if(contador > 0){
-                crearListaHorarios();
-                contador = 2;
-            }
-        }
-        setInterval ( ()=> {
-            creaLista();
-            ap();
-        },1000)
-        
-        function ap () {
-
-        if(contador > 1){
-            function pararCreacion () {
-                if(grilla.length) {
-                    clearInterval(creacion);
-                }
-            }
-            setInterval( ()=> {
-                pararCreacion();
-            },1000)
-         }
-        }
-    
-
-    
+    setInterval ( ()=> {
+        llamado(),stop()
+    },1000)
 
     
 
@@ -334,8 +269,8 @@ function busquedaManual() {
 
         // / Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
 
-        // for (i = 0; i < grilla.length; i++) {
-        //     listaDelDia2.push(grilla[i].salida);
+        // for (i = 0; i < diaRango2.length; i++) {
+        //     listaDelDia2.push(diaRango2[i].salida);
         // }
 
         // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
@@ -368,6 +303,20 @@ function busquedaManual() {
             // for (let i = 0; i < horariosEnEnteros2.length; i++) {
             //     listaDiferencias3.push(horariosEnEnteros2[i] - horaInputAMinutos)
             // }
+
+            for (opcion of selector6) {
+                if (opcion.selected) {
+                    valorSeleccionado6 = opcion;
+                }
+            }
+    
+            for (i = 0; i < selector6.length; i++) {
+                valores6.push(selector6[i])
+            }
+    
+            for (i = 0; i < valores6.length; i++) {
+                posicion6 = valores6.indexOf(valorSeleccionado6)
+            }
 
             function contruirGlobos(ruta, contPadre, contHijo) {
                 if (ruta.length == 1) {
@@ -415,7 +364,7 @@ function busquedaManual() {
                 }
             }
 
-            contruirGlobos(grilla,resultadoscontainer,resultadoscont);
+            contruirGlobos(diaRango2,resultadoscontainer,resultadoscont);
 
             // for (let i = 0; i < listaDiferencias3.length; i++) {
             //     if (listaDiferencias3[i] >= 0) {
@@ -423,15 +372,16 @@ function busquedaManual() {
             //         indiceDeBusqueda = listaDiferencias3.indexOf(proximo);
             //     }
             //     else {
-            //         indiceDeBusqueda = (grilla.length) - 1;
+            //         indiceDeBusqueda = (diaRango2.length) - 1;
             //     }
             // }
-            indiceDeBusqueda = obtenerPosicion6() - 1;
-            if ((grilla.length) > 1) {
-                if (indiceDeBusqueda == (grilla.length) - 1) {
+
+            indiceDeBusquedaManual = posicion6 - 1;
+            if ((diaRango2.length) > 1) {
+                if (indiceDeBusquedaManual == (diaRango2.length) - 1) {
                     scrollcont.children[0].classList.add('manitoAnimacionAbajo');
                 }
-                else if (indiceDeBusqueda == 0) {
+                else if (indiceDeBusquedaManual == 0) {
                     scrollcont.children[0].classList.add('manitoAnimacionArriba');
                 }
                 else {
@@ -440,15 +390,15 @@ function busquedaManual() {
             }
 
             function irAlObjeto() {
-                let a = resultadoscont.children[(indiceDeBusqueda)];
+                let a = resultadoscont.children[(indiceDeBusquedaManual)];
                 a.scrollIntoView({ behavior: 'smooth', block: 'center' });
             };
-            resultadoscont.children[indiceDeBusqueda].classList.add('resaltado');
+            // resultadoscont.children[indiceDeBusquedaManual].classList.add('resaltado');
             resultadoscont.classList.add('opacarFondo');
             mensaje2.appendChild(indicacioncont);
 
             for (i = 0; i < resultadoscont.children.length; i++) {
-                if (i < indiceDeBusqueda || i > indiceDeBusqueda) {
+                if (i < indiceDeBusquedaManual || i > indiceDeBusquedaManual) {
                     resultadoscont.children[i].classList.add('opacar')
                 }
             }
@@ -459,36 +409,36 @@ function busquedaManual() {
                 nombreServicioManual = (resultadoscont.children[i]).children[1];
                 recorridoServicioManual = (resultadoscont.children[i]).children[2];
                 recorridoServicio2Manual = (resultadoscont.children[i]).children[3];
-                if ((Object.keys(grilla[i])).length > 3) {
-                    if (grilla.length == 1 && i == 0) {
-                        nombreServicioManual.textContent = `Únicos servicios del día ${grilla[i].nombre} Hrs`;
+                if ((Object.keys(diaRango2[i])).length > 3) {
+                    if (diaRango2.length == 1 && i == 0) {
+                        nombreServicioManual.textContent = `Únicos servicios del día ${diaRango2[i].nombre} Hrs`;
                     }
                     else if (i == 0) {
-                        nombreServicioManual.textContent = `Primeros servicios del día ${grilla[i].nombre} Hrs`;
+                        nombreServicioManual.textContent = `Primeros servicios del día ${diaRango2[i].nombre} Hrs`;
                     }
-                    else if (i == (grilla.length) - 1) {
-                        nombreServicioManual.textContent = `Últimos servicios del día ${grilla[i].nombre} Hrs`;
+                    else if (i == (diaRango2.length) - 1) {
+                        nombreServicioManual.textContent = `Últimos servicios del día ${diaRango2[i].nombre} Hrs`;
                     }
                     else {
-                        nombreServicioManual.textContent = `Servicios de las ${grilla[i].nombre} Hrs`
+                        nombreServicioManual.textContent = `Servicios de las ${diaRango2[i].nombre} Hrs`
                     }
-                    recorridoServicioManual.textContent = `1° Recorrido: ${grilla[i].recorrido}`;
-                    recorridoServicio2Manual.textContent = `2° Recorrido: ${grilla[i].recorrido2}`;
+                    recorridoServicioManual.textContent = `1° Recorrido: ${diaRango2[i].recorrido}`;
+                    recorridoServicio2Manual.textContent = `2° Recorrido: ${diaRango2[i].recorrido2}`;
                 }
                 else {
-                    if (grilla.length == 1 && i == 0) {
-                        nombreServicioManual.textContent = `Único servicio del día ${grilla[i].nombre} Hrs`;
+                    if (diaRango2.length == 1 && i == 0) {
+                        nombreServicioManual.textContent = `Único servicio del día ${diaRango2[i].nombre} Hrs`;
                     }
                     else if (i == 0) {
-                        nombreServicioManual.textContent = `Primer servicio del día ${grilla[i].nombre} Hrs`
+                        nombreServicioManual.textContent = `Primer servicio del día ${diaRango2[i].nombre} Hrs`
                     }
-                    else if (i == (grilla.length) - 1) {
-                        nombreServicioManual.textContent = `Último servicio del día ${grilla[i].nombre} Hrs`;
+                    else if (i == (diaRango2.length) - 1) {
+                        nombreServicioManual.textContent = `Último servicio del día ${diaRango2[i].nombre} Hrs`;
                     }
                     else {
-                        nombreServicioManual.textContent = `Servicio de las ${grilla[i].nombre} Hrs`
+                        nombreServicioManual.textContent = `Servicio de las ${diaRango2[i].nombre} Hrs`
                     }
-                    recorridoServicioManual.textContent = `Recorrido: ${grilla[i].recorrido}`;
+                    recorridoServicioManual.textContent = `Recorrido: ${diaRango2[i].recorrido}`;
 
                 }
                 //     else if (i > 0 && i < (grilla.length) - 1){
@@ -547,14 +497,14 @@ function busquedaManual() {
             setTimeout(() => {
                 irAlObjeto()
             }, 750);
+            console.log(indiceDeBusquedaManual)
 
-
-            console.log(contador);
     })
 
     indicacioncont.addEventListener('click', function () {
         $('.resultadosOpcion2').css('display', 'none');
         resultadoscont.children[0].classList.remove('resultadosOpcion2')
+        // resultadoscont.children[indiceDeBusquedaManual].classList.remove('resaltado')
         linea2.textContent = '';
         linea3.textContent = '';
         opcionbase3.selected = true;
@@ -567,10 +517,14 @@ function busquedaManual() {
         else{
             resultadoscont.classList.add('normalizarFondo')
         }
-        cargaRuta(),
+
+        contador = 0;
+        indiceDeBusquedaManual = 0;
         setTimeout( ()=> {
-            $('.mensaje2').css('display', 'none'),borrarGlobos(),borrarHorarios(),
-            borrarManito();
+            $('.mensaje2').css('display', 'none'),borrarGlobos(),borrarHorarios(),borrarManito()
+            
         },1000);
+
+
     })
 }
