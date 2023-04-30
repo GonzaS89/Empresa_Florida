@@ -13,6 +13,7 @@ function busquedaManual() {
     const opcionbase4 = selector4[0];
     const opcionbase5 = selector5[0];
     const opcionbase6 = selector6[0];
+    
     let posicion3;
     let posicion4;
     let posicion5;
@@ -102,6 +103,11 @@ function busquedaManual() {
         opcionbase3.selected = true;
         opcionbase5.selected = true;
     })
+
+    // opcionbase3 = 0;
+    // opcionbase4 = 0;
+    // opcionbase5 = 0;
+    // opcionbase6 = 0;
 
     function obtenerPosicion3 () {
         for (opcion of selector3) {
@@ -208,7 +214,7 @@ function busquedaManual() {
             return diaRango2;
         }
         if ((obtenerPosicion5() - 1) == 2) {
-            diaRango2 = ruta2[3].slice(0, ruta2[0].length);
+            diaRango2 = ruta2[0].slice(0, ruta2[0].length);
             return diaRango2;
         };
     };
@@ -507,10 +513,10 @@ function busquedaManual() {
         // resultadoscont.children[indiceDeBusquedaManual].classList.remove('resaltado')
         linea2.textContent = '';
         linea3.textContent = '';
-        opcionbase3.selected = true;
-        opcionbase4.selected = true;
-        opcionbase5.selected = true;
-        opcionbase6.selected = true;
+        // opcionbase3.selected = true;
+        // opcionbase4.selected = true;
+        // opcionbase5.selected = true;
+        // opcionbase6.selected = true;
         if(resultadoscont.classList.contains('opacaFondo')){
             resultadoscont.classList.replace('opacarFondo', 'normalizarFondo');
         }
@@ -519,7 +525,6 @@ function busquedaManual() {
         }
 
         contador = 0;
-        indiceDeBusquedaManual = 0;
         setTimeout( ()=> {
             $('.mensaje2').css('display', 'none'),borrarGlobos(),borrarHorarios(),borrarManito()
             
