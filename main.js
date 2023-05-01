@@ -164,6 +164,11 @@ boton.addEventListener('click', function () {
         rutaObtenida = obtenerDiaRuta(0);
         feriado = true;
     }
+    else if ((fecha == 1) && (mes == 4)) {
+        tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo `;
+        rutaObtenida = obtenerDiaRuta(0);
+        feriado = true;
+    }
 
     else if ((fecha == 6) && (mes == 3)){
         semiFeriado = true;
@@ -175,9 +180,8 @@ boton.addEventListener('click', function () {
         feriado = true;
         rutaObtenida = obtenerDiaRuta(0);
         tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} santo: Circulación como día domingo`;
-
     }
-
+    
 
     else {
 
