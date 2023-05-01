@@ -192,6 +192,7 @@ boton.addEventListener('click', function () {
     }
 
 
+
     // Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
 
     function obtenerLista(x) {
@@ -203,7 +204,8 @@ boton.addEventListener('click', function () {
         return listaDelDia
     }
     
-    let listaObtenida = obtenerLista(rutaObtenida)
+    let listaObtenida = obtenerLista(rutaObtenida);
+    
 
     
     function convertirHorarioAMinutos(x){
