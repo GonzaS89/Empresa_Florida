@@ -775,11 +775,12 @@ body::-webkit-scrollbar-track {
     max-height: 350px;
     min-height: 200px;
     gap: 10px;
-    width: 100%;
+    width: 75%;
     border-top: 2.5px solid rgba(128, 128, 128, 0.159);
     overflow-y: scroll;
-    margin: 10px 0;
+    margin: 10px auto;
     border-radius: 20px;
+    
 }
 .resultados-cont::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -910,7 +911,7 @@ body::-webkit-scrollbar-track {
 }
 
 .resultados{
-    width: 65%;
+    width: 40%;
     display: none;
     flex-direction: column;
     justify-content: space-around;
@@ -920,7 +921,7 @@ body::-webkit-scrollbar-track {
     border: .5px solid white;
     background-color: white;
     position: relative;
-    height: 80%;
+    min-height: 50%;
     gap: 2.5px;
 }
 
@@ -1253,7 +1254,10 @@ body::-webkit-scrollbar-track {
     #linea1, #linea2, #linea3, #linea4, #linea5{
         font-size:20px;
     }
-
+    .resultados-cont{
+        width: 100%;
+        margin: 10px 0;
+    }
     .resultados{
         width: 90%;
         padding: 10px 0;

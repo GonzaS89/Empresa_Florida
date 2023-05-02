@@ -348,9 +348,11 @@ function busquedaManual() {
             resultadoscont.classList.add('opacarFondo');
             mensaje2.appendChild(indicacioncont);
 
-            for (i = 0; i < resultadoscont.children.length; i++) {
-                if (i < indiceDeBusquedaManual || i > indiceDeBusquedaManual) {
-                    resultadoscont.children[i].classList.add('opacar')
+            if(resolucion < 500){
+                for (i = 0; i < resultadoscont.children.length; i++) {
+                    if (i < indiceDeBusqueda || i > indiceDeBusqueda) {
+                        resultadoscont.children[i].classList.add('opacar')
+                    }
                 }
             }
 

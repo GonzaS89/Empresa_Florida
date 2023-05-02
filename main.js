@@ -39,6 +39,7 @@ const indicacioncont = document.querySelector('.indicacion-cont');
 const resultadoscont = document.querySelector('.resultados-cont');
 const scrollcont = document.querySelector('.scroll-cont');
 let titulo = document.getElementById('titulo');
+let resolucion = document.documentElement.clientWidth;
 
 
 
@@ -336,10 +337,12 @@ boton.addEventListener('click', () => {
     }
 
     mensaje2.appendChild(indicacioncont);
-
-    for (i = 0; i < resultadoscont.children.length; i++) {
-        if (i < indiceDeBusqueda || i > indiceDeBusqueda) {
-            resultadoscont.children[i].classList.add('opacar')
+    
+    if(resolucion < 600){
+        for (i = 0; i < resultadoscont.children.length; i++) {
+            if (i < indiceDeBusqueda || i > indiceDeBusqueda) {
+                resultadoscont.children[i].classList.add('opacar')
+            }
         }
     }
 
@@ -524,6 +527,8 @@ resultadoscont.addEventListener('touchmove', () => {
         resultadoscont.classList.replace('opacarFondo', 'normalizarFondo');
     }
 })
+
+
 
 
 
