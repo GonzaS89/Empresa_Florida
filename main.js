@@ -13,7 +13,7 @@ function iniciarApp() {
 const selector = document.menu.selector;
 const selector2 = document.menu2.selector2;
 
-const boton = document.getElementById('boton');
+const boton = document.querySelector('.boton');
 
 const opcionbase = selector[0]
 const opcionbase2 = selector2[0]
@@ -81,6 +81,34 @@ function borrarGlobos() {
         element.remove();
     }
 }
+
+function obtenerPosicion1 () {
+    for (opcion of selector) {
+        if (opcion.selected) {
+            valorSeleccionado = opcion;
+        }
+    }
+    for (i = 0; i < selector.length; i++) {
+        valores.push(selector[i])
+    }
+    
+    for (i = 0; i < valores.length; i++) {
+        posicion = valores.indexOf(valorSeleccionado)
+    }
+    return posicion
+}
+
+setInterval ( ()=> {
+    if(obtenerPosicion1() > 0){
+        boton.classList.add('botonVerde')
+    }
+    else{
+        boton.classList.remove('botonVerde')
+    }
+    
+})
+
+
 
 
 

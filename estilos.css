@@ -625,21 +625,35 @@ body::-webkit-scrollbar-track {
     margin: -5px;
 }
 
-#boton,
+
+
+.boton,
 #boton2 {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
     width: 150px;
-    background: var(--fondoAzulLinear);
+    background: var(--fondoGrisLinear);
     border-radius: 30px;
     font-family: var(--fuenteSec);
     font-size: 15px;
     font-weight: bold;
     box-shadow: 2px black;
+    color: grey;
+}
+
+
+.botonVerde{
+    background: var(--fondoAzulLinear);
+    animation: mover 1s linear infinite;
     color: var(--blanco);
-    
+}
+
+@keyframes mover {
+    100%{
+        transform: scale(1.1);
+    }
 }
 
 
