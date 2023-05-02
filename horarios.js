@@ -838,6 +838,11 @@ const horariosLvSMAl = [
         "recorrido": "Terminal → Comisaria 11 → Cnel. Suarez → Gdor. del Campo → Autopista → Alderetes → Talar → Florida → B° La Cancha → Colonia 4"
     },
     {
+        "nombre": "22:00",
+        "salida": 22,
+        "recorrido": "Terminal → Comisaria 11 → Cnel. Suarez → Gdor. del Campo → Alternativa → Talar → Florida → B° La Cancha → Colonia 4"
+    },
+    {
         "nombre": "22:30",
         "salida": 22.30,
         "recorrido": "Terminal → Comisaria 11 → Cnel. Suarez → Gdor. del Campo → Autopista → Alderetes → Talar → Florida → B° La Cancha → Colonia 4"
