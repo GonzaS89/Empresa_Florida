@@ -131,7 +131,6 @@ boton.addEventListener('click', () => {
     let mes = momentoActual.getMonth();
     let diasDeLaSemana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
     let diaSemana = diasDeLaSemana[dia]
-    let elMasCercano = 3000;
     let anteriorPasado = 3000;
     let diaRango = []
     let ruta = [];
@@ -139,7 +138,6 @@ boton.addEventListener('click', () => {
     let horariosEnEnteros = [];
     let listaDiferencias = [];
     let tituloResultado = document.getElementById('tituloResultado')
-    let linea1 = document.getElementById('linea1');
     let feriado = false;
     let semiFeriado = false;
     let nombreServicio;
@@ -210,18 +208,31 @@ boton.addEventListener('click', () => {
 
     // Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
 
-
-    function obtenerLista(x) {
-        for (i = 0; i < x.length; i++) {
-            listaDelDia.push(x[i].salida);
+    if(dia == 2 && mes == 4 && opcionbase.selected == true && posicion2 == 2){
+        function obtenerLista(x) {
+            for (i = 1; i < x.length; i++) {
+                listaDelDia.push(x[i].salida);
+            }
+            // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
+            console.log(8)
+            return listaDelDia
         }
-        // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
-
-        return listaDelDia
     }
+    else{
+        function obtenerLista(x) {
+            for (i = 0; i < x.length; i++) {
+                listaDelDia.push(x[i].salida);
+            }
+            // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
+            console.log(9)
+            return listaDelDia
+        }
+    }
+    
+    
 
     let listaObtenida = obtenerLista(rutaObtenida)
-
+    console.log(listaObtenida)
 
     for (let i = 0; i < listaObtenida.length; i++) {
         let horasEnEnteros = (Math.trunc(listaObtenida[i])) * 60;
@@ -390,10 +401,15 @@ boton.addEventListener('click', () => {
             }
             else {
                 if(rutaObtenida.length == 1 && i == 0) {
-                    `Único servicio del día ${rutaObtenida[i].nombre} Hrs`;
+                    nombreServicio.textContent = `Único servicio del día ${rutaObtenida[i].nombre} Hrs`;
                 }
                 else if (i == 0) {
-                    nombreServicio.textContent = `Primer servicio del día ${rutaObtenida[i].nombre} Hrs`;
+                    if(opcionbase2.selected == false && posicion2 == 2){
+                        nombreServicio.textContent = `Primer servicio del día ${rutaObtenida[1].nombre} Hrs`;
+                    }
+                    else{
+                        nombreServicio.textContent = `Primer servicio del día ${rutaObtenida[1].nombre} Hrs`;
+                    }
                 }
                 else if (i == (rutaObtenida.length) - 1) {
                     nombreServicio.textContent = `Último servicio del día ${rutaObtenida[i].nombre} Hrs`;
