@@ -23,7 +23,7 @@ function busquedaManual() {
     let valores5 = [];
     let valores6 = [];
     let diaRango2 = [];
-    let horaInputAMinutos
+    let horaInputAMinutos;
     let mensajeError = document.getElementById('mensajeError')
     let linea2 = document.getElementById('linea2');
     let linea3 = document.getElementById('linea3');
@@ -36,6 +36,7 @@ function busquedaManual() {
     const resultadoscontainer = document.querySelector('.resultados-container');
     const mensaje2 = document.querySelector('.mensaje2');
     let indiceDeBusquedaManual
+    let ingHora = document.getElementById('ingHora')
 
     botonManual.addEventListener('click', function () {
         $('.botonesBusquedaCont2').css('display', 'flex');
@@ -104,8 +105,7 @@ function busquedaManual() {
     // opcionbase5 = 0;
     // opcionbase6 = 0;
 
-   
-    boton2.addEventListener('click', function () {
+       boton2.addEventListener('click', function () {
 
         
             for (opcion of selector3) {
@@ -168,10 +168,12 @@ function busquedaManual() {
             if (opcionbase3.selected == true && opcionbase4.selected == false) {
                 linea2.textContent = selector4[posicion4].label;
             }
-            if (posicion5 == 0) {
+            
+            
+            if((posicion5 - 1) == 0){
                 linea3.textContent = `De ${selector5[posicion5].label}`;
             }
-            else if (posicion5 > 1){
+            else{
                 linea3.textContent = `Días ${selector5[posicion5].label}`;
             }
     
@@ -224,9 +226,8 @@ function busquedaManual() {
             setTimeout(() => {
                 mensajeError.remove(), ingHora.value = '';
             }, 2000)
-
         }
-
+        else{
             if (ingHora.value < 10) {
                 tituloResultado.textContent = `Servicios a partir de las 0${ingHora.value}:00 Hrs`;
             }
@@ -240,7 +241,7 @@ function busquedaManual() {
                 listaDiferencias3.push(horariosEnEnteros2[i] - horaInputAMinutos)
             }
 
-           
+        }   
             function contruirGlobos(ruta, contPadre, contHijo) {
                 if (ruta.length == 1) {
                     const resultado = document.createElement('DIV')
@@ -313,7 +314,6 @@ function busquedaManual() {
                 }
             }
 
-            console.log(indiceDeBusquedaManual)
 
             if ((diaRango2.length) > 1) {
                 if (indiceDeBusquedaManual == (diaRango2.length) - 1) {
@@ -441,9 +441,9 @@ function busquedaManual() {
     indicacioncont.addEventListener('click', function () {
         $('.resultadosOpcion2').css('display', 'none');
         resultadoscont.children[0].classList.remove('resultadosOpcion2')
-        // resultadoscont.children[indiceDeBusquedaManual].classList.remove('resaltado')
         linea2.textContent = '';
         linea3.textContent = '';
+        ingHora.value = '';
         // opcionbase3.selected = true;
         // opcionbase4.selected = true;
         // opcionbase5.selected = true;
@@ -454,12 +454,9 @@ function busquedaManual() {
         else{
             resultadoscont.classList.add('normalizarFondo')
         }
-
         setTimeout( ()=> {
             $('.mensaje2').css('display', 'none'),borrarGlobos(),borrarManito()
             
         },1000);
-
-
     })
 }
