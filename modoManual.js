@@ -350,7 +350,7 @@ function busquedaManual() {
 
             if(resolucion < 500){
                 for (i = 0; i < resultadoscont.children.length; i++) {
-                    if (i < indiceDeBusqueda || i > indiceDeBusqueda) {
+                    if (i < indiceDeBusquedaManual  || i > indiceDeBusquedaManual) {
                         resultadoscont.children[i].classList.add('opacar')
                     }
                 }
