@@ -773,24 +773,24 @@ const horariosLvSMAl = [
         "nombre": "14:50",
         "salida": 14.5,
         "recorrido": "Terminal → Banda R.S. → Alderetes → Talar → Florida → B° La Cancha",
-        "recorrido2": "Terminal → Comisaria 11 → Cnel. Suarez → Gdor. del Campo → Alternativa → Talar → Florida → Esquina Lastra → Fortín"
+        "recorrido2": "Terminal → Comisaria 11 → Gdor. del Campo → Alternativa → Talar → Florida → Esquina Lastra → Fortín"
     },
     {
         "nombre": "15:50",
         "salida": 15.5,
         "recorrido": "Terminal → Banda R.S. → Alderetes → Talar → Florida → B° La Cancha → Colonia 4",
-        "recorrido2": "Terminal → Comisaria 11 → Cnel. Suarez → Gdor. del Campo → Alternativa → Talar → Florida → B° La Cancha → Colonia 4"
+        "recorrido2": "Terminal → Comisaria 11 → Gdor. del Campo → Alternativa → Talar → Florida → B° La Cancha → Colonia 4"
     },
     {
         "nombre": "16:50",
         "salida": 16.5,
         "recorrido": "Terminal → Banda R.S. → Alderetes → Cochuchal → Florida → Esquina Lastra → Fortín",
-        "recorrido2": "Terminal → Comisaria 11 → Cnel. Suarez → Gdor. del Campo → Alternativa → Talar → Florida → B° La Cancha → Colonia 4"
+        "recorrido2": "Terminal → Comisaria 11 → Gdor. del Campo → Alternativa → Talar → Florida → B° La Cancha → Colonia 4"
     },
     {
         "nombre": "17:40",
         "salida": 17.4,
-        "recorrido": "Terminal → Comisaria 11 → Cnel. Suarez → Gdor. del Campo → Alternativa → Talar → Florida → B° La Cancha → Colonia 4"
+        "recorrido": "Terminal → Comisaria 11 → Gdor. del Campo → Alternativa → Talar → Florida → B° La Cancha → Colonia 4"
     },
     {
         "nombre": "17:45",
@@ -800,7 +800,7 @@ const horariosLvSMAl = [
     {
         "nombre": "18:20",
         "salida": 18.2,
-        "recorrido": "Terminal → Comisaria 11 → Cnel. Suarez → Gdor. del Campo → Alternativa → Talar → B° La Cancha → Colonia 4"
+        "recorrido": "Terminal → Comisaria 11 → Gdor. del Campo → Alternativa → Talar → B° La Cancha → Colonia 4"
     },
     {
         "nombre": "18:30",
@@ -820,7 +820,7 @@ const horariosLvSMAl = [
     {
         "nombre": "20:20",
         "salida": 20.3,
-        "recorrido": "Terminal → Comisaria 11 → Cnel. Suarez → Gdor. del Campo → Alternativa → Talar → Florida → B° La Cancha"
+        "recorrido": "Terminal → Comisaria 11 → Gdor. del Campo → Alternativa → Talar → Florida → B° La Cancha"
     },
     {
         "nombre": "20:30",
@@ -830,27 +830,27 @@ const horariosLvSMAl = [
     {
         "nombre": "21:00",
         "salida": 21,
-        "recorrido": "Terminal → Comisaria 11 → Cnel. Suarez → Gdor. del Campo → Autopista → Alderetes → Talar → Florida → B° La Cancha"
+        "recorrido": "Terminal → Comisaria 11 → Gdor. del Campo → Autopista → Alderetes → Talar → Florida → B° La Cancha"
     },
     {
         "nombre": "21:30",
         "salida": 21.30,
-        "recorrido": "Terminal → Comisaria 11 → Cnel. Suarez → Gdor. del Campo → Autopista → Alderetes → Talar → Florida → B° La Cancha → Colonia 4"
+        "recorrido": "Terminal → Comisaria 11 → Gdor. del Campo → Autopista → Alderetes → Talar → Florida → B° La Cancha → Colonia 4"
     },
     {
         "nombre": "22:00",
         "salida": 22,
-        "recorrido": "Terminal → Comisaria 11 → Cnel. Suarez → Gdor. del Campo → Alternativa → Talar → Florida → B° La Cancha → Colonia 4"
+        "recorrido": "Terminal → Comisaria 11 → Gdor. del Campo → Alternativa → Talar → Florida → B° La Cancha → Colonia 4"
     },
     {
         "nombre": "22:30",
         "salida": 22.30,
-        "recorrido": "Terminal → Comisaria 11 → Cnel. Suarez → Gdor. del Campo → Autopista → Alderetes → Talar → Florida → B° La Cancha → Colonia 4"
+        "recorrido": "Terminal → Comisaria 11 → Gdor. del Campo → Autopista → Alderetes → Talar → Florida → B° La Cancha → Colonia 4"
     },
     {
         "nombre": "23:30",
         "salida": 23.30,
-        "recorrido": "Terminal → Comisaria 11 → Cnel. Suarez → Gdor. del Campo → Autopista → Alderetes → Talar → Florida → B° La Cancha → Colonia 4"
+        "recorrido": "Terminal → Comisaria 11 → Gdor. del Campo → Autopista → Alderetes → Talar → Florida → B° La Cancha → Colonia 4"
     }
 ]
 const horariosSSMAl = [
@@ -947,7 +947,7 @@ const horariosSSMAl = [
     {
         "nombre": "21:30",
         "salida": 21.30,
-        "recorrido": "Terminal → Comisaria 11 → Cnel. Suarez → Gdor. del Campo → Autopista → Alderetes → Talar → Florida → Esquina Lastra → Fortín → Colonia 4 (Luisiana)"
+        "recorrido": "Terminal → Comisaria 11 → Gdor. del Campo → Autopista → Alderetes → Talar → Florida → Esquina Lastra → Fortín → Colonia 4 (Luisiana)"
     },
     // {
     //     "nombre":"22:00",
@@ -957,7 +957,7 @@ const horariosSSMAl = [
     {
         "nombre": "22:30",
         "salida": 22.30,
-        "recorrido": "Terminal → Comisaria 11 → Cnel. Suarez → Gdor. del Campo → Autopista → Alderetes → Talar → Florida → Esquina Lastra → Fortín → Colonia 4"
+        "recorrido": "Terminal → Comisaria 11 → Gdor. del Campo → Autopista → Alderetes → Talar → Florida → Esquina Lastra → Fortín → Colonia 4"
     }
 ]
 const horariosDSMAl = [
