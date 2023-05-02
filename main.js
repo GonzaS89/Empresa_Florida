@@ -100,10 +100,12 @@ function obtenerPosicion1 () {
 
 setInterval ( ()=> {
     if(obtenerPosicion1() > 0){
-        boton.classList.add('botonVerde')
+        boton.classList.add('botonVerde');
+        selector.classList.add('selectActivo')
     }
     else{
         boton.classList.remove('botonVerde')
+        selector.classList.remove('selectActivo')
     }
     
 })

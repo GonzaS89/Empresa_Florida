@@ -564,6 +564,13 @@ body::-webkit-scrollbar-track {
     background-color: var(--azul);
 }
 
+.selectActivo{
+    color: white;
+    background: var(--fondoAzulLinear);
+}
+
+
+
 #busquedaInput2 {
     background-color: transparent;
     font-family: var(--fuenteSec);
@@ -645,14 +652,20 @@ body::-webkit-scrollbar-track {
 
 
 .botonVerde{
-    background: var(--fondoAzulLinear);
-    animation: mover 1s linear infinite;
+    animation: mover 3s linear alternate-reverse forwards infinite;
     color: var(--blanco);
 }
 
 @keyframes mover {
-    100%{
+    0%{
         transform: scale(1.05);
+        background: var(--fondoAzulLinear);
+    }
+    100%{
+        transform: scale(1);
+        background: var(--fondoAzulLinear);
+        
+        
     }
 }
 
