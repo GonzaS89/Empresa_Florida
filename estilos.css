@@ -652,7 +652,7 @@ body::-webkit-scrollbar-track {
 
 @keyframes mover {
     100%{
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 }
 
