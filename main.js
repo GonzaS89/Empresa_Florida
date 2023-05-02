@@ -223,24 +223,6 @@ boton.addEventListener('click', () => {
     let listaObtenida = obtenerLista(rutaObtenida)
 
 
-    function convertirHorarioAMinutos(x) {
-        a = (Math.trunc(x)) * 60;
-        b = ((x) - (Math.trunc(x))) * 100;
-        c = a + b;
-
-        return c
-    }
-
-    function pasarHoraAMinutos(x, y) {
-        a = x * 60;
-        b = a + y;
-        return b
-    }
-
-    let conversionHorario;
-    let conversionHora;
-
-
     for (let i = 0; i < listaObtenida.length; i++) {
         let horasEnEnteros = (Math.trunc(listaObtenida[i])) * 60;
         let minutosEnEnteros = (listaDelDia[i] - (Math.trunc(listaObtenida[i]))) * 100;

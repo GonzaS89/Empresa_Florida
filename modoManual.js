@@ -7,22 +7,17 @@ function busquedaManual() {
     const selector3 = document.menu3.selector3;
     const selector4 = document.menu4.selector4;
     const selector5 = document.menu5.selector5;
-    const selector6 = document.menu6.selector6;
     const boton2 = document.getElementById('boton2')
     const opcionbase3 = selector3[0];
     const opcionbase4 = selector4[0];
     const opcionbase5 = selector5[0];
-    const opcionbase6 = selector6[0];
-    
     let posicion3;
     let posicion4;
     let posicion5;
-    let posicion6;
     let ruta2 = []
     let valorSeleccionado3;
     let valorSeleccionado4;
     let valorSeleccionado5;
-    let valorSeleccionado6;
     let valores3 = [];
     let valores4 = [];
     let valores5 = [];
@@ -38,9 +33,9 @@ function busquedaManual() {
     let recorridoServicioManual;
     let recorridoServicio2Manual;
     const resultadoscont = document.querySelector('.resultados-cont');
+    const resultadoscontainer = document.querySelector('.resultados-container');
     const mensaje2 = document.querySelector('.mensaje2');
-    let indiceDeBusquedaManual = 0;
-
+    let indiceDeBusquedaManual
 
     botonManual.addEventListener('click', function () {
         $('.botonesBusquedaCont2').css('display', 'flex');
@@ -68,7 +63,7 @@ function busquedaManual() {
         $('#selector3').css('display', 'none');
         $('#selector4').css('display', 'none');
         $('#selector5').css('display', 'none');
-        // $('#ingHora').css('display', 'none');
+        $('#ingHora').css('display', 'none');
         $('.aclaracion').css('display', 'none');
         opcionbase3.selected = true;
         opcionbase4.selected = true;
@@ -109,221 +104,143 @@ function busquedaManual() {
     // opcionbase5 = 0;
     // opcionbase6 = 0;
 
-    function obtenerPosicion3 () {
-        for (opcion of selector3) {
-            if (opcion.selected) {
-                valorSeleccionado3 = opcion;
-            }
-        }
-
-        for (i = 0; i < selector3.length; i++) {
-            valores3.push(selector3[i])
-        }
-
-        for (i = 0; i < valores3.length; i++) {
-            posicion3 = valores3.indexOf(valorSeleccionado3)
-        }
-
-        return posicion3;
-    }
-
-    function obtenerPosicion4 () {
-        for (opcion of selector4) {
-            if (opcion.selected) {
-                valorSeleccionado4 = opcion;
-            }
-        }
-
-        for (i = 0; i < selector4.length; i++) {
-            valores4.push(selector4[i])
-        }
-
-        for (i = 0; i < valores4.length; i++) {
-            posicion4 = valores4.indexOf(valorSeleccionado4)
-        }
-        return posicion4;
-    }
-
-    function obtenerPosicion5 () {
-        for (opcion of selector5) {
-            if (opcion.selected) {
-                valorSeleccionado5 = opcion;
-            }
-        }
-
-        for (i = 0; i < selector5.length; i++) {
-            valores5.push(selector5[i])
-        }
-
-        for (i = 0; i < valores5.length; i++) {
-            posicion5 = valores5.indexOf(valorSeleccionado5)
-        }
-        return posicion5;
-    }
-
-
-    
-        
-
-        
-
-
-
-    // setInterval ( ()=> {
-    //     obtenerPosicion3(),
-    //     obtenerPosicion4(),
-    //     obtenerPosicion5();
-    // },1000)
-        function obtenerRuta () {
-            if (opcionbase4.selected == true && opcionbase3.selected == false) {
-                ruta2 = todosDestinoTucuman[obtenerPosicion3() - 1];
-                return ruta2;
-
-            }
-            if (opcionbase3.selected == true && opcionbase4.selected == false) {
-                ruta2 = todosTucumanDestino[obtenerPosicion4() - 1];
-                return ruta2;
-            }
-        }
-
-        
-
-
-        // if (opcionbase4.selected == true && opcionbase3.selected == false) {
-        //     linea2.textContent = selector3[obtenerPosicion3() - 1].label;
-        // }
-        // if (opcionbase3.selected == true && opcionbase4.selected == false) {
-        //     linea2.textContent = selector4[obtenerPosicion4() - 1].label;
-        // }
-        // if ((obtenerPosicion5()) == 0) {
-        //     linea3.textContent = `De ${selector5[obtenerPosicion5() + 1].label}`;
-        // }
-        // else {
-        //     linea3.textContent = `Días ${selector5[obtenerPosicion5() + 1].label}`;
-        // }
-
-
-
-    const obtenerRuta2 = ()=> {
-        if ((obtenerPosicion5() - 1) == 0) {
-            diaRango2 = ruta2[1].slice(0, ruta2[1].length);
-            return diaRango2;
-        }
-        if ((obtenerPosicion5() - 1) == 1) {
-            diaRango2 = ruta2[2].slice(0, ruta2[2].length);
-            return diaRango2;
-        }
-        if ((obtenerPosicion5() - 1) == 2) {
-            diaRango2 = ruta2[0].slice(0, ruta2[0].length);
-            return diaRango2;
-        };
-    };
-
-    diaRango2 = obtenerRuta2();
-
-    function crearListaHorarios () {
-        for (i = 0; i < diaRango2.length; i++) {
-            let option = document.createElement('OPTION');
-            option.label = `Servicio de las ${diaRango2[i].nombre}`;
-            option.classList.add('options');
-            selector6.appendChild(option);
-        }
-    };
-
-    let contador = 0;
-    
-    function llamado () {
-        if(contador == 0) {
-            console.log(obtenerRuta(),obtenerRuta2());
-            if(obtenerRuta2() !== undefined){
-                crearListaHorarios();
-                contador = 1;
-                console.log('Se han cargado los horarios')
-            }
-        }
-    }
-
-    function stop ()  {
-        if(contador == 1){
-            if((obtenerRuta2().length)){
-                contador = 2
-            }
-            console.log('Se detuvo la carga')
-        }
-    }
-
-    function borrarHorarios () {
-        let arrayOptions = Array.prototype.slice.call(document.getElementsByClassName("options"), 0);
-        for (element of arrayOptions) {
-            element.remove();
-    };
-    };
-    
-    setInterval ( ()=> {
-        llamado(),stop()
-    },1000)
-
-    
-
-
+   
     boton2.addEventListener('click', function () {
 
-        // let listaDelDia2 = []
-        // let listaDiferencias3 = [];
-        // let horariosEnEnteros2 = [];
-        // let proximo = 3000;
-
-        // / Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
-
-        // for (i = 0; i < diaRango2.length; i++) {
-        //     listaDelDia2.push(diaRango2[i].salida);
-        // }
-
-        // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
-
-        // for (let i = 0; i < listaDelDia2.length; i++) {
-        //     let horasEnEnteros = (Math.trunc(listaDelDia2[i])) * 60;
-        //     let minutosEnEnteros = (listaDelDia2[i] - (Math.trunc(listaDelDia2[i]))) * 100;
-        //     let horaMinutosEnEnteros = horasEnEnteros + minutosEnEnteros;
-        //     horariosEnEnteros2.push(horaMinutosEnEnteros);
-        // }
-
-        // if (ingHora.value == '' || ingHora.value > 23) {
-        //     mensajeError.textContent = 'Ingresa un número entre 0 y 23'
-        //     $('#mensajeError').css('display', 'flex')
-        //     setTimeout(() => {
-        //         mensajeError.remove(), ingHora.value = '';
-        //     }, 2000)
-
-        // }
-
-            // if (ingHora.value < 10) {
-            //     tituloResultado.textContent = `Servicios a partir de las 0${ingHora.value}:00 Hrs`;
-            // }
-            // else {
-            //     tituloResultado.textContent = `Servicios a partir de las ${ingHora.value}:00 Hrs`;
-            // }
-
-            // horaInputAMinutos = (ingHora.value) * 60
-
-            // for (let i = 0; i < horariosEnEnteros2.length; i++) {
-            //     listaDiferencias3.push(horariosEnEnteros2[i] - horaInputAMinutos)
-            // }
-
-            for (opcion of selector6) {
+        
+            for (opcion of selector3) {
                 if (opcion.selected) {
-                    valorSeleccionado6 = opcion;
+                    valorSeleccionado3 = opcion;
                 }
             }
     
-            for (i = 0; i < selector6.length; i++) {
-                valores6.push(selector6[i])
+            for (i = 0; i < selector3.length; i++) {
+                valores3.push(selector3[i])
             }
     
-            for (i = 0; i < valores6.length; i++) {
-                posicion6 = valores6.indexOf(valorSeleccionado6)
+            for (i = 0; i < valores3.length; i++) {
+                posicion3 = valores3.indexOf(valorSeleccionado3)
+            }
+    
+        
+    
+        
+            for (opcion of selector4) {
+                if (opcion.selected) {
+                    valorSeleccionado4 = opcion;
+                }
+            }
+    
+            for (i = 0; i < selector4.length; i++) {
+                valores4.push(selector4[i])
+            }
+    
+            for (i = 0; i < valores4.length; i++) {
+                posicion4 = valores4.indexOf(valorSeleccionado4)
+            }
+        
+            for (opcion of selector5) {
+                if (opcion.selected) {
+                    valorSeleccionado5 = opcion;
+                }
+            }
+    
+            for (i = 0; i < selector5.length; i++) {
+                valores5.push(selector5[i])
+            }
+    
+            for (i = 0; i < valores5.length; i++) {
+                posicion5 = valores5.indexOf(valorSeleccionado5)
+            }
+        
+    
+        
+            if (opcionbase4.selected == true && opcionbase3.selected == false) {
+                ruta2 = todosDestinoTucuman[posicion3 - 1];
+            }
+            if (opcionbase3.selected == true && opcionbase4.selected == false) {
+                ruta2 = todosTucumanDestino[posicion4 - 1];
+            }
+        
+            if (opcionbase4.selected == true && opcionbase3.selected == false) {
+                linea2.textContent = selector3[posicion3].label;
+            }
+            if (opcionbase3.selected == true && opcionbase4.selected == false) {
+                linea2.textContent = selector4[posicion4].label;
+            }
+            if (posicion5 == 0) {
+                linea3.textContent = `De ${selector5[posicion5].label}`;
+            }
+            else if (posicion5 > 1){
+                linea3.textContent = `Días ${selector5[posicion5].label}`;
+            }
+    
+    
+    
+        const obtenerRuta2 = ()=> {
+            if ((posicion5 - 1) == 0) {
+                diaRango2 = ruta2[1].slice(0, ruta2[1].length);
+                return diaRango2;
+            }
+            if ((posicion5 - 1) == 1) {
+                diaRango2 = ruta2[2].slice(0, ruta2[2].length);
+                return diaRango2;
+            }
+            if ((posicion5 - 1) == 2) {
+                diaRango2 = ruta2[0].slice(0, ruta2[0].length);
+                return diaRango2;
+            };
+        };
+    
+        diaRango2 = obtenerRuta2();
+
+        
+
+
+        let listaDelDia2 = []
+        let listaDiferencias3 = [];
+        let horariosEnEnteros2 = [];
+        let proximo = 3000;
+
+        // / Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
+
+        for (i = 0; i < diaRango2.length; i++) {
+            listaDelDia2.push(diaRango2[i].salida);
+        }
+
+       
+        // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
+
+        for (let i = 0; i < listaDelDia2.length; i++) {
+            let horasEnEnteros = (Math.trunc(listaDelDia2[i])) * 60;
+            let minutosEnEnteros = (listaDelDia2[i] - (Math.trunc(listaDelDia2[i]))) * 100;
+            let horaMinutosEnEnteros = horasEnEnteros + minutosEnEnteros;
+            horariosEnEnteros2.push(horaMinutosEnEnteros);
+        }
+
+        if (ingHora.value == '' || ingHora.value > 23) {
+            mensajeError.textContent = 'Ingresa un número entre 0 y 23'
+            $('#mensajeError').css('display', 'flex')
+            setTimeout(() => {
+                mensajeError.remove(), ingHora.value = '';
+            }, 2000)
+
+        }
+
+            if (ingHora.value < 10) {
+                tituloResultado.textContent = `Servicios a partir de las 0${ingHora.value}:00 Hrs`;
+            }
+            else {
+                tituloResultado.textContent = `Servicios a partir de las ${ingHora.value}:00 Hrs`;
             }
 
+            horaInputAMinutos = (ingHora.value) * 60
+
+            for (let i = 0; i < horariosEnEnteros2.length; i++) {
+                listaDiferencias3.push(horariosEnEnteros2[i] - horaInputAMinutos)
+            }
+
+           
             function contruirGlobos(ruta, contPadre, contHijo) {
                 if (ruta.length == 1) {
                     const resultado = document.createElement('DIV')
@@ -371,18 +288,33 @@ function busquedaManual() {
             }
 
             contruirGlobos(diaRango2,resultadoscontainer,resultadoscont);
+            addEventListener('load', () => {
+                scrollcont.children[0].classList.add('manito')
+            })
+            
+            function borrarManito() {
+                scrollcont.children[0].classList.remove('manito')
+            }
+            
+            function borrarGlobos() {
+                let arrayResultados = Array.prototype.slice.call(document.getElementsByClassName("resultados"), 0);
+                for (element of arrayResultados) {
+                    element.remove();
+                }
+            }
 
-            // for (let i = 0; i < listaDiferencias3.length; i++) {
-            //     if (listaDiferencias3[i] >= 0) {
-            //         proximo = Math.min(proximo, listaDiferencias3[i]);
-            //         indiceDeBusqueda = listaDiferencias3.indexOf(proximo);
-            //     }
-            //     else {
-            //         indiceDeBusqueda = (diaRango2.length) - 1;
-            //     }
-            // }
+            for (let i = 0; i < listaDiferencias3.length; i++) {
+                if (listaDiferencias3[i] >= 0) {
+                    proximo = Math.min(proximo, listaDiferencias3[i]);
+                    indiceDeBusquedaManual = listaDiferencias3.indexOf(proximo);
+                }
+                else {
+                    indiceDeBusquedaManual = (diaRango2.length) - 1;
+                }
+            }
 
-            indiceDeBusquedaManual = posicion6 - 1;
+            console.log(indiceDeBusquedaManual)
+
             if ((diaRango2.length) > 1) {
                 if (indiceDeBusquedaManual == (diaRango2.length) - 1) {
                     scrollcont.children[0].classList.add('manitoAnimacionAbajo');
@@ -399,7 +331,7 @@ function busquedaManual() {
                 let a = resultadoscont.children[(indiceDeBusquedaManual)];
                 a.scrollIntoView({ behavior: 'smooth', block: 'center' });
             };
-            // resultadoscont.children[indiceDeBusquedaManual].classList.add('resaltado');
+            resultadoscont.children[indiceDeBusquedaManual].classList.add('resaltado');
             resultadoscont.classList.add('opacarFondo');
             mensaje2.appendChild(indicacioncont);
 
@@ -503,7 +435,6 @@ function busquedaManual() {
             setTimeout(() => {
                 irAlObjeto()
             }, 750);
-            console.log(indiceDeBusquedaManual)
 
     })
 
@@ -524,9 +455,8 @@ function busquedaManual() {
             resultadoscont.classList.add('normalizarFondo')
         }
 
-        contador = 0;
         setTimeout( ()=> {
-            $('.mensaje2').css('display', 'none'),borrarGlobos(),borrarHorarios(),borrarManito()
+            $('.mensaje2').css('display', 'none'),borrarGlobos(),borrarManito()
             
         },1000);
 
