@@ -207,32 +207,20 @@ boton.addEventListener('click', () => {
     //funcion para crear los globos de resultados
 
     // Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
-
-    if(dia == 2 && mes == 4 && opcionbase.selected == true && posicion2 == 2){
-        function obtenerLista(x) {
-            for (i = 1; i < x.length; i++) {
-                listaDelDia.push(x[i].salida);
-            }
-            // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
-            console.log(8)
-            return listaDelDia
-        }
-    }
-    else{
+    
         function obtenerLista(x) {
             for (i = 0; i < x.length; i++) {
                 listaDelDia.push(x[i].salida);
             }
             // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
-            console.log(9)
             return listaDelDia
         }
-    }
+    
     
     
 
     let listaObtenida = obtenerLista(rutaObtenida)
-    console.log(listaObtenida)
+
 
     for (let i = 0; i < listaObtenida.length; i++) {
         let horasEnEnteros = (Math.trunc(listaObtenida[i])) * 60;
@@ -403,13 +391,8 @@ boton.addEventListener('click', () => {
                 if(rutaObtenida.length == 1 && i == 0) {
                     nombreServicio.textContent = `Único servicio del día ${rutaObtenida[i].nombre} Hrs`;
                 }
-                else if (i == 0) {
-                    if(opcionbase2.selected == false && posicion2 == 2){
-                        nombreServicio.textContent = `Primer servicio del día ${rutaObtenida[1].nombre} Hrs`;
-                    }
-                    else{
-                        nombreServicio.textContent = `Primer servicio del día ${rutaObtenida[1].nombre} Hrs`;
-                    }
+                else if (i == 0) {     
+                    nombreServicio.textContent = `Primer servicio del día ${rutaObtenida[1].nombre} Hrs`;
                 }
                 else if (i == (rutaObtenida.length) - 1) {
                     nombreServicio.textContent = `Último servicio del día ${rutaObtenida[i].nombre} Hrs`;

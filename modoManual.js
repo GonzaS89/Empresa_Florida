@@ -1,7 +1,7 @@
 function busquedaManual() {
 
-    const botonOrigenCapital = document.getElementById('origenCapital');
-    const botonCapitalDestino = document.getElementById('capitalDestino')
+    const botonOrigenCapital = document.querySelector('.origenCapital');
+    const botonCapitalDestino = document.querySelector('.capitalDestino')
     const botonManual = document.getElementById('busquedaManual')
     const botonAuto = document.getElementById('busquedaAuto')
     const selector3 = document.menu3.selector3;
@@ -57,12 +57,12 @@ function busquedaManual() {
         $('.boton-cont2').css('display', 'none');
         botonCapitalDestino.selected = false;
         botonOrigenCapital.selected = false;
-        $('#origenCapital').css('background', 'var(--fondoGrisLinear)');
-        $('#origenCapital').css('color', 'var(--black');
-        $('#capitalDestino').css('background', 'var(--fondoGrisLinear)');
-        $('#capitalDestino').css('color', 'var(--black');
-        $('#capitalDestino').css('transform', 'scale(1)');
-        $('#origenCapital').css('transform', 'scale(1)');
+        $('.origenCapital').css('background', 'var(--fondoGrisLinear)');
+        $('.origenCapital').css('color', 'var(--black');
+        $('.capitalDestino').css('background', 'var(--fondoGrisLinear)');
+        $('.capitalDestino').css('color', 'var(--black');
+        $('.capitalDestino').css('transform', 'scale(1)');
+        $('.origenCapital').css('transform', 'scale(1)');
         $('#selector3').css('display', 'none');
         $('#selector4').css('display', 'none');
         $('#selector5').css('display', 'none');
@@ -80,12 +80,12 @@ function busquedaManual() {
         $('#selector6').css('display', 'flex');
         $('#ingHora').css('display', 'flex');
         $('#selector4').css('display', 'none');
-        $('#origenCapital').css('background', 'var(--fondoAzulLinear');
-        $('#origenCapital').css('color', 'white');
-        $('#origenCapital').css('transform', 'scale(1.1)');
-        $('#capitalDestino').css('background', 'var(--fondoGrisLinear');
-        $('#capitalDestino').css('color', 'var(--black');
-        $('#capitalDestino').css('transform', 'scale(1)');
+        $('.origenCapital').css('background', 'var(--fondoAzulLinear');
+        $('.origenCapital').css('color', 'white');
+        $('.origenCapital').css('transform', 'scale(1.1)');
+        $('.capitalDestino').css('background', 'var(--fondoGrisLinear');
+        $('.capitalDestino').css('color', 'var(--black');
+        $('.capitalDestino').css('transform', 'scale(1)');
         opcionbase4.selected = true;
         opcionbase5.selected = true;
     })
@@ -96,21 +96,36 @@ function busquedaManual() {
         $('#selector6').css('display', 'flex');
         $('#ingHora').css('display', 'flex');
         $('#selector3').css('display', 'none');
-        $('#capitalDestino').css('background', 'var(--fondoAzulLinear)');
-        $('#capitalDestino').css('color', 'white');
-        $('#capitalDestino').css('transform', 'scale(1.1)');
-        $('#origenCapital').css('background', 'var(--fondoGrisLinear');
-        $('#origenCapital').css('color', 'var(--black');
-        $('#origenCapital').css('transform', 'scale(1)');
+        $('.capitalDestino').css('background', 'var(--fondoAzulLinear)');
+        $('.capitalDestino').css('color', 'white');
+        $('.capitalDestino').css('transform', 'scale(1.1)');
+        $('.origenCapital').css('background', 'var(--fondoGrisLinear');
+        $('.origenCapital').css('color', 'var(--black');
+        $('.origenCapital').css('transform', 'scale(1)');
         opcionbase3.selected = true;
         opcionbase5.selected = true;
     })
 
-    
     // opcionbase3 = 0;
     // opcionbase4 = 0;
     // opcionbase5 = 0;
     // opcionbase6 = 0;
+
+    addEventListener('load', () => {
+        scrollcont.children[0].classList.add('manito')
+    })
+
+    function borrarManito() {
+        scrollcont.children[0].classList.remove('manito')
+    }
+    
+    function borrarGlobos() {
+        let arrayResultados = Array.prototype.slice.call(document.getElementsByClassName("resultados"), 0);
+        for (element of arrayResultados) {
+            element.remove();
+        }
+    }
+
 
        boton2.addEventListener('click', function () {
 
@@ -237,11 +252,9 @@ function busquedaManual() {
         else{
             if (ingHora.value < 10) {
                 tituloResultado.textContent = `Servicios a partir de las 0${ingHora.value}:00 Hrs`;
-                console.log(1)
             }
             else {
                 tituloResultado.textContent = `Servicios a partir de las ${ingHora.value}:00 Hrs`;
-                console.log(2)
             }
 
             
@@ -303,17 +316,7 @@ function busquedaManual() {
                 scrollcont.children[0].classList.add('manito')
             })
             
-            function borrarManito() {
-                scrollcont.children[0].classList.remove('manito')
-            }
             
-            function borrarGlobos() {
-                let arrayResultados = Array.prototype.slice.call(document.getElementsByClassName("resultados"), 0);
-                for (element of arrayResultados) {
-                    element.remove();
-                }
-            }
-
             for (let i = 0; i < listaDiferencias3.length; i++) {
                 if (listaDiferencias3[i] >= 0) {
                     proximo = Math.min(proximo, listaDiferencias3[i]);
@@ -396,6 +399,20 @@ function busquedaManual() {
                 //
             }
 
+
+
+
+
+            //    
+
+
+
+            // }
+
+            // if (posicion3 == 0 && posicion4 == 0 && posicion5 == 0) {
+            //     $('.mensaje2').css('display', 'none')
+            // }
+
             $('.resultados').css('display', 'flex');
             $('.resultadosOpcion2').css('display', 'flex');
             $('.mensaje2').css('display', 'flex');
@@ -413,9 +430,9 @@ function busquedaManual() {
 
     resultadoscont.addEventListener('touchmove', () => {
         for (i = 0; i < resultadoscont.children.length; i++) {
-            if (i < indiceDeBusqueda || i > indiceDeBusqueda) {
+            if (i < indiceDeBusquedaManual || i > indiceDeBusquedaManual) {
                 resultadoscont.children[i].classList.replace('opacar', 'normalizar');
-                resultadoscont.children[indiceDeBusqueda].classList.replace('resaltado', 'normalizarResaltado');
+                resultadoscont.children[indiceDeBusquedaManual].classList.replace('resaltado', 'normalizarResaltado');
                 scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
                 scrollcont.children[0].classList.remove('manitoAnimacionArriba');
                 scrollcont.children[0].classList.remove('manitoAnimacionCentro');
@@ -441,7 +458,7 @@ function busquedaManual() {
             resultadoscont.classList.add('normalizarFondo')
         }
         setTimeout( ()=> {
-            $('.mensaje2').css('display', 'none'),borrarGlobos(),borrarManito()
+            $('.mensaje2').css('display', 'none'),borrarGlobos(),borrarManito(),resultadoscont.classList.remove('normalizarFondo')
             
         },1000);
     })
