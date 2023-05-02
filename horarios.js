@@ -1,5 +1,6 @@
 // Grilla horaria
 
+
 const horariosLvFloAl = [
 
     {
@@ -535,7 +536,7 @@ const horariosSFloPo = [
     {
         "nombre": "15:00",
         "salida": 15,
-        "recorrido": "Esquina Lastra → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+        "recorrido": "Esquina de Lastra → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
     },
     {
         "nombre": "15:55",
@@ -637,7 +638,7 @@ const horariosDFloPo = [
     {
         "nombre": "15:00",
         "salida": 15,
-        "recorrido": "Esquina Lastra → Florida → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+        "recorrido": "Esquina de Lastra → Florida → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
     },
     {
         "nombre": "15:50",
@@ -815,6 +816,11 @@ const horariosLvSMAl = [
         "nombre": "19:45",
         "salida": 19.45,
         "recorrido": "Terminal → Banda R.S. → Alderetes → Talar → Florida → Esquina Lastra → Fortín → Mayo(por abajo)"
+    },
+    {
+        "nombre": "20:20",
+        "salida": 20.3,
+        "recorrido": "Terminal → Comisaria 11 → Cnel. Suarez → Gdor. del Campo → Alternativa → Talar → Florida → B° La Cancha"
     },
     {
         "nombre": "20:30",
@@ -999,11 +1005,11 @@ const horariosDSMAl = [
 
 ]
 const horariosLvSMPo = [
-    // {
-    //     "nombre": "00:30",
-    //     "salida": 0.3,
-    //     "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Posse → Paraíso → Florida → B° La Cancha"
-    // },
+    {
+        "nombre": "00:30",
+        "salida": 0.3,
+        "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Posse → Paraíso → Florida → B° La Cancha"
+    },
     {
         "nombre": "06:00",
         "salida": 6,
@@ -1174,17 +1180,17 @@ const horariosLvSMPo = [
         "salida": 23.3,
         "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Posse → Paraíso → Florida → B° La Cancha → Fortín → Colonia 4"
     },
-    // {
-    //     "nombre": "00:30",
-    //     "salida": 24.3,
-    //     "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Posse → Paraíso → Florida → B° La Cancha"
-    // }
+    {
+        "nombre": "00:30",
+        "salida": 24.3,
+        "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Posse → Paraíso → Florida → B° La Cancha"
+    }
 ]
 const horariosSSMPo = [
     {
-        "nombre": "00:30",
-        "salida": 0.3,
-        "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Posse → Paraíso → Florida → B° La Cancha"
+        "nombre":"00:30",
+        "salida":0.3,
+        "recorrido":"Terminal → Banda R.S. → Cevil Pozo → Llona → Posse → Paraíso → Florida → B° La Cancha"
     },
     {
         "nombre": "06:00",
@@ -1833,7 +1839,7 @@ const ralosTerminalLaV = [
         "nombre": "13:10",
         "salida": 13.1,
         "recorrido": "Mayo → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal",
-        "recorrido2": "Alabama → Mayo → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
+        "recorrido2":"Alabama → Mayo → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
     },
     {
         "nombre": "14:05",
