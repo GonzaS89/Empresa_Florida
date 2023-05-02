@@ -194,6 +194,10 @@ boton.addEventListener('click', function () {
 
 
     // Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
+
+    if(feriado){
+        
+    }
     let grillaTemporal = [];
     
     for(i = 0; i < rutaObtenida.length; i++){
