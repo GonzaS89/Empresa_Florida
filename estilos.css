@@ -811,7 +811,7 @@ body::-webkit-scrollbar-track {
 }
 
 .manitoAnimacionCentro{
-    animation: manitoScrollCentro 3s ease-out 2s forwards infinite;
+    animation: manitoScrollCentro 3s ease-out 2s 2 forwards;
 }
 
 @keyframes manitoScrollCentro {
@@ -836,7 +836,7 @@ body::-webkit-scrollbar-track {
 }
 
 .manitoAnimacionArriba { 
-    animation: manitoScrollArriba 1.5s ease-out 2s forwards infinite;
+    animation: manitoScrollArriba 1.5s ease-out 2s 2 forwards;
 }
 
 @keyframes manitoScrollArriba {
@@ -850,7 +850,7 @@ body::-webkit-scrollbar-track {
 }
 
 .manitoAnimacionAbajo { 
-    animation: manitoScrollAbajo 1.5s ease-out 2s forwards infinite;
+    animation: manitoScrollAbajo 1.5s ease-out 2s 2 forwards;
 }
 
 @keyframes manitoScrollAbajo {
