@@ -392,10 +392,10 @@ boton.addEventListener('click', () => {
             }
             else {
                 if(rutaObtenida.length == 1 && i == 0) {
-                    nombreServicio.textContent = `Único servicio del día ${rutaObtenida[i].nombre} Hrs`;
+                    nombreServicio.textContent = `Único servicio del día ${rutaObtenida[0].nombre} Hrs`;
                 }
                 else if (i == 0) {     
-                    nombreServicio.textContent = `Primer servicio del día ${rutaObtenida[1].nombre} Hrs`;
+                    nombreServicio.textContent = `Primer servicio del día ${rutaObtenida[i].nombre} Hrs`;
                 }
                 else if (i == (rutaObtenida.length) - 1) {
                     nombreServicio.textContent = `Último servicio del día ${rutaObtenida[i].nombre} Hrs`;
@@ -467,7 +467,7 @@ boton.addEventListener('click', () => {
             }
             else {
                 if (i == 0) {
-                    nombreServicio.textContent = `Primer servicio del día ${rutaObtenida[i].nombre} Hrs`;
+                    nombreServicio.textContent = `Primer servicio del día ${rutaObtenida[0].nombre} Hrs`;
                 }
                 else if (i == (rutaObtenida.length) - 1) {
                     nombreServicio.textContent = `Último servicio del día ${rutaObtenida[i].nombre} Hrs`;
