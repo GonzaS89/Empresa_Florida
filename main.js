@@ -526,6 +526,8 @@ resultadoscont.addEventListener('touchmove', () => {
     }
 })
 
+
+
 indicacioncont.addEventListener('click', () => {
     // actual4.textContent = '';
     // futuro4.textContent = '';
@@ -536,6 +538,7 @@ indicacioncont.addEventListener('click', () => {
     opcionbase2.selected = true;
     linea1.textContent = '';
     linea2.textContent = '';
+    tituloResultado.textContent = '';
     mensaje2.classList.replace('mensajeAparece', 'mensajeIrse')
     scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
     scrollcont.children[0].classList.remove('manitoAnimacionArriba');

@@ -28,7 +28,7 @@ function busquedaManual() {
     let linea2 = document.getElementById('linea2');
     let linea3 = document.getElementById('linea3');
     let linea4 = document.getElementById('linea4');
-    let tituloResultado = document.getElementById;('tituloResultado');
+    let tituloResultado = document.getElementById('tituloResultado');
     let nombreServicioManual;
     let recorridoServicioManual;
     let recorridoServicio2Manual;
@@ -57,10 +57,12 @@ function busquedaManual() {
         $('.boton-cont2').css('display', 'none');
         botonCapitalDestino.selected = false;
         botonOrigenCapital.selected = false;
-        $('#origenCapital').css('background-color', 'var(--blanco');
+        $('#origenCapital').css('background', 'var(--fondoGrisLinear)');
         $('#origenCapital').css('color', 'var(--black');
-        $('#capitalDestino').css('background-color', 'var(--blanco');
+        $('#capitalDestino').css('background', 'var(--fondoGrisLinear)');
         $('#capitalDestino').css('color', 'var(--black');
+        $('#capitalDestino').css('transform', 'scale(1)');
+        $('#origenCapital').css('transform', 'scale(1)');
         $('#selector3').css('display', 'none');
         $('#selector4').css('display', 'none');
         $('#selector5').css('display', 'none');
@@ -78,10 +80,12 @@ function busquedaManual() {
         $('#selector6').css('display', 'flex');
         $('#ingHora').css('display', 'flex');
         $('#selector4').css('display', 'none');
-        $('#origenCapital').css('background-color', 'black');
-        $('#origenCapital').css('color', 'var(--rojo2');
-        $('#capitalDestino').css('background-color', 'var(--blanco');
+        $('#origenCapital').css('background', 'var(--fondoAzulLinear');
+        $('#origenCapital').css('color', 'white');
+        $('#origenCapital').css('transform', 'scale(1.1)');
+        $('#capitalDestino').css('background', 'var(--fondoGrisLinear');
         $('#capitalDestino').css('color', 'var(--black');
+        $('#capitalDestino').css('transform', 'scale(1)');
         opcionbase4.selected = true;
         opcionbase5.selected = true;
     })
@@ -92,14 +96,17 @@ function busquedaManual() {
         $('#selector6').css('display', 'flex');
         $('#ingHora').css('display', 'flex');
         $('#selector3').css('display', 'none');
-        $('#capitalDestino').css('background-color', 'black');
-        $('#capitalDestino').css('color', 'var(--rojo2');
-        $('#origenCapital').css('background-color', 'var(--blanco');
+        $('#capitalDestino').css('background', 'var(--fondoAzulLinear)');
+        $('#capitalDestino').css('color', 'white');
+        $('#capitalDestino').css('transform', 'scale(1.1)');
+        $('#origenCapital').css('background', 'var(--fondoGrisLinear');
         $('#origenCapital').css('color', 'var(--black');
+        $('#origenCapital').css('transform', 'scale(1)');
         opcionbase3.selected = true;
         opcionbase5.selected = true;
     })
 
+    
     // opcionbase3 = 0;
     // opcionbase4 = 0;
     // opcionbase5 = 0;
@@ -230,18 +237,21 @@ function busquedaManual() {
         else{
             if (ingHora.value < 10) {
                 tituloResultado.textContent = `Servicios a partir de las 0${ingHora.value}:00 Hrs`;
+                console.log(1)
             }
             else {
                 tituloResultado.textContent = `Servicios a partir de las ${ingHora.value}:00 Hrs`;
+                console.log(2)
             }
 
+            
             horaInputAMinutos = (ingHora.value) * 60
 
             for (let i = 0; i < horariosEnEnteros2.length; i++) {
                 listaDiferencias3.push(horariosEnEnteros2[i] - horaInputAMinutos)
             }
 
-        }   
+           
             function contruirGlobos(ruta, contPadre, contHijo) {
                 if (ruta.length == 1) {
                     const resultado = document.createElement('DIV')
@@ -386,44 +396,6 @@ function busquedaManual() {
                 //
             }
 
-
-
-
-
-            //     if (proximo < 3000) {
-            //         if (listaDiferencias3.indexOf(proximo) == 0) {
-            //             mostrar1.textContent = 'No hay unidades activas anteriores al horario indicado'
-            //             mostrar2.textContent = '';
-            //             mostrar3.textContent = `El servicio más cercano al horario indicado es de las ${diaRango2[listaDiferencias3.indexOf(proximo)].nombre} Hrs (Primer servicio del día)`;
-            //             mostrar4.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo)].recorrido}`
-            //         }
-            //         else {
-            //             mostrar1.textContent = `Anteriormente al horario que indicaste tenés el servicio de las ${diaRango2[listaDiferencias3.indexOf(proximo) - 1].nombre} Hrs`;
-            //             mostrar2.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo) - 1].recorrido}`;
-            //             if (listaDiferencias3.indexOf(proximo) == diaRango2.length - 1) {
-            //                 mostrar3.textContent = `El servicio más cercano al horario indicado es de las ${diaRango2[listaDiferencias3.indexOf(proximo)].nombre} Hrs (Último servicio del día)`;
-            //                 mostrar4.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo)].recorrido}`;
-            //             }
-            //             else {
-            //                 mostrar3.textContent = `Y el servicio más cercano a partir del horario que indicaste, es él de las ${diaRango2[listaDiferencias3.indexOf(proximo)].nombre} Hrs`;
-            //                 mostrar4.textContent = `Recorrido: ${diaRango2[listaDiferencias3.indexOf(proximo)].recorrido}`;
-            //             }
-
-            //         }
-
-
-
-            //     }
-
-
-
-
-            // }
-
-            // if (posicion3 == 0 && posicion4 == 0 && posicion5 == 0) {
-            //     $('.mensaje2').css('display', 'none')
-            // }
-
             $('.resultados').css('display', 'flex');
             $('.resultadosOpcion2').css('display', 'flex');
             $('.mensaje2').css('display', 'flex');
@@ -435,7 +407,21 @@ function busquedaManual() {
             setTimeout(() => {
                 irAlObjeto()
             }, 750);
+        }
 
+    })
+
+    resultadoscont.addEventListener('touchmove', () => {
+        for (i = 0; i < resultadoscont.children.length; i++) {
+            if (i < indiceDeBusqueda || i > indiceDeBusqueda) {
+                resultadoscont.children[i].classList.replace('opacar', 'normalizar');
+                resultadoscont.children[indiceDeBusqueda].classList.replace('resaltado', 'normalizarResaltado');
+                scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
+                scrollcont.children[0].classList.remove('manitoAnimacionArriba');
+                scrollcont.children[0].classList.remove('manitoAnimacionCentro');
+            }
+            resultadoscont.classList.replace('opacarFondo', 'normalizarFondo');
+        }
     })
 
     indicacioncont.addEventListener('click', function () {

@@ -255,7 +255,7 @@ body::-webkit-scrollbar-track {
     align-items: center;
     width: 250px;
     height: 90px;
-    border-radius: 10px;
+    border-radius:45px;
     /* background-color: var(--blanco); */
 }
 
@@ -362,16 +362,29 @@ body::-webkit-scrollbar-track {
     font-family: var(--fuenteSec);
     height: 60px;
     width: 200px;
-    border-radius: 5px;
+    border-radius: 30px;
     font-size: 15px;
     font-weight: bold;
     background:var(--fondoGrisLinear);
 }
 
+#origenCapital:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+#capitalDestino:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.botonActivo {
+    background:var(--fondoAzulLinear);
+}
+
 #ingHora {
     display: none;
     height: 60px;
-    border-radius: 5px;
+    border-radius: 30px;
     margin-top: 5px;
     text-align: center;
     font-family: var(--fuenteSec);
@@ -416,7 +429,7 @@ body::-webkit-scrollbar-track {
     height: 50px;
     width: 300px;
     padding: px;
-    border-radius: 10px;
+    border-radius: 25px;
     font-size: 15px;
     font-weight: bold;
     font-family: var(--fuenteSec);
@@ -513,7 +526,7 @@ body::-webkit-scrollbar-track {
     width: 250px;
     /* background-color: rgb(65, 117, 181);  */
     background:var(--fondoGrisLinear);
-    border-radius: 10px;
+    border-radius: 30px;
     box-shadow: 0 2px 5px var(--rojo);
     font-weight: bold;
     height: 60px;
@@ -603,7 +616,7 @@ body::-webkit-scrollbar-track {
     height: 60px;
     width: 150px;
     background: var(--fondoAzulLinear);
-    border-radius: 10px;
+    border-radius: 30px;
     font-family: var(--fuenteSec);
     font-size: 15px;
     font-weight: bold;
