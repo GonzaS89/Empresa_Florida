@@ -98,17 +98,35 @@ function obtenerPosicion1 () {
     return posicion
 }
 
-setInterval ( ()=> {
-    if(obtenerPosicion1() > 0){
-        boton.classList.add('botonVerde');
-        selector.classList.add('selectActivo')
+function obtenerPosicion2 () {
+    for (opcion of selector2) {
+        if (opcion.selected) {
+            valorSeleccionado2 = opcion;
+        }
     }
-    else{
-        boton.classList.remove('botonVerde')
-        selector.classList.remove('selectActivo')
+    for (i = 0; i < selector2.length; i++) {
+        valores2.push(selector2[i])
     }
     
+    for (i = 0; i < valores2.length; i++) {
+        posicion2 = valores2.indexOf(valorSeleccionado2)
+    }
+    return posicion2
+}
+
+function activarBoton ()  {
+    setInterval ( ()=> {
+    if(obtenerPosicion1() > 0 || obtenerPosicion2() > 0){
+        boton.classList.add('botonActivo');
+    }
+    else{
+        boton.classList.remove('botonActivo')
+    }
+
 })
+}
+
+activarBoton()
 
 
 

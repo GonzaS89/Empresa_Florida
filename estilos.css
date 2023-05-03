@@ -635,7 +635,7 @@ body::-webkit-scrollbar-track {
 
 
 .boton,
-#boton2 {
+.boton2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -651,7 +651,7 @@ body::-webkit-scrollbar-track {
 }
 
 
-.botonVerde{
+.botonActivo{
     animation: mover 1s linear alternate-reverse forwards infinite;
     color: var(--blanco);
 }
