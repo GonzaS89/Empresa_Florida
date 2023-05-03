@@ -652,7 +652,7 @@ body::-webkit-scrollbar-track {
 
 
 .botonVerde{
-    animation: mover 3s linear alternate-reverse forwards infinite;
+    animation: mover 1s linear alternate-reverse forwards infinite;
     color: var(--blanco);
 }
 
