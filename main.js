@@ -129,9 +129,6 @@ function activarBoton ()  {
 activarBoton()
 
 
-
-
-
 let indiceDeBusqueda;
 
 boton.addEventListener('click', () => {
@@ -426,6 +423,9 @@ boton.addEventListener('click', () => {
                 else if (listaDiferencias[i] < 30) {
                     estadoServicio.textContent = `Iniciaron sus recorrido hace menos de media hora`
                 }
+                else if (listaDiferencias[i] < 15) {
+                    estadoServicio.textContent = `Iniciaron sus recorrido hace menos de 15 minutos`
+                }
                 else if (listaDiferencias[i] < 10) {
                     estadoServicio.textContent = `Iniciaron sus recorrido hace menos de 10 minutos`
                 }
@@ -504,6 +504,9 @@ boton.addEventListener('click', () => {
                 if (Math.abs(listaDiferencias[i]) < 30) {
                     estadoServicio.textContent = 'Iniciarán sus recorridos en menos de media hora';
                 }
+                if (Math.abs(listaDiferencias[i]) < 15) {
+                    estadoServicio.textContent = 'Iniciarán sus recorridos en menos de 15 minutos';
+                }
                 if (Math.abs(listaDiferencias[i]) < 10) {
                     estadoServicio.textContent = 'Iniciarán sus recorridos en menos de 10 minutos';
                 }
@@ -537,6 +540,9 @@ boton.addEventListener('click', () => {
                 }
                 if (Math.abs(listaDiferencias[i]) < 30) {
                     estadoServicio.textContent = 'Iniciará su recorrido en menos de media hora'
+                }
+                if (Math.abs(listaDiferencias[i]) < 15) {
+                    estadoServicio.textContent = 'Iniciará su recorrido en menos de 15 minutos'
                 }
                 if (Math.abs(listaDiferencias[i]) < 10) {
                     estadoServicio.textContent = 'Iniciará su recorrido en menos de 10 minutos'

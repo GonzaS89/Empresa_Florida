@@ -7,7 +7,7 @@ function busquedaManual() {
     const selector3 = document.menu3.selector3;
     const selector4 = document.menu4.selector4;
     const selector5 = document.menu5.selector5;
-    const boton2 = document.getElementById('boton2')
+    const boton2 = document.querySelector('.boton2')
     const opcionbase3 = selector3[0];
     const opcionbase4 = selector4[0];
     const opcionbase5 = selector5[0];
@@ -46,6 +46,8 @@ function busquedaManual() {
         $('.boton-cont').css('display', 'none');
         $('.boton-cont2').css('display', 'flex');
         $('.aclaracion').css('display', 'flex');
+        opcionbase.selected = true;
+        opcionbase2.selected = true;
     })
 
     botonAuto.addEventListener('click', function () {
@@ -126,7 +128,69 @@ function busquedaManual() {
         }
     }
 
+    function obtenerPosicion3 () {
+        for (opcion of selector3) {
+            if (opcion.selected) {
+                valorSeleccionado3 = opcion;
+            }
+        }
+        for (i = 0; i < selector3.length; i++) {
+            valores3.push(selector3[i])
+        }
+        
+        for (i = 0; i < valores3.length; i++) {
+            posicion3 = valores3.indexOf(valorSeleccionado3)
+        }
+        return posicion3
+    }
 
+    function obtenerPosicion4 () {
+        for (opcion of selector4) {
+            if (opcion.selected) {
+                valorSeleccionado4 = opcion;
+            }
+        }
+        for (i = 0; i < selector4.length; i++) {
+            valores4.push(selector4[i])
+        }
+        
+        for (i = 0; i < valores4.length; i++) {
+            posicion4 = valores4.indexOf(valorSeleccionado4)
+        }
+        return posicion4
+    }
+
+    function obtenerPosicion5 () {
+        for (opcion of selector5) {
+            if (opcion.selected) {
+                valorSeleccionado5 = opcion;
+            }
+        }
+        for (i = 0; i < selector5.length; i++) {
+            valores5.push(selector5[i])
+        }
+        
+        for (i = 0; i < valores5.length; i++) {
+            posicion5 = valores5.indexOf(valorSeleccionado5)
+        }
+        return posicion5
+    }
+
+    function activarBotonManual () {
+        setInterval ( ()=> {
+        if((obtenerPosicion3() > 0 || obtenerPosicion4() > 0) && (obtenerPosicion5() > 0) && (ingHora.value !== '')){
+            boton2.classList.add('botonActivo');
+        }
+        else{
+            boton2.classList.remove('botonActivo')
+        }
+    })
+    }
+
+    activarBotonManual()
+    
+
+    
        boton2.addEventListener('click', function () {
 
         

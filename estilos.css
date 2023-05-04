@@ -656,6 +656,10 @@ body::-webkit-scrollbar-track {
     color: var(--blanco);
 }
 
+.botonActivo:hover{
+    cursor: pointer;
+}
+
 @keyframes mover {
     0%{
         transform: scale(1.05);
