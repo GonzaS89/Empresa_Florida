@@ -7,6 +7,7 @@
     --rojo2 : #f93a3a;
         --fondoAzul : rgb(31, 77, 134);
     --azul : rgb(39, 106, 231);
+    --fondoGrisLinear :linear-gradient(180deg, rgba(207,206,226,1) 0%, rgba(241,241,241,1) 85%, rgba(235,235,235,1) 97%);
     --fuentePrincipal : 'Nunito', sans-serif;
     --fuenteSec : 'Dosis', sans-serif;
 }
@@ -14,7 +15,7 @@
 .body{
     display: flex;
     flex-direction: column;
-    background: rgb(210, 204, 204);
+    background: var(--fondoGrisLinear);
 }
 h1,p,li{
     font-family: var(--fuenteSec);
@@ -50,29 +51,47 @@ li{
 
 .header{    
     display: flex;
-    justify-content: center;
-    background: white;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--fondoGrisLinear);
     height: 150px;
     width: 100%;
     box-shadow: 0px 0px 20px rgb(49, 44, 24);
+}
+
+.logo-cont{
+    display: flex;
+    justify-content: center;
+    flex-basis: 30%;
+}
+
+#logo{
+    background-image: url(imagenes/logoancho.png);
+    width:300px;
+    height:150px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 10px 0;
+    
+    /* animation: moverLogo 2s linear forwards */
 }
 .enlaces-cont{
     display: flex;
     width: 100%;
     justify-content:space-around;
     align-items: center;
-    gap: 5px;
     padding: 5px;
+    flex-basis: 60%;
+}
+
+a:hover{
+    cursor: pointer;
+    font-weight:800;
+    transition: s linear;
 }
 
 
-#logo{
-    background-image: url(Imagenes/logoancho.jpg);
-    width:300px;
-    height: 150px;
-    background-size: cover;
-    animation: moverLogo 2s linear forwards
-}
 
 @media (max-width: 768px){
     .header{
@@ -112,7 +131,7 @@ li{
 .carousel-cont{
     overflow: hidden;
     margin: 30px auto;
-    width: 90%;
+    width: 100%;
 }
 .carousel{
     width:300%;
@@ -298,6 +317,11 @@ li{
     .galeria ul{
         grid-template-columns: 1fr;
     }
+}
+
+.galeria li{
+    width: 500px;
+    height:300px
 }
 
 li img{
