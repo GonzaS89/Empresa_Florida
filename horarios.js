@@ -1502,7 +1502,7 @@ const posseTerminalLaV = [
         "nombre": "06:35",
         "salida": 6.35,
         "recorrido": "Bosque → Fila del Medio → Cevil Pozo → Banda R.S. → Terminal",
-        "recorrido": "Dispensario → Fila de la orilla → Cevil Pozo → Banda R.S. → Terminal"
+        "recorrido2": "Dispensario → Fila de la orilla → Cevil Pozo → Banda R.S. → Terminal"
     },
     {
         "nombre": "07:08",

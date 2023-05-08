@@ -84,9 +84,8 @@ function borrarGlobos() {
 
 function obtenerPosicion1 () {
     for (opcion of selector) {
-        if (opcion.selected) {
-            valorSeleccionado = opcion;
-        }
+        if (opcion.selected) valorSeleccionado = opcion;
+        
     }
     for (i = 0; i < selector.length; i++) {
         valores.push(selector[i])
@@ -100,9 +99,8 @@ function obtenerPosicion1 () {
 
 function obtenerPosicion2 () {
     for (opcion of selector2) {
-        if (opcion.selected) {
-            valorSeleccionado2 = opcion;
-        }
+        if (opcion.selected) valorSeleccionado2 = opcion;
+    
     }
     for (i = 0; i < selector2.length; i++) {
         valores2.push(selector2[i])
@@ -116,13 +114,9 @@ function obtenerPosicion2 () {
 
 function activarBoton ()  {
     setInterval ( ()=> {
-    if(obtenerPosicion1() > 0 || obtenerPosicion2() > 0){
-        boton.classList.add('botonActivo');
-    }
-    else{
-        boton.classList.remove('botonActivo')
-    }
-
+    if(obtenerPosicion1() > 0 || obtenerPosicion2() > 0) boton.classList.add('botonActivo');
+    else boton.classList.remove('botonActivo')
+    
 })
 }
 
@@ -136,34 +130,20 @@ boton.addEventListener('click', () => {
 
     // Definimos la posicion del selector 1
 
-    for (opcion of selector) {
-        if (opcion.selected) {
-            valorSeleccionado = opcion;
-        }
-    }
-    for (i = 0; i < selector.length; i++) {
-        valores.push(selector[i])
-    }
-
-    for (i = 0; i < valores.length; i++) {
-        posicion = valores.indexOf(valorSeleccionado)
-    }
+    for (opcion of selector) 
+    if (opcion.selected) valorSeleccionado = opcion;
+    for (i = 0; i < selector.length; i++) valores.push(selector[i])
+    for (i = 0; i < valores.length; i++) posicion = valores.indexOf(valorSeleccionado)
+    
 
 
     // Definimos la posicion del selector 2
 
-    for (opcion of selector2) {
-        if (opcion.selected) {
-            valorSeleccionado2 = opcion;
-        }
-    }
-    for (i = 0; i < selector2.length; i++) {
-        valores2.push(selector2[i])
-    }
-
-    for (i = 0; i < valores2.length; i++) {
-        posicion2 = valores2.indexOf(valorSeleccionado2)
-    }
+    for (opcion of selector2) 
+    if (opcion.selected) valorSeleccionado2 = opcion;
+    for (i = 0; i < selector2.length; i++) valores2.push(selector2[i])
+    for (i = 0; i < valores2.length; i++) posicion2 = valores2.indexOf(valorSeleccionado2)
+    
 
 
     // Definimos las variables globales
@@ -193,17 +173,16 @@ boton.addEventListener('click', () => {
 
 
 
-    if (opcionbase.selected == true && opcionbase2.selected == false) {
-        ruta = todosTucumanDestino[posicion2 - 1]
+    if (opcionbase.selected == true && opcionbase2.selected == false) ruta = todosTucumanDestino[posicion2 - 1]
         // linea1.textContent = origen.textContent
 
         linea2.textContent = selector2[posicion2].label;
-    }
-    if (opcionbase2.selected == true && opcionbase.selected == false) {
+    
+    if (opcionbase2.selected == true && opcionbase.selected == false) 
         ruta = todosDestinoTucuman[posicion - 1];
         linea2.textContent = selector[posicion].label;
         // linea2.textContent = destino.textContent;   
-    }
+    
 
     function obtenerDiaRuta(x) {
 
@@ -241,13 +220,13 @@ boton.addEventListener('click', () => {
     }
 
 
-    else {
-
-        tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
+    else tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
 
         // Aqui definimos el array dependiendo el dia de la semana
-        rutaObtenida = obtenerDiaRuta(dia)
-    }
+    rutaObtenida = obtenerDiaRuta(dia)
+    
+
+    
     
     //funcion para crear los globos de resultados
 
@@ -255,9 +234,7 @@ boton.addEventListener('click', () => {
 
     
         function obtenerLista(x) {
-            for (i = 0; i < x.length; i++) {
-                listaDelDia.push(x[i].salida);
-            }
+            for (i = 0; i < x.length; i++) listaDelDia.push(x[i].salida);
             // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
             return listaDelDia
         }
@@ -284,9 +261,8 @@ boton.addEventListener('click', () => {
 
 
     for (i = 0; i < listaDiferencias.length; i++) {
-        if (listaDiferencias[i] >= 0) {
-            anteriorPasado = Math.min(anteriorPasado, listaDiferencias[i]);
-        }
+        if (listaDiferencias[i] >= 0) anteriorPasado = Math.min(anteriorPasado, listaDiferencias[i]);
+        
     }
 
     if (anteriorPasado <= 15 && (listaDiferencias.indexOf(anteriorPasado) < listaDiferencias.length - 1)) {
@@ -301,15 +277,10 @@ boton.addEventListener('click', () => {
     }
 
     if ((rutaObtenida.length) > 1) {
-        if (indiceDeBusqueda == (rutaObtenida.length) - 1) {
-            scrollcont.children[0].classList.add('manitoAnimacionAbajo');
-        }
-        else if (indiceDeBusqueda == 0) {
-            scrollcont.children[0].classList.add('manitoAnimacionArriba');
-        }
-        else {
-            scrollcont.children[0].classList.add('manitoAnimacionCentro');
-        }
+        if (indiceDeBusqueda == (rutaObtenida.length) - 1) scrollcont.children[0].classList.add('manitoAnimacionAbajo');
+        else if (indiceDeBusqueda == 0) scrollcont.children[0].classList.add('manitoAnimacionArriba');
+        else scrollcont.children[0].classList.add('manitoAnimacionCentro');
+        
     }
 
 
@@ -374,22 +345,17 @@ boton.addEventListener('click', () => {
 
     resultadoscont.children[indiceDeBusqueda].classList.add('resaltado');
     // resultadoscont.children[indiceDeBusqueda].classList.add('manito');
-    if (resultadoscont.classList.contains('normalizarFondo')) {
-        resultadoscont.classList.replace('normalizarFondo', 'opacarFondo')
-    }
-    else {
-        resultadoscont.classList.add('opacarFondo');
-    }
+    if (resultadoscont.classList.contains('normalizarFondo')) resultadoscont.classList.replace('normalizarFondo', 'opacarFondo')
+    else resultadoscont.classList.add('opacarFondo');
+    
 
     mensaje2.appendChild(indicacioncont);
     
-    if(resolucion < 600){
-        for (i = 0; i < resultadoscont.children.length; i++) {
-            if (i < indiceDeBusqueda || i > indiceDeBusqueda) {
-                resultadoscont.children[i].classList.add('opacar')
-            }
+    if(resolucion < 600)
+    for (i = 0; i < resultadoscont.children.length; i++) {
+            if (i < indiceDeBusqueda || i > indiceDeBusqueda) resultadoscont.children[i].classList.add('opacar')
         }
-    }
+    
 
     for (i = 0; i < (resultadoscont.children).length; i++) {
         nombreServicio = (resultadoscont.children[i]).children[1];
@@ -571,13 +537,13 @@ boton.addEventListener('click', () => {
 
 resultadoscont.addEventListener('touchmove', () => {
     for (i = 0; i < resultadoscont.children.length; i++) {
-        if (i < indiceDeBusqueda || i > indiceDeBusqueda) {
+        if (i < indiceDeBusqueda || i > indiceDeBusqueda) 
             resultadoscont.children[i].classList.replace('opacar', 'normalizar');
             resultadoscont.children[indiceDeBusqueda].classList.replace('resaltado', 'normalizarResaltado');
             scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
             scrollcont.children[0].classList.remove('manitoAnimacionArriba');
             scrollcont.children[0].classList.remove('manitoAnimacionCentro');
-        }
+        
         resultadoscont.classList.replace('opacarFondo', 'normalizarFondo');
     }
 })
