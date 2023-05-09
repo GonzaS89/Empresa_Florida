@@ -10,166 +10,64 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Caveat&family=Dosis:wght@300&family=Gloria+Hallelujah&family=Indie+Flower&family=Milonga&display=swap"
-        rel="stylesheet">;
+        rel="stylesheet">
     <link rel="icon" href="Imagenes/logosinfondo.ico">
     <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empresa Florida</title>
+    <title>Algo</title>
 </head>
-
 <body>
-    <span id="logo-fondo"></span>
-    <section class="cuerpo">
-        <header class="header">
-            <div class="fecha">
-                <p id="dia"></p>
-                <p id="fecha"></p>
-                <p id="mes"></p>
+    <header class="header">
+        <nav class="navegacion">
+            <span class="header__logo"><img src="Imagenes/logo.png" alt="" srcset=""></span>
+        <ul>
+            <li><a class="header__enlaces" href="#">Nuestros Servicios</a></li>
+            <li><a class="header__enlaces" href="#">Nosotros</a></li>
+            <li><a class="header__enlaces" href="#">Contacto</a></li>
+        </ul>
+        </nav>
+    </header>
+    <main class="contenedor">
+        <div class="portada">
+            <div class="fotoPortada"></div>
+            <div class="textoPortada">
+                <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
             </div>
-            <div class="logo"></div>
-            <div class="hora">
-                <p id="segundos"></p>
-                <p id="horas"></p>
-                <p id="minutos"></p>
-            </div>
-        </header>
-        <div class="botonesBusquedaCont">
-            <button id="busquedaManual">Cambiar a búsqueda manual</button>
         </div>
-        <div class="botonesBusquedaCont2">
-            <button id="busquedaAuto">Cambiar a búsqueda automática</button>
-        </div>
-        <main class="contenedor">
-            <!-- <div class="titulo">
-            <h1 id="titulo">Consultá todos nuestros servicios aquí</h1>
-        </div> -->
-            <div class="busquedaAuto">
-                <div class="topside">
-                    <div class="origen">
-                        <h3 id="origen">Desde Terminal</h3>
-                    </div>
-                    <form class="menu" name=menu action="">
-                        <select id="selector" class="select" name="selector">
-                            <div class="options">
-                                <option value="default" disabled selected>¿Desde dónde quéres viajar?</option>
-                                <option value="florida"> Desde Florida ( por Alderetes/Alternativa )</option>
-                                <option value="florida">Desde Florida ( por Posse )</option>
-                                <option value="xposse"> Desde Posse</option>
-                                <option value="ralos"> Desde Ralos</option>
-                                <option value="ralos"> Desde Ralos ( por Cruz Alta )</option>
-                                <option value="7abril"> Desde 7 Abril</option>
-                                <option value="cejas"> Desde Las Cejas</option>
-                            </div>
-                        </select>
-                    </form>
+        <section class="servicios">
+            <div class="servicio">
+                <div class="servicio-imagen"><img src="imagenes/portada2.jpg" alt="">
                 </div>
-                <div class="intermedio">
-                    <div class="botonDeCambio">
-                        <button id="botonDeCambio"></button>
-                    </div>
-                    <div class="botonDeCambio2">
-                        <button id="botonDeCambio2"></button>
-                    </div>
-                </div>
-                <div class="topside">
-                    <div class="destino">
-                        <h3 id="destino">Hasta Terminal</h3>
-                    </div>
-                    <form class="menu2" name=menu2 action="">
-                        <select id="selector2" class="select" name="selector2">
-                            <option value="default" disabled selected>¿Hasta dónde querés ir?</option>
-                            <option value="florida">Hasta Florida (por Alderetes/Alternativa)</option>
-                            <option value="florida">Hasta Florida (por Posse)</option>
-                            <option value="xposse"> Hasta Posse</option>
-                            <option value="xralos"> Hasta Ralos</option>
-                            <option value="xralosC"> Hasta Ralos (por Cruz Alta)</option>
-                            <option value="x7deabril"> Hasta 7 de Abril</option>
-                            <option value="xcejas"> Hasta Las Cejas</option>
-                        </select>
-                    </form>
+                <div class="servicio-texto">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dignissimos aspernatur ipsum? Nam quisquam totam reprehenderit accusantium quidem vitae aut voluptates, vero ullam porro, nihil, consequatur voluptatum in odio neque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti autem cum quibusdam voluptas ad, aliquam minus labore nam.</p>
                 </div>
             </div>
-            <div class="busquedaManual">
-                <div class="topside2">
-                    <div class="botonesManual">
-                        <button class="origenCapital">Desde Orígen a Terminal</button>
-                        <button class="capitalDestino">Desde Terminal a Destino</button>
-                    </div>
-                    <form class="menu3" name=menu3 action="">
-                        <select id="selector3" class="select" name="selector3">
-                            <div class="options">
-                                <option value="default" disabled selected>¿Desde dónde quéres viajar?</option>
-                                <option value="floridaAld">Desde Florida ( por Alderetes/Alternativa )</option>
-                                <option value="floridaPos">Desde Florida ( por Posse )</option>
-                                <option value="xposse">Desde Posse</option>
-                                <option value="ralos">Desde Ralos</option>
-                                <option value="ralosxCruzAlta">Desde Ralos ( por Cruz Alta )</option>
-                                <option value="7abril">Desde 7 Abril</option>
-                                <option value="cejas">Desde Las Cejas</option>
-                            </div>
-                        </select>
-                    </form>
-                    <form class="menu4" name=menu4 action="">
-                        <select id="selector4" class="select" name="selector4">
-                            <option value="default" disabled selected>¿Hasta dónde querés ir?</option>
-                            <option value="florida">Hasta Florida (por Alderetes/Alternativa)</option>
-                            <option value="florida">Hasta Florida (por Posse)</option>
-                            <option value="xposse">Hasta Posse</option>
-                            <option value="xralos">Hasta Ralos</option>
-                            <option value="xralosC">Hasta Ralos (por Cruz Alta)</option>
-                            <option value="x7deabril">Hasta 7 de Abril</option>
-                            <option value="xcejas">Hasta Las Cejas</option>
-                        </select>
-                    </form>
-                    <form class="menu5" name=menu5 action="">
-                        <select id="selector5" class="select" name="selector5">
-                            <option value="default" disabled selected>Días de la semana</option>
-                            <option value="lunesViernes">Lunes a Viernes</option>
-                            <option value="sabado">Sábados</option>
-                            <option value="domingo">Domingos</option>
-                        </select>
-                    </form>
-                    <form>
-                        <input id="ingHora" type="number" placeholder="Ingresa un horario" required>
-                    </form>
-                    <span class="mensajeError-cont">
-                        <p id="mensajeError"></p>
-                    </span>
+            <div class="servicio2">
+                <div class="servicio-imagen"><img src="imagenes/portada4.jpg" alt="">
                 </div>
-                <div class="boton-cont">
-                    <button class='boton'>Mostrar horarios</button>
-                </div>
-                <div class="boton-cont2">
-                    <button class='boton2'>Mostrar horarios</button>
+                <div class="servicio-texto">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dignissimos aspernatur ipsum? Nam quisquam totam reprehenderit accusantium quidem vitae aut voluptates, vero ullam porro, nihil, consequatur voluptatum in odio neque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti autem cum quibusdam voluptas ad, aliquam minus labore nam.</p>
                 </div>
             </div>
-            <div class="mensaje2">
-                <div class="texto-resultados">
-                    <p id="tituloResultado"></p>
-                    <p id="linea1"></p>
-                    <p id="linea2"></p>
-                    <p id="linea3"></p>
+            <div class="servicio">
+                <div class="servicio-imagen"><img src="imagenes/portada5.webp" alt="">
                 </div>
-                <div class="resultados-container">
-                    <div class="resultados-cont"></div>
-                    <div class="scroll-cont">
-                        <span></span>
-                    </div>
-                </div>
-
-                <div class="indicacion-cont">
-                    <p class="indicacion">Tocá aqui para volver</p>
+                <div class="servicio-texto">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dignissimos aspernatur ipsum? Nam quisquam totam reprehenderit accusantium quidem vitae aut voluptates, vero ullam porro, nihil, consequatur voluptatum in odio neque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti autem cum quibusdam voluptas ad, aliquam minus labore nam.</p>
                 </div>
             </div>
-        </main>
-    </section>
-
+            <div class="servicio2">
+                <div class="servicio-imagen"><img src="imagenes/portada6.jpg" alt="">
+                </div>
+                <div class="servicio-texto">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dignissimos aspernatur ipsum? Nam quisquam totam reprehenderit accusantium quidem vitae aut voluptates, vero ullam porro, nihil, consequatur voluptatum in odio neque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti autem cum quibusdam voluptas ad, aliquam minus labore nam.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="main.js"></script>
-<script src="reloj.js"></script>
-<script src="horarios.js"></script>
-<script src="modoManual.js"></script>
 
 </html>
 
