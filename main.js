@@ -207,15 +207,14 @@ boton.addEventListener('click', () => {
 
     function obtenerDiaRuta(x) {
 
-        if (x == 0) {
-            diaRango = ruta[0].slice(0, ruta[0].length);
-        }
-        if (x >= 1 && x <= 5) {
-            diaRango = ruta[1].slice(0, ruta[1].length);
-        }
-        if (x == 6) {
-            diaRango = ruta[2].slice(0, ruta[2].length);
-        }
+        if (x == 0) diaRango = ruta[0].slice(0, ruta[0].length);
+        
+        else if (dia == 1 && posicion2 == 2) diaRango = ruta[1].slice(1, ruta[1].length)
+    
+        else if (x >= 1 && x <= 5) diaRango = ruta[1].slice(0, ruta[1].length);
+        
+        else if (x == 6) diaRango = ruta[2].slice(0, ruta[2].length);
+    
 
         return diaRango
     }
@@ -249,10 +248,11 @@ boton.addEventListener('click', () => {
         // Aqui definimos el array dependiendo el dia de la semana
         rutaObtenida = obtenerDiaRuta(dia)
     }
-
+    
     //funcion para crear los globos de resultados
 
     // Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
+
     
         function obtenerLista(x) {
             for (i = 0; i < x.length; i++) {
@@ -417,16 +417,16 @@ boton.addEventListener('click', () => {
                 else if (listaDiferencias[i] == 60) {
                     estadoServicio.textContent = 'Iniciaron sus recorridos hace 1 hora'
                 }
-                else if (listaDiferencias[i] < 60) {
+                else if (listaDiferencias[i] < 60 && listaDiferencias[i] > 30) {
                     estadoServicio.textContent = `Iniciaron sus recorrido hace menos de 1 hora`
                 }
-                else if (listaDiferencias[i] < 30) {
+                else if (listaDiferencias[i] < 30 && listaDiferencias[i] > 15) {
                     estadoServicio.textContent = `Iniciaron sus recorrido hace menos de media hora`
                 }
-                else if (listaDiferencias[i] < 15) {
+                else if (listaDiferencias[i] < 15 && listaDiferencias[i] > 10) {
                     estadoServicio.textContent = `Iniciaron sus recorrido hace menos de 15 minutos`
                 }
-                else if (listaDiferencias[i] < 10) {
+                else if (listaDiferencias[i] < 10 && listaDiferencias[i] > 5) {
                     estadoServicio.textContent = `Iniciaron sus recorrido hace menos de 10 minutos`
                 }
                 else if (listaDiferencias[i] < 5 && listaDiferencias[i] > 0) {
@@ -457,16 +457,16 @@ boton.addEventListener('click', () => {
                 else if (listaDiferencias[i] == 60) {
                     estadoServicio.textContent = 'Inició su recorrido hace 1 hora'
                 }
-                else if (listaDiferencias[i] < 60) {
+                else if (listaDiferencias[i] < 60 && listaDiferencias[i] > 30) {
                     estadoServicio.textContent = `Inició su recorrido hace menos de 1 hora`
                 }
-                else if (listaDiferencias[i] < 30) {
+                else if (listaDiferencias[i] < 30 && listaDiferencias[i] > 15) {
                     estadoServicio.textContent = `Inició su recorrido hace menos de media hora`
                 }
-                else if (listaDiferencias[i] < 15) {
+                else if (listaDiferencias[i] < 15 && listaDiferencias[i] > 10) {
                     estadoServicio.textContent = `Inició su recorrido hace menos de 15 minutos`
                 }
-                else if (listaDiferencias[i] < 10) {
+                else if (listaDiferencias[i] < 10 && listaDiferencias[i] > 5) {
                     estadoServicio.textContent = `Inició su recorrido hace menos de 10 minutos`
                 }
                 if (listaDiferencias[i] < 5 && listaDiferencias[i] > 2) {
@@ -498,16 +498,16 @@ boton.addEventListener('click', () => {
                 if (Math.abs(listaDiferencias[i]) == 60) {
                     estadoServicio.textContent = 'Iniciarán sus recorridos en 1 hora'
                 }
-                if (Math.abs(listaDiferencias[i]) < 60) {
+                if (Math.abs(listaDiferencias[i]) < 60 && Math.abs(listaDiferencias[i]) > 30) {
                     estadoServicio.textContent = 'Iniciarán sus recorridos en menos de 1 hora';
-                }
-                if (Math.abs(listaDiferencias[i]) < 30) {
+                }    
+                if (Math.abs(listaDiferencias[i]) < 30 && Math.abs(listaDiferencias[i]) > 15) {
                     estadoServicio.textContent = 'Iniciarán sus recorridos en menos de media hora';
                 }
-                if (Math.abs(listaDiferencias[i]) < 15) {
+                if (Math.abs(listaDiferencias[i]) < 15 && Math.abs(listaDiferencias[i]) > 10) {
                     estadoServicio.textContent = 'Iniciarán sus recorridos en menos de 15 minutos';
                 }
-                if (Math.abs(listaDiferencias[i]) < 10) {
+                if (Math.abs(listaDiferencias[i]) < 10 && Math.abs(listaDiferencias[i]) > 5) {
                     estadoServicio.textContent = 'Iniciarán sus recorridos en menos de 10 minutos';
                 }
                 if (Math.abs(listaDiferencias[i]) < 5 && Math.abs(listaDiferencias[i]) > 0) {
@@ -535,16 +535,16 @@ boton.addEventListener('click', () => {
                 if (Math.abs(listaDiferencias[i]) == 60) {
                     estadoServicio.textContent = 'Iniciaá su recorrido en 1 hora'
                 }
-                if (Math.abs(listaDiferencias[i]) < 60) {
+                if (Math.abs(listaDiferencias[i]) < 60 && Math.abs(listaDiferencias[i]) > 30) {
                     estadoServicio.textContent = 'Iniciará su recorrido en menos de 1 hora'
                 }
-                if (Math.abs(listaDiferencias[i]) < 30) {
+                if (Math.abs(listaDiferencias[i]) < 30 && Math.abs(listaDiferencias[i]) > 15) {
                     estadoServicio.textContent = 'Iniciará su recorrido en menos de media hora'
                 }
-                if (Math.abs(listaDiferencias[i]) < 15) {
+                if (Math.abs(listaDiferencias[i]) < 15 && Math.abs(listaDiferencias[i]) > 10) {
                     estadoServicio.textContent = 'Iniciará su recorrido en menos de 15 minutos'
                 }
-                if (Math.abs(listaDiferencias[i]) < 10) {
+                if (Math.abs(listaDiferencias[i]) < 10 && Math.abs(listaDiferencias[i]) < 5) {
                     estadoServicio.textContent = 'Iniciará su recorrido en menos de 10 minutos'
                 }
                 if (Math.abs(listaDiferencias[i]) < 5 && Math.abs(listaDiferencias[i]) > 0) {

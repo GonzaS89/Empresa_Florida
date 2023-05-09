@@ -270,11 +270,11 @@ function busquedaManual() {
                 diaRango2 = ruta2[1].slice(0, ruta2[1].length);
                 return diaRango2;
             }
-            if ((posicion5 - 1) == 1) {
+            else if ((posicion5 - 1) == 1) {
                 diaRango2 = ruta2[2].slice(0, ruta2[2].length);
                 return diaRango2;
             }
-            if ((posicion5 - 1) == 2) {
+            else if ((posicion5 - 1) == 2) {
                 diaRango2 = ruta2[0].slice(0, ruta2[0].length);
                 return diaRango2;
             };
