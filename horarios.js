@@ -33,7 +33,7 @@ const horariosLvFloAl = [
         "nombre": "07:20",
         "salida": 7.2,
         "recorrido": "Colonia 4 → B° La Cancha → Talar → Alternativa → Terminal",
-        "recorrido2": "Fortín → Esquina Lastra → Florida → Talar → Cochuchal → Alderetes → Banda R.S. → Terminal"
+        "recorrido2": "Fortín → Esquina Lastra → Florida → Talar → Alderetes → Banda R.S. → Terminal"
     },
     {
         "nombre": "07:40",
