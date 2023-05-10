@@ -568,7 +568,7 @@ iframe{
 
 .footer img{
     max-height: 150px;
-    filter: drop-shadow(10px 2px 20px white);
+    filter: drop-shadow(1.5px 0 5px white);
 }
 
 
