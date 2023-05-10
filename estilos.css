@@ -55,8 +55,13 @@ li{
     background: var(--fondoGrisLinear);
     height: 150px;
     width: 100%;
+    z-index: 10;
     box-shadow: 0px 0px 20px rgb(49, 44, 24);
 }
+
+/* .headerFixed{
+    position: fixed;
+} */
 
 .logo-cont{
     display: flex;
@@ -461,8 +466,6 @@ iframe{
     background: var(--rojo2);
 }
 
-
-
 #face-icon{
     /* background-image: url(imagenes/facebook.png); */
     width: 75px;
@@ -477,8 +480,6 @@ iframe{
         background-image: url(imagenes/facebook.png);
         transform: scale(.9);
         
-        
-
     }
     100%{
         background-image: url(imagenes/facebook\(2\).png);
@@ -521,7 +522,7 @@ iframe{
     background-color: var(--fondoAzul);
 }
 
-.servicio{
+.servicioAnimacion{
     animation: entrarServicio 3s ease-in-out;
 }
 
@@ -533,6 +534,10 @@ iframe{
 
 .servicio2{
     flex-direction:row-reverse;
+    
+}
+
+.servicio2Animacion{
     animation: entrarServicio2 3s ease-in-out;
 }
 
