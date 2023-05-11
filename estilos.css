@@ -83,8 +83,13 @@ a,h1,h2,h3,p {
     margin-right: 30px;
 }
 
+ul{
+    display: flex;
+    justify-content: center;
+}
 li{
     list-style: none;
+    flex-basis: 33%;
 }
 
 
