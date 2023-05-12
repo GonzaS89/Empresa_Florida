@@ -137,7 +137,7 @@ const horariosLvFloAl = [
     {
         "nombre": "19:00",
         "salida": 19,
-        "recorrido": "La Marta → Colonia 3 → B° La Cancha → Talar → Alderetes → Banda R.S. → Terminal"
+        "recorrido": "La Marta → Colonia 3 → B° La Cancha (19:15) → Talar → Alderetes → Banda R.S. → Terminal"
     },
     {
         "nombre": "21:05",
