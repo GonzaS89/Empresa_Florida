@@ -392,7 +392,7 @@ boton.addEventListener('click', () => {
                 else if (listaDiferencias[i] < 15 && listaDiferencias[i] > 10) {
                     estadoServicio.textContent = `Iniciaron sus recorrido hace menos de 15 minutos`
                 }
-                else if (listaDiferencias[i] < 10 && listaDiferencias[i] > 5) {
+                else if (listaDiferencias[i] <= 10 && listaDiferencias[i] > 5) {
                     estadoServicio.textContent = `Iniciaron sus recorrido hace menos de 10 minutos`
                 }
                 else if (listaDiferencias[i] < 5 && listaDiferencias[i] > 0) {
@@ -432,7 +432,7 @@ boton.addEventListener('click', () => {
                 else if (listaDiferencias[i] < 15 && listaDiferencias[i] > 10) {
                     estadoServicio.textContent = `Inició su recorrido hace menos de 15 minutos`
                 }
-                else if (listaDiferencias[i] < 10 && listaDiferencias[i] > 5) {
+                else if (listaDiferencias[i] <= 10 && listaDiferencias[i] > 5) {
                     estadoServicio.textContent = `Inició su recorrido hace menos de 10 minutos`
                 }
                 if (listaDiferencias[i] < 5 && listaDiferencias[i] > 2) {
@@ -473,7 +473,7 @@ boton.addEventListener('click', () => {
                 if (Math.abs(listaDiferencias[i]) < 15 && Math.abs(listaDiferencias[i]) > 10) {
                     estadoServicio.textContent = 'Iniciarán sus recorridos en menos de 15 minutos';
                 }
-                if (Math.abs(listaDiferencias[i]) < 10 && Math.abs(listaDiferencias[i]) > 5) {
+                if (Math.abs(listaDiferencias[i]) <= 10 && Math.abs(listaDiferencias[i]) > 5) {
                     estadoServicio.textContent = 'Iniciarán sus recorridos en menos de 10 minutos';
                 }
                 if (Math.abs(listaDiferencias[i]) < 5 && Math.abs(listaDiferencias[i]) > 0) {
@@ -510,7 +510,7 @@ boton.addEventListener('click', () => {
                 if (Math.abs(listaDiferencias[i]) < 15 && Math.abs(listaDiferencias[i]) > 10) {
                     estadoServicio.textContent = 'Iniciará su recorrido en menos de 15 minutos'
                 }
-                if (Math.abs(listaDiferencias[i]) < 10 && Math.abs(listaDiferencias[i]) < 5) {
+                if (Math.abs(listaDiferencias[i]) <= 10 && Math.abs(listaDiferencias[i]) > 5) {
                     estadoServicio.textContent = 'Iniciará su recorrido en menos de 10 minutos'
                 }
                 if (Math.abs(listaDiferencias[i]) < 5 && Math.abs(listaDiferencias[i]) > 0) {
