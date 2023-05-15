@@ -29,6 +29,7 @@ a{
     font-weight: 1000;
     color: black;
     font-size: 20px;
+    text-align: center;
 }
 a,h1,h2,h3,p {
     font-family: var(--fuentePrincipal)
@@ -56,7 +57,7 @@ a,h1,h2,h3,p {
 .navegacion{
     height: 100px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 10px auto; 
     width: 100%;
 }
@@ -74,20 +75,21 @@ a,h1,h2,h3,p {
     border-radius: 100%;
 }
 
-.header ul{
+
+.header__enlaces{
     display: flex;
-    gap: 30px;
-    align-items: center;
-    justify-content: flex-end;
-    flex-basis: 70%;
-    margin-right: 30px;
+    justify-content: center;
 }
 
 ul{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: center;
+    flex-basis: 55%;
 }
+
 li{
+    align-self: center; 
     list-style: none;
     flex-basis: 33%;
 }
