@@ -29,21 +29,17 @@ servicio.addEventListener('mouseover', (e)=> {
     console.log((e))
 })
 
-// servicio.addEventListener('mouseover', ()=>{
-           
-//                 if(!(servicioIMG.classList.contains('servicioImg'))) 
-//                 servicioIMG.classList.add('servicioImg')
-//                 else if (servicioIMG.classList.contains('servicioImg2')) 
-//                 console.log()
-//                 servicioIMG.classList.replace('servicioImg2','servicioImg')
-            
-            
-//         })
-//         servicio.addEventListener('mouseout', ()=>{
-//                 if(servicioIMG.classList.contains('servicioImg'))
-//             servicioIMG.classList.replace('servicioImg','servicioImg2')
-            
-//         })
+servicio.addEventListener('mouseover', ()=>{
+    if(!(servicioIMG.classList.contains('servicioImg'))) 
+        servicioIMG.classList.add('servicioImg')
+        else if (servicioIMG.classList.contains('servicioImg2')) 
+        console.log()
+        servicioIMG.classList.replace('servicioImg2','servicioImg')      
+})
+servicio.addEventListener('mouseout', ()=>{
+    if(servicioIMG.classList.contains('servicioImg'))
+    servicioIMG.classList.replace('servicioImg','servicioImg2')
+})
 
 
 
