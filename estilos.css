@@ -1291,14 +1291,14 @@ body::-webkit-scrollbar-track {
     }
     .resultados{
         width: 90%;
-        padding: 10px;
+        padding: 10px 0;
         border: .5px solid white;
         min-height: 50%;
         max-height: 75%;
     }
 
     .resultadosGrande{
-        min-height: 60%;
+        min-height: 65%;
     }
 
     .resultadosOpcion2{
@@ -1314,10 +1314,13 @@ body::-webkit-scrollbar-track {
     .actual3,
     .actual4{
         font-size: 15px;
+        text-align: center;
         padding: 0 10px;
         margin: 0;
     }
-
+    .actual4{
+        margin: 0;
+    }
 
     /* #actual1,#actual3,#actual4,#futuro1,#futuro3{
         margin: 5px 0;
