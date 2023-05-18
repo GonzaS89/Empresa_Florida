@@ -807,10 +807,10 @@ body::-webkit-scrollbar-track {
     min-height: 200px;
     gap: 10px;
     width: 75%;
-    border-top: 2.5px solid rgba(128, 128, 128, 0.159);
+    /* border-top: 2.5px solid rgba(128, 128, 128, 0.159); */
     overflow-y: scroll;
     margin: 10px auto;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     
 }
 .resultados-cont::-webkit-scrollbar {
@@ -842,7 +842,7 @@ body::-webkit-scrollbar-track {
 }
 
 .manitoAnimacionCentro{
-    animation: manitoScrollCentro 3s ease-out 2s 2 forwards;
+    animation: manitoScrollCentro 3s ease-out 2s forwards;
 }
 
 @keyframes manitoScrollCentro {
@@ -867,7 +867,7 @@ body::-webkit-scrollbar-track {
 }
 
 .manitoAnimacionArriba { 
-    animation: manitoScrollArriba 1.5s ease-out 2s 2 forwards;
+    animation: manitoScrollArriba 1.5s ease-out 2s forwards;
 }
 
 @keyframes manitoScrollArriba {
@@ -881,7 +881,7 @@ body::-webkit-scrollbar-track {
 }
 
 .manitoAnimacionAbajo { 
-    animation: manitoScrollAbajo 1.5s ease-out 2s 2 forwards;
+    animation: manitoScrollAbajo 1.5s ease-out 2s forwards;
 }
 
 @keyframes manitoScrollAbajo {
@@ -1291,10 +1291,14 @@ body::-webkit-scrollbar-track {
     }
     .resultados{
         width: 90%;
-        padding: 10px 0;
+        padding: 10px;
         border: .5px solid white;
         min-height: 50%;
         max-height: 75%;
+    }
+
+    .resultadosGrande{
+        min-height: 60%;
     }
 
     .resultadosOpcion2{
@@ -1313,10 +1317,7 @@ body::-webkit-scrollbar-track {
         padding: 0 10px;
         margin: 0;
     }
-    .actual4{
-        margin: 0;
-        padding: 0;
-    }
+
 
     /* #actual1,#actual3,#actual4,#futuro1,#futuro3{
         margin: 5px 0;
