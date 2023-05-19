@@ -207,10 +207,6 @@ li{
     background-color: #efdfbd;
 }
 
-.oficinas2{
-    flex-direction: row-reverse;
-}
-
 
 .oficinas-texto, .oficinas-texto2{
     display: flex;
@@ -243,20 +239,46 @@ img{
     border-bottom: none;
 }
 
+
+
 .logoTelefono{
     border-right: 1px solid rgba(42, 2, 2, 0.113);
+}
 
+#telefono{
+    animation: moverTel 1s linear infinite;
+}
+
+@keyframes moverTel {
+    50%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+
+#ubicacion{
+    animation: moverUbi 1s linear infinite;
+}
+
+@keyframes moverUbi {
+    50%{
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
 
 
 
-.oficinas-texto_ubicacion, .oficinas-texto_ubicacion2,.oficinas-texto_telefono,.oficinas-texto_telefono2{
+.oficinas-texto_ubicacion,.oficinas-texto_telefono{
     display: flex;
     border-right: none;
     border: 1px solid rgba(42, 2, 2, 0.116);
     border-right: none;
 }
-
 
 .textoUbicacion, .textoTelefono{
     display: flex;
