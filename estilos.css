@@ -21,9 +21,6 @@ html {
     scroll-behavior: smooth;
 }
 
-body{
-    background: var(--fondoGrisLinear);
-}
 a{
     text-decoration: none;
     font-weight: 1000;
@@ -31,8 +28,9 @@ a{
     font-size: 20px;
     text-align: center;
 }
-a,h1,h2,h3,p {
-    font-family: var(--fuentePrincipal)
+a,h1,h2,h3,h4,p {
+    font-family: var(--fuentePrincipal);
+    margin: 10px;
 }
 
 *,
@@ -79,6 +77,7 @@ a,h1,h2,h3,p {
 .header__enlaces{
     display: flex;
     justify-content: center;
+    flex-basis: 70%;
 }
 
 ul{
@@ -192,5 +191,94 @@ li{
     flex-basis: 50%;
 }
 
+.titulo{
+    text-align: center;
+}
+.contacto-bloque1{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.oficinas, .oficinas2{
+    display: flex;
+    width: 700px;
+    background-color: #efdfbd;
+}
+
+.oficinas2{
+    flex-direction: row-reverse;
+}
 
 
+.oficinas-texto, .oficinas-texto2{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    background:linear-gradient(180deg, rgba(255,241,241,1) 0%, rgba(251,139,139,1) 100%);
+}
+
+
+
+img{
+    width: 50%;
+}
+
+.oficinas-texto_telefono, .oficinas-texto_ubicacion{
+    flex-basis: 50%;
+}
+.logoUbicacion, .logoTelefono{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 30%;
+    background-color: #ec8079;
+
+}
+
+.logoUbicacion{
+    border: 1px solid rgba(229, 26, 26, 0.113);
+    border-top: none;
+    border-bottom: none;
+}
+
+.logoTelefono{
+    border-right: 1px solid rgba(42, 2, 2, 0.113);
+
+}
+
+
+
+.oficinas-texto_ubicacion, .oficinas-texto_ubicacion2,.oficinas-texto_telefono,.oficinas-texto_telefono2{
+    display: flex;
+    border-right: none;
+    border: 1px solid rgba(42, 2, 2, 0.116);
+    border-right: none;
+}
+
+
+.textoUbicacion, .textoTelefono{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 70%;
+    font-size: 15px;
+    color: #192461;
+}
+
+.oficinamapa{
+    display: flex;
+    justify-content: center;
+    flex-basis: 50%;
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.footer{
+    height: 100px;
+    background:var(--fondoGrisLinear);
+}
