@@ -53,7 +53,6 @@ a,h1,h2,h3,h4,p {
 }
 
 .navegacion{
-    height: 100px;
     display: flex;
     justify-content: space-between;
     margin: 10px auto; 
@@ -196,7 +195,7 @@ li{
 }
 .contacto-bloque1{
     display: flex;
-    gap: 20px;
+    gap: 30px;
     flex-direction: column;
     align-items: center;
 }
@@ -204,7 +203,7 @@ li{
 .oficinas, .oficinas2{
     display: flex;
     width: 700px;
-    background-color: #efdfbd;
+    gap: 30px;
 }
 
 
