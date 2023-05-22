@@ -42,6 +42,17 @@ servicio.addEventListener('mouseout', ()=>{
 })
 
 
+const fotos = document.querySelector('.fotos');
+
+let dataImagen = '';
+
+fotos.addEventListener('click', (e)=> {
+    console.log(e.target)
+
+    dataImagen = `${e.target}`
+
+    console.log(dataImagen)
+})
 
 
 
