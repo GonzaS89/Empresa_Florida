@@ -43,23 +43,25 @@ const servicios = document.querySelector('.servicios')
 
 
 const fotos = document.querySelector('.fotos');
-const foto = document.querySelector('.fotoC')
-const cerrarFoto = document.querySelector('.cerrarFoto')
+const foto = document.querySelector('.fotoC');
+const cerrarFoto = document.querySelector('.cerrarFoto');
+const mostrarFoto = document.querySelector('.mostrarFoto')
 
-let dataImagen = '';
+
 
 fotos.addEventListener('click', (e)=> {
-    // console.log(e.target.attributes.src.nodeValue)
-    dataImagen = e.target.attributes.src.nodeValue
-    $('.fotoC').css('backgroundImage',`url(${dataImagen})`)
+    let dataImagen = e.target.attributes.src.nodeValue;
+    $('.fotoC').css('backgroundImage',`url(${dataImagen})`);
     $('.mostrarFoto').css('position', 'fixed');
-    $('.mostrarFoto').css('display','flex')
-    console.log(dataImagen)
-    foto.classList.add('ingresaFoto')
+    $('.mostrarFoto').css('display','flex');
+    $('.cerrarFoto').css('display', 'flex');
+    if(!(foto.classList.contains('ingresaFoto'))) foto.classList.add('ingresaFoto');
+    else if(foto.classList.contains('ingresaFoto')) foto.classList.replace('retiraFoto', 'ingresaFoto')
 })
 
 cerrarFoto.addEventListener('click',()=> {
     $('.mostrarFoto').css('display', 'none');
+    $('.cerrarFoto').css('display', 'none');
 })
 
 
