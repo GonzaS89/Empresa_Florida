@@ -25,34 +25,43 @@ const servicios = document.querySelector('.servicios')
 // const servicio2 = document.querySelectorAll('.servicio2');
 // const servicioIMG2 = document.querySelectorAll('.servicio-imagen2');
 
-servicio.addEventListener('mouseover', (e)=> {
-    console.log((e))
-})
+// servicio.addEventListener('mouseover', (e)=> {
+//     console.log((e))
+// })
 
-servicio.addEventListener('mouseover', ()=>{
-    if(!(servicioIMG.classList.contains('servicioImg'))) 
-        servicioIMG.classList.add('servicioImg')
-        else if (servicioIMG.classList.contains('servicioImg2')) 
-        console.log()
-        servicioIMG.classList.replace('servicioImg2','servicioImg')      
-})
-servicio.addEventListener('mouseout', ()=>{
-    if(servicioIMG.classList.contains('servicioImg'))
-    servicioIMG.classList.replace('servicioImg','servicioImg2')
-})
+// servicio.addEventListener('mouseover', ()=>{
+//     if(!(servicioIMG.classList.contains('servicioImg'))) 
+//         servicioIMG.classList.add('servicioImg')
+//         else if (servicioIMG.classList.contains('servicioImg2')) 
+//         console.log()
+//         servicioIMG.classList.replace('servicioImg2','servicioImg')      
+// })
+// servicio.addEventListener('mouseout', ()=>{
+//     if(servicioIMG.classList.contains('servicioImg'))
+//     servicioIMG.classList.replace('servicioImg','servicioImg2')
+// })
 
 
 const fotos = document.querySelector('.fotos');
+const foto = document.querySelector('.fotoC')
+const cerrarFoto = document.querySelector('.cerrarFoto')
 
 let dataImagen = '';
 
 fotos.addEventListener('click', (e)=> {
-    console.log(e.target)
-
-    dataImagen = `${e.target}`
-
+    // console.log(e.target.attributes.src.nodeValue)
+    dataImagen = e.target.attributes.src.nodeValue
+    $('.fotoC').css('backgroundImage',`url(${dataImagen})`)
+    $('.mostrarFoto').css('position', 'fixed');
+    $('.mostrarFoto').css('display','flex')
     console.log(dataImagen)
+    foto.classList.add('ingresaFoto')
 })
+
+cerrarFoto.addEventListener('click',()=> {
+    $('.mostrarFoto').css('display', 'none');
+})
+
 
 
 
