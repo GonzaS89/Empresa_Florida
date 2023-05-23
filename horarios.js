@@ -107,12 +107,18 @@ const horariosLvFloAl = [
     {
         "nombre": "16:20",
         "salida": 16.2,
-        "recorrido": "La Marta → Colonia 4 → B° La Cancha → Talar → Alternativa → Terminal"
+        "recorrido": "La Marta → Colonia 4 (16:50) → B° La Cancha → Talar → Alternativa → Terminal"
+    },
+    {
+        "nombre": "16:45",
+        "salida": 16.45,
+        "recorrido": "Fonda → Talar → Alternativa → Terminal"
     },
     {
         "nombre": "16:50",
         "salida": 16.5,
-        "recorrido": "Colonia 4 → B° La Cancha → Talar → Alderetes → Banda R.S. → Terminal"
+        "recorrido": "Colonia 3 (Florida) → Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda R.S. → Terminal",
+        "recorrido2": "Colonia 4 → B° La Cancha → Talar → Alternativa → Terminal"
     },
     {
         "nombre": "17:35",
