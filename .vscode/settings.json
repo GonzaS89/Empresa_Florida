@@ -1,3 +1,4 @@
 {
-    "editor.fontFamily": "jetBrains Mono"
+    "editor.fontFamily": "jetBrains Mono",
+    "livePreview.defaultPreviewPath": "/index.html"
 }

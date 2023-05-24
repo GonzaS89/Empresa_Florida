@@ -431,7 +431,7 @@ iframe{
 
 .redes{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     background-color: var(--fondoAzul);
     height: 300px;
@@ -466,13 +466,42 @@ iframe{
     background: var(--rojo2);
 }
 
+.faceCont,.instaCont{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.faceCont{
+    background-color: #455ff4;
+}
+
+.faceCont:hover{
+    filter: brightness(30%);
+}
+
+
+.instaCont{
+    background-color: #f56e6e;
+}
+
+.instaCont:hover{
+    filter: brightness(30%)
+}
+
+
 #face-icon{
     /* background-image: url(imagenes/facebook.png); */
-    width: 100px;
-    height: 100px;
-    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-size:50%;
+    background-position: center;
+    background-repeat: no-repeat;
     margin: 10px;
-    animation: cambiarLogo 3s linear 3s alternate-reverse infinite;
+    background-image: url(Imagenes/logo-de-facebook.png);
+    /* animation: cambiarLogo 3s linear 3s alternate-reverse infinite; */
 }
 
 @keyframes cambiarLogo{
@@ -489,11 +518,14 @@ iframe{
 
 #insta-icon{
     /* background-image: url(imagenes/instagram.png); */
-    width: 100px;
-    height: 100px;
-    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
     margin: 10px;
-    animation: cambiarLogo2 3s linear 3s alternate-reverse infinite;
+    background-image: url(Imagenes/instagram\ \(2\).png);
+    /* animation: cambiarLogo2 3s linear 3s alternate-reverse infinite; */
 }
 
 @keyframes cambiarLogo2{
