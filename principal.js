@@ -12,7 +12,16 @@ const servicio2 = document.querySelectorAll('.servicio2');
 
 
 const galeria = document.querySelector('.galeria');
-const 
+const retratoCont = document.querySelector('.retratoCont')
+const retrato = document.querySelector('.retrato');
+
+
+galeria.addEventListener('click', (e)=> {
+    let dataRetrato = e.target.attributes.src.nodeValue;
+    console.log(dataRetrato)
+    $('.retratoCont').css('position', 'fixed')
+    $('.retrato').css('backgroundImage', `url(${dataRetrato})`)
+})
 
 
 
