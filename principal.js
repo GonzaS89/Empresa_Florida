@@ -15,12 +15,23 @@ addEventListener('scroll', ()=> {
     });
 
     servicio2.forEach(element => {
-        element.classList.add('servicio2Animacion')
-        element.classList.add('servicio2Animacion')
+        element.classList.add('servicio2Animacion');
+        element.classList.add('servicio2Animacion');
     });
     
 } 
 })
+
+const galeria = document.querySelector('.galeria');
+const retratoCont = document.querySelector('.retratoCont')
+const retrato = document.querySelector('.retrato');
+
+galeria.addEventListener('click', (e)=> {
+    let dataFoto = e.target.attributes.src.nodeValue;
+    $(retratoCont).css('position', 'fixed');
+    $(retrato).css('backgroundImage', `url(${dataFoto})`);
+})
+
 
 
 
