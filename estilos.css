@@ -43,6 +43,7 @@ body {
 body::-webkit-scrollbar-track {
     background: orange;        /* color of the tracking area */
 }
+
 /* #logo-fondo{
     background-image: url(Imagenes/Logo_sinfondo.png);
     height: 100%;
@@ -807,10 +808,10 @@ body::-webkit-scrollbar-track {
     min-height: 200px;
     gap: 10px;
     width: 75%;
-    border-top: 2.5px solid rgba(128, 128, 128, 0.159);
+    /* border-top: 2.5px solid rgba(128, 128, 128, 0.159); */
     overflow-y: scroll;
     margin: 10px auto;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     
 }
 .resultados-cont::-webkit-scrollbar {
@@ -842,7 +843,7 @@ body::-webkit-scrollbar-track {
 }
 
 .manitoAnimacionCentro{
-    animation: manitoScrollCentro 3s ease-out 2s 2 forwards;
+    animation: manitoScrollCentro 3s ease-out 2s forwards;
 }
 
 @keyframes manitoScrollCentro {
@@ -867,7 +868,7 @@ body::-webkit-scrollbar-track {
 }
 
 .manitoAnimacionArriba { 
-    animation: manitoScrollArriba 1.5s ease-out 2s 2 forwards;
+    animation: manitoScrollArriba 1.5s ease-out 2s forwards;
 }
 
 @keyframes manitoScrollArriba {
@@ -881,7 +882,7 @@ body::-webkit-scrollbar-track {
 }
 
 .manitoAnimacionAbajo { 
-    animation: manitoScrollAbajo 1.5s ease-out 2s 2 forwards;
+    animation: manitoScrollAbajo 1.5s ease-out 2s forwards;
 }
 
 @keyframes manitoScrollAbajo {
@@ -955,6 +956,8 @@ body::-webkit-scrollbar-track {
     min-height: 50%;
     gap: 2.5px;
 }
+
+
 
 .resultadosOpcion2 {
     width: 65%;
@@ -1234,7 +1237,9 @@ body::-webkit-scrollbar-track {
     background-color: var(--blanco);
     height: 60px;
     margin-top: auto;
-    box-shadow: 10px 10px 10px 10px rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0;
+    /* box-shadow: 10px 10px 10px 10px rgb(255, 255, 255); */
 }
 
 #footer-texto {
@@ -1297,6 +1302,10 @@ body::-webkit-scrollbar-track {
         max-height: 75%;
     }
 
+    .resultadosGrande{
+        min-height: 65%;
+    }
+
     .resultadosOpcion2{
         width: 90%;
         padding: 10px 0;
@@ -1310,12 +1319,12 @@ body::-webkit-scrollbar-track {
     .actual3,
     .actual4{
         font-size: 15px;
+        text-align: center;
         padding: 0 10px;
         margin: 0;
     }
     .actual4{
         margin: 0;
-        padding: 0;
     }
 
     /* #actual1,#actual3,#actual4,#futuro1,#futuro3{
