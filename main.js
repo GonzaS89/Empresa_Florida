@@ -200,7 +200,7 @@ boton.addEventListener('click', () => {
 
     let rutaObtenida
 
-    if ((fecha == 24) && (mes == 2)) {
+    if((fecha == 25) && (mes == 4)){
         tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo `;
         rutaObtenida = obtenerDiaRuta(0);
         feriado = true;
