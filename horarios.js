@@ -157,7 +157,6 @@ const horariosSFloAl = [
         "nombre": "04:40",
         "salida": 4.4,
         "recorrido": "Fortín → Esquina Lastra → Fonda → B° La Cancha → Florida → Talar → Alderetes → Banda R.S. → Terminal"
-
     },
     {
         "nombre": "05:45",

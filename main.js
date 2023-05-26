@@ -173,14 +173,14 @@ boton.addEventListener('click', () => {
 
 
 
-    if (opcionbase.selected == true && opcionbase2.selected == false) ruta = todosTucumanDestino[posicion2 - 1]
-        // linea1.textContent = origen.textContent
-
-        linea2.textContent = selector2[posicion2].label;
+    if (opcionbase2.selected == false) 
+    ruta = todosTucumanDestino[posicion2 - 1]
+    // linea2.textContent = selector2[posicion2].label;
     
-    if (opcionbase2.selected == true && opcionbase.selected == false) 
-        ruta = todosDestinoTucuman[posicion - 1];
-        linea2.textContent = selector[posicion].label;
+    if (opcionbase.selected == false) 
+    ruta = todosDestinoTucuman[posicion - 1];
+        // linea2.textContent = selector[posicion].label;
+        console.log(selector[posicion].label)
         // linea2.textContent = destino.textContent;   
     
 
@@ -189,6 +189,8 @@ boton.addEventListener('click', () => {
         if (x == 0) diaRango = ruta[0].slice(0, ruta[0].length);
         
         else if (dia == 1 && posicion2 == 2) diaRango = ruta[1].slice(1, ruta[1].length)
+        
+        else if(semiFeriado && posicion2 == 2) diaRango = ruta[1].slice(1, ruta[1].length)
     
         else if (x >= 1 && x <= 5) diaRango = ruta[1].slice(0, ruta[1].length);
         
@@ -209,10 +211,10 @@ boton.addEventListener('click', () => {
     }
     
 
-    else if ((fecha == 6) && (mes == 3)) {
+    else if ((fecha == 26) && (mes == 4)) {
         semiFeriado = true;
         rutaObtenida = obtenerDiaRuta(6);
-        tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} santo: Circulación como día sábado `;
+        tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día sábado `;
     }
 
     else if ((fecha == 7) && (mes == 3)) {
