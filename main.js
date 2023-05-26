@@ -231,7 +231,10 @@ boton.addEventListener('click', () => {
     else 
     {tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
         // Aqui definimos el array dependiendo el dia de la semana
-    rutaObtenida = obtenerDiaRuta(dia)
+    rutaObtenida = obtenerDiaRuta(dia);
+    feriado = false;
+    semiFeriado = false;
+    feriadoPrevio = false;
     } 
     
     //funcion para crear los globos de resultados
