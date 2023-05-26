@@ -173,15 +173,15 @@ boton.addEventListener('click', () => {
 
 
 
-    if (opcionbase2.selected == false) 
+    if (opcionbase2.selected == false) {
     ruta = todosTucumanDestino[posicion2 - 1]
-    // linea2.textContent = selector2[posicion2].label;
+    linea2.textContent = selector2[posicion2].label;
+    }
     
-    if (opcionbase.selected == false) 
+    if (opcionbase.selected == false) {
     ruta = todosDestinoTucuman[posicion - 1];
-        // linea2.textContent = selector[posicion].label;
-        console.log(selector[posicion].label)
-        // linea2.textContent = destino.textContent;   
+    linea2.textContent = selector[posicion].label;
+    }
     
 
     function obtenerDiaRuta(x) {
