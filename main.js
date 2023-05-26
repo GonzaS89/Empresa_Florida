@@ -166,11 +166,11 @@ boton.addEventListener('click', () => {
     let tituloResultado = document.getElementById('tituloResultado')
     let feriado = false;
     let semiFeriado = false;
+    let feriadoPrevio = false;
     let nombreServicio;
     let recorridoServicio;
     let recorridoServicio2;
     let estadoServicio;
-
 
 
     if (opcionbase2.selected == false) {
@@ -188,9 +188,7 @@ boton.addEventListener('click', () => {
 
         if (x == 0) diaRango = ruta[0].slice(0, ruta[0].length);
         
-        else if (dia == 1 && posicion2 == 2) diaRango = ruta[1].slice(1, ruta[1].length)
-        
-        else if(semiFeriado && posicion2 == 2) diaRango = ruta[1].slice(1, ruta[1].length)
+        else if ((dia == 1 || semiFeriado || feriadoPrevio) && posicion2 == 2) diaRango = ruta[1].slice(1, ruta[1].length)
     
         else if (x >= 1 && x <= 5) diaRango = ruta[1].slice(0, ruta[1].length);
         
@@ -209,7 +207,12 @@ boton.addEventListener('click', () => {
             rutaObtenida = obtenerDiaRuta(0);
         }
     }
-    
+
+    else if((fecha == 27) && (mes == 4)) {
+        feriadoPrevio = true; 
+        rutaObtenida = obtenerDiaRuta(dia);
+        tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
+    }
 
     else if ((fecha == 26) && (mes == 4)) {
         semiFeriado = true;
