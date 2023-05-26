@@ -64,23 +64,29 @@ cerrarFoto.addEventListener('click',()=> {
     $('.cerrarFoto').css('display', 'none');
 })
 
-const texto = document.querySelector('.textoPrueba').innerHTML
+const texto = document.querySelector('.textoPrueba')
 const cadena = document.querySelector('.textoCadena');
 
 
-let escritura = string => {
+let escritura = (string , seccion) => {
     let arr = string.split('');
     let i = 0;
     let escribir = setInterval( function() {
-    cadena.innerHTML += arr[i];
+    seccion.textContent += arr[i];
         i++;
         if(i === arr.length) {
         clearInterval(escribir)
         };
-    }, 100);
+    }, 75);
 };
 
-escritura(texto)
+escritura('Lorem ipsum, dolor sit amet consectetur adipisicing elit',texto)
+
+const enlaces = document.querySelectorAll('.header__enlaces')
+
+;
+
+
 
 
 

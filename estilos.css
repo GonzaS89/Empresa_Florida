@@ -12,6 +12,8 @@
     --fuentePrincipal: 'Nunito', sans-serif;
     --fuenteSec: 'Dosis', sans-serif;
     --fuenteTer:'Titan One', cursive;
+    --fuenteAlter : 'Rubik Puddles', cursive;
+
 
 }
 
@@ -129,12 +131,17 @@ li{
     flex-direction: column;
     align-items: center;
     z-index: 5;
+    font-family: var(--fuenteAlter);
 
 }
 .textoPortada h2{
     color: white;
     text-align: center;
     text-transform: uppercase;
+}
+
+.textoPrueba{
+    font-family: var(--fuenteAlter);
 }
 
 .servicios{
