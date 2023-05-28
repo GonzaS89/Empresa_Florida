@@ -285,12 +285,7 @@ boton.addEventListener('click', () => {
         indiceDeBusqueda = listaDiferencias.indexOf(anteriorPasado);
     }
 
-    if ((rutaObtenida.length) > 1) {
-        if (indiceDeBusqueda == (rutaObtenida.length) - 1) scrollcont.children[0].classList.add('manitoAnimacionAbajo');
-        else if (indiceDeBusqueda == 0) scrollcont.children[0].classList.add('manitoAnimacionArriba');
-        else scrollcont.children[0].classList.add('manitoAnimacionCentro');
-        
-    }
+    
 
 
     function contruirGlobos(ruta, contPadre, contHijo) {
@@ -361,9 +356,15 @@ boton.addEventListener('click', () => {
     mensaje2.appendChild(indicacioncont);
     
     if(resolucion < 600)
+    if ((rutaObtenida.length) > 1) {
+        if (indiceDeBusqueda == (rutaObtenida.length) - 1) scrollcont.children[0].classList.add('manitoAnimacionAbajo');
+        else if (indiceDeBusqueda == 0) scrollcont.children[0].classList.add('manitoAnimacionArriba');
+        else scrollcont.children[0].classList.add('manitoAnimacionCentro');
+        
+    }
     for (i = 0; i < resultadoscont.children.length; i++) {
             if (i < indiceDeBusqueda || i > indiceDeBusqueda) resultadoscont.children[i].classList.add('opacar')
-        }
+    }
     
 
     for (i = 0; i < (resultadoscont.children).length; i++) {
