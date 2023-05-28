@@ -1,4 +1,4 @@
 {
-    "editor.fontFamily": "jetBrains Mono",
+    "editor.fontFamily": "JetBrains Mono ExtraBold,Inconsolata SemiBold,Consola,DejaVu Sans Mono,ProggyCrossed,CaskaydiaCove Nerd Font Mono,jetBrains Mono",
     "livePreview.defaultPreviewPath": "/index.html"
 }
