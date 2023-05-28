@@ -33,6 +33,9 @@ galeria.addEventListener('click', (e)=> {
 })
 
 
+let escritura = string => {
+    
+}
 
 
 

@@ -11,6 +11,7 @@
     --fondoGrisLinear :linear-gradient(180deg, rgba(207,206,226,1) 0%, rgba(241,241,241,1) 85%, rgba(235,235,235,1) 97%);
     --fuentePrincipal : 'Nunito', sans-serif;
     --fuenteSec : 'Dosis', sans-serif;
+    --fuenteTer : 'Lilita One', cursive;
 }
 
 .body{
@@ -138,35 +139,44 @@ a:hover{
 }
 .carousel-cont{
     overflow: hidden;
-    width: 100%;
+
 }
 .carousel{
-    width:200%;
     display: flex;
-    background-color: black;
-    /* animation: moverIMG1 15s ease-out infinite; */
-}
-
-.imagen-carousel img{
     width: 100%;
-    border-radius: 5px;
-    filter: saturate(125%);
-    
+    height: 900px;
+    /* animation: moverIMG1 15s ease-out infinite; */
 }
 
 .imagen-carousel {
     display: flex;
     width: 100%;
-    height: 900px;
+    filter: blur(5px) brightness(35%);
     background-image: url(Imagenes/bondi4.jpg);
     background-size: cover;
-    filter: saturate(150%);
     background-attachment: fixed;
+    background-position: center;
 }
 
 .textoCarousel{
-    z-index: 10;
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+#textoCar{
+    font-size:75px;
+    color: white;
+    font-family: var(--fuenteTer);
+}
+
+/* .textoCarousel{
+    z-index: 10;
+} */
 
 
 @media (max-width:1500px){
