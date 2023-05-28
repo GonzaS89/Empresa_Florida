@@ -26,16 +26,60 @@ const galeria = document.querySelector('.galeria');
 const retratoCont = document.querySelector('.retratoCont')
 const retrato = document.querySelector('.retrato');
 
-galeria.addEventListener('click', (e)=> {
-    let dataFoto = e.target.attributes.src.nodeValue;
-    $(retratoCont).css('position', 'fixed');
-    $(retrato).css('backgroundImage', `url(${dataFoto})`);
-})
+// galeria.addEventListener('click', (e)=> {
+//     let dataFoto = e.target.attributes.src.nodeValue;
+//     $(retratoCont).css('position', 'fixed');
+//     $(retrato).css('backgroundImage', `url(${dataFoto})`);
+// })
 
+const textoCar = document.querySelector('.textoCar')
 
 let escritura = string => {
-    
+    let array = string.split('');
+    let i = 0;
+    let escribir = setInterval( function() {
+        textoCar.textContent += array[i];
+        i++;
+        if(i === array.length){
+        clearInterval(escribir);
+        }
+    },150)
+    console.log(array)
 }
+
+// escritura('Somos Empresa Florida');
+
+
+var typed = new Typed('.textoCar', {
+    strings: ['Bienvenido a nuestra web'],
+    typeSpeed: 50,
+    backSpeed: 25,
+    cursorChar: '.',
+    shuffle: false,
+    smartBackspace: true,
+    loop: false
+  });
+
+  setTimeout(() => {
+    var typed2 = new Typed('.textoCar', {
+        strings: ['Contamos con servicios en: '],
+        typeSpeed: 50,
+        backSpeed: 25,
+        cursorChar: '.',
+        shuffle: false,
+        smartBackspace: true,
+        loop: false
+    })
+  }, 5000);
+
+
+
+ 
+    
+    
+    
+
+
 
 
 
