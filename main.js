@@ -80,11 +80,19 @@ let escritura = (string , seccion) => {
     }, 75);
 };
 
-escritura('Lorem ipsum, dolor sit amet consectetur adipisicing elit',texto)
+// escritura('Lorem ipsum, dolor sit amet consectetur adipisicing elit',texto)
 
 const enlaces = document.querySelectorAll('.header__enlaces')
 
-;
+var typed5 = new Typed('.textoPrueba', {
+    strings: ['Bienvenidos a nuestra web','Aquí podras ver todos nuestros servicios','Conocer nuestras instalaciones'],
+    typeSpeed: 100,
+    backSpeed: 35,
+    cursorChar: '_',
+    shuffle: false,
+    smartBackspace: false,
+    loop: true
+});
 
 
 
