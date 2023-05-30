@@ -315,7 +315,6 @@ ul img{
 .contacto-bloque1{
     display: flex;
     gap: 30px;
-    flex-direction: column;
     align-items: center;
     padding: 20px;
 }
