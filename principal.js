@@ -60,17 +60,6 @@ var typed = new Typed('.textoCar', {
     loop: false
   });
 
-  setTimeout(() => {
-    var typed2 = new Typed('.textoCar', {
-        strings: ['Contamos con servicios en: '],
-        typeSpeed: 50,
-        backSpeed: 25,
-        cursorChar: '.',
-        shuffle: false,
-        smartBackspace: true,
-        loop: false
-    })
-  }, 5000);
 
 
 
