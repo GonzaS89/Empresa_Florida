@@ -9,28 +9,40 @@ addEventListener('scroll', ()=> {
 
     if(carousel.getBoundingClientRect().top < 0){
 
-    servicio.forEach(element => {
-        element.classList.add('servicioAnimacion')
-        element.classList.add('servicioAnimacion')
-    });
+        servicio.forEach(element => {
+            element.classList.add('servicioAnimacion')
+            element.classList.add('servicioAnimacion')
+        });
 
-    servicio2.forEach(element => {
-        element.classList.add('servicio2Animacion');
-        element.classList.add('servicio2Animacion');
-    });
+        servicio2.forEach(element => {
+            element.classList.add('servicio2Animacion');
+            element.classList.add('servicio2Animacion');
+        });
     
-} 
+    } 
 })
 
+// 
+
 const galeria = document.querySelector('.galeria');
-const retratoCont = document.querySelector('.retratoCont')
+const pantalla = document.querySelector('.pantalla_negra')
 const retrato = document.querySelector('.retrato');
 
-// galeria.addEventListener('click', (e)=> {
-//     let dataFoto = e.target.attributes.src.nodeValue;
-//     $(retratoCont).css('position', 'fixed');
-//     $(retrato).css('backgroundImage', `url(${dataFoto})`);
-// })
+
+galeria.addEventListener('click', (e) => {
+    let dataFoto = e.target.attributes.src.nodeValue;
+    $(pantalla).css('position', 'fixed');
+    $(pantalla).css('display','flex')
+    $(retrato).css('backgroundImage', `url(${dataFoto})`);
+    $('.boton_cerrador').css('display', 'flex');
+});
+
+const botonCerrador = document.querySelector('.boton_cerrador')
+
+botonCerrador.addEventListener('click', ()=> {
+    $('.boton_cerrador').css('display', 'none');
+    $(pantalla).css('display','none')
+})
 
 const textoCar = document.querySelector('.textoCar')
 
@@ -50,20 +62,8 @@ let escritura = string => {
 // escritura('Somos Empresa Florida');
 
 
-var typed = new Typed('.textoCar', {
-    strings: ['Bienvenido a nuestra web'],
-    typeSpeed: 50,
-    backSpeed: 25,
-    cursorChar: '.',
-    shuffle: false,
-    smartBackspace: true,
-    loop: false
-  });
 
 
-
-
- 
     
     
     
