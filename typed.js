@@ -9,7 +9,7 @@ let typed = new Typed('.textoCar', {
 });
 
 
-let typed2 = new Typed('#footer-txt1', {
+let typed2 = new Typed('.footer-txt1', {
         strings: ['Empresa Florida 2023'],
         typeSpeed: 50,
         backSpeed: 25,
