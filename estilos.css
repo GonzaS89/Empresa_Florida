@@ -12,6 +12,8 @@
     --fuentePrincipal : 'Nunito', sans-serif;
     --fuenteSec : 'Dosis', sans-serif;
     --fuenteTer : 'Lilita One', cursive;
+    --fuenteFooter :'Monomaniac One', sans-serif;
+
 }
 
 .body{
@@ -703,19 +705,21 @@ iframe{
     justify-content: center;
     flex-basis:50%;
     gap: 30px;
+    font-family: var(--fuenteFooter);
 }
 
-.footer p{
+#footer-txt1, #footer-txt2{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size:30px;
+    font-size:20px;
     flex-basis:50%;
     text-align: center;
     gap: 30px;
     text-transform: uppercase;
+    
 }
 
 @media (max-width:600px){
