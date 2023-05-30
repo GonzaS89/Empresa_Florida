@@ -85,13 +85,12 @@ let escritura = (string , seccion) => {
 const enlaces = document.querySelectorAll('.header__enlaces')
 
 var typed5 = new Typed('.textoPrueba', {
-    strings: ['Bienvenidos a nuestra web','Aquí podras ver todos nuestros servicios','Conocer nuestras instalaciones'],
+    strings: ['Bienvenidos a nuestra web'],
     typeSpeed: 100,
     backSpeed: 35,
-    cursorChar: '_',
     shuffle: false,
     smartBackspace: false,
-    loop: true
+    loop: false
 });
 
 
