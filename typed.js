@@ -26,7 +26,7 @@ let typed3 = new Typed('.footer-txt2', {
         cursorChar: '.',
         shuffle: false,
         smartBackspace: true,
-        loop: true
+        loop: false
 })
 
 // var typed3 = new Typed('.footer-txt2', {
