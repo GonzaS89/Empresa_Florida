@@ -20,7 +20,7 @@ let typed2 = new Typed('.footer-txt1', {
 });
 
 let typed3 = new Typed('.footer-txt2', {
-        strings: ['Diseño Web por Sinhg Gonzalo'],
+        strings: ['Diseño Web : Sinhg Gonzalo'],
         typeSpeed: 50,
         backSpeed: 25,
         cursorChar: '.',
