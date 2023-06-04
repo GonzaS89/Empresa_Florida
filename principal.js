@@ -6,7 +6,7 @@ const tituloInfo = document.getElementById('titulo');
 const servicio = document.querySelectorAll('.servicio');
 const servicio2 = document.querySelectorAll('.servicio2')
 
-addEventListener('scroll', ()=> {
+window.addEventListener('scroll', ()=> {
 
     if(carousel.getBoundingClientRect().top < 0){
 
