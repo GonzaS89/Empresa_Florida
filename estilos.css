@@ -34,7 +34,7 @@ a{
     font-weight: bold;
     font-weight: 400;
     text-shadow: 5px 5px 10px  black;
-    font-size: 30px;
+    font-size: 25px;
     animation: moverLink 10s linear infinite;
     text-transform: uppercase;
     text-align: center;
@@ -58,10 +58,11 @@ li{
     justify-content: space-around;
     align-items: center;
     background: var(--fondoGrisLinear);
-    height: 150px;
+    height: 125px;
     width: 100%;
-    z-index: 10;
+    z-index: 25;
     box-shadow: 0px 0px 20px rgb(49, 44, 24);
+    position: fixed;
 }
 
 /* .headerFixed{
@@ -73,19 +74,17 @@ li{
     justify-content: center;
     align-items: center;
     flex-basis: 25%;
-    padding: 20px;
-    height: 100%;
     width: 100%;
+    height: 100%;
 }
 
 #logo{
     background-image: url(imagenes/logoancho.png);
     width:100%;
-    height: 100%;
-    background-size: cover;
+    height:100%;
+    background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
-    margin: 10px 0;
     filter:drop-shadow(1.5px 0 5px black)
     
     /* animation: moverLogo 2s linear forwards */
@@ -157,7 +156,7 @@ a:hover{
     position: absolute;
     z-index: 20;
     width: 100%;
-    height: 75%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content:center;
@@ -296,12 +295,11 @@ GALERIA */
 .galeria_foto img{
     width: 100%;
     height: 100%;
-    /* border: 5px solid var(--fondoAzul); */
 }
 
 .pantalla_negra{
     background-color: rgba(0, 0, 0, 0.89);
-    z-index: 20;
+    z-index: 50;
     width: 100%;
     height: 100%;
     /* position: fixed; */
@@ -324,6 +322,20 @@ GALERIA */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    
+}
+
+.animacionRetrato {
+    animation: ingresaRetrato .5s ease-out;
+}
+
+@keyframes ingresaRetrato {
+    0%{
+        filter: opacity(0)
+    }
+    100%{
+        filter: opacity(1);
+    }
 }
 
 .boton_cerrador{
@@ -334,9 +346,9 @@ GALERIA */
     background-color: rgba(244, 244, 244, 0.913);
     position: absolute;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 30px;
+    width: 65px;
+    height: 65px;
+    font-size: 50px;
     top: 0;
     margin-top:10px;
     gap: 10px;
@@ -452,7 +464,7 @@ iframe{
     background-color: var(--fondoAzul);
     height: 300px;
     min-height: 250px;
-    width: 75%;
+    width: 50%;
     /* border-top-left-radius: 250px 250px; */
     overflow: hidden;
     animation: entrarRedes 3s ease-in-out;
@@ -629,6 +641,7 @@ iframe{
     margin-top:30px;
     height: 200px;
     background-color: var(--fondoAzul);
+    box-shadow: 0px 0px 20px rgb(49, 44, 24);
 }
 
 .footer-izq img{
@@ -667,18 +680,23 @@ iframe{
 .footer-redes{
     display: flex;
     justify-content:space-between;
-    /* animation: redes-footer 1s linear infinite */
+    transform: scale(0);
+    animation: redes-footer 2s ease-out forwards;
+    
 }
 
 .footer-redes img{
-    max-height: 150px;
+    max-height: 120px;
     width:75%;
     
 }
 
 @keyframes redes-footer {
+    0%{
+        transform: scale(0)
+    }
     100%{
-        transform: scale(.9)
+        transform: scale(1)
     }
 }
 

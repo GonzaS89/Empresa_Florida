@@ -1,4 +1,5 @@
 const body = document.querySelector('body')
+const html = document.querySelector('html')
 const header = document.querySelector('.header');
 const carousel = document.querySelector('.carousel-cont');
 const tituloInfo = document.getElementById('titulo');
@@ -35,6 +36,7 @@ galeria.addEventListener('click', (e) => {
     $(pantalla).css('display','flex')
     $(retrato).css('backgroundImage', `url(${dataFoto})`);
     $('.boton_cerrador').css('display', 'flex');
+    retrato.classList.add('animacionRetrato')
 });
 
 const botonCerrador = document.querySelector('.boton_cerrador')
@@ -63,10 +65,6 @@ let escritura = string => {
 
 
 
-
-    
-    
-    
 
 
 
