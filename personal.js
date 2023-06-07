@@ -40,7 +40,7 @@ const personal =
         "fechaNac" :
                     {
                         "dia":30,
-                        "mes":2,
+                        "mes":5,
                         "año":1990
                     },
         "estadoCivil":"casado",
@@ -71,6 +71,7 @@ const personal =
 let fechaActual = new Date;
 let mes = fechaActual.getMonth() + 1;
 let año = fechaActual.getFullYear();
+let dia = fechaActual.getDate();
 
 const input = document.querySelector('.input');
 const boton = document.querySelector('.boton');
@@ -86,6 +87,26 @@ const completarRegistro = (emp)=> {
     estadoCivil.innerHTML = emp.estadoCivil.toUpperCase();
     conyuge.innerHTML = `${emp.conyuge.apellido.toUpperCase()} , ${emp.conyuge.nombre.toLocaleUpperCase()}`
     hijos.innerHTML = `${emp.hijosNombres.apellido.toUpperCase()} , ${emp.hijosNombres.nombre.toLocaleUpperCase()}`
+    let añosEdad = año - emp.fechaNac.año
+    if((mes + 1) > emp.fechaNac.mes){
+        edad.innerHTML = `${añosEdad} AÑOS`
+    }
+    else if((mes + 1) == emp.fechaNac.mes){
+        if(dia >= emp.fechaNac.dia){
+            edad.innerHTML = `${añosEdad} AÑOS`
+        }
+                
+    }
+    else{
+        edad.innerHTML = `${(añosEdad) - 1} AÑOS`
+    }
+
+    
+
+    // console.log(añosEdad)
+    // else{
+    //     edad.innerHTML = `${añosEdad } AÑOS`
+    // }
     if(emp.fechaIngreso.dia < 10 && emp.fechaIngreso.mes < 10){
         fechaIng.innerHTML = `0${emp.fechaIngreso.dia}/0${emp.fechaIngreso.mes}/${emp.fechaIngreso.año}`
     }
@@ -142,8 +163,6 @@ boton.addEventListener('click', ()=> {
             let empleado = personal[i];
             completarRegistro(empleado);
             $('.empleado-contenedor').css('display', 'block')
-            console.log(empleado.fechaIngreso)
-            
         }
             }
        
