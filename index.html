@@ -18,20 +18,64 @@
 </head>
 
 <body>
+    <div class="form">
+        <input class="input" type="number" placeholder="Indique n° de legajo">
+        <button class="boton">Buscar legajo</button>
+    </div>
+    
+    <section class="empleado-contenedor">
+    <div class="id">
+        <h2 id="idlegajo"></h2>
+        <h1 id="idapellido"></h1>
+        <h1 id="idnombres"></h1>
+    </div>
     <div class="cuadricula-contenedor">
+        <h1>Datos personales</h1>
     <div class="cuadricula">
-        <h3 class="rotulo">NOMBRE</h3>
-        <span class="rotulo-contenido" id="nombre"></span>
+        <h3 class="rotulo">Dni</h3>
+        <span class="rotulo-contenido" id="dni"></span>
     </div>
     <div class="cuadricula">    
-        <h3 class="rotulo">APELLIDO</h3>
-        <span class="rotulo-contenido" id="apellido"></span>
+        <h3 class="rotulo">Fecha de nacimiento</h3>
+        <span class="rotulo-contenido" id="fechaNac"></span>
     </div>
     <div class="cuadricula">    
-        <h3 class="rotulo">ESTADO CIVIL</h3>
+        <h3 class="rotulo">Estado civil</h3>
         <span class="rotulo-contenido" id="estadoCivil"></span>
     </div>
+    <div class="cuadricula">    
+        <h3 class="rotulo">Conyuge</h3>
+        <span class="rotulo-contenido" id="conyuge"></span>
+    </div>
+    <div class="cuadricula">    
+        <h3 class="rotulo">Hijos</h3>
+        <span class="rotulo-contenido" id="hijos"></span>
+    </div>
 </div>
+<div class="cuadricula-contenedor">
+    <h1>Datos laborales</h1>
+    <div class="cuadricula">
+        <h3 class="rotulo">Fecha de ingreso</h3>
+        <span class="rotulo-contenido" id="fechaIng"></span>
+    </div>
+    <div class="cuadricula">
+        <h3 class="rotulo">Antiguedad</h3>
+        <span class="rotulo-contenido" id="antiguedad"></span>
+    </div>
+    <div class="cuadricula">
+        <h3 class="rotulo">Dias de vacaciones</h3>
+        <span class="rotulo-contenido" id="vacaciones"></span>
+    </div>
+    <div class="cuadricula">
+        <h3 class="rotulo">Licencias médicas</h3>
+        <span class="rotulo-contenido" id="licenciasMed"></span>
+    </div>
+    <div class="cuadricula">
+        <h3 class="rotulo">Suspenciones</h3>
+        <span class="rotulo-contenido" id="suspenciones"></span>
+    </div>
+</div>
+</section>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
