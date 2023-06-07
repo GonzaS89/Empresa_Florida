@@ -149,24 +149,23 @@ const completarRegistro = (emp)=> {
 }
 
 boton.addEventListener('click', ()=> {
-    // personal.forEach(element => {
-    //     if(input.value == element.legajo) {
-    //         completarRegistro();
-    //         
-    //     }
-    //     else{
-
-    //     }
-    // });
-       for (i = 0; i < personal.length; i++){
+    for (i = 0; i < personal.length; i++){
         if(personal[i].legajo == input.value){
             let empleado = personal[i];
             completarRegistro(empleado);
             $('.empleado-contenedor').css('display', 'block')
         }
-            }
-       
-})
+    }
+    
+    const cuadro = document.querySelector('.cuadro')
+    cuadro.classList.add('cuadro2')
+    const inputCont = document.querySelector('.input-contenedor')
+    inputCont.classList.add('input-contenedor2')
+    setTimeout(() => {
+        $(inputCont).css('height', '100%'), $(inputCont).css('flexDirection', 'row'),input.value = '';
+    }, 300);
+    
+});            
 
 
 
