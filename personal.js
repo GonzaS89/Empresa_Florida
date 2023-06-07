@@ -24,6 +24,7 @@ const personal =
                         "nombre":"Julio"
                     },
         "dni":"26.874.188",
+        "cuil":"20-26874188-9",
         "fechaIngreso":{
                         "dia":01,
                         "mes":09,
@@ -56,6 +57,7 @@ const personal =
                         "nombre":"Carla"
                     },
         "dni":"35.846.178",
+        "cuil":"20-35846178-9",
         "fechaIngreso":{
                         "dia":15,
                         "mes":05,
@@ -79,6 +81,7 @@ const completarRegistro = (emp)=> {
     idapellido.innerHTML = emp.apellido;
     idnombres.innerHTML = emp.nombre;
     dni.innerHTML = emp.dni.toUpperCase()
+    cuil.innerHTML = emp.cuil.toLocaleUpperCase()
     fechaNac.innerHTML = `${emp.fechaNac.dia}/${emp.fechaNac.mes}/${emp.fechaNac.año}`
     estadoCivil.innerHTML = emp.estadoCivil.toUpperCase();
     conyuge.innerHTML = `${emp.conyuge.apellido.toUpperCase()} , ${emp.conyuge.nombre.toLocaleUpperCase()}`

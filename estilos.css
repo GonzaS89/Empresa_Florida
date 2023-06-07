@@ -88,8 +88,8 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid rgba(128, 128, 128, 0.264);
     height: 50px;
+    gap: 20px;
 }
 
 .rotulo{
@@ -98,9 +98,10 @@ body{
     justify-content: center;
     align-items: center;
     height: 100%;
-    background-color: rgb(161, 255, 127);
+    background-color: rgb(255, 80, 80);
     text-align: center;
     text-transform: uppercase;
+    color: whitesmoke;
 }
 .rotulo-contenido{
     display: flex;
@@ -108,6 +109,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100%;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.264);
     /* background-color: rgb(255, 249, 127); */
 }
 
