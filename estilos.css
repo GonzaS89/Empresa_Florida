@@ -6,11 +6,10 @@
     --rojo : #f56e6e;
     --rojo2 : #f93a3a;
     --fondoRandom: linear-gradient(180deg, rgba(255,241,241,1) 0%, rgba(255,255,255,1) 0%, rgba(249,159,137,1) 67%, rgba(249,172,137,1) 95%);
-    
         --fondoAzul : rgb(31, 77, 134);
     --azul : rgb(39, 106, 231);
     --azulOscuro: rgb(6, 6, 65);
-    --fondoGrisLinear :linear-gradient(180deg, rgba(207,206,226,1) 0%, rgba(241,241,241,1) 85%, rgba(235,235,235,1) 97%);
+    --fondoGrisLinear :linear-gradient(180deg, rgba(207, 206, 226, 0.755) 0%, rgba(241, 241, 241, 0.746) 85%, rgba(235, 235, 235, 0.79) 97%);
     --fuentePrincipal : 'Nunito', sans-serif;
     --fuenteSec : 'Dosis', sans-serif;
     --fuenteTer : 'Lilita One', cursive;
@@ -25,20 +24,29 @@ body{
 .cuadro{
     display: flex;
     align-items: center;
-    width: 100%;
     height: 100vh;
-    background:var(--fondoRandom);
+    /* background:var(--fondoRandom); */
+}
+
+.cuadro-img{
+    filter: blur(3px) brightness(50%);
+    width: 100%;
+    height: 100%;
 }
 
 .cuadro2{
-    animation: subirCuadro .5s linear forwards
+    animation: subirCuadro .3s linear forwards;
 }
 
 @keyframes subirCuadro {
     100%{
-        background-color: black;
         height: 10vh;
     }
+}
+
+.caja-contenedor-input{
+    width: 100%;
+    position: absolute;
 }
 
 .input-contenedor{
@@ -51,20 +59,13 @@ body{
     border-radius: 10px;
     margin: 0 auto;
     gap: 20px;
-    background-color:#cc252579;
+    background:var(--fondoGrisLinear);
 }
 
 .input-contenedor2{
-    animation: cambiarColor .5s linear forwards
+    background: transparent;
+    flex-direction: row;
 }
-
-@keyframes cambiarColor {
-    100%{
-        background-color: transparent;
-        border: none;
-    }
-}
-
 
 .input{
     height: 50px;

@@ -191,11 +191,10 @@ boton.addEventListener('click', ()=> {
             $('.empleado-contenedor').css('display', 'block')
         }
     }
-    
     const cuadro = document.querySelector('.cuadro')
     cuadro.classList.add('cuadro2')
     const inputCont = document.querySelector('.input-contenedor')
-    inputCont.classList.add('input-contenedor2')
+    inputCont.classList.add('input-contenedor2');
     setTimeout(() => {
         $(inputCont).css('height', '100%'), $(inputCont).css('flexDirection', 'row'),input.value = '';
     }, 300);
