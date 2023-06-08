@@ -31,7 +31,8 @@ const personal =
                         "año":2002
                        },
         "licenciasMedicas": 5,
-        "suspenciones":3         
+        "suspenciones":3,
+        "activo":true         
     },
     {
         "legajo": "250",
@@ -64,7 +65,10 @@ const personal =
                         "año":2010
                        },
         "licenciasMedicas": 2,
-        "suspenciones":2         
+        "suspenciones":2,
+        "activo":false,
+        "inactividad":"Parte médico",
+        "tiempoInactivo":90         
     }
 ]
 
@@ -76,11 +80,36 @@ let dia = fechaActual.getDate();
 const input = document.querySelector('.input');
 const boton = document.querySelector('.boton');
 
+function crearCuadricula (nombre, id) {
+    const cuadriculaContenedor = document.querySelectorAll('.cuadricula-contenedor')
+    const cuadricula = document.createElement('DIV');
+    const H3Cuadricula = document.createElement('H3');
+    const spanCuadricula = document.createElement('SPAN');
+    cuadricula.classList.add('cuadricula');
+    H3Cuadricula.classList.add('rotulo');
+    H3Cuadricula.innerHTML = nombre
+    spanCuadricula.classList.add('rotulo-contenido');
+    spanCuadricula.setAttribute('id', `${id}`)
+    cuadricula.appendChild(H3Cuadricula)
+    cuadricula.appendChild(spanCuadricula)
+    cuadriculaContenedor[1].appendChild(cuadricula);
+}
+
+function borrarCuadricula (id) {
+    const cuadriculaContenedor = document.querySelectorAll('.cuadricula-contenedor')
+    const cuadricula = document.querySelectorAll('.cuadricula')
+    for (i = 0; i < cuadricula.length; i++){
+        if((cuadricula[i].children[1].id) == `${id}`)
+        cuadriculaContenedor[1].removeChild(cuadricula[i])
+    }
+}
+
+
 const completarRegistro = (emp)=> {
 
     idlegajo.innerHTML = `#${emp.legajo}`
-    idapellido.innerHTML = emp.apellido;
-    idnombres.innerHTML = emp.nombre;
+    idapellido.innerHTML = emp.apellido.toLocaleUpperCase();
+    idnombres.innerHTML = emp.nombre.toLocaleUpperCase();
     dni.innerHTML = emp.dni.toUpperCase()
     cuil.innerHTML = emp.cuil.toLocaleUpperCase()
     fechaNac.innerHTML = `${emp.fechaNac.dia}/${emp.fechaNac.mes}/${emp.fechaNac.año}`
@@ -101,12 +130,6 @@ const completarRegistro = (emp)=> {
         edad.innerHTML = `${(añosEdad) - 1} AÑOS`
     }
 
-    
-
-    // console.log(añosEdad)
-    // else{
-    //     edad.innerHTML = `${añosEdad } AÑOS`
-    // }
     if(emp.fechaIngreso.dia < 10 && emp.fechaIngreso.mes < 10){
         fechaIng.innerHTML = `0${emp.fechaIngreso.dia}/0${emp.fechaIngreso.mes}/${emp.fechaIngreso.año}`
     }
@@ -140,12 +163,24 @@ const completarRegistro = (emp)=> {
     else{
         vacaciones.innerHTML = '14 DÍAS'
     }
-
     licenciasMed.innerHTML = emp.licenciasMedicas
 
     suspenciones.innerHTML = emp.suspenciones;
-;
 
+    if(emp.activo) {
+        situacion.innerHTML = 'EN ACTIVIDAD';
+        borrarCuadricula('inactividad');
+        borrarCuadricula('tiempoInactivo')
+    }
+
+    else {situacion.innerHTML = 'INACTIVO'; 
+    crearCuadricula('Inactividad', 'inactividad');
+    inactividad.innerHTML = emp.inactividad.toUpperCase();
+    crearCuadricula('Tiempo inactivo', 'tiempoInactivo');
+    tiempoInactivo.innerHTML = `${emp.tiempoInactivo} DÍAS`.toUpperCase();
+    };
+
+   
 }
 
 boton.addEventListener('click', ()=> {
