@@ -126,19 +126,19 @@ const completarRegistro = (emp)=> {
         antiguedad.innerHTML = antiguedads - 1 + '' + ' AÑOS';
     }
     else{
-        antiguedad.innerHTML = antiguedads;    
+        antiguedad.innerHTML = `${antiguedads} AÑOS`;    
     }
     if(antiguedads >= 20){
-        vacaciones.innerHTML = 35;
+        vacaciones.innerHTML = '35 DÍAS';
     }
     else if(antiguedads < 20 && antiguedads >= 10){
-        vacaciones.innerHTML = 28
+        vacaciones.innerHTML = '28 DÍAS'
     }
     else if(antiguedads < 10 && antiguedads >= 5){
-        vacaciones.innerHTML = 21
+        vacaciones.innerHTML = '21 DÍAS'
     }
     else{
-        vacaciones.innerHTML = 14
+        vacaciones.innerHTML = '14 DÍAS'
     }
 
     licenciasMed.innerHTML = emp.licenciasMedicas
