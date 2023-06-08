@@ -5,7 +5,7 @@
     --fondoAzul : #455ff4;
     --rojo : #f56e6e;
     --rojo2 : #f93a3a;
-    --fondoRandom: rgb(18, 75, 119);
+    --fondoRandom: linear-gradient(180deg, rgba(255,241,241,1) 0%, rgba(255,255,255,1) 0%, rgba(249,159,137,1) 67%, rgba(249,172,137,1) 95%);
     
         --fondoAzul : rgb(31, 77, 134);
     --azul : rgb(39, 106, 231);
@@ -27,7 +27,7 @@ body{
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: rgb(229, 210, 89);
+    background:var(--fondoRandom);
 }
 
 .cuadro2{
@@ -51,7 +51,7 @@ body{
     border-radius: 10px;
     margin: 0 auto;
     gap: 20px;
-    background-color: rgb(108, 102, 20);
+    background-color:#cc252579;
 }
 
 .input-contenedor2{
