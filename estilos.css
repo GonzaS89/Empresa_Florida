@@ -33,7 +33,7 @@ a{
     color: black;
     font-weight: bold;
     font-weight: 400;
-    text-shadow: 5px 5px 10px  black;
+    /* text-shadow: 5px 5px 10px  black; */
     font-size: 25px;
     animation: moverLink 10s linear infinite;
     text-transform: uppercase;
@@ -138,7 +138,7 @@ a:hover{
 .carousel{
     display: flex;
     width: 100%;
-    height: 900px;
+    height: 100vh;
     /* animation: moverIMG1 15s ease-out infinite; */
 }
 
@@ -187,9 +187,7 @@ a:hover{
 }
 
 @media (max-width: 1100px){
-    .carousel{
-        height: 500px;
-    }
+    
     .textoCar{
         font-size: 65px;
     }
@@ -577,7 +575,7 @@ iframe{
 .servicio, .servicio2{
     display: flex;
     width: 75%;
-    max-height: 300px;
+    height: 300px;
     gap: 20px;
     background-color: var(--fondoAzul);
 }
@@ -617,6 +615,7 @@ iframe{
 
 .servicio-img{
     display: flex;
+    flex-basis: 30%;
 }
 
 .servicio-txt{
@@ -627,6 +626,7 @@ iframe{
     color: white;
     padding: 17.5px;
     text-align: justify;
+    flex-basis: 70%;
 }
 
 
@@ -680,9 +680,13 @@ iframe{
 .footer-redes{
     display: flex;
     justify-content:space-between;
-    transform: scale(0);
-    animation: redes-footer 2s ease-out forwards;
-    
+    /* transform: scale(0); */
+    /* animation: redes-footer 2s ease-out forwards; */
+}
+
+.footer-redes a:hover{
+    transform: scale(1.1);
+    transition: all .5s ease-out;
 }
 
 .footer-redes img{
