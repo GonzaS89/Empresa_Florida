@@ -184,21 +184,24 @@ const completarRegistro = (emp)=> {
 }
 
 boton.addEventListener('click', ()=> {
-    for (i = 0; i < personal.length; i++){
-        if(personal[i].legajo == input.value){
-            let empleado = personal[i];
-            completarRegistro(empleado);
-            $('.empleado-contenedor').css('display', 'block')
+    if(!(input.value == '')){
+        for (i = 0; i < personal.length; i++){
+            if(personal[i].legajo == input.value){
+                let empleado = personal[i];
+                completarRegistro(empleado);
+                $('.empleado-contenedor').css('display', 'block')
+            }
         }
+        const cuadro = document.querySelector('.cuadro')
+        cuadro.classList.add('cuadro2')
+        const inputCont = document.querySelector('.input-contenedor')
+        inputCont.classList.add('input-contenedor2');
+        $('.input').css('width', '100%')
+   
+        setTimeout(() => {
+            $(inputCont).css('height', '100%'),$(inputCont).css('flexDirection', 'row'),input.value = '';
+        }, 300), $('.cuadro-img').css('filter', 'brightness(0%)')
     }
-    const cuadro = document.querySelector('.cuadro')
-    cuadro.classList.add('cuadro2')
-    const inputCont = document.querySelector('.input-contenedor')
-    inputCont.classList.add('input-contenedor2');
-    setTimeout(() => {
-        $(inputCont).css('height', '100%'), $(inputCont).css('flexDirection', 'row'),input.value = '';
-    }, 300);
-    
 });            
 
 

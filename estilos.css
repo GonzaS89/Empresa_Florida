@@ -54,7 +54,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 250px;
     width: 30%;
     border-radius: 10px;
     margin: 0 auto;
@@ -69,11 +69,12 @@ body{
 
 .input{
     height: 50px;
-    width: 250px;
+    width: 75%;
     text-transform: uppercase;
     text-align: center;
     font-size: 20px;
 }
+
 
 .input::-webkit-inner-spin-button, 
 .input::-webkit-outer-spin-button { 
