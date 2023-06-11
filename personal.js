@@ -26,8 +26,8 @@ const personal =
         "dni":"26.874.188",
         "cuil":"20-26874188-9",
         "fechaIngreso":{
-                        "dia":01,
-                        "mes":09,
+                        "dia":1,
+                        "mes":9,
                         "año":2002
                        },
         "licenciasMedicas": 5,
@@ -61,7 +61,7 @@ const personal =
         "cuil":"20-35846178-9",
         "fechaIngreso":{
                         "dia":15,
-                        "mes":05,
+                        "mes":5,
                         "año":2010
                        },
         "licenciasMedicas": 2,
