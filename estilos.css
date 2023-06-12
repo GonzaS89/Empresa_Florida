@@ -438,11 +438,31 @@ li img:hover{
     animation: entrarContacto 3s ease-in-out forwards;
 }
 
+.contacto2 {
+    display: flex;
+    justify-content: center;
+    background-color: var(--fondoAzul);
+    max-height: 300px;
+    min-height: 250px;
+    width: 75%;
+    /* border-top-right-radius: 250px 250px;
+    border-top-left-radius: 0px 0px; */
+    animation: entrarContacto2 3s ease-in-out forwards;
+}
+
 @keyframes entrarContacto{
     0%{
         transform:translateX(-100%)
     }
 }
+
+@keyframes entrarContacto2{
+    0%{
+        transform:translateX(100%)
+    }
+}
+
+
 
 .contacto-1{
     display: flex;
