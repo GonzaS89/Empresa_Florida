@@ -15,7 +15,10 @@
     --fuenteSec : 'Dosis', sans-serif;
     --fuenteTer : 'Lilita One', cursive;
     --fuenteFooter :'Monomaniac One', sans-serif;
+}
 
+html{
+    scroll-behavior: smooth;
 }
 
 .body{
@@ -509,7 +512,6 @@ iframe{
     flex-direction:column;
     align-items: center;
     gap: 20px;
-    margin-top: 30px;
     overflow: hidden;
 }
 .servicio, .servicio2{
@@ -582,6 +584,10 @@ iframe{
 
 .info-cont h1{
     text-transform:uppercase;
+}
+
+.nosotros-cont, .contacto-cont, .info-cont{
+    scroll-margin-top: 98px;
 }
 
 .footer{
