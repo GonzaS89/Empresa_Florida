@@ -805,7 +805,7 @@ body::-webkit-scrollbar-track {
     background:var(--rojo2Linear);
     align-items: center;
     max-height: 350px;
-    min-height: 200px;
+    min-height: 300px;
     gap: 10px;
     width: 75%;
     /* border-top: 2.5px solid rgba(128, 128, 128, 0.159); */
