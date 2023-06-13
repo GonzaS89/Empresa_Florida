@@ -23,6 +23,18 @@ window.addEventListener('scroll', ()=> {
     } 
 })
 
+const contacto1 = document.querySelector('.contacto')
+const contacto2 = document.querySelector('.contacto2')
+const nosotros = document.getElementById('nosotros')
+
+window.addEventListener('scroll', ()=> {
+    if(nosotros.getBoundingClientRect().bottom < 0){
+        contacto1.classList.add('contacto1Animacion')
+        contacto2.classList.add('contacto2Animacion')
+    }
+    
+})
+
 // 
 
 const galeria = document.querySelector('.galeria');

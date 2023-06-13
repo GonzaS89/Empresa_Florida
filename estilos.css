@@ -455,7 +455,11 @@ li img:hover{
     width: 75%;
     /* border-top-right-radius: 250px 250px;
     border-top-left-radius: 0px 0px; */
-    animation: entrarContacto 3s ease-in-out forwards;
+    
+}
+
+.contacto1Animacion {
+    animation: entrarContacto 2s ease-in-out forwards;
 }
 
 .contacto2 {
@@ -467,7 +471,11 @@ li img:hover{
     width: 75%;
     /* border-top-right-radius: 250px 250px;
     border-top-left-radius: 0px 0px; */
-    animation: entrarContacto2 3s ease-in-out forwards;
+    
+}
+
+.contacto2Animacion {
+    animation: entrarContacto2 2s ease-in-out forwards;
 }
 
 @keyframes entrarContacto{
@@ -529,10 +537,17 @@ iframe{
     flex-direction:column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    overflow: hidden;
     background-color: var(--rojo2);
     padding-bottom: 20px;
+}
+
+.servicios-cont {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;
 }
 .servicio, .servicio2{
     display: flex;
@@ -621,7 +636,7 @@ iframe{
 
 .footer-izq img{
     max-height: 120px;
-    filter: drop-shadow(1.5px 0 5px white);
+    filter: drop-shadow(1.5px 1px 1px white);
 }
 
 .footer-img{
