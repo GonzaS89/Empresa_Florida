@@ -198,12 +198,18 @@ a:hover{
 
 /* NOSOTROS */
 
+#nosotros{
+    width: 100%;
+    background-color: var(--fondoAzul);
+}
+
 .nosotros-cont{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 75%;
     margin: 0 auto;
+    background-color: var(--fondoAzul);
 }
 
 .nosotros-lista{
@@ -211,11 +217,13 @@ a:hover{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 75%;
 }
 
 .nosotros-cont li{
     list-style:inside;
     font-size: 25px;
+    color: white;
 }
 
 #titulo{
@@ -225,6 +233,7 @@ a:hover{
     animation: sombrear 3s linear alternate-reverse infinite;
     text-align: center;
     font-size: 30px;
+    color: white;
 }
 
 
@@ -243,11 +252,15 @@ a:hover{
 #nosotros-texto{
     font-size: 25px;
     text-align: justify;
+    width: 75%;
+    color: white;
 }
 
 #nosotros-texto2{
     font-size: 25px;
     text-align: center;
+    width: 75%;
+    color: whitesmoke;
 }
 
 #nosotros-subtitulo{
@@ -294,6 +307,7 @@ GALERIA */
     flex-direction: column;
     align-items: center;
     width: 100%;
+    background-color: var(--fondoAzul);
 }
 .galeria ul{
     display: grid;
@@ -418,6 +432,8 @@ li img:hover{
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
+    background-color: var(--rojo2);
+    padding-bottom: 20px;
     
 }
 
@@ -514,6 +530,9 @@ iframe{
     align-items: center;
     justify-content: center;
     gap: 20px;
+    overflow: hidden;
+    background-color: var(--rojo2);
+    padding-bottom: 20px;
 }
 .servicio, .servicio2{
     display: flex;
@@ -595,7 +614,6 @@ iframe{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top:30px;
     height: 175px;
     background-color: var(--fondoAzul);
     box-shadow: 0px 0px 20px rgb(49, 44, 24);
