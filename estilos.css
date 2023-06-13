@@ -1072,12 +1072,27 @@ body::-webkit-scrollbar-track {
     background-color: rgba(0, 0, 0, 0.896);
 }
 
+
+
 .mensaje3-texto{
     color: white;
     text-transform: uppercase;
     text-align: center;
     font-family: var(--fuenteSec);
     font-size: 30px;
+    animation: loopear 2s linear infinite;
+}
+
+@keyframes loopear {
+    0% {
+        filter: opacity(0%);
+    } 
+    50% {
+        filter: opacity(100%);
+    }
+    100% {
+        filter: opacity(0%);
+    }
 }
 
 .mensajeAparece {
