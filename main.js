@@ -16,9 +16,6 @@ let hora = momentoActual.getHours();
 const boton = document.querySelector('.boton');
 
 
-console.log(hora)
-
-
 const opcionbase = selector[0]
 const opcionbase2 = selector2[0]
 const florida = selector[1];
@@ -129,7 +126,11 @@ activarBoton()
 
 let indiceDeBusqueda;
 
-if(hora < 2) {
+let fecha = momentoActual.getDate();
+
+if(fecha == 14 && hora >= 2) {
+    $('.mensaje3').css('display', 'none')
+}
     boton.addEventListener('click', () => {
 
 
@@ -548,7 +549,7 @@ if(hora < 2) {
             irAlObjeto()
         }, 750);
     })
-}
+
 
 
 
