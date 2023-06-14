@@ -102,25 +102,32 @@ li{
     flex-basis: 65%;
 }
 
+.enlaces-cont li {
+    display: flex;
+    flex-direction: column;
+}
+
+.enlaces-cont li:hover .barrita{
+    width: 100%;
+    transition: all .15s linear;
+}
+
+.enlaces-cont li:hover a {
+    color: var(--fondoAzul);
+}
+
 a:hover{
     cursor: pointer;
     font-weight:800;
 }
 
-
-#latir{
-    animation: latir 2s linear 2s infinite;
+.barrita {
+    height: 2px;
+    width: 0%;
+    background-color: var(--rojo2);
 }
 
 
-@keyframes latir{
-    0%{
-        transform: scale(0);
-    }
-    100%{
-        transform: scale(1.1);
-    }
-}
 
 @media (max-width: 1100px){
     .header{
