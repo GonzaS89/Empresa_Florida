@@ -112,12 +112,20 @@ li{
 
 .enlaces-cont li:hover .barrita{
     width: 100%;
-    transition: all .2s linear;
+    transition: all .25s linear;
 }
 
 .enlaces-cont li:hover a {
     color: var(--fondoAzul);
 }
+
+.enlaces-cont a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 75%;
+}
+
 
 a:hover{
     cursor: pointer;
@@ -125,8 +133,11 @@ a:hover{
 }
 
 .barrita {
-    height: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     width: 0%;
+    flex-basis: 3%;
     background-color: var(--rojo2);
 }
 
@@ -425,7 +436,7 @@ GALERIA */
 li img:hover{
     cursor: zoom-in;
     transform:scale(1.1);
-    outline: 5px solid var(--azul);
+    outline: 5px solid var(--rojo2);
     transition: all 1s;
     
 }
@@ -465,7 +476,6 @@ li img:hover{
     width: 75%;
     /* border-top-right-radius: 250px 250px;
     border-top-left-radius: 0px 0px; */
-    
 }
 
 .contacto1Animacion {
@@ -632,7 +642,7 @@ iframe{
 }
 
 .nosotros-cont, .contacto-cont, .info-cont{
-    scroll-margin-top: 98px;
+    scroll-margin-top: 100px;
 }
 
 .footer{
