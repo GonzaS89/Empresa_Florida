@@ -129,7 +129,6 @@ activarBoton()
 
 let indiceDeBusqueda;
 
-if(hora < 2) {
     boton.addEventListener('click', () => {
 
 
@@ -548,7 +547,7 @@ if(hora < 2) {
             irAlObjeto()
         }, 750);
     })
-}
+
 
 
 
