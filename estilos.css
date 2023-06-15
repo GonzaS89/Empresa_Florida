@@ -679,7 +679,7 @@ iframe{
 
 .footer-izq img{
     max-height: 120px;
-    filter: drop-shadow(1.5px 1px 1px white);
+    filter: drop-shadow(1px .5px 2px white);
 }
 
 .footer-img{
@@ -750,6 +750,22 @@ iframe{
     .footer-redes img{
         max-height: 100px;
     }
+}
+
+@media (max-width: 1400px){
+    .footer {
+        height: 125px;
+    }
+    .footer-izq img {
+        height: 100px;
+    }
+    .footer-txt1, .footer-txt2{
+        font-size: 30px;
+    }
+    .footer-redes img{
+        max-height: 100px;
+    }
+
 }
 
 
