@@ -16,9 +16,6 @@ let hora = momentoActual.getHours();
 const boton = document.querySelector('.boton');
 
 
-console.log(hora)
-
-
 const opcionbase = selector[0]
 const opcionbase2 = selector2[0]
 const florida = selector[1];
@@ -547,6 +544,7 @@ let indiceDeBusqueda;
             irAlObjeto()
         }, 750);
     })
+
 
 
 
