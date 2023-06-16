@@ -764,7 +764,7 @@ const horariosLvSMAl = [
     {
         "nombre": "12:45",
         "salida": 12.45,
-        "recorrido": "Terminal → Banda R.S. → Alderetes → Talar → Florida → Esquina Lastra → Fortin",
+        "recorrido": "Terminal → Banda R.S. → Alderetes → Talar → Florida → Esquina Lastra → Fortin → Colonia 3",
         "recorrido2": "Terminal → Catalinas Park → Alternativa → Talar → Florida → B° La Cancha → Colonia 4"
     },
     {
