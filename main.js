@@ -201,7 +201,7 @@ let indiceDeBusqueda;
     
         let rutaObtenida
     
-        if ((fecha == 25) && (mes == 4)) {
+        if ((fecha == 19 || fecha == 20) && (mes == 5)) {
             feriado = true;
             if(feriado){
                 tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo `;
