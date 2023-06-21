@@ -981,9 +981,9 @@ const horariosSSMAl = [
 const horariosDSMAl = [
 
     {
-        "nombre": "06:25",
-        "salida": 6.25,
-        "recorrido": "Terminal → Banda R.S. → Alderetes Talar → Florida → Esquina Lastra → Fortín → Mayo"
+        "nombre": "06:40",
+        "salida": 6.40,
+        "recorrido": "Terminal → Banda R.S. → Alderetes → Talar → Florida → Esquina Lastra → Fortín → Mayo"
     },
     {
         "nombre": "09:45",
@@ -1021,8 +1021,8 @@ const horariosDSMAl = [
         "recorrido": "Terminal → Banda R.S. → Alderetes → Talar → Florida → Esquina Lastra → Fortín → Mayo"
     },
     {
-        "nombre": "20:30",
-        "salida": 20.3,
+        "nombre": "21:00",
+        "salida": 21,
         "recorrido": "Terminal → Banda R.S. → Alderetes → Talar → Florida → Esquina Lastra → Fortín"
     }
 
