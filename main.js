@@ -10,6 +10,8 @@ function iniciarApp() {
 
 let momentoActual = new Date();
 let hora = momentoActual.getHours();
+let fecha = momentoActual.getDate();
+let mes = momentoActual.getMonth();
 
 /* Funcion para determinar la localidad de posicion*/
 
@@ -41,6 +43,12 @@ const resultadoscont = document.querySelector('.resultados-cont');
 const scrollcont = document.querySelector('.scroll-cont');
 let titulo = document.getElementById('titulo');
 let resolucion = document.documentElement.clientWidth;
+
+if(fecha == 22 && mes == 5 && hora >= 2) {
+    $('.mensaje3').css('display', 'flex');
+}
+
+console.log(fecha,mes,hora)
 
 
 
