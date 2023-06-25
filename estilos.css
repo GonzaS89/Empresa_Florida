@@ -671,7 +671,7 @@ iframe{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 175px;
+    height: 125px;
     background-color: var(--fondoAzul);
     box-shadow: 0px 0px 20px rgb(49, 44, 24);
 }
