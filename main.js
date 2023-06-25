@@ -48,9 +48,6 @@ if(fecha == 22 && mes == 5 && hora >= 2) {
     $('.mensaje3').css('display', 'flex');
 }
 
-console.log(fecha,mes,hora)
-
-
 
 botonDeCambio.addEventListener('click', function () {
     $('.menu2').css('display', 'flex');
