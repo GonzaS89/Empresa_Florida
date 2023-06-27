@@ -73,6 +73,12 @@ let escritura = string => {
     console.log(array)
 }
 
+const infoCont = document.querySelector('.info-cont')
+
+window.addEventListener('scroll', ()=> {
+    if(infoCont.getBoundingClientRect().top > 0) console.log(1)
+})
+
 // escritura('Somos Empresa Florida');
 
 
