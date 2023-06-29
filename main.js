@@ -119,7 +119,7 @@ const animacion2 = ()=> {
  
 }
 
-animacion2()
+// animacion2()
 
 
 
