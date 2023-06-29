@@ -256,6 +256,7 @@ a:hover{
     flex-direction: column;
     gap: 10px;
     width: 75%;
+
 }
 
 .nosotros-cont li{
@@ -264,6 +265,7 @@ a:hover{
     color: white;
     background-color: rgba(0, 0, 0, 0.499);
     padding: 15px;
+    border-radius: 32px;
 }
 
 #titulo{
@@ -367,16 +369,21 @@ GALERIA */
     }
 }
 
-@media (max-width:1100px){
-    .galeria ul{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
 @media (max-width: 1400px){
     .galeria li{
         width: 400px;
         height: 200px;
+    }
+}
+
+@media (max-width:1100px){
+    .galeria ul{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .galeria li{
+        width: 300px;
+        height: 150px;
     }
 }
 
@@ -697,7 +704,7 @@ iframe{
     justify-content: center;
     align-items: center;
     flex-basis:50%;
-    font-family: var(--fuenteFooter);
+    font-family: var(--fuenteSec);
     height: 100%;
 }
 
@@ -706,7 +713,8 @@ iframe{
     align-items: center;
     justify-content: center;
     color: white;
-    font-size:35px;
+    font-size:40px;
+    font-weight: bold;
     text-align: center;
     text-transform: uppercase;
 }

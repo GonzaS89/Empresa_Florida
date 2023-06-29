@@ -74,9 +74,14 @@ let escritura = string => {
 }
 
 const infoCont = document.querySelector('.info-cont')
+const barrita = document.querySelector('.barrita')
 
-window.addEventListener('scroll', ()=> {
-    if(infoCont.getBoundingClientRect().top > 0) console.log(1)
+window.addEventListener('scroll',(e)=> {
+    
+    if(infoCont.getBoundingClientRect().top < 0 && infoCont.getBoundingClientRect().bottom > 0) 
+    let a = Math.abs(infoCont.getBoundingClientRect().top / infoCont.clientHeight)
+    barrita.style.width = `${a}%`
+    console.log(Math.abs(infoCont.getBoundingClientRect().top / infoCont.clientHeight))
 })
 
 // escritura('Somos Empresa Florida');
