@@ -93,13 +93,13 @@ var typed5 = new Typed('.textoPrueba', {
 });
 
 
-const servicio = document.querySelectorAll('.servicio')
+// const servicio = document.querySelectorAll('.servicio')
 
-for (let index = 0; index < servicio.length; index++) {
-    if(index == 0) {servicio[index].style.animation = 'aparece .5s linear forwards'}
-    // if(servicio.length / servicio.length) {servicio[index].style.animation = 'aparece2 1s linear 1s forwards'}
+// for (let index = 0; index < servicio.length; index++) {
+//     if(index == 0) {servicio[index].style.animation = 'aparece .5s linear forwards'}
+//     // if(servicio.length / servicio.length) {servicio[index].style.animation = 'aparece2 1s linear 1s forwards'}
     
-}
+// }
 
 const animacion2 = ()=> {
     servicio[1].animate ([ 
