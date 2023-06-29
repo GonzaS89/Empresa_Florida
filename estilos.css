@@ -587,7 +587,7 @@ iframe{
     padding-bottom: 20px;
 }
 
-.servicios-cont {
+/* .servicios-cont {
     display:flex;
     flex-direction:column;
     align-items: center;
@@ -667,7 +667,7 @@ iframe{
         font-size: 30px;
     }
 }
-
+ */
 
 .info-cont h1{
     text-transform:uppercase;
