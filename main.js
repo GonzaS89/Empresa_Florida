@@ -404,16 +404,16 @@ let indiceDeBusqueda;
                         estadoServicio.textContent = 'Iniciaron sus recorridos hace 1 hora'
                     }
                     else if (listaDiferencias[i] < 60 && listaDiferencias[i] > 30) {
-                        estadoServicio.textContent = `Iniciaron sus recorrido hace menos de 1 hora`
+                        estadoServicio.textContent = `Iniciaron sus recorridos hace menos de 1 hora`
                     }
                     else if (listaDiferencias[i] <= 30 && listaDiferencias[i] > 15) {
-                        estadoServicio.textContent = `Iniciaron sus recorrido hace menos de media hora`
+                        estadoServicio.textContent = `Iniciaron sus recorridos hace menos de media hora`
                     }
                     else if (listaDiferencias[i] <= 15 && listaDiferencias[i] > 10) {
-                        estadoServicio.textContent = `Iniciaron sus recorrido hace menos de 15 minutos`
+                        estadoServicio.textContent = `Iniciaron sus recorridos hace menos de 15 minutos`
                     }
                     else if (listaDiferencias[i] <= 10 && listaDiferencias[i] > 5) {
-                        estadoServicio.textContent = `Iniciaron sus recorrido hace menos de 10 minutos`
+                        estadoServicio.textContent = `Iniciaron sus recorridos hace menos de 10 minutos`
                     }
                     else if (listaDiferencias[i] <= 5 && listaDiferencias[i] > 0) {
                         estadoServicio.textContent = 'Iniciaron sus recorridos hace menos de 5 minutos'
