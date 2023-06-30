@@ -49,6 +49,7 @@ galeria.addEventListener('click', (e) => {
     $(retrato).css('backgroundImage', `url(${dataFoto})`);
     $('.boton_cerrador').css('display', 'flex');
     retrato.classList.add('animacionRetrato')
+    console.log(1)
 });
 
 const botonCerrador = document.querySelector('.boton_cerrador')
@@ -76,13 +77,14 @@ let escritura = string => {
 const infoCont = document.querySelector('.info-cont')
 const barrita = document.querySelector('.barrita')
 
-window.addEventListener('scroll',(e)=> {
+
+// window.addEventListener('scroll',(e)=> {
     
-    if(infoCont.getBoundingClientRect().top < 0 && infoCont.getBoundingClientRect().bottom > 0) 
-    let a = Math.abs(infoCont.getBoundingClientRect().top / infoCont.clientHeight)
-    barrita.style.width = `${a}%`
-    console.log(Math.abs(infoCont.getBoundingClientRect().top / infoCont.clientHeight))
-})
+//     if(infoCont.getBoundingClientRect().top < 0 && infoCont.getBoundingClientRect().bottom > 0) 
+//     let a = Math.abs(infoCont.getBoundingClientRect().top / infoCont.clientHeight)
+//     barrita.style.width = `${a}%`
+//     console.log(Math.abs(infoCont.getBoundingClientRect().top / infoCont.clientHeight))
+// })
 
 // escritura('Somos Empresa Florida');
 

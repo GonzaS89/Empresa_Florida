@@ -77,14 +77,13 @@ li{
     justify-content: center;
     align-items: center;
     flex-basis: 25%;
-    height: 100%;
 }
 
 #logo{
     background-image: url(imagenes/logoancho.png);
     width:250px;
     height:125px;
-    background-size: 100%;
+    background-size: 90%;
     background-repeat: no-repeat;
     background-position: center;
     filter:drop-shadow(1.5px 0 5px black);
@@ -234,6 +233,17 @@ a:hover{
     }
 }
 
+.servicios ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items:center;
+    padding: 30px;
+}
+
+.servicios li:nth-child(5){
+    grid-column: 2/3;
+}
+
 .servicio{
     display: flex;
     flex-direction: column;
@@ -242,20 +252,16 @@ a:hover{
     /* background-color: #0b0d1ad5; */
     overflow: hidden;
     margin: 30px;
-    width: 275px;
-    height: 300px;
+    width: 350px;
+    height: 400px;
     background-color: rgb(240, 228, 228);
-    box-shadow: 10px 12px 20px;
     /* border-top-left-radius: 30px;
     border-top-right-radius: 30px; */
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    box-shadow: 20px 2px 30px;
+    box-shadow: 30px 2px 30px rgba(0, 0, 0, 0.527);
     /* animation: aparece 1s ease-out forwards; */
 }
-
-
-
 
 
 
@@ -269,7 +275,7 @@ a:hover{
     text-transform: uppercase;
     margin: 0;
     padding: 10px;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
     width: 100%;
     border-bottom: 2px solid rgba(0, 0, 0, 0.06);
@@ -280,20 +286,23 @@ a:hover{
     align-items: center;
     flex-basis: 70%;
     /* justify-self: center; */
-    text-align: center;
-    font-size: 18px;
     font-weight: bold;
     color: rgb(51, 43, 43);
-    background: linear-gradient(0deg, rgba(71, 255, 111, 0.669) 100%, rgba(213,225,232,1) 100%);
+    background: linear-gradient(0deg, rgba(252, 255, 62, 0.589) 100%, rgba(213,225,232,1) 100%);
     height: 100%;
     width: 100%;
     margin:0;
-    padding: 20px;
+}
+
+#servicio-texto p {
+    padding: 0 30px;
+    text-align: center;
+    font-size: 25px;
 }
 
 .servicio-icono {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     position: absolute;
     border-radius: 50%;
     transform: translateY(-40%);
@@ -377,6 +386,7 @@ a:hover{
     width: 75%;
     margin: 0 auto;
     background-color: var(--fondoAzul);
+    gap: 30px;
 }
 
 .nosotros-lista{
@@ -401,9 +411,9 @@ a:hover{
     text-transform: uppercase;
     text-shadow: 5px 5px 10px  black;
     margin-bottom: 30px;
-    animation: sombrear 3s linear alternate-reverse infinite;
+    /* animation: sombrear 3s linear alternate-reverse infinite; */
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
     color: white;
 }
 
@@ -421,14 +431,14 @@ a:hover{
     NOSOTROS  */
 
 #nosotros-texto{
-    font-size: 25px;
+    font-size: 27.5px;
     text-align: justify;
     width: 75%;
     color: white;
 }
 
 #nosotros-texto2{
-    font-size: 25px;
+    font-size: 27.5px;
     text-align: center;
     width: 75%;
     color: whitesmoke;
@@ -485,6 +495,8 @@ GALERIA */
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     padding: 0;
+    width: 75%;
+    overflow: hidden;
 }
 
 .galeria li{
@@ -590,10 +602,12 @@ GALERIA */
 
 li img:hover{
     cursor: zoom-in;
-    transform:scale(1.1);
-    outline: 5px solid var(--rojo2);
+    filter: brightness(75%);
     transition: all 1s;
-    
+}
+
+li img:active {
+    transform: scale(1.5)
 }
 
 
@@ -802,7 +816,7 @@ iframe{
     text-transform:uppercase;
 }
 
-.nosotros-cont, .contacto-cont, .info-cont{
+.nosotros-cont, .contacto-cont, .info-cont, .galeria{
     scroll-margin-top: 100px;
 }
 
@@ -810,13 +824,17 @@ iframe{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 125px;
+    height: 200px;
     background-color: var(--fondoAzul);
     box-shadow: 0px 0px 20px rgb(49, 44, 24);
 }
 
+.footer-izq {
+    gap: 30px;
+}
+
 .footer-izq img{
-    max-height: 120px;
+    max-height: 150px;
     filter: drop-shadow(1px .5px 2px white);
 }
 
@@ -824,15 +842,13 @@ iframe{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    
 }
 
 .footer-izq, .footer-der{
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-basis:50%;
+    /* align-items: center; */
+    flex-basis:45%;
     font-family: var(--fuenteSec);
     height: 100%;
 }
@@ -842,7 +858,7 @@ iframe{
     align-items: center;
     justify-content: center;
     color: white;
-    font-size:40px;
+    font-size:30px;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
@@ -852,6 +868,8 @@ iframe{
 .footer-redes{
     display: flex;
     justify-content:space-between;
+    gap: 30px;
+    flex-basis: 10%;
     /* transform: scale(0); */
     /* animation: redes-footer 2s ease-out forwards; */
 }
@@ -862,7 +880,7 @@ iframe{
 }
 
 .footer-redes img{
-    width:75%;
+    width: 80px;
     
 }
 
