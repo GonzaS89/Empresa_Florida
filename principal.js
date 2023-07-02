@@ -84,8 +84,8 @@ window.addEventListener('scroll',(e)=> {
     let a = infoCont.getBoundingClientRect().top
     let b = infoCont.clientHeight 
     let c = a / b *100;
-    barrita.style.width = `${Math.abs(c)}%`
-    console.log(Math.abs(c))
+    barrita.style.width = `${Math.trunc(Math.abs(c))}%`
+    console.log(Math.trunc(Math.abs(c)))
     }
 })
 
