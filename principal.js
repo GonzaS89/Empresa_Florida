@@ -78,16 +78,16 @@ const infoCont = document.querySelector('.info-cont')
 const barrita = document.querySelector('.barrita')
 
 
-window.addEventListener('scroll',(e)=> {
+// window.addEventListener('scroll',(e)=> {
     
-    if(infoCont.getBoundingClientRect().top < 0 && infoCont.getBoundingClientRect().bottom > 0){
-    let a = infoCont.getBoundingClientRect().top
-    let b = infoCont.clientHeight 
-    let c = a / b *100;
-    barrita.style.width = `${Math.trunc(Math.abs(c))}%`
-    console.log(Math.trunc(Math.abs(c)))
-    }
-})
+//     if(infoCont.getBoundingClientRect().top < 0 && infoCont.getBoundingClientRect().bottom > 0){
+//     let a = infoCont.getBoundingClientRect().top
+//     let b = infoCont.clientHeight 
+//     let c = a / b *100;
+//     barrita.style.width = `${Math.trunc(Math.abs(c))}%`
+//     console.log(Math.trunc(Math.abs(c)))
+//     }
+// })
 
 
 

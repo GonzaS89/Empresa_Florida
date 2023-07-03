@@ -821,7 +821,6 @@ iframe{
 
 .footer{
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 200px;
     background-color: var(--fondoAzul);
@@ -829,6 +828,7 @@ iframe{
 }
 
 .footer-izq {
+    display: flex;
     gap: 30px;
 }
 
@@ -841,16 +841,18 @@ iframe{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-basis: 100%;
 }
 
 .footer-izq, .footer-der{
     display: flex;
     justify-content: center;
     /* align-items: center; */
-    flex-basis:45%;
+    flex-basis:50%;
     font-family: var(--fuenteSec);
     height: 100%;
 }
+
 
 .footer-txt1, .footer-txt2{
     display: flex;
@@ -867,8 +869,7 @@ iframe{
 .footer-redes{
     display: flex;
     justify-content:space-between;
-    gap: 30px;
-    flex-basis: 10%;
+    flex-direction: column;
     /* transform: scale(0); */
     /* animation: redes-footer 2s ease-out forwards; */
 }
@@ -883,6 +884,14 @@ iframe{
     
 }
 
+.footer-redes_txt {
+    color: white;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
 @keyframes redes-footer {
     0%{
         transform: scale(0)
@@ -894,10 +903,10 @@ iframe{
 
 @media (max-width: 1100px){
     .footer{
-        height: 100px;
+        height: 125px;
     }
     .footer-izq img{
-        height: 75px;
+        height: 110px;
     }
     .footer-txt1, .footer-txt2{
         font-size: 20px;
