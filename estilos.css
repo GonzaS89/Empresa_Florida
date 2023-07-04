@@ -548,6 +548,48 @@ iframe{
 }
 
 .footer{
-    height: 150px;
+    display: flex;
+    height: 200px;
     background:var(--fondoGrisLinear);
+}
+
+.footer-izq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    border-right:  2.5px solid rgba(128, 128, 128, 0.1);
+}
+
+.footer-izq_img {
+    display: flex;
+}
+
+.footer-der {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+}
+
+.footer-der_logos ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.footer-der_redes {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.footer-izq img {
+    width: 110px;
+    height: 110px;
+}
+
+.footer-logo img{
+    width: 75px;
+    height: 75px;
 }
