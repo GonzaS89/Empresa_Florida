@@ -839,9 +839,8 @@ iframe{
 
 .footer-img{
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-basis: 100%;
+    flex-basis: 75%;
 }
 
 .footer-izq, .footer-der{
@@ -889,7 +888,7 @@ iframe{
 .footer-redes_txt {
     color: white;
     text-transform: uppercase;
-    font-size: 22.5px;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
     flex-basis: 100%;
