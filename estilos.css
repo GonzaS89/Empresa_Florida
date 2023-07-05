@@ -26,7 +26,7 @@ html{
     flex-direction: column;
     background: var(--fondoGrisLinear);
 }
-h1,p,li{
+h1,h3,p,li{
     font-family: var(--fuenteSec);
     margin: 0;
     padding: 0;
@@ -599,13 +599,13 @@ GALERIA */
     transform: scale(.9);
 }
 
-li img:hover{
+.galeria li img:hover{
     cursor: zoom-in;
     filter: brightness(75%);
     transition: all 1s;
 }
 
-li img:active {
+.galeria li img:active {
     transform: scale(1.5)
 }
 
@@ -821,9 +821,14 @@ iframe{
 
 .footer{
     display: flex;
-    height: 300px;
+    flex-direction: column;
     background-color: var(--fondoAzul);
     box-shadow: 10px 0px 20px rgb(49, 44, 24);
+    width: 100%;
+}
+
+.footer_contenido {
+    display: flex;
 }
 
 .footer_izq {
@@ -835,42 +840,46 @@ iframe{
 
 .footer_izq-img {
     display: flex;
-    flex-basis: 75%;
+    justify-content: flex-end;
+    flex-basis: 50%;
     width: 200px;
     height: 200px;
 }
 
 .footer_izq-img img {
-    filter: drop-shadow(1px 1px 1px white);
+    filter: drop-shadow(2px 1px 1px white);
 }
+
 
 .footer_der {
     display:flex;
     justify-content: center;
+    align-items: center;
     flex-basis: 50%;
 }
 
 .footer_der-contacto {
     display:flex;
+    flex-basis: 100%;
 }
 
 .footer_der-contacto ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    flex-basis: 100%;
+    gap: 10px;
 }
 
 
 .footer_der-item {
     display: flex;
-    justify-content: space-between;
     gap: 30px;
     align-items: center;
     height: 50px;
     width: 350px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.04);
     padding:2.5px 5px;
 }
 
@@ -881,6 +890,48 @@ iframe{
 .footer_der-item p {
     text-transform: uppercase;
     font-size:20px
+}
+
+.footer_creditos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(49, 1, 104);
+    font-family: var(--fuenteSec);
+    font-size: 20px;
+    height: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+.footer_creditos a {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration:underline;
+    color: #a49734;
+}
+
+@media (max-width:1100px) {
+    .footer{
+        flex-direction: column;
+    }
+    .footer_izq {
+        gap: 20px;
+    }
+    .footer_izq-img {
+        justify-content: center;
+        width: 150px;
+        height: 150px;
+    }
+    .footer_der-item {
+        width: 150px;
+        height: 30px;
+        gap: 5px;
+    }
+    .footer_der-item p{
+        font-size: 13px;
+    }
 }
 
 
