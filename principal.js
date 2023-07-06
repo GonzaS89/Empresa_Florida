@@ -89,7 +89,13 @@ const barrita = document.querySelector('.barrita')
 //     }
 // })
 
+const definirAnchoCarousel = ()=> {
+    const subGaleria = document.querySelector('.galeria-subcont ul')
+    const cantidadDeFotos = subGaleria.children.length
+    $('.galeria ul').css('width', `${cantidadDeFotos}00%`)
+}
 
+definirAnchoCarousel();
 
 
 
