@@ -58,7 +58,7 @@ li{
 
 .header{    
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background: var(--fondoGrisLinear);
     height: 110px;
@@ -89,15 +89,27 @@ li{
     filter:drop-shadow(1.5px 0 5px black);
     /* animation: moverLogo 2s linear forwards */
 }
-.enlaces-cont{
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-right: 20px;
+}
+
+/* .enlaces-cont {
+    display: flex;
+} */
+.enlaces-cont ul{
     display: flex;
     width: 100%;
-    justify-content:flex-end;
+    justify-content:space-between;
     gap: 20px;
     align-items: center;
     padding: 5px;
-    flex-basis: 65%;
     height: 100%;
+    
 }
 
 .enlaces-cont li {
@@ -139,6 +151,64 @@ a:hover{
     transition: all .25s linear;
 }
 
+.navegacion-small {
+    display: none;  
+    width: 100%;
+    height: 10vh;
+    position: absolute;
+    margin-top: 150px;
+    background-color: red;
+}
+
+.boton-menu_contenedor {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    
+}
+
+.boton-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 40px;
+    height: 40px;
+    background-color:rgba(0, 0, 0, 0.651);
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+.linea1, .linea2, .linea3 {
+    width: 75%;
+    height: 1px;
+    background-color: white;
+}
+
+.boton-menu:hover .linea1 {
+    rotate: 45deg;
+    transition: all .25s linear;
+}
+
+.boton-menu:hover .linea3 {
+    rotate: -45deg;
+    transition: all .25s linear;
+}
+
+.boton-menu:hover .linea2 {
+    height: 0;
+    filter: opacity(0);
+    transition: all .25s linear;
+}
+
+.boton-menu:hover {
+    gap:0;
+    transition: all .25s linear;
+}
+
+
 @media (max-width:1400px) {
     .enlaces-cont li a {
         font-size: 20px;
@@ -150,13 +220,26 @@ a:hover{
         height: 80px;
     }
     #logo{
-        width: 75%;
+        width: 200px;
+        height: 100px;
     }
     .enlaces-cont {
         gap: 15px;
     }
     .enlaces-cont li a {
         font-size: 17.5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navegacion {
+        display: none;
+    }
+    .navegacion-small {
+        display: flex;
+    }
+    .boton-menu_contenedor {
+        display: flex;
     }
 }
 
@@ -546,7 +629,7 @@ GALERIA */
 }
 
 .galeria-subcont {
-    width: 700px;
+    width: 900px;
     overflow: hidden;
     margin-bottom: 20px;
     
@@ -571,11 +654,8 @@ GALERIA */
 
 .galeria li{
     width: 100%;
-    height: 350px;
+    height: 500px;
 }
-
-
-
 
 /* @media (max-width:1100px){
     
