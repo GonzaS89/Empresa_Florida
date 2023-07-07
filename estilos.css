@@ -55,6 +55,8 @@ a,h1,h2,h3,h4,p {
 
 .header{
     display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 10;
     width: 100%;
     height: 125px;
@@ -67,7 +69,6 @@ a,h1,h2,h3,h4,p {
     justify-content: space-between;
     margin: 10px auto; 
     width: 100%;
-    
 }
 
 .header__logo{
@@ -103,6 +104,80 @@ li{
     align-self: center; 
     list-style: none;
     flex-basis: 33%;
+}
+
+.navegacion_small {
+    display: none;
+    justify-content: center;
+    width: 100%;
+}
+
+.enlaces_small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton_menu-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-basis: 70%;
+}
+
+.boton_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(73, 65, 65, 0.365);
+    margin-right: 30px;
+    gap: 7.5px;
+}
+
+.linea1,
+.linea2,
+.linea3 {
+    width: 70%;
+    height: 1px;
+    background-color: rgb(0, 0, 0);
+}
+
+.boton_menu-contenedor:hover .linea1 {
+    width: 85%;
+    rotate: 45deg;
+    transition: all .25s linear;
+}
+
+.boton_menu-contenedor:hover .linea3 {
+    width: 85%;
+    rotate: -45deg;
+    transition: all .25s linear;
+}
+
+
+
+.boton_menu-contenedor:hover .boton_menu{
+    gap: 0;
+}
+
+.boton_menu-contenedor:hover .linea2 {
+    height: 0;
+    filter: opacity(0);
+    transition: all .25s linear;
+}
+
+
+
+@media (max-width:550px) {
+    .navegacion {
+        display: none;
+    }
+    .navegacion_small {
+        display: flex;
+    }
 }
 
 
