@@ -126,6 +126,8 @@ function activarBoton ()  {
 })
 }
 
+if (fecha == 7 && mes == 6) $('.mensaje3').css('display', 'flex')
+
 activarBoton()
 
 
@@ -193,18 +195,12 @@ let indiceDeBusqueda;
         function obtenerDiaRuta(x) {
     
             if (x == 0) diaRango = ruta[0].slice(0, ruta[0].length);
-
             else if (dia == 1 || semiFeriado || feriadoPrevio && posicion2 == 2)
             diaRango = ruta[1].slice(1, ruta[1].length)
-            
-            else if ((fecha == 27 && mes == 5) && posicion2 == 7) 
-            diaRango = ruta[1].slice(1, ruta[1].length)
-        
+            else if(fecha == 6 && mes == 6 && posicion2 == 2) diaRango = ruta[1].slice(0, ruta[1].length - 1)
             else if (x >= 1 && x <= 5) diaRango = ruta[1].slice(0, ruta[1].length);
-            
             else if (x == 6) diaRango = ruta[2].slice(0, ruta[2].length);
         
-    
             return diaRango
         }
     
@@ -259,8 +255,6 @@ let indiceDeBusqueda;
             }
         
         
-        
-    
         let listaObtenida = obtenerLista(rutaObtenida)
     
     
