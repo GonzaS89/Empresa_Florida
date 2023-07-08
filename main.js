@@ -121,6 +121,26 @@ const animacion2 = ()=> {
 
 // animacion2()
 
+const botonMenu = document.querySelector('.boton_menu-contenedor');
+const navegacionSmall = document.querySelector('.navegacion_small-contenedor');
+
+botonMenu.addEventListener('click', ()=> {
+    navegacionSmall.animate ([
+        {transform: 'translateY(0)'}
+    ], 
+    {duration : 200,
+    fill: "forwards"}
+    )
+
+    
+    
+})
+
+
+
+
+
+
 
 
 
