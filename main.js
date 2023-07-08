@@ -44,10 +44,6 @@ const scrollcont = document.querySelector('.scroll-cont');
 let titulo = document.getElementById('titulo');
 let resolucion = document.documentElement.clientWidth;
 
-if(fecha == 22 && mes == 5 && hora >= 2) {
-    $('.mensaje3').css('display', 'flex');
-}
-
 
 botonDeCambio.addEventListener('click', function () {
     $('.menu2').css('display', 'flex');
@@ -126,7 +122,7 @@ function activarBoton ()  {
 })
 }
 
-if (fecha == 7 && mes == 6) $('.mensaje3').css('display', 'flex')
+if (fecha == 8 && mes == 6) $('.mensaje3').css('display', 'flex')
 
 activarBoton()
 
