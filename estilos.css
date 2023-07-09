@@ -261,6 +261,11 @@ a:hover{
         position:relative;
         box-shadow: none;
     }
+    #logo{
+        width: 150px;
+        height: 75px;
+        margin-left: 10px;
+    }
     .enlaces-small a {
         font-size:20px
     }
