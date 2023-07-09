@@ -97,6 +97,121 @@ const definirAnchoCarousel = ()=> {
 
 definirAnchoCarousel();
 
+const botonMenuCont = document.querySelector('.boton-menu_contenedor');
+const botonMenu = document.querySelector('.boton-menu');
+const navSmall = document.querySelector('.navegacion-small_contenedor');
+const linea1 = document.querySelector('.linea1');
+const linea2 = document.querySelector('.linea2');
+const linea3 = document.querySelector('.linea3');
+
+let estaVisible = false;
+
+const bajarMenu = ()=> {
+
+    navSmall.animate ([
+        {
+            transform: 'translateY(0)'
+        }
+    ],
+        {
+            duration:500,
+            fill : 'forwards'
+        }
+    )   
+    linea1.animate ([
+        {
+            transform:'rotate(45deg)'
+        }
+    ],
+        {
+            duration: 500,
+            fill:'forwards'
+        }
+    )
+    linea2.animate ([
+        {
+            filter:'opacity(0)'
+        }
+    ],
+        {
+            duration: 500,
+            fill:'forwards'
+        }
+    )
+    linea3.animate ([
+        {
+            transform:'rotate(-45deg)'
+        }
+    ],
+        {
+            duration: 500,
+            fill:'forwards'
+        }
+    )
+    $(linea2).css('height', '0');
+    $(botonMenu).css('gap', '0')
+    estaVisible = true;
+}
+
+const subirMenu = ()=> {
+    navSmall.animate ([
+        {
+            transform: 'translateY(-100%)'
+        }
+    ],
+        {
+            duration:250,
+            fill : 'forwards'
+        }
+    );
+    linea1.animate ([
+        {
+            transform: 'rotate(0)'
+        },
+    ],  
+        {
+            duration:250,
+            fill:'forwards'
+        }
+    );
+    linea2.animate ([
+        {
+            filter:'opacity(100%)'
+        }
+    ],
+        {
+            duration: 250,
+            fill:'forwards'
+        }
+    )
+    linea3.animate ([
+        {
+            transform: 'rotate(0)'
+        },
+    ],  
+        {
+            duration:250,
+            fill:'forwards'
+        }
+    );
+    $(linea2).css('height', '1px');
+    $(botonMenu).css('gap', '10px')
+    estaVisible = false;
+}
+
+botonMenuCont.addEventListener('click', ()=> {
+    if(estaVisible) subirMenu()
+    else bajarMenu(); 
+})
+
+navSmall.addEventListener('click', ()=> {
+    subirMenu();
+})
+
+
+
+
+
 
 
 
