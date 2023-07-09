@@ -513,6 +513,13 @@ a:hover{
     }
 }
 
+@media (max-width: 480px) {
+    .servicios ul {
+        display:flex;
+        flex-direction:column;
+    }
+}
+
 /* NOSOTROS */
 
 #nosotros{
