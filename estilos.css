@@ -259,6 +259,7 @@ a:hover{
 @media (max-width: 480px) {
     .header {
         position:relative;
+        height: 70px;
         box-shadow: none;
     }
     #logo{
