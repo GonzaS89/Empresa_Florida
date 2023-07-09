@@ -371,8 +371,10 @@ a:hover{
     padding: 30px;
 }
 
-.servicios li:nth-child(5){
-    grid-column: 2/3;
+@media (min-width: 1401px){
+    .servicios li:nth-child(5){
+        grid-column: 2/3;
+    }
 }
 
 .servicio{
@@ -515,8 +517,22 @@ a:hover{
 
 @media (max-width: 480px) {
     .servicios ul {
-        display:flex;
-        flex-direction:column;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .servicio {
+        width:150px;
+        height:225px;
+    }
+    #servicio-titulo {
+        font-size:15px
+    }
+    #servicio-texto p{
+        font-size: 15px;
+        padding: 0 10px;
+    }
+    .servicio-icono {
+        width:50px;
+        height:50px;
     }
 }
 
