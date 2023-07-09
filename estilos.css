@@ -522,13 +522,14 @@ a:hover{
     .servicio {
         width:150px;
         height:225px;
+        margin: 20px;
     }
     #servicio-titulo {
         font-size:15px
     }
     #servicio-texto p{
         font-size: 15px;
-        padding: 0 10px;
+        padding: 0 12.5px;
     }
     .servicio-icono {
         width:50px;
