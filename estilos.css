@@ -668,6 +668,27 @@ a:hover{
 }
 
 @media (max-width: 480px){
+    #titulo {
+        font-size: 20px;
+    }
+    .nosotros-cont {
+        gap: 3px;
+    }
+    .nosotros-cont li {
+        padding: 13px;
+    }
+    #nosotros-texto {
+        font-size: 15px;
+    }
+    #nosotros-texto2 {
+        font-size: 15px;
+    }
+    .nosotros-lista li {
+        font-size: 15px;
+    }
+    .nosotros-lista li strong {
+        font-size: 15px;
+    }
     #nosotros-subtitulo {
         font-size: 17px;
         margin: 10px;
