@@ -157,7 +157,7 @@ a:hover{
     z-index: 20;
     transform: translateY(-100%);
     position: absolute;
-    background-color: rgb(224, 224, 224);;
+    background: var(--fondoGrisLinear);
 }
 
 .navegacion-small {
@@ -179,12 +179,20 @@ a:hover{
     flex-direction: column;
     justify-content:center;
     width: 100%;
-    height: 40px;
+    height: 35px;
     /* border: 1px solid rgba(128, 128, 128, 0.096); */
 }
 
+.enlaces-small li a{
+    font-size: 17.5px;
+}
+
 .enlaces-small li:hover {
-    background-color: rgba(255, 0, 0, 0.37);
+    background:var(--rojo2);
+}
+
+.enlaces-small li:hover a {
+    color: white;
 }
 
 .boton-menu_contenedor {
