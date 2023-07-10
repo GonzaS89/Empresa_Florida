@@ -1004,6 +1004,12 @@ iframe{
     scroll-margin-top: 100px;
 }
 
+@media (max-width:480px) {
+    .nosotros-cont, .contacto-cont, .info-cont, .galeria{
+        scroll-margin-top: 0px;
+    }
+}
+
 .footer{
     display: flex;
     flex-direction: column;
