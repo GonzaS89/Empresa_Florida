@@ -197,9 +197,10 @@ a:hover{
 
 .boton-menu_contenedor {
     display: none;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     height:100%;
+    margin-right: 10px;
 }
 
 .boton-menu {
@@ -267,12 +268,16 @@ a:hover{
 @media (max-width: 480px) {
     .header {
         position:relative;
-        height: 70px;
+        height: 80px;
         box-shadow: none;
     }
+    .logo-cont{
+        flex-basis: 70%;
+        justify-content: flex-end;
+    }
     #logo{
-        width: 150px;
-        height: 75px;
+        width: 175px;
+        height: 80px;
         margin-left: 10px;
     }
     .enlaces-small a {
@@ -930,6 +935,7 @@ GALERIA */
     flex-basis: 50%;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 .contacto-mapa{
@@ -944,6 +950,9 @@ iframe{
 }
 
 #contacto-texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: var(--blanco);
     font-family:var(--fuenteSec);
     font-size: 30px;
@@ -981,7 +990,7 @@ iframe{
         height: 200px;
     }
     #contacto-texto {
-        font-size: 17.5px;
+        font-size: 15px;
     }
 }
 
