@@ -689,7 +689,7 @@ GALERIA */
 }
 
 .galeria-subcont {
-    width: 900px;
+    width: 75%;
     overflow: hidden;
     margin-bottom: 20px;
     
@@ -731,10 +731,6 @@ GALERIA */
         grid-template-columns: 100%;
     }
 } */
-
-
-
-
 
 .galeria_foto img{
     width: 100%;
@@ -814,6 +810,12 @@ GALERIA */
 
 .galeria li img:active {
     transform: scale(1.5)
+}
+
+@media (max-width: 480px) {
+    .galeria li{
+        height: 250px;
+    }
 }
 
 
