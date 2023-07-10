@@ -272,7 +272,7 @@ a:hover{
 @media (max-width: 480px) {
     .header {
         position:relative;
-        height: 80px;
+        height: 100px;
         box-shadow: none;
     }
     .logo-cont{
@@ -280,8 +280,7 @@ a:hover{
         justify-content: flex-end;
     }
     #logo{
-        width: 175px;
-        height: 80px;
+        width: 200px;
         margin-left: 10px;
     }
     .enlaces-small a {
@@ -538,6 +537,8 @@ a:hover{
         grid-template-columns: repeat(2, 1fr);
         padding: 0;
         margin: 0;
+        gap: 20px
+
     }
     .servicio {
         width:150px;
@@ -853,6 +854,9 @@ GALERIA */
 }
 
 @media (max-width: 480px) {
+    .galeria-subcont {
+        width: 85%;
+    }
     .galeria li{
         height: 200px;
     }
@@ -926,8 +930,6 @@ GALERIA */
     }
 }
 
-
-
 .contacto-1{
     display: flex;
     flex-direction: column;
@@ -991,12 +993,14 @@ iframe{
 @media (max-width: 480px) {
     .contacto {
         height: 175px;
+        width: 85%;
     }
     .contacto2 {
         height: 175px;
+        width: 85%;
     }
     #contacto-texto {
-        font-size: 13px;
+        font-size: 14px;
     }
 }
 
