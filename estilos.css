@@ -11,6 +11,7 @@
     --azul : rgb(39, 106, 231);
     --azulOscuro: rgb(6, 6, 65);
     --fondoGrisLinear :linear-gradient(180deg, rgba(207,206,226,1) 0%, rgba(241,241,241,1) 85%, rgba(235,235,235,1) 97%);
+    --fondoGrisLinear2 : linear-gradient(180deg, rgba(241,241,241,1) 85%, rgba(235,235,235,1) 97%);
     --fuentePrincipal : 'Nunito', sans-serif;
     --fuenteSec : 'Dosis', sans-serif;
     --fuenteTer : 'Lilita One', cursive;
@@ -157,7 +158,7 @@ a:hover{
     z-index: 20;
     transform: translateY(-100%);
     position: absolute;
-    background:var(--fondoGrisLinear)
+    background:var(--fondoGrisLinear2)
 }
 
 .navegacion-small {
@@ -534,22 +535,20 @@ a:hover{
 
 @media (max-width: 480px) {
     .servicios ul {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 100%;
         padding: 0;
         margin: 0;
         gap: 20px
 
     }
     .servicio {
-        width:150px;
-        height:225px;
         margin: 10px;
     }
     #servicio-titulo {
-        font-size:15px
+        font-size:18px
     }
     #servicio-texto p{
-        font-size: 15px;
+        font-size: 18px;
         padding: 0 12.5px;
     }
     .servicio-icono {
@@ -698,28 +697,25 @@ a:hover{
         padding: 13px;
     }
     #nosotros-texto {
-        font-size: 15px;
+        font-size: 18px;
     }
     #nosotros-texto2 {
-        font-size: 15px;
+        font-size: 18px;
     }
     .nosotros-lista li {
-        font-size: 15px;
+        font-size: 17px;
     }
     .nosotros-lista li strong {
-        font-size: 15px;
+        font-size: 18px;
     }
     #nosotros-subtitulo {
-        font-size: 17px;
+        font-size: 18px;
         margin: 10px;
     }
 }
 
-
-
 /* 
 GALERIA */
-
 
 .galeria{
     display: flex;
@@ -858,7 +854,7 @@ GALERIA */
         width: 85%;
     }
     .galeria li{
-        height: 200px;
+        height: 300px;
     }
 }
 
@@ -992,15 +988,15 @@ iframe{
 
 @media (max-width: 480px) {
     .contacto {
-        height: 175px;
+        height: 200px;
         width: 85%;
     }
     .contacto2 {
-        height: 175px;
+        height: 200px;
         width: 85%;
     }
     #contacto-texto {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
