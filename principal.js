@@ -208,6 +208,17 @@ navSmall.addEventListener('click', ()=> {
     subirMenu();
 })
 
+const footerItems = document.querySelectorAll('.footer_der-item');
+
+let ancho = innerWidth;
+
+window.addEventListener('resize', ()=> {
+    if (ancho < 480) {
+        for (const item of footerItems) {
+            item.removeChild(item.children[1])
+        }
+    }
+})
 
 
 
