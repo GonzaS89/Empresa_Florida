@@ -157,7 +157,7 @@ a:hover{
     z-index: 20;
     transform: translateY(-100%);
     position: absolute;
-    background:grey;
+    background:var(--fondoGrisLinear)
 }
 
 .navegacion-small {
@@ -990,13 +990,13 @@ iframe{
 
 @media (max-width: 480px) {
     .contacto {
-        height: 200px;
+        height: 175px;
     }
     .contacto2 {
-        height: 200px;
+        height: 175px;
     }
     #contacto-texto {
-        font-size: 15px;
+        font-size: 13px;
     }
 }
 
