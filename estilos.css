@@ -814,7 +814,7 @@ GALERIA */
 
 @media (max-width: 480px) {
     .galeria li{
-        height: 250px;
+        height: 200px;
     }
 }
 
