@@ -1124,10 +1124,20 @@ iframe{
         flex-direction: column;
     }
     .footer_izq-img {
-        width: 150px;
-        height: 150px;
+        width: 125px;
+        height: 125px;
     }
-}
+    .footer_der-contacto ul {
+        gap: 0;
+        align-items: flex-start;
+    }
+    .footer_creditos {
+        font-size: 14px;
+    }
+    .footer_creditos a{
+        font-size: 14px;
+    }
+    }
 
 
 
