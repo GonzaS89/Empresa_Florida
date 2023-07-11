@@ -155,7 +155,7 @@ a:hover{
 .navegacion-small_contenedor {
     display: flex;
     width: 100%;
-    z-index: 20;
+    z-index: 0;
     transform: translateY(-100%);
     position: absolute;
     background:var(--fondoGrisLinear2)
@@ -1008,7 +1008,7 @@ iframe{
 
 @media (max-width:480px) {
     .nosotros-cont, .contacto-cont, .info-cont, .galeria{
-        scroll-margin-top: 0px;
+        scroll-margin-top: 0;
     }
 }
 

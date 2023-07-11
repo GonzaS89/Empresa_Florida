@@ -6,22 +6,22 @@ const tituloInfo = document.getElementById('titulo');
 const servicio = document.querySelectorAll('.servicio');
 const servicio2 = document.querySelectorAll('.servicio2')
 
-window.addEventListener('scroll', ()=> {
+// window.addEventListener('scroll', ()=> {
 
-    if(carousel.getBoundingClientRect().top < 0){
+//     if(carousel.getBoundingClientRect().top < 0){
 
-        servicio.forEach(element => {
-            element.classList.add('servicioAnimacion')
-            element.classList.add('servicioAnimacion')
-        });
+//         servicio.forEach(element => {
+//             element.classList.add('servicioAnimacion')
+//             element.classList.add('servicioAnimacion')
+//         });
 
-        servicio2.forEach(element => {
-            element.classList.add('servicio2Animacion');
-            element.classList.add('servicio2Animacion');
-        });
+//         servicio2.forEach(element => {
+//             element.classList.add('servicio2Animacion');
+//             element.classList.add('servicio2Animacion');
+//         });
     
-    } 
-})
+//     } 
+// })
 
 const contacto1 = document.querySelector('.contacto')
 const contacto2 = document.querySelector('.contacto2')
@@ -76,18 +76,6 @@ let escritura = string => {
 
 const infoCont = document.querySelector('.info-cont')
 const barrita = document.querySelector('.barrita')
-
-
-// window.addEventListener('scroll',(e)=> {
-    
-//     if(infoCont.getBoundingClientRect().top < 0 && infoCont.getBoundingClientRect().bottom > 0){
-//     let a = infoCont.getBoundingClientRect().top
-//     let b = infoCont.clientHeight 
-//     let c = a / b *100;
-//     barrita.style.width = `${Math.trunc(Math.abs(c))}%`
-//     console.log(Math.trunc(Math.abs(c)))
-//     }
-// })
 
 const definirAnchoCarousel = ()=> {
     const subGaleria = document.querySelector('.galeria-subcont ul')
@@ -208,14 +196,16 @@ navSmall.addEventListener('click', ()=> {
     subirMenu();
 })
 
+const nosotrosCont = document.querySelector('.nosotros-cont')
 
-   
-
-
-
-
-
-
+    window.addEventListener('scroll', ()=> {
+        if(header.getBoundingClientRect().top < 0) {
+            $(header).css('position', 'fixed')
+        }
+        else if (nosotrosCont.getBoundingClientRect().top >= 0) {
+            $(header).css('position', 'relative')
+        }
+    })
 
 
 
