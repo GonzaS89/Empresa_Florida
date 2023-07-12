@@ -42,15 +42,15 @@ const pantalla = document.querySelector('.pantalla_negra')
 const retrato = document.querySelector('.retrato');
 
 
-galeria.addEventListener('click', (e) => {
-    let dataFoto = e.target.attributes.src.nodeValue;
-    $(pantalla).css('position', 'fixed');
-    $(pantalla).css('display','flex')
-    $(retrato).css('backgroundImage', `url(${dataFoto})`);
-    $('.boton_cerrador').css('display', 'flex');
-    retrato.classList.add('animacionRetrato')
-    console.log(1)
-});
+// galeria.addEventListener('click', (e) => {
+//     let dataFoto = e.target.attributes.src.nodeValue;
+//     $(pantalla).css('position', 'fixed');
+//     $(pantalla).css('display','flex')
+//     $(retrato).css('backgroundImage', `url(${dataFoto})`);
+//     $('.boton_cerrador').css('display', 'flex');
+//     retrato.classList.add('animacionRetrato')
+//     console.log(1)
+// });
 
 const botonCerrador = document.querySelector('.boton_cerrador')
 
@@ -84,6 +84,12 @@ const definirAnchoCarousel = ()=> {
 }
 
 definirAnchoCarousel();
+
+const subGaleria = document.querySelector('.galeria-subcont ul')
+subGaleria.addEventListener('click', (e)=> {
+    const foto = e.target.attributes.src.value
+    $('.fotoAmpliada').css('backgroundImage', `url(${foto})`)
+})
 
 const botonMenuCont = document.querySelector('.boton-menu_contenedor');
 const botonMenu = document.querySelector('.boton-menu');
