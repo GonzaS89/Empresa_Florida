@@ -63,6 +63,7 @@ li{
     background: var(--fondoGrisLinear);
     height: 110px;
     width: 100%;
+    position: relative;
     box-shadow: 0px 0px 20px rgb(49, 44, 24);
 
 }
@@ -288,7 +289,6 @@ a:hover{
         background: var(--fondoGrisLinear2);
         flex-direction: column;
         z-index: 25;
-        position: absolute;
         /* height: 85px; */
         box-shadow: none;
     }
