@@ -95,7 +95,7 @@ const tiradefotos = document.querySelector('.galeria ul')
 const botonGaleria = document.querySelector('.botones span')
 
 botonGaleria.addEventListener('click', ()=> {
-    $(tiradefotos).css('transform', 'translateX(-200px)')
+        $(tiradefotos).css('transform', 'translateX(-200px)')
 })
 
 const botonMenuCont = document.querySelector('.boton-menu_contenedor');
