@@ -91,6 +91,13 @@ subGaleria.addEventListener('click', (e)=> {
     $('.fotoAmpliada').css('backgroundImage', `url(${foto})`)
 })
 
+const tiradefotos = document.querySelector('.galeria ul')
+const botonGaleria = document.querySelector('.botones span')
+
+botonGaleria.addEventListener('click', ()=> {
+    $(tiradefotos).css('transform', 'translateX(-200px)')
+})
+
 const botonMenuCont = document.querySelector('.boton-menu_contenedor');
 const botonMenu = document.querySelector('.boton-menu');
 const navSmall = document.querySelector('.navegacion-small_contenedor');

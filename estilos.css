@@ -769,26 +769,38 @@ GALERIA */
    background-position: center;
 }
 .galeria-subcont {
-    width: 85%;
+    display: flex;
+    width: 90%;
     height: 100px;
-    overflow-x: hidden;
+    overflow: hidden;
     margin-bottom: 20px;
+    background-color: black;
 }
 .galeria ul{
     display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0;
-    gap: 10px;
-    background-color: black;
-    /* animation: moverFoto 60s linear infinite; */
+    gap: 10px;   /* animation: moverFoto 60s linear infinite; */
 }
 
-.botonre {
+.galeria_carousel {
     display: flex;
-    justify-content: space-between;
+    overflow: hidden;
+    width: 90%;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    width: inherit;
-    height: inherit;
-    position: absolute;
+    height: 100px;
+    width: 30px;
+    background-color: rgba(220, 220, 220, 0.459);
+}
+
+.botones span {
+    font-size: 20px;
 }
 
 @keyframes moverFoto {
