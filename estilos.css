@@ -1152,7 +1152,6 @@ iframe{
     align-items: center;
     height: 45px;
     width: 45px;
-    color: white;
     padding:2.5px 5px;
     animation: resaltarMedio 2s linear infinite;
 }
