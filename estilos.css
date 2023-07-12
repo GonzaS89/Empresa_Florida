@@ -288,7 +288,7 @@ a:hover{
     .header {
         background: var(--fondoGrisLinear2);
         flex-direction: column;
-        z-index: 25;
+        z-index: 0;
         /* height: 85px; */
         box-shadow: none;
     }
@@ -1026,7 +1026,7 @@ iframe{
 
 @media (max-width:480px) {
     .nosotros-cont, .contacto-cont, .info-cont, .galeria{
-        scroll-margin-top: 0;
+        scroll-margin-top: 0px;
     }
 }
 

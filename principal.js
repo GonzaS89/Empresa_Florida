@@ -200,10 +200,11 @@ const nosotrosCont = document.querySelector('.nosotros-cont')
 
     window.addEventListener('scroll', ()=> {
         if(header.getBoundingClientRect().top < 0) {
-            $(header).css('position', 'fixed')
+            $(header).css('filter', 'opacity(95%)');
         }
         else if (nosotrosCont.getBoundingClientRect().top >= 0) {
-            $(header).css('position', 'relative')
+            $(header).css('position', 'relative');
+            $(header).css('filter', 'opacity(100%)')
         }
     })
 
