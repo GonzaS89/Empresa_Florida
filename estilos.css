@@ -887,7 +887,7 @@ GALERIA */
 
 @media (max-width:1100px) {
     .galeria ul {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -897,6 +897,7 @@ GALERIA */
         height: 300px;
     }
     .galeria ul {
+        grid-template-columns: repeat(3, 1fr);
         gap: 5px;
     }
     .galeria li{
