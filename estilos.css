@@ -73,7 +73,7 @@ li{
     align-items: center;
 }
 .header_small {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     background:var(--fondoGrisLinear);
@@ -291,6 +291,12 @@ a:hover{
         z-index: 0;
         /* height: 85px; */
         box-shadow: none;
+    }
+    .header_large {
+        display: none;
+    }
+    .header_small {
+        display: flex;
     }
     .logo-cont{
         /* flex-basis: 75%; */
@@ -1092,6 +1098,7 @@ iframe{
 }
 
 .footer_der-contacto_small h2 {
+    display: none;
     font-family: var(--fuenteSec);
     text-transform: uppercase;
     color: white;
@@ -1231,6 +1238,9 @@ iframe{
     }
     .footer_creditos a{
         font-size: 14px;
+    }
+    .footer_der-contacto_small h2 {
+        display: inline;
     }
     }
 
