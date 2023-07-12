@@ -896,12 +896,9 @@ GALERIA */
         margin-bottom: 10px;
         height: 300px;
     }
-    .galeria ul {
-        grid-template-columns: repeat(2, 1fr);
-    }
     .galeria li{
-        width: 120px;
-        height: 80px;
+        width: 110px;
+        height: 75px;
     }
 
 }
