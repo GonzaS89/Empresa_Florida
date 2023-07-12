@@ -11,7 +11,8 @@
     --azul : rgb(39, 106, 231);
     --azulOscuro: rgb(6, 6, 65);
     --fondoGrisLinear :linear-gradient(180deg, rgba(207,206,226,1) 0%, rgba(241,241,241,1) 85%, rgba(235,235,235,1) 97%);
-    --fondoGrisLinear2 : linear-gradient(180deg, rgba(241,241,241,1) 85%, rgba(235,235,235,1) 97%);
+    --fondoGrisLinear2 : linear-gradient(180deg, rgba(241,241,241,1) 100%);
+    --fondoGrisLinear3 : linear-gradient(180deg,rgba(235,235,235,1) 0%, rgba(241,241,241,1) 85%, rgba(207,206,226,1) 100%);
     --fuentePrincipal : 'Nunito', sans-serif;
     --fuenteSec : 'Dosis', sans-serif;
     --fuenteTer : 'Lilita One', cursive;
@@ -59,14 +60,22 @@ li{
 
 .header{    
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     background: var(--fondoGrisLinear);
     height: 110px;
     width: 100%;
-    z-index: 25;
     box-shadow: 0px 0px 20px rgb(49, 44, 24);
-    position: fixed;
+
+}
+.header_large {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:var(--fondoGrisLinear);
 }
 
 /* .headerFixed{
@@ -80,6 +89,10 @@ li{
     flex-basis: 25%;
 }
 
+.header_small .logo-cont {
+    flex-basis: 85%;
+}
+
 #logo{
     background-image: url(imagenes/logoancho.png);
     width:250px;
@@ -91,7 +104,7 @@ li{
     /* animation: moverLogo 2s linear forwards */
 }
 
-.navegacion {
+.navegacion_large {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,16 +166,15 @@ a:hover{
 }
 
 .navegacion-small_contenedor {
-    display: flex;
+    display: none;
     width: 100%;
-    z-index: 0;
     transform: translateY(-100%);
-    position: absolute;
-    background:var(--fondoGrisLinear2)
+    background:var(--fondoGrisLinear3);
+    z-index: -1;
 }
 
 .navegacion-small {
-    display: none;
+    display: flex;
     align-items: center;  
     width: 100%;
 }
@@ -205,7 +217,8 @@ a:hover{
     justify-content: flex-end;
     align-items: center;
     height:100%;
-    margin-right: 10px;
+    flex-basis: 25%;
+    margin-right: 20px;
 }
 
 .boton-menu {
@@ -256,7 +269,7 @@ a:hover{
 
 @media (max-width: 1100px){
     .header{
-        height: 80px;
+        height: 85px;
     }
     #logo{
         width: 200px;
@@ -272,25 +285,30 @@ a:hover{
 
 @media (max-width: 480px) {
     .header {
-        position:relative;
-        height: 85px;
+        background: var(--fondoGrisLinear2);
+        flex-direction: column;
+        z-index: 25;
+        position: absolute;
+        /* height: 85px; */
         box-shadow: none;
     }
     .logo-cont{
-        flex-basis: 70%;
+        /* flex-basis: 75%; */
         justify-content: flex-end;
     }
     #logo{
         width: 175px;
+        height: 85px;
         margin-left: 10px;
+
     }
     .enlaces-small a {
         font-size:20px
     }
-    .navegacion {
+    .navegacion_large{
         display: none;
     }
-    .navegacion-small {
+    .navegacion-small_contenedor {
         display: flex;
     }
     .boton-menu_contenedor {
