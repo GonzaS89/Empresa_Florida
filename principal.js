@@ -105,7 +105,6 @@ const linea3 = document.querySelector('.linea3');
 let estaVisible = false;
 
 const bajarMenu = ()=> {
-
     navSmall.animate ([
         {
             transform: 'translateY(0)'
