@@ -1069,7 +1069,7 @@ iframe{
     }
 }
 
-.botonBack span {
+.botonBack a {
     font-size: 22px;
     font-family: var(--fuenteFlecha);
     font-weight: bold;
