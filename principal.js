@@ -19,8 +19,8 @@ const servicio2 = document.querySelectorAll('.servicio2')
 //             element.classList.add('servicio2Animacion');
 //             element.classList.add('servicio2Animacion');
 //         });
-    
-//     } 
+
+//     }
 // })
 
 const contacto1 = document.querySelector('.contacto')
@@ -32,10 +32,10 @@ window.addEventListener('scroll', ()=> {
         contacto1.classList.add('contacto1Animacion')
         contacto2.classList.add('contacto2Animacion')
     }
-    
+
 })
 
-// 
+//
 
 const galeria = document.querySelector('.galeria');
 const pantalla = document.querySelector('.pantalla_negra')
@@ -114,7 +114,7 @@ const bajarMenu = ()=> {
             duration:500,
             fill : 'forwards'
         }
-    )   
+    )
     linea1.animate ([
         {
             transform:'rotate(45deg)'
@@ -165,7 +165,7 @@ const subirMenu = ()=> {
         {
             transform: 'rotate(0)'
         },
-    ],  
+    ],
         {
             duration:250,
             fill:'forwards'
@@ -185,7 +185,7 @@ const subirMenu = ()=> {
         {
             transform: 'rotate(0)'
         },
-    ],  
+    ],
         {
             duration:250,
             fill:'forwards'
@@ -198,22 +198,44 @@ const subirMenu = ()=> {
 
 botonMenuCont.addEventListener('click', ()=> {
     if(estaVisible) subirMenu()
-    else bajarMenu(); 
+    else bajarMenu();
 })
 
 navSmall.addEventListener('click', ()=> {
     subirMenu();
 })
 
-const nosotrosCont = document.querySelector('.nosotros-cont')
+const portadaCont = document.querySelector('.portada-cont')
+const headerSmall = document.querySelector('.header_small')
 
     window.addEventListener('scroll', ()=> {
-        if(header.getBoundingClientRect().top < 0) {
-            $(header).css('filter', 'opacity(95%)');
+       if (portadaCont.getBoundingClientRect().top < 0) {
+            $(headerSmall).css('filter', 'opacity(95%)')
+            // $(botonMenuCont).css('filter', 'opacity(0%)')
+            botonMenuCont.animate ([
+                {
+                    filter : 'opacity(0%)'
+                }
+            ],
+                {
+                    duration : 1000,
+                    fill : "forwards"
+                }
+            )
         }
-        else if (nosotrosCont.getBoundingClientRect().top >= 0) {
-            $(header).css('position', 'relative');
-            $(header).css('filter', 'opacity(100%)')
+            else {
+            $(headerSmall).css('filter', 'opacity(100%)');
+            // $(botonMenuCont).css('filter', 'opacity(100%)');
+            botonMenuCont.animate ([
+                {
+                    filter : 'opacity(100%)'
+                }
+            ],
+                {
+                    duration : 1000,
+                    fill : "forwards"
+                }
+            )
         }
     })
 
