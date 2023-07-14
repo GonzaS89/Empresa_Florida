@@ -218,7 +218,7 @@ const headerSmall = document.querySelector('.header_small')
                 }
             ],
                 {
-                    duration : 1000,
+                    duration : 500,
                     fill : "forwards"
                 }
             )
@@ -232,7 +232,7 @@ const headerSmall = document.querySelector('.header_small')
                 }
             ],
                 {
-                    duration : 1000,
+                    duration : 750,
                     fill : "forwards"
                 }
             )
