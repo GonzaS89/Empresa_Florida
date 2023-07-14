@@ -1057,7 +1057,7 @@ iframe{
     background-color: rgb(255, 255, 255);
     margin: 10px;
     transform: rotate(-90deg);
-    animation: moverBotonBack 2s linear infinite;
+    animation: moverBotonBack 1.5s ease-in infinite;
 }
 
 @keyframes moverBotonBack {
