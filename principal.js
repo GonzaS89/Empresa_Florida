@@ -214,7 +214,9 @@ const headerSmall = document.querySelector('.header_small')
             // $(botonMenuCont).css('filter', 'opacity(0%)')
             botonMenuCont.animate ([
                 {
-                    filter : 'opacity(0%)'
+                    filter : 'opacity(0%)',
+                    transform : 'scale(0)',
+                    pointerEvents : 'none'
                 }
             ],
                 {
@@ -228,11 +230,13 @@ const headerSmall = document.querySelector('.header_small')
             // $(botonMenuCont).css('filter', 'opacity(100%)');
             botonMenuCont.animate ([
                 {
-                    filter : 'opacity(100%)'
+                    filter : 'opacity(100%)',
+                    transform : 'scale(1)',
+                    pointerEvents : 'all'
                 }
             ],
                 {
-                    duration : 750,
+                    duration : 300,
                     fill : "forwards"
                 }
             )
