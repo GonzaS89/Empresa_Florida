@@ -107,7 +107,7 @@ let estaVisible = false;
 const bajarMenu = ()=> {
     navSmall.animate ([
         {
-            transform: 'translateY(0)'
+            marginTop: '0'
         }
     ],
         {
@@ -153,7 +153,7 @@ const bajarMenu = ()=> {
 const subirMenu = ()=> {
     navSmall.animate ([
         {
-            transform: 'translateY(-100%)'
+            marginTop: '-150px'
         }
     ],
         {
