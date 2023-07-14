@@ -52,12 +52,6 @@ const retrato = document.querySelector('.retrato');
 //     console.log(1)
 // });
 
-const botonCerrador = document.querySelector('.boton_cerrador')
-
-botonCerrador.addEventListener('click', ()=> {
-    $('.boton_cerrador').css('display', 'none');
-    $(pantalla).css('display','none')
-})
 
 const textoCar = document.querySelector('.textoCar')
 
