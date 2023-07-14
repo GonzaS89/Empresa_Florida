@@ -1032,7 +1032,7 @@ iframe{
 
 @media (max-width:480px) {
     .nosotros-cont, .contacto-cont, .info-cont, .galeria{
-        scroll-margin-top: 150px;
+        scroll-margin-top: 85px;
     }
 }
 
