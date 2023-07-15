@@ -19,7 +19,6 @@ const servicio2 = document.querySelectorAll('.servicio2')
 //             element.classList.add('servicio2Animacion');
 //             element.classList.add('servicio2Animacion');
 //         });
-
 //     }
 // })
 

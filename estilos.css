@@ -260,7 +260,7 @@ a:hover{
     }
     #logo{
         width: 200px;
-        height: 100px;
+        height: 100%;
     }
     .enlaces-cont {
         gap: 15px;
@@ -289,7 +289,7 @@ a:hover{
         justify-content: flex-end;
     }
     #logo{
-        width: 175px;
+        width: 150px;
         height: 85px;
         margin-left: 10px;
 
