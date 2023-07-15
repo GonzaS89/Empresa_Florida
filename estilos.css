@@ -277,6 +277,11 @@ a:hover{
         z-index: 0;
         /* height: 85px; */
         box-shadow: none;
+        height: 90px;
+    }
+    #logo{
+        width: 175px;
+        height: 90px;
     }
     .header_large {
         display: none;
