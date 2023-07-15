@@ -78,7 +78,6 @@ li{
     justify-content: center;
     align-items: center;
     background:var(--fondoGrisLinear);
-    position: fixed;
     width: 100%;
     z-index: 20;
 }
@@ -274,7 +273,7 @@ a:hover{
     .header {
         background: var(--fondoGrisLinear2);
         flex-direction: column;
-        z-index: 0;
+        z-index: 10;
         /* height: 85px; */
         box-shadow: none;
         height: 90px;
@@ -1038,7 +1037,7 @@ iframe{
 
 @media (max-width:480px) {
     .nosotros-cont, .contacto-cont, .info-cont, .galeria{
-        scroll-margin-top: 250px;
+        scroll-margin-top: 90px;
     }
 }
 

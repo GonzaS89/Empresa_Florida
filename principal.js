@@ -204,37 +204,45 @@ const headerSmall = document.querySelector('.header_small')
     window.addEventListener('scroll', ()=> {
        if (portadaCont.getBoundingClientRect().top < 0) {
             $(headerSmall).css('filter', 'opacity(95%)')
+            $(header).css('position', 'fixed')
             // $(botonMenuCont).css('filter', 'opacity(0%)')
-            botonMenuCont.animate ([
-                {
-                    filter : 'opacity(0%)',
-                    transform : 'scale(0)',
-                    pointerEvents : 'none'
-                }
-            ],
-                {
-                    duration : 500,
-                    fill : "forwards"
-                }
-            )
+            // botonMenuCont.animate ([
+            //     {
+            //         filter : 'opacity(0%)',
+            //         transform : 'scale(0)',
+            //         pointerEvents : 'none'
+            //     }
+            // ],
+            //     {
+            //         duration : 500,
+            //         fill : "forwards"
+            //     }
+            // )
         }
             else {
             $(headerSmall).css('filter', 'opacity(100%)');
+            $(header).css('position', 'relative')
             // $(botonMenuCont).css('filter', 'opacity(100%)');
-            botonMenuCont.animate ([
-                {
-                    filter : 'opacity(100%)',
-                    transform : 'scale(1)',
-                    pointerEvents : 'all'
-                }
-            ],
-                {
-                    duration : 300,
-                    fill : "forwards"
-                }
-            )
+            // botonMenuCont.animate ([
+            //     {
+            //         filter : 'opacity(100%)',
+            //         transform : 'scale(1)',
+            //         pointerEvents : 'all'
+            //     }
+            // ],
+            //     {
+            //         duration : 300,
+            //         fill : "forwards"
+            //     }
+            // )
         }
     })
+
+const botonBack = document.querySelector('.botonBack')  
+
+botonBack.addEventListener('click', ()=> {
+    $(header).css('position', 'relative')
+})
 
 
 
