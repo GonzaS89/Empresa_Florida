@@ -256,7 +256,7 @@ a:hover{
 
 @media (max-width: 1100px){
     .header{
-        height: 85px;
+        height: 100px;
     }
     #logo{
         width: 200px;
