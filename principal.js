@@ -204,7 +204,6 @@ const headerSmall = document.querySelector('.header_small')
     window.addEventListener('scroll', ()=> {
        if (portadaCont.getBoundingClientRect().top < 0) {
             $(headerSmall).css('filter', 'opacity(95%)')
-            $(header).css('position', 'fixed')
             // $(botonMenuCont).css('filter', 'opacity(0%)')
             // botonMenuCont.animate ([
             //     {
