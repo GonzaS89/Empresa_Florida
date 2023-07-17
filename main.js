@@ -83,7 +83,7 @@ let escritura = (string , seccion) => {
 
 const enlaces = document.querySelectorAll('.header__enlaces')
 
-var typed5 = new Typed('.textoPrueba', {
+var typed5 = new Typed('.portadaT', {
     strings: ['Bienvenidos a nuestra web'],
     typeSpeed: 100,
     backSpeed: 35,
