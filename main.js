@@ -50,30 +50,19 @@ const texto = document.querySelector('.textoPrueba')
 const cadena = document.querySelector('.textoCadena');
 
 
-let escritura = (string , seccion) => {
-    let arr = string.split('');
-    let i = 0;
-    let escribir = setInterval( function() {
-    seccion.textContent += arr[i];
-        i++;
-        if(i === arr.length) {
-        clearInterval(escribir)
-        };
-    }, 75);
-};
 
 // escritura('Lorem ipsum, dolor sit amet consectetur adipisicing elit',texto)
 
 const enlaces = document.querySelectorAll('.header__enlaces')
 
-var typed5 = new Typed('.portadaT', {
-    strings: ['Bienvenidos a nuestra web'],
-    typeSpeed: 50,
-    backSpeed: 100,
-    shuffle: false,
-    smartBackspace: true,
-    loop: true
-});
+// var typed5 = new Typed('.portadaT', {
+//     strings: ['Bienvenidos a nuestra web'],
+//     typeSpeed: 50,
+//     backSpeed: 100,
+//     shuffle: false,
+//     smartBackspace: true,
+//     loop: true
+// });
 
 
 // const servicio = document.querySelectorAll('.servicio')
@@ -84,42 +73,38 @@ var typed5 = new Typed('.portadaT', {
     
 // }
 
-const animacion2 = ()=> {
-    servicio[1].animate ([ 
-        {filter: 'opacity(1)'},
-        // {box-shadow: '20px 5px 15px rgba(0, 0, 0, 0.469)'},
-        {transform: 'translateY(-30px)'}
-], {
-  // opciones de sincronización
-  duration: 500,
-  delay: 750,
-  fill: "forwards"
- })
- setTimeout(() => {
-    servicio[1].style.boxShadow = '20px 5px 15px rgba(0, 0, 0, 0.469)'
-    servicio[1].style.filter = 'opacity(1)'
- }, 750);
+
  
-}
 
 // animacion2()
 
 const botonMenu = document.querySelector('.boton_menu-contenedor');
 const navegacionSmall = document.querySelector('.navegacion_small-contenedor');
 
-botonMenu.addEventListener('click', ()=> {
-    navegacionSmall.animate ([
-        {transform: 'translateY(0)'}
-    ], 
-    {duration : 200,
-    fill: "forwards"}
-    )
+const contenedorImagenes = document.querySelector('.portada_imagenes');
 
-    
+let contImgsLargo = contenedorImagenes.children.length;
+let contImgs = contenedorImagenes.children;
+let posicion = 0;
+console.log(contImgs[posicion])
+
+const moverFoto = ()=> {
+    contenedorImagenes.animate ( [
+        {
+            transform: 'translateX(-33.3%)'
+        }
+    ],
+        {
+            duration : 1000,
+            fill : 'forwards'
+        }
+    )
+    posicion++ ;
+}
+
+contenedorImagenes.addEventListener('click', ()=> {
     
 })
-
-
 
 
 
