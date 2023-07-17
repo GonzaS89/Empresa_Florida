@@ -103,7 +103,9 @@ const moverFoto = ()=> {
 }
 
 contenedorImagenes.addEventListener('click', ()=> {
-    
+    if(posicion < contImgsLargo) {
+        moverFoto()
+    }
 })
 
 
