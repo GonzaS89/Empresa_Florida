@@ -224,7 +224,7 @@ li{
     width: 75%;
     height: 100%;
     overflow: hidden;
-    filter: brightness(50%);
+    /* filter: brightness(50%); */
 }
 
 .portada_imagenes {
@@ -272,14 +272,26 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10%;
-    background-color: rgba(0, 0, 0, 0.11);
+    width: 15%;
+}
+
+.portada_botonAvanzar:hover,
+.portada_botonRetroceder:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+    transition: all .2s linear;
+}
+
+.portada_botonAvanzar:hover span,
+.portada_botonRetroceder:hover span{
+    filter: opacity(100%);
+    transition: all .2s linear;
 }
 
 .portada_botones span {
     font-size: 40px;
     color: white;
     font-family: var(--fuenteAlter3);
+    filter: opacity(0);
 }
 
 .portada_posicion-contenedor {
@@ -301,7 +313,8 @@ li{
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.199);
+    border: 2px solid grey;
+    background-color: var(--vacio);
 }
 
 
