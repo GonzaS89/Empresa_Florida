@@ -6,22 +6,6 @@ const tituloInfo = document.getElementById('titulo');
 const servicio = document.querySelectorAll('.servicio');
 const servicio2 = document.querySelectorAll('.servicio2')
 
-// window.addEventListener('scroll', ()=> {
-
-//     if(carousel.getBoundingClientRect().top < 0){
-
-//         servicio.forEach(element => {
-//             element.classList.add('servicioAnimacion')
-//             element.classList.add('servicioAnimacion')
-//         });
-
-//         servicio2.forEach(element => {
-//             element.classList.add('servicio2Animacion');
-//             element.classList.add('servicio2Animacion');
-//         });
-//     }
-// })
-
 const contacto1 = document.querySelector('.contacto')
 const contacto2 = document.querySelector('.contacto2')
 const nosotros = document.getElementById('nosotros')
@@ -39,18 +23,6 @@ window.addEventListener('scroll', ()=> {
 const galeria = document.querySelector('.galeria');
 const pantalla = document.querySelector('.pantalla_negra')
 const retrato = document.querySelector('.retrato');
-
-
-// galeria.addEventListener('click', (e) => {
-//     let dataFoto = e.target.attributes.src.nodeValue;
-//     $(pantalla).css('position', 'fixed');
-//     $(pantalla).css('display','flex')
-//     $(retrato).css('backgroundImage', `url(${dataFoto})`);
-//     $('.boton_cerrador').css('display', 'flex');
-//     retrato.classList.add('animacionRetrato')
-//     console.log(1)
-// });
-
 
 const textoCar = document.querySelector('.textoCar')
 
@@ -100,7 +72,7 @@ let estaVisible = false;
 const bajarMenu = ()=> {
     navSmall.animate ([
         {
-            marginTop: '0'
+            transform: 'translateY(0%)'
         }
     ],
         {
@@ -146,7 +118,7 @@ const bajarMenu = ()=> {
 const subirMenu = ()=> {
     navSmall.animate ([
         {
-            marginTop: '-150px'
+            transform: 'translateY(-100%)'
         }
     ],
         {
@@ -202,38 +174,11 @@ const portadaCont = document.querySelector('.portada-cont')
 const headerSmall = document.querySelector('.header_small')
 
     window.addEventListener('scroll', ()=> {
-       if (portadaCont.getBoundingClientRect().top < 0) {
-            $(headerSmall).css('filter', 'opacity(95%)')
-            // $(botonMenuCont).css('filter', 'opacity(0%)')
-            // botonMenuCont.animate ([
-            //     {
-            //         filter : 'opacity(0%)',
-            //         transform : 'scale(0)',
-            //         pointerEvents : 'none'
-            //     }
-            // ],
-            //     {
-            //         duration : 500,
-            //         fill : "forwards"
-            //     }
-            // )
+       if (headerSmall.getBoundingClientRect().bottom > 0) {
+            // $(header).css('position', 'fixed')
         }
             else {
-            $(headerSmall).css('filter', 'opacity(100%)');
             $(header).css('position', 'relative')
-            // $(botonMenuCont).css('filter', 'opacity(100%)');
-            // botonMenuCont.animate ([
-            //     {
-            //         filter : 'opacity(100%)',
-            //         transform : 'scale(1)',
-            //         pointerEvents : 'all'
-            //     }
-            // ],
-            //     {
-            //         duration : 300,
-            //         fill : "forwards"
-            //     }
-            // )
         }
     })
 
