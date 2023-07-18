@@ -90,9 +90,6 @@ const posiciones = document.querySelector('.portada_posicion');
 
 posiciones.children[posicion].style.backgroundColor = 'white'
 posiciones.children[posicion].style.transform = 'scale(1.3)';
-posiciones.children[posicion].style.width = '15px';
-posiciones.children[posicion].style.borderRadius = '5px'
-
 
 const adelantarFoto = ()=> {
 
