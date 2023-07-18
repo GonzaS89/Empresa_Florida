@@ -86,12 +86,28 @@ const contenedorImagenes = document.querySelector('.portada_imagenes');
 let contImgsLargo = contenedorImagenes.children.length;
 let contImgs = contenedorImagenes.children;
 let posicion = 0;
-console.log(contImgs[posicion])
+const posiciones = document.querySelector('.portada_posicion');
 
-const moverFoto = ()=> {
+posiciones.children[posicion].style.backgroundColor = 'white'
+posiciones.children[posicion].style.transform = 'scale(1.3)'
+
+
+const adelantarFoto = ()=> {
+
+    let porcentaje;
+
+    switch (posicion) {
+        case 0 :
+            porcentaje = -33.3;
+            break;
+        case 1 :
+            porcentaje = -66.6;    
+            break;   
+    }
     contenedorImagenes.animate ( [
         {
-            transform: 'translateX(-33.3%)'
+            transform: `translateX(${porcentaje}%)`
+
         }
     ],
         {
@@ -99,14 +115,62 @@ const moverFoto = ()=> {
             fill : 'forwards'
         }
     )
-    posicion++ ;
+    if(posicion < contImgsLargo - 1) posicion++;
 }
 
-contenedorImagenes.addEventListener('click', ()=> {
-    if(posicion < contImgsLargo) {
-        moverFoto()
+const retrocederFoto = ()=> {
+
+    let porcentaje;
+
+    switch (posicion) {
+        case 1 :
+            porcentaje = 0;
+            break;
+        case 2 :
+            porcentaje = -33.3;    
+            break;   
     }
+    contenedorImagenes.animate ( [
+        {
+            transform: `translateX(${porcentaje}%)`
+
+        }
+    ],
+        {
+            duration : 1000,
+            fill : 'forwards'
+        }
+    )
+    if(posicion > 0) posicion--;	
+}
+
+const botonRetroceder = document.querySelector('.portada_botonRetroceder');
+const botonAvanzar = document.querySelector('.portada_botonAvanzar');
+
+
+
+
+botonRetroceder.addEventListener('click', ()=> {
+    retrocederFoto();
+    posiciones.children[posicion].style.backgroundColor = 'white';
+    posiciones.children[posicion].style.transform = 'scale(1.3)'
+    posiciones.children[posicion+1].style.backgroundColor = 'var(--vacio)';
+    posiciones.children[posicion+1].style.transform = 'scale(1)'
+
 })
+
+botonAvanzar.addEventListener('click', ()=> {
+    adelantarFoto();
+    posiciones.children[posicion].style.backgroundColor = 'white';
+    posiciones.children[posicion].style.transform = 'scale(1.3)'
+    posiciones.children[posicion-1].style.backgroundColor = 'var(--vacio)';
+    posiciones.children[posicion-1].style.transform = 'scale(1)'
+    
+})
+
+
+
+
 
 
 
