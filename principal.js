@@ -56,9 +56,6 @@ subGaleria.addEventListener('click', (e)=> {
     $('.fotoAmpliada').css('backgroundImage', `url(${foto})`)
 })
 
-const tiradefotos = document.querySelector('.galeria ul')
-const botonGaleria = document.querySelector('.botones span')
-
 
 const botonMenuCont = document.querySelector('.boton-menu_contenedor');
 const botonMenu = document.querySelector('.boton-menu');
@@ -174,11 +171,14 @@ const portadaCont = document.querySelector('.portada-cont')
 const headerSmall = document.querySelector('.header_small')
 
     window.addEventListener('scroll', ()=> {
-       if (headerSmall.getBoundingClientRect().bottom > 0) {
-            // $(header).css('position', 'fixed')
+       if (header.getBoundingClientRect().bottom < 0) {
+            $(headerSmall).css('position', 'fixed')
+            $(navSmall).css('position', 'fixed')
+
         }
-            else {
-            $(header).css('position', 'relative')
+        else {
+            $(headerSmall).css('position', 'unset')
+            $(navSmall).css('position', 'unset')
         }
     })
 

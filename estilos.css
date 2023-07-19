@@ -64,7 +64,6 @@ li{
     background: var(--fondoGrisLinear);
     height: 110px;
     width: 100%;
-    /* position: relative; */
     box-shadow: 0px 0px 20px rgb(49, 44, 24);
 
 }
@@ -178,8 +177,7 @@ a:hover{
     height: 150px;
     transform: translateY(-100%);
     background:var(--fondoGrisLinear3);
-    z-index: 15;
-    /* position: fixed; */
+    z-index: 19;
 }
 
 .navegacion-small {
