@@ -224,6 +224,8 @@ li{
     width: 75%;
     height: 100%;
     overflow: hidden;
+    min-width: 250px;
+    max-width: 400px;
     /* filter: brightness(50%); */
 }
 
@@ -233,6 +235,11 @@ li{
     width: 300%;
     height: 100%;
     animation: mover 30s linear infinite;
+}
+
+.portada_imagenes img {
+    min-width: 250px;
+    max-width: 400px;
 }
 
 
