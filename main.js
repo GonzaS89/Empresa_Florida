@@ -55,14 +55,14 @@ const cadena = document.querySelector('.textoCadena');
 
 const enlaces = document.querySelectorAll('.header__enlaces')
 
-// var typed5 = new Typed('.portadaT', {
-//     strings: ['Bienvenidos a nuestra web'],
-//     typeSpeed: 50,
-//     backSpeed: 100,
-//     shuffle: false,
-//     smartBackspace: true,
-//     loop: true
-// });
+var typed5 = new Typed('.textoImgCont span', {
+    strings: ['Bienvenidos a nuestra web'],
+    typeSpeed: 50,
+    backSpeed: 100,
+    shuffle: false,
+    smartBackspace: true,
+    loop: false
+});
 
 
 // const servicio = document.querySelectorAll('.servicio')
@@ -112,6 +112,7 @@ const adelantarFoto = ()=> {
         {
             duration : 1000,
             fill : 'forwards'
+            
         }
     )
     if(posicion < contImgsLargo - 1) posicion++;
