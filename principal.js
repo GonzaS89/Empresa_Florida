@@ -174,7 +174,7 @@ const headerSmall = document.querySelector('.header_small')
        if (header.getBoundingClientRect().bottom < 0) {
             $(headerSmall).css('position', 'fixed')
             $(navSmall).css('position', 'fixed')
-            // $(navSmall).css('marginTop', '80px')
+            $(navSmall).css('marginTop', '80px')
 
         }
         else {

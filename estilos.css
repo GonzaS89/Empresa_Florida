@@ -176,7 +176,7 @@ a:hover{
     display: none;
     width: 100%;
     height: 150px;
-    margin-top: -150px;
+    transform: translateY(-100%);
     background:var(--fondoGrisLinear3);
     z-index: 15;
 }
