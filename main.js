@@ -57,11 +57,20 @@ const enlaces = document.querySelectorAll('.header__enlaces')
 
 var typed5 = new Typed('.textoImgCont span', {
     strings: ['Bienvenidos a nuestra web'],
-    typeSpeed: 50,
-    backSpeed: 100,
+    typeSpeed: 75,
+    backSpeed: 30,
     shuffle: false,
     smartBackspace: true,
-    loop: false
+    loop: true
+});
+
+var typed6 = new Typed('.textoImgCont2 span', {
+    strings: ['Aqui podras buscar lo que te interesa'],
+    typeSpeed: 75,
+    backSpeed: 30,
+    shuffle: false,
+    smartBackspace: true,
+    loop: true
 });
 
 
