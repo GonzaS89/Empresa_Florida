@@ -395,7 +395,7 @@ a:hover{
     padding: 30px;
 }
 
-@media (min-width: 1401px){
+@media (min-width: 1201px){
     .servicios li:nth-child(5){
         grid-column: 2/3;
     }
@@ -671,26 +671,26 @@ a:hover{
         padding: 15px;
     }
     #titulo {
-        font-size: 25px;
+        font-size: 23px;
     }
     #nosotros-texto{
-        font-size: 18px;
+        font-size: 23px;
     }
     
     #nosotros-texto2{
-        font-size: 18px;
+        font-size: 23px;
     }
 
     .nosotros-lista li {
-        font-size: 18px;
+        font-size: 23px;
     }
 
     .nosotros-lista li  strong {
-        font-size: 18px;
+        font-size: 23px;
     }
 
     #nosotros-subtitulo {
-        font-size: 20px;
+        font-size: 30px;
     }
 }
 
@@ -866,8 +866,12 @@ GALERIA */
 }
 
 @media (max-width:1100px) {
-    .galeria ul {
+    /* .galeria ul {
         grid-template-columns: repeat(4, 1fr);
+    } */
+    .galeria li{
+        width: 150px;
+        height: 75px;
     }
 }
 
@@ -1244,7 +1248,7 @@ iframe{
         gap: 5px;
     }
     .footer_der-item p{
-        font-size: 13px;
+        font-size: 15px;
     }
 }
 
