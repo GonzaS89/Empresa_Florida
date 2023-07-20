@@ -199,14 +199,18 @@ const animacionContacto = (time, delay, i)=> {
     ],
         {duration: time,
             delay: delay,
-        iterations: '2'}
+        iterations: '1'}
     )
 }
-
+setInterval(() => {
 animacionContacto(1000,0,0)
 animacionContacto(1000,250,1)
 animacionContacto(1000,500,2)
 animacionContacto(1000,750,3)
+
+}, 3000);
+
+
 
 
 
