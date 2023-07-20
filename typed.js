@@ -1,12 +1,12 @@
-let typed = new Typed('.textoPor', {
-        strings: ['Bienvenidos a nuestra web'],
-        typeSpeed: 50,
-        backSpeed: 25,
-        cursorChar: '.',
-        shuffle: false,
-        smartBackspace: true,
-        loop: true
-});
+// let typed = new Typed('.textoPor', {
+//         strings: ['Bienvenidos a nuestra web'],
+//         typeSpeed: 50,
+//         backSpeed: 25,
+//         cursorChar: '.',
+//         shuffle: false,
+//         smartBackspace: true,
+//         loop: true
+// });
 
 
 // let typed2 = new Typed('.footer-txt1', {
