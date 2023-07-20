@@ -174,11 +174,13 @@ const headerSmall = document.querySelector('.header_small')
        if (header.getBoundingClientRect().bottom < 0) {
             $(headerSmall).css('position', 'fixed')
             $(navSmall).css('position', 'fixed')
+            $(navSmall).css('marginTop', '90px')
 
         }
         else {
             $(headerSmall).css('position', 'unset')
             $(navSmall).css('position', 'unset')
+            $(navSmall).css('marginTop', '0px')
         }
     })
 
