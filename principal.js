@@ -174,7 +174,7 @@ const headerSmall = document.querySelector('.header_small')
        if (header.getBoundingClientRect().bottom < 0) {
             $(headerSmall).css('position', 'fixed')
             $(navSmall).css('position', 'fixed')
-            $(navSmall).css('marginTop', '80px')
+            // $(navSmall).css('marginTop', '80px')
 
         }
         else {
@@ -189,6 +189,27 @@ const botonBack = document.querySelector('.botonBack')
 botonBack.addEventListener('click', ()=> {
     $(header).css('position', 'relative')
 })
+
+const footerContacto = document.querySelectorAll('.footer_der-item_small img')
+console.log(footerContacto)
+
+const animacionContacto = (time, delay, i)=> {
+    footerContacto[i].animate ([
+        {transform:'scale(1.2)'}
+    ],
+        {duration: time,
+            delay: delay,
+        iterations: '2'}
+    )
+}
+
+animacionContacto(1000,0,0)
+animacionContacto(1000,250,1)
+animacionContacto(1000,500,2)
+animacionContacto(1000,750,3)
+
+
+
 
 
 
