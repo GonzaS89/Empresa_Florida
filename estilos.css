@@ -320,27 +320,36 @@ a:hover{
     height: 100vh;
 }
 
+.portada-imagenes-contenedor {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 
+.portada-imagenes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300%;
+    height: 100%;
+    animation: a 5s;
+    
+}
 
+@keyframes a {
+    
+}
 
+.portada-imagen {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
 
-
-
-
-
-
-/* @keyframes a {
-    100% {
-        transform: translateX(-100%);
-    }
-} */
-
-
-
-
-
-
-
+.portada-imagen img {
+    width: 100%;
+    /* filter: brightness(50%) blur(1px); */
+}
 
 
 .textoPortada{
