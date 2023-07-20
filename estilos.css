@@ -332,12 +332,23 @@ a:hover{
     align-items: center;
     width: 300%;
     height: 100%;
-    animation: a 5s;
+    animation: a 20s ease-in-out 1s;
     
 }
 
 @keyframes a {
-    
+    25% {
+        transform: translateX(-33.3%);
+    }
+    50% {
+        transform: translateX(-66.6%);
+    }
+    75%{
+        transform: translateX(-33.3%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .portada-imagen {
@@ -348,7 +359,7 @@ a:hover{
 
 .portada-imagen img {
     width: 100%;
-    /* filter: brightness(50%) blur(1px); */
+    filter: brightness(90%);
 }
 
 
