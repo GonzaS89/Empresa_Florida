@@ -59,7 +59,7 @@ const bajarMenu = ()=> {
         }
     ],
         {
-            duration:500,
+            duration:400,
             fill : 'forwards'
         }
     )
@@ -79,7 +79,7 @@ const bajarMenu = ()=> {
         }
     ],
         {
-            duration: 500,
+            duration: 400,
             fill:'forwards'
         }
     )
@@ -89,7 +89,7 @@ const bajarMenu = ()=> {
         }
     ],
         {
-            duration: 500,
+            duration: 400,
             fill:'forwards'
         }
     )
