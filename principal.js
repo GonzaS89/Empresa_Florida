@@ -211,9 +211,6 @@ animacionContacto(1000,750,3)
 }, 3000);
 
 
-const portadaImg = document.querySelector('.portada-img img');
-const ancho = body.clientWidth;
-
 // if (ancho > 900) portadaImg.src = 'Imagenes/bondi3.jpg'
 
 
