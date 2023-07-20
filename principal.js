@@ -167,6 +167,7 @@ navSmall.addEventListener('click', ()=> {
     subirMenu();
 })
 
+
 const portadaCont = document.querySelector('.portada-cont')
 const headerSmall = document.querySelector('.header_small')
 
@@ -191,7 +192,6 @@ botonBack.addEventListener('click', ()=> {
 })
 
 const footerContacto = document.querySelectorAll('.footer_der-item_small img')
-console.log(footerContacto)
 
 const animacionContacto = (time, delay, i)=> {
     footerContacto[i].animate ([
