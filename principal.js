@@ -24,20 +24,6 @@ const galeria = document.querySelector('.galeria');
 const pantalla = document.querySelector('.pantalla_negra')
 const retrato = document.querySelector('.retrato');
 
-const textoCar = document.querySelector('.textoCar')
-
-let escritura = string => {
-    let array = string.split('');
-    let i = 0;
-    let escribir = setInterval( function() {
-        textoCar.textContent += array[i];
-        i++;
-        if(i === array.length){
-        clearInterval(escribir);
-        }
-    },150)
-    console.log(array)
-}
 
 const infoCont = document.querySelector('.info-cont')
 const barrita = document.querySelector('.barrita')
@@ -176,6 +162,7 @@ const headerSmall = document.querySelector('.header_small')
             $(headerSmall).css('position', 'fixed')
             $(navSmall).css('position', 'fixed')
             $(navSmall).css('marginTop', '80px')
+            
 
         }
         else {
