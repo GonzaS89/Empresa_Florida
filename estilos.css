@@ -501,6 +501,12 @@ a:hover{
     background-position: center center;
     background-repeat: no-repeat;
 }
+.icono-imagen6 {
+    background-image: url(Imagenes/redes.png);
+    background-size: 75%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
 
 
 @media (max-width: 1400px) {
@@ -560,8 +566,8 @@ a:hover{
         padding: 0 10px;
     }
     .servicio-icono {
-        width:45px;
-        height:45px;
+        width:50px;
+        height:50px;
     }
 }
 
