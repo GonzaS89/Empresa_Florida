@@ -359,7 +359,7 @@ a:hover{
 
 .portada-imagen img {
     width: 100%;
-    filter: brightness(90%);
+    filter: brightness(75%) blur(1px);
 }
 
 
