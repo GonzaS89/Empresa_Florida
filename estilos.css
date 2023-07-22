@@ -338,7 +338,7 @@ a:hover{
     align-items: center;
     width: 300%;
     height: 100%;
-    animation: a 20s ease-in-out 1s infinite;
+    animation: a 60s ease-in-out 1s infinite;
     
 }
 
