@@ -338,7 +338,7 @@ a:hover{
     align-items: center;
     width: 300%;
     height: 100%;
-    animation: a 20s ease-in-out 1s;
+    animation: a 20s ease-in-out 1s infinite;
     
 }
 
@@ -365,7 +365,7 @@ a:hover{
 
 .portada-imagen img {
     width: 100%;
-    filter: brightness(75%) blur(1px);
+    filter: brightness(60%) blur(1px);
 }
 
 
@@ -776,22 +776,50 @@ GALERIA */
     align-items: center;
     justify-content: center;
     background-color: var(--fondoAzul);
+    height: 100%;
 }
 
 .fotoAmpliada_cont {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 90%;
     height: 500px;
-    margin-bottom: 50px;
+    margin: 50px 0;
+}
+
+.fotoAmpliadaFondo {
+    width: 110%;
+    height: 120%;
+    background-size: 20%;
+    filter: brightness(25%) blur(2px);
+    background-image: url(./Imagenes/recuerdos5.jpg);
 }
 
 .fotoAmpliada {
-    width: 100%;
-    height: 100%;
+    display: flex;
+    position: absolute;
+    width: 90%;
+    height: 50%;
    background-image: url(./Imagenes/recuerdos5.jpg);
    background-size: contain;
    background-repeat: no-repeat;
    background-position: center;
+}
+
+.animacionFotoAmpliada {
+    animation: entradaFoto .5s ease-in-out forwards;
+}
+
+@keyframes entradaFoto {
+    0% {
+        filter: opacity(0);
+        transform: scale(.9);
+    }
+    100% {
+        filter: opacity(100);
+        transform: scale(1.01);
+    }
 }
 .galeria-subcont {
     display: flex;
@@ -924,6 +952,10 @@ GALERIA */
     .fotoAmpliada_cont {
         margin-bottom: 10px;
         height: 300px;
+    }
+    .fotoAmpliadaFondo {
+        height: 110%;
+        background-size: 50%;
     }
     .galeria ul {
         grid-template-columns: repeat(3, 1fr);
@@ -1219,22 +1251,20 @@ iframe{
     height: 45px;
     width: 45px;
     padding:2.5px 5px;
-    animation: resaltarMedio 2s linear infinite;
+
+    /* animation: entrarIcono 1s linear infinite; */
 
 }
 
-/* @keyframes resaltarMedio {
-    0% {
-        transform: scale(1.2);
-    }
-    50% {
-        transform: scale(1);
+@keyframes entrarIcono {
+    0%{
+        transform: translateX(-300%);
     }
     100% {
-        transform: scale(1.1);
+        transform: translateX(0);
     }
 
-} */
+}
 
 .footer_der-item img {
     height: 100%;

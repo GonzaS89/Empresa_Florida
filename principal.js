@@ -36,10 +36,22 @@ const definirAnchoCarousel = ()=> {
 
 definirAnchoCarousel();
 
+const fotoAmpliada =  document.querySelector('.fotoAmpliada');
+const fotoAmpliadaCont = document.querySelector('.fotoAmpliada_cont')
+const fotoAmpliadaFondo = document.querySelector('.fotoAmpliadaFondo')
+
+
 const subGaleria = document.querySelector('.galeria-subcont ul')
 subGaleria.addEventListener('click', (e)=> {
     const foto = e.target.attributes.src.value
     $('.fotoAmpliada').css('backgroundImage', `url(${foto})`)
+    fotoAmpliada.classList.add('animacionFotoAmpliada')
+    setTimeout(() => {
+        fotoAmpliada.classList.remove('animacionFotoAmpliada')
+    }, 700);
+    $(fotoAmpliadaFondo).css('backgroundImage', `url(${foto})`)
+    // $(fotoAmpliadaCont).css('filter', 'blur(1px)')
+
 })
 
 
@@ -162,8 +174,6 @@ const headerSmall = document.querySelector('.header_small')
             $(headerSmall).css('position', 'fixed')
             $(navSmall).css('position', 'fixed')
             $(navSmall).css('marginTop', '80px')
-            
-
         }
         else {
             $(headerSmall).css('position', 'unset')
@@ -182,7 +192,17 @@ const footerContacto = document.querySelectorAll('.footer_der-item_small img')
 
 const animacionContacto = (time, delay, i)=> {
     footerContacto[i].animate ([
-        {transform:'scale(1.2)'}
+        {transform:'scale(1.3)'}
+    ],
+        {duration: time,
+            delay: delay,
+        iterations: '1'}
+    )
+}
+
+const entradaIconos = (time, delay, i) => {
+    footerContacto[i].animate ([
+        {transform:'translateX(100%)'}
     ],
         {duration: time,
             delay: delay,
@@ -194,8 +214,8 @@ animacionContacto(1000,0,0)
 animacionContacto(1000,250,1)
 animacionContacto(1000,500,2)
 animacionContacto(1000,750,3)
-
 }, 3000);
+
 
 
 // if (ancho > 900) portadaImg.src = 'Imagenes/bondi3.jpg'
