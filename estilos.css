@@ -802,7 +802,7 @@ GALERIA */
     width: 110%;
     height: 120%;
     background-size: 15%;
-    filter: brightness(25%) blur(1px);
+    filter: brightness(15%);
     background-image: url(./Imagenes/recuerdos5.jpg);
 }
 
@@ -810,7 +810,7 @@ GALERIA */
     display: flex;
     position: absolute;
     width: 80%;
-    height: 80%;
+    height: 60%;
    background-image: url(./Imagenes/recuerdos5.jpg);
    background-size: contain;
    background-repeat: no-repeat;
