@@ -1020,7 +1020,7 @@ GALERIA */
 }
 
 .contacto1Animacion {
-    animation: entrarContacto 2s ease-in-out forwards;
+    animation: entrarContacto 1s ease-in-out forwards;
 }
 
 .contacto2 {
@@ -1035,7 +1035,7 @@ GALERIA */
 }
 
 .contacto2Animacion {
-    animation: entrarContacto2 2s ease-in-out forwards;
+    animation: entrarContacto2 1s ease-in-out forwards;
 }
 
 @keyframes entrarContacto{
