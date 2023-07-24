@@ -190,32 +190,38 @@ botonBack.addEventListener('click', ()=> {
 
 const footerContacto = document.querySelectorAll('.footer_der-item_small img')
 
-const animacionContacto = (time, delay, i)=> {
+const animacionContacto = (delay, i)=> {
     footerContacto[i].animate ([
-        {transform:'scale(1.3)'}
+        {transform:'scale(1.5)'},
+        {transform:'traslateX(-10px)'},
     ],
-        {duration: time,
+        {duration: 1000,
             delay: delay,
-        iterations: '1'}
+       iterations: '1'}
     )
 }
 
-const entradaIconos = (time, delay, i) => {
+const boom = (time,delay,i)=> {
     footerContacto[i].animate ([
-        {transform:'translateX(100%)'}
+        {outline:'0px solid white'},
+        {outline:'15px solid transparent'}
     ],
         {duration: time,
-            delay: delay,
-        iterations: '1'}
+        delay: delay,
+        iterations : 1}
     )
 }
+
 setInterval(() => {
-animacionContacto(1000,0,0)
-animacionContacto(1000,250,1)
-animacionContacto(1000,500,2)
-animacionContacto(1000,750,3)
+animacionContacto(0,0)
+animacionContacto(250,1)
+animacionContacto(500,2)
+animacionContacto(750,3)
+boom(500,0,0)
+boom(500,250,1)
+boom(500,500,2)
+boom(500,750,3)
 }, 3000);
-
 
 
 // if (ancho > 900) portadaImg.src = 'Imagenes/bondi3.jpg'

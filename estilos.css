@@ -775,7 +775,7 @@ GALERIA */
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--fondoAzul);
+    background-color: rgb(49, 1, 104);
     height: 100%;
 }
 
@@ -791,20 +791,21 @@ GALERIA */
 .fotoAmpliadaFondo {
     width: 110%;
     height: 120%;
-    background-size: 20%;
-    filter: brightness(25%) blur(2px);
+    background-size: 15%;
+    filter: brightness(25%) blur(1px);
     background-image: url(./Imagenes/recuerdos5.jpg);
 }
 
 .fotoAmpliada {
     display: flex;
     position: absolute;
-    width: 90%;
-    height: 50%;
+    width: 80%;
+    height: 80%;
    background-image: url(./Imagenes/recuerdos5.jpg);
    background-size: contain;
    background-repeat: no-repeat;
    background-position: center;
+   filter: drop-shadow(5px 1px 3px white);
 }
 
 .animacionFotoAmpliada {
@@ -956,6 +957,9 @@ GALERIA */
     .fotoAmpliadaFondo {
         height: 110%;
         background-size: 50%;
+    }
+    .fotoAmpliada {
+        height: 50%;
     }
     .galeria ul {
         grid-template-columns: repeat(3, 1fr);
@@ -1251,25 +1255,12 @@ iframe{
     height: 45px;
     width: 45px;
     padding:2.5px 5px;
-
-    /* animation: entrarIcono 1s linear infinite; */
-
-}
-
-@keyframes entrarIcono {
-    0%{
-        transform: translateX(-300%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-
+    
 }
 
 .footer_der-item img {
     height: 100%;
 }
-
 
 .footer_der-item_small img {
     display: flex;
@@ -1278,6 +1269,20 @@ iframe{
     width: 100%;
     flex-basis: 100%;
     border-radius: 50%;
+    
+}
+
+.animacionIcono {
+    animation: expansion 1s ease-out infinite;
+}
+
+@keyframes expansion {
+    0%{
+        outline: 0px solid white;
+    }
+    100% {
+        outline: 20px solid transparent;
+    }
 }
 
 .footer_der-item p {
