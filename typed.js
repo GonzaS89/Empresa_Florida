@@ -1,12 +1,16 @@
-// let typed = new Typed('.textoPor', {
-//         strings: ['Bienvenidos a nuestra web'],
+// setTimeout(() => {
+//     let typed = new Typed('.textoPor', {
+//         strings: ['Bienvenidos a nuestra web','Aqui podras estar al tantos de todas nuestras novedades', ''],
 //         typeSpeed: 50,
-//         backSpeed: 25,
+//         backSpeed: 50,
 //         cursorChar: '.',
 //         shuffle: false,
 //         smartBackspace: true,
 //         loop: true
 // });
+// }, 150);
+
+
 
 
 // let typed2 = new Typed('.footer-txt1', {

@@ -365,7 +365,7 @@ a:hover{
 
 .portada-imagen img {
     width: 100%;
-    filter: brightness(60%) blur(1px);
+    filter: brightness(75%);
 }
 
 
@@ -377,6 +377,16 @@ a:hover{
     display: flex;
     align-items: center;
     justify-content:center;
+    animation: haha 1s linear forwards;
+}
+
+@keyframes haha {
+    0% {
+        transform: scale(0);
+    }
+    100% {  
+        transform: scale(1);
+    }
 }
 
 .textoPor{
@@ -417,13 +427,13 @@ a:hover{
 
 @media (max-width: 480px){
     .portada-cont {
-        height: 50vh;
+        height: 45vh;
     }
     .textoPortada {
         height: 50vh;
     }
     .textoPor {
-        font-size: 35px;
+        font-size: 30px;
     }
 }
 
