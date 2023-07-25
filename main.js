@@ -20,9 +20,6 @@ const boton = document.querySelector('.boton');
 
 const opcionbase = selector[0]
 const opcionbase2 = selector2[0]
-const florida = selector[1];
-const xposse = selector[2]
-const sanM = selector[3];
 let valorSeleccionado;
 let valorSeleccionado2;
 let valores = [];
