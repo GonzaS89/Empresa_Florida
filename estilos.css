@@ -444,7 +444,7 @@ a:hover{
     .textoPortada {
         height: 25%;
         filter:opacity(0);
-        animation: entraSombra .5s linear forwards 1s;
+        animation: entraSombra 1s linear forwards 1s;
     }
     .textoPor {
         font-size: 30px;
