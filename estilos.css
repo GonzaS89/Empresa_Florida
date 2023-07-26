@@ -368,14 +368,14 @@ a:hover{
 
 .portada-imagen img {
     width: 100%;
-    /* animation: difuminarImgs 1s linear .5s forwards; */
+    animation: difuminarImgs 1s linear forwards;
     /* filter: brightness(65%) blur(1px); */
 }
 
 @keyframes difuminarImgs {
-    /* 100% {
-        filter: blur(.5px);
-    } */
+    100% {
+        filter: blur(1px);
+    }
 }
 
 
@@ -384,7 +384,7 @@ a:hover{
     z-index: 0;
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content:center;
     overflow: hidden;
     /* animation: haha 1s linear forwards; */
@@ -402,11 +402,33 @@ a:hover{
 
 .textoPor{
     display: flex;
+    flex-direction: column;
     justify-content:center;
+    align-items: center;
     text-align: center;
     font-size:100px;
     color: white;
     font-family: var(--fuenteTer);
+    height: 30%;
+    width: 100%;
+    margin-bottom: 30px;
+    font-weight: bold;
+    background-color: rgba(23, 21, 21, 0.056);
+}
+
+.textoPor p {
+    width: 50%;
+    color: white;
+    padding: 30px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 1px black
+}   
+
+.textoPor button {
+    margin-top: 20px;
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 10px;
 }
 
 
@@ -442,12 +464,11 @@ a:hover{
         overflow: hidden;
     }
     .textoPortada {
-    
         filter:opacity(0);
-        animation: entraSombra .75s linear forwards 1s;
+        animation: entraSombra .75s linear forwards .5s;
     }
     .textoPor {
-        font-size: 30px;
+        font-size: 20px;
     }
 }
 
