@@ -324,12 +324,15 @@ a:hover{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: black;
 }
 
 .portada-imagenes-contenedor {
     width: 100%;
+    max-width: 1500px;
     height: 100%;
     overflow: hidden;
+    
 }
 
 .portada-imagenes {
@@ -473,7 +476,7 @@ a:hover{
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    flex-basis: 20%;
+    flex-basis: 30%;
     justify-self: center;
     text-align: center;
     text-transform: uppercase;
@@ -488,7 +491,7 @@ a:hover{
 #servicio-texto {
     display: flex;
     align-items: center;
-    flex-basis: 80%;
+    flex-basis: 70%;
     /* justify-self: center; */
     font-weight: bold;
     color: rgb(51, 43, 43);
@@ -608,11 +611,13 @@ a:hover{
         height: 210px;
     }
     #servicio-titulo {
-        font-size:14px
+        font-size:14px;
+        flex-basis: 20%;
     }
     #servicio-texto p{
         font-size: 14px;
         padding: 0 10px;
+        flex-basis: 80%;
     }
     .servicio-icono {
         width:50px;
@@ -802,7 +807,7 @@ GALERIA */
     width: 110%;
     height: 120%;
     background-size: 15%;
-    filter: brightness(25%) blur(1px);
+    filter: brightness(15%);
     background-image: url(./Imagenes/recuerdos5.jpg);
 }
 
@@ -810,7 +815,7 @@ GALERIA */
     display: flex;
     position: absolute;
     width: 80%;
-    height: 80%;
+    height: 60%;
    background-image: url(./Imagenes/recuerdos5.jpg);
    background-size: contain;
    background-repeat: no-repeat;
@@ -1015,6 +1020,7 @@ GALERIA */
     background-color: var(--fondoAzul);
     height: 300px;
     width: 75%;
+    max-width: 1100px;
     /* border-top-right-radius: 250px 250px;
     border-top-left-radius: 0px 0px; */
 }
@@ -1029,6 +1035,7 @@ GALERIA */
     background-color: var(--fondoAzul);
     height: 300px;
     width: 75%;
+    max-width: 1100px;
     /* border-top-right-radius: 250px 250px;
     border-top-left-radius: 0px 0px; */
     
