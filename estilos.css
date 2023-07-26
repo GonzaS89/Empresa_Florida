@@ -374,7 +374,7 @@ a:hover{
 
 @keyframes difuminarImgs {
     100% {
-        filter: blur(2px);
+        filter: blur(1px);
     }
 }
 
@@ -442,7 +442,7 @@ a:hover{
         overflow: hidden;
     }
     .textoPortada {
-        height: 25%;
+    
         filter:opacity(0);
         animation: entraSombra 1s linear forwards 1s;
     }
@@ -452,8 +452,12 @@ a:hover{
 }
 
 @keyframes entraSombra {
+    0%{
+        height: 0%;
+    }
     100% {
         filter: opacity(1);
+        height: 100%;
     }
 }
 
