@@ -322,7 +322,7 @@ a:hover{
 .portada-cont {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     height: 100vh;
     background-color: black;
 }
@@ -368,19 +368,27 @@ a:hover{
 
 .portada-imagen img {
     width: 100%;
+    animation: difuminarImgs 1s linear 1s forwards;
     /* filter: brightness(65%) blur(1px); */
+}
+
+@keyframes difuminarImgs {
+    100% {
+        filter: blur(2px);
+    }
 }
 
 
 .textoPortada{
     position: absolute;
     z-index: 0;
-    width: 50%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content:center;
+    overflow: hidden;
     /* animation: haha 1s linear forwards; */
-    /* background-color: red; */
+    background-color: rgba(30, 22, 22, 0.502);
 }
 
 @keyframes haha {
@@ -431,12 +439,21 @@ a:hover{
 @media (max-width: 480px){
     .portada-cont {
         height: 45vh;
+        overflow: hidden;
     }
     .textoPortada {
-        height: 50vh;
+        height: 25%;
+        filter:opacity(0);
+        animation: entraSombra .5s linear forwards 1s;
     }
     .textoPor {
         font-size: 30px;
+    }
+}
+
+@keyframes entraSombra {
+    100% {
+        filter: opacity(1);
     }
 }
 
