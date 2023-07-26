@@ -338,7 +338,7 @@ a:hover{
     align-items: center;
     width: 300%;
     height: 100%;
-    animation: a 60s ease-in-out 1s infinite;
+    /* animation: a 60s ease-in-out 1s infinite; */
     
 }
 
@@ -365,7 +365,7 @@ a:hover{
 
 .portada-imagen img {
     width: 100%;
-    filter: brightness(75%);
+    filter: brightness(65%) blur(1px);
 }
 
 
