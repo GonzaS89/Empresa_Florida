@@ -368,7 +368,7 @@ a:hover{
 
 .portada-imagen img {
     width: 100%;
-    animation: difuminarImgs .5s linear 1.5s forwards;
+    animation: difuminarImgs 1s linear 1s forwards;
     /* filter: brightness(65%) blur(1px); */
 }
 
