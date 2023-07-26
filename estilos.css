@@ -368,15 +368,11 @@ a:hover{
 
 .portada-imagen img {
     width: 100%;
-    animation: difuminarImgs 1s linear forwards;
+    filter: blur(1px);
     /* filter: brightness(65%) blur(1px); */
 }
 
-@keyframes difuminarImgs {
-    100% {
-        filter: blur(1px);
-    }
-}
+
 
 
 .textoPortada{
@@ -465,8 +461,8 @@ a:hover{
     }
     .textoPortada {
         height: 100%;
-        filter:opacity(0);
-        animation: entraSombra .75s linear forwards .5s;
+
+        /* animation: entraSombra .75s linear forwards .5s; */
     }
     .textoPor {
         font-size: 20px;
