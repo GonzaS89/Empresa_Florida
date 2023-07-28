@@ -170,6 +170,7 @@ const portadaCont = document.querySelector('.portada-cont')
 const headerSmall = document.querySelector('.header_small')
 
     window.addEventListener('scroll', ()=> {
+        navSmall.classList.add('filtroNavSmall1')
        if (header.getBoundingClientRect().bottom < 0) {
             $(headerSmall).css('transform', 'translateY(-100%)')
             $(headerSmall).css('position', 'fixed')
@@ -178,7 +179,7 @@ const headerSmall = document.querySelector('.header_small')
             $(navSmall).css('position', 'fixed')
             $(navSmall).css('marginTop', '80px')
             setTimeout(() => {
-               navSmall.classList.add('filtroNavSmall')
+               navSmall.classList.add('filtroNavSmall2')
             }, 350);
         }
         else {
@@ -187,7 +188,8 @@ const headerSmall = document.querySelector('.header_small')
             headerSmall.classList.remove('bajarHeader')
             $(navSmall).css('position', 'unset')
             $(navSmall).css('marginTop', '0px')
-            navSmall.classList.remove('filtroNavSmall')
+            navSmall.classList.remove('filtroNavSmall1')
+            navSmall.classList.remove('filtroNavSmall2')
         }
     })
 
