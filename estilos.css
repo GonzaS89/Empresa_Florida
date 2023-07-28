@@ -84,7 +84,7 @@ li{
 }
 
 .bajarHeader {
-    animation: bajarHeader .75s ease-in forwards;
+    animation: bajarHeader .35s ease-in forwards;
 }
 
 @keyframes bajarHeader {
