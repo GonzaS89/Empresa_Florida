@@ -176,7 +176,10 @@ const headerSmall = document.querySelector('.header_small')
             headerSmall.classList.add('bajarHeader')
             $(navSmall).css('transform', 'translateY(-100%)')
             $(navSmall).css('position', 'fixed')
-            $(navSmall).css('marginTop', '-80px')
+            $(navSmall).css('marginTop', '80px')
+            setTimeout(() => {
+               navSmall.classList.add('filtroNavSmall')
+            }, 350);
         }
         else {
             $(headerSmall).css('position', 'unset')
@@ -184,6 +187,7 @@ const headerSmall = document.querySelector('.header_small')
             headerSmall.classList.remove('bajarHeader')
             $(navSmall).css('position', 'unset')
             $(navSmall).css('marginTop', '0px')
+            navSmall.classList.remove('filtroNavSmall')
         }
     })
 

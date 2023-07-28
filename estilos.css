@@ -195,6 +195,11 @@ a:hover{
     transform: translateY(-100%);
     background:var(--fondoGrisLinear3);
     z-index: 15;
+    filter: opacity(0);
+}
+
+.filtroNavSmall {
+    filter: opacity(1);
 }
 
 .navegacion-small {
