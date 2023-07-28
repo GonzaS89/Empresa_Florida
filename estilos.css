@@ -83,6 +83,16 @@ li{
     z-index: 20;
 }
 
+.bajarHeader {
+    animation: bajarHeader .75s ease-in forwards;
+}
+
+@keyframes bajarHeader {
+    100% {
+        transform: translateY(0%);
+    }
+}
+
 /* .headerFixed{
     position: fixed;
 } */

@@ -171,12 +171,17 @@ const headerSmall = document.querySelector('.header_small')
 
     window.addEventListener('scroll', ()=> {
        if (header.getBoundingClientRect().bottom < 0) {
+            $(headerSmall).css('transform', 'translateY(-100%)')
             $(headerSmall).css('position', 'fixed')
+            headerSmall.classList.add('bajarHeader')
+            $(navSmall).css('transform', 'translateY(-100%)')
             $(navSmall).css('position', 'fixed')
-            $(navSmall).css('marginTop', '80px')
+            $(navSmall).css('marginTop', '160px')
         }
         else {
             $(headerSmall).css('position', 'unset')
+            $(headerSmall).css('transform', 'translateY(0%)')
+            headerSmall.classList.remove('bajarHeader')
             $(navSmall).css('position', 'unset')
             $(navSmall).css('marginTop', '0px')
         }
