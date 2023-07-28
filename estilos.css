@@ -301,11 +301,11 @@ a:hover{
         z-index: 10;
         /* height: 85px; */
         box-shadow: none;
-        height: 90px;
+        height: 75px;
         position: unset;
     }
     #logo{
-        width: 175px;
+        width: 170px;
         height: 90px;
     }
     .header_large {
