@@ -40,6 +40,27 @@ const servicios = document.querySelector('.servicios')
 //     servicioIMG.classList.replace('servicioImg','servicioImg2')
 // })
 
+const header = document.querySelector('.header');
+const subheader = document.querySelector('.subheader');
+const cuadrado = document.querySelector('.cuadrado');
+
+
+window.addEventListener('scroll', ()=> {
+    if(cuadrado.getBoundingClientRect().top < 0){
+        $(subheader).css('transform', 'translateY(-100%)')
+        $(subheader).css('position', 'fixed')
+        subheader.classList.add('bajarHeader')
+    }
+    
+    else{
+        $(subheader).css('position', 'unset')
+        $(subheader).css('transform', 'translateY(0%)')
+        subheader.classList.remove('bajarHeader')
+    }
+})
+
+
+
 
 
 

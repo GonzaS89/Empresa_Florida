@@ -60,9 +60,42 @@ a,h1,h2,h3,h4,p {
     align-items: center;
     z-index: 10;
     width: 100%;
-    height: 125px;
+    height: 100px;
+    overflow: hidden;
     /* position: fixed; */
-    background-color: #fefbfbf1;
+    background-color:transparent;
+}
+
+.subheader {
+    width: inherit;
+    height: inherit;
+    background-color: #000000;
+}
+
+.subirHeader {
+    animation: subirHeader .5s linear forwards
+}
+@keyframes subirHeader {
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.bajarHeader {
+    animation: bajarHeader .5s ease-in forwards
+}
+
+@keyframes bajarHeader {
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
+.cuadrado {
+    background-color: rgb(245, 247, 124);
+    height: 300px;
+    border: 1.5px solid rgba(128, 128, 128, 0.398);
 }
 
 .navegacion{
