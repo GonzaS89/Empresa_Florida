@@ -15,7 +15,6 @@ window.addEventListener('scroll', ()=> {
         contacto1.classList.add('contacto1Animacion')
         contacto2.classList.add('contacto2Animacion')
     }
-
 })
 
 //
@@ -223,16 +222,18 @@ const boom = (time,delay,i)=> {
     )
 }
 
-setInterval(() => {
-animacionContacto(0,0)
-animacionContacto(250,1)
-animacionContacto(500,2)
-animacionContacto(750,3)
-boom(500,0,0)
-boom(500,250,1)
-boom(500,500,2)
-boom(500,750,3)
-}, 3000);
+ setInterval(() => {
+            animacionContacto(0,0)
+            animacionContacto(250,1)
+            animacionContacto(500,2)
+            animacionContacto(750,3)
+            boom(500,0,0)
+            boom(500,250,1)
+            boom(500,500,2)
+            boom(500,750,3)
+            }, 3000);
+
+
 
 
 // if (ancho > 900) portadaImg.src = 'Imagenes/bondi3.jpg'
