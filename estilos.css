@@ -64,7 +64,7 @@ li{
     background: var(--fondoGrisLinear);
     height: 110px;
     width: 100%;
-    position: fixed;
+    /* position: fixed; */
     z-index: 20;
     box-shadow: 0px 0px 20px rgb(49, 44, 24);
 
@@ -355,6 +355,7 @@ a:hover{
     align-items: flex-end;
     height: 100vh;
     background-color: black;
+    overflow: hidden;
 }
 
 .portada-imagenes-contenedor {
@@ -362,7 +363,6 @@ a:hover{
     max-width: 1500px;
     height: 100%;
     overflow: hidden;
-    
 }
 
 .portada-imagenes {
@@ -398,7 +398,7 @@ a:hover{
 
 .portada-imagen img {
     width: 100%;
-    filter: blur(1px);
+    filter: blur(3px);
     /* filter: brightness(65%) blur(1px); */
 }
 
@@ -409,22 +409,14 @@ a:hover{
     position: absolute;
     z-index: 0;
     width: 100%;
+    height: 100%;
     display: flex;
     align-items: flex-end;
     justify-content:center;
     overflow: hidden;
-    /* animation: haha 1s linear forwards; */
     background-color: rgba(30, 22, 22, 0.502);
 }
 
-@keyframes haha {
-    0% {
-        transform: scale(0);
-    }
-    100% {  
-        transform: scale(1);
-    }
-}
 
 .textoPor{
     display: flex;
@@ -432,49 +424,58 @@ a:hover{
     justify-content:center;
     align-items: center;
     text-align: center;
-    font-size:100px;
     color: white;
     font-family: var(--fuenteTer);
-    height: 30%;
+    height: 100%;
     width: 100%;
-    margin-bottom: 30px;
     font-weight: bold;
-    background-color: rgba(23, 21, 21, 0.056);
+    background-color: rgba(15, 14, 14, 0.76);
 }
 
-.textoPor p {
-    width: 50%;
+.textoPor_texto {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-basis: 60%;
+    width: 75%;
     color: white;
-    padding: 30px;
     text-transform: uppercase;
-    text-shadow: 2px 2px 1px black
-}   
+    text-shadow: 2px 2px 1px rgba(0, 0, 255, 0.596);
+    font-size: 80px;
+}
+
+.textoPor_boton {
+    flex-basis: 20%;
+    display: flex;
+    align-items: center;
+}
 
 .textoPor button {
     margin-top: 20px;
-    font-size: 15px;
+    font-size: 30px;
     border-radius: 20px;
-    padding: 10px;
+    padding: 20px;
+    height: 100px;
+    width: 400px;
+    text-transform: uppercase;
+    transform: scale(0);
+    animation: entrarBotonPortada 1s ease-out 4s forwards;
+}
+
+@keyframes entrarBotonPortada {
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1)
+    }
 }
 
 
-
-@keyframes moverIMG1 {
-    0%{
-        transform: translateX(0);
-    }
-    50%{
-        transform: translateX(-50%);
-    }    
-
-    100%{
-        transform: translateX(0);
-    }
-}
 
 @media (max-width: 1400px){
-    .textoPor {
-        font-size: 85px;
+    .textoPor_texto {
+        font-size:70px;
     }
 }
 
@@ -482,20 +483,34 @@ a:hover{
     .textoPor{
         font-size: 65px;
     }
+    .textoPor_texto {
+        font-size:60px;
+    }
+    .textoPor button {
+    font-size: 20px;
+    padding: 15px;
+    height: 75px;
+    width: 250px
+    }
 }
 
 @media (max-width: 480px){
     .portada-cont {
-        height: 45vh;
-        overflow: hidden;
+        height: 50vh;
     }
-    .textoPortada {
-        height: 100%;
+    .textoPor_texto {
+        font-size: 35px;
+        flex-basis: 70%;
+        align-items: flex-end;
+    }
+    .textoPor_boton {
+        flex-basis: 20%;
+    }
 
-        /* animation: entraSombra .75s linear forwards .5s; */
-    }
-    .textoPor {
-        font-size: 20px;
+    .textoPor button {
+        width:200px;
+        height: 60px;
+        font-size: 15px;
     }
 }
 
@@ -725,7 +740,7 @@ a:hover{
     font-size: 25px;
     color: white;
     background-color: rgba(0, 0, 0, 0.499);
-    padding: 15px;
+    padding: 30px;
     border-radius: 32px;
 }
 
@@ -789,6 +804,7 @@ a:hover{
     }
     .nosotros-lista li {
         font-size:20px;
+        padding: 25px;
     }
 }
 
@@ -811,11 +827,11 @@ a:hover{
     }
 
     .nosotros-lista li {
-        font-size: 23px;
+        font-size: 18px;
     }
 
     .nosotros-lista li  strong {
-        font-size: 23px;
+        font-size: 18px;
     }
 
     #nosotros-subtitulo {
@@ -1257,6 +1273,7 @@ iframe{
 
 .footer_contenido {
     display: flex;
+    width: 100%;
 }
 
 .footer_izq {
@@ -1289,21 +1306,23 @@ iframe{
 
 .footer_der-contacto {
     display:flex;
-    flex-basis: 100%;
+    justify-content: center;
+    flex-basis: 50%;
+    width: 100%;
 }
 
 .footer_der-contacto ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     flex-basis: 100%;
     gap: 10px;
+    padding: 0;
 }
 
 .footer_der-contacto_small {
     width: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     flex-direction: column;
 }
@@ -1329,7 +1348,6 @@ iframe{
     gap: 30px;
     align-items: center;
     height: 50px;
-    width: 50px;
     color: white;
     padding:2.5px 5px;
 }
@@ -1382,15 +1400,15 @@ iframe{
     align-items: center;
     background-color: rgb(49, 1, 104);
     font-family: var(--fuenteSec);
-    font-size: 20px;
-    height: 50px;
+    font-size: 25px;
+    height: 75px;
     font-weight: bold;
     text-transform: uppercase;
     color: white;
 }
 
 .footer_creditos a {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 600;
     text-decoration:underline;
     color: #a49734;
@@ -1433,6 +1451,10 @@ iframe{
     .footer_der-contacto {
         display: none;
     }
+
+    .footer_der-contacto_small {
+        display: flex;
+    }
     .footer_der-contacto_small ul{
         display: flex;
         padding: 0;
@@ -1445,6 +1467,7 @@ iframe{
         width: 100%;
     }
     .footer_creditos {
+        height: 50px;
         font-size: 13px;
     }
     .footer_creditos a{

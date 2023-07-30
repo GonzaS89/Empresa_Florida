@@ -204,7 +204,7 @@ const footerContacto = document.querySelectorAll('.footer_der-item_small img')
 const animacionContacto = (delay, i)=> {
     footerContacto[i].animate ([
         {transform:'scale(1.5)'},
-        {transform:'traslateX(-10px)'},
+        {transform:'traslateX(-10px)'}
     ],
         {duration: 1000,
             delay: delay,
