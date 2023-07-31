@@ -164,9 +164,10 @@ navSmall.addEventListener('click', ()=> {
     subirMenu();
 })
 
-
+let ancho = innerWidth;
 const portadaCont = document.querySelector('.portada-cont')
 const headerSmall = document.querySelector('.header_small')
+const headerLarge = document.querySelector('.header_large')
 
     window.addEventListener('scroll', ()=> {
         navSmall.classList.add('filtroNavSmall1')
@@ -180,6 +181,10 @@ const headerSmall = document.querySelector('.header_small')
             setTimeout(() => {
                navSmall.classList.add('filtroNavSmall2')
             }, 350);
+            if(ancho > 600){
+                // $(header).css('position', 'fixed')
+                $(headerLarge).css('position', 'fixed')
+            }
         }
         else {
             $(headerSmall).css('position', 'unset')
