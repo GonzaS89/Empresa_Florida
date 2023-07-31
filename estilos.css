@@ -24,11 +24,10 @@ html{
     scroll-behavior: smooth;
 }
 
-/* .body{
-    display: flex;
-    
-    background: var(--fondoGrisLinear);
-} */
+* {
+    margin: 0;
+    padding: 0;
+}
 h1,h3,p,li{
     font-family: var(--fuenteSec);
     margin: 0;
@@ -42,7 +41,7 @@ a{
     /* text-shadow: 5px 5px 10px  black; */
     font-size: 25px;
     animation: moverLink 10s linear infinite;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     text-align: center;
 }
 
