@@ -459,7 +459,7 @@ a:hover{
     width: 400px;
     text-transform: uppercase;
     transform: scale(0);
-    animation: entrarBotonPortada 1s ease-out 3.5s forwards;
+    animation: entrarBotonPortada 1s ease-out 4s forwards;
 }
 
 @keyframes entrarBotonPortada {
