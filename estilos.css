@@ -24,10 +24,6 @@ html{
     scroll-behavior: smooth;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
 h1,h3,p,li{
     font-family: var(--fuenteSec);
     margin: 0;
@@ -1402,7 +1398,7 @@ iframe{
     align-items: center;
     gap: 20px;
     width: 100%;
-}
+    padding: 20px}
 .footer_der-item {
     display: flex;
     gap: 30px;
@@ -1419,7 +1415,6 @@ iframe{
     height: 60px;
     width: 60px;
     padding:2.5px 5px;
-    margin: 10px 0;
 }
 
 .footer_der-item img {

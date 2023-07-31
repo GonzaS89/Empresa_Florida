@@ -10,7 +10,7 @@ let typed = new Typed('.textoPor_texto' , {
 
 let typed2 = new Typed('.footer_creditos a' , {
     strings: ['Gonzalo Sinhg'],
-    typeSpeed: 100,
+    typeSpeed: 50,
     backSpeed: 50,
     cursorChar: '',
     shuffle: false,
