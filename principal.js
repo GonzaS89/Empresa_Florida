@@ -177,7 +177,7 @@ const headerLarge = document.querySelector('.header_large')
             headerSmall.classList.add('bajarHeader')
             $(navSmall).css('transform', 'translateY(-100%)')
             $(navSmall).css('position', 'fixed')
-            $(navSmall).css('marginTop', '80px')
+            $(navSmall).css('marginTop', '100px')
             setTimeout(() => {
                navSmall.classList.add('filtroNavSmall2')
             }, 350);
