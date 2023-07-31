@@ -1291,7 +1291,7 @@ iframe{
 
 @media (max-width:600px) {
     .nosotros-cont, .contacto-cont, .info-cont, .galeria{
-        scroll-margin-top: 90px;
+        scroll-margin-top: 100px;
     }
 }
 
