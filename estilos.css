@@ -338,7 +338,8 @@ a:hover{
     }
     #logo{
         width: 170px;
-        height: 90px;
+        height: 100px;
+        background-size: 100%;
     }
     #logo{
         margin-left: 10px;
