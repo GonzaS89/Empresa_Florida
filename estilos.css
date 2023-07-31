@@ -41,7 +41,7 @@ a{
     /* text-shadow: 5px 5px 10px  black; */
     font-size: 25px;
     animation: moverLink 10s linear infinite;
-    /* text-transform: uppercase; */
+    text-transform: uppercase;
     text-align: center;
 }
 
