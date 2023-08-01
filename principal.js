@@ -279,7 +279,7 @@ const entrarLista = (indice, delay)=> {
 }
 
 window.addEventListener('scroll', ()=> {
-    if(infoCont.getBoundingClientRect().height / infoCont.getBoundingClientRect().top * 100 >= 50){
+    if(infoCont.getBoundingClientRect().height / infoCont.getBoundingClientRect().top * 100 >= 70){
         entrarLista(0,1000)
         entrarLista(1,1500)
         entrarLista(2,2000)
