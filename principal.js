@@ -252,7 +252,7 @@ function estaEnElViewport(elem) {
 
 const nosotrosTexto = document.querySelector('.nosotros-texto');
 const nosotrosTexto2 = document.querySelector('.nosotros-texto2');
-const nosotrosTexto3 = document.querySelector('.nosotrosTexto3');
+const nosotrosTexto3 = document.querySelector('.nosotros-texto3');
 const nosotrosLista = document.querySelector('.nosotros-cont ul');
 const listaHijos = nosotrosLista.children;
 
