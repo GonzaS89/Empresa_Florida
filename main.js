@@ -1,234 +1,41 @@
-
-
-const servicios = document.querySelector('.servicios')
-
-// servicio.forEach(element => {
-//     element.addEventListener('mouseover', ()=>{
-//         servicioIMG.forEach(element => {
-//             if(!(element.classList.contains('servicioImg'))) 
-//             element.classList.add('servicioImg')
-//             else if (element.classList.contains('servicioImg2')) 
-//             console.log()
-//             element.classList.replace('servicioImg2','servicioImg')
-//         });
-        
-//     })
-//     element.addEventListener('mouseout', ()=>{
-//         servicioIMG.forEach(element => {
-//             if(element.classList.contains('servicioImg'))
-//         element.classList.replace('servicioImg','servicioImg2')
-//         });
-//     })
-// });
-
-// const servicio2 = document.querySelectorAll('.servicio2');
-// const servicioIMG2 = document.querySelectorAll('.servicio-imagen2');
-
-// servicio.addEventListener('mouseover', (e)=> {
-//     console.log((e))
-// })
-
-// servicio.addEventListener('mouseover', ()=>{
-//     if(!(servicioIMG.classList.contains('servicioImg'))) 
-//         servicioIMG.classList.add('servicioImg')
-//         else if (servicioIMG.classList.contains('servicioImg2')) 
-//         console.log()
-//         servicioIMG.classList.replace('servicioImg2','servicioImg')      
-// })
-// servicio.addEventListener('mouseout', ()=>{
-//     if(servicioIMG.classList.contains('servicioImg'))
-//     servicioIMG.classList.replace('servicioImg','servicioImg2')
-// })
-
-const header = document.querySelector('.header');
-const subheader = document.querySelector('.subheader');
-const cuadrado = document.querySelector('.cuadrado');
-
-
-window.addEventListener('scroll', ()=> {
-    if(cuadrado.getBoundingClientRect().top < 0){
-        $(subheader).css('transform', 'translateY(-100%)')
-        $(subheader).css('position', 'fixed')
-        subheader.classList.add('bajarHeader')
-    }
-    
-    else{
-        $(subheader).css('position', 'unset')
-        $(subheader).css('transform', 'translateY(0%)')
-        subheader.classList.remove('bajarHeader')
-    }
-})
+const cajas = document.querySelector('.cajas');
+const cajasHijas = cajas.children
 
 
 
+const moverCajas = (indice, pxsY, pxsX)=> {
 
-
-
-
-
-
-const texto = document.querySelector('.textoPrueba')
-const cadena = document.querySelector('.textoCadena');
-
-
-
-// escritura('Lorem ipsum, dolor sit amet consectetur adipisicing elit',texto)
-
-const enlaces = document.querySelectorAll('.header__enlaces')
-
-var typed5 = new Typed('.textoImgCont span', {
-    strings: ['Bienvenidos a nuestra web'],
-    typeSpeed: 75,
-    backSpeed: 30,
-    shuffle: false,
-    smartBackspace: true,
-    loop: true
-});
-
-var typed6 = new Typed('.textoImgCont2 span', {
-    strings: ['Aqui podras buscar lo que te interesa'],
-    typeSpeed: 75,
-    backSpeed: 30,
-    shuffle: false,
-    smartBackspace: true,
-    loop: true
-});
-
-
-// const servicio = document.querySelectorAll('.servicio')
-
-// for (let index = 0; index < servicio.length; index++) {
-//     if(index == 0) {servicio[index].style.animation = 'aparece .5s linear forwards'}
-//     // if(servicio.length / servicio.length) {servicio[index].style.animation = 'aparece2 1s linear 1s forwards'}
-    
-// }
-
-
- 
-
-// animacion2()
-
-const botonMenu = document.querySelector('.boton_menu-contenedor');
-const navegacionSmall = document.querySelector('.navegacion_small-contenedor');
-
-const contenedorImagenes = document.querySelector('.portada_imagenes');
-
-let contImgsLargo = contenedorImagenes.children.length;
-let contImgs = contenedorImagenes.children;
-let posicion = 0;
-const posiciones = document.querySelector('.portada_posicion');
-
-posiciones.children[posicion].style.backgroundColor = 'white'
-posiciones.children[posicion].style.transform = 'scale(1.3)';
-
-const adelantarFoto = ()=> {
-
-    let porcentaje;
-
-    switch (posicion) {
-        case 0 :
-            porcentaje = -33.3;
-            break;
-        case 1 :
-            porcentaje = -66.6;    
-            break;   
-    }
-    contenedorImagenes.animate ( [
-        {
-            transform: `translateX(${porcentaje}%)`
-
-        }
+    cajasHijas[indice].animate([
+        {transform :`translate(${pxsX}, ${pxsY})`},
     ],
-        {
-            duration : 1000,
-            fill : 'forwards'
-            
-        }
-    )
-    if(posicion < contImgsLargo - 1) posicion++;
+        {duration : 2000,
+        fill : "forwards"})
 }
 
-const retrocederFoto = ()=> {
+$(cajasHijas[2]).css('zIndex', '8')
+$(cajasHijas[1]).css('zIndex', '9')
+$(cajasHijas[0]).css('zIndex', '10')
 
-    let porcentaje;
+// moverCajas(0, 0,0, 10)
+moverCajas(1, -10, 7.5, 9)
+moverCajas(2, -20,20)
 
-    switch (posicion) {
-        case 1 :
-            porcentaje = 0;
-            break;
-        case 2 :
-            porcentaje = -33.3;    
-            break;   
-    }
-    contenedorImagenes.animate ( [
-        {
-            transform: `translateX(${porcentaje}%)`
 
-        }
+// moverCajas(1, -10,10)
+
+const desplazarCajas = (indice, pxsX,delay)=> {
+    cajasHijas[indice].animate([
+        {transform :`translate(${pxsX}%)`}
     ],
-        {
-            duration : 1000,
-            fill : 'forwards'
-        }
-    )
-    if(posicion > 0) posicion--;	
+        {duration : 1000,
+            delay : delay,
+        fill : "forwards"})
 }
 
-const botonRetroceder = document.querySelector('.portada_botonRetroceder');
-const botonAvanzar = document.querySelector('.portada_botonAvanzar');
+desplazarCajas(0, -150, 500 )
+desplazarCajas(0, 0, 2000 )
+// $(cajasHijas[0]).css('zIndex', '8')
+$(cajasHijas[1]).css('zIndex', '9')
 
-
-
-
-botonRetroceder.addEventListener('click', ()=> {
-    retrocederFoto();
-    posiciones.children[posicion].style.backgroundColor = 'white';
-    posiciones.children[posicion].style.transform = 'scale(1.3)'
-    posiciones.children[posicion].style.width = '15px';
-    posiciones.children[posicion].style.borderRadius = '5px'
-    posiciones.children[posicion+1].style.backgroundColor = 'var(--vacio)';
-    posiciones.children[posicion+1].style.transform = 'scale(1)'
-    posiciones.children[posicion].style.width = '10px';
-    posiciones.children[posicion].style.borderRadius = '5'
-
-})
-
-botonAvanzar.addEventListener('click', ()=> {
-    adelantarFoto();
-    posiciones.children[posicion].style.backgroundColor = 'white';
-    posiciones.children[posicion].style.transform = 'scale(1.3)'
-    posiciones.children[posicion-1].style.backgroundColor = 'var(--vacio)';
-    posiciones.children[posicion-1].style.transform = 'scale(1)'
-    
-})
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// desplazarCajas(1, 500, 250)
+// desplazarCajas(2, -750, 750)
