@@ -761,6 +761,7 @@ a:hover{
     background-color: rgba(0, 0, 0, 0.499);
     padding: 30px;
     border-radius: 32px;
+    transform: scale(0);
 }
 
 #titulo{
@@ -793,7 +794,8 @@ a:hover{
     font-size: 27.5px;
     text-align: justify;
     width: 75%;
-    color: white;;
+    color: white;
+    transform: scale(0);
 }
 
 @keyframes entrarTexto {

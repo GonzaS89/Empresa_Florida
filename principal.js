@@ -261,11 +261,26 @@ const entrarTexto = (elemento,delay)=> {
         {transform : 'scale(0)'},
         {transform :'scale(1)'}
     ],
-        {duration : 500},
-        {delay : delay},
-        {fill : "forwards"}
-        )
+        {duration : 500,
+        delay : delay,
+        iterations : 1,
+        fill : "forwards"}
+    )
 }
+
+const entrarLista = (indice)=> {
+    listaHijos[indice].animate ([
+        {transform : 'scale(0)'},
+        {transform :'scale(1)'}
+    ],
+        {duration : 500,
+        delay : delay,
+        iterations : 1,
+        fill : "forwards"}
+    )
+}
+
+entrarLista()
 entrarTexto(nosotrosTexto2,0)
 entrarTexto(nosotrosTexto,500)
 
