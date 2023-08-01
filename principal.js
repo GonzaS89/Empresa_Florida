@@ -205,8 +205,8 @@ botonBack.addEventListener('click', ()=> {
 
 const footerContacto = document.querySelectorAll('.footer_der-item_small img')
 
-const animacionContacto = (delay, i)=> {
-    footerContacto[i].animate ([
+const animacionItems = (delay, i, items)=> {
+    items[i].animate ([
         {transform:'scale(1.5)'},
         {transform:'traslateX(-10px)'}
     ],
@@ -228,10 +228,10 @@ const boom = (time,delay,i)=> {
 }
 
  setInterval(() => {
-            animacionContacto(0,0)
-            animacionContacto(250,1)
-            animacionContacto(500,2)
-            animacionContacto(750,3)
+            animacionItems(0,0,footerContacto)
+            animacionItems(250,1,footerContacto)
+            animacionItems(500,2,footerContacto)
+            animacionItems(750,3,footerContacto)
             boom(500,0,0)
             boom(500,250,1)
             boom(500,500,2)
@@ -239,9 +239,19 @@ const boom = (time,delay,i)=> {
             }, 3000);
 
 
+// window.addEventListener('scroll', ()=> {
+//     console.log(infoCont.getBoundingClientRect().top / infoCont.getBoundingClientRect().height * 100)
+// })
+
+function estaEnElViewport(elem) {
+    let distancia = elem.getBoundingClientRect();
+    return (
+        distancia.top < (window.innerHeight || document.documentElement.clientHeight) && distancia.bottom > 0
+    );
+}
 
 
-// if (ancho > 900) portadaImg.src = 'Imagenes/bondi3.jpg'
+
 
 
 

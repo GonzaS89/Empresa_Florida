@@ -771,7 +771,7 @@ a:hover{
     margin-bottom: 30px;
     /* animation: sombrear 3s linear alternate-reverse infinite; */
     text-align: center;
-    font-size: 35px;
+    font-size: 33px;
     color: white;
 }
 
@@ -837,7 +837,7 @@ a:hover{
         padding: 15px;
     }
     #titulo {
-        font-size: 23px;
+        font-size: 30px;
     }
     #nosotros-texto{
         font-size: 23px;
@@ -869,6 +869,7 @@ a:hover{
     }
     .nosotros-lista li {
         font-size: 20px;
+        text-align: justify;
     }
     .nosotros-lista li strong {
         font-size: 20px;
@@ -876,6 +877,9 @@ a:hover{
     #nosotros-subtitulo {
         font-size: 21px;
         margin: 12px;
+    }
+    .nosotros-cont li {
+        padding: 15px 30px;
     }
 }
 
@@ -887,7 +891,7 @@ a:hover{
         gap: 5px;
     }
     .nosotros-cont li {
-        padding: 13px;
+        padding: 15px 25px;
     }
     #nosotros-texto {
         font-size: 18px;
@@ -1467,8 +1471,8 @@ iframe{
     align-items: center;
     background-color: rgb(49, 1, 104);
     font-family: var(--fuenteSec);
-    font-size: 25px;
-    height: 75px;
+    font-size: 20px;
+    height: 60px;
     font-weight: bold;
     text-transform: uppercase;
     color: white;
@@ -1476,7 +1480,7 @@ iframe{
 }
 
 .footer_creditos a {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
     text-decoration:underline;
     color: #a49734;
