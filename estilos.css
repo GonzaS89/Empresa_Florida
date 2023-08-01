@@ -733,7 +733,7 @@ a:hover{
 
 #nosotros{
     width: 100%;
-    background-color: var(--fondoAzul);
+    background-color: rgb(24, 77, 183);
 }
 
 .nosotros-cont{
@@ -742,7 +742,6 @@ a:hover{
     align-items: center;
     width: 75%;
     margin: 0 auto;
-    background-color: var(--fondoAzul);
     gap: 30px;
 }
 
@@ -786,14 +785,14 @@ a:hover{
     /* 
     NOSOTROS  */
 
-#nosotros-texto{
+.nosotros-texto{
     font-size: 27.5px;
     text-align: justify;
     width: 75%;
     color: white;
 }
 
-#nosotros-texto2{
+.nosotros-texto2{
     font-size: 27.5px;
     text-align: center;
     width: 75%;
@@ -816,10 +815,10 @@ a:hover{
     #titulo{
         font-size: 30px;
     }
-    #nosotros-texto {
+    .nosotros-texto {
         font-size:24px;
     }
-    #nosotros-texto2{
+    .nosotros-texto2{
         font-size:24px;
     }
     .nosotros-lista li {
@@ -892,10 +891,10 @@ a:hover{
     .nosotros-cont li {
         padding: 15px 25px;
     }
-    #nosotros-texto {
+    .nosotros-texto {
         font-size: 18px;
     }
-    #nosotros-texto2 {
+    .nosotros-texto2 {
         font-size: 18px;
     }
     .nosotros-lista li {

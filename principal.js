@@ -250,7 +250,7 @@ function estaEnElViewport(elem) {
     );
 }
 
-
+const nosotrosTexto2 = document.querySelectorAll()
 
 
 
