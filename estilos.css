@@ -403,7 +403,7 @@ a:hover{
 
 .portada-imagen img {
     width: 100%;
-    filter: blur(3px);
+    filter: blur(3px) brightness(85%);
     /* filter: brightness(65%) blur(1px); */
 }
 
@@ -419,7 +419,7 @@ a:hover{
     align-items: flex-end;
     justify-content:center;
     overflow: hidden;
-    background-color: rgba(30, 22, 22, 0.502);
+
 }
 
 
@@ -434,7 +434,6 @@ a:hover{
     height: 100%;
     width: 100%;
     font-weight: bold;
-    background-color: rgba(15, 14, 14, 0.098);
 }
 
 .textoPor_texto {
