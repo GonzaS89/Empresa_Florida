@@ -250,7 +250,26 @@ function estaEnElViewport(elem) {
     );
 }
 
-const nosotrosTexto2 = document.querySelectorAll()
+const nosotrosTexto = document.querySelector('.nosotros-texto');
+const nosotrosTexto2 = document.querySelector('.nosotros-texto2');
+const nosotrosTexto3 = document.querySelector('.nosotrosTexto3');
+const nosotrosLista = document.querySelector('.nosotros-cont ul');
+const listaHijos = nosotrosLista.children;
+
+const entrarTexto = (elemento,delay)=> {
+    elemento.animate ([
+        {transform : 'scale(0)'},
+        {transform :'scale(1)'}
+    ],
+        {duration : 500},
+        {delay : delay},
+        {fill : "forwards"}
+        )
+}
+entrarTexto(nosotrosTexto2,0)
+entrarTexto(nosotrosTexto,500)
+
+
 
 
 

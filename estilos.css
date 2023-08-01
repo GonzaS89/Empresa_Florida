@@ -790,6 +790,16 @@ a:hover{
     text-align: justify;
     width: 75%;
     color: white;
+    font-size: 27.5px;
+    text-align: justify;
+    width: 75%;
+    color: white;;
+}
+
+@keyframes entrarTexto {
+    100% {
+        transform: scale(1);
+    }
 }
 
 .nosotros-texto2{
@@ -797,6 +807,7 @@ a:hover{
     text-align: center;
     width: 75%;
     color: whitesmoke;
+    transform: scale(0);
 }
 
 #nosotros-subtitulo{
@@ -818,6 +829,9 @@ a:hover{
     .nosotros-texto {
         font-size:24px;
     }
+    .nosotros-texto3 {
+        font-size:24px;
+    }
     .nosotros-texto2{
         font-size:24px;
     }
@@ -837,11 +851,14 @@ a:hover{
     #titulo {
         font-size: 30px;
     }
-    #nosotros-texto{
+    .nosotros-texto{
+        font-size: 23px;
+    }
+    .nosotros-text3{
         font-size: 23px;
     }
     
-    #nosotros-texto2{
+    .nosotros-texto2{
         font-size: 23px;
     }
 
@@ -859,10 +876,13 @@ a:hover{
 }
 
 @media (max-width: 600px){
-    #nosotros-texto {
+    .nosotros-texto {
         font-size:21px;
     }
-    #nosotros-texto2 {
+    .nosotros-texto3 {
+        font-size:21px;
+    }
+    .nosotros-texto2 {
         font-size: 21px;
     }
     .nosotros-lista li {
@@ -892,6 +912,9 @@ a:hover{
         padding: 15px 25px;
     }
     .nosotros-texto {
+        font-size: 18px;
+    }
+    .nosotros-texto3 {
         font-size: 18px;
     }
     .nosotros-texto2 {
