@@ -798,6 +798,18 @@ a:hover{
     transform: scale(0);
 }
 
+.nosotros-texto3{
+    font-size: 27.5px;
+    text-align: justify;
+    width: 75%;
+    color: white;
+    font-size: 27.5px;
+    text-align: justify;
+    width: 75%;
+    color: white;
+    transform: scale(0);
+}
+
 @keyframes entrarTexto {
     100% {
         transform: scale(1);

@@ -268,7 +268,7 @@ const entrarTexto = (elemento,delay)=> {
     )
 }
 
-const entrarLista = (indice)=> {
+const entrarLista = (indice, delay)=> {
     listaHijos[indice].animate ([
         {transform : 'scale(0)'},
         {transform :'scale(1)'}
@@ -280,9 +280,13 @@ const entrarLista = (indice)=> {
     )
 }
 
-entrarLista()
+entrarLista(0,1000)
+entrarLista(1,1500)
+entrarLista(2,2000)
 entrarTexto(nosotrosTexto2,0)
 entrarTexto(nosotrosTexto,500)
+entrarTexto(nosotrosTexto3,2500)
+
 
 
 
