@@ -254,38 +254,44 @@ const nosotrosTexto = document.querySelector('.nosotros-texto');
 const nosotrosTexto2 = document.querySelector('.nosotros-texto2');
 const nosotrosTexto3 = document.querySelector('.nosotros-texto3');
 const nosotrosLista = document.querySelector('.nosotros-cont ul');
+const nosotrosCont = document.querySelector('.nosotros-cont')
+const subtitulo = document.getElementById('nosotros-subtitulo')
 const listaHijos = nosotrosLista.children;
 
 const entrarTexto = (elemento,delay)=> {
     elemento.animate ([
-        {transform : 'scale(0)'},
         {transform :'scale(1)'}
     ],
-        {duration : 500,
+        {duration : 2000,
         delay : delay,
-        iterations : 1,
         fill : "forwards"}
     )
 }
 
 const entrarLista = (indice, delay)=> {
     listaHijos[indice].animate ([
-        {transform : 'scale(0)'},
         {transform :'scale(1)'}
     ],
-        {duration : 500,
+        {duration : 2000,
         delay : delay,
-        iterations : 1,
         fill : "forwards"}
     )
 }
 
-entrarLista(0,1000)
-entrarLista(1,1500)
-entrarLista(2,2000)
-entrarTexto(nosotrosTexto2,0)
-entrarTexto(nosotrosTexto,500)
-entrarTexto(nosotrosTexto3,2500)
+window.addEventListener('scroll', ()=> {
+    if(infoCont.getBoundingClientRect().height / infoCont.getBoundingClientRect().top * 100 >= 50){
+        entrarLista(0,1000)
+        entrarLista(1,1500)
+        entrarLista(2,2000)
+        entrarTexto(nosotrosTexto2,0)
+        entrarTexto(nosotrosTexto,500)
+        entrarTexto(nosotrosTexto3,2500)
+        entrarTexto(subtitulo,3000)
+    }
+})
+
+
+
 
 
 
