@@ -619,41 +619,41 @@ a:hover{
 }
 
 .icono-imagen {
-    background-image: url(Iconos/boleto.png);
+    background-image: url(Imagenes/boleto.png);
     background-size: 60%;
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .icono-imagen2 {
-    background-image: url(Iconos/locacion.png);
+    background-image: url(Imagenes/locacion.png);
     background-size: 75%;
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .icono-imagen3 {
-    background-image: url(Iconos/escolar.png);
+    background-image: url(Imagenes/escolar.png);
     background-size: 70%;
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .icono-imagen4 {
-    background-image: url(Iconos/excursion.png);
+    background-image: url(Imagenes/excursion.png);
     background-size: 70%;
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .icono-imagen5 {
-    background-image: url(Iconos/app.png);
+    background-image: url(Imagenes/app.png);
     background-size: 75%;
     background-position: center center;
     background-repeat: no-repeat;
 }
 .icono-imagen6 {
-    background-image: url(Iconos/redes.png);
+    background-image: url(Imagenes/redes.png);
     background-size: 70%;
     background-position: center center;
     background-repeat: no-repeat;
