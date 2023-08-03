@@ -1347,6 +1347,25 @@ body::-webkit-scrollbar-track {
     }
 }
 
-   
+.footer_creditos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(49, 1, 104);
+    font-family: var(--fuenteSec);
+    font-size: 13px;
+    height: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    width: 100%;
+}
+
+.footer_creditos a {
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration:underline;
+    color: #a49734;
+}
 
 
