@@ -999,7 +999,7 @@ GALERIA */
     }
     100% {
         filter: opacity(100);
-        transform: scale(1.01);
+        transform: scale(1.15);
     }
 }
 .galeria-subcont {
