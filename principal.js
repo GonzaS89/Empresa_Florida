@@ -262,7 +262,7 @@ const entrarTexto = (elemento,delay)=> {
     elemento.animate ([
         {transform :'scale(1)'}
     ],
-        {duration : 1000,
+        {duration : 500,
         delay : delay,
         fill : "forwards"}
     )
@@ -272,14 +272,14 @@ const entrarLista = (indice, delay)=> {
     listaHijos[indice].animate ([
         {transform :'scale(1)'}
     ],
-        {duration : 1000,
+        {duration : 500,
         delay : delay,
         fill : "forwards"}
     )
 }
 
 window.addEventListener('scroll', ()=> {
-    if(infoCont.getBoundingClientRect().height / infoCont.getBoundingClientRect().top * 100 >= 70){
+    if(infoCont.getBoundingClientRect().height / infoCont.getBoundingClientRect().top * 100 >= 90){
         entrarLista(0,1000)
         entrarLista(1,1500)
         entrarLista(2,2000)
