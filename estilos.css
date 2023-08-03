@@ -123,6 +123,10 @@ li{
     /* animation: moverLogo 2s linear forwards */
 }
 
+.logo-cont img {
+    width: 100%;
+}
+
 .navegacion_large {
     display: flex;
     align-items: center;
