@@ -765,7 +765,6 @@ a:hover{
     background-color: rgba(0, 0, 0, 0.499);
     padding: 30px;
     border-radius: 32px;
-    transform: scale(0);
 }
 
 #titulo{
@@ -835,7 +834,6 @@ a:hover{
     color: var(--blanco);
     font-size: 35px;
     margin-top: 20px;
-    transform: scale(0);
 }
 
 @media (max-width: 1400px) {
