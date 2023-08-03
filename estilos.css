@@ -799,7 +799,6 @@ a:hover{
     text-align: justify;
     width: 75%;
     color: white;
-    transform: scale(0);
 }
 
 .nosotros-texto3{
@@ -811,7 +810,6 @@ a:hover{
     text-align: justify;
     width: 75%;
     color: white;
-    transform: scale(0);
 }
 
 @keyframes entrarTexto {
@@ -825,7 +823,6 @@ a:hover{
     text-align: center;
     width: 75%;
     color: whitesmoke;
-    transform: scale(0);
 }
 
 #nosotros-subtitulo{

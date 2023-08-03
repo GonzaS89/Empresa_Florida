@@ -278,17 +278,17 @@ const entrarLista = (indice, delay)=> {
     )
 }
 
-window.addEventListener('scroll', ()=> {
-    if(infoCont.getBoundingClientRect().height / infoCont.getBoundingClientRect().top * 100 >= 90){
-        entrarLista(0,1000)
-        entrarLista(1,1500)
-        entrarLista(2,2000)
-        entrarTexto(nosotrosTexto2,0)
-        entrarTexto(nosotrosTexto,500)
-        entrarTexto(nosotrosTexto3,2500)
-        entrarTexto(subtitulo,3000)
-    }
-})
+// window.addEventListener('scroll', ()=> {
+//     if(infoCont.getBoundingClientRect().height / infoCont.getBoundingClientRect().top * 100 >= 90){
+//         entrarLista(0,1000)
+//         entrarLista(1,1500)
+//         entrarLista(2,2000)
+//         entrarTexto(nosotrosTexto2,0)
+//         entrarTexto(nosotrosTexto,500)
+//         entrarTexto(nosotrosTexto3,2500)
+//         entrarTexto(subtitulo,3000)
+//     }
+// })
 
 
 
