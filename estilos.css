@@ -113,7 +113,7 @@ li{
 }
 
 #logo{
-    background-image: url(Imagenes/logoancho.png);
+    /* background-image: url(Imagenes/logoancho.png); */
     width:250px;
     height:125px;
     background-size: 90%;
