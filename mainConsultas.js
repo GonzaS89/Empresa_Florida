@@ -115,7 +115,6 @@ function activarBoton ()  {
     setInterval ( ()=> {
     if(obtenerPosicion1() > 0 || obtenerPosicion2() > 0) boton.classList.add('botonActivo');
     else boton.classList.remove('botonActivo')
-    
 })
 }
 
@@ -126,26 +125,23 @@ activarBoton()
 
 let indiceDeBusqueda;
 
+//Defino funcion para obtener posicion
+
+const definirPosicion = (sel, val, valorSel, pos) => { 
+    for (opcion of sel) 
+    if (opcion.selected) valorSel = opcion;
+    for (i = 0; i < sel.length; i++) val.push(sel[i])
+    for (i = 0; i < val.length; i++) pos = val.indexOf(valorSel)
+    return pos
+}
+
+
+
     boton.addEventListener('click', () => {
-
-
         // Definimos la posicion del selector 1
-    
-        for (opcion of selector) 
-        if (opcion.selected) valorSeleccionado = opcion;
-        for (i = 0; i < selector.length; i++) valores.push(selector[i])
-        for (i = 0; i < valores.length; i++) posicion = valores.indexOf(valorSeleccionado)
-        
-    
-    
+        definirPosicion(selector,valores,valorSeleccionado,posicion)
         // Definimos la posicion del selector 2
-    
-        for (opcion of selector2) 
-        if (opcion.selected) valorSeleccionado2 = opcion;
-        for (i = 0; i < selector2.length; i++) valores2.push(selector2[i])
-        for (i = 0; i < valores2.length; i++) posicion2 = valores2.indexOf(valorSeleccionado2)
-        
-    
+        definirPosicion(selector2,valores2,valorSeleccionado2,posicion2)
     
         // Definimos las variables globales
     
@@ -198,16 +194,25 @@ let indiceDeBusqueda;
         }
     
         let rutaObtenida
-    
-        if ((fecha == 19 || fecha == 20) && (mes == 5)) {
-            feriado = true;
-            if(feriado){
-                tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo `;
-                rutaObtenida = obtenerDiaRuta(0);
-            }
+
+        const definirFeriado = (fechaN, mesN)=> {
+            if(fecha == fechaN && mes == mesN) 
+            // feriado = true;
+            tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo `;
+            rutaObtenida = obtenerDiaRuta(0);
+            console.log('Es feriado')
         }
+
+        definirFeriado(3, 7)
     
-        else if((fecha == 27) && (mes == 4)) {
+        // if ((fecha == 19 || fecha == 20) && (mes == 5)) {
+            
+        //     if(feriado){
+                
+        //     }
+        // }
+    
+        if((fecha == 27) && (mes == 4)) {
             feriadoPrevio = true; 
             rutaObtenida = obtenerDiaRuta(dia);
             tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
