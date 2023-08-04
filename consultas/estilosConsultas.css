@@ -140,7 +140,7 @@ body::-webkit-scrollbar-track {
     justify-content: center;
     width: 130px;
     height: 130px;
-    background-image: url(Imagenes/logoempresa.jpg);
+    background-image: url(../Imagenes/logoempresa.jpg);
     background-size: 100%;
     border-radius: 50%;
     background-repeat: no-repeat;
@@ -297,7 +297,7 @@ body::-webkit-scrollbar-track {
     border-radius: 25%;
     width: 60px;
     height: 60px;
-    background-image: url('Imagenes/pngegg.png');
+    background-image: url('../Imagenes/pngegg.png');
     background-size: 75%;
     background-repeat: no-repeat;
     background-position: center;
@@ -714,7 +714,7 @@ body::-webkit-scrollbar-track {
     width: 100%;
     height: 100%;
     border-radius: 100%;
-    background-image: url(Imagenes/logoempresa.jpg);
+    background-image: url(../Imagenes/logoempresa.jpg);
     background-position: center;
     background-size: 35%;
     background-repeat: no-repeat;
@@ -835,7 +835,7 @@ body::-webkit-scrollbar-track {
 }
 
 .manito{
-    background-image: url(Imagenes/manito.png);
+    background-image: url(../Imagenes/manito.png);
     width: 50px;
     height: 50px;
     background-size: cover;
@@ -901,21 +901,6 @@ body::-webkit-scrollbar-track {
     }
 }
 
-/* .flechaUp {
-    background-image: url(Imagenes/flecha\ scroll.png);
-    width: 50px;
-    height: 50px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 9;
-    position: relative;
-    filter: opacity(0%);
-    transform: rotate(180deg) translateY(-50px);
-    animation: flechaUpEstirada 3s ease-out 2s infinite;
-    font-size: 20px;
-} */
-
 @keyframes flechaUpEstirada {
     0%{
         filter: opacity(100%);
@@ -924,19 +909,6 @@ body::-webkit-scrollbar-track {
         transform: rotate(180deg) translateY(75px);
     }
 }
-/* .flechaDown {
-    background-image: url(Imagenes/flecha\ scroll.png);
-    width: 50px;
-    height: 50px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 9;
-    position: relative;
-    filter: opacity(0%);
-    transform: translateY(-50px);
-    animation: flechaDownEstirada 3s ease-out 5s infinite;
-} */
 
 @keyframes flechaDownEstirada {
     0%{
@@ -962,8 +934,6 @@ body::-webkit-scrollbar-track {
     gap: 2.5px;
 }
 
-
-
 .resultadosOpcion2 {
     width: 65%;
     display: none;
@@ -977,43 +947,6 @@ body::-webkit-scrollbar-track {
     position: relative;
     gap: 2.5px;
 }
-
-
-
-/* .resultados3,.resultados4{
-    width: 50%;
-    height: 25%;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 20px;
-    margin: 15px;
-    border:none;
-    border: .5px solid white;
-    background-color: var(--blanco);
-} */
-/* #actual1,
-#futuro1 {
-    padding: 0 10px;
-    border-radius: 10px;
-}
-
-#actual3,
-#futuro3 {
-    padding: 0 10px;
-    border-radius: 10px;
-}
-
-#actual4,
-#futuro4 {
-    margin-top: 5px;
-}
-
-#actual2,
-#futuro2 {
-    margin: 15px 5px;
-} */
 
 .actual1,
 .actual2,
@@ -1106,12 +1039,10 @@ body::-webkit-scrollbar-track {
 
 @keyframes aparece {
     0% {
-        /* transform: translateX(-100%); */
         filter: opacity(0%);
     }
 
     100% {
-        /* transform: translateX(0); */
         filter: opacity(100%);
     }
 }
@@ -1123,7 +1054,6 @@ body::-webkit-scrollbar-track {
 @keyframes irse {
     
     100% {
-        /* transform: translateX(100%); */
         filter: opacity(0%);
     }
 }
@@ -1174,7 +1104,6 @@ body::-webkit-scrollbar-track {
     background:var(--fondoGrisLinear);
     border-radius: 20px;
     margin-top: 20px;
-    /* animation: moverIndicacion 1.5s linear .5s infinite alternate-reverse; */
     animation: ondaBoton 1s linear .5s infinite;
 }
 
@@ -1290,12 +1219,6 @@ body::-webkit-scrollbar-track {
     .actual4{
         margin: 0;
     }
-
-    /* #actual1,#actual3,#actual4,#futuro1,#futuro3{
-        margin: 5px 0;
-    } */
-
-
 
     .mensaje2 {
         display: none;
