@@ -193,25 +193,26 @@ const definirPosicion = (sel, val, valorSel, pos) => {
             return diaRango
         }
     
-        let rutaObtenida
+        let rutaObtenida;
 
-        const definirFeriado = (fechaN, mesN)=> {
-            if(fecha == fechaN && mes == mesN) 
-            // feriado = true;
-            tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo `;
-            rutaObtenida = obtenerDiaRuta(0);
-            console.log('Es feriado')
+        let tipoDeDia;
+
+        const definirDia = (fecha, mes, diaX, mesX)=> {
+            tipoDeDia = (fecha == diaX && mes == mesX) ? 'feriado' : 'normal';
+            switch (tipoDeDia) {
+                case 'feriado':
+                    tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo `;
+                    rutaObtenida = obtenerDiaRuta(0); console.log('feriado')
+                    break;
+                case 'normal':
+                    tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
+                    rutaObtenida = obtenerDiaRuta(dia);console.log('normal')
+                    break;  
+            }
         }
 
-        definirFeriado(3, 7)
-    
-        // if ((fecha == 19 || fecha == 20) && (mes == 5)) {
-            
-        //     if(feriado){
-                
-        //     }
-        // }
-    
+        definirDia (fecha, mes, 7, 7)
+
         if((fecha == 27) && (mes == 4)) {
             feriadoPrevio = true; 
             rutaObtenida = obtenerDiaRuta(dia);
@@ -224,22 +225,20 @@ const definirPosicion = (sel, val, valorSel, pos) => {
             tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día sábado `;
         }
     
-        else if ((fecha == 7) && (mes == 3)) {
-            feriado = true;
-            rutaObtenida = obtenerDiaRuta(0);
-            tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} santo: Circulación como día domingo`;
+        // else if ((fecha == 7) && (mes == 3)) {
+        //     feriado = true;
+        //     rutaObtenida = obtenerDiaRuta(0);
+        //     tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} santo: Circulación como día domingo`;
     
-        }
-    
-    
-        else 
-        {tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
-            // Aqui definimos el array dependiendo el dia de la semana
-        rutaObtenida = obtenerDiaRuta(dia);
-        feriado = false;
-        semiFeriado = false;
-        feriadoPrevio = false;
-        } 
+        // }
+        // else 
+        // {tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
+        //     // Aqui definimos el array dependiendo el dia de la semana
+        // rutaObtenida = obtenerDiaRuta(dia);
+        // feriado = false;
+        // semiFeriado = false;
+        // feriadoPrevio = false;
+        // } 
         
         //funcion para crear los globos de resultados
     
