@@ -42,7 +42,7 @@ let titulo = document.getElementById('titulo');
 let resolucion = document.documentElement.clientWidth;
 
 
-botonDeCambio.addEventListener('click', function () {
+botonDeCambio.addEventListener('click',  ()=> {
     $('.menu2').css('display', 'flex');
     $('.origen').css('display', 'flex');
     $('.botonDeCambio2').css('display', 'flex');
@@ -54,7 +54,7 @@ botonDeCambio.addEventListener('click', function () {
     linea2.textContent = '';
 })
 
-botonDeCambio2.addEventListener('click', function () {
+botonDeCambio2.addEventListener('click', ()=> {
     $('.menu2').css('display', 'none');
     $('.origen').css('display', 'none');
     $('.botonDeCambio2').css('display', 'none');
@@ -194,24 +194,24 @@ const definirPosicion = (sel, val, valorSel, pos) => {
         }
     
         let rutaObtenida;
-
         let tipoDeDia;
 
-        const definirDia = (fecha, mes, diaX, mesX)=> {
-            tipoDeDia = (fecha == diaX && mes == mesX) ? 'feriado' : 'normal';
+        const definirDia = (fecha, mes)=> {
+            tipoDeDia = (fecha == 21 && mes == 7) ? 'feriado' : 'normal';
             switch (tipoDeDia) {
                 case 'feriado':
                     tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo `;
-                    rutaObtenida = obtenerDiaRuta(0); console.log('feriado')
+                    rutaObtenida = obtenerDiaRuta(0);
                     break;
                 case 'normal':
-                    tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
-                    rutaObtenida = obtenerDiaRuta(dia);console.log('normal')
+                    tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`;
+                    rutaObtenida = obtenerDiaRuta(dia);
                     break;  
             }
+            return tipoDeDia;
         }
 
-        definirDia (fecha, mes, 7, 7)
+        definirDia (fecha, mes)
 
         if((fecha == 27) && (mes == 4)) {
             feriadoPrevio = true; 
@@ -225,12 +225,6 @@ const definirPosicion = (sel, val, valorSel, pos) => {
             tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día sábado `;
         }
     
-        // else if ((fecha == 7) && (mes == 3)) {
-        //     feriado = true;
-        //     rutaObtenida = obtenerDiaRuta(0);
-        //     tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} santo: Circulación como día domingo`;
-    
-        // }
         // else 
         // {tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
         //     // Aqui definimos el array dependiendo el dia de la semana
@@ -286,9 +280,6 @@ const definirPosicion = (sel, val, valorSel, pos) => {
             indiceDeBusqueda = listaDiferencias.indexOf(anteriorPasado);
         }
     
-        
-    
-    
         function contruirGlobos(ruta, contPadre, contHijo) {
             if (ruta.length == 1) {
                 const resultado = document.createElement('DIV')
@@ -315,7 +306,6 @@ const definirPosicion = (sel, val, valorSel, pos) => {
             }
             else{
                 for (i = 0; i < ruta.length; i++) {
-    
                     const resultado = document.createElement('DIV')
                     resultado.classList.add('resultados')
                     const fondo = document.createElement('SPAN');
