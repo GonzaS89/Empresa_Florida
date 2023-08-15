@@ -283,7 +283,9 @@ body::-webkit-scrollbar-track {
     display: flex;
 }
 
-.menu, .menu2 {
+.menu, .menu2, 
+.menu3, .menu4, 
+.menu5 {
     position: relative;
     display: flex;
     width: 300px;
@@ -291,7 +293,17 @@ body::-webkit-scrollbar-track {
     overflow: hidden;
 }
 
-.menu::after{
+.menu, .menu2{
+    box-shadow: 5px 5px 1px;
+}
+
+.menu3, .menu4, .menu5 {
+    margin-top:5px;
+}
+
+.menu::after , .menu2::after, 
+.menu3::after, .menu4::after, 
+.menu5::after {
     content:'\025be';
     display: flex;
     justify-content: center;
@@ -303,22 +315,6 @@ body::-webkit-scrollbar-track {
     top: 0;
     right: 0;
     text-align: center;
-    font-size:25px;
-    border-radius: 10px;
-    pointer-events: none;
-}
-
-.menu2::after{
-    content:'\025be';
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    width: 50px;
-    height: 60px;
-    background:var(--fondoGrisLinear);
-    position: absolute;
-    top: 0;
-    right: 0;
     font-size:25px;
     border-radius: 10px;
     pointer-events: none;
