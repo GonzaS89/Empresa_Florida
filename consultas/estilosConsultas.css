@@ -338,7 +338,7 @@ select {
     font-size: 13px;
 }
 
-select:active{
+select:focus{
     outline:none;
 }
 
