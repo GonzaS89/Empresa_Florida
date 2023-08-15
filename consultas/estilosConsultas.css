@@ -288,13 +288,13 @@ body::-webkit-scrollbar-track {
 .menu5 {
     position: relative;
     display: flex;
-    width: 300px;
+    width: 320px;
     justify-content: center;
     overflow: hidden;
 }
 
 .menu, .menu2{
-    box-shadow: 5px 5px 1px;
+    box-shadow: 10px px 1px rgb(12, 12, 60);
 }
 
 .menu3, .menu4, .menu5 {
