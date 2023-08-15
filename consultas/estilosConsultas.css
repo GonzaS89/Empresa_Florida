@@ -12,6 +12,9 @@
     --fuentePrincipal: 'Nunito', sans-serif;
     --fuenteSec: 'Dosis', sans-serif;
     --fuenteTer:'Titan One', cursive;
+    --fuente4ta :'Signika Negative', sans-serif;
+
+
 
 }
 
@@ -285,23 +288,58 @@ body::-webkit-scrollbar-track {
     display: flex;
     width: 300px;
     justify-content: center;
+    overflow: hidden;
+}
+
+.menu::after{
+    content:'\025be';
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 50px;
+    height: 60px;
     background:var(--fondoGrisLinear);
-    border: 2px solid black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    font-size:25px;
+    border-radius: 10px;
+}
+
+.menu2::after{
+    content:'\025be';
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 50px;
+    height: 60px;
+    background:var(--fondoGrisLinear);
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size:25px;
+    border-radius: 10px;
 }
 
 select {
-    font-family: var(--fuenteSec);
+    font-family: var(--fuente4ta);
     font-size: 15px;
     border: none;
     text-align: center;
     width: 320px;
     /* background-color: rgb(65, 117, 181);  */
-    border-radius: 30px;
     box-shadow: 0 2px 5px var(--rojo);
     font-weight: bold;
     height: 60px;
     text-align-last: center;
-    margin: 5px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+select:active{
+    outline:none;
 }
 
 
