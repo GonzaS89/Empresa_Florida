@@ -287,15 +287,16 @@ body::-webkit-scrollbar-track {
 .menu3, .menu4, 
 .menu5 {
     position: relative;
-    display: flex;
     width: 320px;
-    height: 60px;
-    justify-content: center;
+    height: 80px;
+    overflow: hidden;
+    border: 1px solid;
+    border-radius: 15px;
     
 }
 
 .menu, .menu2{
-    box-shadow: 0px 10px 1px rgb(12, 12, 60);
+    box-shadow: 7.5px 7.5px 1px rgb(12, 12, 60);
 }
 
 .menu3, .menu4, .menu5 {
@@ -306,9 +307,7 @@ body::-webkit-scrollbar-track {
 .menu3::after, .menu4::after, 
 .menu5::after {
     content:'\025be';
-    display: flex;
-    justify-content: center;
-    align-items:center;
+    display: table-cell;
     width: 50px;
     height: 60px;
     background:var(--fondoGrisLinear);
@@ -317,18 +316,18 @@ body::-webkit-scrollbar-track {
     right: 0;
     text-align: center;
     font-size:25px;
+    padding-top: 20px;
     border-radius: 10px;
     pointer-events: none;
+    margin: 0;
 }
 
 select {
     font-family: var(--fuente4ta);
     font-size: 15px;
     border: none;
-    text-align: center;
     width: 350px;
-    /* background-color: rgb(65, 117, 181);  */
-    box-shadow: 0 2px 5px var(--rojo);
+    height: 100%;
     font-weight: bold;
     height: 60px;
     text-align-last: center;
@@ -337,9 +336,7 @@ select {
     font-size: 13px;
 }
 
-select:focus{
-    outline:none;
-}
+select:focus{outline:none;}
 
 
 .origen,
