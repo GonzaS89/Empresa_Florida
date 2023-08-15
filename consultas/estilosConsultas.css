@@ -305,6 +305,7 @@ body::-webkit-scrollbar-track {
     text-align: center;
     font-size:25px;
     border-radius: 10px;
+    pointer-events: none;
 }
 
 .menu2::after{
@@ -320,6 +321,7 @@ body::-webkit-scrollbar-track {
     right: 0;
     font-size:25px;
     border-radius: 10px;
+    pointer-events: none;
 }
 
 select {
