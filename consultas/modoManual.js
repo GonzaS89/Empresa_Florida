@@ -96,6 +96,7 @@ function busquedaManual() {
         $('.capitalDestino').css('color', 'var(--black');
         $('.capitalDestino').css('transform', 'scale(1)');
         $(botonOrigenCapital).css('marginBottom', '5px')
+        $(botonCapitalDestino).css('marginBottom', '5px')
         opcionbase4.selected = true;
         opcionbase5.selected = true;
     })

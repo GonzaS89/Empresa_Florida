@@ -125,6 +125,7 @@ body::-webkit-scrollbar-track {
     margin: 0;
     font-weight: 600;
     font-family: var(--fuenteSec);
+    text-transform: uppercase;
 }
 
 #dia {
@@ -349,7 +350,6 @@ select {
 
 select:focus{outline:none;}
 
-
 .origen,
 .menu2,
 .botonDeCambio2 {
@@ -372,7 +372,22 @@ select:focus{outline:none;}
     background-repeat: no-repeat;
     background-position: center;
     transform: rotate(90deg);
-    animation: rotar 1s linear;
+    animation: rotar 2s linear 1s forwards;
+}
+
+@keyframes rotar{
+   0%{
+    transform: rotate(90deg);
+   }
+   50%{
+    transform: scale(1.1) rotate(90deg) ;
+   }
+   75%{
+    transform: rotate(0deg);
+   }
+   100%{
+    transform: rotate(90deg);
+   }
 }
 
 #botonDeCambio:active {
@@ -737,6 +752,7 @@ select:focus{outline:none;}
     box-shadow: 2px black;
     color: grey;
     text-transform: uppercase;
+    border: 2px solid white;
 }
 
 
