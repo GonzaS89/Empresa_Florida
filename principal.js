@@ -165,6 +165,8 @@ navSmall.addEventListener('click', ()=> {
 })
 
 let ancho = innerWidth;
+const botonPortada = document.querySelector('.textoPor_boton');
+if(ancho > 500) $(botonPortada).css('pointerEvents', 'none');
 const portadaCont = document.querySelector('.portada-cont')
 const headerSmall = document.querySelector('.header_small')
 const headerLarge = document.querySelector('.header_large')
