@@ -27,7 +27,6 @@ function busquedaManual() {
     let mensajeError = document.getElementById('mensajeError')
     let linea2 = document.getElementById('linea2');
     let linea3 = document.getElementById('linea3');
-    let linea4 = document.getElementById('linea4');
     let tituloResultado = document.getElementById('tituloResultado');
     let nombreServicioManual;
     let recorridoServicioManual;
@@ -70,6 +69,10 @@ function busquedaManual() {
         $('#selector5').css('display', 'none');
         $('#ingHora').css('display', 'none');
         $('.aclaracion').css('display', 'none');
+        $('.menu3').css('display', 'none');
+        $('.menu5').css('display', 'none');
+        $('.menu6').css('display', 'none');
+        $('.menu4').css('display', 'none');
         opcionbase3.selected = true;
         opcionbase4.selected = true;
         opcionbase5.selected = true;
@@ -80,6 +83,10 @@ function busquedaManual() {
         $('#selector3').css('display', 'flex');
         $('#selector5').css('display', 'flex');
         $('#selector6').css('display', 'flex');
+        $('.menu3').css('display', 'flex');
+        $('.menu5').css('display', 'flex');
+        $('.menu6').css('display', 'flex');
+        $('.menu4').css('display', 'none');
         $('#ingHora').css('display', 'flex');
         $('#selector4').css('display', 'none');
         $('.origenCapital').css('background', 'var(--fondoAzulLinear');
@@ -88,6 +95,7 @@ function busquedaManual() {
         $('.capitalDestino').css('background', 'var(--fondoGrisLinear');
         $('.capitalDestino').css('color', 'var(--black');
         $('.capitalDestino').css('transform', 'scale(1)');
+        $(botonOrigenCapital).css('marginBottom', '5px')
         opcionbase4.selected = true;
         opcionbase5.selected = true;
     })
@@ -98,12 +106,17 @@ function busquedaManual() {
         $('#selector6').css('display', 'flex');
         $('#ingHora').css('display', 'flex');
         $('#selector3').css('display', 'none');
+        $('.menu3').css('display', 'none');
+        $('.menu4').css('display', 'flex');
+        $('.menu5').css('display', 'flex');
+        $('.menu6').css('display', 'flex');
         $('.capitalDestino').css('background', 'var(--fondoAzulLinear)');
         $('.capitalDestino').css('color', 'white');
         $('.capitalDestino').css('transform', 'scale(1.1)');
         $('.origenCapital').css('background', 'var(--fondoGrisLinear');
         $('.origenCapital').css('color', 'var(--black');
         $('.origenCapital').css('transform', 'scale(1)');
+        $(botonCapitalDestino).css('marginBottom', '10px')
         opcionbase3.selected = true;
         opcionbase5.selected = true;
     })

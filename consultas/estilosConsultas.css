@@ -287,16 +287,13 @@ body::-webkit-scrollbar-track {
 .menu3, .menu4, 
 .menu5 {
     position: relative;
-    width: 320px;
-    height: 80px;
+    width: 300px;
+    height: 60px;
     overflow: hidden;
     border: 1px solid;
     border-radius: 15px;
-    
-}
-
-.menu, .menu2{
     box-shadow: 7.5px 7.5px 1px rgb(12, 12, 60);
+    
 }
 
 .menu3, .menu4, .menu5 {
@@ -326,7 +323,7 @@ select {
     font-family: var(--fuente4ta);
     font-size: 15px;
     border: none;
-    width: 350px;
+    width: 300px;
     height: 100%;
     font-weight: bold;
     height: 60px;
@@ -415,6 +412,14 @@ select:focus{outline:none;}
     display: none;
 }
 
+.menu3,.menu4, .menu5{
+    display: none;
+}
+
+.menu5, .menu6{
+    margin-top:15px;
+}
+
 .botonesManual {
     display: flex;
     gap: 10px;
@@ -427,10 +432,11 @@ select:focus{outline:none;}
     font-family: var(--fuenteSec);
     height: 60px;
     width: 200px;
-    border-radius: 30px;
+    border-radius: 15px;
     font-size: 15px;
     font-weight: bold;
     background:var(--fondoGrisLinear);
+    box-shadow: 7.5px 7.5px 1px rgb(12, 12, 60);
 }
 
 /* .parpadeoBoton {
@@ -465,13 +471,16 @@ select:focus{outline:none;}
 #ingHora {
     display: none;
     height: 60px;
-    border-radius: 30px;
+    border-radius: 15px;
     margin-top: 5px;
     text-align: center;
     font-family: var(--fuenteSec);
     font-size: 15px;
     font-weight: bold;
+    box-shadow: 7.5px 7.5px 1px rgb(12, 12, 60);
 }
+
+#ingHora:focus{outline:none}
 
 #mensajeError {
     display: none;
@@ -1218,7 +1227,7 @@ select:focus{outline:none;}
         width: 85%;
     }
     .topside,.topside2{
-        width: 75%;
+        width: 320px;
     }
     #tituloResultado{
         font-size:25px;
