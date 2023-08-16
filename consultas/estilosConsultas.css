@@ -314,7 +314,7 @@ body::-webkit-scrollbar-track {
     right: 0;
     text-align: center;
     font-size:25px;
-    padding-top: 20px;
+    padding-top: 15px;
     border-radius: 10px;
     pointer-events: none;
     margin: 0;
