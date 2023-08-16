@@ -534,8 +534,7 @@ resultadoscont.addEventListener('touchmove', () => {
             scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
             scrollcont.children[0].classList.remove('manitoAnimacionArriba');
             scrollcont.children[0].classList.remove('manitoAnimacionCentro');
-        
-        resultadoscont.classList.replace('opacarFondo', 'normalizarFondo');
+            resultadoscont.classList.replace('opacarFondo', 'normalizarFondo');
     }
 })
 
@@ -544,11 +543,6 @@ resultadoscont.addEventListener('touchmove', () => {
 
 
 indicacioncont.addEventListener('click', () => {
-    // actual4.textContent = '';
-    // futuro4.textContent = '';
-    // $('.mensaje2').css('display', 'none')
-    // $('.resultados').css('display', 'none')
-    // $('.resultados2').css('display', 'none')
     opcionbase.selected = true;
     opcionbase2.selected = true;
     linea1.textContent = '';
