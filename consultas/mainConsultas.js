@@ -172,12 +172,12 @@ const definirPosicion = (sel, val, valorSel, pos) => {
     
         if (opcionbase2.selected == false) {
         ruta = todosTucumanDestino[posicion2 - 1]
-        linea2.textContent = selector2[posicion2].label;
+        linea2.textContent = `Hasta ${selector2[posicion2].label}`;
         }
         
         if (opcionbase.selected == false) {
         ruta = todosDestinoTucuman[posicion - 1];
-        linea2.textContent = selector[posicion].label;
+        linea2.textContent = `Desde ${selector[posicion].label}`
         }
         
     
@@ -224,21 +224,7 @@ const definirPosicion = (sel, val, valorSel, pos) => {
             rutaObtenida = obtenerDiaRuta(6);
             tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día sábado `;
         }
-    
-        // else 
-        // {tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
-        //     // Aqui definimos el array dependiendo el dia de la semana
-        // rutaObtenida = obtenerDiaRuta(dia);
-        // feriado = false;
-        // semiFeriado = false;
-        // feriadoPrevio = false;
-        // } 
-        
-        //funcion para crear los globos de resultados
-    
-        // Aqui extraemos del array de arriba los salidaes de cada horario y lo agregamos a la lista del dia
-    
-        
+       
             function obtenerLista(x) {
                 for (i = 0; i < x.length; i++) listaDelDia.push(x[i].salida);
                 // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
