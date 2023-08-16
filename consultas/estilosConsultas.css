@@ -8,6 +8,7 @@
     --fondoOpaco: #5b111157;
     --fondoAzul:rgb(69,95,244);
     --fondoAzulLinear: linear-gradient(180deg, rgba(69,95,244,1) 2%, rgba(29,60,250,1) 29%, rgba(20,47,210,1) 81%);
+    --fondoAzulFuerte : rgb(12, 12, 60);
     --fondoGrisLinear: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(235, 226, 226) 15%, rgb(238, 238, 238) 84%);
     --fuentePrincipal: 'Nunito', sans-serif;
     --fuenteSec: 'Dosis', sans-serif;
@@ -133,7 +134,6 @@ body::-webkit-scrollbar-track {
 
 #mes {
     font-size: 20px;
-    background-color: var(--azul);
     height: 20%;
     border-radius: 10px;
 }
@@ -228,7 +228,8 @@ body::-webkit-scrollbar-track {
 #minutos,
 #mes{
     width: 100%;
-    background: var(--fondoAzulLinear);
+    background: var(--fondoAzulFuerte);
+    padding: 5px;
 }
 
 @keyframes zoomear{
@@ -465,7 +466,7 @@ select:focus{outline:none;}
 }
 
 .botonActivo {
-    background:var(--fondoAzulLinear);
+    background:rgb(12, 12, 60);
 }
 
 #ingHora {
@@ -515,17 +516,18 @@ select:focus{outline:none;}
 
 #busquedaManual,
 #busquedaAuto {
-    background:var(--fondoAzulLinear);
-    color: var(--blanco);
+    background:rgb(12, 12, 60);
+    border: 2px solid white;
     height: 50px;
     width: 300px;
-    padding: px;
-    border-radius: 25px;
+    color: white;
+    border-radius: 15px;
     font-size: 15px;
     font-weight: bold;
     font-family: var(--fuenteSec);
     text-align-last: center;
     margin-top: 10px;
+    text-transform: uppercase;
 }
 
 
@@ -701,12 +703,13 @@ select:focus{outline:none;}
     height: 60px;
     width: 150px;
     background: var(--fondoGrisLinear);
-    border-radius: 30px;
+    border-radius: 15px;
     font-family: var(--fuenteSec);
     font-size: 15px;
     font-weight: bold;
     box-shadow: 2px black;
     color: grey;
+    text-transform: uppercase;
 }
 
 
@@ -722,11 +725,11 @@ select:focus{outline:none;}
 @keyframes mover {
     0%{
         transform: scale(1.05);
-        background: var(--fondoAzulLinear);
+        background: var(--fondoAzulFuerte);
     }
     100%{
         transform: scale(1);
-        background: var(--fondoAzulLinear);
+        background: var(--fondoAzulFuerte);
         
         
     }
