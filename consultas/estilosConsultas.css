@@ -1393,7 +1393,7 @@ select:focus{outline:none;}
     text-align: center;
 }
 
-.footer_creditos_consultas a {
+.footer_creditos-consultas a {
     font-size: 13px;
     font-weight: 600;
     text-decoration:underline;
