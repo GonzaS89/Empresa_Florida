@@ -91,7 +91,7 @@ body::-webkit-scrollbar-track {
     border-radius: 50px;
     margin: 30px auto;
     padding: 25px 0;
-    height: 100vh;
+    position: relative;
 }
 
 .contenedor {
