@@ -385,7 +385,7 @@ const definirPosicion = (sel, val, valorSel, pos) => {
                     else if (listaDiferencias[i] <= 5 && listaDiferencias[i] > 0) {
                         estadoServicio.textContent = 'Iniciaron sus recorridos hace menos de 5 minutos'
                     }
-                    else if (Math.trunc(listaDiferencias[i]) == 0) {
+                    else if ((Math.trunc(listaDiferencias[i])) == 0) {
                         estadoServicio.textContent = 'Están iniciando sus recorridos'
                     }
                     recorridoServicio.textContent = `1° Recorrido: ${rutaObtenida[i].recorrido}`
@@ -425,7 +425,7 @@ const definirPosicion = (sel, val, valorSel, pos) => {
                     if (listaDiferencias[i] <= 5 && listaDiferencias[i] > 2) {
                         estadoServicio.textContent = 'Inició su recorrido hace menos de 5 minutos'
                     }
-                    if (Math.abs(listaDiferencias[i]) >= 0 && listaDiferencias[i] <= 2) {
+                    if (Math.abs(listaDiferencias[i]) <= 2){
                         estadoServicio.textContent = 'Está iniciando su recorrido'
                     }
                     recorridoServicio.textContent = `Recorrido: ${rutaObtenida[i].recorrido}`;
@@ -507,7 +507,7 @@ const definirPosicion = (sel, val, valorSel, pos) => {
                 }
             }
         }
-    
+        console.log(listaDiferencias)
         $('.resultados').css('display', 'flex');
         $('.mensaje2').css('display', 'flex');
         if(mensaje2.classList.contains('mensajeIrse')){
