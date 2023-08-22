@@ -59,10 +59,6 @@ body::-webkit-scrollbar-track {
     background: orange;        /* color of the tracking area */
 }
 
-.body{
-    height: 100vh;
-}
-
 /* #logo-fondo{
     background-image: url(Imagenes/Logo_sinfondo.png);
     height: 100%;
@@ -95,6 +91,7 @@ body::-webkit-scrollbar-track {
     border-radius: 50px;
     margin: 30px auto;
     padding: 25px 0;
+    height: 100vh;
 }
 
 .contenedor {
