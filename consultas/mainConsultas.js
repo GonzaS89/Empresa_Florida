@@ -321,7 +321,7 @@ const definirPosicion = (sel, val, valorSel, pos) => {
     
         function irAlObjeto() {
             let a = resultadoscont.children[indiceDeBusqueda];
-            a.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            a.scrollIntoView({ behavior: 'auto', block: 'center' });
         };
     
         resultadoscont.children[indiceDeBusqueda].classList.add('resaltado');
@@ -515,10 +515,10 @@ const definirPosicion = (sel, val, valorSel, pos) => {
         }else{
             mensaje2.classList.add('mensajeAparece')
         }
-        
-        setTimeout(() => {
-            irAlObjeto()
-        }, 750);
+        irAlObjeto()
+        // setTimeout(() => {
+            
+        // }, 1);
     })
 
 
