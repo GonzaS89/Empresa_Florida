@@ -420,7 +420,7 @@ function busquedaManual() {
 
             function irAlObjeto() {
                 let a = resultadoscont.children[(indiceDeBusquedaManual)];
-                a.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                a.scrollIntoView({ behavior: 'auto', block: 'center' });
             };
             resultadoscont.children[indiceDeBusquedaManual].classList.add('resaltado');
             resultadoscont.classList.add('opacarFondo');
