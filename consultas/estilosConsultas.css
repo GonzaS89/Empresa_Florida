@@ -827,16 +827,16 @@ select:focus{outline:none;}
 } */
 
 .resaltado{
-    animation: escalar 1s linear alternate-reverse infinite;
+    animation: escalar .75s linear alternate-reverse infinite;
 }
 .normalizarResaltado{
     animation: normalizarResaltado .5s linear forwards;
 }
 .opacar{
-    animation: opacar 1s linear .5s forwards;
+    animation: opacar .5s linear .5s forwards;
 }
 .opacarFondo{
-    animation: opacarFondo 1s .5s forwards;
+    animation: opacarFondo .5s .5s forwards;
 }
 
 .normalizarFondo{
@@ -864,7 +864,7 @@ select:focus{outline:none;}
 @keyframes opacar {
     100%{
         filter: opacity(25%);
-        transform: scale(.8);
+        transform: scale(.9);
     }
 }
 
