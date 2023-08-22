@@ -1380,14 +1380,16 @@ select:focus{outline:none;}
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(49, 1, 104);
-    font-family: var(--fuenteSec);
-    font-size: 13px;
+    background-color: rgb(12, 12, 60);
+    font-family: var(--fuente4ta);
+    font-size: 12px;
     height: 60px;
     font-weight: bold;
     text-transform: uppercase;
     color: white;
     width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
 .footer_creditos a {
