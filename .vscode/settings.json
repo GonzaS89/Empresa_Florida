@@ -1,13 +1,8 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     "editor.fontFamily": "JetBrains Mono ExtraBold,Inconsolata SemiBold,Consola,DejaVu Sans Mono,ProggyCrossed,CaskaydiaCove Nerd Font Mono,jetBrains Mono",
-=======
-    "editor.fontFamily": "CaskaydiaCove Nerd Font Mono,jetBrains Mono",
->>>>>>> 5e339923ff9a0e8116d0665ee394d86cca55b4ff
-    "livePreview.defaultPreviewPath": "/index.html"
-=======
+
     "livePreview.defaultPreviewPath": "/index.html",
     "editor.fontFamily": "CaskaydiaCove Nerd Font Mono, Mono,Victor Mono,CaskaydiaCove Nerd Font Mono, CaskaydiaCove Nerd Font,jetBrains Mono"
->>>>>>> cambios
+
 }

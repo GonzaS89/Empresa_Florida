@@ -1068,7 +1068,7 @@ const horariosDSMAl = [
     {
         "nombre": "22:30",
         "salida": 22.3,
-        "recorrido": "Terminal → Banda R.S. → Alderetes → Talar → Florida → Esquina Lastra → Fortin → B° La Cancha → Colonia 4"
+        "recorrido": "Terminal → Comisaria 11 → Autopista → Alderetes → Talar → Florida → Esquina Lastra → Fortin → B° La Cancha → Colonia 4"
     },
 
 ]
@@ -1731,7 +1731,7 @@ const posseTerminalD = [
     {
         "nombre": "16:10",
         "salida": 16.1,
-        "recorrido": "Dispensario → Fila de la orilla → Llona → Cevil Pozo → Banda R.S. → Terminal"
+        "recorrido": "Plaza → Fila de la orilla → Llona → Cevil Pozo → Banda R.S. → Terminal"
     },
     {
         "nombre": "17:10",
@@ -1742,7 +1742,7 @@ const posseTerminalD = [
         "nombre": "18:05",
         "salida": 18.05,
         "recorrido": "Dispensario → Fila de la orilla → Llona → Cevil Pozo → Banda R.S. → Terminal"
-    },
+    }
 ];
 const terminalPosseLaV = [
     {
@@ -2325,6 +2325,11 @@ const ralosTerminalD = [
         "nombre": "20:00",
         "salida": 20,
         "recorrido": "Lolita → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
+    },
+    {
+        "nombre": "21:10",
+        "salida": 21.1,
+        "recorrido": "Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
     },
     {
         "nombre": "21:30",
