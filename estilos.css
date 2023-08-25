@@ -419,14 +419,13 @@ a:hover{
 
 .portada-imagen2 img {
     width: 100%;
-    min-width: 400px;
     filter: blur(.2px);
     /* filter: brightness(65%) blur(1px); */
 }
 
 @media (max-width: 600px){
     .portada-imagen2 img {
-        transform: scale(1.3);
+        transform: scale(1.25);
     }
 }
 
