@@ -379,21 +379,19 @@ a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300%;
+    width: 200%;
     height: 100%;
-    /* animation: a 60s ease-in-out 1s infinite; */
+    transform: translateX(-50%);
+    /* animation: a 10s ease-in-out 1s infinite; */
     
 }
 
 @keyframes a {
-    25% {
-        transform: translateX(-33.3%);
+    0% {
+        transform: translateX(0%);
     }
     50% {
-        transform: translateX(-66.6%);
-    }
-    75%{
-        transform: translateX(-33.3%);
+        transform: translateX(-50%);
     }
     100% {
         transform: translateX(0);
@@ -402,6 +400,13 @@ a:hover{
 
 .portada-imagen {
     display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.portada-imagen2 {
+    display: flex;
+    position: relative;
     width: 100%;
     height: 100%;
 }
@@ -412,6 +417,18 @@ a:hover{
     /* filter: brightness(65%) blur(1px); */
 }
 
+.portada-imagen2 img {
+    width: 100%;
+    min-width: 400px;
+    filter: blur(.2px);
+    /* filter: brightness(65%) blur(1px); */
+}
+
+@media (max-width: 600px){
+    .portada-imagen2 img {
+        transform: scale(1.3);
+    }
+}
 
 
 
@@ -436,9 +453,10 @@ a:hover{
     text-align: center;
     color: white;
     font-family: var(--fuenteTer);
-    height: 90vh;
+    height: 45vh;
     width: 100%;
     font-weight: bold;
+    position: absolute;
 }
 
 .textoPor_texto {
