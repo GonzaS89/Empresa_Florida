@@ -381,7 +381,7 @@ a:hover{
     align-items: center;
     width: 200%;
     height: 100%;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
     /* animation: a 10s ease-in-out 1s infinite; */
     
 }
@@ -409,6 +409,7 @@ a:hover{
     position: relative;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .portada-imagen img {
@@ -417,19 +418,186 @@ a:hover{
     /* filter: brightness(65%) blur(1px); */
 }
 
-.portada-imagen2 img {
+.portada-imagen2-img img {
     width: 100%;
-    filter: blur(.2px);
-    /* filter: brightness(65%) blur(1px); */
+    height: 100%;
+    min-width: 380px;
+    filter: brightness(85%);
 }
 
-@media (max-width: 600px){
-    .portada-imagen2 img {
-        transform: scale(1.25);
+.excursion_contenido{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:30%;
+    width: 100%;
+    background-color:rgba(255, 255, 255, 0.794);
+    position:absolute; 
+    bottom: 0;
+    line-height: 1.5;
+    animation: sas 1.5s forwards;
+}
+
+@keyframes sas {
+    0% {
+        transform:translateY(100%)
+    }
+}
+
+.excursion_img{
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    width:50%
+}
+.excursion_contenido img {
+    height: 250px;
+}
+
+.excursion_texto {
+    flex-basis: 50%;
+    font-family: var(--fuenteSec);
+    text-shadow: .5px .5px 0 grey;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 25px;
+    padding: 50px;
+}
+
+.excursion_texto span {
+    background-color:var(--fondoAzul);
+    color: white;
+    padding:10px;
+    border-radius: 15px;
+    text-shadow: 1px 1px 0 black;
+    cursor: pointer;
+}
+
+.botonMasFotos_contenedor{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    transform: scale(0);
+    animation: entrarBoton 1s 1.5s forwards;
+}
+
+@keyframes entrarBoton {
+    100%{
+        transform: scale(1)
+    }
+}
+
+.botonMasFotos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100px;
+    height:35px;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid white;
+    text-transform: uppercase;
+    background-color: rgba(1, 1, 1, 0.848);
+}
+.botonMasFotos img{
+    width: 20px;
+    height: 20px;
+}
+
+.fotosExcursion_contenedor {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color:rgba(9, 9, 9, 0.963);
+    z-index: 50;
+}
+
+.tira_contenedor {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+    background-color:transparent;
+}
+
+.tira{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500%;
+    height: 100%;
+    transform: translateX(-100%);
+}
+
+.tira img{
+    width: 100%;
+    height: 100%;
+}
+
+
+@media (max-width: 1400px){
+    .excursion_contenido img {
+        height: 200px;
+    }
+    .excursion_texto {
+        font-size: 20px;
+        padding: 50px;
+    }
+    .excursion_texto span {
+        text-shadow: 1px 1px 0 black;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 1100px){
+    .excursion_contenido img {
+        height: 170px;
+    }
+    /* .excursion_texto {
+        font-size: 15px;
+        padding: 10px;
+    } */
+    .excursion_texto span {
+        text-shadow: 1px 1px 0 black;
+        cursor: pointer;
+    }
+}
+
+@media (max-width:600px){
+    .excursion_contenido img {
+        height: 80px;
+    }
+    .excursion_texto {
+        font-size: 12px;
+        padding: 0 5px;
+    }
+    .excursion_texto span {
+        padding: 5px;
     }
 }
 
 
+@media (max-width: 600px){
+    .excursion_contenido img {
+        height: 80px;
+    }
+    .excursion_texto {
+        font-size: 11px;
+        padding: 0 5px;
+    }
+    .portada-imagen2 img {
+        transform: scale(1.35);
+    }
+}
 
 .textoPortada{
     position: absolute;
@@ -998,7 +1166,7 @@ GALERIA */
     display: flex;
     position: absolute;
     width: 80%;
-    height: 60%;
+    height: 10%;
    background-image: url(../Imagenes/recuerdos5.jpg);
    background-size: contain;
    background-repeat: no-repeat;
@@ -1172,9 +1340,9 @@ GALERIA */
         height: 110%;
         background-size: 50%;
     }
-    .fotoAmpliada {
+    /* .fotoAmpliada {
         height: 50%;
-    }
+    } */
     .galeria ul {
         gap: 5px;
     }
