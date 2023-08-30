@@ -106,7 +106,7 @@ body::-webkit-scrollbar-track {
     /* background-color: var(--rojo2); */
     align-items: center;
     justify-content: center;
-    margin: 0 auto 20px;
+    margin: 10px auto 20px;
     width: 100%;
     height: 150px;
     gap: 20px;
@@ -238,6 +238,46 @@ body::-webkit-scrollbar-track {
     padding: 5px;
 }
 
+@media(max-height: 570px){
+    .header{
+       height: 100px;
+       margin-bottom: 10px;
+    }
+    .logo{
+        width: 100px;
+        height: 100px;
+        animation: rellenarSmall 3s ease .5s forwards;
+        transform: scale(0);
+        
+    }
+    @keyframes rellenarSmall{
+        0%{
+            height: 0;
+            width: 0;
+        }
+        75%{
+            transform: scale(1.1);
+        }
+    
+        100%{
+            transform: scale(1);
+            height: 100px;
+            width: 100px;
+            
+        }
+    }
+    #dia,#segundos,
+    #mes,#minutos{
+        font-size: 15px;
+    }
+    #fecha,#horas{
+        font-size: 50px;
+    }
+    #minutos, #mes{
+        padding: 3px;
+    }
+}
+
 @keyframes zoomear{
     0%{
         outline-style:groove
@@ -348,6 +388,25 @@ select {
     font-size: 13px;
 }
 
+@media (max-height: 570px){
+    .menu, .menu2, 
+.menu3, .menu4, 
+.menu5{
+    height:45px;
+    margin-bottom: -20px;
+}
+.menu::after , .menu2::after, 
+.menu3::after, .menu4::after, 
+.menu5::after{
+    height: 45px;
+}
+.destino,.origin{
+    margin-top: -20px;
+    height: 45px;
+}
+
+}
+
 select:focus{outline:none;}
 
 .origen,
@@ -373,6 +432,14 @@ select:focus{outline:none;}
     background-position: center;
     transform: rotate(90deg);
     animation: rotar 2s linear 1s forwards;
+}
+
+@media (max-height: 570px){
+    #botonDeCambio,
+#botonDeCambio2{
+    width: 55px;
+    height: 55px;
+}
 }
 
 @keyframes rotar{
@@ -430,6 +497,12 @@ select:focus{outline:none;}
     justify-content: center;
     flex-direction: column;
     border-radius: 10px;
+}
+
+@media (max-height: 570px){
+    .topside{
+        margin: 12px auto;
+    }
 }
 
 #selector3,
@@ -529,7 +602,7 @@ select:focus{outline:none;}
     text-transform: uppercase;
 }
 
-.botonesBusquedaCont {
+.botonesBusquedaCont, .botonesBusquedaCont2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -538,10 +611,9 @@ select:focus{outline:none;}
 
 .botonesBusquedaCont2 {
     display: none;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15px;
 }
+
+
 
 #busquedaManual,
 #busquedaAuto {
@@ -558,6 +630,17 @@ select:focus{outline:none;}
     margin-top: 10px;
     text-transform: uppercase;
     animation: acordeon 5s linear infinite 2s forwards;
+}
+
+@media (max-height: 570px){
+    .botonesBusquedaCont, .botonesBusquedaCont2{
+        margin:0;
+    }
+    #busquedaManual,
+    #busquedaAuto{
+        height: 40px;
+        font-size: 13px;
+    }
 }
 
 @keyframes acordeon {
@@ -717,7 +800,7 @@ select:focus{outline:none;}
     text-align: center;
 }
 
-.boton-cont {
+.boton-cont,.boton-cont2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -729,11 +812,9 @@ select:focus{outline:none;}
 
 .boton-cont2 {
     display: none;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    margin: -5px;
 }
+
+
 
 
 
@@ -753,6 +834,16 @@ select:focus{outline:none;}
     color: grey;
     text-transform: uppercase;
     border: 2px solid white;
+}
+
+@media (max-height: 570px){
+    .boton-cont, .boton-cont2{
+        height: 100px;
+    margin-top: -20px;
+}
+.boton, .boton2{
+    height: 50px;
+}
 }
 
 
@@ -1355,6 +1446,12 @@ select:focus{outline:none;}
     overflow: hidden;
 }
 
+@media (max-height: 570px){
+    .botonBack_contenedor{
+        height: 40px;
+    }
+}
+
 .botonBack_contenedor a{
     display: flex;
     justify-content:center;
@@ -1398,6 +1495,12 @@ select:focus{outline:none;}
     font-weight: 600;
     text-decoration:underline;
     color: #a49734;
+}
+
+@media (max-height: 570px){
+    .footer_consultas{
+        display: none;
+    }
 }
 
 

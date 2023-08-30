@@ -761,11 +761,11 @@ const horariosLvSMAl = [
         "salida": 12.15,
         "recorrido": "Terminal → Catalinas Park → Alternativa → Talar → Florida → B° La Cancha → Colonia 4"
     },
-    // {
-    //     "nombre": "12:20",
-    //     "salida": 12.2,
-    //     "recorrido": "Terminal → Catalinas Park → Autopista → Talar → Florida → B° La Cancha → Colonia 4"
-    // },
+    {
+        "nombre": "12:20",
+        "salida": 12.2,
+        "recorrido": "Terminal → Catalinas Park → Autopista → Talar → Florida → B° La Cancha → Colonia 4"
+    },
     {
         "nombre": "12:45",
         "salida": 12.45,
