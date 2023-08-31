@@ -761,11 +761,11 @@ const horariosLvSMAl = [
         "salida": 12.15,
         "recorrido": "Terminal → Catalinas Park → Alternativa → Talar → Florida → B° La Cancha → Colonia 4"
     },
-    {
-        "nombre": "12:20",
-        "salida": 12.2,
-        "recorrido": "Terminal → Catalinas Park → Autopista → Talar → Florida → B° La Cancha → Colonia 4"
-    },
+    // {
+    //     "nombre": "12:20",
+    //     "salida": 12.2,
+    //     "recorrido": "Terminal → Catalinas Park → Autopista → Talar → Florida → B° La Cancha → Colonia 4"
+    // },
     {
         "nombre": "12:45",
         "salida": 12.45,
@@ -840,11 +840,11 @@ const horariosLvSMAl = [
         "salida": 19.45,
         "recorrido": "Terminal → Banda R.S. → Alderetes → Talar → Florida → Esquina Lastra → Fortín → Mayo(por abajo)"
     },
-    {
-        "nombre": "20:20",
-        "salida": 20.3,
-        "recorrido": "Terminal → Comisaria 11 → Alternativa → Talar → Florida → B° La Cancha"
-    },
+    // {
+    //     "nombre": "20:20",
+    //     "salida": 20.3,
+    //     "recorrido": "Terminal → Comisaria 11 → Alternativa → Talar → Florida → B° La Cancha"
+    // },
     {
         "nombre": "20:30",
         "salida": 20.3,
@@ -1524,16 +1524,16 @@ const horariosDSMPo = [
     }
 ]
 const posseTerminalLaV = [
-    {
-        "nombre": "05:00",
-        "salida": 5,
-        "recorrido": "Dispensario → Fila de la orilla → Llona → Cevil Pozo → Banda R.S. → Terminal"
-    },
-    {
-        "nombre": "05:55",
-        "salida": 5.55,
-        "recorrido": "Dispensario → Fila del medio → Cevil Pozo → Banda R.S. → Terminal"
-    },
+    // {
+    //     "nombre": "05:00",
+    //     "salida": 5,
+    //     "recorrido": "Dispensario → Fila de la orilla → Llona → Cevil Pozo → Banda R.S. → Terminal"
+    // },
+    // {
+    //     "nombre": "05:55",
+    //     "salida": 5.55,
+    //     "recorrido": "Dispensario → Fila del medio → Cevil Pozo → Banda R.S. → Terminal"
+    // },
     {
         "nombre": "06:00",
         "salida": 6,
@@ -1544,11 +1544,11 @@ const posseTerminalLaV = [
         "salida": 6.08,
         "recorrido": "Dispensario → Fila de la orilla → Llona → Cevil Pozo → Banda R.S. → Terminal"
     },
-    {
-        "nombre": "06:25",
-        "salida": 6.25,
-        "recorrido": "Dispensario → Fila del Medio → Cevil Pozo → Banda R.S. → Terminal"
-    },
+    // {
+    //     "nombre": "06:25",
+    //     "salida": 6.25,
+    //     "recorrido": "Dispensario → Fila del Medio → Cevil Pozo → Banda R.S. → Terminal"
+    // },
     {
         "nombre": "06:35",
         "salida": 6.35,
@@ -1565,7 +1565,7 @@ const posseTerminalLaV = [
         "nombre": "07:40",
         "salida": 7.4,
         "recorrido": "Bosque → Fila del Medio → Cevil Pozo → Banda R.S. → Terminal",
-        "recorrido2": "Dispensario → Fila de la orilla → Llona → Cevil Pozo → Banda R.S. → Terminal"
+        // "recorrido2": "Dispensario → Fila de la orilla → Llona → Cevil Pozo → Banda R.S. → Terminal"
     },
     {
         "nombre": "08:10",
