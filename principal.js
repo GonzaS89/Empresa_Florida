@@ -65,44 +65,24 @@ let estaVisible = false;
 
 const bajarMenu = ()=> {
     navSmall.animate ([
-        {
-            transform: 'translateY(0%)'
-        }
+        {transform: 'translateY(0%)'}
     ],
-        {
-            duration:400,
-            fill : 'forwards'
-        }
+        {duration:400,fill : 'forwards'}
     )
     linea1.animate ([
-        {
-            transform:'rotate(45deg)'
-        }
+        {transform:'rotate(45deg)'}
     ],
-        {
-            duration: 400,
-            fill:'forwards'
-        }
+        {duration: 400,fill:'forwards'}
     )
     linea2.animate ([
-        {
-            filter:'opacity(0)'
-        }
+        {filter:'opacity(0)'}
     ],
-        {
-            duration: 400,
-            fill:'forwards'
-        }
+        {duration: 400,fill:'forwards'}
     )
     linea3.animate ([
-        {
-            transform:'rotate(-45deg)'
-        }
+        {transform:'rotate(-45deg)'}
     ],
-        {
-            duration: 400,
-            fill:'forwards'
-        }
+        {duration: 400,fill:'forwards'}
     )
     $(linea2).css('height', '0');
     $(botonMenu).css('gap', '0')
@@ -111,44 +91,24 @@ const bajarMenu = ()=> {
 
 const subirMenu = ()=> {
     navSmall.animate ([
-        {
-            transform: 'translateY(-100%)'
-        }
+        {transform: 'translateY(-100%)'}
     ],
-        {
-            duration:250,
-            fill : 'forwards'
-        }
+        {duration:250,fill : 'forwards'}
     );
     linea1.animate ([
-        {
-            transform: 'rotate(0)'
-        },
+        {transform: 'rotate(0)'},
     ],
-        {
-            duration:250,
-            fill:'forwards'
-        }
+        {duration:250,fill:'forwards'}
     );
     linea2.animate ([
-        {
-            filter:'opacity(100%)'
-        }
+        {filter:'opacity(100%)'}
     ],
-        {
-            duration: 250,
-            fill:'forwards'
-        }
+        {duration: 250,fill:'forwards'}
     )
     linea3.animate ([
-        {
-            transform: 'rotate(0)'
-        },
+        {transform: 'rotate(0)'},
     ],
-        {
-            duration:250,
-            fill:'forwards'
-        }
+        {duration:250,fill:'forwards'}
     );
     $(linea2).css('height', '1px');
     $(botonMenu).css('gap', '10px')
@@ -156,8 +116,7 @@ const subirMenu = ()=> {
 }
 
 botonMenuCont.addEventListener('click', ()=> {
-    if(estaVisible) subirMenu()
-    else bajarMenu();
+    return (estaVisible) ? subirMenu() : bajarMenu();
 })
 
 navSmall.addEventListener('click', ()=> {
@@ -209,19 +168,17 @@ const footerContacto = document.querySelectorAll('.footer_der-item_small img')
 
 const animacionItems = (delay, i, items)=> {
     items[i].animate ([
-        {transform:'scale(1.5)'},
-        {transform:'traslateX(-10px)'}
+        {transform:'scale(1.5)',
+        transform:'traslateX(-10px)'}
     ],
-        {duration: 1000,
-            delay: delay,
-       iterations: '1'}
+        {duration: 1000,delay: delay,iterations: '1'}
     )
 }
 
 const boom = (time,delay,i)=> {
     footerContacto[i].animate ([
-        {outline:'0px solid white'},
-        {outline:'15px solid transparent'}
+        {outline:'0px solid white',
+        outline:'15px solid transparent'}
     ],
         {duration: time,
         delay: delay,
@@ -264,9 +221,7 @@ const entrarTexto = (elemento,delay)=> {
     elemento.animate ([
         {transform :'scale(1)'}
     ],
-        {duration : 500,
-        delay : delay,
-        fill : "forwards"}
+        {duration : 500,delay : delay,fill : "forwards"}
     )
 }
 
@@ -274,23 +229,11 @@ const entrarLista = (indice, delay)=> {
     listaHijos[indice].animate ([
         {transform :'scale(1)'}
     ],
-        {duration : 500,
-        delay : delay,
-        fill : "forwards"}
+        {duration : 500,delay : delay,fill : "forwards"}
     )
 }
 
-// window.addEventListener('scroll', ()=> {
-//     if(infoCont.getBoundingClientRect().height / infoCont.getBoundingClientRect().top * 100 >= 90){
-//         entrarLista(0,1000)
-//         entrarLista(1,1500)
-//         entrarLista(2,2000)
-//         entrarTexto(nosotrosTexto2,0)
-//         entrarTexto(nosotrosTexto,500)
-//         entrarTexto(nosotrosTexto3,2500)
-//         entrarTexto(subtitulo,3000)
-//     }
-// })
+
 
 
 
