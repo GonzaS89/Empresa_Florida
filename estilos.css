@@ -999,7 +999,7 @@ GALERIA */
         transform: scale(.9);
     }
     100% {
-        filter: opacity(100);
+        filter: opacity(1);
         transform: scale(1.15);
     }
 }
