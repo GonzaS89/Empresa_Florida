@@ -981,7 +981,7 @@ GALERIA */
     display: flex;
     position: absolute;
     width: 80%;
-    height: 60%;
+    height: 10%;
    background-image: url(../Imagenes/recuerdos5.jpg);
    background-size: contain;
    background-repeat: no-repeat;
