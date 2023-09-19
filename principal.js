@@ -176,8 +176,7 @@ const animacionItems = (delay, i, items)=> {
 
 const boom = (time,delay,i)=> {
     footerContacto[i].animate ([
-        {outline:'0px solid red',
-        outline:'25px solid transparent'}
+        {outline:'30px solid transparent'}
     ],
         {duration: time,
         delay: delay,
