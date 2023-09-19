@@ -168,17 +168,16 @@ const footerContacto = document.querySelectorAll('.footer_der-item_small img')
 
 const animacionItems = (delay, i, items)=> {
     items[i].animate ([
-        {transform:'scale(1.5)',
-        transform:'traslateX(-10px)'}
+        {transform:'scale(1.5)'}
     ],
-        {duration: 1000,delay: delay,iterations: '1'}
+        {duration: 250,delay: delay,iterations: '1'}
     )
 }
 
 const boom = (time,delay,i)=> {
     footerContacto[i].animate ([
-        {outline:'0px solid white',
-        outline:'15px solid transparent'}
+        {outline:'0px solid red',
+        outline:'25px solid transparent'}
     ],
         {duration: time,
         delay: delay,
