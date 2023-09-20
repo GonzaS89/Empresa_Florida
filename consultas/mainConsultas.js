@@ -248,7 +248,7 @@ const definirPosicion = (sel, val, valorSel, pos) => {
             posicion = 0;
             posiciones = [];
             for (const horario of semiParoGrilla) {
-                if(horario.salida >= 15 && horario.salida <= 17){
+                if(horario.salida >= 14.3 && horario.salida <= 17){
                     posicion = (semiParoGrilla.indexOf(horario))
                     posiciones.push(posicion);
                 }
