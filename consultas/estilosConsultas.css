@@ -1512,8 +1512,16 @@ select:focus{outline:none;}
     height:100vh;
     overflow: hidden;
     background:rgba(0, 0, 0, 0.891);
+    animation: entrar .5s forwards;
 }
-
+@keyframes entrar{
+    from{
+        filter: opacity(0);
+    }
+    to{
+        filter: opacity(1);
+    }
+}
 
 .mensaje-contenedor-out{
     animation: desvanecer .3s .1s forwards;
@@ -1533,7 +1541,7 @@ select:focus{outline:none;}
     height: 45%;
     background:white;
     position: relative;
-    animation: mensajein 1s forwards;
+    animation: mensajein .5s forwards;
 }
 
 @keyframes mensajein{
