@@ -245,13 +245,10 @@ const definirPosicion = (sel, val, valorSel, pos) => {
                 }
             }
             semiParoGrilla.splice(posiciones[0], posiciones.length)
-            console.log(semiParoGrilla)
-
             posicion = 0;
             posiciones = [];
             for (const horario of semiParoGrilla) {
                 if(horario.salida >= 15 && horario.salida <= 17){
-                    console.log(horario)
                     posicion = (semiParoGrilla.indexOf(horario))
                     posiciones.push(posicion);
                 }
