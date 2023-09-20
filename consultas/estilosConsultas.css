@@ -1547,16 +1547,16 @@ select:focus{outline:none;}
     display: flex;
     justify-content:center;
     align-items:center;
-    width: 30px;
-    height:30px;
+    width: 40px;
+    height:40px;
     position:absolute;
     right:0;
     top: 0;
     border-radius: 75%;
     border: 5px solid;
-    transform: translate(15px, -15px);
+    transform: translate(20px, -20px);
     background:white;
-    font-size: 12.5px;
+    font-size: 15px;
     cursor: pointer;
 }
 .mensaje-titulo{
