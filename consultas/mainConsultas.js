@@ -66,6 +66,13 @@ botonDeCambio2.addEventListener('click', ()=> {
     linea2.textContent = '';
 })
 
+const botonCierraMensaje = document.querySelector('.botoncerrado');
+const mensajecontenedor = document.querySelector('.mensaje-contenedor');
+
+botonCierraMensaje.addEventListener('click', ()=>{
+    mensajecontenedor.classList.add('mensaje-contenedor-out')
+})
+
 addEventListener('load', () => {
     scrollcont.children[0].classList.add('manito')
 })
@@ -179,8 +186,7 @@ const definirPosicion = (sel, val, valorSel, pos) => {
         ruta = todosDestinoTucuman[posicion - 1];
         linea2.textContent = `Desde ${selector[posicion].label}`
         }
-        
-    
+
         function obtenerDiaRuta(x) {
     
             if (x == 0) diaRango = ruta[0].slice(0, ruta[0].length);
@@ -192,7 +198,7 @@ const definirPosicion = (sel, val, valorSel, pos) => {
         
             return diaRango
         }
-    
+
         let rutaObtenida;
         let tipoDeDia;
 
@@ -224,7 +230,36 @@ const definirPosicion = (sel, val, valorSel, pos) => {
             rutaObtenida = obtenerDiaRuta(6);
             tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día sábado `;
         }
-       
+
+        else if ((fecha == 20) && (mes == 8)){
+            let semiParoGrilla;
+            semiParoGrilla = obtenerDiaRuta(1);
+            let posicion = 0;
+            let posiciones = [];
+            for (const horario of semiParoGrilla) {
+                if(horario.salida >= 9 && horario.salida <= 11){
+                    posicion = (semiParoGrilla.indexOf(horario))
+                    posiciones.push(posicion);
+                }
+            }
+            semiParoGrilla.splice(posiciones[0], posiciones.length)
+            console.log(semiParoGrilla)
+
+            posicion = 0;
+            posiciones = [];
+            for (const horario of semiParoGrilla) {
+                if(horario.salida >= 15 && horario.salida <= 17){
+                    console.log(horario)
+                    posicion = (semiParoGrilla.indexOf(horario))
+                    posiciones.push(posicion);
+                }
+            }
+            semiParoGrilla.splice(posiciones[0], posiciones.length)
+            rutaObtenida = semiParoGrilla;
+        }
+
+        
+        console.log(rutaObtenida)
             function obtenerLista(x) {
                 for (i = 0; i < x.length; i++) listaDelDia.push(x[i].salida);
                 // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
@@ -507,7 +542,6 @@ const definirPosicion = (sel, val, valorSel, pos) => {
                 }
             }
         }
-        console.log(listaDiferencias)
         $('.resultados').css('display', 'flex');
         $('.mensaje2').css('display', 'flex');
         if(mensaje2.classList.contains('mensajeIrse')){
