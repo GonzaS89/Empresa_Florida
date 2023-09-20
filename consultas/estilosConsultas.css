@@ -1514,23 +1514,26 @@ select:focus{outline:none;}
     background:rgba(0, 0, 0, 0.891);
 }
 
+
 .mensaje-contenedor-out{
-    animation: mensajeout .3s forwards;
+    animation: desvanecer .3s .1s forwards;
 }
 
-@keyframes mensajeout{
+@keyframes desvanecer{
     to{
-        transform: scale(0);
+        transform: translateX(-100%);
         display: none;
+        
     }
 }
+
 
 .mensaje-cuadro{
     width: 75%;
     height: 45%;
     background:white;
     position: relative;
-    animation: mensajein .5s ease-in forwards;
+    animation: mensajein 1s forwards;
 }
 
 @keyframes mensajein{
@@ -1540,7 +1543,16 @@ select:focus{outline:none;}
     to{
         transform: translateX(0)
     }
+}
 
+.mensaje-out{
+    animation: mensajeout .3s forwards;
+}
+
+@keyframes mensajeout{
+    to{
+        transform: translateX(-100%);
+    }
 }
 .botoncerrado{
     font-family: var(--fuenteTer);

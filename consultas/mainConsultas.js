@@ -68,8 +68,10 @@ botonDeCambio2.addEventListener('click', ()=> {
 
 const botonCierraMensaje = document.querySelector('.botoncerrado');
 const mensajecontenedor = document.querySelector('.mensaje-contenedor');
+const mensaje = document.querySelector('.mensaje-cuadro')
 
 botonCierraMensaje.addEventListener('click', ()=>{
+    mensaje.classList.add('mensaje-out');
     mensajecontenedor.classList.add('mensaje-contenedor-out')
 })
 
