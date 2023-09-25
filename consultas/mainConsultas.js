@@ -144,7 +144,11 @@ const definirPosicion = (sel, val, valorSel, pos) => {
     return pos
 }
 
+let displayMensaje = (fecha == 25 && mes == 8 & hora < 17) ? 'flex' : 'none';
 
+onload = ()=> {
+    $('.mensaje-contenedor').css('display' , `${displayMensaje}`);
+}
 
     boton.addEventListener('click', () => {
         // Definimos la posicion del selector 1
