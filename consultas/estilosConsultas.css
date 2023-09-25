@@ -1503,7 +1503,7 @@ select:focus{outline:none;}
 }
 
 .mensaje-contenedor{
-    display: none;
+    display: flex;
     justify-content:center;
     align-items:center;
     position: absolute;

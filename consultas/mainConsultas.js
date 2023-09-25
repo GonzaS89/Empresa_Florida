@@ -233,13 +233,13 @@ const definirPosicion = (sel, val, valorSel, pos) => {
             tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día sábado `;
         }
 
-        else if ((fecha == 20) && (mes == 8)){
+        else if ((fecha == 25) && (mes == 8)){
             let semiParoGrilla;
             semiParoGrilla = obtenerDiaRuta(1);
             let posicion = 0;
             let posiciones = [];
             for (const horario of semiParoGrilla) {
-                if(horario.salida >= 9 && horario.salida <= 11){
+                if(horario.salida >= 8.30 && horario.salida < 11){
                     posicion = (semiParoGrilla.indexOf(horario))
                     posiciones.push(posicion);
                 }
@@ -248,7 +248,7 @@ const definirPosicion = (sel, val, valorSel, pos) => {
             posicion = 0;
             posiciones = [];
             for (const horario of semiParoGrilla) {
-                if(horario.salida >= 14.3 && horario.salida <= 17){
+                if(horario.salida >= 14.3 && horario.salida < 17){
                     posicion = (semiParoGrilla.indexOf(horario))
                     posiciones.push(posicion);
                 }

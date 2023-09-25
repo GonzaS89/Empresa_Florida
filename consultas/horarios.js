@@ -1169,9 +1169,9 @@ const horariosLvSMPo = [
         "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Posse → Paraíso → Florida → B° La Cancha"
     },
     {
-        "nombre": "14:30",
-        "salida": 14.3,
-        "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Posse → Paraíso → FLorida → Esquina Lastra"
+        "nombre": "14:15",
+        "salida": 14.15,
+        "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Posse → Paraíso → Florida → Esquina Lastra"
     },
     {
         "nombre": "15:00",
