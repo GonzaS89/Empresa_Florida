@@ -3,8 +3,12 @@
 // Lista de horarios 
 
 const fortinTalarBanda = ['Fortin', 'Esquina Lastra', 'Talar', 'Alderetes', 'Banda R.S.' ,'Terminal'];
-const fortinTalarAlter = ['Fortin', 'Esquina Lastra', 'Talar', 'Alternativa' ,'Terminal'];
+const fortinAlter = ['Fortin', 'Esquina Lastra', 'Talar', 'Alternativa' ,'Terminal'];
 const colonia10CochAutop = ['Colonia 10','Colonia 4','B° La Cancha','Cochuchal','Alderetes','Autopista','Terminal'];
+const col4CanchaAlter = ['Colonia 4','B° La Cancha','Talar','Alternativa','Terminal'];
+const col4CanchaTalarAutop = ['Colonia 4','B° La Cancha','Talar','Alderetes','Autopista','Terminal'];
+const col4TalarBanda = ['Colonia 4','B° La Cancha','Talar','Alderetes','Banda R.S.','Terminal'];
+
 
 
 
@@ -19,7 +23,7 @@ const horariosLvFloAl = [
  {
  "nombre": "05:35",
  "salida": 5.35,
- "recorrido": fortinTalarAlter
+ "recorrido": fortinAlter
  },
  {
  "nombre": "06:10",
@@ -35,82 +39,82 @@ const horariosLvFloAl = [
  {
  "nombre": "06:50",
  "salida": 6.5,
- "recorrido": "Colonia 4 → Fonda → Talar → Alternativa → Terminal"
+ "recorrido": ['Colonia 4','Fonda','Talar','Alternativa','Terminal']
  },
  {
  "nombre": "07:20",
  "salida": 7.2,
- "recorrido": "Colonia 4 → B° La Cancha → Talar → Alternativa → Terminal",
- "recorrido2": "Fortín → Esquina Lastra → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": col4CanchaAlter,
+ "recorrido2": fortinTalarBanda
  },
  {
  "nombre": "07:40",
  "salida": 7.4,
- "recorrido": "Finca Mayo → Fortín → Esquina Lastra → Cochuchal → Alderetes → Banda R.S. → Terminal"
+ "recorrido": ['Finca Mayo','Fortín','Esquina Lastra','Cochuchal','Alderetes','Banda R.S.','Terminal']
  },
  {
  "nombre": "07:50",
  "salida": 7.5,
- "recorrido": "Colonia 4 → Fonda → Talar → Alternativa → Terminal",
- "recorrido2": "Colonia 4 → B° La Cancha → Talar → Alderetes → Autopista → Terminal"
+ "recorrido": ['Colonia 4','Fonda','Talar','Alternativa','Terminal'],
+ "recorrido2": col4CanchaTalarAutop
  },
  {
  "nombre": "08:45",
  "salida": 8.45,
- "recorrido": "Colonia 4 → B° La Cancha → Cochuchal → Alderetes → Banda R.S. → Terminal",
- "recorrido2": "Colonia 4 → B° La Cancha → Talar → Alternativa → Terminal"
+ "recorrido": ['Colonia 4','B° La Cancha','Cochuchal','Alderetes','Banda R.S.','Terminal'],
+ "recorrido2": col4CanchaAlter
  },
  {
  "nombre": "09:20",
  "salida": 9.2,
- "recorrido": "Fortín → Esquina Lastra → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": fortinTalarBanda
  },
  {
  "nombre": "09:50",
  "salida": 9.5,
- "recorrido": "Colonia 4 → B° La Cancha → Talar → Alderetes → Autopista → Terminal"
+ "recorrido": col4CanchaTalarAutop
  },
  {
  "nombre": "10:30",
  "salida": 10.3,
- "recorrido": "Fortín → Esquina Lastra → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": fortinTalarBanda
  },
  {
  "nombre": "11:40",
  "salida": 11.40,
- "recorrido": "Fortín → Esquina Lastra → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": fortinTalarBanda
  },
  {
  "nombre": "12:20",
  "salida": 12.2,
- "recorrido": "Fortín → Colonia 4 → B° La Cancha → Talar → Alderetes → Autopista → Terminal"
+ "recorrido": ['Fortín','Colonia 4','B° La Cancha','Talar','Alderetes','Autopista','Terminal']
  },
  {
  "nombre": "12:30",
  "salida": 12.3,
- "recorrido": "Los Perez → Colonia 4 → B° La Cancha → Talar → Alternativa → Terminal"
+ "recorrido": ['Los Perez','Colonia 4','B° La Cancha','Talar','Alderetes','Alternativa','Terminal']
  },
  {
  "nombre": "13:15",
  "salida": 13.15,
- "recorrido": "Colonia 4 → B° La Cancha → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": col4TalarBanda
  },
  {
  "nombre": "13:50",
  "salida": 13.5,
- "recorrido": "B° La Cancha → Cochuchal → Alderetes → Banda R.S. → Terminal",
+ "recorrido": ['B° La Cancha','Cochuchal','Alderetes','Banda R.S.','Terminal']
  },
  {
  "nombre": "14:45",
  "salida": 14.45,
- "recorrido": "Colonia 4 → B° La Cancha → Talar → Alternativa → Terminal",
- "recorrido2": "Colonia 4 → B° La Cancha → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": col4CanchaAlter,
+ "recorrido2": col4TalarBanda
  },
  {
  "nombre": "15:50",
  "salida": 15.5,
  "recorrido": "Fortín → Esquina Lastra → Talar → Alternativa → Terminal",
- "recorrido2" : "Colonia 4 → B° La Cancha → Talar → Alderetes → Autopista → Terminal"
+ "recorrido2" : col4CanchaTalarAutop
  },
  {
  "nombre": "16:20",
@@ -126,27 +130,27 @@ const horariosLvFloAl = [
  "nombre": "16:50",
  "salida": 16.5,
  "recorrido": "Colonia 3 (Florida) → Fortin → Esquina Lastra → Talar → Alderetes → Banda R.S. → Terminal",
- "recorrido2": "Colonia 4 → B° La Cancha → Talar → Alternativa → Terminal"
+ "recorrido2": col4CanchaAlter
  },
  {
  "nombre": "17:35",
  "salida": 17.35,
- "recorrido": "Colonia 4 → B° La Cancha → Talar → Alternativa → Terminal"
+ "recorrido": col4CanchaAlter
  },
  {
  "nombre": "17:50",
  "salida": 17.5,
- "recorrido": "Fortín → Esquina Lastra → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": fortinTalarBanda
  },
  {
  "nombre": "18:10",
  "salida": 18.1,
- "recorrido": "Colonia 4 → B° La Cancha → Talar → Alternativa → Terminal"
+ "recorrido": col4CanchaAlter
  },
  {
  "nombre": "18:30",
  "salida": 18.3,
- "recorrido": "Fortín → Esquina Lastra → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": fortinTalarBanda
  },
  {
  "nombre": "19:00",
@@ -156,7 +160,7 @@ const horariosLvFloAl = [
  {
  "nombre": "21:05",
  "salida": 21.05,
- "recorrido": "Colonia 4 → B° La Cancha → Talar → Alderetes → Autopista → Terminal"
+ "recorrido": col4CanchaTalarAutop
  }
 
 ]
@@ -184,12 +188,12 @@ const horariosSFloAl = [
  {
  "nombre": "06:50",
  "salida": 6.5,
- "recorrido": "Colonia 4 → B° La Cancha → Talar → Alternativa → Terminal"
+ "recorrido": col4CanchaAlter
  },
  {
  "nombre": "07:18",
  "salida": 7.18,
- "recorrido": "Colonia 4 → B° La Cancha → Talar → Alderetes → Autopista → Terminal"
+ "recorrido": col4CanchaTalarAutop
  },
  {
  "nombre": "07:40",
@@ -199,27 +203,27 @@ const horariosSFloAl = [
  {
  "nombre": "07:50",
  "salida": 7.5,
- "recorrido": "Colonia 4 → B° La Cancha → Talar → Alternativa → Terminal"
+ "recorrido": col4CanchaAlter
  },
  {
  "nombre": "08:45",
  "salida": 8.45,
- "recorrido": "Colonia 4 → B° La Cancha → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": col4TalarBanda
  },
  {
  "nombre": "09:20",
  "salida": 9.2,
- "recorrido": "Fortín → Esquina Lastra → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": fortinTalarBanda
  },
  {
  "nombre": "10:30",
  "salida": 10.30,
- "recorrido": "Fortín → Esquina Lastra → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": fortinTalarBanda
  },
  {
  "nombre": "11:40",
  "salida": 11.40,
- "recorrido": "Fortín → Esquina Lastra → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": fortinTalarBanda
 
  },
  {
@@ -230,7 +234,7 @@ const horariosSFloAl = [
  {
  "nombre": "13:15",
  "salida": 13.15,
- "recorrido": "Colonia 4 → B° La Cancha → Talar → Alderetes → Autopista → Terminal"
+ "recorrido": col4CanchaTalarAutop
  },
  {
  "nombre": "14:50",
@@ -240,18 +244,18 @@ const horariosSFloAl = [
  {
  "nombre": "15:50",
  "salida": 15.5,
- "recorrido": "Colonia 4 → B° La Cancha → Talar → Alderetes → Autopista → Terminal"
+ "recorrido": col4CanchaTalarAutop
  },
  {
  "nombre": "16:50",
  "salida": 16.5,
- "recorrido": "Colonia 4 → B° La Cancha → Talar → Alternativa → Terminal",
+ "recorrido": col4CanchaAlter,
  "recorrido2": "Colonia 3 FLorida → Talar → Alderetes → Banda R.S. → Terminal"
  },
  {
  "nombre": "17:50",
  "salida": 17.5,
- "recorrido": "Fortín → Esquina Lastra → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": fortinTalarBanda
  },
  {
  "nombre": "19:00",
@@ -285,12 +289,12 @@ const horariosDFloAl = [
  {
  "nombre": "14:45",
  "salida": 14.45,
- "recorrido": "Colonia 4 → B° La Cancha → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": col4TalarBanda
  },
  {
  "nombre": "15:50",
  "salida": 15.5,
- "recorrido": "Colonia 4 → B° La Cancha → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": col4TalarBanda
  },
  {
  "nombre": "16:50",

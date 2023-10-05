@@ -466,7 +466,7 @@ onload = ()=> {
                     if (Math.abs(listaDiferencias[i]) <= 2){
                         estadoServicio.textContent = 'Está iniciando su recorrido'
                     }
-                    recorridoServicio.textContent = `Recorrido: ${rutaObtenida[i].recorrido}`;
+                    recorridoServicio.textContent = `Recorrido: ${rutaObtenida[i].recorrido.join('→')}`;
                 }
             }
             else {
@@ -504,7 +504,7 @@ onload = ()=> {
                     if (Math.abs(listaDiferencias[i]) <= 5 && Math.abs(listaDiferencias[i]) > 0) {
                         estadoServicio.textContent = 'Iniciarán sus recorridos en menos de 5 minutos'
                     }
-                    recorridoServicio.textContent = `1° Recorrido: ${rutaObtenida[i].recorrido}`
+                    recorridoServicio.textContent = `1° Recorrido: ${rutaObtenida[i].recorrido}`;
                     recorridoServicio2.textContent = `2° Recorrido: ${rutaObtenida[i].recorrido2}`;
                 }
                 else {
