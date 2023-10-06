@@ -12,6 +12,7 @@ const cochuchal = 'Cochuchal';
 const bCancha = 'B° La Cancha';
 const fortin = 'Fortín';
 const esqLastra = 'Esquina Lastra';
+const col3Luisiana = 'Colonia 3 (Luisiana)';
 const col4Luisiana = 'Colonia 4 (Luisiana)';
 const col10Luisiana = 'Colonia 10 (Luisiana)';
 const fonda = 'Fonda'
@@ -19,21 +20,37 @@ const col5Florida = 'Colonia 5 (Florida)';
 const col4Florida = 'Colonia 4 (Florida)';
 const col3Florida = 'Colonia 3 (Florida)';
 const col2Florida = 'Colonia 2 (Florida)';
+const coloniasFlorida = 'Colonia 5/4/3/2 (Florida)'
 const fincaMayo = 'Finca Mayo';
 const perez = 'Los Perez';
 const marta = 'La Marta';
 
+// Destinos (FLORIDA / POSSE)
+
+const paraiso = 'Paraíso';
+const dispensario = 'Dispensario';
+const llona = 'Llona';
+const cevilPozo = 'Cevil Pozo';
+
 
 // Arreglos con recorridos (FLORIDA / ALDERETES / ALTERNATIVA)
 
+const mayoColoniasTalarBanda = [fincaMayo,coloniasFlorida,fortin,esqLastra,talar,alderetes,bandaRS,terminal];
 const fortinTalarBanda = [fortin, esqLastra, talar, alderetes, bandaRS ,terminal];
 const fortinAlter = [fortin, esqLastra, talar, alternativa ,terminal];
-const colonia10CochAutop = [col10Florida,col4Luisiana,bCancha,cochuchal,alderetes,autopista,terminal];
+const colonia10CochAutop = [col10Luisiana,col4Luisiana,bCancha,cochuchal,alderetes,autopista,terminal];
 const col4CanchaAlter = [col4Luisiana,bCancha,talar,alternativa,terminal];
 const col4CanchaTalarAutop = [col4Luisiana,bCancha,talar,alderetes,autopista,terminal];
 const col4TalarBanda = [col4Luisiana,bCancha,talar,alderetes,bandaRS,terminal];
+const canchaTalarBanda = [bCancha,talar,alderetes,bandaRS,terminal];
 
+// Arreglos con recorridos (FLORIDA / POSSE)
 
+const bCanchaFloridaPosse = [bCancha,paraiso,dispensario,llona,cevilPozo,bandaRS,terminal];
+const fortinFloridaPosse = [fortin,esqLastra,paraiso,dispensario,llona,cevilPBLIC,bandaRS,terminal];
+const col4FloridaPosse = [col4Luisiana,bCancha,paraiso,dispensario,llona,cevilPozo,bandaRS,terminal]
+const col4fondaPosse = [col4Luisiana,fonda,paraiso,dispensario,llona,cevilPozo,bandaRS,terminal]
+const lastraFloridaPosse = [esqLastra,paraiso,dispensario,llona,cevilPozo,bandaRS,terminal]
 
 
 
@@ -143,7 +160,7 @@ const horariosLvFloAl = [
  {
  "nombre": "16:20",
  "salida": 16.2,
- "recorrido": [marta,'Colonia 4 (16:50)',bCancha,talar,alternativa,terminal]
+ "recorrido": [marta,`${col4Luisiana} (16:50)`,bCancha,talar,alternativa,terminal]
  },
  {
  "nombre": "16:45",
@@ -153,7 +170,7 @@ const horariosLvFloAl = [
  {
  "nombre": "16:50",
  "salida": 16.5,
- "recorrido": ['Colonia 3 (Florida)',fortin,esqLastra,talar,alderetes,bandaRS,terminal],
+ "recorrido": [col3Florida,fortin,esqLastra,talar,alderetes,bandaRS,terminal],
  "recorrido2": col4CanchaAlter
  },
  {
@@ -179,7 +196,7 @@ const horariosLvFloAl = [
  {
  "nombre": "19:00",
  "salida": 19,
- "recorrido": [marta,'Colonia 3','B° La Cancha (19:15)',talar,alderetes,bandaRS,terminal]
+ "recorrido": [marta,col3Florida,`${bCancha} (19:15)`,talar,alderetes,bandaRS,terminal]
  },
  {
  "nombre": "21:05",
@@ -197,17 +214,17 @@ const horariosSFloAl = [
  {
  "nombre": "05:45",
  "salida": 5.45,
- "recorrido": "Fortín → Esquina Lastra → Fonda → B° La Cancha → Talar → Alderetes → Autopista → Terminal"
+ "recorrido": [fortin,esqLastra,fonda,bCancha,talar,alderetes,autopista,terminal]
  },
  {
  "nombre": "06:10",
  "salida": 6.10,
- "recorrido": "Colonia 10 → B° La Cancha → Cochuchal → Alderetes → Autopista → Terminal"
+ "recorrido": colonia10CochAutop
  },
  {
  "nombre": "06:25",
  "salida": 6.25,
- "recorrido": "Colonia 5 Florida → Fortín → (Trasbordo)"
+ "recorrido": [col5Florida,`${fortin} (Trasbordo)`]
  },
  {
  "nombre": "06:50",
@@ -222,7 +239,7 @@ const horariosSFloAl = [
  {
  "nombre": "07:40",
  "salida": 7.4,
- "recorrido": "Mayo → Colonia 5/4/3/2 → Fortín → Esquina Lastra → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": mayoColoniasTalarBanda
  },
  {
  "nombre": "07:50",
@@ -253,7 +270,7 @@ const horariosSFloAl = [
  {
  "nombre": "12:40",
  "salida": 12.4,
- "recorrido": "Mayo → Colonia 5/4/3/2 → Fortín → Esquina Lastra → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": mayoColoniasTalarBanda
  },
  {
  "nombre": "13:15",
@@ -263,7 +280,7 @@ const horariosSFloAl = [
  {
  "nombre": "14:50",
  "salida": 14.5,
- "recorrido": "B° La Cancha → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": canchaTalarBanda
  },
  {
  "nombre": "15:50",
@@ -274,7 +291,7 @@ const horariosSFloAl = [
  "nombre": "16:50",
  "salida": 16.5,
  "recorrido": col4CanchaAlter,
- "recorrido2": "Colonia 3 FLorida → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido2": [col3Florida,talar,alderetes,bandaRS,terminal]
  },
  {
  "nombre": "17:50",
@@ -284,12 +301,12 @@ const horariosSFloAl = [
  {
  "nombre": "19:00",
  "salida": 19,
- "recorrido": "La Marta → Colonia 3 (Luisiana) → B° La Cancha → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": [marta,col3Luisiana,bCancha,talar,alderetes,bandaRS,terminal]
  },
  {
  "nombre": "20:50",
  "salida": 20.5,
- "recorrido": "Mayo → Colonia 10 y 4 (Luisiana) → B° La Cancha → Talar → Alderetes → Autopista → Terminal"
+ "recorrido": [fincaMayo,col10Luisiana,col4Luisiana,bCancha,talar,alderetes,autopista,terminal]
  }
 
 ]
@@ -298,17 +315,17 @@ const horariosDFloAl = [
  {
  "nombre": "07:40",
  "salida": 7.4,
- "recorrido": "Finca Mayo → Colonia 5 → Colonia 4 → Colonia 3 → Colonia 2 → Fortín → Esquina Lastra → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": mayoColoniasTalarBanda
  },
  {
  "nombre": "10:30",
  "salida": 10.30,
- "recorrido": "Colonia 2 → Fortín → Esquina Lastra → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": [col2Florida,fortin,esqLastra,talar,alderetesa,bandaRS,terminal]
  },
  {
  "nombre": "12:40",
  "salida": 12.4,
- "recorrido": "Finca Mayo → Colonia 5 → Colonia 4 → Colonia 3 → Colonia 2 → Fortín → Esquina Lastra → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": mayoColoniasTalarBanda
  },
  {
  "nombre": "14:45",
@@ -323,22 +340,22 @@ const horariosDFloAl = [
  {
  "nombre": "16:50",
  "salida": 16.5,
- "recorrido": "Colonia 3 (Florida) → Fortín → Esquina Lastra → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": [col3Florida,fortin,esqLastra,talar,alderetes,bandaRS,terminal]
  },
  {
  "nombre": "17:50",
  "salida": 17.5,
- "recorrido": "B° La Cancha → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": canchaTalarBanda
  },
  {
  "nombre": "19:00",
  "salida": 19,
- "recorrido": "Mayo → Colonia 3 → B° La Cancha → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": [fincaMayo,col3Luisiana,bCancha,talar, alderetes,bandaRS,terminal]
  },
  {
  "nombre": "20:55",
  "salida": 19,
- "recorrido": "Mayo → Colonia 10 (Florida) → Colonia 4 (Luisiana) B° La Cancha → Talar → Alderetes → Banda R.S. → Terminal"
+ "recorrido": [fincaMayo,col10Luisiana,col4Luisiana,bCancha,talar, alderetes,bandaRS,terminal]
  }
 ]
 const horariosLvFloPo = [
@@ -346,225 +363,225 @@ const horariosLvFloPo = [
  {
  "nombre": "04:50",
  "salida": 4.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "05:50",
  "salida": 5.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "06:20",
  "salida": 6.2,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
 
  {
  "nombre": "06:50",
  "salida": 6.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "07:20",
  "salida": 7.2,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
 
  {
  "nombre": "07:55",
  "salida": 7.55,
- "recorrido": "Fortín → Esquina Lastra → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": fortinFloridaPosse
  },
 
  {
  "nombre": "08:20",
  "salida": 8.2,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
 
  {
  "nombre": "09:05",
  "salida": 9.05,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
 
  {
  "nombre": "09:50",
  "salida": 9.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
 
  {
  "nombre": "10:20",
  "salida": 10.2,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "10:50",
  "salida": 10.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "11:20",
  "salida": 11.2,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "11:50",
  "salida": 11.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "12:40",
  "salida": 12.40,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "13:20",
  "salida": 13.2,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal",
- "recorrido2": "Fortín → Esquina Lastra → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse,
+ "recorrido2": fortinFloridaPosse
  },
  {
  "nombre": "13:50",
  "salida": 13.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "14:50",
  "salida": 14.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "15:55",
  "salida": 15.55,
- "recorrido": "Fortín → Esquina Lastra → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": fortinFloridaPosse
  },
  {
  "nombre": "16:50",
  "salida": 16.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "17:50",
  "salida": 17.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal",
- "recorrido2": "Colonia 4 → Fonda → Paraiso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse,
+ "recorrido2": col4fondaPosse
  },
  {
  "nombre": "18:50",
  "salida": 18.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "19:20",
  "salida": 19.2,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "19:50",
  "salida": 19.5,
- "recorrido": "Colonia 4 → B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": col4FloridaPosse
  },
  {
  "nombre": "20:50",
  "salida": 20.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "21:20",
  "salida": 21.2,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "22:20",
  "salida": 22.20,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "23:20",
  "salida": 23.2,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  }
 ]
 const horariosSFloPo = [
  {
  "nombre": "04:50",
  "salida": 4.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
 
  {
  "nombre": "05:50",
  "salida": 5.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "06:20",
  "salida": 6.2,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
 
  {
  "nombre": "06:50",
  "salida": 6.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
 
  {
  "nombre": "07:20",
  "salida": 7.2,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
 
  {
  "nombre": "07:55",
  "salida": 7.55,
- "recorrido": "Fortín → Esquina Lastra → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": fortinFloridaPosse
  },
 
  {
  "nombre": "08:20",
  "salida": 8.2,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
 
  {
  "nombre": "09:05",
  "salida": 9.05,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
 
  {
  "nombre": "09:55",
  "salida": 9.55,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
 
  {
  "nombre": "10:20",
  "salida": 10.2,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "10:50",
  "salida": 10.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "11:20",
  "salida": 11.2,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "11:50",
  "salida": 11.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "12:40",
  "salida": 12.40,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  // {
  // "nombre":"12:25",
@@ -574,159 +591,159 @@ const horariosSFloPo = [
  {
  "nombre": "13:25",
  "salida": 13.25,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "13:50",
  "salida": 13.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "15:00",
  "salida": 15,
- "recorrido": "Esquina de Lastra → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": lastraFloridaPosse
  },
  {
  "nombre": "15:55",
  "salida": 15.55,
- "recorrido": "Fortín → Esquina Lastra → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": fortinFloridaPosse
  },
  {
  "nombre": "16:50",
  "salida": 16.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "17:50",
  "salida": 17.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "18:50",
  "salida": 18.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "19:25",
  "salida": 19.25,
- "recorrido": "Fortín → Esquina Lastra → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": fortinFloridaPosse
  },
  {
  "nombre": "20:20",
  "salida": 20.2,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "20:50",
  "salida": 20.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "21:20",
  "salida": 21.2,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "22:20",
  "salida": 22.20,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
 ]
 const horariosDFloPo = [
  {
  "nombre": "04:50",
  "salida": 4.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "05:50",
  "salida": 5.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "06:50",
  "salida": 6.5,
- "recorrido": "Fortín → Esquina Lastra → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": fortinFloridaPosse
  },
  {
  "nombre": "07:50",
  "salida": 7.5,
- "recorrido": "Fortín → Esquina Lastra → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": fortinFloridaPosse
  },
  {
  "nombre": "08:50",
  "salida": 8.5,
- "recorrido": "Fortín → Esquina Lastra → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": fortinFloridaPosse
  },
  {
  "nombre": "09:50",
  "salida": 9.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "10:50",
  "salida": 10.50,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "11:50",
  "salida": 11.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "13:00",
  "salida": 13,
- "recorrido": "Esquina Lastra → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": lastraFloridaPosse
  },
  {
  "nombre": "13:50",
  "salida": 13.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "15:00",
  "salida": 15,
- "recorrido": "Esquina de Lastra → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": lastraFloridaPosse
  },
  {
  "nombre": "15:50",
  "salida": 15.5,
- "recorrido": "Fortín → Esquina Lastra → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": fortinFloridaPosse
  },
  {
  "nombre": "16:50",
  "salida": 16.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "17:50",
  "salida": 17.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Dispensario → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "18:50",
  "salida": 18.5,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "19:25",
  "salida": 19.25,
- "recorrido": "Fortín → Esquina Lastra → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": fortinFloridaPosse
  },
  {
  "nombre": "20:00",
  "salida": 20.00,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "21:00",
  "salida": 21,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
  {
  "nombre": "22:20",
  "salida": 22.20,
- "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": bCanchaFloridaPosse
  },
 
 ]
