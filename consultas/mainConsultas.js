@@ -184,7 +184,7 @@ onload = ()=> {
     
     
         if (opcionbase2.selected == false) {
-        ruta = todosTucumanDestino[posicion2 - 1]
+        ruta = todosDestinoTucuman[posicion2 - 1]
         linea2.textContent = `Hasta ${selector2[posicion2].label}`;
         }
         
