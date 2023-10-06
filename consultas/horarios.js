@@ -2121,7 +2121,7 @@ const ralosTerminalLaV = [
  {
  "nombre": "15:00",
  "salida": 15,
- "recorrido": [lolitaS,ralos,bTrigal,llona,cevilPozo,bandaRs,terminal],
+ "recorrido": [lolitaS,ralos,bTrigal,llona,cevilPozo,bandaRS,terminal],
  "recorrido2": ralosTermi
  },
  {
@@ -2177,7 +2177,7 @@ const ralosTerminalLaV = [
  {
  "nombre": "20:00",
  "salida": 20,
- "recorrido": "Lolita Sur → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": [lolitaS,ralosTermi]
  },
  {
  "nombre": "20:20",
@@ -2225,7 +2225,7 @@ const ralosTerminalS = [
  {
  "nombre": "07:30",
  "salida": 7.3,
- "recorrido": "Lolita Sur → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal",
+ "recorrido": [lolitaS,ralosTermi],
  "recorrido2": ralosTermi
  },
  {
@@ -2278,7 +2278,7 @@ const ralosTerminalS = [
  {
  "nombre": "15:00",
  "salida": 15,
- "recorrido": "Lolita Sur → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": [lolitaS,ralosTermi]
  },
  {
  "nombre": "15:25",
