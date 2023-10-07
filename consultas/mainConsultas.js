@@ -182,17 +182,16 @@ onload = ()=> {
         let recorridoServicio2;
         let estadoServicio;
 
-    
+        if (opcionbase.selected == false) {
+            ruta = todosDestinoTucuman[posicion - 1];
+            linea2.textContent = `Desde ${selector[posicion].label}`
+            }
     
         if (opcionbase2.selected == false) {
-        ruta = todosDestinoTucuman[posicion2 - 1]
+        ruta = todosTucumanDestino[posicion2 - 1];
         linea2.textContent = `Hasta ${selector2[posicion2].label}`;
         }
         
-        if (opcionbase.selected == false) {
-        ruta = todosDestinoTucuman[posicion - 1];
-        linea2.textContent = `Desde ${selector[posicion].label}`
-        }
 
         function obtenerDiaRuta(x) {
     
@@ -262,7 +261,7 @@ onload = ()=> {
             rutaObtenida = semiParoGrilla;
         }
 
-        
+        console.log(rutaObtenida[10].recorrido)
         
             function obtenerLista(x) {
                 for (i = 0; i < x.length; i++) listaDelDia.push(x[i].salida);
@@ -271,9 +270,8 @@ onload = ()=> {
             }
         
         
-        let listaObtenida = obtenerLista(rutaObtenida)
-    
-    
+        let listaObtenida = obtenerLista(rutaObtenida)   
+            
         for (let i = 0; i < listaObtenida.length; i++) {
             let horasEnEnteros = (Math.trunc(listaObtenida[i])) * 60;
             let minutosEnEnteros = (listaDelDia[i] - (Math.trunc(listaObtenida[i]))) * 100;
@@ -427,8 +425,8 @@ onload = ()=> {
                     else if ((Math.trunc(listaDiferencias[i])) == 0) {
                         estadoServicio.textContent = 'Están iniciando sus recorridos'
                     }
-                    recorridoServicio.textContent = `1° Recorrido: ${rutaObtenida[i].recorrido.join(' »')}`
-                    recorridoServicio2.textContent = `2° Recorrido: ${rutaObtenida[i].recorrido2.join(' » ')}`;
+                    recorridoServicio.textContent = `1° Recorrido: ${rutaObtenida[i].recorrido.join(' → ')}`
+                    recorridoServicio2.textContent = `2° Recorrido: ${rutaObtenida[i].recorrido2.join(' → ')}`;
                 }
                 else {
                     if(rutaObtenida.length == 1 && i == 0) {
@@ -467,7 +465,7 @@ onload = ()=> {
                     if (Math.abs(listaDiferencias[i]) <= 2){
                         estadoServicio.textContent = 'Está iniciando su recorrido'
                     }
-                    recorridoServicio.textContent = `Recorrido: ${rutaObtenida[i].recorrido.join(' » ')}`;
+                    recorridoServicio.textContent = `Recorrido: ${rutaObtenida[i].recorrido.join(' → ')}`;
                 }
             }
             else {
@@ -505,8 +503,8 @@ onload = ()=> {
                     if (Math.abs(listaDiferencias[i]) <= 5 && Math.abs(listaDiferencias[i]) > 0) {
                         estadoServicio.textContent = 'Iniciarán sus recorridos en menos de 5 minutos'
                     }
-                    recorridoServicio.textContent = `1° Recorrido: ${rutaObtenida[i].recorrido.join(' » ')}`;
-                    recorridoServicio2.textContent = `2° Recorrido: ${rutaObtenida[i].recorrido2.join(' » ')}`;
+                    recorridoServicio.textContent = `1° Recorrido: ${rutaObtenida[i].recorrido.join(' → ')}`;
+                    recorridoServicio2.textContent = `2° Recorrido: ${rutaObtenida[i].recorrido2.join(' → ')}`;
                 }
                 else {
                     if (i == 0) {
@@ -542,7 +540,7 @@ onload = ()=> {
                     if (Math.abs(listaDiferencias[i]) <= 5 && Math.abs(listaDiferencias[i]) >= 2) {
                         estadoServicio.textContent = 'Iniciará su recorrido en menos de 5 minutos'
                     }
-                    recorridoServicio.textContent = `Recorrido: ${rutaObtenida[i].recorrido.join(' » ')}`;
+                    recorridoServicio.textContent = `Recorrido: ${rutaObtenida[i].recorrido.join(' → ')}`;
                 }
             }
         }
