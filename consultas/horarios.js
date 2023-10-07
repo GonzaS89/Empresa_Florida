@@ -116,8 +116,8 @@ const filaOrillaDispen = [terminal,bandaRS,cevilPozo,llona,filaOrilla,dispensari
 
 const ralosVillaT = [ralos,villaTercera,llona,cevilPozo,bandaRS,terminal];
 const ralosTermi = [ralos,llona,cevilPozo,bandaRS,terminal];
-const alabamaMayoRalos = [alabama,fincaMayo,ralosTermi];
-const cejasLolitaRalos = [cejas,lolitaS,ralosTermi];
+const alabamaMayoRalos = [alabama,fincaMayo,ralos,llona,cevilPozo,bandaRS,terminal];
+const cejasLolitaRalos = [cejas,lolitaS,ralos,llona,cevilPozo,bandaRS,terminal];
 const ralosCruzA = [ralos,cruzAlta,llona,cevilPozo,bandaRS,terminal];
 
 // Arreglos con recorridos (TERMINAL / RALOS)
@@ -842,7 +842,7 @@ const horariosLvSMAl = [
  {
  "nombre": "07:00",
  "salida": 7,
- "recorrido": [cataAlterTalarCanchaCol4,marta]
+ "recorrido": [terminal,catalinas,alderetes,talar,bCancha,col4Luisiana,marta]
  },
  {
  "nombre": "07:15",
@@ -852,7 +852,7 @@ const horariosLvSMAl = [
  {
  "nombre": "08:00",
  "salida": 8,
- "recorrido": [cataAutopCoch,perez]
+ "recorrido": [terminal,catalinas,alderetes,cochuchal,col4Luisiana]
  },
  {
  "nombre": "08:35",
@@ -862,7 +862,7 @@ const horariosLvSMAl = [
  {
  "nombre": "09:00",
  "salida": 9,
- "recorrido": [cataAutopTalarCancha,col4Luisiana]
+ "recorrido": [terminal,catalinas,alderetes,talar,bCancha,col4Luisiana]
  },
  {
  "nombre": "09:45",
@@ -882,7 +882,7 @@ const horariosLvSMAl = [
  {
  "nombre": "11:15",
  "salida": 11.15,
- "recorrido": [cataAutopTalarCancha,col4Luisiana,marta]
+ "recorrido": [terminal,catalinas,alderetes,talar,bCancha,col4Luisiana,marta]
  },
  // {
  // "nombre": "11:40",
@@ -897,13 +897,13 @@ const horariosLvSMAl = [
  {
  "nombre": "12:20",
  "salida": 12.2,
- "recorrido": [cataAutopTalarCancha,col4Luisiana]
+ "recorrido": [terminal,catalinas,alderetes,talar,bCancha,col4Luisiana]
  },
  {
  "nombre": "12:45",
  "salida": 12.45,
- "recorrido": [bandaTalarFortin,col3Florida],
- "recorrido2": [cataAlterTalarCanchaCol4]
+ "recorrido": [terminal,bandaRS,alderetes,talar,esqLastra,fortin,col3Florida],
+ "recorrido2": cataAlterTalarCanchaCol4
  },
  {
  "nombre": "13:15",
@@ -913,7 +913,7 @@ const horariosLvSMAl = [
  {
  "nombre": "13:30",
  "salida": 13.3,
- "recorrido": [cataAutopTalarCancha,fincaMayo,marta]
+ "recorrido": [terminal,catalinas,alderetes,talar,bCancha,col4Luisiana,fincaMayo,marta]
  },
  {
  "nombre": "14:00",
@@ -929,8 +929,8 @@ const horariosLvSMAl = [
  {
  "nombre": "15:50",
  "salida": 15.5,
- "recorrido": [bandaTalarCancha,fincaMayo],
- "recorrido2": [com11AlterCol4]
+ "recorrido": [terminal,bandaRS,alderetes,talar,bCancha,fincaMayo],
+ "recorrido2": com11AlterCol4
  },
  {
  "nombre": "16:50",
@@ -946,7 +946,7 @@ const horariosLvSMAl = [
  {
  "nombre": "17:45",
  "salida": 17.45,
- "recorrido": [bandaTalarCancha,fincaMayo,marta]
+ "recorrido": [terminal, bandaRS,alderetes,talar,bCancha,fincaMayo,marta]
  },
  {
  "nombre": "18:20",
@@ -956,12 +956,12 @@ const horariosLvSMAl = [
  {
  "nombre": "18:30",
  "salida": 18.3,
- "recorrido": [bandaTalarCancha,col4Luisiana]
+ "recorrido": [terminal, bandaRS,alderetes,talar,bCancha,col4Luisiana]
  },
  {
  "nombre": "19:00",
  "salida": 19,
- "recorrido": [bandaTalarCancha,col4Luisiana]
+ "recorrido": [terminal, bandaRS,alderetes,talar,bCancha,col4Luisiana]
  },
  {
  "nombre": "19:40",
@@ -991,7 +991,7 @@ const horariosLvSMAl = [
  {
  "nombre": "21:30",
  "salida": 21.30,
- "recorrido": [com11AutopCancha,col4Luisiana]
+ "recorrido": [terminal,comisaria11,autopista,alderetes,talar,bCancha,col4Luisiana]
  },
  {
  "nombre": "22:00",
@@ -1006,12 +1006,12 @@ const horariosLvSMAl = [
  {
  "nombre": "22:30",
  "salida": 22.30,
- "recorrido": [com11AutopCancha,col4Luisiana]
+ "recorrido": [terminal,comisaria11,autopista,alderetes,talar,bCancha,col4Luisiana]
  },
  {
  "nombre": "23:30",
  "salida": 23.30,
- "recorrido": [com11AutopCancha,col4Luisiana]
+ "recorrido": [terminal,comisaria11,autopista,alderetes,talar,bCancha,col4Luisiana]
  }
 ]
 const horariosSSMAl = [
@@ -1058,7 +1058,7 @@ const horariosSSMAl = [
  {
  "nombre": "12:20",
  "salida": 12.2,
- "recorrido": [cataAutopTalarCancha,col4Luisiana]
+ "recorrido": [terminal,catalinas,alderetes,talar,bCancha,col4Luisiana]
  },
  {
  "nombre": "13:15",
@@ -1068,7 +1068,7 @@ const horariosSSMAl = [
  {
  "nombre": "13:30",
  "salida": 13.3,
- "recorrido": [cataAutopTalarCancha,col4Luisiana, fincaMayo]
+ "recorrido": [terminal,catalinas,autopista,alderetes,talar,bCancha,col4Luisiana,fincaMayo]
  },
  {
  "nombre": "14:00",
@@ -1078,7 +1078,7 @@ const horariosSSMAl = [
  {
  "nombre": "14:50",
  "salida": 14.5,
- "recorrido": [bandaTalarCancha,col4Luisiana]
+ "recorrido": [terminal,bandaRS,alderetes,talar,bCancha,col4Luisiana]
  },
  {
  "nombre": "15:50",
@@ -1088,7 +1088,7 @@ const horariosSSMAl = [
  {
  "nombre": "16:00",
  "salida": 16,
- "recorrido": [bandaTalarFortin,col3Florida]
+ "recorrido": [terminal,bandaRS,alderetes,talar,esqLastra,fortin,col3Florida]
  },
  {
  "nombre": "16:50",
@@ -1098,22 +1098,22 @@ const horariosSSMAl = [
  {
  "nombre": "17:40",
  "salida": 17.4,
- "recorrido": [com11AutopCancha,col4Luisiana]
+ "recorrido": [terminal,comisaria11,autopista,alderetes,talar,bCancha,col4Luisiana]
  },
  {
  "nombre": "17:45",
  "salida": 17.45,
- "recorrido": [bandaTalarCancha,col3Luisiana,fincaMayo,marta]
+ "recorrido": [terminal,bandaRS,alderetes,talar,bCancha,col3Luisiana,fincaMayo,marta]
  },
  {
  "nombre": "18:30",
  "salida": 18.3,
- "recorrido": [bandaTalarCancha,col4Luisiana]
+ "recorrido": [terminal, bandaRS,alderetes,talar,bCancha,col4Luisiana]
  },
  {
  "nombre": "19:00",
  "salida": 19,
- "recorrido": [bandaTalarCancha,col4Luisiana]
+ "recorrido": [terminal, bandaRS,alderetes,talar,bCancha,col4Luisiana]
  },
  {
  "nombre": "19:45",
@@ -1133,7 +1133,7 @@ const horariosSSMAl = [
  {
  "nombre": "21:30",
  "salida": 21.30,
- "recorrido": [com11AutopCancha,col4Luisiana]
+ "recorrido": [terminal,comisaria11,autopista,alderetes,talar,bCancha,col4Luisiana]
  },
  {
  "nombre": "22:00",
@@ -1156,42 +1156,42 @@ const horariosDSMAl = [
  {
  "nombre": "09:45",
  "salida": 9.45,
- "recorrido": [bandaTalarFortin,col2Florida]
+ "recorrido": [terminal,bandaRS,alderetes,talar,esqLastra,fortin,col2Florida]
  },
  {
  "nombre": "11:40",
  "salida": 11.40,
- "recorrido": [bandaCochFortin,fincaMayo]
+ "recorrido": [terminal,bandaRS,alderetes,cochuchal,esqLastra,fortin,fincaMayo]
  },
  {
  "nombre": "14:00",
  "salida": 14,
- "recorrido": [bandaTalarCancha,col4Luisiana]
+ "recorrido": [terminal, bandaRS,alderetes,talar,bCancha,col4Luisiana]
  },
  {
  "nombre": "14:50",
  "salida": 14.5,
- "recorrido": [bandaTalarCancha,col4Luisiana]
+ "recorrido": [terminal, bandaRS,alderetes,talar,bCancha,col4Luisiana]
  },
  {
  "nombre": "16:00",
  "salida": 16,
- "recorrido": [bandaTalarFortin,col3Florida]
+ "recorrido": [terminal,bandaRS,alderetes,talar,esqLastra,fortin,col3Florida]
  },
  {
  "nombre": "16:50",
  "salida": 16.5,
- "recorrido": [bandaTalarCancha,col4Luisiana]
+ "recorrido": [terminal, bandaRS,alderetes,talar,bCancha,col4Luisiana]
  },
  {
  "nombre": "17:45",
  "salida": 17.45,
- "recorrido": [bandaTalarFortin,col3Florida,fincaMayo]
+ "recorrido": [terminal,bandaRS,alderetes,talar,esqLastra,fortin,col3Florida,fincaMayo]
  },
  {
  "nombre": "18:30",
  "salida": 18.3,
- "recorrido": [bandaTalarCancha,col4Luisiana]
+ "recorrido": [terminal, bandaRS,alderetes,talar,bCancha,col4Luisiana]
  },
  {
  "nombre": "19:45",
@@ -1219,7 +1219,7 @@ const horariosLvSMPo = [
  {
  "nombre": "06:00",
  "salida": 6,
- "recorrido": [posseCancha,col4Luisiana]
+ "recorrido": [terminal,bandaRS,cevilPozo,llona,dispensario,paraiso,bCancha,col4Luisiana]
  },
  {
  "nombre": "06:30",
@@ -1254,7 +1254,7 @@ const horariosLvSMPo = [
  {
  "nombre": "10:00",
  "salida": 10,
- "recorrido": [posseCancha,col4Luisiana]
+ "recorrido": [terminal,bandaRS,cevilPozo,llona,dispensario,paraiso,bCancha,col4Luisiana]
  },
  {
  "nombre": "10:30",
@@ -1339,7 +1339,7 @@ const horariosLvSMPo = [
  {
  "nombre": "19:10",
  "salida": 19.1,
- "recorrido": [posseCancha,col4Luisiana]
+ "recorrido": [terminal,bandaRS,cevilPozo,llona,dispensario,paraiso,bCancha,col4Luisiana]
  },
  {
  "nombre": "19:30",
@@ -1384,7 +1384,7 @@ const horariosLvSMPo = [
  {
  "nombre": "23:30",
  "salida": 23.3,
- "recorrido": [posseFortin,bCancha,col4Luisiana]
+ "recorrido": [terminal,bandaRS,cevilPozo,llona,dispensario,paraiso,esqLastra,fortin,bCancha,col4Luisiana]
  },
  {
  "nombre": "00:30",
@@ -1401,7 +1401,7 @@ const horariosSSMPo = [
  {
  "nombre": "06:00",
  "salida": 6,
- "recorrido": [posseCancha,col4Luisiana]
+ "recorrido": [terminal,bandaRS,cevilPozo,llona,dispensario,paraiso,bCancha,col4Luisiana]
  },
  {
  "nombre": "06:40",
@@ -1436,7 +1436,7 @@ const horariosSSMPo = [
  {
  "nombre": "10:00",
  "salida": 10,
- "recorrido": [posseCancha,col4Luisiana]
+ "recorrido": [terminal,bandaRS,cevilPozo,llona,dispensario,paraiso,bCancha,col4Luisiana]
  },
  {
  "nombre": "10:30",
@@ -1506,7 +1506,7 @@ const horariosSSMPo = [
  {
  "nombre": "19:15",
  "salida": 19.15,
- "recorrido": [posseCancha,col4Luisiana]
+ "recorrido": [terminal,bandaRS,cevilPozo,llona,dispensario,paraiso,bCancha,col4Luisiana]
  },
  {
  "nombre": "19:30",
@@ -1536,7 +1536,7 @@ const horariosSSMPo = [
  {
  "nombre": "22:00",
  "salida": 22,
- "recorrido": [posseCancha,col4Luisiana]
+ "recorrido": [terminal,bandaRS,cevilPozo,llona,dispensario,paraiso,bCancha,col4Luisiana]
  },
  {
  "nombre": "22:30",
@@ -2028,13 +2028,13 @@ const ralosTerminalLaV = [
  {
  "nombre": "05:25",
  "salida": 5.25,
- "recorrido": [fincaMayo,ralosTermi],
- "recorrido2": [cejas,lolitaS,cerco2,ralosTermi]
+ "recorrido": [fincaMayo,ralos,llona,cevilPozo,bandaRS,terminal],
+ "recorrido2": [cejas,lolitaS,cerco2,ralos,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "05:30",
  "salida": 5.3,
- "recorrido": [villaTercera,ralosTermi],
+ "recorrido": [villaTercera,ralos,llona,cevilPozo,bandaRS,terminal],
  "recorrido2": ralosTermi
  },
  {
@@ -2370,7 +2370,7 @@ const ralosTerminalD = [
  {
  "nombre": "05:30",
  "salida": 5.3,
- "recorrido": [villaTercera,ralosTermi]
+ "recorrido": [villaTercera,ralos,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "07:00",
@@ -3243,7 +3243,7 @@ const lasCejasTerminalLaV = [
  {
  "nombre": "05:30",
  "salida": 5.3,
- "recorrido": [cejas,lolitaS,cerco2,ralosTermi]
+ "recorrido": [cejas,lolitaS,cerco2,ralos,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "06:25",

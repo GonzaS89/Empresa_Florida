@@ -260,8 +260,6 @@ onload = ()=> {
             semiParoGrilla.splice(posiciones[0], posiciones.length)
             rutaObtenida = semiParoGrilla;
         }
-
-        console.log(rutaObtenida[10].recorrido)
         
             function obtenerLista(x) {
                 for (i = 0; i < x.length; i++) listaDelDia.push(x[i].salida);
