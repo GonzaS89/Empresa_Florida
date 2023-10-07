@@ -70,10 +70,10 @@ const botonCierraMensaje = document.querySelector('.botoncerrado');
 const mensajecontenedor = document.querySelector('.mensaje-contenedor');
 const mensaje = document.querySelector('.mensaje-cuadro')
 
-botonCierraMensaje.addEventListener('click', ()=>{
-    mensaje.classList.add('mensaje-out');
-    mensajecontenedor.classList.add('mensaje-contenedor-out')
-})
+// botonCierraMensaje.addEventListener('click', ()=>{
+//     mensaje.classList.add('mensaje-out');
+//     mensajecontenedor.classList.add('mensaje-contenedor-out')
+// })
 
 addEventListener('load', () => {
     scrollcont.children[0].classList.add('manito')
@@ -181,6 +181,7 @@ onload = ()=> {
         let recorridoServicio;
         let recorridoServicio2;
         let estadoServicio;
+
     
     
         if (opcionbase2.selected == false) {
@@ -262,7 +263,7 @@ onload = ()=> {
         }
 
         
-        console.log(rutaObtenida)
+        
             function obtenerLista(x) {
                 for (i = 0; i < x.length; i++) listaDelDia.push(x[i].salida);
                 // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
@@ -354,7 +355,7 @@ onload = ()=> {
                 }
             }
         }
-    
+        
         contruirGlobos(rutaObtenida,resultadoscontainer,resultadoscont);
     
         function irAlObjeto() {
@@ -426,8 +427,8 @@ onload = ()=> {
                     else if ((Math.trunc(listaDiferencias[i])) == 0) {
                         estadoServicio.textContent = 'Están iniciando sus recorridos'
                     }
-                    recorridoServicio.textContent = `1° Recorrido: ${rutaObtenida[i].recorrido}`
-                    recorridoServicio2.textContent = `2° Recorrido: ${rutaObtenida[i].recorrido2}`;
+                    recorridoServicio.textContent = `1° Recorrido: ${rutaObtenida[i].recorrido.join(' »')}`
+                    recorridoServicio2.textContent = `2° Recorrido: ${rutaObtenida[i].recorrido2.join(' » ')}`;
                 }
                 else {
                     if(rutaObtenida.length == 1 && i == 0) {
@@ -466,7 +467,7 @@ onload = ()=> {
                     if (Math.abs(listaDiferencias[i]) <= 2){
                         estadoServicio.textContent = 'Está iniciando su recorrido'
                     }
-                    recorridoServicio.textContent = `Recorrido: ${rutaObtenida[i].recorrido.join('→')}`;
+                    recorridoServicio.textContent = `Recorrido: ${rutaObtenida[i].recorrido.join(' » ')}`;
                 }
             }
             else {
@@ -504,8 +505,8 @@ onload = ()=> {
                     if (Math.abs(listaDiferencias[i]) <= 5 && Math.abs(listaDiferencias[i]) > 0) {
                         estadoServicio.textContent = 'Iniciarán sus recorridos en menos de 5 minutos'
                     }
-                    recorridoServicio.textContent = `1° Recorrido: ${rutaObtenida[i].recorrido}`;
-                    recorridoServicio2.textContent = `2° Recorrido: ${rutaObtenida[i].recorrido2}`;
+                    recorridoServicio.textContent = `1° Recorrido: ${rutaObtenida[i].recorrido.join(' » ')}`;
+                    recorridoServicio2.textContent = `2° Recorrido: ${rutaObtenida[i].recorrido2.join(' » ')}`;
                 }
                 else {
                     if (i == 0) {
@@ -541,7 +542,7 @@ onload = ()=> {
                     if (Math.abs(listaDiferencias[i]) <= 5 && Math.abs(listaDiferencias[i]) >= 2) {
                         estadoServicio.textContent = 'Iniciará su recorrido en menos de 5 minutos'
                     }
-                    recorridoServicio.textContent = `Recorrido: ${rutaObtenida[i].recorrido}`;
+                    recorridoServicio.textContent = `Recorrido: ${rutaObtenida[i].recorrido.join(' » ')}`;
                 }
             }
         }
@@ -552,7 +553,8 @@ onload = ()=> {
         }else{
             mensaje2.classList.add('mensajeAparece')
         }
-        irAlObjeto()
+        irAlObjeto();
+        
         // setTimeout(() => {
             
         // }, 1);

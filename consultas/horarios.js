@@ -126,7 +126,10 @@ const termiRalos = [terminal, bandaRS, cevilPozo, llona, ralos];
 const termiRalosMayo = [terminal, bandaRS, cevilPozo, llona, ralos, fincaMayo];
 const termiRalosVillaT = [termiRalos,villaTercera];
 const termiRalosMayoAlabama = [termiRalosMayo,alabama];
-const termiRalosCejas = [termiRalos,cejas]
+const termiRalosCejas = [termiRalos,cejas];
+const termiCruzARalos = [terminal,bandaRS, cevilPozo,llona,cruzAlta,ralos];
+const cejasRalos = [cejas,ralos,llona,cevilPozo,bandaRS,terminal];
+const sieteACejas = [sieteAbril,cejas,llona,cevilPozo,bandaRS,terminal];
 
 
 // Arreglos con toda la grilla
@@ -3093,7 +3096,7 @@ const ralosCruzAltaTerminalS = [
  {
  "nombre": "08:40",
  "salida": 8.4,
- "recorrido": "Colonia 9 → Cruz Alta → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": [colonia9,ralosCruzA]
  },
  {
  "nombre": "11:50",
@@ -3112,128 +3115,128 @@ const terminalCruzAltaRalosLaV = [
  {
  "nombre": "06:50",
  "salida": 6.5,
- "recorrido": "Terminal → Banda R.S. → Llona → Cevil Pozo → Cruz Alta → Los Ralos"
+ "recorrido": termiCruzARalos
  },
  {
  "nombre": "10:45",
  "salida": 10.45,
- "recorrido": "Terminal → Banda R.S. → Llona → Cevil Pozo → Cruz Alta → Los Ralos"
+ "recorrido": termiCruzARalos
  },
  {
  "nombre": "12:00",
  "salida": 12,
- "recorrido": "Terminal → Banda R.S. → Llona → Cevil Pozo → Cruz Alta → Los Ralos"
+ "recorrido": termiCruzARalos
  },
  {
  "nombre": "13:15",
  "salida": 13.15,
- "recorrido": "Terminal → Banda R.S. → Llona → Cevil Pozo → Cruz Alta → Los Ralos"
+ "recorrido": termiCruzARalos
  },
  {
  "nombre": "17:30",
  "salida": 17.3,
- "recorrido": "Terminal → Banda R.S. → Llona → Cevil Pozo → Cruz Alta → Colonia 9"
+ "recorrido": [termiCruzARalos,colonia9]
  },
  {
  "nombre": "20:00",
  "salida": 20,
- "recorrido": "Terminal → Banda R.S. → Llona → Cevil Pozo → Cruz Alta → Los Ralos"
+ "recorrido": termiCruzARalos
  }
 ]
 const terminalCruzAltaRalosS = [
  {
  "nombre": "10:45",
  "salida": 10.45,
- "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Cruz Alta → Los Ralos"
+ "recorrido": termiCruzARalos
  },
  {
  "nombre": "13:15",
  "salida": 13.15,
- "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Cruz Alta → Los Ralos"
+ "recorrido": termiCruzARalos
  },
  {
  "nombre": "19:30",
  "salida": 19.30,
- "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Cruz Alta → Los Ralos"
+ "recorrido": termiCruzARalos
  }
 ];
 const terminalCruzAltaRalosD = [
  {
  "nombre": "19:30",
  "valor": 19.3,
- "recorrido": "Terminal → Banda del Rio Sali → Cevil Pozo → Cruz Alta → Los Ralos"
+ "recorrido": termiCruzARalos
  }
 ]
 const sieteDeAbrilTerminalLaV = [
  {
  "nombre": "04:30",
  "salida": 4.3,
- "recorrido": "7 de Abril → Las Cejas → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": sieteACejas
  },
  {
  "nombre": "11:30",
  "salida": 11.3,
- "recorrido": "7 de Abril → Las Cejas → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": sieteACejas
  },
  {
  "nombre": "16:20",
  "salida": 16.2,
- "recorrido": "7 de Abril → Las Cejas → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": [sieteAbril, cejasRalos]
  }
 ]
 const sieteDeAbrilTerminalS = [
  {
  "nombre": "05:30",
  "salida": 5.3,
- "recorrido": "7 de Abril → Las Cejas → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": sieteACejas
  }
 ]
 const sieteDeAbrilTerminalD = [
  {
  "nombre": "18:00",
  "salida": 18,
- "recorrido": "7 de Abril → Las Cejas → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": sieteACejas
  }
 ]
 const terminalSieteDeAbrilLaV = [
  {
  "nombre": "06:15",
  "salida": 6.15,
- "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Las Cejas → 7 de Abril"
+ "recorrido": [termiRalosCejas,sieteAbril]
  },
  {
  "nombre": "12:30",
  "salida": 12.3,
- "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Las Cejas → 7 de Abril"
+ "recorrido": [termiRalosCejas,sieteAbril]
  },
  {
  "nombre": "15:45",
  "salida": 15.45,
- "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Las Cejas → 7 de Abril"
+ "recorrido": [termiRalosCejas,sieteAbril]
  }
 ]
 const terminalSieteDeAbrilS = [
  {
  "nombre": "15:45",
  "salida": 15.45,
- "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Las Cejas → 7 de Abril"
+ "recorrido": [termiRalosCejas,sieteAbril]
  }
 ]
 const terminalSieteDeAbrilD = [
  {
  "nombre": "15:00",
  "salida": 15,
- "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Las Cejas → 7 de Abril"
+ "recorrido": [termiRalosCejas,sieteAbril]
  }
  // {
  // "nombre": "18:30",
  // "salida": 18.3,
- // "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Las Cejas → 7 de Abril"
+ // "recorrido": [termiRalosCejas,sieteAbril]
  // },
  // {
  // "nombre": "20:30",
  // "salida": 20.3,
- // "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Las Cejas → 7 de Abril"
+ // "recorrido": [termiRalosCejas,sieteAbril]
  // }
 ]
 const lasCejasTerminalLaV = [
@@ -3245,12 +3248,12 @@ const lasCejasTerminalLaV = [
  {
  "nombre": "06:25",
  "salida": 6.25,
- "recorrido": "Las Cejas → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": cejasRalos
  },
  {
  "nombre": "07:50",
  "salida": 7.5,
- "recorrido": "Las Cejas → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": cejasRalos
  },
  {
  "nombre": "12:10",
@@ -3260,34 +3263,34 @@ const lasCejasTerminalLaV = [
  {
  "nombre": "13:20",
  "salida": 13.2,
- "recorrido": "Las Cejas → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido":  [cejas,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "15:40",
  "salida": 15.4,
- "recorrido": "Las Cejas → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": cejasRalos
  },
  {
  "nombre": "18:20",
  "salida": 18.2,
- "recorrido": "Las Cejas → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": cejasRalos
  },
  {
  "nombre": "19:50",
  "salida": 19.5,
- "recorrido": "Las Cejas → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": cejasRalos
  }
 ]
 const lasCejasTerminalS = [
  {
  "nombre": "06:25",
  "salida": 6.25,
- "recorrido": "Las Cejas → Los Ralos → (Trasbordo)"
+ "recorrido": [cejas, `${ralos} (trasbordo)`]
  },
  {
  "nombre": "07:50",
  "salida": 7.5,
- "recorrido": "Las Cejas → Llona → Cevil Pozo → Banda del Rio Sali"
+ "recorrido": [cejas,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "12:00",
@@ -3297,39 +3300,39 @@ const lasCejasTerminalS = [
  {
  "nombre": "15:40",
  "salida": 15.4,
- "recorrido": "Las Cejas → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": cejasRalos
  },
  {
  "nombre": "19:50",
  "salida": 19.5,
- "recorrido": "Las Cejas → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": cejasRalos
  },
 ]
 const lasCejasTerminalD = [
  {
  "nombre": "07:50",
  "salida": 7.5,
- "recorrido": "Las Cejas → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": cejasRalos
  },
  {
  "nombre": "12:00",
  "salida": 12,
- "recorrido": "Las Cejas → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": cejasRalos
  },
  {
  "nombre": "15:40",
  "salida": 15.4,
- "recorrido": "Las Cejas → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": cejasRalos
  },
  {
  "nombre": "18:00",
  "salida": 18,
- "recorrido": "7 de Abril → Las Cejas → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": sieteACejas
  },
  {
  "nombre": "19:50",
  "salida": 19.5,
- "recorrido": "Las Cejas → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ "recorrido": cejasRalos
  },
 ]
 const terminalLasCejasLaV = [
@@ -3421,7 +3424,7 @@ const terminalLasCejasD = [
  {
  "nombre": "15:00",
  "salida": 15,
- "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Las Cejas → 7 de Abril"
+ "recorrido": [termiRalosCejas,sieteAbril]
  },
  {
  "nombre": "18:30",

@@ -1001,7 +1001,7 @@ select:focus{outline:none;}
     max-height: 350px;
     min-height: 300px;
     gap: 10px;
-    width: 75%;
+    width: 80%;
     /* border-top: 2.5px solid rgba(128, 128, 128, 0.159); */
     overflow-y: scroll;
     margin: 10px auto;
