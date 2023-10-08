@@ -124,9 +124,9 @@ const ralosCruzA = [ralos,cruzAlta,llona,cevilPozo,bandaRS,terminal];
 
 const termiRalos = [terminal, bandaRS, cevilPozo, llona, ralos];
 const termiRalosMayo = [terminal, bandaRS, cevilPozo, llona, ralos, fincaMayo];
-const termiRalosVillaT = [termiRalos,villaTercera];
+const termiRalosVillaT = [terminal, bandaRS, cevilPozo, llona, ralos,villaTercera];
 const termiRalosMayoAlabama = [termiRalosMayo,alabama];
-const termiRalosCejas = [termiRalos,cejas];
+const termiRalosCejas = [terminal, bandaRS, cevilPozo, llona, ralos,cejas];
 const termiCruzARalos = [terminal,bandaRS, cevilPozo,llona,cruzAlta,ralos];
 const cejasRalos = [cejas,ralos,llona,cevilPozo,bandaRS,terminal];
 const sieteACejas = [sieteAbril,cejas,llona,cevilPozo,bandaRS,terminal];
@@ -2061,7 +2061,7 @@ const ralosTerminalLaV = [
  "nombre": "06:40",
  "salida": 6.4,
  "recorrido": [villaTercera,llona,cevilPozo,bandaRS,terminal],
- "recorrido2": [lolitaS,cerco2,ralosTermi]
+ "recorrido2": [lolitaS,cerco2,ralos,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "06:50",
@@ -2072,7 +2072,7 @@ const ralosTerminalLaV = [
  {
  "nombre": "07:25",
  "salida": 7.25,
- "recorrido": [lolitaS,lolitaN,ralosTermi]
+ "recorrido": [lolitaS,lolitaN,ralos,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "07:30",
@@ -2083,7 +2083,7 @@ const ralosTerminalLaV = [
  {
  "nombre": "08:15",
  "salida": 8.15,
- "recorrido": [marta,fincaMayo,ralosTermi]
+ "recorrido": [marta,fincaMayo,ralos,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "08:20",
@@ -2115,7 +2115,7 @@ const ralosTerminalLaV = [
  {
  "nombre": "12:15",
  "salida": 12.15,
- "recorrido": [fincaMayo,ralosTermi]
+ "recorrido": [fincaMayo,ralos,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "12:50",
@@ -2125,7 +2125,7 @@ const ralosTerminalLaV = [
  {
  "nombre": "13:10",
  "salida": 13.1,
- "recorrido": [fincaMayo,ralosTermi],
+ "recorrido": [fincaMayo,ralos,llona,cevilPozo,bandaRS,terminal],
  "recorrido2":alabamaMayoRalos
  },
  {
@@ -2162,7 +2162,7 @@ const ralosTerminalLaV = [
  {
  "nombre": "16:30",
  "salida": 16.3,
- "recorrido": [fincaMayo,ralosTermi]
+ "recorrido": [fincaMayo,ralos,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "17:15",
@@ -2197,7 +2197,7 @@ const ralosTerminalLaV = [
  {
  "nombre": "20:00",
  "salida": 20,
- "recorrido": [lolitaS,ralosTermi]
+ "recorrido": [lolitaS,ralos,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "20:20",
@@ -2224,13 +2224,13 @@ const ralosTerminalS = [
  {
  "nombre": "05:30",
  "salida": 5.3,
- "recorrido": [villaTercera,infierno,ralosTermi],
+ "recorrido": [villaTercera,infierno,ralos,llona,cevilPozo,bandaRS,terminal],
  "recorrido2": [fincaMayo, `${ralos} (trasbordo)`]
  },
  {
  "nombre": "05:55",
  "salida": 5.55,
- "recorrido": [villaTercera,infierno,ralosTermi]
+ "recorrido": [villaTercera,infierno,ralos,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "06:25",
@@ -2245,13 +2245,13 @@ const ralosTerminalS = [
  {
  "nombre": "07:30",
  "salida": 7.3,
- "recorrido": [lolitaS,ralosTermi],
+ "recorrido": [lolitaS,ralos,llona,cevilPozo,bandaRS,terminal],
  "recorrido2": ralosTermi
  },
  {
  "nombre": "08:10",
  "salida": 8.1,
- "recorrido": [fincaMayo,ralosTermi]
+ "recorrido": [fincaMayo,ralos,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "08:25",
@@ -2273,7 +2273,7 @@ const ralosTerminalS = [
  {
  "nombre": "11:10",
  "salida": 11.1,
- "recorrido": [alabama,ralosTermi]
+ "recorrido": [alabama,ralos,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "12:00",
@@ -2283,12 +2283,12 @@ const ralosTerminalS = [
  {
  "nombre": "12:15",
  "salida": 12.15,
- "recorrido": [fincaMayo,ralosTermi]
+ "recorrido": [fincaMayo,ralos,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "13:10",
  "salida": 13.1,
- "recorrido": [alabama,ralosTermi]
+ "recorrido": [alabama,ralos,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "14:10",
@@ -2298,7 +2298,7 @@ const ralosTerminalS = [
  {
  "nombre": "15:00",
  "salida": 15,
- "recorrido": [lolitaS,ralosTermi]
+ "recorrido": [lolitaS,ralos,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "15:25",
@@ -2313,12 +2313,12 @@ const ralosTerminalS = [
  {
  "nombre": "16:30",
  "salida": 16.3,
- "recorrido": [fincaMayo,ralosTermi]
+ "recorrido": [fincaMayo,ralos,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "17:15",
  "salida": 17.15,
- "recorrido": [fincaMayo,ralosTermi]
+ "recorrido": [fincaMayo,ralos,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "17:20",
@@ -2343,7 +2343,7 @@ const ralosTerminalS = [
  {
  "nombre": "20:00",
  "salida": 20,
- "recorrido": [lolitaS,ralosTermi]
+ "recorrido": [lolitaS,ralos,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "21:10",
@@ -2353,7 +2353,7 @@ const ralosTerminalS = [
  {
  "nombre": "21:30",
  "salida": 21.3,
- "recorrido": [fincaMayo,ralosTermi]
+ "recorrido": [fincaMayo,ralos,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "22:20",
@@ -2405,7 +2405,7 @@ const ralosTerminalD = [
  {
  "nombre": "12:10",
  "salida": 12.1,
- "recorrido": [fincaMayo,ralosTermi]
+ "recorrido": [fincaMayo,ralos,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "13:10",
@@ -2462,7 +2462,7 @@ const ralosTerminalD = [
  {
  "nombre": "20:00",
  "salida": 20,
- "recorrido": [lolitaS,ralosTermi]
+ "recorrido": [lolitaS,ralos,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "21:10",
@@ -2472,7 +2472,7 @@ const ralosTerminalD = [
  {
  "nombre": "21:30",
  "salida": 21.3,
- "recorrido": [fincaMayo,ralosTermi]
+ "recorrido": [fincaMayo,ralos,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "21:10",
@@ -2495,12 +2495,12 @@ const terminalRalosLaV = [
  {
  "nombre": "06.30",
  "salida": 6.3,
- "recorrido": [termiRalos, lolitaN, lolitaS]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos, lolitaN, lolitaS]
  },
  {
  "nombre": "07:00",
  "salida": 7,
- "recorrido": [termiRalos,fincaMayo, marta]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,fincaMayo, marta]
  },
  {
  "nombre": "08:00",
@@ -2535,12 +2535,12 @@ const terminalRalosLaV = [
  {
  "nombre": "10:40",
  "salida": 10.4,
- "recorrido": [termiRalos,lolitaS]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,lolitaS]
  },
  {
  "nombre": "11:00",
  "salida": 11,
- "recorrido": [termiRalosCejas,piedrabuena]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas]
  },
  {
  "nombre": "11:15",
@@ -2555,7 +2555,7 @@ const terminalRalosLaV = [
  {
  "nombre": "11:45",
  "salida": 11.45,
- "recorrido": [termiRalosVillaT,lolitaS]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,villaTercera,lolitaS]
  },
  // {
  // "nombre":"11:50",
@@ -2571,7 +2571,7 @@ const terminalRalosLaV = [
  {
  "nombre": "12:30",
  "salida": 12.3,
- "recorrido": [termiRalos,bTrigal]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,bTrigal]
  },
  {
  "nombre": "13:00",
@@ -2582,18 +2582,18 @@ const terminalRalosLaV = [
  {
  "nombre": "13:30",
  "salida": 13.3,
- "recorrido": [termiRalosVillaT,lolitaS],
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,villaTercera,lolitaS],
  "recorrido2": termiRalos
  },
  {
  "nombre": "14:00",
  "salida": 14,
- "recorrido": [termiRalos,bTrigal]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,bTrigal]
  },
  // {
  // "nombre":"14:00",
  // "salida":14,
- // "recorrido":[termiRalos,lolitaS]
+ // "recorrido":[terminal, bandaRS, cevilPozo, llona, ralos,lolitaS]
  // },
  {
  "nombre": "14:30",
@@ -2614,7 +2614,7 @@ const terminalRalosLaV = [
  {
  "nombre": "15:30",
  "salida": 15.3,
- "recorrido": [termiRalosMayo,cruce]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos, fincaMayo,cruce]
  },
  {
  "nombre": "16:00",
@@ -2665,13 +2665,13 @@ const terminalRalosLaV = [
  {
  "nombre": "19:00",
  "salida": 19,
- "recorrido": [termiRalos,lolitaS],
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,lolitaS],
  "recorrido2": termiRalos
  },
  {
  "nombre": "19:30",
  "salida": 19.3,
- "recorrido": [termiRalos,bTrigal]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,bTrigal]
  },
  {
  "nombre": "20:00",
@@ -2692,7 +2692,7 @@ const terminalRalosLaV = [
  {
  "nombre": "21:00",
  "salida": 21,
- "recorrido": [termiRalos,bTrigal]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,bTrigal]
  },
  {
  "nombre": "21:20",
@@ -2712,12 +2712,12 @@ const terminalRalosLaV = [
  {
  "nombre": "22:30",
  "salida": 22.3,
- "recorrido": [termiRalosVillaT,bTrigal]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,villaTercera,bTrigal]
  },
  {
  "nombre": "23:30",
  "salida": 23.3,
- "recorrido": [termiRalosVillaT,bTrigal]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,villaTercera,bTrigal]
  }
 ]
 const terminalRalosS = [
@@ -2729,7 +2729,7 @@ const terminalRalosS = [
  {
  "nombre": "06.30",
  "salida": 6.3,
- "recorrido": [termiRalos,lolitaS,cejas]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,lolitaS,cejas]
  },
  {
  "nombre": "07:00",
@@ -2759,13 +2759,12 @@ const terminalRalosS = [
  {
  "nombre": "10:40",
  "salida": 10.4,
- "recorrido": [termiRalos,lolitaS,cejas]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,lolitaS,cejas]
  },
  {
  "nombre": "11:00",
  "salida": 11,
- "recorrido": [termiRalosMayo,cruce]
-
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos, fincaMayo,cruce]
  },
  {
  "nombre": "11:50",
@@ -2795,12 +2794,12 @@ const terminalRalosS = [
  {
  "nombre": "13:30",
  "salida": 13.3,
- "recorrido": [termiRalosVillaT,lolitaS]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,villaTercera,lolitaS]
  },
  {
  "nombre": "14:00",
  "salida": 14,
- "recorrido": [termiRalos,lolitaS]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,lolitaS]
  },
  {
  "nombre": "14:30",
@@ -2852,7 +2851,7 @@ const terminalRalosS = [
  {
  "nombre": "19:00",
  "salida": 19,
- "recorrido": [termiRalos,lolitaS],
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,lolitaS],
  "recorrido2": termiRalos
  },
  {
@@ -2932,7 +2931,7 @@ const terminalRalosD = [
  {
  "nombre": "10:30",
  "salida": 10.3,
- "recorrido": [termiRalos,lolitaS,cejas]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,lolitaS,cejas]
  },
  {
  "nombre": "11:00",
@@ -2962,7 +2961,7 @@ const terminalRalosD = [
  {
  "nombre": "15:00",
  "salida": 15,
- "recorrido": [termiRalosCejas,sieteAbril]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
  },
  {
  "nombre": "15:30",
@@ -2999,12 +2998,12 @@ const terminalRalosD = [
  {
  "nombre": "19:00",
  "salida": 19,
- "recorrido": [termiRalos,lolitaS]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,lolitaS]
  },
  {
  "nombre": "19:30",
  "salida": 19.3,
- "recorrido": [termiRalos,cruzAlta],
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cruzAlta],
  "recorrido2": termiRalos
  
  },
@@ -3016,7 +3015,7 @@ const terminalRalosD = [
  {
  "nombre": "20:30",
  "salida": 20.3,
- "recorrido": [termiRalos,fincaMayo,cejas]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,fincaMayo,cejas]
  },
  {
  "nombre": "21:00",
@@ -3078,7 +3077,7 @@ const ralosCruzAltaTerminalLaV = [
  {
  "nombre": "18:30",
  "salida": 18.3,
- "recorrido": [colonia9, ralosCruzA]
+ "recorrido": [colonia9,ralos,cruzAlta,llona,cevilPozo,bandaRS,terminal]
  },
 
 ]
@@ -3096,7 +3095,7 @@ const ralosCruzAltaTerminalS = [
  {
  "nombre": "08:40",
  "salida": 8.4,
- "recorrido": [colonia9,ralosCruzA]
+ "recorrido": [colonia9,ralos,cruzAlta,llona,cevilPozo,bandaRS,terminal]
  },
  {
  "nombre": "11:50",
@@ -3135,7 +3134,7 @@ const terminalCruzAltaRalosLaV = [
  {
  "nombre": "17:30",
  "salida": 17.3,
- "recorrido": [termiCruzARalos,colonia9]
+ "recorrido": [terminal,bandaRS, cevilPozo,llona,cruzAlta,ralos,colonia9]
  },
  {
  "nombre": "20:00",
@@ -3181,7 +3180,7 @@ const sieteDeAbrilTerminalLaV = [
  {
  "nombre": "16:20",
  "salida": 16.2,
- "recorrido": [sieteAbril, cejasRalos]
+ "recorrido": [sieteAbril, cejas,ralos,llona,cevilPozo,bandaRS,terminal]
  }
 ]
 const sieteDeAbrilTerminalS = [
@@ -3202,41 +3201,41 @@ const terminalSieteDeAbrilLaV = [
  {
  "nombre": "06:15",
  "salida": 6.15,
- "recorrido": [termiRalosCejas,sieteAbril]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
  },
  {
  "nombre": "12:30",
  "salida": 12.3,
- "recorrido": [termiRalosCejas,sieteAbril]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
  },
  {
  "nombre": "15:45",
  "salida": 15.45,
- "recorrido": [termiRalosCejas,sieteAbril]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
  }
 ]
 const terminalSieteDeAbrilS = [
  {
  "nombre": "15:45",
  "salida": 15.45,
- "recorrido": [termiRalosCejas,sieteAbril]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
  }
 ]
 const terminalSieteDeAbrilD = [
  {
  "nombre": "15:00",
  "salida": 15,
- "recorrido": [termiRalosCejas,sieteAbril]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
  }
  // {
  // "nombre": "18:30",
  // "salida": 18.3,
- // "recorrido": [termiRalosCejas,sieteAbril]
+ // "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
  // },
  // {
  // "nombre": "20:30",
  // "salida": 20.3,
- // "recorrido": [termiRalosCejas,sieteAbril]
+ // "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
  // }
 ]
 const lasCejasTerminalLaV = [
@@ -3339,7 +3338,7 @@ const terminalLasCejasLaV = [
  {
  "nombre": "06:15",
  "salida": 6.15,
- "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Lolita → Las Cejas → 7 de Abril"
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
  },
  {
  "nombre": "10:30",
@@ -3349,13 +3348,13 @@ const terminalLasCejasLaV = [
  {
  "nombre": "11:00",
  "salida": 11,
- "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Las Cejas → Piedrabuena"
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,piedrabuena]
  },
  {
  "nombre": "12:30",
  "salida": 12.3,
  "recorrido": termiRalosCejas,
- "recorrido2": [termiRalosCejas,sieteAbril]
+ "recorrido2": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
  },
  {
  "nombre": "14:30",
@@ -3365,7 +3364,7 @@ const terminalLasCejasLaV = [
  {
  "nombre": "15:45",
  "salida": 15.45,
- "recorrido": [termiRalosCejas,sieteAbril]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
  },
  {
  "nombre": "18:30",
@@ -3387,7 +3386,7 @@ const terminalLasCejasS = [
  {
  "nombre": "10:40",
  "salida": 10.4,
- "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Lolita → Las Cejas"
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,lolitaS,cejas]
  },
  {
  "nombre": "14:30",
@@ -3397,7 +3396,7 @@ const terminalLasCejasS = [
  {
  "nombre": "15:45",
  "salida": 15.45,
- "recorrido": [termiRalosCejas,sieteAbril]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
  },
  {
  "nombre": "18:30",
@@ -3424,7 +3423,7 @@ const terminalLasCejasD = [
  {
  "nombre": "15:00",
  "salida": 15,
- "recorrido": [termiRalosCejas,sieteAbril]
+ "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
  },
  {
  "nombre": "18:30",
