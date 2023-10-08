@@ -10,8 +10,30 @@ function iniciarApp() {
 
 let momentoActual = new Date();
 let hora = momentoActual.getHours();
+let minutos = momentoActual.getMinutes();
 let fecha = momentoActual.getDate();
 let mes = momentoActual.getMonth();
+let dia = momentoActual.getDay();
+let horaEnEnteros = (hora * 60) + minutos;
+let diasDeLaSemana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+let diaSemana = diasDeLaSemana[dia]
+let anteriorPasado = 3000;
+let diaRango = [];
+let ruta = [];
+let listaDelDia = [];
+let horariosEnEnteros = [];
+let listaDiferencias = [];
+let tituloResultado = document.getElementById('tituloResultado')
+let feriado = false;
+let semiFeriado = false;
+let feriadoPrevio = false;
+let nombreServicio;
+let recorridoServicio;
+let recorridoServicio2;
+let estadoServicio;
+let rutaObtenida;
+let tipoDeDia;
+let listaObtenida = [];
 
 /* Funcion para determinar la localidad de posicion*/
 
@@ -28,8 +50,6 @@ let posicion;
 let posicion2;
 let label1;
 let label2;
-
-
 
 const botonDeCambio = document.querySelector('.botonDeCambio');
 const botonDeCambio2 = document.querySelector('.botonDeCambio2');
@@ -150,214 +170,203 @@ onload = ()=> {
     $('.mensaje-contenedor').css('display' , `${displayMensaje}`);
 }
 
-    boton.addEventListener('click', () => {
-        // Definimos la posicion del selector 1
-        definirPosicion(selector,valores,valorSeleccionado,posicion)
-        // Definimos la posicion del selector 2
-        definirPosicion(selector2,valores2,valorSeleccionado2,posicion2)
+// Definimos la posicion del selector 1
+definirPosicion(selector,valores,valorSeleccionado,posicion);
+// Definimos la posicion del selector 2
+definirPosicion(selector2,valores2,valorSeleccionado2,posicion2);
+
+// Funcion para definir ruta de viaje (IDA O VUELTA)
+
+const obtenerRuta = ()=> {
+    ruta = (opcionbase.selected == false) ? todosDestinoTucuman[posicion - 1] : todosTucumanDestino[posicion2 - 1];
+    linea2.textContent = (opcionbase.selected == false) ? `Desde ${selector[posicion].label}` : `Hasta ${selector2[posicion2].label}`;
+
+    return ruta;
+}
+
+// Funcion para saber que dia de la semana es
+
+const obtenerDiaRuta = (x)=> {
     
-        // Definimos las variables globales
-    
-        let momentoActual = new Date();
-        let hora = momentoActual.getHours();
-        let minutos = momentoActual.getMinutes();
-        let horaEnEnteros = (hora * 60) + minutos;
-        let dia = momentoActual.getDay();
-        let fecha = momentoActual.getDate();
-        let mes = momentoActual.getMonth();
-        let diasDeLaSemana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
-        let diaSemana = diasDeLaSemana[dia]
-        let anteriorPasado = 3000;
-        let diaRango = []
-        let ruta = [];
-        let listaDelDia = [];
-        let horariosEnEnteros = [];
-        let listaDiferencias = [];
-        let tituloResultado = document.getElementById('tituloResultado')
-        let feriado = false;
-        let semiFeriado = false;
-        let feriadoPrevio = false;
-        let nombreServicio;
-        let recorridoServicio;
-        let recorridoServicio2;
-        let estadoServicio;
+    if (x == 0) diaRango = ruta[0].slice(0, ruta[0].length);
+    else if (dia == 1 || semiFeriado || feriadoPrevio && posicion2 == 2)
+    diaRango = ruta[1].slice(1, ruta[1].length)
+    else if(fecha == 6 && mes == 6 && posicion2 == 2) diaRango = ruta[1].slice(0, ruta[1].length - 1)
+    else if (x >= 1 && x <= 5) diaRango = ruta[1].slice(0, ruta[1].length);
+    else if (x == 6) diaRango = ruta[2].slice(0, ruta[2].length);
 
-        if (opcionbase.selected == false) {
-            ruta = todosDestinoTucuman[posicion - 1];
-            linea2.textContent = `Desde ${selector[posicion].label}`
-            }
-    
-        if (opcionbase2.selected == false) {
-        ruta = todosTucumanDestino[posicion2 - 1];
-        linea2.textContent = `Hasta ${selector2[posicion2].label}`;
-        }
-        
+    return diaRango
+}
 
-        function obtenerDiaRuta(x) {
-    
-            if (x == 0) diaRango = ruta[0].slice(0, ruta[0].length);
-            else if (dia == 1 || semiFeriado || feriadoPrevio && posicion2 == 2)
-            diaRango = ruta[1].slice(1, ruta[1].length)
-            else if(fecha == 6 && mes == 6 && posicion2 == 2) diaRango = ruta[1].slice(0, ruta[1].length - 1)
-            else if (x >= 1 && x <= 5) diaRango = ruta[1].slice(0, ruta[1].length);
-            else if (x == 6) diaRango = ruta[2].slice(0, ruta[2].length);
-        
-            return diaRango
-        }
+// Funcion para saber si es normal o feriado
 
-        let rutaObtenida;
-        let tipoDeDia;
-
-        const definirDia = (fecha, mes)=> {
-            tipoDeDia = (fecha == 21 && mes == 7) ? 'feriado' : 'normal';
-            switch (tipoDeDia) {
-                case 'feriado':
-                    tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo `;
-                    rutaObtenida = obtenerDiaRuta(0);
-                    break;
-                case 'normal':
-                    tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`;
-                    rutaObtenida = obtenerDiaRuta(dia);
-                    break;  
-            }
-            return tipoDeDia;
-        }
-
-        definirDia (fecha, mes)
-
-        if((fecha == 22) && (mes == 7)) {
-            feriadoPrevio = true; 
+const definirDia = ()=> {
+    tipoDeDia = (fecha == 21 && mes == 7) ? 'feriado' : 'normal';
+    switch (tipoDeDia) {
+        case 'feriado':
+            tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo `;
+            rutaObtenida = obtenerDiaRuta(0);
+            break;
+        case 'normal':
+            tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`;
             rutaObtenida = obtenerDiaRuta(dia);
-            tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
-        }
-    
-        else if ((fecha == 26) && (mes == 4)) {
-            semiFeriado = true;
-            rutaObtenida = obtenerDiaRuta(6);
-            tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día sábado `;
-        }
+            break;  
+    }
+    return rutaObtenida;
+}
 
-        else if ((fecha == 25) && (mes == 8)){
-            let semiParoGrilla;
-            semiParoGrilla = obtenerDiaRuta(1);
-            let posicion = 0;
-            let posiciones = [];
-            for (const horario of semiParoGrilla) {
-                if(horario.salida >= 8.30 && horario.salida < 11){
-                    posicion = (semiParoGrilla.indexOf(horario))
-                    posiciones.push(posicion);
-                }
+// Funcion para saber para saber si dias hay feriado previo, semi-feriado
+const definirNormalidad = ()=> {
+    if((fecha == 22) && (mes == 7)) {
+        feriadoPrevio = true; 
+        rutaObtenida = obtenerDiaRuta(dia);
+        tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
+    }
+
+    else if ((fecha == 26) && (mes == 4)) {
+        semiFeriado = true;
+        rutaObtenida = obtenerDiaRuta(6);
+        tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día sábado `;
+    }
+
+    else if ((fecha == 25) && (mes == 8)){
+        let semiParoGrilla;
+        semiParoGrilla = obtenerDiaRuta(1);
+        let posicion = 0;
+        let posiciones = [];
+        for (const horario of semiParoGrilla) {
+            if(horario.salida >= 8.30 && horario.salida < 11){
+                posicion = (semiParoGrilla.indexOf(horario))
+                posiciones.push(posicion);
             }
-            semiParoGrilla.splice(posiciones[0], posiciones.length)
-            posicion = 0;
-            posiciones = [];
-            for (const horario of semiParoGrilla) {
-                if(horario.salida >= 14.3 && horario.salida < 17){
-                    posicion = (semiParoGrilla.indexOf(horario))
-                    posiciones.push(posicion);
-                }
-            }
-            semiParoGrilla.splice(posiciones[0], posiciones.length)
-            rutaObtenida = semiParoGrilla;
         }
+        semiParoGrilla.splice(posiciones[0], posiciones.length)
+        posicion = 0;
+        posiciones = [];
+        for (const horario of semiParoGrilla) {
+            if(horario.salida >= 14.3 && horario.salida < 17){
+                posicion = (semiParoGrilla.indexOf(horario))
+                posiciones.push(posicion);
+            }
+        }
+        semiParoGrilla.splice(posiciones[0], posiciones.length)
+        rutaObtenida = semiParoGrilla;
+    }
+    else{
+        definirDia();
+    }
+}
+
+// Funcion para filtrar los valores de salidas de los servicios
+
+const obtenerLista = (x)=> {
+    for (i = 0; i < x.length; i++) listaDelDia.push(x[i].salida);
+    // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
+    return listaDelDia
+}
+// Funcion que construye los globos de resultados
+const contruirGlobos = (ruta, contPadre, contHijo)=> {
+    if (ruta.length == 1) {
+        const resultado = document.createElement('DIV')
+        resultado.classList.add('resultados')
+        const fondo = document.createElement('SPAN');
+        fondo.classList.add('fondo')
+        let p1 = document.createElement('P');
+        p1.classList.add('actual1')
+        let p2 = document.createElement('P');
+        p2.classList.add('actual2');
+        let p3 = document.createElement('P');
+        p3.classList.add('actual3');
+        resultado.appendChild(fondo);
+        resultado.appendChild(p1);
+        resultado.appendChild(p2);
+        resultado.appendChild(p3);
+        if ((Object.keys(ruta[0])).length > 3) {
+            let p4 = document.createElement('P');
+            p4.classList.add('actual4');
+            resultado.appendChild(p4);
+        }
+        contHijo.appendChild(resultado);
+        contPadre.appendChild(contHijo)
+    }
+    else{
+        for (i = 0; i < ruta.length; i++) {
+            const resultado = document.createElement('DIV')
+            resultado.classList.add('resultados')
+            const fondo = document.createElement('SPAN');
+            fondo.classList.add('fondo')
+            let p1 = document.createElement('P');
+            p1.classList.add('actual1')
+            let p2 = document.createElement('P');
+            p2.classList.add('actual2');
+            let p3 = document.createElement('P');
+            p3.classList.add('actual3');
+            resultado.appendChild(fondo);
+            resultado.appendChild(p1);
+            resultado.appendChild(p2);
+            resultado.appendChild(p3)
+            if ((Object.keys(ruta[i])).length > 3) {
+                let p4 = document.createElement('P');
+                p4.classList.add('actual4');
+                resultado.appendChild(p4);
+            }
+            contHijo.appendChild(resultado);
+            contPadre.appendChild(contHijo)
+        }
+    }
+}
+const obtenerListaDeDiferencias = ()=> {
+    for (let i = 0; i < listaObtenida.length; i++) {
+        let horasEnEnteros = (Math.trunc(listaObtenida[i])) * 60;
+        let minutosEnEnteros = (listaDelDia[i] - (Math.trunc(listaObtenida[i]))) * 100;
+        let horaMinutosEnEnteros = horasEnEnteros + minutosEnEnteros;
+        horariosEnEnteros.push(horaMinutosEnEnteros);
+    }
+    /*Recorremos el array y buscamos coincidencias con el horario actual*/
+    for (i = 0; i < horariosEnEnteros.length; i++) {
+        let difHoraHorarios = horaEnEnteros - horariosEnEnteros[i];
+        listaDiferencias.push(difHoraHorarios);
+    }
+}
+const obtenerIndiceBusqueda = ()=> {
+    for (i = 0; i < listaDiferencias.length; i++) {
+        if (listaDiferencias[i] >= 0) anteriorPasado = Math.min(anteriorPasado, listaDiferencias[i]);
         
-            function obtenerLista(x) {
-                for (i = 0; i < x.length; i++) listaDelDia.push(x[i].salida);
-                // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
-                return listaDelDia
-            }
+    }
+    if (anteriorPasado <= 15 && (listaDiferencias.indexOf(anteriorPasado) < listaDiferencias.length - 1)) {
+        indiceDeBusqueda = listaDiferencias.indexOf(anteriorPasado);
+    }
+    else if (listaDiferencias.indexOf(anteriorPasado) < listaDiferencias.length - 1) {
+        indiceDeBusqueda = (listaDiferencias.indexOf(anteriorPasado)) + 1;
+
+    }
+    else if ((listaDiferencias.indexOf(anteriorPasado)) == (listaDiferencias.length - 1)) {
+        indiceDeBusqueda = listaDiferencias.indexOf(anteriorPasado);
+    }
+};
+function irAlObjeto() {
+    let resultadoAMostrar = resultadoscont.children[indiceDeBusqueda];
+    resultadoAMostrar.scrollIntoView({ behavior: 'auto', block: 'center' });
+};
+
+    boton.addEventListener('click', () => {
+    
+        obtenerRuta();
         
+        definirNormalidad();
         
-        let listaObtenida = obtenerLista(rutaObtenida)   
-            
-        for (let i = 0; i < listaObtenida.length; i++) {
-            let horasEnEnteros = (Math.trunc(listaObtenida[i])) * 60;
-            let minutosEnEnteros = (listaDelDia[i] - (Math.trunc(listaObtenida[i]))) * 100;
-            let horaMinutosEnEnteros = horasEnEnteros + minutosEnEnteros;
-            horariosEnEnteros.push(horaMinutosEnEnteros);
-        }
-    
-        /*Recorremos el array y buscamos coincidencias con el horario actual*/
-    
-        for (i = 0; i < horariosEnEnteros.length; i++) {
-            let difHoraHorarios = horaEnEnteros - horariosEnEnteros[i];
-            listaDiferencias.push(difHoraHorarios);
-        }
-    
-    
-        for (i = 0; i < listaDiferencias.length; i++) {
-            if (listaDiferencias[i] >= 0) anteriorPasado = Math.min(anteriorPasado, listaDiferencias[i]);
-            
-        }
-    
-        if (anteriorPasado <= 15 && (listaDiferencias.indexOf(anteriorPasado) < listaDiferencias.length - 1)) {
-            indiceDeBusqueda = listaDiferencias.indexOf(anteriorPasado);
-        }
-        else if (listaDiferencias.indexOf(anteriorPasado) < listaDiferencias.length - 1) {
-            indiceDeBusqueda = (listaDiferencias.indexOf(anteriorPasado)) + 1;
-    
-        }
-        else if ((listaDiferencias.indexOf(anteriorPasado)) == (listaDiferencias.length - 1)) {
-            indiceDeBusqueda = listaDiferencias.indexOf(anteriorPasado);
-        }
-    
-        function contruirGlobos(ruta, contPadre, contHijo) {
-            if (ruta.length == 1) {
-                const resultado = document.createElement('DIV')
-                resultado.classList.add('resultados')
-                const fondo = document.createElement('SPAN');
-                fondo.classList.add('fondo')
-                let p1 = document.createElement('P');
-                p1.classList.add('actual1')
-                let p2 = document.createElement('P');
-                p2.classList.add('actual2');
-                let p3 = document.createElement('P');
-                p3.classList.add('actual3');
-                resultado.appendChild(fondo);
-                resultado.appendChild(p1);
-                resultado.appendChild(p2);
-                resultado.appendChild(p3);
-                if ((Object.keys(ruta[0])).length > 3) {
-                    let p4 = document.createElement('P');
-                    p4.classList.add('actual4');
-                    resultado.appendChild(p4);
-                }
-                contHijo.appendChild(resultado);
-                contPadre.appendChild(contHijo)
-            }
-            else{
-                for (i = 0; i < ruta.length; i++) {
-                    const resultado = document.createElement('DIV')
-                    resultado.classList.add('resultados')
-                    const fondo = document.createElement('SPAN');
-                    fondo.classList.add('fondo')
-                    let p1 = document.createElement('P');
-                    p1.classList.add('actual1')
-                    let p2 = document.createElement('P');
-                    p2.classList.add('actual2');
-                    let p3 = document.createElement('P');
-                    p3.classList.add('actual3');
-                    resultado.appendChild(fondo);
-                    resultado.appendChild(p1);
-                    resultado.appendChild(p2);
-                    resultado.appendChild(p3)
-                    if ((Object.keys(ruta[i])).length > 3) {
-                        let p4 = document.createElement('P');
-                        p4.classList.add('actual4');
-                        resultado.appendChild(p4);
-                    }
-                    contHijo.appendChild(resultado);
-                    contPadre.appendChild(contHijo)
-                }
-            }
-        }
+        listaObtenida = obtenerLista(rutaObtenida);
         
+        obtenerListaDeDiferencias();
+        obtenerIndiceBusqueda()
+
+        // rutaObtenida.forEach(element => {
+        //     if(element.recorrido.includes('Fortín')){console.log(element)}
+        // });
+        
+        // console.log(rutaObtenida)
+
         contruirGlobos(rutaObtenida,resultadoscontainer,resultadoscont);
-    
-        function irAlObjeto() {
-            let a = resultadoscont.children[indiceDeBusqueda];
-            a.scrollIntoView({ behavior: 'auto', block: 'center' });
-        };
     
         resultadoscont.children[indiceDeBusqueda].classList.add('resaltado');
         // resultadoscont.children[indiceDeBusqueda].classList.add('manito');
@@ -556,11 +565,6 @@ onload = ()=> {
         // }, 1);
     })
 
-
-
-
-
-
 resultadoscont.addEventListener('touchmove', () => {
     for (i = 0; i < resultadoscont.children.length; i++) {
         if (i < indiceDeBusqueda || i > indiceDeBusqueda) 
@@ -572,9 +576,6 @@ resultadoscont.addEventListener('touchmove', () => {
             resultadoscont.classList.replace('opacarFondo', 'normalizarFondo');
     }
 })
-
-
-
 
 
 indicacioncont.addEventListener('click', () => {

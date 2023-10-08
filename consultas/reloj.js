@@ -5,8 +5,8 @@ function reloj() {
     let minuto = momentoActual.getMinutes();
     let segundo = momentoActual.getSeconds();
     let fecha = momentoActual.getDate();
-    let dia = momentoActual.getDay()
-    let mes = momentoActual.getMonth()
+    let dia = momentoActual.getDay();
+    let mes = momentoActual.getMonth();
 
     if (minuto <= 9) {
         minuto = "0" + minuto
