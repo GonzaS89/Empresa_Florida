@@ -377,9 +377,7 @@ const agregarEfectoResultados = ()=> {
             else scrollcont.children[0].classList.add('manitoAnimacionCentro');
             
         }
-        
-        
-    
+       
         for (i = 0; i < (resultadoscont.children).length; i++) {
             nombreServicio = (resultadoscont.children[i]).children[1];
             estadoServicio = (resultadoscont.children[i]).children[2];
