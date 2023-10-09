@@ -344,36 +344,30 @@ const obtenerIndiceBusqueda = ()=> {
         indiceDeBusqueda = listaDiferencias.indexOf(anteriorPasado);
     }
 };
-function irAlObjeto() {
+const irAlObjeto = ()=> {
     let resultadoAMostrar = resultadoscont.children[indiceDeBusqueda];
     resultadoAMostrar.scrollIntoView({ behavior: 'auto', block: 'center' });
 };
+const agregarEfectoResultados = ()=> {
+    resultadoscont.children[indiceDeBusqueda].classList.add('resaltado');
+    // resultadoscont.children[indiceDeBusqueda].classList.add('manito');
+    if (resultadoscont.classList.contains('normalizarFondo')) resultadoscont.classList.replace('normalizarFondo', 'opacarFondo')
+    else resultadoscont.classList.add('opacarFondo');
+    for (i = 0; i < resultadoscont.children.length; i++) {
+        if (i < indiceDeBusqueda || i > indiceDeBusqueda) resultadoscont.children[i].classList.add('opacar')
+}
+}
 
     boton.addEventListener('click', () => {
     
         obtenerRuta();
-        
         definirNormalidad();
-        
         listaObtenida = obtenerLista(rutaObtenida);
-        
         obtenerListaDeDiferencias();
         obtenerIndiceBusqueda()
-
-        // rutaObtenida.forEach(element => {
-        //     if(element.recorrido.includes('Fortín')){console.log(element)}
-        // });
-        
-        // console.log(rutaObtenida)
-
         contruirGlobos(rutaObtenida,resultadoscontainer,resultadoscont);
-    
-        resultadoscont.children[indiceDeBusqueda].classList.add('resaltado');
-        // resultadoscont.children[indiceDeBusqueda].classList.add('manito');
-        if (resultadoscont.classList.contains('normalizarFondo')) resultadoscont.classList.replace('normalizarFondo', 'opacarFondo')
-        else resultadoscont.classList.add('opacarFondo');
-        
-    
+        agregarEfectoResultados();
+
         mensaje2.appendChild(indicacioncont);
         
         if(resolucion < 600)
@@ -383,9 +377,7 @@ function irAlObjeto() {
             else scrollcont.children[0].classList.add('manitoAnimacionCentro');
             
         }
-        for (i = 0; i < resultadoscont.children.length; i++) {
-                if (i < indiceDeBusqueda || i > indiceDeBusqueda) resultadoscont.children[i].classList.add('opacar')
-        }
+        
         
     
         for (i = 0; i < (resultadoscont.children).length; i++) {
