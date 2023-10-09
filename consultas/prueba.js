@@ -1,4 +1,3 @@
-const resultadoscont = document.querySelector('.resultados-cont');
 let listaDestino = [];
 
 const ordenarListaViajes = () => {
@@ -14,10 +13,10 @@ const ordenarListaViajes = () => {
         }
     })
 }
-const crearListaDestino = ()=> {
-    todosDestinoTucuman.forEach(viajes => {    
+const crearListaDestino = (idaOVuelta,ciudad)=> {
+    idaOVuelta.forEach(viajes => {    
         viajes[1].forEach(viaje => {
-            if(viaje.recorrido.includes(posse)){
+            if(viaje.recorrido.includes(ciudad)){
                 listaDestino.push(viaje);
                 ordenarListaViajes();
             }
@@ -25,6 +24,7 @@ const crearListaDestino = ()=> {
     });
 }
 
-crearListaDestino();
+crearListaDestino(todosDestinoTucuman,alternativa);
+console.log(listaDestino)
 contruirGlobos(listaDestino,resultadoscontainer,resultadoscont);
 
