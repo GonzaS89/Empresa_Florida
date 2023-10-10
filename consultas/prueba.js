@@ -40,7 +40,8 @@ const determinarRuta = () => {
                 if(horario.recorrido.includes(bandaRS)){
                     if(horario.recorrido.includes(bCancha)){
                         if(horario.recorrido.indexOf(bandaRS) < horario.recorrido.indexOf(bCancha))
-                        listaDestino.push(horario.recorrido)
+                        listaDestino.push(horario);
+                        ordenarListaViajes();
                     }
                 }
             });
