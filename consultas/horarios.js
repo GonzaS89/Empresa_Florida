@@ -3681,3 +3681,4 @@ const lasCejasTerminal = [lasCejasTerminalD, lasCejasTerminalLaV, lasCejasTermin
 const terminalLasCejas = [terminalLasCejasD, terminalLasCejasLaV, terminalLasCejasS]
 const todosDestinoTucuman = [floridaAldTucuman, floridaPosseTucuman, posseLTerminal, ralosTerminal, ralosCruzAltaTerminal, sieteDeAbrilTerminal, lasCejasTerminal];
 const todosTucumanDestino = [terminalAldFlorida, terminalPosseFlorida, terminalPosseL, terminalRalos, terminalCruzAltaRalos, terminalSieteDeAbril, terminalLasCejas];
+const todosLosHorarios = [todosDestinoTucuman,todosTucumanDestino];
