@@ -281,8 +281,7 @@ const horariosLvFloAl = [
  {
  "nombre": "15:50",
  "salida": 15.5,
- "recorrido": [fortin,esqLastra,talar,alternativa,terminal],
- "recorrido2" : col4CanchaTalarAutop
+ "recorrido": [fortin,esqLastra,talar,alternativa,terminal]
  },
  {
     "nombre": "15:50",
@@ -302,8 +301,7 @@ const horariosLvFloAl = [
  {
  "nombre": "16:50",
  "salida": 16.5,
- "recorrido": [col3Florida,fortin,esqLastra,talar,alderetes,bandaRS,terminal],
- "recorrido2": col4CanchaAlter
+ "recorrido": [col3Florida,fortin,esqLastra,talar,alderetes,bandaRS,terminal]
  },
  {
     "nombre": "16:50",
@@ -427,8 +425,7 @@ const horariosSFloAl = [
  {
  "nombre": "16:50",
  "salida": 16.5,
- "recorrido": col4CanchaAlter,
- "recorrido2": [col3Florida,talar,alderetes,bandaRS,terminal]
+ "recorrido": col4CanchaAlter
  },
  {
  "nombre": "16:50",

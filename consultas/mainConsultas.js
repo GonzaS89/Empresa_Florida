@@ -364,60 +364,20 @@ const contenidoDeResultados = (ruta,arrayDiferencias)=> {
         recorridoServicio = (resultadoscont.children[i]).children[3];
         recorridoServicio2 = (resultadoscont.children[i]).children[4];
 
+        if(ruta.length == 1 && i == 0) {
+            nombreServicio.textContent = `Único servicio del día ${ruta[0].nombre} Hrs`;
+        }
+        else if (i == 0) {     
+            nombreServicio.textContent = `Primer servicio del día ${ruta[i].nombre} Hrs`;
+        }
+        else if (i == (ruta.length) - 1) {
+            nombreServicio.textContent = `Último servicio del día ${ruta[i].nombre} Hrs`;
+        }
+        else {
+            nombreServicio.textContent = `Servicio de las ${ruta[i].nombre} Hrs`;
+        }
         if (arrayDiferencias[i] > 0) {
-            if ((Object.keys(ruta[i])).length > 3) {
-                if(ruta.length == 1 && i == 0){
-                    nombreServicio.textContent = `Únicos servicios del día ${ruta[i].nombre} Hrs`;
-                }
-                else if (i == 0) {
-                    nombreServicio.textContent = `Primeros servicios del día ${ruta[i].nombre} Hrs`;
-                }
-                else if (i == (ruta.length) - 1) {
-                    nombreServicio.textContent = `Últimos servicios del día ${ruta[i].nombre} Hrs`;
-                }
-                else {
-                    nombreServicio.textContent = `Servicios de las ${ruta[i].nombre} Hrs`;
-                }
-                if (arrayDiferencias[i] > 60) {
-                    estadoServicio.textContent = 'Finalizaron sus recorridos'
-                }
-                else if (arrayDiferencias[i] == 60) {
-                    estadoServicio.textContent = 'Iniciaron sus recorridos hace 1 hora'
-                }
-                else if (arrayDiferencias[i] < 60 && arrayDiferencias[i] > 30) {
-                    estadoServicio.textContent = `Iniciaron sus recorridos hace menos de 1 hora`
-                }
-                else if (arrayDiferencias[i] <= 30 && arrayDiferencias[i] > 15) {
-                    estadoServicio.textContent = `Iniciaron sus recorridos hace menos de media hora`
-                }
-                else if (arrayDiferencias[i] <= 15 && arrayDiferencias[i] > 10) {
-                    estadoServicio.textContent = `Iniciaron sus recorridos hace menos de 15 minutos`
-                }
-                else if (arrayDiferencias[i] <= 10 && arrayDiferencias[i] > 5) {
-                    estadoServicio.textContent = `Iniciaron sus recorridos hace menos de 10 minutos`
-                }
-                else if (arrayDiferencias[i] <= 5 && arrayDiferencias[i] > 0) {
-                    estadoServicio.textContent = 'Iniciaron sus recorridos hace menos de 5 minutos'
-                }
-                else if ((Math.trunc(arrayDiferencias[i])) == 0) {
-                    estadoServicio.textContent = 'Están iniciando sus recorridos'
-                }
-                recorridoServicio.textContent = `1° Recorrido: ${ruta[i].recorrido.join(' → ')}`
-                recorridoServicio2.textContent = `2° Recorrido: ${ruta[i].recorrido2.join(' → ')}`;
-            }
-            else {
-                if(ruta.length == 1 && i == 0) {
-                    nombreServicio.textContent = `Único servicio del día ${ruta[0].nombre} Hrs`;
-                }
-                else if (i == 0) {     
-                    nombreServicio.textContent = `Primer servicio del día ${ruta[i].nombre} Hrs`;
-                }
-                else if (i == (ruta.length) - 1) {
-                    nombreServicio.textContent = `Último servicio del día ${ruta[i].nombre} Hrs`;
-                }
-                else {
-                    nombreServicio.textContent = `Servicio de las ${ruta[i].nombre} Hrs`;
-                }
+                
                 if (arrayDiferencias[i] > 60) {
                     estadoServicio.textContent = 'Finalizó su recorrido'
                 }
@@ -443,56 +403,9 @@ const contenidoDeResultados = (ruta,arrayDiferencias)=> {
                     estadoServicio.textContent = 'Está iniciando su recorrido'
                 }
                 recorridoServicio.textContent = `Recorrido: ${ruta[i].recorrido.join(' → ')}`;
-            }
+            
         }
         else {
-            if ((Object.keys(ruta[i])).length > 3) {
-                if (i == 0) {
-                    nombreServicio.textContent = `Primeros servicios del día ${ruta[i].nombre} Hrs`;
-                }
-                else if (i == (ruta.length)) {
-                    nombreServicio.textContent = `Últimos servicio del día ${ruta[i].nombre} Hrs`;
-                }
-                else {
-                    nombreServicio.textContent = `Servicios de las ${ruta[i].nombre} Hrs`;
-                }
-                if (Math.abs(arrayDiferencias[i]) >= 120) {
-                    estadoServicio.textContent = 'Iniciarán sus recorridos en un par horas'
-                }
-                if (Math.abs(arrayDiferencias[i]) > 60 && Math.abs(arrayDiferencias[i]) < 120) {
-                    estadoServicio.textContent = 'Iniciarán sus recorridos en poco más de 1 hora'
-                }
-                if (Math.abs(arrayDiferencias[i]) == 60) {
-                    estadoServicio.textContent = 'Iniciarán sus recorridos en 1 hora'
-                }
-                if (Math.abs(arrayDiferencias[i]) < 60 && Math.abs(arrayDiferencias[i]) > 30) {
-                    estadoServicio.textContent = 'Iniciarán sus recorridos en menos de 1 hora';
-                }    
-                if (Math.abs(arrayDiferencias[i]) <= 30 && Math.abs(arrayDiferencias[i]) > 15) {
-                    estadoServicio.textContent = 'Iniciarán sus recorridos en menos de media hora';
-                }
-                if (Math.abs(arrayDiferencias[i]) <= 15 && Math.abs(arrayDiferencias[i]) > 10) {
-                    estadoServicio.textContent = 'Iniciarán sus recorridos en menos de 15 minutos';
-                }
-                if (Math.abs(arrayDiferencias[i]) <= 10 && Math.abs(arrayDiferencias[i]) > 5) {
-                    estadoServicio.textContent = 'Iniciarán sus recorridos en menos de 10 minutos';
-                }
-                if (Math.abs(arrayDiferencias[i]) <= 5 && Math.abs(arrayDiferencias[i]) > 0) {
-                    estadoServicio.textContent = 'Iniciarán sus recorridos en menos de 5 minutos'
-                }
-                recorridoServicio.textContent = `1° Recorrido: ${ruta[i].recorrido.join(' → ')}`;
-                recorridoServicio2.textContent = `2° Recorrido: ${ruta[i].recorrido2.join(' → ')}`;
-            }
-            else {
-                if (i == 0) {
-                    nombreServicio.textContent = `Primer servicio del día ${ruta[0].nombre} Hrs`;
-                }
-                else if (i == (ruta.length) - 1) {
-                    nombreServicio.textContent = `Último servicio del día ${ruta[i].nombre} Hrs`;
-                }
-                else {
-                    nombreServicio.textContent = `Servicio de las ${ruta[i].nombre} Hrs`;
-                }
                 if (Math.abs(arrayDiferencias[i]) >= 120) {
                     estadoServicio.textContent = 'Iniciará su recorrido en un par horas'
                 }
@@ -500,7 +413,7 @@ const contenidoDeResultados = (ruta,arrayDiferencias)=> {
                     estadoServicio.textContent = 'Iniciará su recorrido en poco mas de 1 hora'
                 }
                 if (Math.abs(arrayDiferencias[i]) == 60) {
-                    estadoServicio.textContent = 'Iniciaá su recorrido en 1 hora'
+                    estadoServicio.textContent = 'Iniciará su recorrido en 1 hora'
                 }
                 if (Math.abs(arrayDiferencias[i]) < 60 && Math.abs(arrayDiferencias[i]) > 30) {
                     estadoServicio.textContent = 'Iniciará su recorrido en menos de 1 hora'
@@ -518,7 +431,6 @@ const contenidoDeResultados = (ruta,arrayDiferencias)=> {
                     estadoServicio.textContent = 'Iniciará su recorrido en menos de 5 minutos'
                 }
                 recorridoServicio.textContent = `Recorrido: ${ruta[i].recorrido.join(' → ')}`;
-            }
         }
     } 
 }
