@@ -331,7 +331,6 @@ const obtenerListaDeDiferencias = ()=> {
 const obtenerIndiceBusqueda = ()=> {
     for (i = 0; i < listaDiferencias.length; i++) {
         if (listaDiferencias[i] >= 0) anteriorPasado = Math.min(anteriorPasado, listaDiferencias[i]);
-        
     }
     if (anteriorPasado <= 15 && (listaDiferencias.indexOf(anteriorPasado) < listaDiferencias.length - 1)) {
         indiceDeBusqueda = listaDiferencias.indexOf(anteriorPasado);
@@ -343,6 +342,8 @@ const obtenerIndiceBusqueda = ()=> {
     else if ((listaDiferencias.indexOf(anteriorPasado)) == (listaDiferencias.length - 1)) {
         indiceDeBusqueda = listaDiferencias.indexOf(anteriorPasado);
     }
+
+    return indiceDeBusqueda;
 };
 const irAlObjeto = ()=> {
     let resultadoAMostrar = resultadoscont.children[indiceDeBusqueda];

@@ -52,11 +52,11 @@ const determinarRuta = (dia,punto1,punto2) => {
 
 
 determinarRuta(1,talar,bandaRS);
-listaObtenida = obtenerLista(listaDestino);
-obtenerListaDeDiferencias();
-contenidoDeResultados(listaDestino,listaDiferencias);
-obtenerIndiceBusqueda();
-contruirGlobos()
+// listaObtenida = obtenerLista(listaDestino);
+// obtenerListaDeDiferencias();
+// contenidoDeResultados(listaDestino,listaDiferencias);
+// obtenerIndiceBusqueda();
+// contruirGlobos()
 
 
 
