@@ -265,8 +265,8 @@ const obtenerLista = (x)=> {
     return listaDelDia
 }
 // Funcion que construye los globos de resultados
-const contruirGlobos = (ruta, contPadre, contHijo)=> {
-    if (ruta.length == 1) {
+const contruirGlobos = (rutas, contPadre, contHijo)=> {
+    if (rutas.length == 1) {
         const resultado = document.createElement('DIV')
         resultado.classList.add('resultados')
         const fondo = document.createElement('SPAN');
@@ -281,7 +281,7 @@ const contruirGlobos = (ruta, contPadre, contHijo)=> {
         resultado.appendChild(p1);
         resultado.appendChild(p2);
         resultado.appendChild(p3);
-        if ((Object.keys(ruta[0])).length > 3) {
+        if ((Object.keys(rutas[0])).length > 3) {
             let p4 = document.createElement('P');
             p4.classList.add('actual4');
             resultado.appendChild(p4);
@@ -290,7 +290,7 @@ const contruirGlobos = (ruta, contPadre, contHijo)=> {
         contPadre.appendChild(contHijo)
     }
     else{
-        for (i = 0; i < ruta.length; i++) {
+        for (i = 0; i < rutas.length; i++) {
             const resultado = document.createElement('DIV')
             resultado.classList.add('resultados')
             const fondo = document.createElement('SPAN');
@@ -305,7 +305,7 @@ const contruirGlobos = (ruta, contPadre, contHijo)=> {
             resultado.appendChild(p1);
             resultado.appendChild(p2);
             resultado.appendChild(p3)
-            if ((Object.keys(ruta[i])).length > 3) {
+            if ((Object.keys(rutas[i])).length > 3) {
                 let p4 = document.createElement('P');
                 p4.classList.add('actual4');
                 resultado.appendChild(p4);
@@ -358,24 +358,24 @@ const agregarEfectoResultados = ()=> {
         if (i < indiceDeBusqueda || i > indiceDeBusqueda) resultadoscont.children[i].classList.add('opacar')
 }
 };
-const contenidoDeResultados = (ruta,arrayDiferencias)=> {
+const contenidoDeResultados = (rutas,arrayDiferencias)=> {
     for (i = 0; i < (resultadoscont.children).length; i++) {
         nombreServicio = (resultadoscont.children[i]).children[1];
         estadoServicio = (resultadoscont.children[i]).children[2];
         recorridoServicio = (resultadoscont.children[i]).children[3];
         recorridoServicio2 = (resultadoscont.children[i]).children[4];
 
-        if(ruta.length == 1 && i == 0) {
-            nombreServicio.textContent = `Único servicio del día ${ruta[0].nombre} Hrs`;
+        if(rutas.length == 1 && i == 0) {
+            nombreServicio.textContent = `Único servicio del día ${rutas[0].nombre} Hrs`;
         }
         else if (i == 0) {     
-            nombreServicio.textContent = `Primer servicio del día ${ruta[i].nombre} Hrs`;
+            nombreServicio.textContent = `Primer servicio del día ${rutas[i].nombre} Hrs`;
         }
-        else if (i == (ruta.length) - 1) {
-            nombreServicio.textContent = `Último servicio del día ${ruta[i].nombre} Hrs`;
+        else if (i == (rutas.length) - 1) {
+            nombreServicio.textContent = `Último servicio del día ${rutas[i].nombre} Hrs`;
         }
         else {
-            nombreServicio.textContent = `Servicio de las ${ruta[i].nombre} Hrs`;
+            nombreServicio.textContent = `Servicio de las ${rutas[i].nombre} Hrs`;
         }
         if (arrayDiferencias[i] > 0) {
                 
@@ -403,7 +403,7 @@ const contenidoDeResultados = (ruta,arrayDiferencias)=> {
                 if (Math.abs(arrayDiferencias[i]) <= 2){
                     estadoServicio.textContent = 'Está iniciando su recorrido'
                 }
-                recorridoServicio.textContent = `Recorrido: ${ruta[i].recorrido.join(' → ')}`;
+                recorridoServicio.textContent = `Recorrido: ${rutas[i].recorrido.join(' → ')}`;
             
         }
         else {
@@ -431,7 +431,7 @@ const contenidoDeResultados = (ruta,arrayDiferencias)=> {
                 if (Math.abs(arrayDiferencias[i]) <= 5 && Math.abs(arrayDiferencias[i]) >= 2) {
                     estadoServicio.textContent = 'Iniciará su recorrido en menos de 5 minutos'
                 }
-                recorridoServicio.textContent = `Recorrido: ${ruta[i].recorrido.join(' → ')}`;
+                recorridoServicio.textContent = `Recorrido: ${rutas[i].recorrido.join(' → ')}`;
         }
     } 
 }
