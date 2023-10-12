@@ -22,7 +22,6 @@ let diaRango = [];
 let ruta = [];
 let listaDelDia = [];
 let horariosEnEnteros = [];
-let listaDiferencias = [];
 let tituloResultado = document.getElementById('tituloResultado')
 let feriado = false;
 let semiFeriado = false;
@@ -33,7 +32,6 @@ let recorridoServicio2;
 let estadoServicio;
 let rutaObtenida;
 let tipoDeDia;
-let listaObtenida = [];
 
 /* Funcion para determinar la localidad de posicion*/
 
@@ -258,7 +256,6 @@ const definirNormalidad = ()=> {
 }
 
 // Funcion para filtrar los valores de salidas de los servicios
-
 const obtenerLista = (x)=> {
     for (i = 0; i < x.length; i++) listaDelDia.push(x[i].salida);
     // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
@@ -315,20 +312,8 @@ const contruirGlobos = (rutas, contPadre, contHijo)=> {
         }
     }
 }
-const obtenerListaDeDiferencias = ()=> {
-    for (let i = 0; i < listaObtenida.length; i++) {
-        let horasEnEnteros = (Math.trunc(listaObtenida[i])) * 60;
-        let minutosEnEnteros = (listaDelDia[i] - (Math.trunc(listaObtenida[i]))) * 100;
-        let horaMinutosEnEnteros = horasEnEnteros + minutosEnEnteros;
-        horariosEnEnteros.push(horaMinutosEnEnteros);
-    }
-    /*Recorremos el array y buscamos coincidencias con el horario actual*/
-    for (i = 0; i < horariosEnEnteros.length; i++) {
-        let difHoraHorarios = horaEnEnteros - horariosEnEnteros[i];
-        listaDiferencias.push(difHoraHorarios);
-    }
-}
-const obtenerIndiceBusqueda = ()=> {
+
+const obtenerIndiceBusqueda = (listaDiferencias)=> {
     for (i = 0; i < listaDiferencias.length; i++) {
         if (listaDiferencias[i] >= 0) anteriorPasado = Math.min(anteriorPasado, listaDiferencias[i]);
     }
@@ -343,8 +328,22 @@ const obtenerIndiceBusqueda = ()=> {
         indiceDeBusqueda = listaDiferencias.indexOf(anteriorPasado);
     }
 
-    return indiceDeBusqueda;
+    return console.log(indiceDeBusqueda);
+    
 };
+const obtenerListaDeDiferencias = (listaObtenida,listaDiferencias)=> {
+    for (let i = 0; i < listaObtenida.length; i++) {
+        let horasEnEnteros = (Math.trunc(listaObtenida[i])) * 60;
+        let minutosEnEnteros = (listaDelDia[i] - (Math.trunc(listaObtenida[i]))) * 100;
+        let horaMinutosEnEnteros = horasEnEnteros + minutosEnEnteros;
+        horariosEnEnteros.push(horaMinutosEnEnteros);
+    }
+    /*Recorremos el array y buscamos coincidencias con el horario actual*/
+    for (i = 0; i < horariosEnEnteros.length; i++) {
+        let difHoraHorarios = horaEnEnteros - horariosEnEnteros[i];
+        listaDiferencias.push(difHoraHorarios);
+    }
+}
 const irAlObjeto = ()=> {
     let resultadoAMostrar = resultadoscont.children[indiceDeBusqueda];
     resultadoAMostrar.scrollIntoView({ behavior: 'auto', block: 'center' });
@@ -437,14 +436,18 @@ const contenidoDeResultados = (rutas,arrayDiferencias)=> {
 }
 
     boton.addEventListener('click', () => {
-    
+        let listaObtenida = [];
+        let listaDiferencias = [];
         obtenerRuta();
         definirNormalidad();
         listaObtenida = obtenerLista(rutaObtenida);
-        obtenerListaDeDiferencias();
-        obtenerIndiceBusqueda()
+        console.log(listaObtenida)
+        console.log(rutaObtenida)
+        obtenerListaDeDiferencias(listaDiferencias,listaObtenida);
+        // obtenerIndiceBusqueda(listaDiferencias);
         contruirGlobos(rutaObtenida,resultadoscontainer,resultadoscont);
-        agregarEfectoResultados();
+        // agregarEfectoResultados();
+        
 
         mensaje2.appendChild(indicacioncont);
         
@@ -464,7 +467,7 @@ const contenidoDeResultados = (rutas,arrayDiferencias)=> {
         }else{
             mensaje2.classList.add('mensajeAparece')
         }
-        irAlObjeto();
+        // irAlObjeto();
     })
 
 resultadoscont.addEventListener('touchmove', () => {
@@ -491,11 +494,11 @@ indicacioncont.addEventListener('click', () => {
     scrollcont.children[0].classList.remove('manitoAnimacionArriba');
     scrollcont.children[0].classList.remove('manitoAnimacionCentro');
     resultadoscont.children[0].classList.remove('resultadosOpcion2');
-    resultadoscont.classList.replace('opacarFondo','normalizarFondo')
+    resultadoscont.classList.replace('opacarFondo','normalizarFondo');
         
-    
     setTimeout( ()=> {
-        $('.mensaje2').css('display', 'none'),borrarGlobos(),resultadoscont.classList.remove('normalizarFondo'),
+        $('.mensaje2').css('display', 'none'),borrarGlobos(),
+        resultadoscont.classList.remove('normalizarFondo'),
         borrarManito();
     },1000)
 })

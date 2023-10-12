@@ -31,12 +31,12 @@ const crearListaDestino = (idaOVuelta,ciudad1,ciudad2)=> {
 };
 
 // crearListaDestino(todosDestinoTucuman,fortin,ralos);
-contruirGlobos(listaDestino,resultadoscontainer,resultadoscont);
+// contruirGlobos(listaDestino,resultadoscontainer,resultadoscont);
 
 const determinarRuta = (dia,punto1,punto2) => {
     todosLosHorarios.forEach(idaOVuelta => {
-        idaOVuelta.forEach(diaRango => {
-            diaRango[dia].forEach(horario => {
+        idaOVuelta.forEach(diaR => {
+            diaR[dia].forEach(horario => {
                 if(horario.recorrido.includes(punto1)){
                     if(horario.recorrido.includes(punto2)){
                         if(horario.recorrido.indexOf(punto1) < horario.recorrido.indexOf(punto2))
@@ -51,7 +51,7 @@ const determinarRuta = (dia,punto1,punto2) => {
 };
 
 
-determinarRuta(1,talar,bandaRS);
+// determinarRuta(1,talar,bandaRS);
 // listaObtenida = obtenerLista(listaDestino);
 // obtenerListaDeDiferencias();
 // contenidoDeResultados(listaDestino,listaDiferencias);
