@@ -349,7 +349,7 @@ function irAlObjeto() {
     resultadoAMostrar.scrollIntoView({ behavior: 'auto', block: 'center' });
 };
 
-    boton.addEventListener('click', () => {
+boton.addEventListener('click', () => {
     
         obtenerRuta();
         
@@ -563,7 +563,7 @@ function irAlObjeto() {
         // setTimeout(() => {
             
         // }, 1);
-    })
+})
 
 resultadoscont.addEventListener('touchmove', () => {
     for (i = 0; i < resultadoscont.children.length; i++) {
