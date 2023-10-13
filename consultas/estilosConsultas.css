@@ -86,6 +86,7 @@ body::-webkit-scrollbar-track {
     /* justify-content: flex-start; */
     align-items: center;
     background:var(--rojo2Linear);
+    background: black;
     width: 50%;
     border-radius: 50px;
     margin: 30px auto;
@@ -143,7 +144,7 @@ body::-webkit-scrollbar-track {
     border-radius: 10px;
 }
 
-.logo {
+/* .logo {
     display: flex;
     justify-content: center;
     width: 130px;
@@ -155,7 +156,7 @@ body::-webkit-scrollbar-track {
     background-position:center;
     animation: rellenar 3s ease .5s forwards;
     transform: scale(0);
-}
+} */
 
 @keyframes rellenar{
     0%{
@@ -1621,3 +1622,12 @@ select:focus{outline:none;}
     margin-top: 10px;
 }
 
+.pantalla-negra{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    z-index: 50;
+    display: flex;
+    color: white;
+}
