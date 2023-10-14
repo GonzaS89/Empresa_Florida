@@ -435,14 +435,10 @@ const contenidoDeResultados = (rutas,arrayDiferencias)=> {
     } 
 }
 
-<<<<<<< HEAD
-boton.addEventListener('click', () => {
-    
-=======
+
     boton.addEventListener('click', () => {
         let listaObtenida = [];
         let listaDiferencias = [];
->>>>>>> 1089e68994c88ecdb93e391d745186cffb5e760d
         obtenerRuta();
         definirNormalidad();
         listaObtenida = obtenerLista(rutaObtenida);
@@ -472,17 +468,14 @@ boton.addEventListener('click', () => {
         }else{
             mensaje2.classList.add('mensajeAparece')
         }
-<<<<<<< HEAD
         irAlObjeto();
-        
         // setTimeout(() => {
-            
         // }, 1);
 })
-=======
+
         // irAlObjeto();
-    })
->>>>>>> 1089e68994c88ecdb93e391d745186cffb5e760d
+
+
 
 resultadoscont.addEventListener('touchmove', () => {
     for (i = 0; i < resultadoscont.children.length; i++) {
