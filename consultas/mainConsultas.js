@@ -20,8 +20,6 @@ let diaSemana = diasDeLaSemana[dia]
 let anteriorPasado = 3000;
 let diaRango = [];
 let ruta = [];
-let listaDelDia = [];
-let horariosEnEnteros = [];
 let tituloResultado = document.getElementById('tituloResultado')
 let feriado = false;
 let semiFeriado = false;
@@ -257,6 +255,7 @@ const definirNormalidad = ()=> {
 
 // Funcion para filtrar los valores de salidas de los servicios
 const obtenerLista = (x)=> {
+    let listaDelDia = [];
     for (i = 0; i < x.length; i++) listaDelDia.push(x[i].salida);
     // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
     return listaDelDia
@@ -332,6 +331,8 @@ const obtenerIndiceBusqueda = (listaDiferencias)=> {
     
 };
 const obtenerListaDeDiferencias = (listaObtenida,listaDiferencias)=> {
+    let horariosEnEnteros = [];
+
     for (let i = 0; i < listaObtenida.length; i++) {
         let horasEnEnteros = (Math.trunc(listaObtenida[i])) * 60;
         let minutosEnEnteros = (listaDelDia[i] - (Math.trunc(listaObtenida[i]))) * 100;
@@ -435,21 +436,19 @@ const contenidoDeResultados = (rutas,arrayDiferencias)=> {
     } 
 }
 
-
     boton.addEventListener('click', () => {
         let listaObtenida = [];
-        let listaDiferencias = [];
+        
         obtenerRuta();
         definirNormalidad();
         listaObtenida = obtenerLista(rutaObtenida);
         console.log(listaObtenida)
         console.log(rutaObtenida)
         obtenerListaDeDiferencias(listaDiferencias,listaObtenida);
-        // obtenerIndiceBusqueda(listaDiferencias);
+        obtenerIndiceBusqueda();
         contruirGlobos(rutaObtenida,resultadoscontainer,resultadoscont);
         // agregarEfectoResultados();
-        
-
+    
         mensaje2.appendChild(indicacioncont);
         
         if(resolucion < 600)
@@ -468,12 +467,13 @@ const contenidoDeResultados = (rutas,arrayDiferencias)=> {
         }else{
             mensaje2.classList.add('mensajeAparece')
         }
-        irAlObjeto();
+        console.log(indiceDeBusqueda)
+        // irAlObjeto();
         // setTimeout(() => {
         // }, 1);
 })
 
-        // irAlObjeto();
+
 
 
 
