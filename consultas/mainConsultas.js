@@ -225,7 +225,9 @@ onload = ()=> {
 
         definirDia (fecha, mes)
 
-        if((fecha == 22) && (mes == 7)) {
+        
+
+        if((fecha == 14) && (mes == 9)) { //Definir feriado previo
             feriadoPrevio = true; 
             rutaObtenida = obtenerDiaRuta(dia);
             tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
