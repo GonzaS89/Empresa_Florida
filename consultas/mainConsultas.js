@@ -330,7 +330,7 @@ const obtenerIndiceBusqueda = (listaDiferencias)=> {
     return console.log(indiceDeBusqueda);
     
 };
-const obtenerListaDeDiferencias = (listaObtenida,listaDiferencias)=> {
+const obtenerListaDeDiferencias = (listaObtenida)=> {
     let horariosEnEnteros = [];
 
     for (let i = 0; i < listaObtenida.length; i++) {
@@ -444,7 +444,7 @@ const contenidoDeResultados = (rutas,arrayDiferencias)=> {
         listaObtenida = obtenerLista(rutaObtenida);
         console.log(listaObtenida)
         console.log(rutaObtenida)
-        obtenerListaDeDiferencias(listaDiferencias,listaObtenida);
+        obtenerListaDeDiferencias(listaObtenida);
         obtenerIndiceBusqueda();
         contruirGlobos(rutaObtenida,resultadoscontainer,resultadoscont);
         // agregarEfectoResultados();
