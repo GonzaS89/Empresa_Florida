@@ -209,7 +209,7 @@ onload = ()=> {
         let tipoDeDia;
 
         const definirDia = (fecha, mes)=> {
-            tipoDeDia = (fecha == 13 && mes == 9) ? 'feriado' : 'normal';
+            tipoDeDia = (fecha == 16 && mes == 9) ? 'feriado' : 'normal';
             switch (tipoDeDia) {
                 case 'feriado':
                     tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo `;
@@ -227,7 +227,7 @@ onload = ()=> {
 
         
 
-        if((fecha == 14) && (mes == 9)) { //Definir feriado previo
+        if((fecha == 17) && (mes == 9)) { //Definir feriado previo
             feriadoPrevio = true; 
             rutaObtenida = obtenerDiaRuta(dia);
             tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
