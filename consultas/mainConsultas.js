@@ -255,7 +255,6 @@ const definirNormalidad = ()=> {
 
 // Funcion para filtrar los valores de salidas de los servicios
 const obtenerLista = (x)=> {
-    let listaDelDia = [];
     for (i = 0; i < x.length; i++) listaDelDia.push(x[i].salida);
     // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
     return listaDelDia
@@ -330,7 +329,7 @@ const obtenerIndiceBusqueda = (listaDiferencias)=> {
     return console.log(indiceDeBusqueda);
     
 };
-const obtenerListaDeDiferencias = (listaObtenida)=> {
+const obtenerListaDeDiferencias = (listaObtenida,listaDelDia)=> {
     let horariosEnEnteros = [];
 
     for (let i = 0; i < listaObtenida.length; i++) {
@@ -438,13 +437,12 @@ const contenidoDeResultados = (rutas,arrayDiferencias)=> {
 
     boton.addEventListener('click', () => {
         let listaObtenida = [];
-        
         obtenerRuta();
         definirNormalidad();
         listaObtenida = obtenerLista(rutaObtenida);
         console.log(listaObtenida)
         console.log(rutaObtenida)
-        obtenerListaDeDiferencias(listaObtenida);
+        obtenerListaDeDiferencias(listaObtenida,listaDelDia);
         obtenerIndiceBusqueda();
         contruirGlobos(rutaObtenida,resultadoscontainer,resultadoscont);
         // agregarEfectoResultados();
