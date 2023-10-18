@@ -263,12 +263,12 @@ const obtenerListaDeSalidas = (x)=> {
 const obtenerListaDeDiferencias = (arrayDeSalidas)=> {
     let horariosEnEnteros = [];
     let listaDiferencias = [];
-    let horaMinutosSalidasEnEnteros;
+   
 
     for (let i = 0; i < arrayDeSalidas.length; i++) {
-        let horasSalidaEnEnteros = (Math.trunc(arrayDeSalidas[i])) * 60;
-        let minutosSalidaEnEnteros = ((Math.trunc(arrayDeSalidas[i])) * 100 - horasSalidaEnEnteros);
-        horaMinutosSalidasEnEnteros = horasSalidaEnEnteros + minutosSalidaEnEnteros;
+        let horasSalidaEnEnteros = Math.trunc(arrayDeSalidas[i]) * 60;
+        let minutosSalidaEnEnteros = ((arrayDeSalidas[i]) - (Math.trunc(arrayDeSalidas[i]))) * 100;
+        let horaMinutosSalidasEnEnteros = horasSalidaEnEnteros + minutosSalidaEnEnteros;
         horariosEnEnteros.push(horaMinutosSalidasEnEnteros);
     }
     /*Recorremos el array y buscamos coincidencias con el horario actual*/
@@ -277,6 +277,7 @@ const obtenerListaDeDiferencias = (arrayDeSalidas)=> {
         let difHoraHorarios = horaEnEnteros - horariosEnEnteros[i];
         listaDiferencias.push(difHoraHorarios);
     }
+    
     return listaDiferencias
 }
 // Funcion que construye los globos de resultados
@@ -344,20 +345,21 @@ const obtenerIndiceBusqueda = (arrayDiferencias)=> {
     }
     else if ((arrayDiferencias.indexOf(anteriorPasado)) == (arrayDiferencias.length - 1)) {
         indiceDeBusqueda = arrayDiferencias.indexOf(anteriorPasado);
-    }    
+    } 
+    return indiceDeBusqueda;   
 };
 
-const irAlObjeto = ()=> {
-    let resultadoAMostrar = resultadoscont.children[indiceDeBusqueda];
+const irAlObjeto = (indice)=> {
+    let resultadoAMostrar = resultadoscont.children[indice];
     resultadoAMostrar.scrollIntoView({ behavior: 'auto', block: 'center' });
 };
-const agregarEfectoResultados = ()=> {
-    resultadoscont.children[indiceDeBusqueda].classList.add('resaltado');
+const agregarEfectoResultados = (indice)=> {
+    resultadoscont.children[indice].classList.add('resaltado');
     // resultadoscont.children[indiceDeBusqueda].classList.add('manito');
     if (resultadoscont.classList.contains('normalizarFondo')) resultadoscont.classList.replace('normalizarFondo', 'opacarFondo')
     else resultadoscont.classList.add('opacarFondo');
     for (i = 0; i < resultadoscont.children.length; i++) {
-        if (i < indiceDeBusqueda || i > indiceDeBusqueda) resultadoscont.children[i].classList.add('opacar')
+        if (i < indice || i > indice) resultadoscont.children[i].classList.add('opacar')
 }
 };
 const contenidoDeResultados = (rutas,arrayDiferencias)=> {
@@ -405,7 +407,7 @@ const contenidoDeResultados = (rutas,arrayDiferencias)=> {
                 if (Math.abs(arrayDiferencias[i]) <= 2){
                     estadoServicio.textContent = 'Está iniciando su recorrido'
                 }
-                recorridoServicio.textContent = `Recorrido: ${rutas[i].recorrido.join(' → ')}`;
+                recorridoServicio.textContent = `Recorrido: ${rutas[i].recorrido}`;
             
         }
         else {
@@ -433,23 +435,22 @@ const contenidoDeResultados = (rutas,arrayDiferencias)=> {
                 if (Math.abs(arrayDiferencias[i]) <= 5 && Math.abs(arrayDiferencias[i]) >= 2) {
                     estadoServicio.textContent = 'Iniciará su recorrido en menos de 5 minutos'
                 }
-                recorridoServicio.textContent = `Recorrido: ${rutas[i].recorrido.join(' → ')}`;
+                recorridoServicio.textContent = `Recorrido: ${rutas[i].recorrido}`;
         }
     } 
 }
 
     boton.addEventListener('click', () => {
-        obtenerRuta();
+        definirDia();
         definirNormalidad();
         let listaDeSalidas = obtenerListaDeSalidas(rutaObtenida);
-        console.log(listaDeSalidas)
-        // console.log(rutaObtenida)
         let listaDeDiferenciasObtenida = obtenerListaDeDiferencias(listaDeSalidas);
-        console.log(listaDeDiferenciasObtenida)
-        // obtenerIndiceBusqueda();
-        // contruirGlobos(rutaObtenida,resultadoscontainer,resultadoscont);
-        // agregarEfectoResultados();
-    
+        let indiceObtenido = obtenerIndiceBusqueda(listaDeDiferenciasObtenida)
+        contruirGlobos(rutaObtenida,resultadoscontainer,resultadoscont);
+        irAlObjeto(indiceObtenido);
+        agregarEfectoResultados(indiceObtenido);  
+        contenidoDeResultados(rutaObtenida,listaDeDiferenciasObtenida)
+        
         mensaje2.appendChild(indicacioncont);
         
         if(resolucion < 600)
@@ -462,13 +463,13 @@ const contenidoDeResultados = (rutas,arrayDiferencias)=> {
         // contenidoDeResultados(rutaObtenida,listaDiferencias);
         
         $('.resultados').css('display', 'flex');
-        // $('.mensaje2').css('display', 'flex');
+        $('.mensaje2').css('display', 'flex');
         if(mensaje2.classList.contains('mensajeIrse')){
             mensaje2.classList.replace('mensajeIrse', 'mensajeAparece')
         }else{
             mensaje2.classList.add('mensajeAparece')
         }
-        // irAlObjeto();
+        irAlObjeto(indiceObtenido)
         // setTimeout(() => {
         // }, 1);
 })
