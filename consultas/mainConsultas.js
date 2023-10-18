@@ -446,10 +446,11 @@ const contenidoDeResultados = (rutas,arrayDiferencias)=> {
         definirNormalidad();
         let listaDeSalidas = obtenerListaDeSalidas(rutaObtenida);
         let listaDeDiferenciasObtenida = obtenerListaDeDiferencias(listaDeSalidas);
+        console.log(listaDeDiferenciasObtenida)
         let indiceObtenido = obtenerIndiceBusqueda(listaDeDiferenciasObtenida)
         contruirGlobos(rutaObtenida,resultadoscontainer,resultadoscont);
         irAlObjeto(indiceObtenido);
-        agregarEfectoResultados(indiceObtenido);  
+        // agregarEfectoResultados(indiceObtenido);  
         contenidoDeResultados(rutaObtenida,listaDeDiferenciasObtenida)
         
         mensaje2.appendChild(indicacioncont);
@@ -470,7 +471,6 @@ const contenidoDeResultados = (rutas,arrayDiferencias)=> {
         }else{
             mensaje2.classList.add('mensajeAparece')
         }
-        irAlObjeto(indiceObtenido)
         // setTimeout(() => {
         // }, 1);
 })
