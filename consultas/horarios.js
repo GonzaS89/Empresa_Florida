@@ -1,5 +1,7 @@
 // Grilla horaria
 
+const listaDestinos = [alderetes,bandaRS,florida];
+
 // Destinos (FLORIDA / ALDERETES / ALTERNATIVA)
 
 const terminal = 'Terminal';
