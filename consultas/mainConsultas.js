@@ -16,10 +16,9 @@ let mes = momentoActual.getMonth();
 let dia = momentoActual.getDay();
 let horaEnEnteros = (hora * 60) + minutos;
 let diasDeLaSemana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
-let diaSemana = diasDeLaSemana[dia]
-let anteriorPasado = 3000;
+let diaSemana = diasDeLaSemana[dia];
 let diaRango = [];
-let ruta = [];
+let ruta;
 let tituloResultado = document.getElementById('tituloResultado')
 let feriado = false;
 let semiFeriado = false;
@@ -58,29 +57,29 @@ let titulo = document.getElementById('titulo');
 let resolucion = document.documentElement.clientWidth;
 
 
-botonDeCambio.addEventListener('click',  ()=> {
-    $('.menu2').css('display', 'flex');
-    $('.origen').css('display', 'flex');
-    $('.botonDeCambio2').css('display', 'flex');
-    $('.destino').css('display', 'none');
-    $('.menu').css('display', 'none');
-    $('.botonDeCambio').css('display', 'none');
-    opcionbase.selected = true;
-    linea1.textContent = '';
-    linea2.textContent = '';
-})
+// botonDeCambio.addEventListener('click',  ()=> {
+//     $('.menu2').css('display', 'flex');
+//     $('.origen').css('display', 'flex');
+//     $('.botonDeCambio2').css('display', 'flex');
+//     $('.destino').css('display', 'none');
+//     $('.menu').css('display', 'none');
+//     $('.botonDeCambio').css('display', 'none');
+//     opcionbase.selected = true;
+//     linea1.textContent = '';
+//     linea2.textContent = '';
+// })
 
-botonDeCambio2.addEventListener('click', ()=> {
-    $('.menu2').css('display', 'none');
-    $('.origen').css('display', 'none');
-    $('.botonDeCambio2').css('display', 'none');
-    $('.destino').css('display', 'flex');
-    $('.menu').css('display', 'flex');
-    $('.botonDeCambio').css('display', 'flex');
-    opcionbase2.selected = true;
-    linea1.textContent = '';
-    linea2.textContent = '';
-})
+// botonDeCambio2.addEventListener('click', ()=> {
+//     $('.menu2').css('display', 'none');
+//     $('.origen').css('display', 'none');
+//     $('.botonDeCambio2').css('display', 'none');
+//     $('.destino').css('display', 'flex');
+//     $('.menu').css('display', 'flex');
+//     $('.botonDeCambio').css('display', 'flex');
+//     opcionbase2.selected = true;
+//     linea1.textContent = '';
+//     linea2.textContent = '';
+// })
 
 const botonCierraMensaje = document.querySelector('.botoncerrado');
 const mensajecontenedor = document.querySelector('.mensaje-contenedor');
@@ -147,9 +146,6 @@ if (fecha == 9 || fecha == 10 && mes == 6) $('.mensaje3').css('display', 'flex')
 
 activarBoton()
 
-
-let indiceDeBusqueda;
-
 //Defino funcion para obtener posicion
 
 const definirPosicion = (sel, val, valorSel, pos) => { 
@@ -186,10 +182,10 @@ const obtenerDiaRuta = (x)=> {
     
     if (x == 0) diaRango = ruta[0].slice(0, ruta[0].length);
     else if (dia == 1 || semiFeriado || feriadoPrevio && posicion2 == 2)
-    diaRango = ruta[1].slice(1, ruta[1].length)
-    else if(fecha == 6 && mes == 6 && posicion2 == 2) diaRango = ruta[1].slice(0, ruta[1].length - 1)
-    else if (x >= 1 && x <= 5) diaRango = ruta[1].slice(0, ruta[1].length);
-    else if (x == 6) diaRango = ruta[2].slice(0, ruta[2].length);
+    {diaRango = ruta[1].slice(1, ruta[1].length)}
+    else if(fecha == 6 && mes == 6 && posicion2 == 2) {diaRango = ruta[1].slice(0, ruta[1].length - 1)}
+    else if (x >= 1 && x <= 5) {diaRango = ruta[1].slice(0, ruta[1].length);}
+    else if (x == 6) {diaRango = ruta[2].slice(0, ruta[2].length);}
 
     return diaRango
 }
@@ -263,7 +259,6 @@ const obtenerListaDeSalidas = (x)=> {
 const obtenerListaDeDiferencias = (arrayDeSalidas)=> {
     let horariosEnEnteros = [];
     let listaDiferencias = [];
-   
 
     for (let i = 0; i < arrayDeSalidas.length; i++) {
         let horasSalidaEnEnteros = Math.trunc(arrayDeSalidas[i]) * 60;
@@ -275,7 +270,7 @@ const obtenerListaDeDiferencias = (arrayDeSalidas)=> {
     for (i = 0; i < horariosEnEnteros.length; i++) {
         
         let difHoraHorarios = horaEnEnteros - horariosEnEnteros[i];
-        listaDiferencias.push(difHoraHorarios);
+        listaDiferencias.push(Math.round(difHoraHorarios));
     }
     
     return listaDiferencias
@@ -333,6 +328,8 @@ const contruirGlobos = (rutas, contPadre, contHijo)=> {
 }
 
 const obtenerIndiceBusqueda = (arrayDiferencias)=> {
+    let indiceDeBusqueda;
+    let anteriorPasado = 3000;
     for (i = 0; i < arrayDiferencias.length; i++) {
         if (arrayDiferencias[i] >= 0) anteriorPasado = Math.min(anteriorPasado, arrayDiferencias[i]);
     }
@@ -352,6 +349,7 @@ const obtenerIndiceBusqueda = (arrayDiferencias)=> {
 const irAlObjeto = (indice)=> {
     let resultadoAMostrar = resultadoscont.children[indice];
     resultadoAMostrar.scrollIntoView({ behavior: 'auto', block: 'center' });
+    // console.log(indice)
 };
 const agregarEfectoResultados = (indice)=> {
     resultadoscont.children[indice].classList.add('resaltado');
@@ -386,25 +384,25 @@ const contenidoDeResultados = (rutas,arrayDiferencias)=> {
                 if (arrayDiferencias[i] > 60) {
                     estadoServicio.textContent = 'Finalizó su recorrido'
                 }
-                else if (Math.round(arrayDiferencias[i] == 60)) {
+                else if (arrayDiferencias[i] == 60) {
                     estadoServicio.textContent = 'Inició su recorrido hace 1 hora'
                 }
                 else if (arrayDiferencias[i] < 60 && arrayDiferencias[i] > 30) {
                     estadoServicio.textContent = `Inició su recorrido hace menos de 1 hora`
                 }
-                else if (Math.round(arrayDiferencias)[i] <= 30 && arrayDiferencias[i] > 15) {
+                else if ((arrayDiferencias)[i] <= 30 && arrayDiferencias[i] > 15) {
                     estadoServicio.textContent = `Inició su recorrido hace menos de media hora`
                 }
-                else if (Math.round(arrayDiferencias)[i] <= 15 && arrayDiferencias[i] > 10) {
+                else if ((arrayDiferencias)[i] <= 15 && arrayDiferencias[i] > 10) {
                     estadoServicio.textContent = `Inició su recorrido hace menos de 15 minutos`
                 }
-                else if (Math.round(arrayDiferencias)[i] <= 10 && arrayDiferencias[i] > 5) {
+                else if ((arrayDiferencias)[i] <= 10 && arrayDiferencias[i] > 5) {
                     estadoServicio.textContent = `Inició su recorrido hace menos de 10 minutos`
                 }
-                if (Math.round(arrayDiferencias)[i] <= 5 && arrayDiferencias[i] > 2) {
+                if ((arrayDiferencias)[i] <= 5 && arrayDiferencias[i] > 2) {
                     estadoServicio.textContent = 'Inició su recorrido hace menos de 5 minutos'
                 }
-                if (Math.abs(Math.round(arrayDiferencias)[i]) <= 2){
+                if ((Math.abs(arrayDiferencias)[i]) <= 2){
                     estadoServicio.textContent = 'Está iniciando su recorrido'
                 }
                 recorridoServicio.textContent = `Recorrido: ${rutas[i].recorrido.join(' → ')}`;
@@ -440,50 +438,42 @@ const contenidoDeResultados = (rutas,arrayDiferencias)=> {
     } 
 }
 
-    boton.addEventListener('click', () => {
-        obtenerRuta();
-        definirDia();
-        definirNormalidad();
-        let listaDeSalidas = obtenerListaDeSalidas(rutaObtenida);
-        let listaDeDiferenciasObtenida = obtenerListaDeDiferencias(listaDeSalidas);
-        console.log(listaDeDiferenciasObtenida)
-        let indiceObtenido = obtenerIndiceBusqueda(listaDeDiferenciasObtenida)
-        contruirGlobos(rutaObtenida,resultadoscontainer,resultadoscont);
-        irAlObjeto(indiceObtenido);
-        // agregarEfectoResultados(indiceObtenido);  
-        contenidoDeResultados(rutaObtenida,listaDeDiferenciasObtenida)
+let indiceObtenido;
+let listaDeSalidas;
+
+//     boton.addEventListener('click', () => {
+//         obtenerRuta();definirDia();definirNormalidad();
+//         listaDeSalidas = obtenerListaDeSalidas(rutaObtenida);
+//         contruirGlobos(rutaObtenida,resultadoscontainer,resultadoscont);
+//         listaDeDiferenciasObtenida = obtenerListaDeDiferencias(listaDeSalidas);
+//         indiceObtenido = obtenerIndiceBusqueda(listaDeDiferenciasObtenida)
+//         agregarEfectoResultados(indiceObtenido);  
+//         contenidoDeResultados(rutaObtenida,listaDeDiferenciasObtenida)
+//         mensaje2.appendChild(indicacioncont);
         
-        mensaje2.appendChild(indicacioncont);
+//         if(resolucion < 600)
+//         if ((rutaObtenida.length) > 1) {
+//             if (indiceObtenido == (rutaObtenida.length) - 1) scrollcont.children[0].classList.add('manitoAnimacionAbajo');
+//             else if (indiceObtenido == 0) scrollcont.children[0].classList.add('manitoAnimacionArriba');
+//             else scrollcont.children[0].classList.add('manitoAnimacionCentro');
+//         }
         
-        if(resolucion < 600)
-        if ((rutaObtenida.length) > 1) {
-            if (indiceDeBusqueda == (rutaObtenida.length) - 1) scrollcont.children[0].classList.add('manitoAnimacionAbajo');
-            else if (indiceDeBusqueda == 0) scrollcont.children[0].classList.add('manitoAnimacionArriba');
-            else scrollcont.children[0].classList.add('manitoAnimacionCentro');
-        }
-    
-        // contenidoDeResultados(rutaObtenida,listaDiferencias);
-        
-        $('.resultados').css('display', 'flex');
-        $('.mensaje2').css('display', 'flex');
-        if(mensaje2.classList.contains('mensajeIrse')){
-            mensaje2.classList.replace('mensajeIrse', 'mensajeAparece')
-        }else{
-            mensaje2.classList.add('mensajeAparece')
-        }
-        // setTimeout(() => {
-        // }, 1);
-})
-
-
-
-
+//         $('.resultados').css('display', 'flex');
+//         $('.mensaje2').css('display', 'flex');
+//         if(mensaje2.classList.contains('mensajeIrse')){
+//             mensaje2.classList.replace('mensajeIrse', 'mensajeAparece')
+//         }else{
+//             mensaje2.classList.add('mensajeAparece')
+//         }
+//         irAlObjeto(indiceObtenido);
+// })
 
 resultadoscont.addEventListener('touchmove', () => {
+
     for (i = 0; i < resultadoscont.children.length; i++) {
-        if (i < indiceDeBusqueda || i > indiceDeBusqueda) 
+        if (i < indiceObtenido || i > indiceObtenido) 
             resultadoscont.children[i].classList.replace('opacar', 'normalizar');
-            resultadoscont.children[indiceDeBusqueda].classList.replace('resaltado', 'normalizarResaltado');
+            resultadoscont.children[indiceObtenido].classList.replace('resaltado', 'normalizarResaltado');
             scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
             scrollcont.children[0].classList.remove('manitoAnimacionArriba');
             scrollcont.children[0].classList.remove('manitoAnimacionCentro');
