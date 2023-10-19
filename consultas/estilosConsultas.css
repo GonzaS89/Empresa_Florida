@@ -99,15 +99,14 @@ body::-webkit-scrollbar-track {
     background: rgb(56, 56, 208);
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-family: var(--fuenteSec);
-    
+    align-items: center;    
 }
 
 .contenedor-input{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    font-family: var(--fuenteSec);
 
     && input{
         width: 250px;
