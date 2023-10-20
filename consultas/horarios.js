@@ -4,7 +4,7 @@
 
 const terminal = 'Terminal';
 const alderetes = 'Alderetes';
-const bandaRS = 'Banda R.S.';
+const bandaRS = 'Banda Río Salí';
 const autopista = 'Autopista';
 const alternativa = 'Alternativa';
 const talar = 'Talar';
@@ -136,6 +136,23 @@ const sieteACejas = [sieteAbril,cejas,llona,cevilPozo,bandaRS,terminal];
 // Lista con todos las localidades de la
 
 const listaTodosDestino = [florida,alderetes,bandaRS,talar,cochuchal,fortin,fincaMayo,perez,marta,posse,paraiso,llona,filaMedio,filaOrilla,ralos,villaTercera,lolitaS,lolitaN,bTrigal,alabama,cejas,sieteAbril];
+
+const ordenarLista = (array) => {
+   array.sort((elemento, elemento2) => {
+      if(elemento < elemento2){
+         return -1
+      }
+      if(elemento > elemento2){
+         return 1
+      }
+      else{
+         return 0
+      }
+   })
+}
+
+ordenarLista(listaTodosDestino);
+
 
 // Arreglos con toda la grilla
 
@@ -958,7 +975,7 @@ const horariosLvSMAl = [
  // {
  // "nombre": "11:40",
  // "salida": 11.4,
- // "recorrido": "Terminal → Banda R.S. → Alderetes → Talar → Esquina Lastra → Mayo"
+ // "recorrido": "Terminal → Banda Río Salí → Alderetes → Talar → Esquina Lastra → Mayo"
  // },
  {
  "nombre": "12:15",
@@ -3285,7 +3302,7 @@ const ralosCruzAltaTerminalLaV = [
  // {
  // "nombre":"07:45",
  // "salida":7.45,
- // "recorrido":"Britos → Llona → Cevil Pozo → Banda R.S. → Terminal"
+ // "recorrido":"Britos → Llona → Cevil Pozo → Banda Río Salí → Terminal"
  // },
  {
  "nombre": "08:10",

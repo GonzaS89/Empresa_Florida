@@ -86,7 +86,6 @@ body::-webkit-scrollbar-track {
     align-items: center;
     justify-content: center;
     background:var(--rojo2Linear);
-    background: black;
     width: 50%;
     border-radius: 50px;
     margin: 30px auto;

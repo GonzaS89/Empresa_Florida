@@ -1,4 +1,5 @@
 let estanEnElMismoRecorrido;
+const jaja = [4,1,10,5];
 
 const ordenarListaViajes = (listaAOrdenar) => {
     listaAOrdenar.sort((salida1,salida2) => {
@@ -13,6 +14,8 @@ const ordenarListaViajes = (listaAOrdenar) => {
         }
     })
 }
+
+
 // const crearListaDestino = (idaOVuelta,ciudad1,ciudad2)=> {
 //     idaOVuelta.forEach(viajes => {    
 //         viajes[1].forEach(viaje => {
@@ -55,6 +58,7 @@ const obtenerDia = (dia)=> {
     else if(dia == 1 || dia == 2 || dia == 3 || dia == 4 || dia == 5) return 1
     else if(dia == 6) return 2
 };
+
 
 boton.addEventListener('click', ()=> {
     let diaObtenido = obtenerDia(dia);
@@ -106,6 +110,37 @@ indicacioncont.addEventListener('click', () => {
 // contenidoDeResultados(listaDestino,listaDiferencias);
 // obtenerIndiceBusqueda();
 // contruirGlobos()
+
+const selectSalida = document.getElementById('selector');
+
+const crearLabelOptions = (select,option)=> {
+    for (let i = 0; i < select.length - 1; i++) {
+        let nombreOption
+        nombreOption = listaTodosDestino[i];
+        option.innerHTML = nombreOption;
+    }
+}
+
+
+const crearSelectOptions = ()=> {
+    for (let index = 0; index < listaTodosDestino.length; index++) {
+        const opcionSelect = document.createElement('OPTION');
+        selectSalida.appendChild(opcionSelect);
+        crearLabelOptions(selectSalida,opcionSelect)
+    }
+    console.log(selectSalida)
+}
+
+
+crearSelectOptions();
+console.log(listaTodosDestino.length)
+
+
+
+
+
+
+
 
 
 
