@@ -1,7 +1,5 @@
 // Grilla horaria
 
-const listaDestinos = [alderetes,bandaRS,florida];
-
 // Destinos (FLORIDA / ALDERETES / ALTERNATIVA)
 
 const terminal = 'Terminal';
@@ -135,6 +133,9 @@ const termiCruzARalos = [terminal,bandaRS, cevilPozo,llona,cruzAlta,ralos];
 const cejasRalos = [cejas,ralos,llona,cevilPozo,bandaRS,terminal];
 const sieteACejas = [sieteAbril,cejas,llona,cevilPozo,bandaRS,terminal];
 
+// Lista con todos las localidades de la
+
+const listaTodosDestino = [florida,alderetes,bandaRS,talar,cochuchal,fortin,fincaMayo,perez,marta,posse,paraiso,llona,filaMedio,filaOrilla,ralos,villaTercera,lolitaS,lolitaN,bTrigal,alabama,cejas,sieteAbril];
 
 // Arreglos con toda la grilla
 

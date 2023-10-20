@@ -58,7 +58,7 @@ const obtenerDia = (dia)=> {
 
 boton.addEventListener('click', ()=> {
     let diaObtenido = obtenerDia(dia);
-    let listaViajesObtenida = determinarRuta(diaObtenido,alderetes,florida);
+    let listaViajesObtenida = determinarRuta(diaObtenido,bandaRS,florida);
     listaDeSalidas = obtenerListaDeSalidas(listaViajesObtenida);
     let listaDeDiferenciasObtenidas = obtenerListaDeDiferencias(listaDeSalidas);
     contruirGlobos(listaViajesObtenida,resultadoscontainer,resultadoscont);
