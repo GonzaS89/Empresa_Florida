@@ -60,41 +60,41 @@ const obtenerDia = (dia)=> {
 };
 
 
-boton.addEventListener('click', ()=> {
+// boton.addEventListener('click', ()=> {
     let diaObtenido = obtenerDia(dia);
-    let listaViajesObtenida = determinarRuta(diaObtenido,bandaRS,florida);
+    let listaViajesObtenida = determinarRuta(diaObtenido,florida,alderetes);
     listaDeSalidas = obtenerListaDeSalidas(listaViajesObtenida);
-    let listaDeDiferenciasObtenidas = obtenerListaDeDiferencias(listaDeSalidas);
-    contruirGlobos(listaViajesObtenida,resultadoscontainer,resultadoscont);
-    indiceObtenido = obtenerIndiceBusqueda(listaDeDiferenciasObtenidas);
-    contenidoDeResultados(listaViajesObtenida,listaDeDiferenciasObtenidas)
-    agregarEfectoResultados(indiceObtenido);  
-    console.log(listaViajesObtenida)
+    // let listaDeDiferenciasObtenidas = obtenerListaDeDiferencias(listaDeSalidas);
+    // contruirGlobos(listaViajesObtenida,resultadoscontainer,resultadoscont);
+    // indiceObtenido = obtenerIndiceBusqueda(listaDeDiferenciasObtenidas);
+    // contenidoDeResultados(listaViajesObtenida,listaDeDiferenciasObtenidas)
+    // agregarEfectoResultados(indiceObtenido);  
+    // console.log(listaViajesObtenida)
 
-    mensaje2.appendChild(indicacioncont);
-    $('.resultados').css('display', 'flex');
-        $('.mensaje2').css('display', 'flex');
-        if(mensaje2.classList.contains('mensajeIrse')){
-            mensaje2.classList.replace('mensajeIrse', 'mensajeAparece')
-        }else{
-            mensaje2.classList.add('mensajeAparece')
-        }
-        irAlObjeto(indiceObtenido);
-})
-indicacioncont.addEventListener('click', () => {
-    mensaje2.classList.replace('mensajeAparece', 'mensajeIrse')
-    scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
-    scrollcont.children[0].classList.remove('manitoAnimacionArriba');
-    scrollcont.children[0].classList.remove('manitoAnimacionCentro');
-    resultadoscont.children[0].classList.remove('resultadosOpcion2');
-    resultadoscont.classList.replace('opacarFondo','normalizarFondo');
+    // mensaje2.appendChild(indicacioncont);
+    // $('.resultados').css('display', 'flex');
+    //     $('.mensaje2').css('display', 'flex');
+    //     if(mensaje2.classList.contains('mensajeIrse')){
+    //         mensaje2.classList.replace('mensajeIrse', 'mensajeAparece')
+    //     }else{
+    //         mensaje2.classList.add('mensajeAparece')
+    //     }
+    //     irAlObjeto(indiceObtenido);
+// })
+// indicacioncont.addEventListener('click', () => {
+//     mensaje2.classList.replace('mensajeAparece', 'mensajeIrse')
+//     scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
+//     scrollcont.children[0].classList.remove('manitoAnimacionArriba');
+//     scrollcont.children[0].classList.remove('manitoAnimacionCentro');
+//     resultadoscont.children[0].classList.remove('resultadosOpcion2');
+//     resultadoscont.classList.replace('opacarFondo','normalizarFondo');
         
-    setTimeout( ()=> {
-        $('.mensaje2').css('display', 'none'),borrarGlobos(),
-        resultadoscont.classList.remove('normalizarFondo'),
-        borrarManito();
-    },1000)
-})
+//     setTimeout( ()=> {
+//         $('.mensaje2').css('display', 'none'),borrarGlobos(),
+//         resultadoscont.classList.remove('normalizarFondo'),
+//         borrarManito();
+//     },1000)
+// })
     
 
     
@@ -112,28 +112,45 @@ indicacioncont.addEventListener('click', () => {
 // contruirGlobos()
 
 const selectSalida = document.getElementById('selector');
+const selectLlegada = document.getElementById('selector2');
 
-const crearLabelOptions = (select,option)=> {
+const crearLabelOptions = (select,option,arrayViajes)=> {
     for (let i = 0; i < select.length - 1; i++) {
         let nombreOption
-        nombreOption = listaTodosDestino[i];
+        nombreOption = arrayViajes[i];
         option.innerHTML = nombreOption;
     }
 }
 
 
-const crearSelectOptions = ()=> {
-    for (let index = 0; index < listaTodosDestino.length; index++) {
+const crearSelectOptions = (select,arrayViajes)=> {
+    for (let index = 0; index < arrayViajes.length; index++) {
         const opcionSelect = document.createElement('OPTION');
-        selectSalida.appendChild(opcionSelect);
-        crearLabelOptions(selectSalida,opcionSelect)
+        select.appendChild(opcionSelect);
+        crearLabelOptions(select,opcionSelect,arrayViajes)
     }
-    console.log(selectSalida)
 }
 
 
-crearSelectOptions();
-console.log(listaTodosDestino.length)
+let listaPosiblesDestino = [];
+
+const filtrarDestinosPosibles = ()=> {
+    listaViajesObtenida.forEach(viaje => {
+        viaje.recorrido.forEach(localidad => {
+            if(!listaPosiblesDestino.includes(localidad) && localidad !== florida){
+                listaPosiblesDestino.push(localidad)
+                ordenarLista(listaPosiblesDestino)
+            }
+        });
+    });
+    console.log(listaPosiblesDestino)
+}
+
+filtrarDestinosPosibles();
+
+crearSelectOptions(selectSalida,listaTodosDestino);
+crearSelectOptions(selectLlegada,listaPosiblesDestino);
+
 
 
 
