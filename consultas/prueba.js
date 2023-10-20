@@ -53,11 +53,25 @@ const determinarRuta = (dia,punto1,punto2) => {
     return listaDestino;
 };
 
+const selectSalida = document.getElementById('selector');
+const selectLlegada = document.getElementById('selector2');
+
 const obtenerDia = (dia)=> {
     if(dia == 0) return 0
     else if(dia == 1 || dia == 2 || dia == 3 || dia == 4 || dia == 5) return 1
     else if(dia == 6) return 2
 };
+
+const comprobarOpcionSeleccionada = (array)=> {
+    let nombreOpcion
+    for (let i = 0; i < array.length; i++) {
+        const opcion = array[i];
+        setInterval(() => {if(opcion.selected) nombreOpcion = opcion.innerHTML, console.log(nombreOpcion)},1000);
+    }
+    return nombreOpcion
+}
+
+let nombreOpcionSeleccionada = comprobarOpcionSeleccionada(selectSalida)
 
 
 // boton.addEventListener('click', ()=> {
@@ -111,8 +125,7 @@ const obtenerDia = (dia)=> {
 // obtenerIndiceBusqueda();
 // contruirGlobos()
 
-const selectSalida = document.getElementById('selector');
-const selectLlegada = document.getElementById('selector2');
+
 
 const crearLabelOptions = (select,option,arrayViajes)=> {
     for (let i = 0; i < select.length - 1; i++) {
@@ -143,13 +156,14 @@ const filtrarDestinosPosibles = ()=> {
             }
         });
     });
-    console.log(listaPosiblesDestino)
 }
 
 filtrarDestinosPosibles();
 
 crearSelectOptions(selectSalida,listaTodosDestino);
 crearSelectOptions(selectLlegada,listaPosiblesDestino);
+
+comprobarOpcionSeleccionada(selectSalida);
 
 
 
