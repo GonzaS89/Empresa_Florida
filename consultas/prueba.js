@@ -166,22 +166,20 @@ const filtrarDestinosPosibles = ()=> {
 let nombreOpcionIdaObtenida;
 let nombreOpcionLlegadaObtenida;
 
-
-
-
-
 const aaaa = ()=> {
     nombreOpcionIdaObtenida = comprobarOpcionSeleccionada(selectSalida);
     nombreOpcionLlegadaObtenida = comprobarOpcionSeleccionada(selectLlegada);
-    console.log(nombreOpcionIdaObtenida)
-    listaViajesObtenida = determinarRuta(diaObtenido,nombreOpcionIdaObtenida,terminal);
+    listaViajesObtenida = determinarRuta(diaObtenido,nombreOpcionIdaObtenida,nombreOpcionLlegadaObtenida);
+    console.log(nombreOpcionIdaObtenida);
+    console.log(nombreOpcionLlegadaObtenida);
+    console.log(listaViajesObtenida);
     return listaViajesObtenida
 }
 
 const bbbb = ()=> {
-    if(listaViajesObtenida !== undefined) 
-    console.log(listaViajesObtenida)
-    filtrarDestinosPosibles();
+    if(listaViajesObtenida !== undefined){
+        filtrarDestinosPosibles();
+    }
     if(listaPosiblesDestino !== undefined){
         crearSelectOptions(selectLlegada,listaPosiblesDestino)
         if(listaPosiblesDestino.length > 0 && listaPosiblesDestino.length + 1 == selectLlegada.length){
@@ -192,8 +190,8 @@ const bbbb = ()=> {
 }
 
 
-const actualizar = setInterval(aaaa, 500);
-const actualizar2 = setInterval(bbbb, 1000);
+const actualizar = setInterval(aaaa,1500);
+const actualizar2 = setInterval(bbbb, 1500);
 
 
 crearSelectOptions(selectSalida,listaTodosDestino);
