@@ -142,6 +142,7 @@ const crearSelectOptions = (select,arrayViajes)=> {
     for (let index = 0; index < arrayViajes.length; index++) {
         const opcionSelect = document.createElement('OPTION');
         select.appendChild(opcionSelect);
+        opcionSelect.classList.add('options1')
         crearLabelOptions(select,opcionSelect,arrayViajes)
     }
 }
@@ -152,7 +153,7 @@ let listaPosiblesDestino = [];
 const filtrarDestinosPosibles = ()=> {
     listaViajesObtenida.forEach(viaje => {
         viaje.recorrido.forEach(localidad => {
-            if(!listaPosiblesDestino.includes(localidad) && localidad !== nombreOpcionObtenida){
+            if(!listaPosiblesDestino.includes(localidad) && localidad !== nombreOpcionIdaObtenida){
                 listaPosiblesDestino.push(localidad)
                 ordenarLista(listaPosiblesDestino)
             }
@@ -162,29 +163,39 @@ const filtrarDestinosPosibles = ()=> {
 
 
 
-// filtrarDestinosPosibles();
-
-
-// crearSelectOptions(selectLlegada,listaPosiblesDestino);
-
-// comprobarOpcionSeleccionada(selectSalida);
-
-
-let nombreOpcionObtenida;
-// setInterval(() => {
-//     crearSelectOptions(selectSalida,listaTodosDestino)
-//     nombreOpcionObtenida = comprobarOpcionSeleccionada(selectSalida);
-//     listaViajesObtenida = determinarRuta(diaObtenido,nombreOpcionObtenida,alderetes);
-//     console.log(listaViajesObtenida)
-// }, 1000);
+let nombreOpcionIdaObtenida;
+let nombreOpcionLlegadaObtenida;
 
 
 
 
 
+const aaaa = ()=> {
+    nombreOpcionIdaObtenida = comprobarOpcionSeleccionada(selectSalida);
+    nombreOpcionLlegadaObtenida = comprobarOpcionSeleccionada(selectLlegada);
+    console.log(nombreOpcionIdaObtenida)
+    listaViajesObtenida = determinarRuta(diaObtenido,nombreOpcionIdaObtenida,terminal);
+    return listaViajesObtenida
+}
+
+const bbbb = ()=> {
+    if(listaViajesObtenida !== undefined) 
+    console.log(listaViajesObtenida)
+    filtrarDestinosPosibles();
+    if(listaPosiblesDestino !== undefined){
+        crearSelectOptions(selectLlegada,listaPosiblesDestino)
+        if(listaPosiblesDestino.length > 0 && listaPosiblesDestino.length + 1 == selectLlegada.length){
+            console.log(listaPosiblesDestino)
+            clearInterval(actualizar2)
+        }
+}
+}
 
 
+const actualizar = setInterval(aaaa, 500);
+const actualizar2 = setInterval(bbbb, 1000);
 
 
-
+crearSelectOptions(selectSalida,listaTodosDestino);
+crearSelectOptions(selectLlegada,listaPosiblesDestino);
 
