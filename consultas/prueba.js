@@ -66,18 +66,20 @@ const comprobarOpcionSeleccionada = (array)=> {
     let nombreOpcion
     for (let i = 0; i < array.length; i++) {
         const opcion = array[i];
-        setInterval(() => {if(opcion.selected) nombreOpcion = opcion.innerHTML, console.log(nombreOpcion)},1000);
+        {if(opcion.selected) nombreOpcion = opcion.innerHTML};
     }
     return nombreOpcion
 }
 
-let nombreOpcionSeleccionada = comprobarOpcionSeleccionada(selectSalida)
+
+let listaViajesObtenida
+
 
 
 // boton.addEventListener('click', ()=> {
     let diaObtenido = obtenerDia(dia);
-    let listaViajesObtenida = determinarRuta(diaObtenido,florida,alderetes);
-    listaDeSalidas = obtenerListaDeSalidas(listaViajesObtenida);
+    
+    // listaDeSalidas = obtenerListaDeSalidas(listaViajesObtenida);
     // let listaDeDiferenciasObtenidas = obtenerListaDeDiferencias(listaDeSalidas);
     // contruirGlobos(listaViajesObtenida,resultadoscontainer,resultadoscont);
     // indiceObtenido = obtenerIndiceBusqueda(listaDeDiferenciasObtenidas);
@@ -150,7 +152,7 @@ let listaPosiblesDestino = [];
 const filtrarDestinosPosibles = ()=> {
     listaViajesObtenida.forEach(viaje => {
         viaje.recorrido.forEach(localidad => {
-            if(!listaPosiblesDestino.includes(localidad) && localidad !== florida){
+            if(!listaPosiblesDestino.includes(localidad) && localidad !== nombreOpcionObtenida){
                 listaPosiblesDestino.push(localidad)
                 ordenarLista(listaPosiblesDestino)
             }
@@ -158,13 +160,23 @@ const filtrarDestinosPosibles = ()=> {
     });
 }
 
-filtrarDestinosPosibles();
 
-crearSelectOptions(selectSalida,listaTodosDestino);
-crearSelectOptions(selectLlegada,listaPosiblesDestino);
 
-comprobarOpcionSeleccionada(selectSalida);
+// filtrarDestinosPosibles();
 
+
+// crearSelectOptions(selectLlegada,listaPosiblesDestino);
+
+// comprobarOpcionSeleccionada(selectSalida);
+
+
+let nombreOpcionObtenida;
+// setInterval(() => {
+//     crearSelectOptions(selectSalida,listaTodosDestino)
+//     nombreOpcionObtenida = comprobarOpcionSeleccionada(selectSalida);
+//     listaViajesObtenida = determinarRuta(diaObtenido,nombreOpcionObtenida,alderetes);
+//     console.log(listaViajesObtenida)
+// }, 1000);
 
 
 
