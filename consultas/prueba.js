@@ -35,6 +35,20 @@ const ordenarListaViajes = (listaAOrdenar) => {
 // crearListaDestino(todosDestinoTucuman,fortin,ralos);
 // contruirGlobos(listaDestino,resultadoscontainer,resultadoscont);
 
+const posiblesDestinos = (opcion)=> {
+    let lista = [];
+    todosLosHorarios.forEach(idaOVuelta => {
+        idaOVuelta.forEach(diaR => {
+            diaR[2].forEach(servicio => {
+                if(servicio.recorrido.includes(opcion)){
+                    lista.push(servicio)
+                }
+            })
+        })
+    })
+    return console.log(lista)
+}
+
 const determinarRuta = (dia,punto1,punto2) => {
     let listaDestino = [];
     todosLosHorarios.forEach(idaOVuelta => {
@@ -169,7 +183,8 @@ let nombreOpcionLlegadaObtenida;
 const aaaa = ()=> {
     nombreOpcionIdaObtenida = comprobarOpcionSeleccionada(selectSalida);
     nombreOpcionLlegadaObtenida = comprobarOpcionSeleccionada(selectLlegada);
-    listaViajesObtenida = determinarRuta(diaObtenido,nombreOpcionIdaObtenida,nombreOpcionLlegadaObtenida);
+    posiblesDestinos(nombreOpcionIdaObtenida)
+    // listaViajesObtenida = determinarRuta(diaObtenido,nombreOpcionIdaObtenida,nombreOpcionLlegadaObtenida);
     console.log(nombreOpcionIdaObtenida);
     console.log(nombreOpcionLlegadaObtenida);
     console.log(listaViajesObtenida);
