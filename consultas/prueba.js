@@ -1,5 +1,4 @@
 let estanEnElMismoRecorrido;
-const jaja = [4,1,10,5];
 
 const ordenarListaViajes = (listaAOrdenar) => {
     listaAOrdenar.sort((salida1,salida2) => {
@@ -35,37 +34,24 @@ const ordenarListaViajes = (listaAOrdenar) => {
 // crearListaDestino(todosDestinoTucuman,fortin,ralos);
 // contruirGlobos(listaDestino,resultadoscontainer,resultadoscont);
 
-const posiblesDestinos = (opcion)=> {
-    let lista = [];
-    todosLosHorarios.forEach(idaOVuelta => {
-        idaOVuelta.forEach(diaR => {
-            diaR[2].forEach(servicio => {
-                if(servicio.recorrido.includes(opcion)){
-                    lista.push(servicio)
-                }
-            })
-        })
-    })
-    return console.log(lista)
-}
 
-const determinarRuta = (dia,punto1,punto2) => {
-    let listaDestino = [];
-    todosLosHorarios.forEach(idaOVuelta => {
-        idaOVuelta.forEach(diaR => {
-            diaR[dia].forEach(horario => {
-                if(horario.recorrido.includes(punto1)){
-                    if(horario.recorrido.includes(punto2)){
-                        if(horario.recorrido.indexOf(punto1) < horario.recorrido.indexOf(punto2))
-                        listaDestino.push(horario);
-                        ordenarListaViajes(listaDestino);
-                    }
-                }
-            });
-        });
-    });
-    return listaDestino;
-};
+// const determinarRuta = (dia,punto1,punto2) => {
+//     let listaDestino = [];
+//     todosLosHorarios.forEach(idaOVuelta => {
+//         idaOVuelta.forEach(diaR => {
+//             diaR[dia].forEach(horario => {
+//                 if(horario.recorrido.includes(punto1)){
+//                     if(horario.recorrido.includes(punto2)){
+//                         if(horario.recorrido.indexOf(punto1) < horario.recorrido.indexOf(punto2))
+//                         listaDestino.push(horario);
+//                         ordenarListaViajes(listaDestino);
+//                     }
+//                 }
+//             });
+//         });
+//     });
+//     return listaDestino;
+// };
 
 const selectSalida = document.getElementById('selector');
 const selectLlegada = document.getElementById('selector2');
@@ -85,10 +71,7 @@ const comprobarOpcionSeleccionada = (array)=> {
     return nombreOpcion
 }
 
-
 let listaViajesObtenida
-
-
 
 // boton.addEventListener('click', ()=> {
     let diaObtenido = obtenerDia(dia);
@@ -152,11 +135,11 @@ const crearLabelOptions = (select,option,arrayViajes)=> {
 }
 
 
-const crearSelectOptions = (select,arrayViajes)=> {
+const crearSelectOptions = (select,arrayViajes,clase)=> {
     for (let index = 0; index < arrayViajes.length; index++) {
         const opcionSelect = document.createElement('OPTION');
         select.appendChild(opcionSelect);
-        opcionSelect.classList.add('options1')
+        opcionSelect.classList.add(clase)
         crearLabelOptions(select,opcionSelect,arrayViajes)
     }
 }
@@ -164,51 +147,76 @@ const crearSelectOptions = (select,arrayViajes)=> {
 
 let listaPosiblesDestino = [];
 
-const filtrarDestinosPosibles = ()=> {
-    listaViajesObtenida.forEach(viaje => {
-        viaje.recorrido.forEach(localidad => {
-            if(!listaPosiblesDestino.includes(localidad) && localidad !== nombreOpcionIdaObtenida){
-                listaPosiblesDestino.push(localidad)
-                ordenarLista(listaPosiblesDestino)
-            }
-        });
-    });
+// const filtrarDestinosPosibles = ()=> {
+//     listaViajesObtenida.forEach(viaje => {
+//         viaje.recorrido.forEach(localidad => {
+//             if(!listaPosiblesDestino.includes(localidad) && localidad !== nombreOpcionIdaObtenida){
+//                 listaPosiblesDestino.push(localidad)
+//                 ordenarLista(listaPosiblesDestino)
+//             }
+//         });
+//     });
+// }
+
+const posiblesDestinos = (opcion)=> {
+    let listaLocalidades = [];
+    todosLosHorarios.forEach(idaOVuelta => {
+        idaOVuelta.forEach(diaR => {
+            diaR[2].forEach(servicio => {
+                if(servicio.recorrido.includes(opcion)){
+                    servicio.recorrido.forEach(localidades => {
+                        if(localidades !== opcion && !(listaLocalidades.includes(localidades))){
+                            listaLocalidades.push(localidades);
+                        }
+                    });
+                }
+            })
+        })
+    })
+    return listaLocalidades;
 }
-
-
 
 let nombreOpcionIdaObtenida;
 let nombreOpcionLlegadaObtenida;
 
 const aaaa = ()=> {
     nombreOpcionIdaObtenida = comprobarOpcionSeleccionada(selectSalida);
-    nombreOpcionLlegadaObtenida = comprobarOpcionSeleccionada(selectLlegada);
-    posiblesDestinos(nombreOpcionIdaObtenida)
+    listaPosiblesDestino =  posiblesDestinos(nombreOpcionIdaObtenida)
     // listaViajesObtenida = determinarRuta(diaObtenido,nombreOpcionIdaObtenida,nombreOpcionLlegadaObtenida);
     console.log(nombreOpcionIdaObtenida);
-    console.log(nombreOpcionLlegadaObtenida);
-    console.log(listaViajesObtenida);
-    return listaViajesObtenida
+    console.log(listaPosiblesDestino);
+    
+    
+
 }
 
 const bbbb = ()=> {
-    if(listaViajesObtenida !== undefined){
-        filtrarDestinosPosibles();
-    }
+    // if(listaViajesObtenida !== undefined){
+    //     filtrarDestinosPosibles();
+    // }
     if(listaPosiblesDestino !== undefined){
-        crearSelectOptions(selectLlegada,listaPosiblesDestino)
+        crearSelectOptions(selectLlegada,listaPosiblesDestino,'opcion2')
         if(listaPosiblesDestino.length > 0 && listaPosiblesDestino.length + 1 == selectLlegada.length){
             console.log(listaPosiblesDestino)
+            console.log('El select esta lleno') 
+            selectLlegada.addEventListener('click', ()=> {
+                borrarOpcionesSelect()
+            })
             clearInterval(actualizar2)
         }
-}
+    }
 }
 
+function borrarOpcionesSelect() {
+    let arrayResultados = Array.prototype.slice.call(document.getElementsByClassName("opcion2"), 0);
+    for (element of arrayResultados) {
+        element.remove();
+    }
+}
 
 const actualizar = setInterval(aaaa,1500);
 const actualizar2 = setInterval(bbbb, 1500);
 
+crearSelectOptions(selectSalida,listaTodosDestino,'opcion1');
 
-crearSelectOptions(selectSalida,listaTodosDestino);
-crearSelectOptions(selectLlegada,listaPosiblesDestino);
 
