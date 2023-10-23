@@ -183,29 +183,39 @@ const aaaa = ()=> {
     nombreOpcionIdaObtenida = comprobarOpcionSeleccionada(selectSalida);
     listaPosiblesDestino =  posiblesDestinos(nombreOpcionIdaObtenida)
     // listaViajesObtenida = determinarRuta(diaObtenido,nombreOpcionIdaObtenida,nombreOpcionLlegadaObtenida);
-    console.log(nombreOpcionIdaObtenida);
-    console.log(listaPosiblesDestino);
-    
-    
-
+    // console.log(nombreOpcionIdaObtenida);
+    // console.log(listaPosiblesDestino);
 }
+
+selectSalida.addEventListener('click', ()=> {
+    if(nombreOpcionIdaObtenida !== undefined){
+        nombreOpcionIdaObtenida == comprobarOpcionSeleccionada(selectSalida);
+        listaPosiblesDestino = posiblesDestinos(nombreOpcionLlegadaObtenida);
+    }
+})
+
+let estaLlenoSelectLlegada = false;
 
 const bbbb = ()=> {
     // if(listaViajesObtenida !== undefined){
     //     filtrarDestinosPosibles();
     // }
     if(listaPosiblesDestino !== undefined){
+        estaLlenoSelectLlegada = true;
         crearSelectOptions(selectLlegada,listaPosiblesDestino,'opcion2')
         if(listaPosiblesDestino.length > 0 && listaPosiblesDestino.length + 1 == selectLlegada.length){
-            console.log(listaPosiblesDestino)
-            console.log('El select esta lleno') 
-            selectLlegada.addEventListener('click', ()=> {
-                borrarOpcionesSelect()
-            })
             clearInterval(actualizar2)
         }
     }
 }
+
+selectSalida.addEventListener('click', ()=> {
+    if(estaLlenoSelectLlegada){
+        borrarOpcionesSelect();
+    }else{
+        bbbb();
+    }
+})
 
 function borrarOpcionesSelect() {
     let arrayResultados = Array.prototype.slice.call(document.getElementsByClassName("opcion2"), 0);
@@ -214,9 +224,24 @@ function borrarOpcionesSelect() {
     }
 }
 
-const actualizar = setInterval(aaaa,1500);
+const actualizar = setInterval(aaaa,2200);
 const actualizar2 = setInterval(bbbb, 1500);
 
 crearSelectOptions(selectSalida,listaTodosDestino,'opcion1');
 
 
+// let promesa = new Promise (
+//     function (resolve, reject){
+//         if(estaLlenoSelectLlegada){resolve('esta lleno')
+//         }else{
+//             reject('esta vacio')
+//         }
+//     });
+
+// setInterval(() => {
+//     promesa.then(
+//         function (resul) {console.log(resul)},
+//          function (error){console.log(error)}
+//      )
+//      console.log(estaLlenoSelectLlegada)
+// }, 1000);    
