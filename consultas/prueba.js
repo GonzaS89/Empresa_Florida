@@ -211,7 +211,11 @@ const bbbb = ()=> {
 
 selectSalida.addEventListener('click', ()=> {
     if(estaLlenoSelectLlegada){
-        borrarOpcionesSelect();
+        crearSelectOptions(selectLlegada,listaPosiblesDestino,'opcion2')
+        if(listaPosiblesDestino.length > 0 && listaPosiblesDestino.length + 1 == selectLlegada.length){
+            clearInterval(actualizar2)
+        }
+
     }else{
         bbbb();
     }
@@ -245,3 +249,13 @@ crearSelectOptions(selectSalida,listaTodosDestino,'opcion1');
 //      )
 //      console.log(estaLlenoSelectLlegada)
 // }, 1000);    
+
+const actualizarEstadoSelect2 = ()=> {
+    for (let i = 1; i < selectSalida.length; i++) {
+        const opcion = selectSalida[i];
+        if(opcion.selected){console.log(`La localidad ${opcion.innerHTML} fue seleccionada`),clearInterval(actua)}
+        
+    }
+}
+
+const actua = setInterval(actualizarEstadoSelect2,1000)
