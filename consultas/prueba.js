@@ -250,12 +250,6 @@ crearSelectOptions(selectSalida,listaTodosDestino,'opcion1');
 //      console.log(estaLlenoSelectLlegada)
 // }, 1000);    
 
-const actualizarEstadoSelect2 = ()=> {
-    for (let i = 1; i < selectSalida.length; i++) {
-        const opcion = selectSalida[i];
-        if(opcion.selected){console.log(`La localidad ${opcion.innerHTML} fue seleccionada`),clearInterval(actua)}
-        
-    }
+const estadoActualizado = ()=> {
+    console.log('click')
 }
-
-const actua = setInterval(actualizarEstadoSelect2,1000)
