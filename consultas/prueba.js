@@ -144,22 +144,20 @@ const crearSelectOptions = (select,arrayViajes,clase)=> {
     }
 }
 
-
-let listaPosiblesDestino = [];
-
 // const filtrarDestinosPosibles = ()=> {
 //     listaViajesObtenida.forEach(viaje => {
 //         viaje.recorrido.forEach(localidad => {
-//             if(!listaPosiblesDestino.includes(localidad) && localidad !== nombreOpcionIdaObtenida){
-//                 listaPosiblesDestino.push(localidad)
-//                 ordenarLista(listaPosiblesDestino)
+//             if(!listaDestinosEfectivos.includes(localidad) && localidad !== nombreOpcionIdaObtenida){
+//                 listaDestinosEfectivos.push(localidad)
+//                 ordenarLista(listaDestinosEfectivos)
 //             }
 //         });
 //     });
 // }
 
-const posiblesDestinos = (opcion)=> {
+const destinosCompartidos = (opcion)=> {
     let listaLocalidades = [];
+    let listaDestinos = [];
     todosLosHorarios.forEach(idaOVuelta => {
         idaOVuelta.forEach(diaR => {
             diaR[2].forEach(servicio => {
@@ -167,59 +165,63 @@ const posiblesDestinos = (opcion)=> {
                     servicio.recorrido.forEach(localidades => {
                         if(localidades !== opcion && !(listaLocalidades.includes(localidades))){
                             listaLocalidades.push(localidades);
+                            listaLocalidades.forEach(destino => {
+                                if(servicio.recorrido.indexOf(opcion) < servicio.recorrido.indexOf(destino) && !listaDestinos.includes(destino)){
+                                    listaDestinos.push(destino)
+                                    ordenarLista(listaDestinos)
+                                }
+                            });
                         }
                     });
                 }
             })
         })
     })
-    return listaLocalidades;
+    return listaDestinos;
 }
 
+let listaDestinos;
 let nombreOpcionIdaObtenida;
 let nombreOpcionLlegadaObtenida;
-
-const aaaa = ()=> {
-    nombreOpcionIdaObtenida = comprobarOpcionSeleccionada(selectSalida);
-    listaPosiblesDestino =  posiblesDestinos(nombreOpcionIdaObtenida)
-    // listaViajesObtenida = determinarRuta(diaObtenido,nombreOpcionIdaObtenida,nombreOpcionLlegadaObtenida);
-    // console.log(nombreOpcionIdaObtenida);
-    // console.log(listaPosiblesDestino);
-}
-
-selectSalida.addEventListener('click', ()=> {
-    if(nombreOpcionIdaObtenida !== undefined){
-        nombreOpcionIdaObtenida == comprobarOpcionSeleccionada(selectSalida);
-        listaPosiblesDestino = posiblesDestinos(nombreOpcionLlegadaObtenida);
-    }
-})
-
 let estaLlenoSelectLlegada = false;
 
+const aaaa = ()=> {
+    for (let i = 1; i < selectSalida.length; i++) {
+        const opcionSalida = selectSalida[i];
+        if(opcionSalida.selected){
+            nombreOpcionIdaObtenida = comprobarOpcionSeleccionada(selectSalida);
+            listaDestinos =  destinosCompartidos(nombreOpcionIdaObtenida);
+            console.log(listaDestinos);
+            // if(listaDestinos !== undefined){
+            //     clearInterval(actualizar)
+            // }
+        }   
+    }
+}
+
 const bbbb = ()=> {
-    // if(listaViajesObtenida !== undefined){
-    //     filtrarDestinosPosibles();
-    // }
-    if(listaPosiblesDestino !== undefined){
+    if(listaDestinos !== undefined){
         estaLlenoSelectLlegada = true;
-        crearSelectOptions(selectLlegada,listaPosiblesDestino,'opcion2')
-        if(listaPosiblesDestino.length > 0 && listaPosiblesDestino.length + 1 == selectLlegada.length){
+        crearSelectOptions(selectLlegada,listaDestinos,'opcion2')
+        if(listaDestinos.length > 0 && listaDestinos.length + 1 == selectLlegada.length){
             clearInterval(actualizar2)
         }
     }
 }
 
-selectSalida.addEventListener('click', ()=> {
-    if(estaLlenoSelectLlegada){
-        crearSelectOptions(selectLlegada,listaPosiblesDestino,'opcion2')
-        if(listaPosiblesDestino.length > 0 && listaPosiblesDestino.length + 1 == selectLlegada.length){
-            clearInterval(actualizar2)
-        }
 
-    }else{
-        bbbb();
-    }
-})
+
+// selectSalida.addEventListener('click', ()=> {
+//     if(estaLlenoSelectLlegada){
+//         crearSelectOptions(selectLlegada,listaDestinos,'opcion2')
+//         if(listaDestinos.length > 0 && listaDestinos.length + 1 == selectLlegada.length){
+//             clearInterval(actualizar2)
+//         }
+//     }
+//     // }else{
+//     //     bbbb();
+//     // }
+// })
 
 function borrarOpcionesSelect() {
     let arrayResultados = Array.prototype.slice.call(document.getElementsByClassName("opcion2"), 0);
@@ -228,8 +230,8 @@ function borrarOpcionesSelect() {
     }
 }
 
-const actualizar = setInterval(aaaa,2200);
-const actualizar2 = setInterval(bbbb, 1500);
+const actualizar = setInterval(aaaa,2000);
+const actualizar2 = setInterval(bbbb, 2000);
 
 crearSelectOptions(selectSalida,listaTodosDestino,'opcion1');
 
@@ -248,8 +250,7 @@ crearSelectOptions(selectSalida,listaTodosDestino,'opcion1');
 //          function (error){console.log(error)}
 //      )
 //      console.log(estaLlenoSelectLlegada)
-// }, 1000);    
+// }, 1000);   
 
-const estadoActualizado = ()=> {
-    console.log('click')
-}
+
+

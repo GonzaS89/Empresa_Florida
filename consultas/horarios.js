@@ -29,13 +29,13 @@ const marta = 'La Marta';
 // Destinos (FLORIDA / POSSE)
 
 const paraiso = 'Paraíso';
-const dispensario = 'Dispensario';
+const dispensario = 'Dispensario (Delfín Gallo)';
 const llona = 'Llona';
 const cevilPozo = 'Cevil Pozo';
 const filaMedio = 'Fila del Medio';
-const bosque = 'Bosque';
+const bosque = 'Bosque (Delfín Gallo)';
 const filaOrilla = 'Fila de la orilla'
-const plaza = 'Plaza'
+const plaza = 'Plaza (Delfín Gallo)'
 const posse = 'Posse'
 
 // Destinos (TERMINAL / ALDERETES / ALTERNATIVA)
