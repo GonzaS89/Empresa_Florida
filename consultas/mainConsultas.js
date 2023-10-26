@@ -276,7 +276,7 @@ const obtenerListaDeDiferencias = (arrayDeSalidas)=> {
     return listaDiferencias
 }
 // Funcion que construye los globos de resultados
-const contruirGlobos = (rutas, contPadre, contHijo)=> {
+const construirGlobos = (rutas, contPadre, contHijo)=> {
     if (rutas.length == 1) {
         const resultado = document.createElement('DIV')
         resultado.classList.add('resultados')
@@ -458,15 +458,15 @@ let listaDeSalidas;
 //             else scrollcont.children[0].classList.add('manitoAnimacionCentro');
 //         }
         
-//         $('.resultados').css('display', 'flex');
-//         $('.mensaje2').css('display', 'flex');
-//         if(mensaje2.classList.contains('mensajeIrse')){
-//             mensaje2.classList.replace('mensajeIrse', 'mensajeAparece')
-//         }else{
-//             mensaje2.classList.add('mensajeAparece')
-//         }
-//         irAlObjeto(indiceObtenido);
-// })
+        // $('.resultados').css('display', 'flex');
+        // $('.mensaje2').css('display', 'flex');
+        // if(mensaje2.classList.contains('mensajeIrse')){
+        //     mensaje2.classList.replace('mensajeIrse', 'mensajeAparece')
+        // }else{
+        //     mensaje2.classList.add('mensajeAparece')
+        // }
+        // irAlObjeto(indiceObtenido);
+
 
 resultadoscont.addEventListener('touchmove', () => {
 

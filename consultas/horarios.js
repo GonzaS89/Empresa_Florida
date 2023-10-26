@@ -16,7 +16,7 @@ const esqLastra = 'Esquina Lastra';
 const col3Luisiana = 'Colonia 3 (Luisiana)';
 const col4Luisiana = 'Colonia 4 (Luisiana)';
 const col10Luisiana = 'Colonia 10 (Luisiana)';
-const fonda = 'Fonda'
+const fonda = 'Fonda (Florida)'
 const col5Florida = 'Colonia 5 (Florida)';
 const col4Florida = 'Colonia 4 (Florida)';
 const col3Florida = 'Colonia 3 (Florida)';
@@ -68,7 +68,7 @@ const colonia9 = 'Colonia 9'
 const mayoColoniasTalarBanda = [fincaMayo,coloniasFloridaIda,fortin,esqLastra,florida,talar,alderetes,bandaRS,terminal];
 const fortinTalarBanda = [fortin, esqLastra, florida,talar, alderetes, bandaRS ,terminal];
 const fortinAlter = [fortin, esqLastra, florida,talar, alternativa ,terminal];
-const colonia10CochAutop = [col10Luisiana,col4Luisiana,bCancha,cochuchal,alderetes,autopista,terminal];
+const colonia10CochAutop = [col10Luisiana,col4Luisiana,bCancha,florida,cochuchal,alderetes,autopista,terminal];
 const col4CanchaAlter = [col4Luisiana,bCancha,florida,talar,alternativa,terminal];
 const col4CanchaTalarAutop = [col4Luisiana,bCancha,florida,talar,alderetes,autopista,terminal];
 const col4TalarBanda = [col4Luisiana,bCancha,florida,talar,alderetes,bandaRS,terminal];
@@ -88,14 +88,14 @@ const cataAutopTalarCancha = [terminal,catalinas,autopista,alderetes,talar,flori
 const bandaTalarMayo = [terminal,bandaRS,alderetes,talar,florida,esqLastra,fortin,fincaMayo];
 const cataAlterTalarCanchaCol4 = [terminal,catalinas,alternativa,talar,florida,bCancha,col4Luisiana];
 const bandaTalarFondaPerez = [terminal,bandaRS,alderetes,talar,florida,fonda,col4Luisiana,perez];
-const cataAutopCoch = [terminal,catalinas,autopista,cochuchal,col4Luisiana];
+const cataAutopCoch = [terminal,catalinas,autopista,cochuchal,florida,col4Luisiana];
 const bandaTalarFortin = [terminal,bandaRS,alderetes,talar,florida,esqLastra,fortin];
 const cataAlterTalarFortin = [terminal,catalinas,alternativa,talar,florida,esqLastra,fortin];
 const bandaTalarCancha = [terminal,bandaRS,alderetes,talar,florida,bCancha];
 const com11AlterFortin = [terminal,comisaria11,alternativa,talar,florida,esqLastra,fortin];
 const com11AlterCol4 = [terminal,comisaria11,alternativa,talar,florida,bCancha,col4Luisiana];
 const com11AutopCancha = [terminal,comisaria11,autopista,alderetes,talar,florida,bCancha];
-const bandaCochFortin = [terminal,bandaRS,alderetes,cochuchal,esqLastra,fortin];
+const bandaCochFortin = [terminal,bandaRS,alderetes,cochuchal,florida,esqLastra,fortin];
 
 // Arreglos con recorridos (TERMINAL / POSSE / FLORIDA)
 
@@ -211,7 +211,7 @@ const horariosLvFloAl = [
  {
  "nombre": "07:40",
  "salida": 7.4,
- "recorrido": [fincaMayo,fortin,esqLastra,cochuchal,alderetes,bandaRS,terminal]
+ "recorrido": [fincaMayo,fortin,esqLastra,florida,cochuchal,alderetes,bandaRS,terminal]
  },
  {
  "nombre": "07:50",
@@ -231,7 +231,7 @@ const horariosLvFloAl = [
  {
  "nombre": "08:45",
  "salida": 8.45,
- "recorrido": [col4Luisiana,bCancha,cochuchal,alderetes,bandaRS,terminal]
+ "recorrido": [col4Luisiana,bCancha,florida,cochuchal,alderetes,bandaRS,terminal]
  },
  {
     "nombre": "08:45",
@@ -281,7 +281,7 @@ const horariosLvFloAl = [
  {
  "nombre": "13:50",
  "salida": 13.5,
- "recorrido": [bCancha,cochuchal,alderetes,bandaRS,terminal]
+ "recorrido": [bCancha,florida,cochuchal,alderetes,bandaRS,terminal]
  },
  {
  "nombre": "14:45",
@@ -940,7 +940,7 @@ const horariosLvSMAl = [
  {
  "nombre": "08:00",
  "salida": 8,
- "recorrido": [terminal,catalinas,alderetes,cochuchal,col4Luisiana]
+ "recorrido": [terminal,catalinas,alderetes,cochuchal,florida,col4Luisiana]
  },
  {
  "nombre": "08:35",
@@ -1000,7 +1000,7 @@ const horariosLvSMAl = [
  {
  "nombre": "13:15",
  "salida": 13.15,
- "recorrido": [terminal,bandaRS,alderetes,cochuchal,bCancha,col4Luisiana]
+ "recorrido": [terminal,bandaRS,alderetes,cochuchal,florida,bCancha,col4Luisiana]
  },
  {
  "nombre": "13:30",
@@ -1266,7 +1266,7 @@ const horariosDSMAl = [
  {
  "nombre": "11:40",
  "salida": 11.40,
- "recorrido": [terminal,bandaRS,alderetes,cochuchal,esqLastra,fortin,fincaMayo]
+ "recorrido": [terminal,bandaRS,alderetes,cochuchal,florida,esqLastra,fortin,fincaMayo]
  },
  {
  "nombre": "14:00",

@@ -35,23 +35,23 @@ const ordenarListaViajes = (listaAOrdenar) => {
 // contruirGlobos(listaDestino,resultadoscontainer,resultadoscont);
 
 
-// const determinarRuta = (dia,punto1,punto2) => {
-//     let listaDestino = [];
-//     todosLosHorarios.forEach(idaOVuelta => {
-//         idaOVuelta.forEach(diaR => {
-//             diaR[dia].forEach(horario => {
-//                 if(horario.recorrido.includes(punto1)){
-//                     if(horario.recorrido.includes(punto2)){
-//                         if(horario.recorrido.indexOf(punto1) < horario.recorrido.indexOf(punto2))
-//                         listaDestino.push(horario);
-//                         ordenarListaViajes(listaDestino);
-//                     }
-//                 }
-//             });
-//         });
-//     });
-//     return listaDestino;
-// };
+const determinarRuta = (dia,punto1,punto2) => {
+    let listaDestino = [];
+    todosLosHorarios.forEach(idaOVuelta => {
+        idaOVuelta.forEach(diaR => {
+            diaR[dia].forEach(horario => {
+                if(horario.recorrido.includes(punto1)){
+                    if(horario.recorrido.includes(punto2)){
+                        if(horario.recorrido.indexOf(punto1) < horario.recorrido.indexOf(punto2))
+                        listaDestino.push(horario);
+                        ordenarListaViajes(listaDestino);
+                    }
+                }
+            });
+        });
+    });
+    return listaDestino;
+};
 
 const selectSalida = document.getElementById('selector');
 const selectLlegada = document.getElementById('selector2');
@@ -73,58 +73,8 @@ const comprobarOpcionSeleccionada = (array)=> {
 
 let listaViajesObtenida
 
-// boton.addEventListener('click', ()=> {
-    let diaObtenido = obtenerDia(dia);
-    
-    // listaDeSalidas = obtenerListaDeSalidas(listaViajesObtenida);
-    // let listaDeDiferenciasObtenidas = obtenerListaDeDiferencias(listaDeSalidas);
-    // contruirGlobos(listaViajesObtenida,resultadoscontainer,resultadoscont);
-    // indiceObtenido = obtenerIndiceBusqueda(listaDeDiferenciasObtenidas);
-    // contenidoDeResultados(listaViajesObtenida,listaDeDiferenciasObtenidas)
-    // agregarEfectoResultados(indiceObtenido);  
-    // console.log(listaViajesObtenida)
 
-    // mensaje2.appendChild(indicacioncont);
-    // $('.resultados').css('display', 'flex');
-    //     $('.mensaje2').css('display', 'flex');
-    //     if(mensaje2.classList.contains('mensajeIrse')){
-    //         mensaje2.classList.replace('mensajeIrse', 'mensajeAparece')
-    //     }else{
-    //         mensaje2.classList.add('mensajeAparece')
-    //     }
-    //     irAlObjeto(indiceObtenido);
-// })
-// indicacioncont.addEventListener('click', () => {
-//     mensaje2.classList.replace('mensajeAparece', 'mensajeIrse')
-//     scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
-//     scrollcont.children[0].classList.remove('manitoAnimacionArriba');
-//     scrollcont.children[0].classList.remove('manitoAnimacionCentro');
-//     resultadoscont.children[0].classList.remove('resultadosOpcion2');
-//     resultadoscont.classList.replace('opacarFondo','normalizarFondo');
-        
-//     setTimeout( ()=> {
-//         $('.mensaje2').css('display', 'none'),borrarGlobos(),
-//         resultadoscont.classList.remove('normalizarFondo'),
-//         borrarManito();
-//     },1000)
-// })
-    
-
-    
-
-
-// boton.addEventListener('click', ()=> {
-
-// })
-
-// determinarRuta(1,talar,bandaRS);
-// listaObtenida = obtenerLista(listaDestino);
-// obtenerListaDeDiferencias();
-// contenidoDeResultados(listaDestino,listaDiferencias);
-// obtenerIndiceBusqueda();
-// contruirGlobos()
-
-
+let diaObtenido = obtenerDia(dia);
 
 const crearLabelOptions = (select,option,arrayViajes)=> {
     for (let i = 0; i < select.length - 1; i++) {
@@ -144,22 +94,17 @@ const crearSelectOptions = (select,arrayViajes,clase)=> {
     }
 }
 
-// const filtrarDestinosPosibles = ()=> {
-//     listaViajesObtenida.forEach(viaje => {
-//         viaje.recorrido.forEach(localidad => {
-//             if(!listaDestinosEfectivos.includes(localidad) && localidad !== nombreOpcionIdaObtenida){
-//                 listaDestinosEfectivos.push(localidad)
-//                 ordenarLista(listaDestinosEfectivos)
-//             }
-//         });
-//     });
-// }
+function borrarOpcionesSelect() {
+    let arrayResultados = Array.prototype.slice.call(document.getElementsByClassName("opcion2"), 0);
+    for (element of arrayResultados) {
+        element.remove();
+    }
+}
 
 const destinosCompartidos = (opcion)=> {
     let listaLocalidades = [];
     let listaDestinos = [];
-    todosLosHorarios.forEach(idaOVuelta => {
-        idaOVuelta.forEach(diaR => {
+    todosLosHorarios.forEach(idaOVuelta => {idaOVuelta.forEach(diaR => {
             diaR[2].forEach(servicio => {
                 if(servicio.recorrido.includes(opcion)){
                     servicio.recorrido.forEach(localidades => {
@@ -185,29 +130,42 @@ let nombreOpcionIdaObtenida;
 let nombreOpcionLlegadaObtenida;
 let estaLlenoSelectLlegada = false;
 
+let actualizar;
+let actualizar2;
+
+window.addEventListener('load', ()=> {
+    actualizar = setInterval(aaaa,1000);
+    crearSelectOptions(selectSalida,listaTodosDestino,'opcion1');
+    // actualizar2 = setInterval(bbbb, 1000);
+})
+const cccc = ()=> {
+    nombreOpcionIdaObtenida = comprobarOpcionSeleccionada(selectSalida);
+    listaDestinos =  destinosCompartidos(nombreOpcionIdaObtenida);
+    crearSelectOptions(selectLlegada,listaDestinos,'opcion2');
+}
 const aaaa = ()=> {
-    for (let i = 1; i < selectSalida.length; i++) {
+    for (let i = 0; i < selectSalida.length; i++) {
         const opcionSalida = selectSalida[i];
         if(opcionSalida.selected){
-            nombreOpcionIdaObtenida = comprobarOpcionSeleccionada(selectSalida);
-            listaDestinos =  destinosCompartidos(nombreOpcionIdaObtenida);
-            console.log(listaDestinos);
-            // if(listaDestinos !== undefined){
-            //     clearInterval(actualizar)
-            // }
-        }   
+            cccc()
+            if(listaDestinos.length > 0 && listaDestinos.length + 1 == selectLlegada.length){
+                    clearInterval(actualizar)
+                }
+        }  
     }
 }
 
-const bbbb = ()=> {
-    if(listaDestinos !== undefined){
-        estaLlenoSelectLlegada = true;
-        crearSelectOptions(selectLlegada,listaDestinos,'opcion2')
-        if(listaDestinos.length > 0 && listaDestinos.length + 1 == selectLlegada.length){
-            clearInterval(actualizar2)
-        }
-    }
-}
+// const bbbb = ()=> {
+//     if(listaDestinos !== undefined){
+//         estaLlenoSelectLlegada = true;
+//         crearSelectOptions(selectLlegada,listaDestinos,'opcion2');
+//         if(listaDestinos.length > 0 && listaDestinos.length + 1 == selectLlegada.length){
+//             clearInterval(actualizar2)
+//         }
+        
+//     }
+// }
+
 
 
 
@@ -223,17 +181,45 @@ const bbbb = ()=> {
 //     // }
 // })
 
-function borrarOpcionesSelect() {
-    let arrayResultados = Array.prototype.slice.call(document.getElementsByClassName("opcion2"), 0);
-    for (element of arrayResultados) {
-        element.remove();
+
+
+
+// selectSalida.addEventListener('click', ()=> {
+//     borrarOpcionesSelect();
+//     bbbb();
+    
+// })
+
+boton.addEventListener('click', ()=> {
+    nombreOpcionIdaObtenida = comprobarOpcionSeleccionada(selectSalida)
+    nombreOpcionLlegadaObtenida = comprobarOpcionSeleccionada(selectLlegada);
+    listaViajesObtenida = determinarRuta(diaObtenido,nombreOpcionIdaObtenida,nombreOpcionLlegadaObtenida);
+    listaDeSalidas = obtenerListaDeSalidas(listaViajesObtenida);
+    listaDeDiferencias = obtenerListaDeDiferencias(listaDeSalidas);construirGlobos(listaViajesObtenida,resultadoscontainer,resultadoscont);
+    indiceObtenido = obtenerIndiceBusqueda(listaDeDiferencias);
+    contenidoDeResultados(listaViajesObtenida,listaDeDiferencias);
+    agregarEfectoResultados(indiceObtenido)
+    $('.resultados').css('display', 'flex');
+    $('.mensaje2').css('display', 'flex');
+    if(mensaje2.classList.contains('mensajeIrse')){
+        mensaje2.classList.replace('mensajeIrse', 'mensajeAparece')
+    }else{
+        mensaje2.classList.add('mensajeAparece')
     }
-}
+    irAlObjeto(indiceObtenido);
+})
 
-const actualizar = setInterval(aaaa,2000);
-const actualizar2 = setInterval(bbbb, 2000);
+indicacioncont.addEventListener('click', ()=> {
+    selectSalida.addEventListener('click', ()=> {
+        borrarOpcionesSelect();
+        if(selectLlegada.length == 1) {
+            cccc()
+        }
+    })
+})
 
-crearSelectOptions(selectSalida,listaTodosDestino,'opcion1');
+
+
 
 
 // let promesa = new Promise (
