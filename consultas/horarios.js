@@ -2689,7 +2689,7 @@ const terminalRalosLaV = [
  {
  "nombre": "07:00",
  "salida": 7,
- "recorrido": [terminal,bandaRS, cevilPozo, llona, ralos,fincaMay,marta]
+ "recorrido": [terminal,bandaRS, cevilPozo, llona, ralos,fincaMayo,marta]
  },
  {
  "nombre": "08:00",

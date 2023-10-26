@@ -208,14 +208,19 @@ boton.addEventListener('click', ()=> {
     }
     irAlObjeto(indiceObtenido);
 })
-
-indicacioncont.addEventListener('click', ()=> {
-    selectSalida.addEventListener('click', ()=> {
+selectSalida.addEventListener('click', ()=> {
+    if(selectLlegada.length >= 2){
         borrarOpcionesSelect();
-        if(selectLlegada.length == 1) {
-            cccc()
-        }
-    })
+    }else{
+        cccc();
+    }
+    
+    // if(selectLlegada.length == 1) {
+    //     cccc()
+    // }
+})
+indicacioncont.addEventListener('click', ()=> {
+    
 })
 
 
