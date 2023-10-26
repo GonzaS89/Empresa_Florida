@@ -101,14 +101,15 @@ function borrarOpcionesSelect() {
     }
 }
 
-const destinosCompartidos = (opcion)=> {
+const destinosCompartidos = (opcion,dia)=> {
+    let ada = []
     let listaLocalidades = [];
     let listaDestinos = [];
     todosLosHorarios.forEach(idaOVuelta => {idaOVuelta.forEach(diaR => {
-            diaR[2].forEach(servicio => {
+            diaR[dia].forEach(servicio => {
                 if(servicio.recorrido.includes(opcion)){
                     servicio.recorrido.forEach(localidades => {
-                        if(localidades !== opcion && !(listaLocalidades.includes(localidades))){
+                        if(localidades !== opcion && !(listaLocalidades.includes(localidades)) && listaTodosDestino.includes(localidades)){
                             listaLocalidades.push(localidades);
                             listaLocalidades.forEach(destino => {
                                 if(servicio.recorrido.indexOf(opcion) < servicio.recorrido.indexOf(destino) && !listaDestinos.includes(destino)){
@@ -185,29 +186,23 @@ let opcionSeleccionada2;
 selectSalida.addEventListener('click', (e)=> {
         if(e.target.value == 'default'){
             opcionSeleccionada = e.target.value;
-            console.log(opcionSeleccionada)
-            listaDestinos = destinosCompartidos(opcionSeleccionada);
+            listaDestinos = destinosCompartidos(opcionSeleccionada,diaObtenido);
             crearSelectOptions(selectLlegada,listaDestinos,'opcion2');
         }else{
             borrarOpcionesSelect();
             selectLlegada[0].selected = true;
             opcionSeleccionada = e.target.value;
-            listaDestinos = destinosCompartidos(opcionSeleccionada);
+            listaDestinos = destinosCompartidos(opcionSeleccionada, diaObtenido);
             crearSelectOptions(selectLlegada,listaDestinos,'opcion2');
         }
         
 })
-
-
-
 
 selectLlegada.addEventListener('click', (e)=> {
     opcionSeleccionada2 = e.target.value
 })
 
 boton.addEventListener('click', ()=> {
-    // nombreOpcionIdaObtenida = comprobarOpcionSeleccionada(selectSalida)
-    // nombreOpcionLlegadaObtenida = comprobarOpcionSeleccionada(selectLlegada);
     listaViajesObtenida = determinarRuta(diaObtenido,opcionSeleccionada,opcionSeleccionada2);
     listaDeSalidas = obtenerListaDeSalidas(listaViajesObtenida);
     listaDeDiferencias = obtenerListaDeDiferencias(listaDeSalidas);construirGlobos(listaViajesObtenida,resultadoscontainer,resultadoscont);
