@@ -108,6 +108,7 @@ const destinosCompartidos = (opcion,dia)=> {
     todosLosHorarios.forEach(idaOVuelta => {idaOVuelta.forEach(diaR => {
             diaR[dia].forEach(servicio => {
                 if(servicio.recorrido.includes(opcion)){
+                    ada.push(servicio)
                     servicio.recorrido.forEach(localidades => {
                         if(localidades !== opcion && !(listaLocalidades.includes(localidades)) && listaTodosDestino.includes(localidades)){
                             listaLocalidades.push(localidades);
