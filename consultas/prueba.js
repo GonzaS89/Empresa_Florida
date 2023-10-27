@@ -50,6 +50,7 @@ const determinarRuta = (dia,punto1,punto2) => {
             });
         });
     });
+    console.log(listaDestino)
     return listaDestino;
 };
 
@@ -216,6 +217,7 @@ boton.addEventListener('click', ()=> {
         mensaje2.classList.add('mensajeAparece')
     }
     irAlObjeto(indiceObtenido);
+    console.log(diaObtenido)
 })
 // selectSalida.addEventListener('click', ()=> {
 //     if(selectLlegada.length >= 2){
