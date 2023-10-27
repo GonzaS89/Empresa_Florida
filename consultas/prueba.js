@@ -50,7 +50,6 @@ const determinarRuta = (dia,punto1,punto2) => {
             });
         });
     });
-    console.log(listaDestino)
     return listaDestino;
 };
 
@@ -59,7 +58,7 @@ const selectLlegada = document.getElementById('selector2');
 
 const obtenerDia = (dia)=> {
     if(dia == 0) return 0
-    else if(dia == 1 || dia == 2 || dia == 3 || dia == 4 || dia == 5) return 1
+    else if(dia >= 1 & dia <= 5) return 1
     else if(dia == 6) return 2
 };
 
@@ -111,12 +110,6 @@ const destinosCompartidos = (opcion,dia)=> {
                         if(localidades !== opcion && !(listaDestinos.includes(localidades)) && listaTodosDestino.includes(localidades)){
                             listaDestinos.push(localidades);
                             ordenarLista(listaDestinos)
-                            // listaLocalidades.forEach(destino => {
-                            //     if(servicio.recorrido.indexOf(opcion) < servicio.recorrido.indexOf(destino) && !listaDestinos.includes(destino)){
-                            //         listaDestinos.push(destino)
-                            //         ordenarLista(listaDestinos)
-                            //     }
-                            // });
                         }
                     });
                 }
@@ -130,53 +123,6 @@ let listaDestinos;
 let nombreOpcionIdaObtenida;
 let nombreOpcionLlegadaObtenida;
 let estaVacioSelectLlegada = true;
-
-// let actualizar;
-// let actualizar2;
-
-// window.addEventListener('load', ()=> {
-//     actualizar = setInterval(aaaa,1000);
-//     crearSelectOptions(selectSalida,listaTodosDestino,'opcion1');
-//     // actualizar2 = setInterval(bbbb, 1000);
-// })
-// const aaaa = ()=> {
-//     for (let i = 0; i < selectSalida.length; i++) {
-//         const opcionSalida = selectSalida[i];
-//         if(opcionSalida.selected){
-//             cccc()
-//             if(listaDestinos.length > 0 && listaDestinos.length + 1 == selectLlegada.length){
-//                     clearInterval(actualizar)
-//                 }
-//         }  
-//     }
-// }
-
-// const bbbb = ()=> {
-//     if(listaDestinos !== undefined){
-//         estaLlenoSelectLlegada = true;
-//         crearSelectOptions(selectLlegada,listaDestinos,'opcion2');
-//         if(listaDestinos.length > 0 && listaDestinos.length + 1 == selectLlegada.length){
-//             clearInterval(actualizar2)
-//         }
-        
-//     }
-// }
-
-
-
-
-// selectSalida.addEventListener('click', ()=> {
-//     if(estaLlenoSelectLlegada){
-//         crearSelectOptions(selectLlegada,listaDestinos,'opcion2')
-//         if(listaDestinos.length > 0 && listaDestinos.length + 1 == selectLlegada.length){
-//             clearInterval(actualizar2)
-//         }
-//     }
-//     // }else{
-//     //     bbbb();
-//     // }
-// })
-
 
 crearSelectOptions(selectSalida,listaTodosDestino,'opcion1');
 
@@ -217,7 +163,6 @@ boton.addEventListener('click', ()=> {
         mensaje2.classList.add('mensajeAparece')
     }
     irAlObjeto(indiceObtenido);
-    console.log(diaObtenido)
 })
 // selectSalida.addEventListener('click', ()=> {
 //     if(selectLlegada.length >= 2){
