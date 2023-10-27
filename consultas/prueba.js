@@ -1,4 +1,3 @@
-let estanEnElMismoRecorrido;
 
 const ordenarListaViajes = (listaAOrdenar) => {
     listaAOrdenar.sort((salida1,salida2) => {
@@ -13,6 +12,7 @@ const ordenarListaViajes = (listaAOrdenar) => {
         }
     })
 }
+
 
 
 // const crearListaDestino = (idaOVuelta,ciudad1,ciudad2)=> {
@@ -102,22 +102,20 @@ function borrarOpcionesSelect() {
 }
 
 const destinosCompartidos = (opcion,dia)=> {
-    let ada = []
-    let listaLocalidades = [];
     let listaDestinos = [];
     todosLosHorarios.forEach(idaOVuelta => {idaOVuelta.forEach(diaR => {
             diaR[dia].forEach(servicio => {
                 if(servicio.recorrido.includes(opcion)){
-                    ada.push(servicio)
                     servicio.recorrido.forEach(localidades => {
-                        if(localidades !== opcion && !(listaLocalidades.includes(localidades)) && listaTodosDestino.includes(localidades)){
-                            listaLocalidades.push(localidades);
-                            listaLocalidades.forEach(destino => {
-                                if(servicio.recorrido.indexOf(opcion) < servicio.recorrido.indexOf(destino) && !listaDestinos.includes(destino)){
-                                    listaDestinos.push(destino)
-                                    ordenarLista(listaDestinos)
-                                }
-                            });
+                        if(localidades !== opcion && !(listaDestinos.includes(localidades)) && listaTodosDestino.includes(localidades)){
+                            listaDestinos.push(localidades);
+                            ordenarLista(listaDestinos)
+                            // listaLocalidades.forEach(destino => {
+                            //     if(servicio.recorrido.indexOf(opcion) < servicio.recorrido.indexOf(destino) && !listaDestinos.includes(destino)){
+                            //         listaDestinos.push(destino)
+                            //         ordenarLista(listaDestinos)
+                            //     }
+                            // });
                         }
                     });
                 }
