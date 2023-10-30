@@ -7,7 +7,7 @@ const alderetes = 'Alderetes';
 const bandaRS = 'Banda Río Salí';
 const autopista = 'Autopista';
 const alternativa = 'Alternativa';
-const talar = 'Talar';
+const talar = 'El Talar';
 const cochuchal = 'Cochuchal';
 const florida = 'Florida'
 const bCancha = 'B° La Cancha';
@@ -28,7 +28,7 @@ const marta = 'La Marta';
 
 // Destinos (FLORIDA / POSSE)
 
-const paraiso = 'Paraíso';
+const paraiso = 'El Paraíso';
 const dispensario = 'Dispensario (Delfín Gallo)';
 const llona = 'Llona';
 const cevilPozo = 'Cevil Pozo';
@@ -135,7 +135,7 @@ const sieteACejas = [sieteAbril,cejas,llona,cevilPozo,bandaRS,terminal];
 
 // Lista con todos las localidades de la
 
-const listaTodosDestino = [florida,alderetes,bandaRS,talar,cochuchal,fortin,fincaMayo,perez,marta,cevilPozo,posse,paraiso,llona,filaMedio,filaOrilla,ralos,villaTercera,lolitaS,bTrigal,alabama,cejas,sieteAbril,terminal];
+const listaTodosDestino = [florida,alderetes,bandaRS,talar,cochuchal,fortin,fincaMayo,perez,marta,cevilPozo,posse,paraiso,llona,filaMedio,filaOrilla,ralos,alabama,cejas,sieteAbril,terminal];
 
 const ordenarLista = (array) => {
    array.sort((elemento, elemento2) => {
