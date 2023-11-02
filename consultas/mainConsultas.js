@@ -233,13 +233,13 @@ onload = ()=> {
             tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
         }
     
-        else if ((fecha == 26) && (mes == 4)) {
+        else if ((fecha == 2) && (mes == 10)) {
             semiFeriado = true;
             rutaObtenida = obtenerDiaRuta(6);
             tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día sábado `;
         }
 
-        else if ((fecha == 25) && (mes == 8)){
+        else if ((fecha == 3) && (mes == 10)){
             let semiParoGrilla;
             semiParoGrilla = obtenerDiaRuta(1);
             let posicion = 0;
