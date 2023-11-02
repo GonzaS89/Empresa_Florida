@@ -14,27 +14,6 @@ const ordenarListaViajes = (listaAOrdenar) => {
 }
 
 
-
-// const crearListaDestino = (idaOVuelta,ciudad1,ciudad2)=> {
-//     idaOVuelta.forEach(viajes => {    
-//         viajes[1].forEach(viaje => {
-//             if(viaje.recorrido.includes(ciudad1)){
-//                 if(viaje.recorrido.includes(ciudad2)){
-//                     estanEnElMismoRecorrido = true;
-//                     listaDestino.push(viaje.recorrido);
-//                     ordenarListaViajes();
-//                 }
-//             }
-//         });
-//     });
-//     let mostrar = estanEnElMismoRecorrido ? listaDestino : 'No están en el mismo recorrido';
-//     console.log(mostrar);
-// };
-
-// crearListaDestino(todosDestinoTucuman,fortin,ralos);
-// contruirGlobos(listaDestino,resultadoscontainer,resultadoscont);
-
-
 const determinarRuta = (dia,punto1,punto2) => {
     let listaDestino = [];
     todosLosHorarios.forEach(idaOVuelta => {
