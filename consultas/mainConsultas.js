@@ -135,16 +135,16 @@ function obtenerPosicion2 (selector) {
     return posicion2
 }
 
-function activarBoton ()  {
-    setInterval ( ()=> {
-    if(obtenerPosicion1(selectSalida) > 0 && obtenerPosicion2(selectLlegada) > 0) boton.classList.add('botonActivo');
-    else boton.classList.remove('botonActivo')
-})
-}
+// function activarBoton ()  {
+//     setInterval ( ()=> {
+//     if(obtenerPosicion1(selectSalida) > 0 && obtenerPosicion2(selectLlegada) > 0) boton.classList.add('botonActivo');
+//     else boton.classList.remove('botonActivo')
+// })
+// }
 
 if (fecha == 9 || fecha == 10 && mes == 6) $('.mensaje3').css('display', 'flex')
 
-activarBoton()
+// activarBoton()
 
 //Defino funcion para obtener posicion
 
@@ -346,11 +346,11 @@ const obtenerIndiceBusqueda = (arrayDiferencias)=> {
     return indiceDeBusqueda;   
 };
 
-const irAlObjeto = (indice)=> {
-    let resultadoAMostrar = resultadoscont.children[indice];
-    resultadoAMostrar.scrollIntoView({ behavior: 'auto', block: 'center' });
-    // console.log(indice)
-};
+// const irAlObjeto = (indice)=> {
+//     let resultadoAMostrar = resultadoscont.children[indice];
+//     resultadoAMostrar.scrollIntoView({ behavior: 'auto', block: 'center' });
+//     // console.log(indice)
+// };
 const agregarEfectoResultados = (indice)=> {
     resultadoscont.children[indice].classList.add('resaltado');
     // resultadoscont.children[indiceDeBusqueda].classList.add('manito');

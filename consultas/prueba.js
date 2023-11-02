@@ -108,32 +108,65 @@ crearSelectOptions(selectSalida,listaTodosDestino,'opcion1');
 let opcionSeleccionada;
 let opcionSeleccionada2;
 
-selectSalida.addEventListener('click', (e)=> {
-        if(e.target.value == 'default'){
-            opcionSeleccionada = e.target.value;
-            listaDestinos = destinosCompartidos(opcionSeleccionada,diaObtenido);
-            crearSelectOptions(selectLlegada,listaDestinos,'opcion2');
-        }else{
-            borrarOpcionesSelect();
-            selectLlegada[0].selected = true;
-            opcionSeleccionada = e.target.value;
-            listaDestinos = destinosCompartidos(opcionSeleccionada, diaObtenido);
-            crearSelectOptions(selectLlegada,listaDestinos,'opcion2');
-        }
+// selectSalida.addEventListener('click', (e)=> {
+//         if(e.target.value == 'default'){
+//             opcionSeleccionada = e.target.value;
+//             listaDestinos = destinosCompartidos(opcionSeleccionada,diaObtenido);
+//             crearSelectOptions(selectLlegada,listaDestinos,'opcion2');
+//         }else{
+//             borrarOpcionesSelect();
+//             selectLlegada[0].selected = true;
+//             opcionSeleccionada = e.target.value;
+//             listaDestinos = destinosCompartidos(opcionSeleccionada, diaObtenido);
+//             crearSelectOptions(selectLlegada,listaDestinos,'opcion2');
+//         }
         
-})
+// })
 
-selectLlegada.addEventListener('click', (e)=> {
-    opcionSeleccionada2 = e.target.value
-})
+
+
+// selectLlegada.addEventListener('click', (e)=> {
+//     opcionSeleccionada2 = e.target.value
+// })
+
+const actualiza = ()=> {
+    for (let i = 0; i < selectSalida.length; i++) {
+        const opcion = selectSalida[i];
+        if(opcion.selected == true && i > 0 && opcion !== undefined) {
+        opcionSeleccionada = opcion.innerHTML;
+        listaDestinos = destinosCompartidos(opcionSeleccionada,diaObtenido);
+        crearSelectOptions(selectLlegada,listaDestinos,'opcion2');
+           if(selectLlegada.length == listaDestinos.length + 1){
+            clearInterval(timerActualiza)
+           }
+        }
+    }
+}
+
+const actualiza2 = ()=> {
+    for (let i = 0; i < selectLlegada.length; i++) {
+        const opcion = selectLlegada[i];
+        if(opcion.selected){
+            opcionSeleccionada2 = opcion.innerHTML
+        }
+    }
+}
+
+
+
+const timerActualiza = setInterval(actualiza, 1000);
+const timerActualiza2 = setInterval(actualiza2,1000);
+
+
 
 boton.addEventListener('click', ()=> {
+    console.log(opcionSeleccionada,opcionSeleccionada2)
     listaViajesObtenida = determinarRuta(diaObtenido,opcionSeleccionada,opcionSeleccionada2);
     listaDeSalidas = obtenerListaDeSalidas(listaViajesObtenida);
     listaDeDiferencias = obtenerListaDeDiferencias(listaDeSalidas);construirGlobos(listaViajesObtenida,resultadoscontainer,resultadoscont);
     indiceObtenido = obtenerIndiceBusqueda(listaDeDiferencias);
     contenidoDeResultados(listaViajesObtenida,listaDeDiferencias);
-    agregarEfectoResultados(indiceObtenido)
+    // agregarEfectoResultados(indiceObtenido)
     $('.resultados').css('display', 'flex');
     $('.mensaje2').css('display', 'flex');
     if(mensaje2.classList.contains('mensajeIrse')){
@@ -141,7 +174,7 @@ boton.addEventListener('click', ()=> {
     }else{
         mensaje2.classList.add('mensajeAparece')
     }
-    irAlObjeto(indiceObtenido);
+    // irAlObjeto(indiceObtenido);
 })
 // selectSalida.addEventListener('click', ()=> {
 //     if(selectLlegada.length >= 2){
@@ -155,7 +188,9 @@ boton.addEventListener('click', ()=> {
 //     // }
 // })
 indicacioncont.addEventListener('click', ()=> {
-    borrarOpcionesSelect()
+    // borrarOpcionesSelect()
+    actualiza();
+    actualiza2();
 })  
 
 
