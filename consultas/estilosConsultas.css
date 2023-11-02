@@ -96,7 +96,7 @@ body::-webkit-scrollbar-track {
     width: 100%;
     position: absolute;
     filter: opacity(10%);
-    animation: subirALogo 2s forwards;
+    animation: subirALogo 1s forwards;
 }
 
 @keyframes subirALogo {
