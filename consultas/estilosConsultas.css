@@ -36,7 +36,7 @@ html {
 
 h1,
 p {
-    font-family: var(--fuenteSec);
+    font-family: var(--fuente4ta);
     margin: 0;
 }
 
@@ -92,12 +92,27 @@ body::-webkit-scrollbar-track {
     position: relative;
 }
 
+.cuerpo img{
+    width: 100%;
+    position: absolute;
+    filter: opacity(10%);
+    animation: subirALogo 2s forwards;
+}
+
+@keyframes subirALogo {
+    100%{
+        width:40%;
+        transform: translateY(-280px);
+        filter: opacity(1);
+    }
+}
+
 
 .contenedor-input{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    font-family: var(--fuenteSec);
+    font-family: var(--fuente4ta);
 
     && input{
         width: 250px;
@@ -136,6 +151,7 @@ body::-webkit-scrollbar-track {
     width: 100%;
     height: 150px;
     gap: 20px;
+    z-index: 1;
 }
 
 .header img {
@@ -150,7 +166,7 @@ body::-webkit-scrollbar-track {
     color: var(--blanco);
     margin: 0;
     font-weight: 600;
-    font-family: var(--fuenteSec);
+    font-family: var(--fuente4ta);
     text-transform: uppercase;
 }
 
@@ -238,7 +254,7 @@ body::-webkit-scrollbar-track {
     color: var(--blanco);
     margin: 0;
     font-weight: 600;
-    font-family: var(--fuenteSec);
+    font-family: var(--fuente4ta);
 }
 
 #segundos {
@@ -259,7 +275,7 @@ body::-webkit-scrollbar-track {
 }
 #minutos,
 #mes{
-    width: 100%;
+    min-width: 100px;
     background: var(--fondoAzulFuerte);
     padding: 5px;
 }
@@ -327,7 +343,7 @@ body::-webkit-scrollbar-track {
 
 #textoIntermedio {
     display: flex;
-    font-family: var(--fuenteSec);
+    font-family: var(--fuente4ta);
 }
 
 .destino,
@@ -355,9 +371,6 @@ body::-webkit-scrollbar-track {
     text-shadow: 1px 0px black;
 }
 
-.botonDeCambio {
-    display: flex;
-}
 
 .menu, .menu2, 
 .menu3, .menu4, 
@@ -442,63 +455,6 @@ select:focus{outline:none;}
     display: none;
 } */
 
-.intermedio {
-    display: flex;
-    justify-content: center;
-
-}
-
-#botonDeCambio,
-#botonDeCambio2 {
-    border-radius: 25%;
-    width: 60px;
-    height: 60px;
-    background-image: url('../Imagenes/pngegg.png');
-    background-size: 75%;
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: rotate(90deg);
-    animation: rotar 2s linear 1s forwards;
-}
-
-@media (max-height: 570px){
-    #botonDeCambio,
-#botonDeCambio2{
-    width: 55px;
-    height: 55px;
-}
-}
-
-@keyframes rotar{
-   0%{
-    transform: rotate(90deg);
-   }
-   50%{
-    transform: scale(1.1) rotate(90deg) ;
-   }
-   75%{
-    transform: rotate(0deg);
-   }
-   100%{
-    transform: rotate(90deg);
-   }
-}
-
-#botonDeCambio:active {
-    transform: scale(.9);
-}
-
-#botonDeCambio:hover {
-    cursor: pointer;
-}
-
-#botonDeCambio2:hover {
-    cursor: pointer;
-}
-
-#botonDeCambio2:active {
-    transform: scale(.9);
-}
 
 .options {
     display: flex;
@@ -552,7 +508,6 @@ select:focus{outline:none;}
     display: flex;
     gap: 10px;
     flex-direction: column;
-
 }
 
 .origenCapital,
@@ -619,7 +574,7 @@ select:focus{outline:none;}
     border-radius: 10px;
     color: var(--blanco);
     font-weight: bold;
-    font-family: var(--fuenteSec);
+    font-family: var(--fuente4ta);
     font-size: 15px;
     text-align: center;
 }
@@ -653,7 +608,7 @@ select:focus{outline:none;}
     border-radius: 15px;
     font-size: 15px;
     font-weight: bold;
-    font-family: var(--fuenteSec);
+    font-family: var(--fuente4ta);
     text-align-last: center;
     margin-top: 10px;
     text-transform: uppercase;
@@ -771,7 +726,7 @@ select:focus{outline:none;}
 }
 
 .select>option {
-    font-family: var(--fuenteSec);
+    font-family: var(--fuente4ta);
     font-size: 15px;
     color: white;
     font-weight: bold;
@@ -787,7 +742,7 @@ select:focus{outline:none;}
 
 #busquedaInput2 {
     background-color: transparent;
-    font-family: var(--fuenteSec);
+    font-family: var(--fuente4ta);
     font-size: 15px;
     border: none;
     text-align: center;
@@ -804,7 +759,7 @@ select:focus{outline:none;}
 }
 
 ::placeholder {
-    font-family: var(--fuenteSec);
+    font-family: var(--fuente4ta);
     text-align: center;
     color: rgb(0, 0, 0);
     font-weight: bold;
@@ -842,10 +797,6 @@ select:focus{outline:none;}
     display: none;
 }
 
-
-
-
-
 .boton,
 .boton2 {
     display: flex;
@@ -855,13 +806,13 @@ select:focus{outline:none;}
     width: 150px;
     background: var(--fondoGrisLinear);
     border-radius: 15px;
-    font-family: var(--fuenteSec);
-    font-size: 15px;
+    font-family: var(--fuente4ta);
+    font-size: 13px;
     font-weight: bold;
     box-shadow: 2px black;
     color: grey;
     text-transform: uppercase;
-    border: 2px solid white;
+    border: none;
 }
 
 @media (max-height: 570px){
@@ -1197,7 +1148,7 @@ select:focus{outline:none;}
 #mostrar3,
 #mostrar4 {
     font-size: 18px;
-    font-family: var(--fuenteSec);
+    font-family: var(--fuente4ta);
     font-weight: bold;
     text-align: center;
     margin: 10px;
@@ -1218,6 +1169,7 @@ select:focus{outline:none;}
     left: 0;
     padding: 50px;
     border: 1px solid white;
+    z-index: 2;
 }
 
 .mensaje3 {
@@ -1236,7 +1188,7 @@ select:focus{outline:none;}
     color: white;
     text-transform: uppercase;
     text-align: center;
-    font-family: var(--fuenteSec);
+    font-family: var(--fuente4ta);
     font-size: 30px;
     animation: loopear 2s linear infinite;
 }

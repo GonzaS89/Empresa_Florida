@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function iniciarApp() {
     reloj();
-    busquedaManual();
+    // busquedaManual();
 };
 
 let momentoActual = new Date();
@@ -105,7 +105,7 @@ function borrarGlobos() {
     }
 }
 
-function obtenerPosicion1 () {
+function obtenerPosicion1 (selector) {
     for (opcion of selector) {
         if (opcion.selected) valorSeleccionado = opcion;
         
@@ -120,7 +120,7 @@ function obtenerPosicion1 () {
     return posicion
 }
 
-function obtenerPosicion2 () {
+function obtenerPosicion2 (selector) {
     for (opcion of selector2) {
         if (opcion.selected) valorSeleccionado2 = opcion;
     
@@ -137,7 +137,7 @@ function obtenerPosicion2 () {
 
 function activarBoton ()  {
     setInterval ( ()=> {
-    if(obtenerPosicion1() > 0 || obtenerPosicion2() > 0) boton.classList.add('botonActivo');
+    if(obtenerPosicion1(selectSalida) > 0 && obtenerPosicion2(selectLlegada) > 0) boton.classList.add('botonActivo');
     else boton.classList.remove('botonActivo')
 })
 }
