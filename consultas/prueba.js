@@ -132,8 +132,9 @@ let opcionSeleccionada2;
 const actualiza = ()=> {
     for (let i = 0; i < selectSalida.length; i++) {
         const opcion = selectSalida[i];
-        if(opcion.selected == true && i > 0 && opcion !== undefined) {
+        if(opcion.selected && opcion && i > 0 && opcion !== undefined) {
         opcionSeleccionada = opcion.innerHTML;
+        console.log(opcionSeleccionada)
         listaDestinos = destinosCompartidos(opcionSeleccionada,diaObtenido);
         crearSelectOptions(selectLlegada,listaDestinos,'opcion2');
            if(selectLlegada.length == listaDestinos.length + 1){
@@ -148,6 +149,7 @@ const actualiza2 = ()=> {
         const opcion = selectLlegada[i];
         if(opcion.selected){
             opcionSeleccionada2 = opcion.innerHTML
+            console.log(opcionSeleccionada2)
         }
     }
 }
@@ -160,7 +162,6 @@ const timerActualiza2 = setInterval(actualiza2,1000);
 
 
 boton.addEventListener('click', ()=> {
-    console.log(opcionSeleccionada,opcionSeleccionada2)
     listaViajesObtenida = determinarRuta(diaObtenido,opcionSeleccionada,opcionSeleccionada2);
     listaDeSalidas = obtenerListaDeSalidas(listaViajesObtenida);
     listaDeDiferencias = obtenerListaDeDiferencias(listaDeSalidas);construirGlobos(listaViajesObtenida,resultadoscontainer,resultadoscont);
@@ -174,7 +175,7 @@ boton.addEventListener('click', ()=> {
     }else{
         mensaje2.classList.add('mensajeAparece')
     }
-    // irAlObjeto(indiceObtenido);
+    irAlObjeto(indiceObtenido);
 })
 // selectSalida.addEventListener('click', ()=> {
 //     if(selectLlegada.length >= 2){
@@ -187,8 +188,15 @@ boton.addEventListener('click', ()=> {
 //     //     cccc()
 //     // }
 // })
+
+selectSalida.addEventListener('click', ()=> {
+    if(selectLlegada.length > 1){
+        borrarOpcionesSelect()
+    }
+    actualiza()
+})
 indicacioncont.addEventListener('click', ()=> {
-    // borrarOpcionesSelect()
+    
     actualiza();
     actualiza2();
 })  

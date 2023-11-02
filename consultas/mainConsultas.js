@@ -34,9 +34,6 @@ let tipoDeDia;
 
 const boton = document.querySelector('.boton');
 
-
-const opcionbase = selector[0]
-const opcionbase2 = selector2[0]
 let valorSeleccionado;
 let valorSeleccionado2;
 let valores = [];
@@ -346,11 +343,11 @@ const obtenerIndiceBusqueda = (arrayDiferencias)=> {
     return indiceDeBusqueda;   
 };
 
-// const irAlObjeto = (indice)=> {
-//     let resultadoAMostrar = resultadoscont.children[indice];
-//     resultadoAMostrar.scrollIntoView({ behavior: 'auto', block: 'center' });
-//     // console.log(indice)
-// };
+const irAlObjeto = (indice)=> {
+    let resultadoAMostrar = resultadoscont.children[indice];
+    resultadoAMostrar.scrollIntoView({ behavior: 'auto', block: 'center' });
+    // console.log(indice)
+};
 const agregarEfectoResultados = (indice)=> {
     resultadoscont.children[indice].classList.add('resaltado');
     // resultadoscont.children[indiceDeBusqueda].classList.add('manito');
