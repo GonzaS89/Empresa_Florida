@@ -227,7 +227,7 @@ onload = ()=> {
 
         
 
-        if((fecha == 17) && (mes == 9)) { //Definir feriado previo
+        if((fecha == 3) && (mes == 10)) { //Definir feriado previo
             feriadoPrevio = true; 
             rutaObtenida = obtenerDiaRuta(dia);
             tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
@@ -239,7 +239,7 @@ onload = ()=> {
             tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día sábado `;
         }
 
-        else if ((fecha == 3) && (mes == 10)){
+        else if ((fecha == 1) && (mes == 10)){
             let semiParoGrilla;
             semiParoGrilla = obtenerDiaRuta(1);
             let posicion = 0;
