@@ -108,38 +108,17 @@ crearSelectOptions(selectSalida,listaTodosDestino,'opcion1');
 let opcionSeleccionada;
 let opcionSeleccionada2;
 
-// selectSalida.addEventListener('click', (e)=> {
-//         if(e.target.value == 'default'){
-//             opcionSeleccionada = e.target.value;
-//             listaDestinos = destinosCompartidos(opcionSeleccionada,diaObtenido);
-//             crearSelectOptions(selectLlegada,listaDestinos,'opcion2');
-//         }else{
-//             borrarOpcionesSelect();
-//             selectLlegada[0].selected = true;
-//             opcionSeleccionada = e.target.value;
-//             listaDestinos = destinosCompartidos(opcionSeleccionada, diaObtenido);
-//             crearSelectOptions(selectLlegada,listaDestinos,'opcion2');
-//         }
-        
-// })
-
-
-
-// selectLlegada.addEventListener('click', (e)=> {
-//     opcionSeleccionada2 = e.target.value
-// })
-
 const actualiza = ()=> {
     for (let i = 0; i < selectSalida.length; i++) {
         const opcion = selectSalida[i];
         if(opcion.selected && opcion && i > 0 && opcion !== undefined) {
-        opcionSeleccionada = opcion.innerHTML;
-        console.log(opcionSeleccionada)
-        listaDestinos = destinosCompartidos(opcionSeleccionada,diaObtenido);
-        crearSelectOptions(selectLlegada,listaDestinos,'opcion2');
-           if(selectLlegada.length == listaDestinos.length + 1){
-            clearInterval(timerActualiza)
-           }
+            opcionSeleccionada = opcion.innerHTML;
+            console.log(opcionSeleccionada)
+            listaDestinos = destinosCompartidos(opcionSeleccionada,diaObtenido);
+            crearSelectOptions(selectLlegada,listaDestinos,'opcion2');
+            if(selectLlegada.length == listaDestinos.length + 1){
+                clearInterval(timerActualiza)
+            }
         }
     }
 }
@@ -156,8 +135,8 @@ const actualiza2 = ()=> {
 
 
 
-const timerActualiza = setInterval(actualiza, 1000);
-const timerActualiza2 = setInterval(actualiza2,1000);
+const timerActualiza = setInterval(actualiza, 500);
+const timerActualiza2 = setInterval(actualiza2,500);
 
 
 
@@ -177,26 +156,8 @@ boton.addEventListener('click', ()=> {
     }
     irAlObjeto(indiceObtenido);
 })
-// selectSalida.addEventListener('click', ()=> {
-//     if(selectLlegada.length >= 2){
-//         borrarOpcionesSelect();
-//     }else{
-//         cccc();
-//     }
-    
-//     // if(selectLlegada.length == 1) {
-//     //     cccc()
-//     // }
-// })
 
-selectSalida.addEventListener('click', ()=> {
-    if(selectLlegada.length > 1){
-        borrarOpcionesSelect()
-    }
-    actualiza()
-})
 indicacioncont.addEventListener('click', ()=> {
-    
     actualiza();
     actualiza2();
 })  
