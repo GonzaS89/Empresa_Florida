@@ -348,6 +348,7 @@ const irAlObjeto = (indice)=> {
     resultadoAMostrar.scrollIntoView({ behavior: 'auto', block: 'center' });
     // console.log(indice)
 };
+
 const agregarEfectoResultados = (indice)=> {
     resultadoscont.children[indice].classList.add('resaltado');
     // resultadoscont.children[indiceDeBusqueda].classList.add('manito');
@@ -479,25 +480,25 @@ resultadoscont.addEventListener('touchmove', () => {
 })
 
 
-indicacioncont.addEventListener('click', () => {
-    opcionbase.selected = true;
-    opcionbase2.selected = true;
-    linea1.textContent = '';
-    linea2.textContent = '';
-    tituloResultado.textContent = '';
-    mensaje2.classList.replace('mensajeAparece', 'mensajeIrse')
-    scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
-    scrollcont.children[0].classList.remove('manitoAnimacionArriba');
-    scrollcont.children[0].classList.remove('manitoAnimacionCentro');
-    resultadoscont.children[0].classList.remove('resultadosOpcion2');
-    resultadoscont.classList.replace('opacarFondo','normalizarFondo');
+// indicacioncont.addEventListener('click', () => {
+//     opcionbase.selected = true;
+//     opcionbase2.selected = true;
+//     linea1.textContent = '';
+//     linea2.textContent = '';
+//     tituloResultado.textContent = '';
+//     mensaje2.classList.replace('mensajeAparece', 'mensajeIrse')
+//     scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
+//     scrollcont.children[0].classList.remove('manitoAnimacionArriba');
+//     scrollcont.children[0].classList.remove('manitoAnimacionCentro');
+//     resultadoscont.children[0].classList.remove('resultadosOpcion2');
+//     resultadoscont.classList.replace('opacarFondo','normalizarFondo');
         
-    setTimeout( ()=> {
-        $('.mensaje2').css('display', 'none'),borrarGlobos(),
-        resultadoscont.classList.remove('normalizarFondo'),
-        borrarManito();
-    },1000)
-})
+//     setTimeout( ()=> {
+//         $('.mensaje2').css('display', 'none'),borrarGlobos(),
+//         resultadoscont.classList.remove('normalizarFondo'),
+//         borrarManito();
+//     },1000)
+// })
 
 
 

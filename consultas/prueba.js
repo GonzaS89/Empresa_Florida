@@ -118,6 +118,8 @@ const actualiza = ()=> {
             crearSelectOptions(selectLlegada,listaDestinos,'opcion2');
             if(selectLlegada.length == listaDestinos.length + 1){
                 clearInterval(timerActualiza)
+            }else{
+                console.log('esta vacio')
             }
         }
     }
@@ -146,7 +148,7 @@ boton.addEventListener('click', ()=> {
     listaDeDiferencias = obtenerListaDeDiferencias(listaDeSalidas);construirGlobos(listaViajesObtenida,resultadoscontainer,resultadoscont);
     indiceObtenido = obtenerIndiceBusqueda(listaDeDiferencias);
     contenidoDeResultados(listaViajesObtenida,listaDeDiferencias);
-    // agregarEfectoResultados(indiceObtenido)
+    agregarEfectoResultados(indiceObtenido)
     $('.resultados').css('display', 'flex');
     $('.mensaje2').css('display', 'flex');
     if(mensaje2.classList.contains('mensajeIrse')){
@@ -158,9 +160,22 @@ boton.addEventListener('click', ()=> {
 })
 
 indicacioncont.addEventListener('click', ()=> {
-    actualiza();
-    actualiza2();
-})  
+    
+    borrarOpcionesSelect();
+    selectSalida[0].selected = true;
+    selectLlegada[0].selected = true;
+    mensaje2.classList.replace('mensajeAparece', 'mensajeIrse')
+        scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
+        scrollcont.children[0].classList.remove('manitoAnimacionArriba');
+        scrollcont.children[0].classList.remove('manitoAnimacionCentro');
+        resultadoscont.children[0].classList.remove('resultadosOpcion2');
+        resultadoscont.classList.replace('opacarFondo','normalizarFondo');
+        setTimeout( ()=> {
+                    $('.mensaje2').css('display', 'none'),borrarGlobos(),
+                    resultadoscont.classList.remove('normalizarFondo'),
+                    borrarManito();
+                },1000)
+}); 
 
 
 
