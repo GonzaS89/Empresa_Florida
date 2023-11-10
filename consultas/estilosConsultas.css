@@ -1653,3 +1653,38 @@ select:focus{outline:none;}
     transform: translateX(49.2px);
     border: none;
 }
+
+.contenedornuevo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+.contenedor-titulo{
+    flex-basis: 50%;
+}
+.contenedor-titulo h1{
+    color: white;
+    text-align: center;
+    text-orientation: upright;
+    
+}
+
+.contenedor-opciones {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 90%;
+   
+}
+
+.boton-parada{
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+}
