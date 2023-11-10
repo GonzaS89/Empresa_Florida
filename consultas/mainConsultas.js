@@ -159,10 +159,10 @@ onload = ()=> {
     $('.mensaje-contenedor').css('display' , `${displayMensaje}`);
 }
 
-// Definimos la posicion del selector 1
-definirPosicion(selector,valores,valorSeleccionado,posicion);
-// Definimos la posicion del selector 2
-definirPosicion(selector2,valores2,valorSeleccionado2,posicion2);
+// // Definimos la posicion del selector 1
+// definirPosicion(selector,valores,valorSeleccionado,posicion);
+// // Definimos la posicion del selector 2
+// definirPosicion(selector2,valores2,valorSeleccionado2,posicion2);
 
 // Funcion para definir ruta de viaje (IDA O VUELTA)
 

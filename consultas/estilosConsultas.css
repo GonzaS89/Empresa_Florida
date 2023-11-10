@@ -1659,7 +1659,6 @@ select:focus{outline:none;}
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    
 }
 
 .contenedor-titulo{
@@ -1678,7 +1677,7 @@ select:focus{outline:none;}
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    height: 90%;
+    overflow-y: scroll;
    
 }
 
