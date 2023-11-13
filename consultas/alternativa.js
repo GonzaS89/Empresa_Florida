@@ -1,26 +1,40 @@
 const contenedorOpciones = document.querySelector('.contenedor-opciones');
 
+let paradaSeleccionada;
 
 
-const crearOpciones = ()=> {
+
+const botonesParadas = ()=> {
+
     for (let i = 0; i < listaTodosDestino.length; i++) {
-        const nombreParada = listaTodosDestino[i];
-        const botonParada = document.createElement('BUTTON');
-        botonParada.innerHTML = nombreParada;
-        botonParada.classList.add('boton-parada')
+        const botonParada = document.createElement('DIV');
+        const imagenBoton = document.createElement('SPAN');
+        const textoBoton = document.createElement('P'); 
+        textoBoton.innerHTML = listaTodosDestino[i];
+        botonParada.classList.add('boton-parada');
+        imagenBoton.classList.add('imagen-boton')
+        botonParada.appendChild(imagenBoton)
+        botonParada.appendChild(textoBoton)
         contenedorOpciones.appendChild(botonParada);
         botonParada.animate ( [
-            {transform:'scale(0)'},
-            {transform: 'scale(1)'}
+        {transform:'scale(0)'},
+        {transform: 'scale(1)'}
         ],
-            {duration:250 ,
-             delay: i * 100,
-             fill: 'forwards'   
+            {duration: 200,
+            delay: i * 100,
+            fill: 'forwards'   
             }
-        )
+            )
+        botonParada.addEventListener('click', ()=> {
+            paradaSeleccionada = botonParada.innerHTML
+            console.log(paradaSeleccionada);
+        })    
     }
 }
 
-crearOpciones();
+botonesParadas();
+
+
+
 
 
