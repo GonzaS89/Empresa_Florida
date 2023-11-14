@@ -71,7 +71,8 @@ todosBotonesParadas.forEach(elemento => {
         paradaSeleccionada = elemento.innerHTML;
         posiblesDestinos = destinosCompartidos(paradaSeleccionada,diaObtenido);
         borrarBotones()
-        crearBotones(posiblesDestinos)
+        crearBotones(posiblesDestinos);
+        contenedorOpciones.scrollTo(0, 0);
    })
 });
 
