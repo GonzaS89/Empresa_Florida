@@ -148,7 +148,7 @@ boton.addEventListener('click', ()=> {
     listaDeDiferencias = obtenerListaDeDiferencias(listaDeSalidas);construirGlobos(listaViajesObtenida,resultadoscontainer,resultadoscont);
     indiceObtenido = obtenerIndiceBusqueda(listaDeDiferencias);
     contenidoDeResultados(listaViajesObtenida,listaDeDiferencias);
-    agregarEfectoResultados(indiceObtenido)
+    agregarEfectoResultados(indiceObtenido);
     $('.resultados').css('display', 'flex');
     $('.mensaje2').css('display', 'flex');
     if(mensaje2.classList.contains('mensajeIrse')){

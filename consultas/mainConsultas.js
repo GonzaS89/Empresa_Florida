@@ -436,7 +436,6 @@ const contenidoDeResultados = (rutas,arrayDiferencias)=> {
     } 
 }
 
-let indiceObtenido;
 let listaDeSalidas;
 
 //     boton.addEventListener('click', () => {
@@ -466,18 +465,18 @@ let listaDeSalidas;
         // irAlObjeto(indiceObtenido);
 
 
-resultadoscont.addEventListener('touchmove', () => {
+// resultadoscont.addEventListener('touchmove', () => {
 
-    for (i = 0; i < resultadoscont.children.length; i++) {
-        if (i < indiceObtenido || i > indiceObtenido) 
-            resultadoscont.children[i].classList.replace('opacar', 'normalizar');
-            resultadoscont.children[indiceObtenido].classList.replace('resaltado', 'normalizarResaltado');
-            scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
-            scrollcont.children[0].classList.remove('manitoAnimacionArriba');
-            scrollcont.children[0].classList.remove('manitoAnimacionCentro');
-            resultadoscont.classList.replace('opacarFondo', 'normalizarFondo');
-    }
-})
+//     for (i = 0; i < resultadoscont.children.length; i++) {
+//         if (i < indiceObtenido || i > indiceObtenido) 
+//             resultadoscont.children[i].classList.replace('opacar', 'normalizar');
+//             resultadoscont.children[indiceObtenido].classList.replace('resaltado', 'normalizarResaltado');
+//             scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
+//             scrollcont.children[0].classList.remove('manitoAnimacionArriba');
+//             scrollcont.children[0].classList.remove('manitoAnimacionCentro');
+//             resultadoscont.classList.replace('opacarFondo', 'normalizarFondo');
+//     }
+// })
 
 
 // indicacioncont.addEventListener('click', () => {
