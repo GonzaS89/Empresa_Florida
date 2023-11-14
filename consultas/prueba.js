@@ -35,7 +35,7 @@ const determinarRuta = (dia,punto1,punto2) => {
 const selectSalida = document.getElementById('selector');
 const selectLlegada = document.getElementById('selector2');
 
-const obtenerDia = (dia)=> {
+const obtenerDia = ()=> {
     if(dia == 0) return 0
     else if(dia >= 1 & dia <= 5) return 1
     else if(dia == 6) return 2
@@ -53,7 +53,7 @@ const comprobarOpcionSeleccionada = (array)=> {
 let listaViajesObtenida
 
 
-let diaObtenido = obtenerDia(dia);
+// let diaObtenido = obtenerDia();
 
 const crearLabelOptions = (select,option,arrayViajes)=> {
     for (let i = 0; i < select.length - 1; i++) {
