@@ -1682,6 +1682,16 @@ select:focus{outline:none;}
     box-shadow: 7.5px 7.5px 5px 1px black;
 }
 
+.animacionBotonSeleccionado {
+    animation: botonSeleccionado 1s;
+}
+
+@keyframes botonSeleccionado {
+    100%{
+        background: white;
+    }
+}
+
 .imagen-boton{
     background-image: url(../Iconos/ubicacion.png);
     width: 40px;
