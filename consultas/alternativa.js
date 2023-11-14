@@ -37,9 +37,9 @@ const destinosCompartidos = (opcion,dia)=> {
     return listaDestinos;
 }
 
-const botonesParadas = (listadelocalidades)=> {
+const crearBotones = (listadelocalidades)=> {
 
-    for (let i = 0; i < listaTodosDestino.length; i++) {
+    for (let i = 0; i < listadelocalidades.length; i++) {
         const botonParada = document.createElement('DIV');
         const imagenBoton = document.createElement('SPAN');
         const textoBoton = document.createElement('P'); 
@@ -59,11 +59,27 @@ const botonesParadas = (listadelocalidades)=> {
             }
             )
             
-    }
+    } return contenedorOpciones
 }
-botonesParadas(listadelocalidades);
-let listaContenedor = Object.keys(contenedorOpciones)
-console.log(listaContenedor)
+
+crearBotones(listaTodosDestino);
+
+const todosBotonesParadas = document.querySelectorAll('.boton-parada P');
+
+todosBotonesParadas.forEach(elemento => {
+   elemento.addEventListener('click', ()=> {
+        paradaSeleccionada = elemento.innerHTML;
+        posiblesDestinos = destinosCompartidos(paradaSeleccionada,diaObtenido);
+        borrarBotones()
+        crearBotones(posiblesDestinos)
+   })
+});
+
+
+
+
+
+
 
 
 
