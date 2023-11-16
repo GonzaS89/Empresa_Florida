@@ -112,18 +112,12 @@ const todosBotonesParadas = document.querySelectorAll('.boton-parada P');
 const botonvolver = document.querySelector('.botonvolver-contenedor');
 
 botonvolver.addEventListener('click', ()=> {
-
-    if(botonvolver.classList.contains('visible')){
-        botonvolver.classList.replace('visible', 'oculto');
-        borrarBotones();
-        crearBotones(listaTodosDestino)
-    }
-
+    location.reload()
 })
 
 todosBotonesParadas.forEach(elemento => {
    elemento.addEventListener('click', ()=> {
-        botonvolver.classList.add('visible');
+        
         const referencia = document.querySelector('.contenedor-titulo H1');
         referencia.innerHTML = 'Elegí el destino donde quieras ir'
         paradaSeleccionada = elemento.innerHTML;
@@ -131,6 +125,7 @@ todosBotonesParadas.forEach(elemento => {
         posiblesDestinos = destinosCompartidos(paradaSeleccionada,diaObtenido);
 
         setTimeout(() => {
+            botonvolver.classList.add('visible');
             borrarBotones()
             crearBotones(posiblesDestinos);
        
