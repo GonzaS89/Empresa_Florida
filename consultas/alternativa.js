@@ -97,27 +97,54 @@ const crearBotones = (listadelocalidades)=> {
 }
 
 crearBotones(listaTodosDestino);
+const efectoPulsado = (elemento)=> {
+    elemento.animate ( [
+        {transform: 'scale(0.8)'},
+        {transform: 'scale(1)'}
+    ],
+        {fill: 'forwards',
+        duration: 400}
+    )
+}
 
 const todosBotonesParadas = document.querySelectorAll('.boton-parada P');
 
+const botonvolver = document.querySelector('.botonvolver-contenedor');
+
+botonvolver.addEventListener('click', ()=> {
+
+    if(botonvolver.classList.contains('visible')){
+        botonvolver.classList.replace('visible', 'oculto');
+        borrarBotones();
+        crearBotones(listaTodosDestino)
+    }
+
+})
+
 todosBotonesParadas.forEach(elemento => {
    elemento.addEventListener('click', ()=> {
+        botonvolver.classList.add('visible');
         const referencia = document.querySelector('.contenedor-titulo H1');
         referencia.innerHTML = 'Elegí el destino donde quieras ir'
         paradaSeleccionada = elemento.innerHTML;
-
+        efectoPulsado(elemento.parentNode);
         posiblesDestinos = destinosCompartidos(paradaSeleccionada,diaObtenido);
-        borrarBotones()
-        crearBotones(posiblesDestinos);
-        contenedorOpciones.scrollTo(0, 0);
-        
-        const todosBotonesDestino = document.querySelectorAll('.boton-parada P');
 
-        todosBotonesDestino.forEach(elemento => {
+        setTimeout(() => {
+            borrarBotones()
+            crearBotones(posiblesDestinos);
+       
+            contenedorOpciones.scrollTo(0, 0);
+        
+            const todosBotonesDestino = document.querySelectorAll('.boton-parada P');
+
+            todosBotonesDestino.forEach(elemento => {
             elemento.addEventListener('click', ()=> {
                 destinoSeleccionado = elemento.innerHTML;
+                efectoPulsado(elemento.parentNode);
 
-                listaViajesObtenida = determinarRuta(diaObtenido,paradaSeleccionada,destinoSeleccionado);
+                setTimeout(() => {
+                    listaViajesObtenida = determinarRuta(diaObtenido,paradaSeleccionada,destinoSeleccionado);
                 listaDeSalidas = obtenerListaDeSalidas(listaViajesObtenida);
                 listaDeDiferencias = obtenerListaDeDiferencias(listaDeSalidas);construirGlobos(listaViajesObtenida,resultadoscontainer,resultadoscont);
                 indiceObtenido = obtenerIndiceBusqueda(listaDeDiferencias);
@@ -132,8 +159,15 @@ todosBotonesParadas.forEach(elemento => {
                 }
                 irAlObjeto(indiceObtenido);
             })
+                }, 600);
+                
             
         });
+        }, 500);
+        
+
+
+
    })
 });
 

@@ -57,6 +57,14 @@ body::-webkit-scrollbar-track {
     background: orange;        /* color of the tracking area */
 }
 
+.visible{
+    display: flex;
+}
+
+.oculto{
+    display: none;
+}
+
 /* #logo-fondo{
     background-image: url(Imagenes/Logo_sinfondo.png);
     height: 100%;
@@ -104,6 +112,29 @@ body::-webkit-scrollbar-track {
         width:40%;
         transform: translateY(-280px);
         filter: opacity(1);
+    }
+}
+
+.botonvolver-contenedor{
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-self: baseline;
+    margin: 0px 0px 20px 20px
+}
+
+.botonvolver{
+    width: 100%;
+    transform: rotate(90deg);
+    background-image: url(../Iconos/flecha.png);
+    background-size: cover;
+    animation: palpitar 1s infinite;
+}
+
+@keyframes palpitar {
+    100%{
+
+        transform: rotate(90deg)translateY(17.5px);
     }
 }
 

@@ -436,68 +436,12 @@ const contenidoDeResultados = (rutas,arrayDiferencias)=> {
     } 
 }
 
-let listaDeSalidas;
-
-//     boton.addEventListener('click', () => {
-//         obtenerRuta();definirDia();definirNormalidad();
-//         listaDeSalidas = obtenerListaDeSalidas(rutaObtenida);
-//         contruirGlobos(rutaObtenida,resultadoscontainer,resultadoscont);
-//         listaDeDiferenciasObtenida = obtenerListaDeDiferencias(listaDeSalidas);
-//         indiceObtenido = obtenerIndiceBusqueda(listaDeDiferenciasObtenida)
-//         agregarEfectoResultados(indiceObtenido);  
-//         contenidoDeResultados(rutaObtenida,listaDeDiferenciasObtenida)
-//         mensaje2.appendChild(indicacioncont);
-        
-//         if(resolucion < 600)
-//         if ((rutaObtenida.length) > 1) {
-//             if (indiceObtenido == (rutaObtenida.length) - 1) scrollcont.children[0].classList.add('manitoAnimacionAbajo');
-//             else if (indiceObtenido == 0) scrollcont.children[0].classList.add('manitoAnimacionArriba');
-//             else scrollcont.children[0].classList.add('manitoAnimacionCentro');
-//         }
-        
-        // $('.resultados').css('display', 'flex');
-        // $('.mensaje2').css('display', 'flex');
-        // if(mensaje2.classList.contains('mensajeIrse')){
-        //     mensaje2.classList.replace('mensajeIrse', 'mensajeAparece')
-        // }else{
-        //     mensaje2.classList.add('mensajeAparece')
-        // }
-        // irAlObjeto(indiceObtenido);
 
 
-// resultadoscont.addEventListener('touchmove', () => {
-
-//     for (i = 0; i < resultadoscont.children.length; i++) {
-//         if (i < indiceObtenido || i > indiceObtenido) 
-//             resultadoscont.children[i].classList.replace('opacar', 'normalizar');
-//             resultadoscont.children[indiceObtenido].classList.replace('resaltado', 'normalizarResaltado');
-//             scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
-//             scrollcont.children[0].classList.remove('manitoAnimacionArriba');
-//             scrollcont.children[0].classList.remove('manitoAnimacionCentro');
-//             resultadoscont.classList.replace('opacarFondo', 'normalizarFondo');
-//     }
-// })
 
 
-// indicacioncont.addEventListener('click', () => {
-//     opcionbase.selected = true;
-//     opcionbase2.selected = true;
-//     linea1.textContent = '';
-//     linea2.textContent = '';
-//     tituloResultado.textContent = '';
-//     mensaje2.classList.replace('mensajeAparece', 'mensajeIrse')
-//     scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
-//     scrollcont.children[0].classList.remove('manitoAnimacionArriba');
-//     scrollcont.children[0].classList.remove('manitoAnimacionCentro');
-//     resultadoscont.children[0].classList.remove('resultadosOpcion2');
-//     resultadoscont.classList.replace('opacarFondo','normalizarFondo');
-        
-//     setTimeout( ()=> {
-//         $('.mensaje2').css('display', 'none'),borrarGlobos(),
-//         resultadoscont.classList.remove('normalizarFondo'),
-//         borrarManito();
-//     },1000)
-// })
+
+
 
 
 
