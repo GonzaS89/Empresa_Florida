@@ -133,8 +133,7 @@ body::-webkit-scrollbar-track {
 
 @keyframes palpitar {
     100%{
-
-        transform: rotate(90deg)translateY(17.5px);
+        transform:rotate(90deg)translateY(17.5px);
     }
 }
 
@@ -1680,7 +1679,7 @@ select:focus{outline:none;}
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    height: 500px;
+    min-height: 500px;
     gap: 30px;
     overflow-y: scroll;
     margin-top: 30px;
@@ -1730,16 +1729,9 @@ select:focus{outline:none;}
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    animation: girar 1s .5s infinite;
+    animation: .5s 2;
 }
-@keyframes girar {
-    0%{
-        transform: scale(0);
-    }
-    100%{
-        transform: scale(1) rotateY(360deg);
-    }
-}
+
 
 
 

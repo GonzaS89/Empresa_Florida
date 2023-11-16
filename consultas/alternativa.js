@@ -119,13 +119,15 @@ todosBotonesParadas.forEach(elemento => {
    elemento.addEventListener('click', ()=> {
         
         
-        referencia.innerHTML = 'Elegí el destino donde quieras ir'
-        paradaSeleccionada = elemento.innerHTML;
+        
         efectoPulsado(elemento.parentNode);
-        posiblesDestinos = destinosCompartidos(paradaSeleccionada,diaObtenido);
+        
 
         setTimeout(() => {
             const referencia = document.querySelector('.contenedor-titulo H1');
+            referencia.innerHTML = 'Elegí el destino donde quieras ir'
+        paradaSeleccionada = elemento.innerHTML;
+        posiblesDestinos = destinosCompartidos(paradaSeleccionada,diaObtenido);
             botonvolver.classList.add('visible');
             borrarBotones()
             crearBotones(posiblesDestinos);
