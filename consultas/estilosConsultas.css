@@ -1686,7 +1686,7 @@ select:focus{outline:none;}
     position: absolute;
 }
 
-.boton-parada{
+.boton-parada, .boton-destino{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1694,7 +1694,8 @@ select:focus{outline:none;}
     width: 150px;
     height: 75px;
     border: 2px solid rgba(128, 128, 128, 0.291);
-    border-radius:2.5px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
     border: none;
     text-transform: uppercase;
     font-size: 14px;
@@ -1704,29 +1705,39 @@ select:focus{outline:none;}
     font-family: var(--fuente4ta);
     transform: scale(0);
     background: var(--fondoAzulFuerte);
-    box-shadow: 7.5px 7.5px 5px 1px black;
+    box-shadow: 10px 10px 5px 1px rgba(54, 7, 7, 0.575);
 }
 
-.animacionBotonSeleccionado {
-    animation: botonSeleccionado 1s;
+.boton-destino{
+    flex-direction: column;
+    gap: 10px;
+    font-size: 15px;
+    height: 100px;
 }
 
-@keyframes botonSeleccionado {
-    100%{
-        background: white;
-    }
-}
 
-.imagen-boton{
+.imagen-boton, .imagen-boton-destino{
     background-image: url(../Iconos/ubicacion.png);
     width: 40px;
     height: 40px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    animation: .5s 2;
+    animation: entrada-icono 1s 2;
+}
+
+.imagen-boton-destino{
+    background-image: url(../Iconos/flechatriple.png);
+    animation: none;
+    width: 50px;
+    height: 50px;
 }
 
 
+@keyframes entrada-icono {
+    100%{
+        transform: rotateY(180deg);
+    }
+}
 
 

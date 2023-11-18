@@ -71,7 +71,7 @@ const ordenarListaViajes = (listaAOrdenar) => {
     })
 }
 
-const crearBotones = (listadelocalidades)=> {
+const crearBotonesDeSalida = (listadelocalidades)=> {
 
     for (let i = 0; i < listadelocalidades.length; i++) {
         const botonParada = document.createElement('DIV');
@@ -86,6 +86,7 @@ const crearBotones = (listadelocalidades)=> {
         botonParada.animate ( [
         {transform:'scale(0)'},
         {transform: 'scale(1)'}
+        // {boxShadow: 'none'}
         ],
             {duration: 200,
             delay: i * 100,
@@ -96,7 +97,36 @@ const crearBotones = (listadelocalidades)=> {
     } return contenedorOpciones
 }
 
-crearBotones(listaTodosDestino);
+const crearBotonesConDestinos = (listadelocalidades)=> {
+    for (let i = 0; i < listadelocalidades.length; i++) {
+        const botonDestino = document.createElement('DIV');
+        const paradaSalida = document.createElement('P'); 
+        const imagenBoton = document.createElement('SPAN');
+        const paradaDestino = document.createElement('P');
+        botonDestino.classList.add('boton-destino');
+        paradaSalida.innerHTML = paradaSeleccionada;
+        imagenBoton.classList.add('imagen-boton-destino');
+        paradaDestino.innerHTML = listadelocalidades[i];
+        botonDestino.appendChild(paradaSalida);
+        botonDestino.appendChild(imagenBoton);
+        botonDestino.appendChild(paradaDestino); 
+        contenedorOpciones.appendChild(botonDestino);
+        botonDestino.animate ( [
+            {transform:'scale(0)'},
+            {transform: 'scale(1)'}
+            // {boxShadow: 'none'}
+            ],
+                {duration: 200,
+                delay: i * 100,
+                fill: 'forwards'   
+                }
+                )
+    }
+    
+
+}
+
+crearBotonesDeSalida(listaTodosDestino);
 const efectoPulsado = (elemento)=> {
     elemento.animate ( [
         {transform: 'scale(0.8)'},
@@ -117,20 +147,16 @@ botonvolver.addEventListener('click', ()=> {
 
 todosBotonesParadas.forEach(elemento => {
    elemento.addEventListener('click', ()=> {
-        
-        
-        
-        efectoPulsado(elemento.parentNode);
-        
 
+        efectoPulsado(elemento.parentNode);
         setTimeout(() => {
             const referencia = document.querySelector('.contenedor-titulo H1');
             referencia.innerHTML = 'Elegí el destino donde quieras ir'
-        paradaSeleccionada = elemento.innerHTML;
-        posiblesDestinos = destinosCompartidos(paradaSeleccionada,diaObtenido);
+            paradaSeleccionada = elemento.innerHTML;
+            posiblesDestinos = destinosCompartidos(paradaSeleccionada,diaObtenido);
             botonvolver.classList.add('visible');
             borrarBotones()
-            crearBotones(posiblesDestinos);
+            crearBotonesConDestinos(posiblesDestinos);
        
             contenedorOpciones.scrollTo(0, 0);
         
