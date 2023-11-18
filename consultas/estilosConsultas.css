@@ -1727,10 +1727,20 @@ select:focus{outline:none;}
 }
 
 .imagen-boton-destino{
-    background-image: url(../Iconos/flechatriple.png);
+    background-image: url(../Iconos/flecharosa.png);
     animation: none;
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
+    animation: moverflecharosa 1s infinite;
+}
+
+@keyframes moverflecharosa {
+    0%{
+        transform: translateY(-25%);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
 
 
