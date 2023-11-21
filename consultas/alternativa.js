@@ -160,10 +160,11 @@ todosBotonesParadas.forEach(elemento => {
        
             contenedorOpciones.scrollTo(0, 0);
         
-            const todosBotonesDestino = document.querySelectorAll('.boton-parada P');
+            const todosBotonesDestino = document.querySelectorAll('.boton-destino P');
 
             todosBotonesDestino.forEach(elemento => {
             elemento.addEventListener('click', ()=> {
+    
                 destinoSeleccionado = elemento.innerHTML;
                 efectoPulsado(elemento.parentNode);
 
