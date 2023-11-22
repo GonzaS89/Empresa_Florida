@@ -165,11 +165,12 @@ todosBotonesParadas.forEach(elemento => {
 
             
 
-            todosBotonesDestino.forEach(elementx => {
-            elementx.addEventListener('click', ()=> {
-    
-                destinoSeleccionado = document.querySelector('.boton-destino P').innerHTML;
-                efectoPulsado(elementx);
+            todosBotonesDestino.forEach(elemento => {
+                elemento.addEventListener('click', ()=> {
+                    destinoSeleccionado = elemento.querySelector('P').innerHTML;
+                    console.log(destinoSeleccionado)    
+                
+                efectoPulsado(elemento);
                 listaViajesObtenida = determinarRuta(diaObtenido,paradaSeleccionada,destinoSeleccionado);
                 listaDeSalidas = obtenerListaDeSalidas(listaViajesObtenida);
                 listaDeDiferencias = obtenerListaDeDiferencias(listaDeSalidas);construirGlobos(listaViajesObtenida,resultadoscontainer,resultadoscont);
@@ -207,7 +208,7 @@ resultadoscont.addEventListener('touchmove', () => {
 })
 
 indicacioncont.addEventListener('click', () => {
-    
+    destinoSeleccionado = undefined
     mensaje2.classList.replace('mensajeAparece', 'mensajeIrse')
     scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
     scrollcont.children[0].classList.remove('manitoAnimacionArriba');
