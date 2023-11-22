@@ -153,6 +153,7 @@ todosBotonesParadas.forEach(elemento => {
             const referencia = document.querySelector('.contenedor-titulo H1');
             referencia.innerHTML = 'Elegí el destino donde quieras ir'
             paradaSeleccionada = elemento.innerHTML;
+            console.log(paradaSeleccionada)
             posiblesDestinos = destinosCompartidos(paradaSeleccionada,diaObtenido);
             botonvolver.classList.add('visible');
             borrarBotones()
@@ -166,6 +167,7 @@ todosBotonesParadas.forEach(elemento => {
             elemento.addEventListener('click', ()=> {
     
                 destinoSeleccionado = elemento.innerHTML;
+                console.log(destinoSeleccionado)
                 efectoPulsado(elemento.parentNode);
 
                 setTimeout(() => {
@@ -184,7 +186,7 @@ todosBotonesParadas.forEach(elemento => {
                 }
                 irAlObjeto(indiceObtenido);
             })
-                }, 600);
+                }, 1000);
                 
             
         });
