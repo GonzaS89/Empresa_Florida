@@ -100,7 +100,7 @@ const crearBotonesDeSalida = (listadelocalidades)=> {
 const crearBotonesConDestinos = (listadelocalidades)=> {
     for (let i = 0; i < listadelocalidades.length; i++) {
         const botonDestino = document.createElement('DIV');
-        const paradaSalida = document.createElement('P'); 
+        const paradaSalida = document.createElement('H4'); 
         const imagenBoton = document.createElement('SPAN');
         const paradaDestino = document.createElement('P');
         botonDestino.classList.add('boton-destino');
@@ -148,9 +148,9 @@ botonvolver.addEventListener('click', ()=> {
 todosBotonesParadas.forEach(elemento => {
    elemento.addEventListener('click', ()=> {
 
-        efectoPulsado(elemento.parentNode);
-        setTimeout(() => {
-            const referencia = document.querySelector('.contenedor-titulo H1');
+            efectoPulsado(elemento.parentNode);
+            setTimeout(() => {
+                const referencia = document.querySelector('.contenedor-titulo H1');
             referencia.innerHTML = 'Elegí el destino donde quieras ir'
             paradaSeleccionada = elemento.innerHTML;
             console.log(paradaSeleccionada)
@@ -161,17 +161,16 @@ todosBotonesParadas.forEach(elemento => {
        
             contenedorOpciones.scrollTo(0, 0);
         
-            const todosBotonesDestino = document.querySelectorAll('.boton-destino P');
+            const todosBotonesDestino = document.querySelectorAll('.boton-destino');
 
-            todosBotonesDestino.forEach(elemento => {
-            elemento.addEventListener('click', ()=> {
+            
+
+            todosBotonesDestino.forEach(elementx => {
+            elementx.addEventListener('click', ()=> {
     
-                destinoSeleccionado = elemento.innerHTML;
-                console.log(destinoSeleccionado)
-                efectoPulsado(elemento.parentNode);
-
-                setTimeout(() => {
-                    listaViajesObtenida = determinarRuta(diaObtenido,paradaSeleccionada,destinoSeleccionado);
+                destinoSeleccionado = document.querySelector('.boton-destino P').innerHTML;
+                efectoPulsado(elementx);
+                listaViajesObtenida = determinarRuta(diaObtenido,paradaSeleccionada,destinoSeleccionado);
                 listaDeSalidas = obtenerListaDeSalidas(listaViajesObtenida);
                 listaDeDiferencias = obtenerListaDeDiferencias(listaDeSalidas);construirGlobos(listaViajesObtenida,resultadoscontainer,resultadoscont);
                 indiceObtenido = obtenerIndiceBusqueda(listaDeDiferencias);
@@ -186,15 +185,11 @@ todosBotonesParadas.forEach(elemento => {
                 }
                 irAlObjeto(indiceObtenido);
             })
-                }, 1000);
-                
-            
-        });
-        }, 500);
         
-
-
-
+        });
+            }, 500);
+            
+        
    })
 });
 
@@ -212,6 +207,7 @@ resultadoscont.addEventListener('touchmove', () => {
 })
 
 indicacioncont.addEventListener('click', () => {
+    
     mensaje2.classList.replace('mensajeAparece', 'mensajeIrse')
     scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
     scrollcont.children[0].classList.remove('manitoAnimacionArriba');
