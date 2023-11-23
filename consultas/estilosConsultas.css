@@ -1748,15 +1748,15 @@ select:focus{outline:none;}
     width: 25px;
     height: 25px;
     z-index: 5;
-    animation: moverflecharosa 2.5s infinite;
+    animation: moverflecharosa 1s infinite;
 }
 
 @keyframes moverflecharosa {
     0%{
-        transform: rotate(-90deg) translateX(50%);
+        transform: rotate(-90deg) translateX(25%);
     }
     100%{
-         transform: rotate(-90deg) translateX(-50%)
+         transform: rotate(-90deg) translateX(-25%)
     }
 }
 
