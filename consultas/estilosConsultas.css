@@ -1706,13 +1706,33 @@ select:focus{outline:none;}
     transform: scale(0);
     background: var(--fondoAzulFuerte);
     box-shadow: 10px 10px 5px 1px rgba(54, 7, 7, 0.575);
+    cursor: pointer;
 }
 
 .boton-destino{
-    flex-direction: column;
-    gap: 10px;
+    width: 300px;
     font-size: 15px;
     height: 100px;
+    padding: 10px;
+    border-top-right-radius:0px ;
+    border-bottom-left-radius: 0px;
+    background: none;
+}
+
+.boton-destino h4 p{
+    margin: 0;
+    flex-basis: 20%;
+    text-align: left;
+}
+
+.contenedor-imagenboton{
+    display: flex;
+    overflow: hidden;
+    flex-basis: 60%;
+}
+
+.sobre{
+    z-index: 10;
 }
 
 
@@ -1727,19 +1747,24 @@ select:focus{outline:none;}
 }
 
 .imagen-boton-destino{
-    background-image: url(../Iconos/flecharosa.png);
+    background-image: url(../Iconos/colectivo.png);
     animation: none;
-    width: 25px;
-    height: 25px;
-    animation: moverflecharosa 1s infinite;
+    width: 50px;
+    height: 45px;
+    z-index: 5;
+    animation: moverflecharosa 2s infinite;
+    overflow: hidden;
 }
 
 @keyframes moverflecharosa {
     0%{
-        transform: translateY(-25%);
+        transform: translateX(-150%) scale(.1);
     }
-    100%{
-        transform: translateY(0);
+    1%{
+        transform: scale(1);
+    }
+    90%{
+        transform: translateX(100%) scale(.1)
     }
 }
 

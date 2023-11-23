@@ -105,6 +105,8 @@ const crearBotonesConDestinos = (listadelocalidades)=> {
         const paradaDestino = document.createElement('P');
         botonDestino.classList.add('boton-destino');
         paradaSalida.innerHTML = paradaSeleccionada;
+        paradaSalida.classList.add('sobre')
+        paradaDestino.classList.add('sobre')
         imagenBoton.classList.add('imagen-boton-destino');
         paradaDestino.innerHTML = listadelocalidades[i];
         botonDestino.appendChild(paradaSalida);
