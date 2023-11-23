@@ -1710,19 +1710,15 @@ select:focus{outline:none;}
 }
 
 .boton-destino{
-    width: 300px;
+    flex-direction: column;
+    width: 150px;
     font-size: 15px;
     height: 100px;
-    padding: 10px;
-    border-top-right-radius:0px ;
-    border-bottom-left-radius: 0px;
-    background: none;
+    overflow: hidden;
 }
 
 .boton-destino h4 p{
     margin: 0;
-    flex-basis: 20%;
-    text-align: left;
 }
 
 .contenedor-imagenboton{
@@ -1747,32 +1743,23 @@ select:focus{outline:none;}
 }
 
 .imagen-boton-destino{
-    background-image: url(../Iconos/colectivo.png);
+    background-image: url(../Iconos/flecha5.png);
     animation: none;
-    width: 50px;
-    height: 45px;
+    width: 25px;
+    height: 25px;
     z-index: 5;
-    animation: moverflecharosa 2s infinite;
-    overflow: hidden;
+    animation: moverflecharosa 2.5s infinite;
 }
 
 @keyframes moverflecharosa {
     0%{
-        transform: translateX(-150%) scale(.1);
+        transform: rotate(-90deg) translateX(50%);
     }
-    1%{
-        transform: scale(1);
-    }
-    90%{
-        transform: translateX(100%) scale(.1)
-    }
-}
-
-
-@keyframes entrada-icono {
     100%{
-        transform: rotateY(180deg);
+         transform: rotate(-90deg) translateX(-50%)
     }
 }
+
+
 
 
