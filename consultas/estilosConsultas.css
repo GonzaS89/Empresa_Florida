@@ -1767,34 +1767,55 @@ select:focus{outline:none;}
     width: 100%;
     height: 100vh;
     z-index: 50;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .contenedor-vista{
     display: flex;
-    width: 350px;
+    width: 320px;
     height: 175px;
-    border: 1px solid black;
-    border-radius: 10px;
     box-shadow: 5px 5px 5px 1px;
 }
 
 .vista-izquierda{
-    background: grey;
+    background:#DC8686;
     width: 30%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 35px;
-    display: flex
-;
+    font-size: 55px;
+   
+    
+}
+
+.panel-izquierdo-hora{
+    font-family: var(--fuenteTer);
+    margin: -20px;
+}
+.panel-izquierdo-minutos{
+    font-family: var(--fuenteTer);
+    margin-bottom: -20px;
 }
 
 .vista-derecha{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: #F0DBAF;
+    padding: 10px;
     flex-basis: 70%;
+}
+
+.vista-derecha p{
+    font-family: var(--fuenteSec);
+    font-size: px;
+    text-align: center;
 }
 
 
