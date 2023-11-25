@@ -1811,13 +1811,11 @@ select:focus{outline:none;}
 .vista-derecha{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     background: #088395;
     padding: 10px;
     flex-basis: 70%;
     position: relative;
-    overflow: hidden;
     color: white;
     font-weight: bold;
     text-transform: uppercase;
@@ -1830,7 +1828,8 @@ select:focus{outline:none;}
 }
 
 .vista-derecha-estado{
-    margin-bottom: 20px;
+    margin-top: 30px;
+    position: absolute;
 }
 
 .vista-derecha-recorrido{
@@ -1838,7 +1837,9 @@ select:focus{outline:none;}
     flex-wrap: wrap;
     justify-content: center;
     gap: 6px;
-    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 5px;
 }
 
 .vista-derecha-recorrido p{
