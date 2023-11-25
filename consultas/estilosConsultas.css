@@ -1780,7 +1780,7 @@ select:focus{outline:none;}
 }
 
 .vista-izquierda{
-    background:#DC8686;
+    background:#F5FCCD;
     width: 30%;
     height: 100%;
     display: flex;
@@ -1811,9 +1811,8 @@ select:focus{outline:none;}
 .vista-derecha{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    gap: 20px;
     background: #088395;
     padding: 10px;
     flex-basis: 70%;
@@ -1830,16 +1829,16 @@ select:focus{outline:none;}
     text-align: center;
 }
 
+.vista-derecha-estado{
+    margin-bottom: 20px;
+}
+
 .vista-derecha-recorrido{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 6px;
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 20px;
     padding: 5px;
-    background: inherit;
 }
 
 .vista-derecha-recorrido p{
