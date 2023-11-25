@@ -1818,6 +1818,7 @@ select:focus{outline:none;}
     padding: 10px;
     flex-basis: 70%;
     position: relative;
+    overflow: hidden;
     color: white;
     font-weight: bold;
     text-transform: uppercase;
@@ -1832,22 +1833,27 @@ select:focus{outline:none;}
 .vista-derecha-recorrido{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 6px;
     position: absolute;
     bottom: 0;
     margin-bottom: 20px;
     padding: 5px;
+    background: inherit;
 }
 
 .vista-derecha-recorrido p{
     font-size: 12.5px;
     line-height: 1.5;
+    z-index: 10;
+    background: inherit;
+    overflow: hidden;
 }
 
 .vista-derecha-recorrido span {
     background-image: url(../Iconos/colectivo.png);
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     background-size: cover;
     animation: mover-colectivo .5s infinite;
 }
