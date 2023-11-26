@@ -1733,7 +1733,7 @@ select:focus{outline:none;}
 
 
 .imagen-boton, .imagen-boton-destino{
-    background-image: url(../Iconos/ubicacion.png);
+    background-image: url(../Iconos/parada-colectivo.png);
     width: 40px;
     height: 40px;
     background-size: cover;
@@ -1762,7 +1762,7 @@ select:focus{outline:none;}
 
 .contenedor-prueba{
    
-    background-color: white;
+    background-color: #265073;
     position: absolute;
     width: 100%;
     height: 100vh;
@@ -1775,7 +1775,7 @@ select:focus{outline:none;}
 .contenedor-vista{
     display: flex;
     width: 350px;
-    height: 250px;
+    height: 500px;
     box-shadow: 5px 5px 5px 1px;
 }
 
@@ -1788,8 +1788,6 @@ select:focus{outline:none;}
     justify-content: center;
     align-items: center;
     font-size: 55px;
-   
-    
 }
 
 .panel-izquierdo-hora{
@@ -1834,40 +1832,69 @@ select:focus{outline:none;}
 
 .vista-derecha-recorrido{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 6px;
+    align-items: center;
+    gap: 10px;
     position: absolute;
     bottom: 0;
     margin-bottom: 5px;
+    background: inherit;
 }
 
 .vista-derecha-recorrido p{
-    font-size: 12.5px;
-    line-height: 2;
+    font-size: 11px;
+    line-height:1;
     z-index: 10;
-    background: inherit;
     overflow: hidden;
 }
 
-.vista-derecha-recorrido span {
-    background-image: url(../Iconos/colectivo.png);
+.parada-contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:10px;
+    gap: 5px;
+    border-radius: 15px;
+    background: rgba(6, 6, 6, 0.329);
+    z-index: 10;
+    position: relative;
+}
+
+.bus-imagen{
+    position: absolute;
+    background-image: url(../Iconos/colectivodefrente.png);
     width: 25px;
     height: 25px;
     background-size: cover;
-    animation: mover-colectivo .5s infinite;
+    animation: mover-colectivo 10s infinite;
 }
 
 @keyframes mover-colectivo {
-    0%{
-        transform: translateY(-1%) translateX(2%);
+    /* 0%{
+        transform: translateY(-2%) translateX(2%);
     }
     50%{
         transform: translateY(1%) translateX(5%);
     }
     100%{
         transform: translateX(0%)
-    }
+    } */
+}
+
+.parada-imagen{
+    background-image: url(../Iconos/parada-colectivo2.png);
+    width: 15px;
+    height: 15px;
+    background-size: cover;
+}
+
+.paradas-contenedor{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
 }
 
 
