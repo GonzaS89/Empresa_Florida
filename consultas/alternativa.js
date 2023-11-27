@@ -239,8 +239,8 @@ for (let i = 0; i < paradasContenedor.length; i++) {
 
 for (let i = 0; i < lineasRecorrido.length; i++) {
     const element = lineasRecorrido[i];
-    if(i % 2 == 0) $(element).css('transform', 'rotate(135deg)');
-    else $(element).css('transform', 'rotate(45deg)');
+    if(i % 2 == 0) $(element).css('transform', 'rotate(145deg)');
+    else $(element).css('transform', 'rotate(35deg)');
     
 }
 
