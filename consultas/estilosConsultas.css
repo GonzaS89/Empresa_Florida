@@ -1824,7 +1824,10 @@ select:focus{outline:none;}
 }
 
 .vista-derecha-estado{
-    margin: 30px;
+    width: 100%;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.150);
+    margin: 20px;
+    padding-bottom: 15px;
 }
 
 .vista-derecha-recorrido{
