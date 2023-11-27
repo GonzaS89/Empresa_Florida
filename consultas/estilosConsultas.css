@@ -1840,6 +1840,16 @@ select:focus{outline:none;}
     gap: 10px;
     margin-bottom: px;
     background: inherit;
+    position: relative;
+}
+
+.linearecorrido{
+    transform: rotate(90deg);
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    z-index: 5;
 }
 
 .vista-derecha-recorrido p{
@@ -1856,6 +1866,8 @@ select:focus{outline:none;}
     align-items: center;
     gap: 15px;
     flex-direction: column;
+    z-index: 10;
+    position: a;
 }
 
 .parada-contenedor{
@@ -1863,10 +1875,10 @@ select:focus{outline:none;}
     display: flex;
     align-items: center;
     justify-content: center;
-    padding:10px;
+    padding:5px;
     gap: 10px;
     border-radius: 15px;
-    background: rgba(6, 6, 6, 0.329);
+    background: black;
     z-index: 10;
     position: relative;
 }
@@ -1905,8 +1917,8 @@ select:focus{outline:none;}
 
 .parada-imagen{
     background-image: url(../Iconos/parada-recorrido3.png);
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     background-size: cover;
 }
 
