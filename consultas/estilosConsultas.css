@@ -1871,6 +1871,17 @@ select:focus{outline:none;}
     position: relative;
 }
 
+.parada-seleccionada {
+    animation: parada-seleccion 1s forwards;
+}
+
+@keyframes parada-seleccion {
+    100%{
+        background-color: white;
+        color: black;
+    }
+}
+
 .bus-imagen{
     position: absolute;
     background-image: url(../Iconos/colectivodefrente.png);
@@ -1893,9 +1904,9 @@ select:focus{outline:none;}
 }
 
 .parada-imagen{
-    background-image: url(../Iconos/parada-colectivo2.png);
-    width: 15px;
-    height: 15px;
+    background-image: url(../Iconos/parada-recorrido3.png);
+    width: 30px;
+    height: 30px;
     background-size: cover;
 }
 
