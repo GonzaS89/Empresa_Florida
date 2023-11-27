@@ -1761,7 +1761,6 @@ select:focus{outline:none;}
 }
 
 .contenedor-prueba{
-   
     background-color: #265073;
     position: absolute;
     width: 100%;
@@ -1775,14 +1774,12 @@ select:focus{outline:none;}
 .contenedor-vista{
     display: flex;
     width: 350px;
-    height: 500px;
     box-shadow: 5px 5px 5px 1px;
 }
 
 .vista-izquierda{
     background:#F5FCCD;
     width: 30%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1827,7 +1824,7 @@ select:focus{outline:none;}
 }
 
 .vista-derecha-estado{
-    margin-top: 30px;
+    margin: 30px;
 }
 
 .vista-derecha-recorrido{
@@ -1838,7 +1835,7 @@ select:focus{outline:none;}
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-bottom: 5px;
+    margin-bottom: px;
     background: inherit;
 }
 
