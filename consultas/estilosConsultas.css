@@ -1810,6 +1810,7 @@ select:focus{outline:none;}
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     background: #088395;
     padding: 10px;
     flex-basis: 70%;
@@ -1827,18 +1828,16 @@ select:focus{outline:none;}
 
 .vista-derecha-estado{
     margin-top: 30px;
-    position: absolute;
 }
 
 .vista-derecha-recorrido{
     display: flex;
+    width: 100%;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    position: absolute;
-    bottom: 0;
     margin-bottom: 5px;
     background: inherit;
 }
@@ -1850,12 +1849,22 @@ select:focus{outline:none;}
     overflow: hidden;
 }
 
+.paradas-contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
 .parada-contenedor{
+    width:125px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding:10px;
-    gap: 5px;
+    gap: 10px;
     border-radius: 15px;
     background: rgba(6, 6, 6, 0.329);
     z-index: 10;
@@ -1890,12 +1899,8 @@ select:focus{outline:none;}
     background-size: cover;
 }
 
-.paradas-contenedor{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-direction: column;
-}
+
+
 
 
 
