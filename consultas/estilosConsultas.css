@@ -1837,20 +1837,30 @@ select:focus{outline:none;}
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin-bottom: px;
     background: inherit;
     position: relative;
+    flex-basis: 80%;
 }
 
 .linearecorrido{
     transform: rotate(90deg);
-    height: 1px;
-    width: 100%;
-    background-color: white;
+    height: 5px;
+    min-width: 200px;
+    width: 150%;
+    background-color: rgba(255, 255, 255, 0.268);
     position: absolute;
     z-index: 5;
 }
+
+.linearecorrido2{
+    height: 3px;
+    width: 30px;
+    background-color: rgba(255, 255, 255, 0.287);
+    transform: rotate(90deg);
+}
+
+
+
 
 .vista-derecha-recorrido p{
     font-size: 11px;
@@ -1864,7 +1874,7 @@ select:focus{outline:none;}
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 6px;
     flex-direction: column;
     z-index: 10;
     position: a;
@@ -1878,7 +1888,7 @@ select:focus{outline:none;}
     padding:5px;
     gap: 10px;
     border-radius: 15px;
-    background: black;
+    background: #22092C;
     z-index: 10;
     position: relative;
 }

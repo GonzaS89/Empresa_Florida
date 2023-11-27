@@ -227,12 +227,24 @@ indicacioncont.addEventListener('click', () => {
 
 
 const paradasContenedor = document.querySelectorAll('.parada-contenedor');
+const lineasRecorrido = document.querySelectorAll('.linearecorrido2');
 
 for (let i = 0; i < paradasContenedor.length; i++) {
     const element = paradasContenedor[i];
-    if(i > 0 && i < paradasContenedor.length - 1) $(element).css('transform', 'translateX(-30px)')
-    if(i > 0 && i % 2 == 0) $(element).css('transform', 'translateX(30px)');
+    if(i > 0 && i < paradasContenedor.length - 1) 
+    $(element).css('transform', 'translateX(-30px)');
+    if(i > 0 && i % 2 == 0) 
+    $(element).css('transform', 'translateX(30px)');
 }
+
+for (let i = 0; i < lineasRecorrido.length; i++) {
+    const element = lineasRecorrido[i];
+    if(i % 2 == 0) $(element).css('transform', 'rotate(135deg)');
+    else $(element).css('transform', 'rotate(45deg)');
+    
+}
+
+
 
 
 
