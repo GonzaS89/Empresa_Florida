@@ -232,9 +232,9 @@ const lineasRecorrido = document.querySelectorAll('.linearecorrido2');
 for (let i = 0; i < paradasContenedor.length; i++) {
     const element = paradasContenedor[i];
     if(i > 0 && i < paradasContenedor.length - 1) 
-    $(element).css('transform', 'translateX(-30px)');
+    $(element).css('transform', 'translateX(-40px)');
     if(i > 0 && i % 2 == 0) 
-    $(element).css('transform', 'translateX(30px)');
+    $(element).css('transform', 'translateX(40px)');
 }
 
 for (let i = 0; i < lineasRecorrido.length; i++) {
