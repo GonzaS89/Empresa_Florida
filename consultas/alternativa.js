@@ -231,8 +231,7 @@ const paradasContenedor = document.querySelectorAll('.parada-contenedor');
 for (let i = 0; i < paradasContenedor.length; i++) {
     const element = paradasContenedor[i];
     if(i > 0 && i < paradasContenedor.length - 1) $(element).css('transform', 'translateX(-30px)')
-    if(i > 0 && i % 2 == 0) $(element).css('transform', 'translateX(30px)')
-    
+    if(i > 0 && i % 2 == 0) $(element).css('transform', 'translateX(30px)');
 }
 
 
