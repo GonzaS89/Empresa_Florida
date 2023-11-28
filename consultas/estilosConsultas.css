@@ -1883,7 +1883,7 @@ select:focus{outline:none;}
     align-items: center;
     justify-content: center;
     padding:5px;
-    border-radius: 15px;
+    border-radius: 10px;
     background: #22092C;
     z-index: 10;
     position: relative;
@@ -1926,14 +1926,10 @@ select:focus{outline:none;}
     width: 20px;
     height: 20px;
     background-size: cover;
-    animation: parada-imagen-animacion 1s 2 forwards;
+
 }
 
-@keyframes parada-imagen-animacion {
-    100%{
-        transform: rotateY(180deg);
-    }
-}
+
 
 .vista-derecha-boleto{
     margin-top: 10px;
