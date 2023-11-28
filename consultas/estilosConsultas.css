@@ -14,7 +14,7 @@
     --fuenteSec: 'Dosis', sans-serif;
     --fuenteTer:'Titan One', cursive;
     --fuente4ta :'Signika Negative', sans-serif;
-
+    --fuente5ta : 'Rampart One', sans-serif;
 
 
 }
@@ -1859,9 +1859,6 @@ select:focus{outline:none;}
     transform: rotate(90deg);
 }
 
-
-
-
 .vista-derecha-recorrido p{
     font-size: 11px;
     line-height:1;
@@ -1874,7 +1871,7 @@ select:focus{outline:none;}
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 6px;
+    gap: 2px;
     flex-direction: column;
     z-index: 10;
     position: a;
@@ -1942,10 +1939,16 @@ select:focus{outline:none;}
     border-top: 5px solid rgba(0, 0, 0, 0.150);
 }
 
+
+.vista-derecha-boleto p{
+    font-family: var(--fuenteTer);
+    font-weight: 100;
+    font-size: 25px;
+}
 .boleto-imagen{
     background-image: url(../Iconos/boleto2.png);
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     background-size: cover;
 }
 
