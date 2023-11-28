@@ -272,6 +272,8 @@ const obtenerListaDeDiferencias = (arrayDeSalidas)=> {
     
     return listaDiferencias
 }
+
+
 // Funcion que construye los globos de resultados
 const construirGlobos = (rutas, contPadre, contHijo)=> {
     if (rutas.length == 1) {
@@ -322,6 +324,44 @@ const construirGlobos = (rutas, contPadre, contHijo)=> {
             contPadre.appendChild(contHijo)
         }
     }
+}
+
+const construirNuevosGlobos = (rutas)=> {
+
+    const contenedorVista = document.createElement('DIV');
+    const vistaIzquierda = document.createElement('DIV');
+    const vistaDerecha = document.createElement('DIV');
+
+    // CONSTRUCCION DEL LADO IZQUIERDO
+
+    const panelIzquierdoHora = document.createElement('P');
+    const panelIzquierdoMinutos = document.createElement('P');
+    const panelIzquierdoTexto = document.createElement('P');
+    rutas.forEach(element => {
+        let horaEnArreglo = element.nombre.split('');
+        panelIzquierdoHora.innerHTML = horaEnArreglo[0] + horaEnArreglo[1]
+        panelIzquierdoMinutos.innerHTML = horaEnArreglo[3] + horaEnArreglo[4];
+    });
+    panelIzquierdoTexto.innerHTML = 'HRS'
+    vistaIzquierda.appendChild(panelIzquierdoHora);
+    vistaIzquierda.appendChild(panelIzquierdoMinutos);
+    vistaIzquierda.appendChild(panelIzquierdoTexto);
+
+    // CONSTRUCCION DEL LADO DERECHO
+
+    
+
+    // AGREGANDO TODO AL CONTENEDOR PRINCIPAL
+
+    contenedorVista.appendChild(vistaIzquierda);
+    contenedorVista.appendChild(vistaDerecha);
+    
+
+
+
+
+
+
 }
 
 const obtenerIndiceBusqueda = (arrayDiferencias)=> {

@@ -174,6 +174,10 @@ todosBotonesParadas.forEach(elemento => {
                 
                 efectoPulsado(elemento);
                 listaViajesObtenida = determinarRuta(diaObtenido,paradaSeleccionada,destinoSeleccionado);
+                listaViajesObtenida.forEach(element => {
+                    let prueba = element.nombre.split('')
+                    console.log(prueba)
+                });
                 listaDeSalidas = obtenerListaDeSalidas(listaViajesObtenida);
                 listaDeDiferencias = obtenerListaDeDiferencias(listaDeSalidas);construirGlobos(listaViajesObtenida,resultadoscontainer,resultadoscont);
                 indiceObtenido = obtenerIndiceBusqueda(listaDeDiferencias);
