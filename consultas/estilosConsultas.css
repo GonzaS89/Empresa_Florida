@@ -1942,12 +1942,12 @@ select:focus{outline:none;}
 .vista-derecha-boleto p{
     font-family: var(--fuenteTer);
     font-weight: 100;
-    font-size: 25px;
+    font-size: 20px;
 }
 .boleto-imagen{
     background-image: url(../Iconos/boleto2.png);
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-size: cover;
 }
 
