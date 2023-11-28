@@ -1934,12 +1934,15 @@ select:focus{outline:none;}
 
 .vista-derecha-boleto{
     margin-top: 10px;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     border-top: 5px solid rgba(0, 0, 0, 0.150);
+}
+
+.vista-derecha-boleto p {
+    font-size: 20px;
 }
 
 .boleto-imagen{
