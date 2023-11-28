@@ -1883,7 +1883,6 @@ select:focus{outline:none;}
     align-items: center;
     justify-content: center;
     padding:5px;
-    gap: 10px;
     border-radius: 15px;
     background: #22092C;
     z-index: 10;
