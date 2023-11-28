@@ -273,6 +273,10 @@ const obtenerListaDeDiferencias = (arrayDeSalidas)=> {
     return listaDiferencias
 }
 
+const esPar = (numero) => {
+    if(numero % 2 == 0) true;
+    else false;
+}
 
 // Funcion que construye los globos de resultados
 const construirGlobos = (rutas, contPadre, contHijo)=> {
@@ -328,9 +332,14 @@ const construirGlobos = (rutas, contPadre, contHijo)=> {
 
 const construirNuevosGlobos = (rutas)=> {
 
+    // GENERACION DE LOS DIVS PRINCIPALES
+
     const contenedorVista = document.createElement('DIV');
+    contenedorVista.classList.add('contenedor-vista')
     const vistaIzquierda = document.createElement('DIV');
+    vistaIzquierda.classList.add('vista-izquierda')
     const vistaDerecha = document.createElement('DIV');
+    vistaDerecha.classList.add('vista-derecha');
 
     // CONSTRUCCION DEL LADO IZQUIERDO
 
@@ -343,24 +352,52 @@ const construirNuevosGlobos = (rutas)=> {
         panelIzquierdoMinutos.innerHTML = horaEnArreglo[3] + horaEnArreglo[4];
     });
     panelIzquierdoTexto.innerHTML = 'HRS'
+    panelIzquierdoHora.classList.add('panel-izquierdo-hora')
+    panelIzquierdoMinutos.classList.add('panel-izquierdo-minutos')
+    panelIzquierdoTexto.classList.add('panel-izquierdo-texto')
     vistaIzquierda.appendChild(panelIzquierdoHora);
     vistaIzquierda.appendChild(panelIzquierdoMinutos);
     vistaIzquierda.appendChild(panelIzquierdoTexto);
 
     // CONSTRUCCION DEL LADO DERECHO
 
+    const vistaDerechaEstado = document.createElement('DIV');
+    vistaDerechaEstado.classList.add('vista-derecha-estado');
+    const vistaDerechaEstadoTexto = document.createElement('P')
+    vistaDerechaEstado.appendChild(vistaDerechaEstadoTexto);
+    vistaDerecha.appendChild(vistaDerechaEstado);
     
+    const vistaDerechaRecorrido = document.createElement('DIV');
+    vistaDerechaRecorrido.classList.add('vista-derecha-recorrido');
+    const paradasContenedor = document.createElement('DIV');
+    paradasContenedor.classList.add('paradas-contenedor');
+    vistaDerecha.appendChild(paradasContenedor);
+
+    const lineaRecorrido2 = document.createElement('SPAN');
+    lineaRecorrido2.classList.add('linearecorrido2');
+
+    for (let i = 0; i < rutas.recorrido.length; i++) {
+        const elemento = rutas.recorrido[i];
+
+        const paradaContenedor = document.createElement('DIV');
+        paradaContenedor.classList.add('parada-contenedor');
+        paradasContenedor.appendChild(paradaContenedor);
+        const paradaImagen = document.createElement('SPAN')
+        paradaImagen.classList.add('parada-imagen')
+        paradaContenedor.appendChild(paradaImagen);
+        const paradaTexto = document.createElement('P');
+        paradaContenedor.appendChild(paradaTexto);
+        if(esPar(i)){paradasContenedor.appendChild(lineaRecorrido2)};
+
+    }
+
+    
+
 
     // AGREGANDO TODO AL CONTENEDOR PRINCIPAL
 
     contenedorVista.appendChild(vistaIzquierda);
     contenedorVista.appendChild(vistaDerecha);
-    
-
-
-
-
-
 
 }
 
