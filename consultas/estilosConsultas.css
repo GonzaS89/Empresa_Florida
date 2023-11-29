@@ -1948,9 +1948,9 @@ select:focus{outline:none;}
     font-size: 20px;
 }
 .boleto-imagen{
-    background-image: url(../Iconos/boleto2.png);
-    width: 50px;
-    height: 50px;
+    background-image: url(../Iconos/boleto-de-autobus.png);
+    width: 40px;
+    height: 40px;
     background-size: cover;
 }
 
