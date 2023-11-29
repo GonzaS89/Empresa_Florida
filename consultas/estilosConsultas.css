@@ -1772,7 +1772,7 @@ select:focus{outline:none;}
 
 .contenedor-vista{
     display: flex;
-    width: 300px;
+    width: 330px;
     box-shadow: 5px 5px 5px 1px;
 }
 
