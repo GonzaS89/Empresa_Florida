@@ -1003,7 +1003,7 @@ select:focus{outline:none;}
     flex-direction: column;
     /* background:var(--rojo2Linear); */
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     width: 80%;
     /* border-top: 2.5px solid rgba(128, 128, 128, 0.159); */
     overflow-y: scroll;
