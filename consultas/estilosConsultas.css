@@ -1715,6 +1715,7 @@ select:focus{outline:none;}
 
 .boton-destino h4 p{
     margin: 0;
+
 }
 
 .contenedor-imagenboton{
@@ -1725,6 +1726,7 @@ select:focus{outline:none;}
 
 .sobre{
     z-index: 10;
+    text-align: center;
 }
 
 
