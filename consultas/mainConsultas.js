@@ -96,7 +96,7 @@ function borrarManito() {
 }
 
 function borrarGlobos() {
-    let arrayResultados = Array.prototype.slice.call(document.getElementsByClassName("resultados"), 0);
+    let arrayResultados = Array.prototype.slice.call(document.getElementsByClassName("contenedor-vista"), 0);
     for (element of arrayResultados) {
         element.remove();
     }
@@ -414,7 +414,7 @@ const construirNuevosGlobos = (rutas)=> {
         const boletoImagen = document.createElement('SPAN');
         boletoImagen.classList.add('boleto-imagen');
         const boletoTexto = document.createElement('P');
-        boletoTexto.innerHTML = definirPrecioBoleto(paradaSeleccionada,destinoSeleccionado);
+        boletoTexto.innerHTML = definirPrecioBoleto(paradaSeleccionada,destinoSeleccionado,servicio.recorrido);
         vistaDerechaBoleto.appendChild(boletoImagen);
         vistaDerechaBoleto.appendChild(boletoTexto);
         vistaDerecha.appendChild(vistaDerechaBoleto);

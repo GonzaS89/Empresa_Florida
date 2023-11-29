@@ -1295,21 +1295,24 @@ select:focus{outline:none;}
 
 
 .indicacion-cont {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
-    height: 60px;
-    width: 200px;
+    height: 50px;
+    width: 150px;
     background:var(--fondoGrisLinear);
-    border-radius: 15px;
-    margin-top: 20px;
+    border-radius: 75px;
+    margin: 20px;
     padding: 20px;
     animation: ondaBoton 1s linear .5s infinite;
+    position: absolute;
+    top: 0;
+    z-index: 50;
 }
 
 .indicacion {
     font-family: var(--fuente4ta);
-    font-size: 20px;
+    font-size: 25px;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
@@ -1432,13 +1435,6 @@ select:focus{outline:none;}
         padding: 20px 10px;
     }
 
-    .indicacion-cont {
-        height: 50px;
-    }
-    
-    .indicacion {
-        font-size: 13px;
-    }
 }
 
 .botonBack_contenedor {
@@ -1785,7 +1781,7 @@ select:focus{outline:none;}
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 55px;
+    font-size: 50px;
 }
 
 .panel-izquierdo-hora{

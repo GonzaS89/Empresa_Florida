@@ -158,40 +158,38 @@ for (let i = 0; i < paradasContenedor.length; i++) {
     $(element).css('transform', 'translateX(40px)');
 }
 
+let todosBotonesDestino;
 todosBotonesParadas.forEach(elemento => {
     elemento.addEventListener('click', ()=> {
 
             efectoPulsado(elemento.parentNode);
-            setTimeout(() => {
+    
                 const referencia = document.querySelector('.contenedor-titulo H1');
-            referencia.innerHTML = 'Elegí el destino donde quieras ir'
-            paradaSeleccionada = elemento.innerHTML;
-            posiblesDestinos = destinosCompartidos(paradaSeleccionada,diaObtenido);
-            botonvolver.classList.add('visible');
-            borrarBotones()
-            crearBotonesConDestinos(posiblesDestinos);
+                referencia.innerHTML = 'Elegí el destino donde quieras ir'
+                paradaSeleccionada = elemento.innerHTML;
+                posiblesDestinos = destinosCompartidos(paradaSeleccionada,diaObtenido);
+                botonvolver.classList.add('visible');
+                borrarBotones()
+                crearBotonesConDestinos(posiblesDestinos);
 
             contenedorOpciones.scrollTo(0, 0);
         
-            const todosBotonesDestino = document.querySelectorAll('.boton-destino');
+            todosBotonesDestino = document.querySelectorAll('.boton-destino');
 
             todosBotonesDestino.forEach(elemento => {
                 elemento.addEventListener('click', ()=> {
+                    $('.indicacion-cont').css('display', 'flex');
                     destinoSeleccionado = elemento.querySelector('P').innerHTML;
-                    console.log(destinoSeleccionado)    
+                    console.log(paradaSeleccionada,destinoSeleccionado)    
                 
                 efectoPulsado(elemento);
                 listaViajesObtenida = determinarRuta(diaObtenido,paradaSeleccionada,destinoSeleccionado);
-                
-                // listaViajesObtenida.forEach(element => {
-                //     console.log(element.recorrido)
-                // });
+                console.log(listaViajesObtenida)
+                construirNuevosGlobos(listaViajesObtenida)
                 listaDeSalidas = obtenerListaDeSalidas(listaViajesObtenida);
                 listaDeDiferencias = obtenerListaDeDiferencias(listaDeSalidas);
-                // construirGlobos(listaViajesObtenida,resultadoscontainer,resultadoscont);
                 construirNuevosGlobos(listaViajesObtenida);
                 indiceObtenido = obtenerIndiceBusqueda(listaDeDiferencias);
-                // contenidoDeResultados(listaViajesObtenida,listaDeDiferencias);
                 agregarEfectoResultados(indiceObtenido);
                 $('.resultados').css('display', 'flex');
                 $('.mensaje2').css('display', 'flex');
@@ -202,9 +200,8 @@ todosBotonesParadas.forEach(elemento => {
                 }
                 irAlObjeto(indiceObtenido);
             })
-        
         });
-            }, 500);
+    
    })
 });
 
@@ -224,16 +221,18 @@ resultadoscont.addEventListener('touchmove', () => {
 })
 
 indicacioncont.addEventListener('click', () => {
-    destinoSeleccionado = undefined
+    $('.indicacion-cont').css('display', 'none');
     mensaje2.classList.replace('mensajeAparece', 'mensajeIrse')
     scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
     scrollcont.children[0].classList.remove('manitoAnimacionArriba');
     scrollcont.children[0].classList.remove('manitoAnimacionCentro');
     resultadoscont.children[0].classList.remove('resultadosOpcion2');
     resultadoscont.classList.replace('opacarFondo','normalizarFondo');
+    borrarGlobos()
+
         
     setTimeout( ()=> {
-        $('.mensaje2').css('display', 'none'),borrarGlobos(),
+        $('.mensaje2').css('display', 'none'),
         resultadoscont.classList.remove('normalizarFondo'),
         borrarManito();
     },1000)
