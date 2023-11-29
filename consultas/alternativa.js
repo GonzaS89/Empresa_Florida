@@ -147,6 +147,24 @@ botonvolver.addEventListener('click', ()=> {
     location.reload()
 })
 
+const paradasContenedor = document.querySelectorAll('.parada-contenedor');
+const lineasRecorrido = document.querySelectorAll('.linearecorrido2');
+
+for (let i = 0; i < paradasContenedor.length; i++) {
+    const element = paradasContenedor[i];
+    if(i > 0 && i < paradasContenedor.length - 1) 
+    $(element).css('transform', 'translateX(-40px)');
+    if(i > 0 && i % 2 == 0) 
+    $(element).css('transform', 'translateX(40px)');
+}
+
+for (let i = 0; i < lineasRecorrido.length; i++) {
+    const element = lineasRecorrido[i];
+    if(i % 2 == 0) $(element).css('transform', 'rotate(145deg)');
+    else $(element).css('transform', 'rotate(35deg)');
+    
+}
+
 todosBotonesParadas.forEach(elemento => {
    elemento.addEventListener('click', ()=> {
 
@@ -174,13 +192,16 @@ todosBotonesParadas.forEach(elemento => {
                 
                 efectoPulsado(elemento);
                 listaViajesObtenida = determinarRuta(diaObtenido,paradaSeleccionada,destinoSeleccionado);
-                listaViajesObtenida.forEach(element => {
-                    console.log(element.recorrido)
-                });
+                
+                // listaViajesObtenida.forEach(element => {
+                //     console.log(element.recorrido)
+                // });
                 listaDeSalidas = obtenerListaDeSalidas(listaViajesObtenida);
-                listaDeDiferencias = obtenerListaDeDiferencias(listaDeSalidas);construirGlobos(listaViajesObtenida,resultadoscontainer,resultadoscont);
+                listaDeDiferencias = obtenerListaDeDiferencias(listaDeSalidas);
+                // construirGlobos(listaViajesObtenida,resultadoscontainer,resultadoscont);
+                construirNuevosGlobos(listaViajesObtenida);
                 indiceObtenido = obtenerIndiceBusqueda(listaDeDiferencias);
-                contenidoDeResultados(listaViajesObtenida,listaDeDiferencias);
+                // contenidoDeResultados(listaViajesObtenida,listaDeDiferencias);
                 agregarEfectoResultados(indiceObtenido);
                 $('.resultados').css('display', 'flex');
                 $('.mensaje2').css('display', 'flex');
@@ -227,28 +248,6 @@ indicacioncont.addEventListener('click', () => {
         borrarManito();
     },1000)
 })
-
-
-const paradasContenedor = document.querySelectorAll('.parada-contenedor');
-const lineasRecorrido = document.querySelectorAll('.linearecorrido2');
-
-for (let i = 0; i < paradasContenedor.length; i++) {
-    const element = paradasContenedor[i];
-    if(i > 0 && i < paradasContenedor.length - 1) 
-    $(element).css('transform', 'translateX(-40px)');
-    if(i > 0 && i % 2 == 0) 
-    $(element).css('transform', 'translateX(40px)');
-}
-
-for (let i = 0; i < lineasRecorrido.length; i++) {
-    const element = lineasRecorrido[i];
-    if(i % 2 == 0) $(element).css('transform', 'rotate(145deg)');
-    else $(element).css('transform', 'rotate(35deg)');
-    
-}
-
-
-
 
 
 

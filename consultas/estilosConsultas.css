@@ -1008,6 +1008,7 @@ select:focus{outline:none;}
     /* border-top: 2.5px solid rgba(128, 128, 128, 0.159); */
     overflow-y: scroll;
     margin: 10px auto;
+    height: 100vh;
     /* border-radius: 20px; */
     
 }
@@ -1771,7 +1772,7 @@ select:focus{outline:none;}
 
 .contenedor-vista{
     display: flex;
-    width: 350px;
+    width: 300px;
     box-shadow: 5px 5px 5px 1px;
 }
 
@@ -1817,7 +1818,7 @@ select:focus{outline:none;}
 
 .vista-derecha p{
     font-family: var(--fuenteSec);
-    font-size: 17.5px;
+    font-size: 10px;
     text-align: center;
 }
 
@@ -1872,7 +1873,6 @@ select:focus{outline:none;}
     gap: 2px;
     flex-direction: column;
     z-index: 10;
-    position: a;
 }
 
 .parada-contenedor{
