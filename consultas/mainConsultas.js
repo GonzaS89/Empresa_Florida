@@ -351,11 +351,9 @@ const construirNuevosGlobos = (rutas)=> {
         const panelIzquierdoMinutos = document.createElement('P');
         const panelIzquierdoTexto = document.createElement('P');
 
-        rutas.forEach(element => {
-            let horaEnArreglo = element.nombre.split('');
-            panelIzquierdoHora.innerHTML = horaEnArreglo[0] + horaEnArreglo[1]
-            panelIzquierdoMinutos.innerHTML = horaEnArreglo[3] + horaEnArreglo[4];
-        });
+        const horaEnString = servicio.nombre.split('');
+        panelIzquierdoHora.innerHTML = horaEnString[0] + horaEnString[1];
+        panelIzquierdoMinutos.innerHTML = horaEnString[3] + horaEnString[4];
 
         panelIzquierdoTexto.innerHTML = 'HRS'
         panelIzquierdoHora.classList.add('panel-izquierdo-hora')
@@ -379,14 +377,17 @@ const construirNuevosGlobos = (rutas)=> {
         paradasContenedor.classList.add('paradas-contenedor');
         vistaDerecha.appendChild(paradasContenedor);
 
-        const lineaRecorrido2 = document.createElement('SPAN');
-        lineaRecorrido2.classList.add('linearecorrido2');
+        
 
         for (let i = 0; i < servicio.recorrido.length; i++) {
             const localidad = servicio.recorrido[i];
 
             const paradaContenedor = document.createElement('DIV');
             paradaContenedor.classList.add('parada-contenedor');
+            if(i % 2 == 0) 
+            $(paradaContenedor).css('transform', 'translateX(25px)');
+            else 
+            $(paradaContenedor).css('transform', 'translateX(-25px)');
             paradasContenedor.appendChild(paradaContenedor);
             const paradaImagen = document.createElement('SPAN')
             paradaImagen.classList.add('parada-imagen')
@@ -394,8 +395,24 @@ const construirNuevosGlobos = (rutas)=> {
             const paradaTexto = document.createElement('P');
             paradaContenedor.appendChild(paradaTexto);
             paradaTexto.innerHTML = localidad;
-            if(esPar(i)){paradasContenedor.appendChild(lineaRecorrido2)};
+            if(i >= 0 && i < servicio.recorrido.length - 1){
+                const lineaRecorrido2 = document.createElement('SPAN');
+                lineaRecorrido2.classList.add('linearecorrido2');
+                if(i % 2 == 0) $(lineaRecorrido2).css('transform', 'rotate(145deg)');
+                else $(lineaRecorrido2).css('transform', 'rotate(35deg)');
+                paradasContenedor.appendChild(lineaRecorrido2)
+            }
         }
+
+        const vistaDerechaBoleto = document.createElement('DIV');
+        vistaDerechaBoleto.classList.add('vista-derecha-boleto');
+        const boletoImagen = document.createElement('SPAN');
+        boletoImagen.classList.add('boleto-imagen');
+        const boletoTexto = document.createElement('P');
+        boletoTexto.innerHTML = '$ 230'
+        vistaDerechaBoleto.appendChild(boletoImagen);
+        vistaDerechaBoleto.appendChild(boletoTexto);
+        vistaDerecha.appendChild(vistaDerechaBoleto);
 
         // AGREGANDO TODO AL CONTENEDOR PRINCIPAL
 

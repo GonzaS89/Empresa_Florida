@@ -158,13 +158,6 @@ for (let i = 0; i < paradasContenedor.length; i++) {
     $(element).css('transform', 'translateX(40px)');
 }
 
-for (let i = 0; i < lineasRecorrido.length; i++) {
-    const element = lineasRecorrido[i];
-    if(i % 2 == 0) $(element).css('transform', 'rotate(145deg)');
-    else $(element).css('transform', 'rotate(35deg)');
-    
-}
-
 todosBotonesParadas.forEach(elemento => {
    elemento.addEventListener('click', ()=> {
 
