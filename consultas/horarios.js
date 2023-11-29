@@ -3610,11 +3610,7 @@ const terminalLasCejasLaV = [
  "salida": 14.3,
  "recorrido": termiRalosCejas
  },
- {
- "nombre": "15:45",
- "salida": 15.45,
- "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
- },
+
  {
  "nombre": "18:30",
  "salida": 18.3,
