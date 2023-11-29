@@ -330,6 +330,8 @@ const construirGlobos = (rutas, contPadre, contHijo)=> {
     }
 }
 
+
+
 const construirNuevosGlobos = (rutas)=> {
 
     // GENERACION DE LOS DIVS PRINCIPALES
@@ -384,6 +386,9 @@ const construirNuevosGlobos = (rutas)=> {
 
             const paradaContenedor = document.createElement('DIV');
             paradaContenedor.classList.add('parada-contenedor');
+            if(localidad == paradaSeleccionada || localidad == destinoSeleccionado){
+                paradaContenedor.classList.add('parada-seleccionada')
+            }
             if(i % 2 == 0) 
             $(paradaContenedor).css('transform', 'translateX(25px)');
             else 
@@ -409,7 +414,7 @@ const construirNuevosGlobos = (rutas)=> {
         const boletoImagen = document.createElement('SPAN');
         boletoImagen.classList.add('boleto-imagen');
         const boletoTexto = document.createElement('P');
-        boletoTexto.innerHTML = '$ 230'
+        boletoTexto.innerHTML = definirPrecioBoleto(paradaSeleccionada,destinoSeleccionado);
         vistaDerechaBoleto.appendChild(boletoImagen);
         vistaDerechaBoleto.appendChild(boletoTexto);
         vistaDerecha.appendChild(vistaDerechaBoleto);

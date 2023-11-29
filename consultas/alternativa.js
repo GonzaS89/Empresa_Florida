@@ -159,24 +159,21 @@ for (let i = 0; i < paradasContenedor.length; i++) {
 }
 
 todosBotonesParadas.forEach(elemento => {
-   elemento.addEventListener('click', ()=> {
+    elemento.addEventListener('click', ()=> {
 
             efectoPulsado(elemento.parentNode);
             setTimeout(() => {
                 const referencia = document.querySelector('.contenedor-titulo H1');
             referencia.innerHTML = 'Elegí el destino donde quieras ir'
             paradaSeleccionada = elemento.innerHTML;
-            console.log(paradaSeleccionada)
             posiblesDestinos = destinosCompartidos(paradaSeleccionada,diaObtenido);
             botonvolver.classList.add('visible');
             borrarBotones()
             crearBotonesConDestinos(posiblesDestinos);
-       
+
             contenedorOpciones.scrollTo(0, 0);
         
             const todosBotonesDestino = document.querySelectorAll('.boton-destino');
-
-            
 
             todosBotonesDestino.forEach(elemento => {
                 elemento.addEventListener('click', ()=> {
@@ -208,10 +205,10 @@ todosBotonesParadas.forEach(elemento => {
         
         });
             }, 500);
-            
-        
    })
 });
+
+
 
 resultadoscont.addEventListener('touchmove', () => {
 
