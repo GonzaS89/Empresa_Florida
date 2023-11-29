@@ -1708,7 +1708,7 @@ select:focus{outline:none;}
 .boton-destino{
     flex-direction: column;
     width: 150px;
-    font-size: 15px;
+    font-size:13px;
     height: 100px;
     overflow: hidden;
 }
@@ -1729,7 +1729,6 @@ select:focus{outline:none;}
     text-align: center;
 }
 
-
 .imagen-boton, .imagen-boton-destino{
     background-image: url(../Iconos/parada-colectivo.png);
     width: 40px;
@@ -1741,20 +1740,20 @@ select:focus{outline:none;}
 }
 
 .imagen-boton-destino{
-    background-image: url(../Iconos/flecha5.png);
+    background-image: url(../Iconos/autobus.png);
     animation: none;
     width: 25px;
     height: 25px;
     z-index: 5;
-    animation: moverflecharosa 1s infinite;
+    animation: moverflecharosa 5s infinite;
 }
 
 @keyframes moverflecharosa {
     0%{
-        transform: rotate(-90deg) translateX(25%);
+        transform: translateY(-25%);
     }
     100%{
-         transform: rotate(-90deg) translateX(-25%)
+         transform: translateY(25%)
     }
 }
 
