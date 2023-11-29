@@ -93,7 +93,7 @@ body::-webkit-scrollbar-track {
     /* justify-content: flex-start; */
     align-items: center;
     justify-content: center;
-    background:var(--rojo2Linear);
+    background:#363062;
     width: 50%;
     border-radius: 50px;
     margin: 30px auto;
@@ -1187,7 +1187,7 @@ select:focus{outline:none;}
     align-items: center;
     position: fixed;
     overflow: scroll;
-    background: var(--rojo2Linear);
+    background: #363062;
     height: 100%;
     width: 100%;
     top: 0;
@@ -1695,12 +1695,12 @@ select:focus{outline:none;}
     border: none;
     text-transform: uppercase;
     font-size: 14px;
-    color: white;
+    color: black;
     font-weight: bold;
     text-align: right;
     font-family: var(--fuente4ta);
     transform: scale(0);
-    background: var(--fondoAzulFuerte);
+    background: #F5F5F5;
     box-shadow: 10px 10px 5px 1px rgba(54, 7, 7, 0.575);
     cursor: pointer;
 }
@@ -1887,7 +1887,7 @@ select:focus{outline:none;}
 }
 
 .parada-seleccionada {
-    animation: parada-seleccion 1s forwards;
+    animation: parada-seleccion 1s .5s forwards;
 }
 
 @keyframes parada-seleccion {
