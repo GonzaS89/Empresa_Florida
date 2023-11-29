@@ -1670,7 +1670,7 @@ select:focus{outline:none;}
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    height: 500px;
+    height: 600px;
     gap: 30px;
     overflow-y: scroll;
     margin-top: 30px;
