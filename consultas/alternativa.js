@@ -185,7 +185,6 @@ todosBotonesParadas.forEach(elemento => {
                 efectoPulsado(elemento);
                 listaViajesObtenida = determinarRuta(diaObtenido,paradaSeleccionada,destinoSeleccionado);
                 console.log(listaViajesObtenida)
-                construirNuevosGlobos(listaViajesObtenida)
                 listaDeSalidas = obtenerListaDeSalidas(listaViajesObtenida);
                 listaDeDiferencias = obtenerListaDeDiferencias(listaDeSalidas);
                 construirNuevosGlobos(listaViajesObtenida);
