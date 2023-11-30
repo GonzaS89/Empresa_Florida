@@ -34,7 +34,7 @@ const definirPrecioBoleto = (inicio, final, recorrido)=> {
 
     if(inicio == bandaRS){
         if(final == alderetes || final == cochuchal || final == cevilPozo || final == terminal){return codigo_06}
-        else if(final == posse)
+        else if(final == posse){return codigo_08}
     }
 
     if(inicio == cevilPozo){
