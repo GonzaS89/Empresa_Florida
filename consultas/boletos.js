@@ -62,6 +62,4 @@ const definirPrecioBoleto = (inicio, final, recorrido)=> {
             if(final == florida || final == cochuchal || final == talar || final == paraiso || final == posse){return codigo_06}
             else if(final == alderetes || final == col4Luisiana || final == llona || final == cevilPozo){return codigo_08}
         }
-
-
     }
