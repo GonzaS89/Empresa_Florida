@@ -22,10 +22,33 @@ const codigo_41 = '830';
 const codigo_44 = '920';
 
 const definirPrecioBoleto = (inicio, final, recorrido)=> {
-    if(inicio == florida && (final == posse || final == paraiso) || (inicio == paraiso || inicio == posse) && final == florida){return codigo_06}
-    if(inicio == florida && final == alderetes || inicio == alderetes && final == florida) return codigo_08
-    if(inicio == florida && final == terminal || inicio == terminal && final == florida){
-        if(recorrido.includes(posse)){return codigo_21}
-        else return codigo_16
-    }    
+
+   
+
+    if(inicio == alderetes){
+         // DEFINIENDO CODIGO 06
+        if(final == bandaRS || final == cochuchal || final == talar){return codigo_06}
+    }
+
+    if(inicio == bandaRS){
+        if(final == alderetes || final == cochuchal || final == cevilPozo){return codigo_06}
+    }
+
+    if(inicio == cevilPozo){
+        if(final == llona || final == posse || final == cruzAlta || final == filaMedio || final == filaOrilla || final == bandaRS){return codigo_06}
+    }
+
+    if(inicio == col4Luisiana){
+        if(final == fincaMayo || final == alabama){return codigo_06}
+    }
+
+    if(inicio == filaOrilla || inicio == filaMedio){
+        if(final == llona || final == cevilPozo || final == posse){return codigo_06}
+    }
+
+    if(inicio == fincaMayo){if(final == marta){return codigo_06}}
+    
+    if(inicio == florida){
+        if(final == posse || final == paraiso || final == talar || final == cochuchal || final == fortin){return codigo_06}
+    }
 }
