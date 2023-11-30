@@ -271,7 +271,7 @@ const horariosLvFloAl = [
  {
  "nombre": "12:30",
  "salida": 12.3,
- "recorrido": [perez,col4Luisiana,bCancha,florida,talar,alderetes,alternativa,terminal]
+ "recorrido": [perez,col4Luisiana,bCancha,florida,talar,alternativa,terminal]
  },
  {
  "nombre": "13:15",
