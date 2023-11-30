@@ -28,10 +28,13 @@ const definirPrecioBoleto = (inicio, final, recorrido)=> {
     if(inicio == alderetes){
          // DEFINIENDO CODIGO 06
         if(final == bandaRS || final == cochuchal || final == talar){return codigo_06}
+        //DEFINICIENDO CODIGO 08
+        if(final == florida || final == terminal){return codigo_08}
     }
 
     if(inicio == bandaRS){
-        if(final == alderetes || final == cochuchal || final == cevilPozo){return codigo_06}
+        if(final == alderetes || final == cochuchal || final == cevilPozo || final == terminal){return codigo_06}
+        else if(final == posse)
     }
 
     if(inicio == cevilPozo){
@@ -50,5 +53,6 @@ const definirPrecioBoleto = (inicio, final, recorrido)=> {
     
     if(inicio == florida){
         if(final == posse || final == paraiso || final == talar || final == cochuchal || final == fortin){return codigo_06}
+        else if(final == alderetes || final == col4Luisiana){return codigo_08}
     }
 }
