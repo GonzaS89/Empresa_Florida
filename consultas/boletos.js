@@ -42,6 +42,7 @@ const definirPrecioBoleto = (inicio, final, recorrido)=> {
 
         if(inicio == col4Luisiana){
             if(final == fincaMayo || final == alabama){return codigo_06}
+            else if(final == florida || final == paraiso || final == posse || final == cochuchal || final == talar){return codigo_08}
         }
 
         if(inicio == filaOrilla || inicio == filaMedio){
@@ -55,6 +56,11 @@ const definirPrecioBoleto = (inicio, final, recorrido)=> {
             else if(final == alderetes || final == col4Luisiana || final == llona || final == cevilPozo){return codigo_08}
             else if(final == terminal) 
                 if(recorrido.includes(posse)){return codigo_21} else {return codigo_16}
+        }
+
+        if(inicio == fortin){
+            if(final == florida || final == cochuchal || final == talar || final == paraiso || final == posse){return codigo_06}
+            else if(final == alderetes || final == col4Luisiana || final == llona || final == cevilPozo){return codigo_08}
         }
 
 
