@@ -135,7 +135,7 @@ const sieteACejas = [sieteAbril,cejas,llona,cevilPozo,bandaRS,terminal];
 
 // Lista con todos las localidades de la
 
-const listaTodosDestino = [florida,alderetes,col4Luisiana,bandaRS,talar,cochuchal,fortin,fincaMayo,perez,marta,cevilPozo,posse,paraiso,llona,filaMedio,filaOrilla,ralos,alabama,cejas,sieteAbril,terminal];
+const listaTodosDestino = [florida,alderetes,col4Luisiana,bandaRS,talar,cochuchal,fortin,fincaMayo,perez,marta,cevilPozo,posse,paraiso,llona,filaMedio,filaOrilla,ralos,alabama,cejas,sieteAbril,terminal,cruzAlta];
 
 const ordenarLista = (array) => {
    array.sort((elemento, elemento2) => {

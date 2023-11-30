@@ -1,5 +1,5 @@
 const codigo_06 = '$ 100'; // Mínimo
-const codigo_08 = '130';
+const codigo_08 = '$ 130';
 const codigo_10 = '140';
 const codigo_11 = '160';
 const codigo_12 = '170';
@@ -23,6 +23,7 @@ const codigo_44 = '920';
 
 const definirPrecioBoleto = (inicio, final, recorrido)=> {
     if(inicio == florida && (final == posse || final == paraiso) || (inicio == paraiso || inicio == posse) && final == florida){return codigo_06}
+    if(inicio == florida && final == alderetes || inicio == alderetes && final == florida) return codigo_08
     if(inicio == florida && final == terminal || inicio == terminal && final == florida){
         if(recorrido.includes(posse)){return codigo_21}
         else return codigo_16
