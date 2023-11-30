@@ -23,40 +23,39 @@ const codigo_44 = '920';
 
 const definirPrecioBoleto = (inicio, final, recorrido)=> {
 
-   
 
-    if(inicio == alderetes){
-         // DEFINIENDO CODIGO 06
-        if(final == bandaRS || final == cochuchal || final == talar){return codigo_06}
+        if(inicio == alderetes){
+            if(final == bandaRS || final == cochuchal || final == talar){return codigo_06}
         //DEFINICIENDO CODIGO 08
-        if(final == florida || final == terminal){return codigo_08}
-    }
+            if(final == florida || final == terminal){return codigo_08}
+        }
 
-    if(inicio == bandaRS){
-        if(final == alderetes || final == cochuchal || final == cevilPozo || final == terminal){return codigo_06}
-        else if(final == posse){return codigo_08}
-    }
+        if(inicio == bandaRS){
+            if(final == alderetes || final == cochuchal || final == cevilPozo || final == terminal){return codigo_06}
+            else if(final == posse){return codigo_08}
+        }
 
-    if(inicio == cevilPozo){
-        if(final == llona || final == posse || final == cruzAlta || final == filaMedio || final == filaOrilla || final == bandaRS){return codigo_06}
-    }
+        if(inicio == cevilPozo){
+            if(final == llona || final == posse || final == cruzAlta || final == filaMedio || final == filaOrilla || final == bandaRS){return codigo_06}
+            else if(final == paraiso || final == florida) {return codigo_08}
+        }
 
-    if(inicio == col4Luisiana){
-        if(final == fincaMayo || final == alabama){return codigo_06}
-    }
+        if(inicio == col4Luisiana){
+            if(final == fincaMayo || final == alabama){return codigo_06}
+        }
 
-    if(inicio == filaOrilla || inicio == filaMedio){
-        if(final == llona || final == cevilPozo || final == posse){return codigo_06}
-    }
+        if(inicio == filaOrilla || inicio == filaMedio){
+            if(final == llona || final == cevilPozo || final == posse){return codigo_06}
+        }
 
-    if(inicio == fincaMayo){if(final == marta){return codigo_06}}
+        if(inicio == fincaMayo){if(final == marta){return codigo_06}}
     
-    if(inicio == florida){
-        if(final == posse || final == paraiso || final == talar || final == cochuchal || final == fortin){return codigo_06}
-        else if(final == alderetes || final == col4Luisiana){return codigo_08}
-        else if(final == terminal) 
-        if(recorrido.includes(posse))
-        {return codigo_21} 
-        else {return codigo_16}
-    }
+        if(inicio == florida){
+            if(final == posse || final == paraiso || final == talar || final == cochuchal || final == fortin){return codigo_06}
+            else if(final == alderetes || final == col4Luisiana || final == llona || final == cevilPozo){return codigo_08}
+            else if(final == terminal) 
+                if(recorrido.includes(posse)){return codigo_21} else {return codigo_16}
+        }
+
+
     }

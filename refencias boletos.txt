@@ -6,7 +6,7 @@ Alderetes → Talar / Cochuchal / Banda
 Banda → Alderetes / Cochuchal / Cevil Pozo
 Cevil Pozo → Llona / Posse / Cruz Alta / Fila del Medio /  Fila de la orilla / Banda
 Colonia 4 → Finca Mayo / Alabama
-Fila de la orilla → Llona / Cevil Pozo / Posse / Paraiso
+Fila de la orilla → Llona / Cevil Pozo / Posse 
 Fila medio → Posse / Cevil Pozo
 Finca Mayo → Marta
 Florida → Posse / Paraiso / Talar / Cochuchal / Fortin
