@@ -56,7 +56,7 @@ const definirPrecioBoleto = (inicio, final, recorrido)=> {
         else if(final == alderetes || final == col4Luisiana){return codigo_08}
         else if(final == terminal) 
         if(recorrido.includes(posse))
-        {return codigo_16} 
-        else {return codigo_21}
+        {return codigo_21} 
+        else {return codigo_16}
     }
     }
