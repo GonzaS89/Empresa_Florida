@@ -1594,32 +1594,30 @@ select {
 }
 
 .contenedor-filtro{
-    width: 200px;
-    background: #f5f5f580;
+    background: #f5f5f530;
     border-radius: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    padding: 2px;
+    width: 230px;
+    padding: 10px;
     position: absolute;
     pointer-events: none;
+    margin-top: 5px;
+
+    && p{
+        text-transform: uppercase;
+        font-size: 15px;
+        color: white;
+    }
 }
 
 
 .imagen-filtro-dia {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     background-image: url(../Iconos/fin-de-semana.png);
-    background-size:50%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.imagen-filtro-hora {
-    width: 50px;
-    height: 50px;
-    background-image: url(../Iconos/reloj.png);
-    background-size:50%;
+    background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
 }
