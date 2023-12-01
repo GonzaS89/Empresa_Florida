@@ -16,6 +16,10 @@ function borrarBotones() {
 const textoFiltroDia = document.querySelector('.contenedor-filtro p');
 const arregloSelectorDeDias = document.querySelector('.selector')
 
+
+let diaSeleccionado;
+
+
 const obtenerDia = ()=> {
     if(dia == 0) return 0
     else if(dia >= 1 & dia <= 5) return 1
@@ -25,7 +29,7 @@ const obtenerDia = ()=> {
 diaObtenido = obtenerDia();
 
 if(diaObtenido == 0){textoFiltroDia.innerHTML = 'Domingos'}
-if(diaObtenido == 1){textoFiltroDia.innerHTML = 'Lunes a Viernes'}
+if(diaObtenido == 1){textoFiltroDia.innerHTML = 'Lunes a Viernes';}
 if(diaObtenido == 2) {textoFiltroDia.innerHTML = 'Sábados'} 
 
 const destinosCompartidos = (opcion,dia)=> {
