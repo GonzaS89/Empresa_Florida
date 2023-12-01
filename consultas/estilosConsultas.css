@@ -1596,7 +1596,7 @@ select {
 .contenedor-filtro{
     background: #f5f5f530;
     border-radius: 20px;
-    display: flex;
+    display: none;
     justify-content: space-around;
     align-items: center;
     width: 230px;
