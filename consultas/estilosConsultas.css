@@ -1580,6 +1580,7 @@ select {
 }
 
 .selector{
+    display: none;
     position: relative;
     filter: opacity(0);
 }
