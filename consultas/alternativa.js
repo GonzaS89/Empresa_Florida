@@ -13,16 +13,9 @@ function borrarBotones() {
     }
 }
 
+const contenedorFiltros = document.querySelector('.contenedornuevo')
 const textoFiltroDia = document.querySelector('.contenedor-filtro p');
 const arregloSelectorDeDias = document.querySelector('.selector')
-
-setInterval(() => {
-    for (let i = 0; i < arregloSelectorDeDias.length; i++) {
-        const element = arregloSelectorDeDias[i];
-        if(element.selected) 
-        
-    }
-}, 500);
 
 
 let diaSeleccionado;
@@ -39,6 +32,8 @@ diaObtenido = obtenerDia();
 if(diaObtenido == 0){textoFiltroDia.innerHTML = 'Domingos'}
 if(diaObtenido == 1){textoFiltroDia.innerHTML = 'Lunes a Viernes';}
 if(diaObtenido == 2) {textoFiltroDia.innerHTML = 'Sábados'} 
+
+
 
 const destinosCompartidos = (opcion,dia)=> {
     let listaDestinos = [];
@@ -180,6 +175,8 @@ for (let i = 0; i < paradasContenedor.length; i++) {
 let todosBotonesDestino;
 todosBotonesParadas.forEach(elemento => {
     elemento.addEventListener('click', ()=> {
+
+            $(contenedorFiltros).css('display', 'none')
 
             efectoPulsado(elemento.parentNode);
     
