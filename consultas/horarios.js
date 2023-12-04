@@ -2726,11 +2726,11 @@ const terminalRalosLaV = [
  "salida": 10.4,
  "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,lolitaS]
  },
- {
- "nombre": "11:00",
- "salida": 11,
- "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas]
- },
+//  {
+//  "nombre": "11:00",
+//  "salida": 11,
+//  "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas]
+//  },
  {
  "nombre": "11:15",
  "salida": 11.15,
@@ -2802,11 +2802,11 @@ const terminalRalosLaV = [
  "salida": 14.3,
  "recorrido": termiRalosVillaT
  },
- {
-    "nombre": "14:30",
-    "salida": 14.3,
-    "recorrido": termiRalosCejas
-    },
+//  {
+//     "nombre": "14:30",
+//     "salida": 14.3,
+//     "recorrido": termiRalosCejas
+//     },
  {
  "nombre": "15:00",
  "salida": 15,
@@ -2867,11 +2867,11 @@ const terminalRalosLaV = [
  "salida": 18.3,
  "recorrido": termiRalosVillaT
  },
- {
-    "nombre": "18:30",
-    "salida": 18.3,
-    "recorrido": termiRalosCejas
-    },
+//  {
+//     "nombre": "18:30",
+//     "salida": 18.3,
+//     "recorrido": termiRalosCejas
+//     },
  {
  "nombre": "19:00",
  "salida": 19,
@@ -2887,11 +2887,11 @@ const terminalRalosLaV = [
  "salida": 19.3,
  "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,bTrigal]
  },
- {
- "nombre": "20:00",
- "salida": 20,
- "recorrido": termiRalosCejas
- },
+//  {
+//  "nombre": "20:00",
+//  "salida": 20,
+//  "recorrido": termiRalosCejas
+//  },
  {
     "nombre": "20:00",
     "salida": 20,
@@ -2944,12 +2944,12 @@ const terminalRalosS = [
  "salida": 6,
  "recorrido": termiRalos
  },
- {
- "nombre": "06.30",
- "salida": 6.3,
- "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,lolitaS,cejas]
- },
- {
+ 
+//  "nombre": "06.30",
+//  "salida": 6.3,
+//  "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,lolitaS,cejas]
+//  },
+{
  "nombre": "07:00",
  "salida": 7,
  "recorrido": termiRalosMayoAlabama
@@ -2974,11 +2974,12 @@ const terminalRalosS = [
  "salida": 10,
  "recorrido": termiRalosMayoAlabama
  },
- {
- "nombre": "10:40",
- "salida": 10.4,
- "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,lolitaS,cejas]
- },
+ 
+
+//  { "nombre": "10:40",
+//  "salida": 10.4,
+//  "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,lolitaS,cejas]
+//  },
  {
  "nombre": "11:00",
  "salida": 11,
@@ -3024,11 +3025,11 @@ const terminalRalosS = [
  "salida": 14.3,
  "recorrido": termiRalosVillaT
  },
- {
-    "nombre": "14:30",
-    "salida": 14.3,
-    "recorrido": termiRalosCejas
-    },
+//  {
+//     "nombre": "14:30",
+//     "salida": 14.3,
+//     "recorrido": termiRalosCejas
+//     },
  {
  "nombre": "15:15",
  "salida": 15.15,
@@ -3069,11 +3070,11 @@ const terminalRalosS = [
     "salida": 18,
     "recorrido": termiRalos
     },
- {
- "nombre": "18:30",
- "salida": 18.3,
- "recorrido": termiRalosCejas
- },
+//  {
+//  "nombre": "18:30",
+//  "salida": 18.3,
+//  "recorrido": termiRalosCejas
+//  },
  {
  "nombre": "19:00",
  "salida": 19,
@@ -3137,11 +3138,11 @@ const terminalRalosD = [
  "salida": 6,
  "recorrido": termiRalos
  },
- {
- "nombre": "06.30",
- "salida": 6.3,
- "recorrido": termiRalosCejas
- },
+//  {
+//  "nombre": "06.30",
+//  "salida": 6.3,
+//  "recorrido": termiRalosCejas
+//  },
  {
  "nombre": "07:00",
  "salida": 7,
@@ -3162,11 +3163,11 @@ const terminalRalosD = [
  "salida": 10,
  "recorrido": termiRalosMayoAlabama
  },
- {
- "nombre": "10:30",
- "salida": 10.3,
- "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,lolitaS,cejas]
- },
+//  {
+//  "nombre": "10:30",
+//  "salida": 10.3,
+//  "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,lolitaS,cejas]
+//  },
  {
  "nombre": "11:00",
  "salida": 11,
@@ -3192,11 +3193,11 @@ const terminalRalosD = [
  "salida": 14.3,
  "recorrido": termiRalosVillaT
  },
- {
- "nombre": "15:00",
- "salida": 15,
- "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
- },
+//  {
+//  "nombre": "15:00",
+//  "salida": 15,
+//  "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
+//  },
  {
  "nombre": "15:30",
  "salida": 15.3,
@@ -3227,11 +3228,11 @@ const terminalRalosD = [
  "salida": 18.25,
  "recorrido": termiRalos
  },
- {
- "nombre": "18:30",
- "salida": 18.3,
- "recorrido": termiRalosCejas
- },
+//  {
+//  "nombre": "18:30",
+//  "salida": 18.3,
+//  "recorrido": termiRalosCejas
+//  },
  {
     "nombre": "18:30",
     "salida": 18.3,
@@ -3257,11 +3258,11 @@ const terminalRalosD = [
  "salida": 20,
  "recorrido": termiRalos,
  },
- {
- "nombre": "20:30",
- "salida": 20.3,
- "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,fincaMayo,cejas]
- },
+//  {
+//  "nombre": "20:30",
+//  "salida": 20.3,
+//  "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,fincaMayo,cejas]
+//  },
  {
  "nombre": "21:00",
  "salida": 21,
@@ -3580,11 +3581,11 @@ const lasCejasTerminalD = [
  },
 ]
 const terminalLasCejasLaV = [
- {
- "nombre": "06:15",
- "salida": 6.15,
- "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
- },
+//  {
+//  "nombre": "06:15",
+//  "salida": 6.15,
+//  "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
+//  },
  {
  "nombre": "10:30",
  "salida": 10.3,
@@ -3600,11 +3601,11 @@ const terminalLasCejasLaV = [
  "salida": 12.3,
  "recorrido": termiRalosCejas
  },
- {
-    "nombre": "12:30",
-    "salida": 12.3,
-    "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
-    },
+//  {
+//     "nombre": "12:30",
+//     "salida": 12.3,
+//     "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
+//     },
  {
  "nombre": "14:30",
  "salida": 14.3,
@@ -3638,11 +3639,11 @@ const terminalLasCejasS = [
  "salida": 14.3,
  "recorrido": termiRalosCejas
  },
- {
- "nombre": "15:45",
- "salida": 15.45,
- "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
- },
+//  {
+//  "nombre": "15:45",
+//  "salida": 15.45,
+//  "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
+//  },
  {
  "nombre": "18:30",
  "salida": 18.3,
@@ -3665,11 +3666,11 @@ const terminalLasCejasD = [
  "salida": 10.3,
  "recorrido": termiRalosCejas
  },
- {
- "nombre": "15:00",
- "salida": 15,
- "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
- },
+//  {
+//  "nombre": "15:00",
+//  "salida": 15,
+//  "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cejas,sieteAbril]
+//  },
  {
  "nombre": "18:30",
  "salida": 18.3,
