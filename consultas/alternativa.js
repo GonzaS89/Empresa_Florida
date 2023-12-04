@@ -16,6 +16,14 @@ function borrarBotones() {
 const textoFiltroDia = document.querySelector('.contenedor-filtro p');
 const arregloSelectorDeDias = document.querySelector('.selector')
 
+setInterval(() => {
+    for (let i = 0; i < arregloSelectorDeDias.length; i++) {
+        const element = arregloSelectorDeDias[i];
+        if(element.selected) 
+        
+    }
+}, 500);
+
 
 let diaSeleccionado;
 
