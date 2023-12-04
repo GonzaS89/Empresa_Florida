@@ -76,11 +76,11 @@ const canchaTalarBanda = [bCancha,florida,talar,alderetes,bandaRS,terminal];
 
 // Arreglos con recorridos (FLORIDA / POSSE)
 
-const bCanchaFloridaPosse = [bCancha,florida,paraiso,dispensario, posse,llona,cevilPozo,bandaRS,terminal];
-const fortinFloridaPosse = [fortin,esqLastra,florida,paraiso,dispensario, posse,llona,cevilPozo,bandaRS,terminal];
-const col4FloridaPosse = [col4Luisiana,bCancha,florida,paraiso,dispensario, posse,llona,cevilPozo,bandaRS,terminal]
-const col4fondaPosse = [col4Luisiana,fonda,florida,paraiso,dispensario, posse,llona,cevilPozo,bandaRS,terminal]
-const lastraFloridaPosse = [esqLastra,florida,paraiso,dispensario, posse,llona,cevilPozo,bandaRS,terminal]
+const bCanchaFloridaPosse = [bCancha,florida,paraiso,dispensario, posse,filaOrilla,llona,cevilPozo,bandaRS,terminal];
+const fortinFloridaPosse = [fortin,esqLastra,florida,paraiso,dispensario, posse,filaOrilla,llona,cevilPozo,bandaRS,terminal];
+const col4FloridaPosse = [col4Luisiana,bCancha,florida,paraiso,dispensario, posse,filaOrilla,llona,cevilPozo,bandaRS,terminal]
+const col4fondaPosse = [col4Luisiana,fonda,florida,paraiso,dispensario, posse,filaOrilla,llona,cevilPozo,bandaRS,terminal]
+const lastraFloridaPosse = [esqLastra,florida,paraiso,dispensario, posse,filaOrilla,llona,cevilPozo,bandaRS,terminal]
 
 // Arreglos con recorridos (TERMINAL / ALDERETES / ALTERNATIVA)
 
@@ -99,9 +99,9 @@ const bandaCochFortin = [terminal,bandaRS,alderetes,cochuchal,florida,esqLastra,
 
 // Arreglos con recorridos (TERMINAL / POSSE / FLORIDA)
 
-const posseCancha = [terminal,bandaRS,cevilPozo,llona,dispensario, posse,paraiso,florida,bCancha];
-const posseFortin = [terminal,bandaRS,cevilPozo,llona,dispensario, posse,paraiso,florida,esqLastra,fortin];
-const posseLastra = [terminal,bandaRS,cevilPozo,llona,dispensario, posse,paraiso,florida,esqLastra];
+const posseCancha = [terminal,bandaRS,cevilPozo,llona,filaOrilla,posse,dispensario,paraiso,florida,bCancha];
+const posseFortin = [terminal,bandaRS,cevilPozo,llona,filaOrilla,posse,dispensario,paraiso,florida,esqLastra,fortin];
+const posseLastra = [terminal,bandaRS,cevilPozo,llona,filaOrilla,posse,dispensario,paraiso,florida,esqLastra];
 
 // Arreglos con recorridos (POSSE / TERMINAL)
 
