@@ -37,7 +37,7 @@ const tiposDeDias =
         'nombre' : 'Domingos'    
     },
     {   'valor' : 1,
-        'nombre' : 'Lunes a Viernes'    
+        'nombre' : 'Lunes a viernes'    
     },
     {   'valor' : 2,
         'nombre' : 'Sábados'    
@@ -55,10 +55,15 @@ setInterval(() => {
         const elemento = arregloSelectorDeDias[i];
         if(elemento.selected) {
             textoFiltroDia.innerHTML = elemento.innerHTML;
-            
+            for (let i = 0; i < tiposDeDias.length; i++) {
+                const elemento2 = tiposDeDias[i];
+                if(textoFiltroDia.innerHTML == elemento2.nombre){
+                    valorDelDiaSelect = elemento2.valor}
+            }
+            console.log(valorDelDiaSelect)
         }
     }
-}, 1);
+}, 1000);
 
 
 
@@ -212,7 +217,7 @@ todosBotonesParadas.forEach(elemento => {
                 const referencia = document.querySelector('.contenedor-titulo H1');
                 referencia.innerHTML = 'Elegí el destino donde quieras ir'
                 paradaSeleccionada = elemento.innerHTML;
-                posiblesDestinos = destinosCompartidos(paradaSeleccionada,diaObtenido);
+                posiblesDestinos = destinosCompartidos(paradaSeleccionada,valorDelDiaSelect);
                 botonvolver.classList.add('visible');
                 borrarBotones()
                 crearBotonesConDestinos(posiblesDestinos);
@@ -228,7 +233,7 @@ todosBotonesParadas.forEach(elemento => {
                     console.log(paradaSeleccionada,destinoSeleccionado)    
                 
                 efectoPulsado(elemento);
-                listaViajesObtenida = determinarRuta(diaObtenido,paradaSeleccionada,destinoSeleccionado);
+                listaViajesObtenida = determinarRuta(valorDelDiaSelect,paradaSeleccionada,destinoSeleccionado);
                 console.log(listaViajesObtenida)
                 listaDeSalidas = obtenerListaDeSalidas(listaViajesObtenida);
                 listaDeDiferencias = obtenerListaDeDiferencias(listaDeSalidas);
