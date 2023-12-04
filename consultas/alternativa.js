@@ -5,6 +5,7 @@ let destinoSeleccionado;
 let posiblesDestinos;
 let diaObtenido;
 let indiceObtenido;
+let valorDelDiaSelect;
 
 function borrarBotones() {
     let arrayResultados = Array.prototype.slice.call(document.getElementsByClassName("boton-parada"), 0);
@@ -29,6 +30,7 @@ const obtenerDia = ()=> {
 
 diaObtenido = obtenerDia();
 
+
 const tiposDeDias = 
 [
     {   'valor' : 0,
@@ -51,9 +53,14 @@ for (let i = 0; i < tiposDeDias.length; i++) {
 setInterval(() => {
     for (let i = 0; i < arregloSelectorDeDias.length; i++) {
         const elemento = arregloSelectorDeDias[i];
-        if(elemento.selected) {textoFiltroDia.innerHTML = elemento.innerHTML}
+        if(elemento.selected) {
+            textoFiltroDia.innerHTML = elemento.innerHTML;
+            
+        }
     }
 }, 1);
+
+
 
 
 
