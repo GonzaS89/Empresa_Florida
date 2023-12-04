@@ -210,7 +210,7 @@ let todosBotonesDestino;
 todosBotonesParadas.forEach(elemento => {
     elemento.addEventListener('click', ()=> {
 
-            $(contenedorFiltros).css('display', 'none')
+            contenedorFiltros.classList.add('contenedor-filtro-animacionOUT')
 
             efectoPulsado(elemento.parentNode);
     
