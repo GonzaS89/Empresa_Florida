@@ -63,7 +63,7 @@ setInterval(() => {
             console.log(valorDelDiaSelect)
         }
     }
-}, 1000);
+}, 250);
 
 
 
