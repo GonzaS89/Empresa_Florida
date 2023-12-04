@@ -29,9 +29,31 @@ const obtenerDia = ()=> {
 
 diaObtenido = obtenerDia();
 
-if(diaObtenido == 0){textoFiltroDia.innerHTML = 'Domingos'}
-if(diaObtenido == 1){textoFiltroDia.innerHTML = 'Lunes a Viernes';}
-if(diaObtenido == 2) {textoFiltroDia.innerHTML = 'Sábados'} 
+const tiposDeDias = 
+[
+    {   'valor' : 0,
+        'nombre' : 'Domingos'    
+    },
+    {   'valor' : 1,
+        'nombre' : 'Lunes a Viernes'    
+    },
+    {   'valor' : 2,
+        'nombre' : 'Sábados'    
+    },
+];
+
+for (let i = 0; i < tiposDeDias.length; i++) {
+    const elemento = tiposDeDias[i];
+    if(elemento.valor == diaObtenido) {textoFiltroDia.innerHTML = elemento.nombre}
+    
+}
+
+setInterval(() => {
+    for (let i = 0; i < arregloSelectorDeDias.length; i++) {
+        const elemento = arregloSelectorDeDias[i];
+        if(elemento.selected) {textoFiltroDia.innerHTML = elemento.innerHTML}
+    }
+}, 1);
 
 
 
