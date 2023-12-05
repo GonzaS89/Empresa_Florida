@@ -1808,6 +1808,18 @@ select {
   -webkit-text-stroke-color: white; */
 }
 
+.panel-izquierdo-aviso{
+    font-size: 15px;
+    position: absolute;
+    bottom: 0;
+    margin: 0px 5px 38px 5px;
+    transform: rotate(-25deg);
+    color: #C70039;
+    text-transform: uppercase;
+    font-family: var(--fuenteTer);
+    text-align: center;
+}
+
 .vista-derecha{
     display: flex;
     flex-direction: column;
@@ -1891,6 +1903,7 @@ select {
     background: #141E46;
     z-index: 10;
     position: relative;
+    transform: scale(0);
 }
 
 .parada-seleccionada {

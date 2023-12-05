@@ -196,10 +196,16 @@ const construirNuevosGlobos = (rutas)=> {
 
         // CONSTRUCCION DEL LADO IZQUIERDO
 
-        const panelIzquierdoLogo = document.createElement('SPAN')
+        const panelIzquierdoLogo = document.createElement('SPAN');
         const panelIzquierdoHora = document.createElement('P');
         const panelIzquierdoMinutos = document.createElement('P');
         const panelIzquierdoTexto = document.createElement('P');
+        if(i == rutas.length - 1){
+        const panelIzquierdoAviso = document.createElement('P');
+        panelIzquierdoAviso.classList.add('panel-izquierdo-aviso');
+        panelIzquierdoAviso.innerHTML = 'Último servicio'
+        vistaIzquierda.appendChild(panelIzquierdoAviso);
+        }
 
         const horaEnString = servicio.nombre.split('');
         panelIzquierdoHora.innerHTML = horaEnString[0] + horaEnString[1];
