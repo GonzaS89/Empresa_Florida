@@ -151,15 +151,18 @@ const crearBotonesConDestinos = (listadelocalidades)=> {
         const paradaSalida = document.createElement('H4'); 
         const imagenBoton = document.createElement('SPAN');
         const paradaDestino = document.createElement('P');
+        const fondoBoton = document.createElement('SPAN');
         botonDestino.classList.add('boton-destino');
         paradaSalida.innerHTML = paradaSeleccionada;
         paradaSalida.classList.add('sobre')
         paradaDestino.classList.add('sobre')
         imagenBoton.classList.add('imagen-boton-destino');
+        fondoBoton.classList.add('fondo-boton-destino')
         paradaDestino.innerHTML = listadelocalidades[i];
         botonDestino.appendChild(paradaSalida);
         botonDestino.appendChild(imagenBoton);
         botonDestino.appendChild(paradaDestino); 
+        botonDestino.appendChild(fondoBoton)
         contenedorOpciones.appendChild(botonDestino);
         botonDestino.animate ( [
             {transform:'scale(0)'},

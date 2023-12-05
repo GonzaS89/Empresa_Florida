@@ -1720,12 +1720,12 @@ select {
 }
 
 .imagen-boton-destino{
-    background-image: url(../Iconos/autobus.png);
+    background-image: url(../Iconos/flecharosa.png);
     animation: none;
     width: 25px;
     height: 25px;
     z-index: 5;
-    animation: moverflecharosa 5s infinite;
+    animation: moverflecharosa 2s infinite;
 }
 
 @keyframes moverflecharosa {
@@ -1735,6 +1735,18 @@ select {
     100%{
          transform: translateY(25%)
     }
+}
+
+.fondo-boton-destino{
+    background-image: url(../Imagenes/Logo_sinfondo.png);
+    width: 120px;
+    height: 80px;
+    background-size: 80%;
+    position: absolute;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: opacity(0.2);
 }
 
 .contenedor-prueba{
