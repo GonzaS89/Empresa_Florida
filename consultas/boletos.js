@@ -50,6 +50,14 @@ const definirPrecioBoleto = (inicio, final, recorrido)=> {
             if(final == sieteAbril) {return codigo_44};
         }
 
+        if(inicio == cejas){
+            if(final == ralos) {return codigo_24};
+            if(final == llona || final == cevilPozo) {return codigo_27};
+            if(final == bandaRS) {return codigo_30};
+            if(final == terminal) {return codigo_34};
+            if(final == sieteAbril) {return codigo_41};
+        }
+
         if(inicio == cevilPozo){
             if(final == llona || final == posse || final == cruzAlta || final == filaMedio || final == filaOrilla || final == bandaRS){return codigo_06};
             if(final == paraiso || final == terminal) {return codigo_08};
@@ -79,6 +87,27 @@ const definirPrecioBoleto = (inicio, final, recorrido)=> {
             if(final == bandaRS) {return codigo_08};
             if(final == ralos) {return codigo_10};
             if(final == terminal) {return codigo_15};
+        }
+
+        if(inicio == llona){
+            if(final == filaOrilla || final == cevilPozo || final == bandaRS || final == cruzAlta || final == posse) {return codigo_06};
+            if(final == paraiso || final == florida || final == col4Luisiana || final == fortin) {return codigo_08};
+            if(final == ralos) {return codigo_11};
+            if(final == terminal) {return codigo_12};
+            if(final == martar) {return codigo_21}
+            if(final == sieteAbril) {return codigo_44};
+        }
+
+        if(inicio == marta){
+            if(final == fincaMayo) {return codigo_06};
+            if(final == ralos) {return codigo_08}
+            if(final == florida || final == col4Luisiana) {return codigo_11};
+            if(final == talar) {return codigo_14};
+            if(final == fincaMayo) {return codigo_18};
+            if(final == alderetes || final == cevilPozo || final == llona) {return codigo_21};
+            if(final == bandaRS) {return codigo_22};
+            if(final == terminal) {return codigo_27};
+
         }
 
         if(inicio == paraiso){
@@ -118,7 +147,20 @@ const definirPrecioBoleto = (inicio, final, recorrido)=> {
         }
 
         if(inicio == posse){
-            if(final == florida || final == paraiso) return codigo_06;
+            if(final == florida || final == fortin || final == paraiso || final == filaMedio || final == filaOrilla || final == llona || final == cevilPozo || final == col4Luisiana) {return codigo_06};
+            if(final == bandaRS) {return codigo_08};
+            if(final == terminal) {return codigo_18};
+        }
+
+        if(inicio == ralos){
+            if(final == cruzAlta) {return codigo_10};
+            if(final == fincaMayo) {return codigo_11}
+            if(final == llona) {return codigo_12};
+            if(final == cevilPozo) {return codigo_16}
+            if(final == bandaRS) {return codigo_18};
+            if(final == terminal) {return codigo_21};
+            if(final == cejas) {return codigo_24};
+            if(final == sieteAbril) {return codigo_44};
         }
 
         if(inicio == sieteAbril){
@@ -127,8 +169,21 @@ const definirPrecioBoleto = (inicio, final, recorrido)=> {
         }
 
         if(inicio == terminal){
-            if(final == florida){
+            if(final == bandaRS) {return codigo_06};
+            if(final == cevilPozo || final == alderetes) {return codigo_08};
+            if(final == llona || final == filaMedio || final == filaOrilla) {return codigo_12};
+            if(final == cochuchal || final == talar) {return codigo_13};
+            if(final == cruzAlta) {return codigo_15};
+            if(final == posse || final == paraiso) {return codigo_18}
+            if(final == ralos) {return codigo_21};
+            if(final == florida || final == fortin || final == col4Luisiana){
                 if(recorrido.includes(posse)){return codigo_21} else {return codigo_16}
             }
-        }    
+            if(final == fincaMayo) {return codigo_24};
+            if(final == marta || final == alabama) {return codigo_27};
+            if(final == cejas) {return codigo_34};
+            if(final == sieteAbril) {return codigo_44};
+        }
+        
+        if(final == perez) {return '-'}
     }
