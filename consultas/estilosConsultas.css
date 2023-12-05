@@ -1779,6 +1779,17 @@ select {
     font-size: 50px;
 }
 
+.panel-izquierdo-logo{
+    background-image: url(../Imagenes/Logo_sinfondo.png);
+    width: 100px;
+    height: 100px;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-position: center center;
+    top: 0;
+}
+
 .panel-izquierdo-hora{
     font-family: var(--fuenteTer);
     margin: -20px;

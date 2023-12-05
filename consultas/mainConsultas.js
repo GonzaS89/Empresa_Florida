@@ -53,39 +53,9 @@ const scrollcont = document.querySelector('.scroll-cont');
 let titulo = document.getElementById('titulo');
 let resolucion = document.documentElement.clientWidth;
 
-
-// botonDeCambio.addEventListener('click',  ()=> {
-//     $('.menu2').css('display', 'flex');
-//     $('.origen').css('display', 'flex');
-//     $('.botonDeCambio2').css('display', 'flex');
-//     $('.destino').css('display', 'none');
-//     $('.menu').css('display', 'none');
-//     $('.botonDeCambio').css('display', 'none');
-//     opcionbase.selected = true;
-//     linea1.textContent = '';
-//     linea2.textContent = '';
-// })
-
-// botonDeCambio2.addEventListener('click', ()=> {
-//     $('.menu2').css('display', 'none');
-//     $('.origen').css('display', 'none');
-//     $('.botonDeCambio2').css('display', 'none');
-//     $('.destino').css('display', 'flex');
-//     $('.menu').css('display', 'flex');
-//     $('.botonDeCambio').css('display', 'flex');
-//     opcionbase2.selected = true;
-//     linea1.textContent = '';
-//     linea2.textContent = '';
-// })
-
 const botonCierraMensaje = document.querySelector('.botoncerrado');
 const mensajecontenedor = document.querySelector('.mensaje-contenedor');
 const mensaje = document.querySelector('.mensaje-cuadro')
-
-// botonCierraMensaje.addEventListener('click', ()=>{
-//     mensaje.classList.add('mensaje-out');
-//     mensajecontenedor.classList.add('mensaje-contenedor-out')
-// })
 
 addEventListener('load', () => {
     scrollcont.children[0].classList.add('manito')
@@ -132,18 +102,7 @@ function obtenerPosicion2 (selector) {
     return posicion2
 }
 
-// function activarBoton ()  {
-//     setInterval ( ()=> {
-//     if(obtenerPosicion1(selectSalida) > 0 && obtenerPosicion2(selectLlegada) > 0) boton.classList.add('botonActivo');
-//     else boton.classList.remove('botonActivo')
-// })
-// }
-
 if (fecha == 9 || fecha == 10 && mes == 6) $('.mensaje3').css('display', 'flex')
-
-// activarBoton()
-
-//Defino funcion para obtener posicion
 
 const definirPosicion = (sel, val, valorSel, pos) => { 
     for (opcion of sel) 
@@ -158,13 +117,6 @@ let displayMensaje = (fecha == 25 && mes == 8 & hora < 17) ? 'flex' : 'none';
 onload = ()=> {
     $('.mensaje-contenedor').css('display' , `${displayMensaje}`);
 }
-
-// // Definimos la posicion del selector 1
-// definirPosicion(selector,valores,valorSeleccionado,posicion);
-// // Definimos la posicion del selector 2
-// definirPosicion(selector2,valores2,valorSeleccionado2,posicion2);
-
-// Funcion para definir ruta de viaje (IDA O VUELTA)
 
 const obtenerRuta = ()=> {
     ruta = (opcionbase.selected == false) ? todosDestinoTucuman[posicion - 1] : todosTucumanDestino[posicion2 - 1];
@@ -279,58 +231,6 @@ const esPar = (numero) => {
 }
 
 // Funcion que construye los globos de resultados
-const construirGlobos = (rutas, contPadre, contHijo)=> {
-    if (rutas.length == 1) {
-        const resultado = document.createElement('DIV')
-        resultado.classList.add('resultados')
-        const fondo = document.createElement('SPAN');
-        fondo.classList.add('fondo')
-        let p1 = document.createElement('P');
-        p1.classList.add('actual1')
-        let p2 = document.createElement('P');
-        p2.classList.add('actual2');
-        let p3 = document.createElement('P');
-        p3.classList.add('actual3');
-        resultado.appendChild(fondo);
-        resultado.appendChild(p1);
-        resultado.appendChild(p2);
-        resultado.appendChild(p3);
-        if ((Object.keys(rutas[0])).length > 3) {
-            let p4 = document.createElement('P');
-            p4.classList.add('actual4');
-            resultado.appendChild(p4);
-        }
-        contHijo.appendChild(resultado);
-        contPadre.appendChild(contHijo)
-    }
-    else{
-        for (i = 0; i < rutas.length; i++) {
-            const resultado = document.createElement('DIV')
-            resultado.classList.add('resultados')
-            const fondo = document.createElement('SPAN');
-            fondo.classList.add('fondo')
-            let p1 = document.createElement('P');
-            p1.classList.add('actual1')
-            let p2 = document.createElement('P');
-            p2.classList.add('actual2');
-            let p3 = document.createElement('P');
-            p3.classList.add('actual3');
-            resultado.appendChild(fondo);
-            resultado.appendChild(p1);
-            resultado.appendChild(p2);
-            resultado.appendChild(p3)
-            if ((Object.keys(rutas[i])).length > 3) {
-                let p4 = document.createElement('P');
-                p4.classList.add('actual4');
-                resultado.appendChild(p4);
-            }
-            contHijo.appendChild(resultado);
-            contPadre.appendChild(contHijo)
-        }
-    }
-}
-
-
 
 const construirNuevosGlobos = (rutas)=> {
 
@@ -349,6 +249,7 @@ const construirNuevosGlobos = (rutas)=> {
 
         // CONSTRUCCION DEL LADO IZQUIERDO
 
+        const panelIzquierdoLogo = document.createElement('SPAN')
         const panelIzquierdoHora = document.createElement('P');
         const panelIzquierdoMinutos = document.createElement('P');
         const panelIzquierdoTexto = document.createElement('P');
@@ -358,9 +259,11 @@ const construirNuevosGlobos = (rutas)=> {
         panelIzquierdoMinutos.innerHTML = horaEnString[3] + horaEnString[4];
 
         panelIzquierdoTexto.innerHTML = 'HRS'
+        panelIzquierdoLogo.classList.add('panel-izquierdo-logo')
         panelIzquierdoHora.classList.add('panel-izquierdo-hora')
         panelIzquierdoMinutos.classList.add('panel-izquierdo-minutos')
         panelIzquierdoTexto.classList.add('panel-izquierdo-texto')
+        vistaIzquierda.appendChild(panelIzquierdoLogo);
         vistaIzquierda.appendChild(panelIzquierdoHora);
         vistaIzquierda.appendChild(panelIzquierdoMinutos);
         vistaIzquierda.appendChild(panelIzquierdoTexto);
