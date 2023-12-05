@@ -72,59 +72,6 @@ function borrarGlobos() {
     }
 }
 
-function obtenerPosicion1 (selector) {
-    for (opcion of selector) {
-        if (opcion.selected) valorSeleccionado = opcion;
-        
-    }
-    for (i = 0; i < selector.length; i++) {
-        valores.push(selector[i])
-    }
-    
-    for (i = 0; i < valores.length; i++) {
-        posicion = valores.indexOf(valorSeleccionado)
-    }
-    return posicion
-}
-
-function obtenerPosicion2 (selector) {
-    for (opcion of selector2) {
-        if (opcion.selected) valorSeleccionado2 = opcion;
-    
-    }
-    for (i = 0; i < selector2.length; i++) {
-        valores2.push(selector2[i])
-    }
-    
-    for (i = 0; i < valores2.length; i++) {
-        posicion2 = valores2.indexOf(valorSeleccionado2)
-    }
-    return posicion2
-}
-
-if (fecha == 9 || fecha == 10 && mes == 6) $('.mensaje3').css('display', 'flex')
-
-const definirPosicion = (sel, val, valorSel, pos) => { 
-    for (opcion of sel) 
-    if (opcion.selected) valorSel = opcion;
-    for (i = 0; i < sel.length; i++) val.push(sel[i])
-    for (i = 0; i < val.length; i++) pos = val.indexOf(valorSel)
-    return pos
-}
-
-let displayMensaje = (fecha == 25 && mes == 8 & hora < 17) ? 'flex' : 'none';
-
-onload = ()=> {
-    $('.mensaje-contenedor').css('display' , `${displayMensaje}`);
-}
-
-const obtenerRuta = ()=> {
-    ruta = (opcionbase.selected == false) ? todosDestinoTucuman[posicion - 1] : todosTucumanDestino[posicion2 - 1];
-    linea2.textContent = (opcionbase.selected == false) ? `Desde ${selector[posicion].label}` : `Hasta ${selector2[posicion2].label}`;
-
-    return ruta;
-}
-
 // Funcion para saber que dia de la semana es
 
 const obtenerDiaRuta = (x)=> {

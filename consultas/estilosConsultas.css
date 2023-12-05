@@ -1781,8 +1781,8 @@ select {
 
 .panel-izquierdo-logo{
     background-image: url(../Imagenes/Logo_sinfondo.png);
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     background-size: 80%;
     background-repeat: no-repeat;
     position: absolute;
