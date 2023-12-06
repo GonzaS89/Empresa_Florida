@@ -1809,15 +1809,16 @@ select {
 }
 
 .panel-izquierdo-aviso{
-    font-size: 15px;
+    font-size: 13px;
     position: absolute;
     bottom: 0;
-    margin: 0px 5px 38px 5px;
-    transform: rotate(-25deg);
+    margin: 0px 5px 20px 5px;
     color: #C70039;
     text-transform: uppercase;
     font-family: var(--fuenteTer);
     text-align: center;
+    border: 3px solid;
+    padding: 3px;
 }
 
 .vista-derecha{

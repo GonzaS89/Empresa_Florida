@@ -206,7 +206,7 @@ const construirNuevosGlobos = (rutas)=> {
         panelIzquierdoAviso.innerHTML = 'Último servicio'
         vistaIzquierda.appendChild(panelIzquierdoAviso);
         }
-
+        
         const horaEnString = servicio.nombre.split('');
         panelIzquierdoHora.innerHTML = horaEnString[0] + horaEnString[1];
         panelIzquierdoMinutos.innerHTML = horaEnString[3] + horaEnString[4];
