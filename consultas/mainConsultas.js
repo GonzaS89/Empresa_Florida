@@ -11,59 +11,34 @@ function iniciarApp() {
 let momentoActual = new Date();
 let hora = momentoActual.getHours();
 let minutos = momentoActual.getMinutes();
-let fecha = momentoActual.getDate();
-let mes = momentoActual.getMonth();
 let dia = momentoActual.getDay();
+let fecha = momentoActual.getDate();
+let mes = momentoActual.getMonth()
 let horaEnEnteros = (hora * 60) + minutos;
-let diasDeLaSemana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
-let diaSemana = diasDeLaSemana[dia];
 let diaRango = [];
 let ruta;
 let tituloResultado = document.getElementById('tituloResultado')
 let feriado = false;
 let semiFeriado = false;
 let feriadoPrevio = false;
-let nombreServicio;
-let recorridoServicio;
-let recorridoServicio2;
-let estadoServicio;
 let rutaObtenida;
 let tipoDeDia;
 
 /* Funcion para determinar la localidad de posicion*/
 
-const boton = document.querySelector('.boton');
-
-let valorSeleccionado;
-let valorSeleccionado2;
-let valores = [];
-let valores2 = [];
-let posicion;
-let posicion2;
-let label1;
-let label2;
-
-const botonDeCambio = document.querySelector('.botonDeCambio');
-const botonDeCambio2 = document.querySelector('.botonDeCambio2');
 const mensaje2 = document.querySelector('.mensaje2');
 const resultadoscontainer = document.querySelector('.resultados-container');
 const indicacioncont = document.querySelector('.indicacion-cont');
 const resultadoscont = document.querySelector('.resultados-cont');
-const scrollcont = document.querySelector('.scroll-cont');
-let titulo = document.getElementById('titulo');
 let resolucion = document.documentElement.clientWidth;
 
 const botonCierraMensaje = document.querySelector('.botoncerrado');
 const mensajecontenedor = document.querySelector('.mensaje-contenedor');
 const mensaje = document.querySelector('.mensaje-cuadro')
 
-addEventListener('load', () => {
-    scrollcont.children[0].classList.add('manito')
-})
-
-function borrarManito() {
-    scrollcont.children[0].classList.remove('manito')
-}
+// addEventListener('load', () => {
+//     scrollcont.children[0].classList.add('manito')
+// })
 
 function borrarGlobos() {
     let arrayResultados = Array.prototype.slice.call(document.getElementsByClassName("contenedor-vista"), 0);
@@ -89,7 +64,7 @@ const obtenerDiaRuta = (x)=> {
 // Funcion para saber si es normal o feriado
 
 const definirDia = ()=> {
-    tipoDeDia = (fecha == 21 && mes == 7) ? 'feriado' : 'normal';
+    tipoDeDia = (fecha == 8 && mes == 11) ? 'feriado' : 'normal';
     switch (tipoDeDia) {
         case 'feriado':
             tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo `;

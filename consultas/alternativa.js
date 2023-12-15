@@ -28,13 +28,34 @@ const obtenerDia = ()=> {
     else if(dia == 6) return 2
 };
 
-diaObtenido = obtenerDia();
+const actulizarValorSelect = ()=> {
+    setInterval(() => {
+        for (let i = 0; i < arregloSelectorDeDias.length; i++) {
+            const elemento = arregloSelectorDeDias[i];
+            if(elemento.selected) {
+                textoFiltroDia.innerHTML = elemento.innerHTML;
+                for (let i = 0; i < tiposDeDias.length; i++) {
+                    const elemento2 = tiposDeDias[i];
+                    if(textoFiltroDia.innerHTML == elemento2.nombre){
+                        valorDelDiaSelect = elemento2.valor}
+                }
+            }
+        }
+    }, 250);
+}
 
+diaObtenido = obtenerDia();
+console.log(diaObtenido)
+
+tipoDeDia = (fecha == 8 && mes) ? 'feriado' : 'normal';
+
+// valorDelDiaSelect = (tipoDeDia == 'feriado') ? 0 : actulizarValorSelect() ;
+actulizarValorSelect();
 
 const tiposDeDias = 
 [
     {   'valor' : 0,
-        'nombre' : 'Domingos'    
+        'nombre' : 'Domingos / Feriados'    
     },
     {   'valor' : 1,
         'nombre' : 'Lunes a viernes'    
@@ -47,24 +68,8 @@ const tiposDeDias =
 for (let i = 0; i < tiposDeDias.length; i++) {
     const elemento = tiposDeDias[i];
     if(elemento.valor == diaObtenido) {textoFiltroDia.innerHTML = elemento.nombre}
-    
+
 }
-
-setInterval(() => {
-    for (let i = 0; i < arregloSelectorDeDias.length; i++) {
-        const elemento = arregloSelectorDeDias[i];
-        if(elemento.selected) {
-            textoFiltroDia.innerHTML = elemento.innerHTML;
-            for (let i = 0; i < tiposDeDias.length; i++) {
-                const elemento2 = tiposDeDias[i];
-                if(textoFiltroDia.innerHTML == elemento2.nombre){
-                    valorDelDiaSelect = elemento2.valor}
-            }
-            console.log(valorDelDiaSelect)
-        }
-    }
-}, 250);
-
 
 
 
@@ -265,9 +270,9 @@ resultadoscont.addEventListener('touchmove', () => {
         if (i < indiceObtenido || i > indiceObtenido) 
             resultadoscont.children[i].classList.replace('opacar', 'normalizar');
             resultadoscont.children[indiceObtenido].classList.replace('resaltado', 'normalizarResaltado');
-            scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
-            scrollcont.children[0].classList.remove('manitoAnimacionArriba');
-            scrollcont.children[0].classList.remove('manitoAnimacionCentro');
+            // scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
+            // scrollcont.children[0].classList.remove('manitoAnimacionArriba');
+            // scrollcont.children[0].classList.remove('manitoAnimacionCentro');
             resultadoscont.classList.replace('opacarFondo', 'normalizarFondo');
     }
 })
