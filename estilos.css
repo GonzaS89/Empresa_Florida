@@ -314,9 +314,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height:200px;
-    width:100%;  
+    align-items: center; 
     margin: 0px;
 }
 
