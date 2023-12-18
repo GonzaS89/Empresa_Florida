@@ -280,9 +280,6 @@ resultadoscont.addEventListener('touchmove', () => {
 indicacioncont.addEventListener('click', () => {
     $('.indicacion-cont').css('display', 'none');
     mensaje2.classList.replace('mensajeAparece', 'mensajeIrse')
-    scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
-    scrollcont.children[0].classList.remove('manitoAnimacionArriba');
-    scrollcont.children[0].classList.remove('manitoAnimacionCentro');
     resultadoscont.children[0].classList.remove('resultadosOpcion2');
     resultadoscont.classList.replace('opacarFondo','normalizarFondo');
     borrarGlobos()
@@ -290,8 +287,7 @@ indicacioncont.addEventListener('click', () => {
         
     setTimeout( ()=> {
         $('.mensaje2').css('display', 'none'),
-        resultadoscont.classList.remove('normalizarFondo'),
-        borrarManito();
+        resultadoscont.classList.remove('normalizarFondo')
     },1000)
 })
 
