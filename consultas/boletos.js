@@ -63,7 +63,7 @@ const definirPrecioBoleto = (inicio, final, recorrido)=> {
             if(final == llona || final == posse || final == cruzAlta || final == filaMedio || final == filaOrilla || final == bandaRS){return codigo_06};
             if(final == paraiso || final == terminal) {return codigo_08};
             if(final == florida || final == fortin) {return codigo_13};
-            if(final == ralos) {return codigo_14};
+            if(final == ralos || final == col4Luisiana) {return codigo_14};
             if(final == fincaMayo) {return codigo_21}
             if(final == cejas) {return codigo_30};
             if(final == sieteAbril) {return codigo_44};

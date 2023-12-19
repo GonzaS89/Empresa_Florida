@@ -28,6 +28,27 @@ const obtenerDia = ()=> {
     else if(dia == 6) return 2
 };
 
+diaObtenido = obtenerDia();
+
+const tiposDeDias = 
+[
+    {   'valor' : 0,
+        'nombre' : 'Domingos / Feriados'    
+    },
+    {   'valor' : 1,
+        'nombre' : 'Lunes a viernes'    
+    },
+    {   'valor' : 2,
+        'nombre' : 'Sábados'    
+    },
+];
+
+// for (let i = 0; i < tiposDeDias.length; i++) {
+//     const elemento = tiposDeDias[i];
+//     if(elemento.valor == diaObtenido) {textoFiltroDia.innerHTML = elemento.nombre;valorDelDiaSelect = diaObtenido}
+
+// }
+
 const actulizarValorSelect = ()=> {
     setInterval(() => {
         for (let i = 0; i < arregloSelectorDeDias.length; i++) {
@@ -44,32 +65,15 @@ const actulizarValorSelect = ()=> {
     }, 250);
 }
 
-diaObtenido = obtenerDia();
+
 console.log(diaObtenido)
 
-tipoDeDia = (fecha == 8 && mes) ? 'feriado' : 'normal';
+// tipoDeDia = (fecha == 8 && mes) ? 'feriado' : 'normal';
 
 // valorDelDiaSelect = (tipoDeDia == 'feriado') ? 0 : actulizarValorSelect() ;
-actulizarValorSelect();
+// actulizarValorSelect();
 
-const tiposDeDias = 
-[
-    {   'valor' : 0,
-        'nombre' : 'Domingos / Feriados'    
-    },
-    {   'valor' : 1,
-        'nombre' : 'Lunes a viernes'    
-    },
-    {   'valor' : 2,
-        'nombre' : 'Sábados'    
-    },
-];
 
-for (let i = 0; i < tiposDeDias.length; i++) {
-    const elemento = tiposDeDias[i];
-    if(elemento.valor == diaObtenido) {textoFiltroDia.innerHTML = elemento.nombre}
-
-}
 
 
 
