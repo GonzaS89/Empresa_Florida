@@ -48,12 +48,13 @@ let contenedorElementoactivo;
 
 const opcionesDeDias = document.querySelectorAll('.contenedor-filtro p');
 const contenedorPadreOpcionesDias = document.querySelector('.contenedornuevo')
-const contenedorFiltrosIconos = document.querySelectorAll('.contenedor-filtros-iconos')
+const contenedorFiltrosIconos = document.querySelectorAll('.contenedor-filtros-iconos');
 
 tiposDeDias.forEach(element => {
-    if(element.valor == diaObtenido) 
-    diaPorDefecto = element.nombre;
-    valorDelDiaSelect = element.valor
+    if(diaObtenido == element.valor){ 
+        diaPorDefecto = element.nombre;
+        valorDelDiaSelect = element.valor
+    }   
 });
 
 opcionesDeDias.forEach(elemento => {
@@ -82,15 +83,13 @@ for (let i = 0; i < contenedorFiltrosIconos.length; i++) {
         contenedorElementoactivo = elemento;
 
         tiposDeDias.forEach(element => {
-            if(element.valor == diaObtenido) 
-            diaPorDefecto = element.nombre;
-            valorDelDiaSelect = element.valor
+            if(element.nombre.toUpperCase() == elemento.innerText){ 
+                valorDelDiaSelect = element.valor}
         });
+        console.log(valorDelDiaSelect)  
     })
+    
 }
-
-
-
 
 
 // for (let i = 0; i < tiposDeDias.length; i++) {
