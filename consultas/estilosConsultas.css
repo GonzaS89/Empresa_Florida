@@ -1697,7 +1697,7 @@ select:focus{outline:none;}
     font-family: var(--fuente4ta);
     transform: scale(0);
     background: #F5F5F5;
-    box-shadow: 10px 10px 5px 1px rgba(54, 7, 7, 0.575);
+    box-shadow: 10px 10px 5px 1px rgba(0, 0, 0, 0.575);
     cursor: pointer;
 }
 
