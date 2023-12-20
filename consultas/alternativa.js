@@ -60,6 +60,8 @@ opcionesDeDias.forEach(elemento => {
     if(elemento.innerHTML !== diaPorDefecto) 
     elemento.parentElement.parentElement.classList.add('opcionDiaOculta')
     else contenedorElementoactivo = elemento.parentElement.parentElement;
+    contenedorElementoactivo.classList.add('opcionActiva')
+
 });
 
 // contenedorPadreOpcionesDias.addEventListener('click', (e)=> {
@@ -74,7 +76,16 @@ for (let i = 0; i < contenedorFiltrosIconos.length; i++) {
     const elemento = contenedorFiltrosIconos[i];
     elemento.addEventListener('click', (e)=> {
         let foco = e.target;
-        
+        if(foco.classList.contains('opcionDiaOculta'))
+        foco.classList.replace('opcionDiaOculta', 'opcionActiva')
+        contenedorElementoactivo.classList.replace('opcionActiva', 'opcionDiaOculta');
+        contenedorElementoactivo = elemento;
+
+        tiposDeDias.forEach(element => {
+            if(element.valor == diaObtenido) 
+            diaPorDefecto = element.nombre;
+            valorDelDiaSelect = element.valor
+        });
     })
 }
 

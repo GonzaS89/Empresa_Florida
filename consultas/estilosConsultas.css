@@ -121,7 +121,6 @@ body::-webkit-scrollbar-track {
     justify-content: center;
     align-self: baseline;
     margin: 0px 0px 20px 50px;
-    pointer-events: none;
 }
 
 .botonvolver{
@@ -1635,16 +1634,17 @@ select:focus{outline:none;}
 }
 
 .opcionDiaOculta{
-    animation: opcionOculta 1s forwards;
+    animation: opcionOculta .1s forwards;
 }
 
-.opcionDiaActiva {
-    animation: opcionActiva 1s forwards;
+.opcionDiaActiva{
+    animation: opcionActiva forwards;
 }
 
 @keyframes opcionOculta {
     100%{
         filter: opacity(.5);
+        transform: translateY(-50%);
     }
 }
 
