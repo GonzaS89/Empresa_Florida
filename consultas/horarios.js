@@ -3233,11 +3233,6 @@ const terminalRalosD = [
  "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,lolitaS]
  },
  {
- "nombre": "19:30",
- "salida": 19.3,
- "recorrido": [terminal, bandaRS, cevilPozo, llona, ralos,cruzAlta]
- },
- {
     "nombre": "19:30",
     "salida": 19.3,
     "recorrido": termiRalos
