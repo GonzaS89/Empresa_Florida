@@ -1656,16 +1656,15 @@ const boton = document.getElementById('boton');
                     
     }           
     
-    $('.resultados').css('display','flex')
-    $('.resultados2').css('display','flex')     
-    $('.mensaje2').css('display', 'flex')   
+    $('.resultados').css('display','flex');
+    $('.resultados2').css('display','flex');  
+    $('.mensaje2').css('display', 'flex');
     const mensaje2 = document.querySelector('.mensaje2');
     mensaje2.addEventListener('click', function(){
         $('.mensaje2').css('display', 'none')  
         opcionbase.selected = true;
         opcionbase2.selected= true;
     })
- 
 })
 
 
