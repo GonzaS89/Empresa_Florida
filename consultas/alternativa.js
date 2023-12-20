@@ -62,17 +62,20 @@ opcionesDeDias.forEach(elemento => {
     else contenedorElementoactivo = elemento.parentElement.parentElement;
 });
 
-contenedorPadreOpcionesDias.addEventListener('click', (e)=> {
-    let foco = e.target;
-    if(foco.classList.contains('opcionDiaOculta')) {
-        foco.classList.replace('opcionDiaOculta', 'opcionActiva'); 
-        contenedorElementoactivo.classList.add('opcionDiaOculta')       
-    }
-})
+// contenedorPadreOpcionesDias.addEventListener('click', (e)=> {
+//     let foco = e.target;
+//     if(foco.classList.contains('opcionDiaOculta')) {
+//         foco.classList.replace('opcionDiaOculta', 'opcionActiva'); 
+//         contenedorElementoactivo.classList.add('opcionDiaOculta')       
+//     }
+// })
 
 for (let i = 0; i < contenedorFiltrosIconos.length; i++) {
     const elemento = contenedorFiltrosIconos[i];
-    console.log(elemento)
+    elemento.addEventListener('click', (e)=> {
+        let foco = e.target;
+        
+    })
 }
 
 
