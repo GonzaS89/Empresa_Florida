@@ -58,60 +58,29 @@ tiposDeDias.forEach(element => {
 });
 
 opcionesDeDias.forEach(elemento => {
-    if(elemento.innerHTML !== diaPorDefecto) 
-    elemento.parentElement.parentElement.classList.add('opcionDiaOculta')
-    else contenedorElementoactivo = elemento.parentElement.parentElement;
-    contenedorElementoactivo.classList.add('opcionActiva')
+    if(elemento.innerHTML !== diaPorDefecto) {
+        elemento.parentElement.parentElement.classList.add('opcionDiaOculta')}
+        else {contenedorElementoactivo = elemento.parentElement.parentElement;
+        contenedorElementoactivo.classList.add('opcionActiva')}
 
 });
-
-// contenedorPadreOpcionesDias.addEventListener('click', (e)=> {
-//     let foco = e.target;
-//     if(foco.classList.contains('opcionDiaOculta')) {
-//         foco.classList.replace('opcionDiaOculta', 'opcionActiva'); 
-//         contenedorElementoactivo.classList.add('opcionDiaOculta')       
-//     }
-// })
 
 for (let i = 0; i < contenedorFiltrosIconos.length; i++) {
     const elemento = contenedorFiltrosIconos[i];
     elemento.addEventListener('click', (e)=> {
         let foco = e.target;
-        if(foco.classList.contains('opcionDiaOculta'))
-        foco.classList.replace('opcionDiaOculta', 'opcionActiva')
-        contenedorElementoactivo.classList.replace('opcionActiva', 'opcionDiaOculta');
-        contenedorElementoactivo = elemento;
-
+        if(foco.classList.contains('opcionDiaOculta')){
+            foco.classList.replace('opcionDiaOculta', 'opcionActiva');
+            contenedorElementoactivo.classList.replace('opcionActiva', 'opcionDiaOculta');
+            contenedorElementoactivo = elemento;
+        };
+        
         tiposDeDias.forEach(element => {
             if(element.nombre.toUpperCase() == elemento.innerText){ 
                 valorDelDiaSelect = element.valor}
         });
-        console.log(valorDelDiaSelect)  
     })
-    
 }
-
-
-// for (let i = 0; i < tiposDeDias.length; i++) {
-//     const elemento = tiposDeDias[i];
-//     if(elemento.valor == diaObtenido) {textoFiltroDia.innerHTML = elemento.nombre;valorDelDiaSelect = diaObtenido}
-
-// }
-
-
-
-
-
-
-// tipoDeDia = (fecha == 8 && mes) ? 'feriado' : 'normal';
-
-// valorDelDiaSelect = (tipoDeDia == 'feriado') ? 0 : actulizarValorSelect() ;
-// actulizarValorSelect();
-
-
-
-
-
 
 const destinosCompartidos = (opcion,dia)=> {
     let listaDestinos = [];
