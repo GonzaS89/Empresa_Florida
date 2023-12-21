@@ -299,27 +299,3 @@ indicacioncont.addEventListener('click', () => {
     },1000)
 })
 
-
-
-
-
-
-
-
-// botonParada.addEventListener('click', ()=> {
-//     borrarBotones();
-//     paradaSeleccionada = textoBoton.innerHTML
-//     posiblesDestinos = destinosCompartidos(paradaSeleccionada,diaObtenido)
-//     return posiblesDestinos
-// })
-
-
-
-
-
-
-
-
-
-
-
