@@ -115,7 +115,7 @@ body::-webkit-scrollbar-track {
 }
 
 .resaltado{
-    animation: escalar .75s linear alternate-reverse infinite;
+    animation: escalar .5s linear alternate-reverse infinite;
 }
 .normalizarResaltado{
     animation: normalizarResaltado .5s linear forwards;
