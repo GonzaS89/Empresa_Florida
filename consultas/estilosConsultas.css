@@ -34,12 +34,6 @@ html {
     box-sizing: inherit;
 }
 
-h1,
-p {
-    font-family: var(--fuente4ta);
-    margin: 0;
-}
-
 a{
     text-decoration: none;
     text-transform:uppercase;
@@ -127,7 +121,7 @@ body::-webkit-scrollbar-track {
     animation: normalizarResaltado .5s linear forwards;
 }
 .opacar{
-    animation: opacar .5s linear .5s forwards;
+    animation: opacar .2s linear .2s forwards;
 }
 .opacarFondo{
     animation: opacarFondo .5s .5s forwards;
@@ -420,6 +414,7 @@ body::-webkit-scrollbar-track {
     height: 100%;
     pointer-events: none;
     margin-top: 5px;
+    font-family: var(--fuente4ta);
     animation: aparece-contenedor-filtro .5s forwards;
 
     && p{
@@ -480,6 +475,7 @@ body::-webkit-scrollbar-track {
     color: white;
     text-align: center;
     text-transform: uppercase;
+    font-family: var(--fuente4ta);
 }
 
 .contenedor-opciones {
@@ -627,16 +623,16 @@ body::-webkit-scrollbar-track {
 }
 
 .panel-izquierdo-hora{
-    /* font-family: var(--fuenteTer); */
+    font-family: var(--fuenteTer);
     margin: -20px;
 }
 .panel-izquierdo-minutos{
-    /* font-family: var(--fuenteTer); */
+    font-family: var(--fuenteTer);
     margin-bottom: -20px;
 }
 
 .panel-izquierdo-texto{
-    /* font-family: var(--fuenteTer); */
+    font-family: var(--fuenteTer);
     margin-top: 10px;
     font-size: 40px;
     text-align: center;
