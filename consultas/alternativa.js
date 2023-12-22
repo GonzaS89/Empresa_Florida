@@ -168,7 +168,7 @@ const crearBotonesConDestinos = (listadelocalidades)=> {
         botonDestino.classList.add('boton-destino');
         paradaSalida.innerHTML = paradaSeleccionada;
         paradaSalida.classList.add('sobre')
-        paradaDestino.classList.add('sobre')
+        paradaDestino.classList.add('sobre-derecho')
         imagenBoton.classList.add('imagen-boton-destino');
         fondoBoton.classList.add('fondo-boton-destino')
         paradaDestino.innerHTML = listadelocalidades[i];

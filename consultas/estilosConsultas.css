@@ -85,7 +85,7 @@ body::-webkit-scrollbar-track {
 .botonvolver{
     width: 100%;
     transform: rotate(90deg);
-    background-image: url(../Iconos/flecha.png);
+    background-image: url(../Iconos/flecha.webp);
     background-size: cover;
     animation: palpitar 1s infinite;
 }
@@ -102,17 +102,6 @@ body::-webkit-scrollbar-track {
     overflow: hidden;
 }
 
-.fondo {
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
-    background-image: url(../Imagenes/logoempresa.jpg);
-    background-position: center;
-    background-size: 35%;
-    background-repeat: no-repeat;
-    position: absolute;
-    filter: opacity(20%)
-}
 
 .resaltado{
     animation: escalar .5s linear alternate-reverse infinite;
@@ -443,7 +432,7 @@ body::-webkit-scrollbar-track {
 .imagen-filtro-dia {
     width: 30px;
     height: 30px;
-    background-image: url(../Iconos/fin-de-semana.png);
+    background-image: url(../Iconos/fin-de-semana.webp);
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -520,7 +509,6 @@ body::-webkit-scrollbar-track {
 
 .boton-destino{
     flex-direction: column;
-    width: 150px;
     font-size:13px;
     height: 100px;
     overflow: hidden;
@@ -543,7 +531,7 @@ body::-webkit-scrollbar-track {
 }
 
 .imagen-boton, .imagen-boton-destino{
-    background-image: url(../Iconos/parada-colectivo.png);
+    background-image: url(../Iconos/parada-colectivo.webp);
     width: 40px;
     height: 40px;
     background-size: cover;
@@ -553,7 +541,7 @@ body::-webkit-scrollbar-track {
 }
 
 .imagen-boton-destino{
-    background-image: url(../Iconos/flecharosa.png);
+    background-image: url(../Iconos/flecharosa.webp);
     animation: none;
     width: 25px;
     height: 25px;
@@ -751,11 +739,8 @@ body::-webkit-scrollbar-track {
     }
 }
 
-
-
-
 .parada-imagen{
-    background-image: url(../Iconos/parada-recorrido3.png);
+    background-image: url(../Iconos/parada-recorrido3.webp);
     width: 20px;
     height: 20px;
     background-size: cover;
@@ -778,7 +763,7 @@ body::-webkit-scrollbar-track {
     font-size: 20px;
 }
 .boleto-imagen{
-    background-image: url(../Iconos/boleto2.png);
+    background-image: url(../Iconos/boleto2.webp);
     width: 50px;
     height: 50px;
     background-size: cover;
