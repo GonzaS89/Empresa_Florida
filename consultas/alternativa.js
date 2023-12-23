@@ -43,30 +43,52 @@ const tiposDeDias =
     },
 ];
 
+let diaPorDefecto;
+let contenedorElementoactivo;
+
+const opcionesDeDias = document.querySelectorAll('.contenedor-filtro p');
+const contenedorPadreOpcionesDias = document.querySelector('.contenedornuevo')
+const contenedorFiltrosIconos = document.querySelectorAll('.contenedor-filtros-iconos')
+
+tiposDeDias.forEach(element => {
+    if(element.valor == diaObtenido) 
+    diaPorDefecto = element.nombre;
+    valorDelDiaSelect = element.valor
+});
+
+opcionesDeDias.forEach(elemento => {
+    if(elemento.innerHTML !== diaPorDefecto) 
+    elemento.parentElement.parentElement.classList.add('opcionDiaOculta')
+    else contenedorElementoactivo = elemento.parentElement.parentElement;
+});
+
+contenedorPadreOpcionesDias.addEventListener('click', (e)=> {
+    let foco = e.target;
+    if(foco.classList.contains('opcionDiaOculta')) {
+        foco.classList.replace('opcionDiaOculta', 'opcionActiva'); 
+        contenedorElementoactivo.classList.add('opcionDiaOculta')       
+    }
+})
+
+for (let i = 0; i < contenedorFiltrosIconos.length; i++) {
+    const elemento = contenedorFiltrosIconos[i];
+    console.log(elemento)
+}
+
+
+
+
+
 // for (let i = 0; i < tiposDeDias.length; i++) {
 //     const elemento = tiposDeDias[i];
 //     if(elemento.valor == diaObtenido) {textoFiltroDia.innerHTML = elemento.nombre;valorDelDiaSelect = diaObtenido}
 
 // }
 
-const actulizarValorSelect = ()=> {
-    setInterval(() => {
-        for (let i = 0; i < arregloSelectorDeDias.length; i++) {
-            const elemento = arregloSelectorDeDias[i];
-            if(elemento.selected) {
-                textoFiltroDia.innerHTML = elemento.innerHTML;
-                for (let i = 0; i < tiposDeDias.length; i++) {
-                    const elemento2 = tiposDeDias[i];
-                    if(textoFiltroDia.innerHTML == elemento2.nombre){
-                        valorDelDiaSelect = elemento2.valor}
-                }
-            }
-        }
-    }, 250);
-}
 
 
-console.log(diaObtenido)
+
+
 
 // tipoDeDia = (fecha == 8 && mes) ? 'feriado' : 'normal';
 
