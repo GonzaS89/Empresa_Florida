@@ -96,6 +96,7 @@ const com11AlterFortin = [terminal,comisaria11,alternativa,talar,florida,esqLast
 const com11AlterCol4 = [terminal,comisaria11,alternativa,talar,florida,bCancha,col4Luisiana];
 const com11AutopCancha = [terminal,comisaria11,autopista,alderetes,talar,florida,bCancha];
 const bandaCochFortin = [terminal,bandaRS,alderetes,cochuchal,florida,esqLastra,fortin];
+const bandaCochFortinColonias = [terminal,bandaRS,alderetes,cochuchal,florida,esqLastra,fortin,todasColoniasVuelta];
 
 // Arreglos con recorridos (TERMINAL / POSSE / FLORIDA)
 
@@ -1158,7 +1159,7 @@ const horariosSSMAl = [
  {
  "nombre": "11:40",
  "salida": 11.4,
- "recorrido": [bandaCochFortin,todasColoniasVuelta]
+ "recorrido": bandaCochFortinColonias
  },
  {
  "nombre": "12:20",
