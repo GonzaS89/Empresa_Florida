@@ -1503,8 +1503,8 @@ const horariosDSMPo = [
         "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Posse → Paraíso → Florida → B° La Cancha"
     },
     {
-        "nombre": "20:45",
-        "salida": 20.45,
+        "nombre": "20:30",
+        "salida": 20.30,
         "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Posse → Paraíso → Florida → B° La Cancha"
     },
     // {
@@ -2340,11 +2340,6 @@ const ralosTerminalD = [
         "nombre": "21:30",
         "salida": 21.3,
         "recorrido": "Mayo → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
-    },
-    {
-        "nombre": "21:10",
-        "salida": 21.1,
-        "recorrido": "Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
     },
     {
         "nombre": "22:20",

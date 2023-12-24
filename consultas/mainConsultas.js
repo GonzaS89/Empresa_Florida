@@ -146,9 +146,9 @@ const definirPosicion = (sel, val, valorSel, pos) => {
 
 // let displayMensaje = (fecha == 25 && mes == 8 & hora < 17) ? 'flex' : 'none';
 
-onload = ()=> {
-    $('.mensaje-contenedor').css('display' , `${displayMensaje}`);
-}
+// onload = ()=> {
+//     $('.mensaje-contenedor').css('display' , `${displayMensaje}`);
+// }
 
     boton.addEventListener('click', () => {
         // Definimos la posicion del selector 1
@@ -209,7 +209,7 @@ onload = ()=> {
         let tipoDeDia;
 
         const definirDia = (fecha, mes)=> {
-            tipoDeDia = (fecha == 8 && mes) ? 'feriado' : 'normal';
+            tipoDeDia = (fecha == 25 && mes) ? 'feriado' : 'normal';
             switch (tipoDeDia) {
                 case 'feriado':
                     tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo `;
@@ -225,8 +225,6 @@ onload = ()=> {
 
         definirDia (fecha, mes)
 
-        
-
         if((fecha == 3) && (mes == 10)) { //Definir feriado previo
             feriadoPrevio = true; 
             rutaObtenida = obtenerDiaRuta(dia);
@@ -239,7 +237,7 @@ onload = ()=> {
             tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día sábado `;
         }
 
-        else if ((fecha == 1) && (mes == 10)){
+        else if ((fecha == 24) && (mes == 10)){
             let semiParoGrilla;
             semiParoGrilla = obtenerDiaRuta(1);
             let posicion = 0;
@@ -262,9 +260,52 @@ onload = ()=> {
             semiParoGrilla.splice(posiciones[0], posiciones.length)
             rutaObtenida = semiParoGrilla;
         }
-
         
-        console.log(rutaObtenida)
+        else if((fecha == 24 && mes == 11)){
+            let grillaOcasional;
+            let grillaOcasionalVacia = [];
+            grillaOcasional = obtenerDiaRuta(0);
+        
+            if(posicion == 1){
+                grillaOcasional.forEach(element => {
+                    if(element.salida < 21){
+                        grillaOcasionalVacia.push(element)
+                    }
+                });
+                rutaObtenida = grillaOcasionalVacia;
+            }
+
+            if(posicion == 2 ){
+                grillaOcasional.forEach(element => {
+                    if(element.salida <= 20.3){
+                        grillaOcasionalVacia.push(element)
+                    }
+                });
+                rutaObtenida = grillaOcasionalVacia;
+            }
+
+            if(posicion == 4){
+                grillaOcasional.forEach(element => {
+                    if(element.salida <= 21.1){
+                        grillaOcasionalVacia.push(element)
+                    }
+                });
+                rutaObtenida = grillaOcasionalVacia;
+            }
+
+            if(posicion2 > 0){
+                grillaOcasional.forEach(element => {
+                    if(element.salida < 21) {
+                        grillaOcasionalVacia.push(element)
+                    }
+                })
+                rutaObtenida = grillaOcasionalVacia;
+            }
+            
+        }
+
+            console.log(rutaObtenida)
+
             function obtenerLista(x) {
                 for (i = 0; i < x.length; i++) listaDelDia.push(x[i].salida);
                 // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
@@ -273,6 +314,7 @@ onload = ()=> {
         
         
         let listaObtenida = obtenerLista(rutaObtenida)
+        
     
     
         for (let i = 0; i < listaObtenida.length; i++) {
