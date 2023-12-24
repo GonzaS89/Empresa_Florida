@@ -2875,11 +2875,11 @@ const terminalRalosD = [
         "salida": 20,
         "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos",
     },
-    {
-        "nombre": "20:30",
-        "salida": 20.3,
-        "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Mayo → Las Cejas"
-    },
+    // {
+    //     "nombre": "20:30",
+    //     "salida": 20.3,
+    //     "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Mayo → Las Cejas"
+    // },
     {
         "nombre": "21:00",
         "salida": 21,

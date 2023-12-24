@@ -295,7 +295,16 @@ const definirPosicion = (sel, val, valorSel, pos) => {
 
             if(posicion2 > 0){
                 grillaOcasional.forEach(element => {
-                    if(element.salida < 21) {
+                    if(element.salida <= 20.3) {
+                        grillaOcasionalVacia.push(element)
+                    }
+                })
+                rutaObtenida = grillaOcasionalVacia;
+            }
+
+            if(posicion2 == 7){
+                grillaOcasional.forEach(element => {
+                    if(element.salida <= 18.30) {
                         grillaOcasionalVacia.push(element)
                     }
                 })
