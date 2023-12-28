@@ -88,7 +88,8 @@ const destinosCompartidos = (opcion,dia)=> {
             diaR[dia].forEach(servicio => {
                 if(servicio.recorrido.includes(opcion)){
                     servicio.recorrido.forEach(localidades => {
-                        if(localidades !== opcion && !(listaDestinos.includes(localidades)) && listaTodosDestino.includes(localidades)){
+                        if(localidades !== opcion && !(listaDestinos.includes(localidades)) && 
+                        servicio.recorrido.indexOf(localidades) > servicio.recorrido.indexOf(opcion) && listaTodosDestino.includes(localidades)){
                             listaDestinos.push(localidades);
                             ordenarLista(listaDestinos)
                         }
@@ -245,12 +246,10 @@ todosBotonesParadas.forEach(elemento => {
             todosBotonesDestino.forEach(elemento => {
                 elemento.addEventListener('click', ()=> {
                     $('.indicacion-cont').css('display', 'flex');
-                    destinoSeleccionado = elemento.querySelector('P').innerHTML;
-                    console.log(paradaSeleccionada,destinoSeleccionado)    
+                    destinoSeleccionado = elemento.querySelector('P').innerHTML; 
                 
                 efectoPulsado(elemento);
                 listaViajesObtenida = determinarRuta(valorDelDiaSelect,paradaSeleccionada,destinoSeleccionado);
-                console.log(listaViajesObtenida)
                 listaDeSalidas = obtenerListaDeSalidas(listaViajesObtenida);
                 listaDeDiferencias = obtenerListaDeDiferencias(listaDeSalidas);
                 construirNuevosGlobos(listaViajesObtenida);

@@ -729,7 +729,7 @@ body::-webkit-scrollbar-track {
 }
 
 .parada-seleccionada {
-    animation: parada-seleccion 1s .5s forwards;
+    animation: parada-seleccion 1s .2s forwards;
 }
 
 @keyframes parada-seleccion {
