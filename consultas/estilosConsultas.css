@@ -639,6 +639,14 @@ body::-webkit-scrollbar-track {
     text-align: center;
     border: 3px solid;
     padding: 3px;
+    animation: expandiraviso 2s infinite;
+}
+
+@keyframes expandiraviso {
+    100%{
+        filter: opacity(0);
+        transform: scale(1.2);
+    }
 }
 
 .vista-derecha{
@@ -667,6 +675,16 @@ body::-webkit-scrollbar-track {
     border-bottom: 5px solid rgba(0, 0, 0, 0.150);
     margin: 20px;
     padding-bottom: 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    && p{
+        font-family: var(--fuenteTer);
+        font-size: 12px;
+        font-weight: 100;
+    }
 }
 
 .vista-derecha-recorrido{

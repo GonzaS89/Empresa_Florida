@@ -49,13 +49,18 @@ let contenedorElementoactivo;
 const opcionesDeDias = document.querySelectorAll('.contenedor-filtro p');
 const contenedorPadreOpcionesDias = document.querySelector('.contenedornuevo')
 const contenedorFiltrosIconos = document.querySelectorAll('.contenedor-filtros-iconos');
+let diasGrilla;
 
 tiposDeDias.forEach(element => {
     if(diaObtenido == element.valor){ 
         diaPorDefecto = element.nombre;
-        valorDelDiaSelect = element.valor
+        valorDelDiaSelect = element.valor;
     }   
 });
+
+
+
+
 
 opcionesDeDias.forEach(elemento => {
     if(elemento.innerHTML !== diaPorDefecto) {
@@ -77,7 +82,8 @@ for (let i = 0; i < contenedorFiltrosIconos.length; i++) {
         
         tiposDeDias.forEach(element => {
             if(element.nombre.toUpperCase() == elemento.innerText){ 
-                valorDelDiaSelect = element.valor}
+                valorDelDiaSelect = element.valor;
+            }
         });
     })
 }
@@ -265,7 +271,6 @@ todosBotonesParadas.forEach(elemento => {
                 irAlObjeto(indiceObtenido);
             })
         });
-    
    })
 });
 

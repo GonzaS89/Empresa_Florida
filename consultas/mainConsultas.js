@@ -201,6 +201,7 @@ const construirNuevosGlobos = (rutas)=> {
         const vistaDerechaEstado = document.createElement('DIV');
         vistaDerechaEstado.classList.add('vista-derecha-estado');
         const vistaDerechaEstadoTexto = document.createElement('P')
+        vistaDerechaEstadoTexto.innerHTML = `Grilla de ${tiposDeDias[valorDelDiaSelect].nombre}`
         vistaDerechaEstado.appendChild(vistaDerechaEstadoTexto);
         vistaDerecha.appendChild(vistaDerechaEstado);
     
