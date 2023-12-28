@@ -71,6 +71,7 @@ body::-webkit-scrollbar-track {
     border-radius: 50px;
     margin: 30px auto;
     position: relative;
+    box-sizing: border-box;
 }
 
 
