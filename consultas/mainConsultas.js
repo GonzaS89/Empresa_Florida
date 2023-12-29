@@ -261,7 +261,7 @@ const definirPosicion = (sel, val, valorSel, pos) => {
             rutaObtenida = semiParoGrilla;
         }
         
-        else if((fecha == 24 && mes == 11)){
+        else if((fecha == 31 && mes == 11)){
             let grillaOcasional;
             let grillaOcasionalVacia = [];
             grillaOcasional = obtenerDiaRuta(0);
