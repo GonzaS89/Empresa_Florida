@@ -209,7 +209,7 @@ const definirPosicion = (sel, val, valorSel, pos) => {
         let tipoDeDia;
 
         const definirDia = (fecha, mes)=> {
-            tipoDeDia = (fecha == 25 && mes) ? 'feriado' : 'normal';
+            tipoDeDia = (fecha == 1 && mes == 0) ? 'feriado' : 'normal';
             switch (tipoDeDia) {
                 case 'feriado':
                     tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo `;
@@ -313,7 +313,20 @@ const definirPosicion = (sel, val, valorSel, pos) => {
             
         }
 
-            console.log(rutaObtenida)
+
+        else if(fecha == 1){
+            let grillaOcasional;
+            let grillaOcasionalVacia = [];
+            grillaOcasional = obtenerDiaRuta(0);
+            grillaOcasional.forEach(elemento => {
+                if(elemento.salida >= 14) {
+                    grillaOcasionalVacia.push(elemento)
+                }
+            });
+            rutaObtenida = grillaOcasionalVacia;
+        }
+
+        
 
             function obtenerLista(x) {
                 for (i = 0; i < x.length; i++) listaDelDia.push(x[i].salida);
