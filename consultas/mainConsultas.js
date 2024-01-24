@@ -261,55 +261,54 @@ const definirPosicion = (sel, val, valorSel, pos) => {
             rutaObtenida = semiParoGrilla;
         }
         
-        else if((fecha == 31 && mes == 11)){
+        else if((fecha == 24 && mes == 0)){
             let grillaOcasional;
             let grillaOcasionalVacia = [];
-            grillaOcasional = obtenerDiaRuta(0);
-        
-            if(posicion == 1){
-                grillaOcasional.forEach(element => {
-                    if(element.salida < 21){
-                        grillaOcasionalVacia.push(element)
-                    }
-                });
+            grillaOcasional = obtenerDiaRuta(dia);
+            console.log(grillaOcasional)
+            grillaOcasional.forEach(element => {
+                if(element.salida <= 19){
+                    grillaOcasionalVacia.push(element)
+                }
+            });
                 rutaObtenida = grillaOcasionalVacia;
-            }
+            
 
-            if(posicion == 2 ){
-                grillaOcasional.forEach(element => {
-                    if(element.salida <= 20.3){
-                        grillaOcasionalVacia.push(element)
-                    }
-                });
-                rutaObtenida = grillaOcasionalVacia;
-            }
+            // if(posicion == 2 ){
+            //     grillaOcasional.forEach(element => {
+            //         if(element.salida <= 20.3){
+            //             grillaOcasionalVacia.push(element)
+            //         }
+            //     });
+            //     rutaObtenida = grillaOcasionalVacia;
+            // }
 
-            if(posicion == 4){
-                grillaOcasional.forEach(element => {
-                    if(element.salida <= 21.1){
-                        grillaOcasionalVacia.push(element)
-                    }
-                });
-                rutaObtenida = grillaOcasionalVacia;
-            }
+            // if(posicion == 4){
+            //     grillaOcasional.forEach(element => {
+            //         if(element.salida <= 21.1){
+            //             grillaOcasionalVacia.push(element)
+            //         }
+            //     });
+            //     rutaObtenida = grillaOcasionalVacia;
+            // }
 
-            if(posicion2 > 0){
-                grillaOcasional.forEach(element => {
-                    if(element.salida <= 20.3) {
-                        grillaOcasionalVacia.push(element)
-                    }
-                })
-                rutaObtenida = grillaOcasionalVacia;
-            }
+            // if(posicion2 > 0){
+            //     grillaOcasional.forEach(element => {
+            //         if(element.salida <= 20.3) {
+            //             grillaOcasionalVacia.push(element)
+            //         }
+            //     })
+            //     rutaObtenida = grillaOcasionalVacia;
+            // }
 
-            if(posicion2 == 7){
-                grillaOcasional.forEach(element => {
-                    if(element.salida <= 18.30) {
-                        grillaOcasionalVacia.push(element)
-                    }
-                })
-                rutaObtenida = grillaOcasionalVacia;
-            }
+            // if(posicion2 == 7){
+            //     grillaOcasional.forEach(element => {
+            //         if(element.salida <= 18.30) {
+            //             grillaOcasionalVacia.push(element)
+            //         }
+            //     })
+            //     rutaObtenida = grillaOcasionalVacia;
+            // }
             
         }
 
