@@ -741,11 +741,11 @@ const horariosLvSMAl = [
     //     "salida": 10.45,
     //     "recorrido": "Terminal → Alternativa → Talar → Florida → Esquina Lastra → Fortín"
     // },
-    {
-        "nombre": "10:55",
-        "salida": 10.55,
-        "recorrido": "Banda R.S. → Alderetes → Talar → Florida → Esquina Lastra → Fortín"
-    },
+    // {
+    //     "nombre": "10:55",
+    //     "salida": 10.55,
+    //     "recorrido": "Banda R.S. → Alderetes → Talar → Florida → Esquina Lastra → Fortín"
+    // },
     {
         "nombre": "11:15",
         "salida": 11.15,
