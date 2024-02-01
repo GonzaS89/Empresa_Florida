@@ -2821,9 +2821,10 @@ const terminalRalosD = [
         "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → VIlla Tercera"
     },
     {
-        "nombre": "14:05",
-        "salida": 14.05,
-        "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos"
+        "nombre": "14:00",
+        "salida": 14,
+        "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos",
+        "recorrido2": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Las Cejas"
     },
     {
         "nombre": "14:30",
@@ -3223,12 +3224,12 @@ const terminalLasCejasLaV = [
         "salida": 11,
         "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Las Cejas → Piedrabuena"
     },
-    {
-        "nombre": "12:30",
-        "salida": 12.3,
-        "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Las Cejas",
-        "recorrido2": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Las Cejas → 7 de Abril"
-    },
+    // {
+    //     "nombre": "12:30",
+    //     "salida": 12.3,
+    //     "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Las Cejas",
+    //     "recorrido2": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Las Cejas → 7 de Abril"
+    // },
     {
         "nombre": "14:30",
         "salida": 14.3,
@@ -3261,11 +3262,11 @@ const terminalLasCejasS = [
         "salida": 10.4,
         "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Lolita → Las Cejas"
     },
-    // {
-    //     "nombre": "14:30",
-    //     "salida": 14.3,
-    //     "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Las Cejas"
-    // },
+    {
+        "nombre": "14:30",
+        "salida": 14.3,
+        "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Las Cejas"
+    },
     {
         "nombre": "15:45",
         "salida": 15.45,
@@ -3291,6 +3292,11 @@ const terminalLasCejasD = [
     {
         "nombre": "10:30",
         "salida": 10.3,
+        "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Las Cejas"
+    },
+    {
+        "nombre": "14:00",
+        "salida": 15,
         "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Las Cejas"
     },
     {
