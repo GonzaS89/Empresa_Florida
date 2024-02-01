@@ -313,17 +313,17 @@ const definirPosicion = (sel, val, valorSel, pos) => {
         }
 
 
-        else if(fecha == 1){
-            let grillaOcasional;
-            let grillaOcasionalVacia = [];
-            grillaOcasional = obtenerDiaRuta(0);
-            grillaOcasional.forEach(elemento => {
-                if(elemento.salida >= 14) {
-                    grillaOcasionalVacia.push(elemento)
-                }
-            });
-            rutaObtenida = grillaOcasionalVacia;
-        }
+        // else if(fecha == 1){
+        //     let grillaOcasional;
+        //     let grillaOcasionalVacia = [];
+        //     grillaOcasional = obtenerDiaRuta(0);
+        //     grillaOcasional.forEach(elemento => {
+        //         if(elemento.salida >= 14) {
+        //             grillaOcasionalVacia.push(elemento)
+        //         }
+        //     });
+        //     rutaObtenida = grillaOcasionalVacia;
+        // }
 
         
 

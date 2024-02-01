@@ -27,7 +27,7 @@ const horariosLvFloAl = [
     {
         "nombre": "06:50",
         "salida": 6.5,
-        "recorrido": "Colonia 4 → Fonda → Talar → Alternativa → Terminal"
+        "recorrido": "Colonia 4 → Fonda → Talar → Autopista → Terminal"
     },
     {
         "nombre": "07:20",
@@ -63,8 +63,8 @@ const horariosLvFloAl = [
         "recorrido": "Colonia 4 → B° La Cancha → Talar → Alderetes → Autopista → Terminal"
     },
     {
-        "nombre": "10:30",
-        "salida": 10.3,
+        "nombre": "10:40",
+        "salida": 10.4,
         "recorrido": "Fortín → Esquina Lastra → Florida → Talar → Alderetes → Banda R.S. → Terminal"
     },
     {
@@ -310,7 +310,7 @@ const horariosLvFloPo = [
     {
         "nombre": "04:50",
         "salida": 4.5,
-        "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
+        "recorrido": "Fonda → B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
     },
     {
         "nombre": "05:50",
@@ -736,11 +736,11 @@ const horariosLvSMAl = [
         "salida": 9.45,
         "recorrido": "Terminal → Banda R.S. → Alderetes → Talar → Florida → Esquina Lastra → Fortín"
     },
-    // {
-    //     "nombre": "10:45",
-    //     "salida": 10.45,
-    //     "recorrido": "Terminal → Alternativa → Talar → Florida → Esquina Lastra → Fortín"
-    // },
+    {
+        "nombre": "10:45",
+        "salida": 10.45,
+        "recorrido": "Terminal → Banda R.S. → Alderetes → Talar → Florida → Esquina Lastra → Fortín"
+    },
     // {
     //     "nombre": "10:55",
     //     "salida": 10.55,
