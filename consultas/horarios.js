@@ -1584,11 +1584,11 @@ const posseTerminalLaV = [
         "recorrido": "Bosque → Fila del Medio → Cevil Pozo → Banda R.S. → Terminal",
         // "recorrido2": "Dispensario → Fila de la orilla → Llona → Cevil Pozo → Banda R.S. → Terminal"
     },
-    {
-        "nombre": "10:10",
-        "salida": 10.1,
-        "recorrido": "Dispensario → Fila del Medio → Cevil Pozo → Banda R.S. → Terminal"
-    },
+    // {
+    //     "nombre": "10:10",
+    //     "salida": 10.1,
+    //     "recorrido": "Dispensario → Fila del Medio → Cevil Pozo → Banda R.S. → Terminal"
+    // },
     // {
     //     "nombre": "11:10",
     //     "salida": 11.1,
@@ -1974,10 +1974,14 @@ const ralosTerminalLaV = [
         "recorrido2": "Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
     },
     {
-        "nombre": "10:20",
-        "salida": 10.2,
-        "recorrido": "Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal",
-        "recorrido2": "Los Ralos → Villa Tercera → Llona → Cevil Pozo → Banda R.S. → Terminal"
+        "nombre": "10:15",
+        "salida": 10.15,
+        "recorrido": "Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
+    },
+    {
+        "nombre": "10:30",
+        "salida": 10.30,
+        "recorrido": "Los Ralos → Villa Tercera → Llona → Cevil Pozo → Banda R.S. → Terminal"
     },
     {
         "nombre": "11:10",
@@ -2989,11 +2993,11 @@ const terminalCruzAltaRalosLaV = [
         "salida": 10.45,
         "recorrido": "Terminal → Banda R.S. → Llona → Cevil Pozo → Cruz Alta → Los Ralos"
     },
-    {
-        "nombre": "12:00",
-        "salida": 12,
-        "recorrido": "Terminal → Banda R.S. → Llona → Cevil Pozo → Cruz Alta → Los Ralos"
-    },
+    // {
+    //     "nombre": "12:00",
+    //     "salida": 12,
+    //     "recorrido": "Terminal → Banda R.S. → Llona → Cevil Pozo → Cruz Alta → Los Ralos"
+    // },
     {
         "nombre": "13:15",
         "salida": 13.15,
