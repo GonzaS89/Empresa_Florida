@@ -11,7 +11,7 @@ const horariosLvFloAl = [
     {
         "nombre": "05:35",
         "salida": 5.35,
-        "recorrido": "Fortín → Esquina Lastra → Florida → Talar → Alternativa → Terminal"
+        "recorrido": "Fortín → Esquina Lastra → Fonda → B° La Cancha → Talar → Alternativa → Terminal"
     },
     {
         "nombre": "06:10",
@@ -22,7 +22,7 @@ const horariosLvFloAl = [
     {
         "nombre": "06:20",
         "salida": 6.2,
-        "recorrido": "Colonia 5 → Fortín → Esquina Lastra → Fonda → B° La Cancha → Talar → Alternativa → Terminal"
+        "recorrido": "Colonia 5 → Fortín → Esquina Lastra → Fonda → B° La Cancha (06:45) → Talar → Alternativa → Terminal"
     },
     {
         "nombre": "06:50",
@@ -374,8 +374,8 @@ const horariosLvFloPo = [
         "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
     },
     {
-        "nombre": "11:50",
-        "salida": 11.5,
+        "nombre": "11:55",
+        "salida": 11.55,
         "recorrido": "B° La Cancha → Paraíso → Posse → Llona → Cevil Pozo → Banda R.S. → Terminal"
     },
     {
@@ -1106,7 +1106,7 @@ const horariosLvSMPo = [
     {
         "nombre": "08:15",
         "salida": 8.15,
-        "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Posse → Paraíso → Florida → Esquina Lastra"
+        "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Posse → Paraíso → Florida → B° La Cancha"
     },
     {
         "nombre": "09:00",
@@ -2021,8 +2021,8 @@ const ralosTerminalLaV = [
         // "recorrido2": "Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
     },
     {
-        "nombre": "15:30",
-        "salida": 15.3,
+        "nombre": "15:25",
+        "salida": 15.25,
         "recorrido": "Los Ralos → Villa Tercera → Llona → Cevil Pozo → Banda R.S. → Terminal"
     },
     // {
@@ -2436,8 +2436,8 @@ const terminalRalosLaV = [
     {
         "nombre": "12:10",
         "salida": 12.1,
-        "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Mayo → Alabama",
-        "recorrido2": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Mayo"
+        "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Mayo → Alabama"
+        // "recorrido2": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Mayo"
     },
     {
         "nombre": "12:30",
@@ -2520,7 +2520,7 @@ const terminalRalosLaV = [
     {
         "nombre": "17:50",
         "salida": 17.5,
-        "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Villa Tercera"
+        "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Infiernillo"
     },
     {
         "nombre": "18:00",
