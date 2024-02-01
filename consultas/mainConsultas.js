@@ -225,7 +225,7 @@ const definirPosicion = (sel, val, valorSel, pos) => {
 
         definirDia (fecha, mes)
 
-        if((fecha == 25) && (mes == 11)) { //Definir feriado previo
+        if((fecha == 25) && (mes == 0)) { //Definir feriado previo
             feriadoPrevio = true; 
             rutaObtenida = obtenerDiaRuta(dia);
             tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
