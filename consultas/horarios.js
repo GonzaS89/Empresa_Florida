@@ -1533,11 +1533,11 @@ const horariosDSMPo = [
         "salida": 20.30,
         "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Posse → Paraíso → Florida → B° La Cancha"
     },
-    // {
-    //     "nombre": "21:00",
-    //     "salida": 21,
-    //     "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Posse → Paraíso → Florida → B° La Cancha"
-    // },
+    {
+        "nombre": "21:00",
+        "salida": 21,
+        "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Posse → Paraíso → Florida → B° La Cancha → Colonia 4 (Luisiana)"
+    },
     {
         "nombre": "21:30",
         "salida": 21.3,
