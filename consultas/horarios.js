@@ -3292,12 +3292,12 @@ const terminalLasCejasLaV = [
         "salida": 11,
         "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Las Cejas → Piedrabuena"
     },
-    // {
-    //     "nombre": "12:30",
-    //     "salida": 12.3,
-    //     "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Las Cejas",
-    //     "recorrido2": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Las Cejas → 7 de Abril"
-    // },
+    {
+        "nombre": "12:30",
+        "salida": 12.3,
+        "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Las Cejas → Pozo Hondo",
+        // "recorrido2": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Las Cejas → 7 de Abril"
+    },
     // {
     //     "nombre": "14:30",
     //     "salida": 14.3,
