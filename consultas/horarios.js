@@ -761,8 +761,8 @@ const horariosLvSMAl = [
     //     "recorrido": "Banda R.S. → Alderetes → Talar → Florida → Esquina Lastra → Fortín"
     // },
     {
-        "nombre": "11:15",
-        "salida": 11.15,
+        "nombre": "11:25",
+        "salida": 11.25,
         "recorrido": "Terminal → Catalinas Park → Autopista → Talar → Florida → B° La Cancha → Colonia 4 → Colonia 10"
     },
     {
