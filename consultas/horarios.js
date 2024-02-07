@@ -760,8 +760,8 @@ const horariosLvSMAl = [
     //     "recorrido": "Banda R.S. → Alderetes → Talar → Florida → Esquina Lastra → Fortín"
     // },
     {
-        "nombre": "11:15",
-        "salida": 11.15,
+        "nombre": "11:25",
+        "salida": 11.25,
         "recorrido": "Terminal → Catalinas Park → Autopista → Talar → Florida → B° La Cancha → Colonia 4 → Colonia 10"
     },
     {
@@ -3281,12 +3281,12 @@ const terminalLasCejasLaV = [
         "salida": 11,
         "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Las Cejas → Piedrabuena"
     },
-    // {
-    //     "nombre": "12:30",
-    //     "salida": 12.3,
-    //     "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Las Cejas",
-    //     "recorrido2": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Las Cejas → 7 de Abril"
-    // },
+    {
+        "nombre": "12:30",
+        "salida": 12.3,
+        "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Las Cejas → Pozo Hondo",
+        // "recorrido2": "Terminal → Banda R.S. → Cevil Pozo → Llona → Los Ralos → Las Cejas → 7 de Abril"
+    },
     // {
     //     "nombre": "14:30",
     //     "salida": 14.3,
