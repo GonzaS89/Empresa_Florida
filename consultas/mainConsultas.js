@@ -209,7 +209,7 @@ const definirPosicion = (sel, val, valorSel, pos) => {
         let tipoDeDia;
 
         const definirDia = (fecha, mes)=> {
-            tipoDeDia = (fecha == 1 && mes == 0) ? 'feriado' : 'normal';
+            tipoDeDia = (fecha == 12 || fecha == 13 && mes == 1) ? 'feriado' : 'normal';
             switch (tipoDeDia) {
                 case 'feriado':
                     tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo `;
@@ -225,7 +225,7 @@ const definirPosicion = (sel, val, valorSel, pos) => {
 
         definirDia (fecha, mes)
 
-        if((fecha == 25) && (mes == 0)) { //Definir feriado previo
+        if((fecha == 14) && (mes == 1)) { //Definir feriado previo
             feriadoPrevio = true; 
             rutaObtenida = obtenerDiaRuta(dia);
             tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
