@@ -137,11 +137,11 @@ const horariosLvFloAl = [
         "salida": 17.5,
         "recorrido": "Fortin → Esquina Lastra → Florida → Talar → Alderetes → Banda R.S. → Terminal"
     },
-    {
-        "nombre": "17:50",
-        "salida": 17.5,
-        "recorrido": "Fortín → Esquina Lastra → Florida → Talar → Alderetes → Banda R.S. → Terminal"
-    },
+    // {
+    //     "nombre": "17:50",
+    //     "salida": 17.5,
+    //     "recorrido": "Fortín → Esquina Lastra → Florida → Talar → Alderetes → Banda R.S. → Terminal"
+    // },
     // {
     //     "nombre": "18:10",
     //     "salida": 18.1,
