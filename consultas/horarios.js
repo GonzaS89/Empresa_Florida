@@ -1322,8 +1322,8 @@ const horariosLvSMPo = [
         "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Posse → Paraíso → B° La Cancha"
     },
     // {
-    //     "nombre": "20:50",
-    //     "salida": 20.5,
+    //     "nombre": "20:45",
+    //     "salida": 20.45,
     //     "recorrido": "Terminal → Banda R.S. → Cevil Pozo → Llona → Posse → Paraíso → B° La Cancha"
     // },
     {
