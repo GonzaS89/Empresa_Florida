@@ -74,7 +74,7 @@ body::-webkit-scrollbar-track {
         filter: opacity(0%);
     }
     100%{
-        
+
         background-size: 100%;
         background-repeat: no-repeat;
 
@@ -170,7 +170,7 @@ body::-webkit-scrollbar-track {
         transform: scale(1);
         height: 130px;
         width: 130px;
-        
+
     }
 }
 
@@ -247,7 +247,7 @@ body::-webkit-scrollbar-track {
         height: 100px;
         animation: rellenarSmall 3s ease .5s forwards;
         transform: scale(0);
-        
+
     }
     @keyframes rellenarSmall{
         0%{
@@ -257,12 +257,12 @@ body::-webkit-scrollbar-track {
         75%{
             transform: scale(1.1);
         }
-    
+
         100%{
             transform: scale(1);
             height: 100px;
             width: 100px;
-            
+
         }
     }
     #dia,#segundos,
@@ -332,8 +332,8 @@ body::-webkit-scrollbar-track {
     display: flex;
 }
 
-.menu, .menu2, 
-.menu3, .menu4, 
+.menu, .menu2,
+.menu3, .menu4,
 .menu5 {
     position: relative;
     width: 300px;
@@ -354,8 +354,8 @@ body::-webkit-scrollbar-track {
     animation: aparece-sombra .3s forwards
 }
 
-.menu::after , .menu2::after, 
-.menu3::after, .menu4::after, 
+.menu::after , .menu2::after,
+.menu3::after, .menu4::after,
 .menu5::after {
     content:'\025be';
     display: table-cell;
@@ -388,14 +388,14 @@ select {
 }
 
 @media (max-height: 570px){
-    .menu, .menu2, 
-.menu3, .menu4, 
+    .menu, .menu2,
+.menu3, .menu4,
 .menu5{
     height:45px;
     margin-bottom: -20px;
 }
-.menu::after , .menu2::after, 
-.menu3::after, .menu4::after, 
+.menu::after , .menu2::after,
+.menu3::after, .menu4::after,
 .menu5::after{
     height: 45px;
 }
@@ -546,9 +546,9 @@ select:focus{outline:none;}
 @keyframes parpadeoBoton {
     to{
         outline: 20px solid rgba(69, 95, 244, 0.329);;
-        
+
     }
-    from{       
+    from{
         outline: 0 solid var(--fondoAzul);
         outline-offset: 0;
         outline-offset: 0;
@@ -863,8 +863,8 @@ select:focus{outline:none;}
     100%{
         transform: scale(1);
         background: var(--fondoAzulFuerte);
-        
-        
+
+
     }
 }
 
@@ -998,15 +998,15 @@ select:focus{outline:none;}
     flex-direction: column;
     /* background:var(--rojo2Linear); */
     align-items: center;
-    max-height: 350px;
-    min-height: 300px;
+    /* max-height: 350px; */
+    min-height: 350px;
     gap: 10px;
     width: 75%;
     /* border-top: 2.5px solid rgba(128, 128, 128, 0.159); */
     overflow-y: scroll;
     margin: 10px auto;
     /* border-radius: 20px; */
-    
+
 }
 .resultados-cont::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -1061,7 +1061,7 @@ select:focus{outline:none;}
     }
 }
 
-.manitoAnimacionArriba { 
+.manitoAnimacionArriba {
     animation: manitoScrollArriba 1.5s ease-out 2s forwards;
 }
 
@@ -1075,7 +1075,7 @@ select:focus{outline:none;}
     }
 }
 
-.manitoAnimacionAbajo { 
+.manitoAnimacionAbajo {
     animation: manitoScrollAbajo 1.5s ease-out 2s forwards;
 }
 
@@ -1215,7 +1215,7 @@ select:focus{outline:none;}
 @keyframes loopear {
     0% {
         filter: opacity(0%);
-    } 
+    }
     50% {
         filter: opacity(100%);
     }
@@ -1243,7 +1243,7 @@ select:focus{outline:none;}
 }
 
 @keyframes irse {
-    
+
     100% {
         filter: opacity(0%);
     }
@@ -1281,8 +1281,8 @@ select:focus{outline:none;}
     color: var(--blanco);
     font-family: var(--fuenteTer);
     font-size: 25px;
-    text-align: center;   
-    margin: 0 auto; 
+    text-align: center;
+    margin: 0 auto;
     color:var(--fondoAzulFuerte);
     -webkit-text-stroke: .5px white;
     text-transform: uppercase;
@@ -1311,13 +1311,13 @@ select:focus{outline:none;}
 }
 
 @keyframes ondaBoton{
-    
+
     to{
         outline: 25px solid rgba(0, 0, 0, 0);
         transform: scale(0.9);
-        
+
     }
-    from{       
+    from{
         outline: 0 solid white;
         outline-offset: 0;
         outline-offset: 0;
@@ -1401,7 +1401,7 @@ select:focus{outline:none;}
         padding: 10px 0;
         border: .55px solid white;
         height: 300px;
-        
+
     }
 
     .actual1,
@@ -1430,7 +1430,7 @@ select:focus{outline:none;}
     .indicacion-cont {
         height: 50px;
     }
-    
+
     .indicacion {
         font-size: 13px;
     }
@@ -1531,7 +1531,7 @@ select:focus{outline:none;}
     to{
         transform: translateX(-100%);
         display: none;
-        
+
     }
 }
 

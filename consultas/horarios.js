@@ -1131,7 +1131,7 @@ const horariosDSMAl = [
     {
         "nombre": "17:45",
         "salida": 17.45,
-        "recorrido": "Terminal → Banda R.S. → Alderetes → Talar → Esquina Lastra → Fortín → Colonia 3 (Luisiana → Finca Mayo"
+        "recorrido": "Terminal → Banda R.S. → Alderetes → Talar → Esquina Lastra → Fortín → Colonia 3 (Luisiana) → Finca Mayo"
     },
     // {
     //     "nombre": "18:30",
