@@ -1015,7 +1015,7 @@ select:focus {
   overflow-y: scroll;
   margin: 10px auto;
   /* border-radius: 20px; */
-  height: 400px;
+  height: 440px;
 }
 .resultados-cont::-webkit-scrollbar {
   -webkit-appearance: none;
