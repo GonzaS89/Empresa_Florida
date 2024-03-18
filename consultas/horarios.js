@@ -55,7 +55,7 @@ const horariosLvFloAl = [
     {
         "nombre": "07:40",
         "salida": 7.4,
-        "recorrido": "Finca Finca Mayo → Fortín → Esquina Lastra → Cochuchal → Alderetes → Banda R.S. → Terminal"
+        "recorrido": "Finca Mayo → Fortín → Esquina Lastra → Cochuchal → Alderetes → Banda R.S. → Terminal"
     },
     {
         "nombre": "07:50",
@@ -199,7 +199,7 @@ const horariosLvFloAl = [
     {
         "nombre": "20:55",
         "salida": 20.55,
-        "recorrido": "Finca Finca Mayo → Colonia 4 (Luisiana) (21:05) → B° La Cancha → Talar → Alderetes → Autopista → Terminal"
+        "recorrido": "Finca Mayo → Colonia 4 (Luisiana) (21:05) → B° La Cancha → Talar → Alderetes → Autopista → Terminal"
     }
 
 ]
@@ -313,7 +313,7 @@ const horariosDFloAl = [
     {
         "nombre": "07:40",
         "salida": 7.4,
-        "recorrido": "Finca Finca Mayo → Fortín → Esquina Lastra → Talar → Alderetes → Banda R.S. → Terminal"
+        "recorrido": "Finca Mayo → Fortín → Esquina Lastra → Talar → Alderetes → Banda R.S. → Terminal"
     },
     {
         "nombre": "10:30",
@@ -323,7 +323,7 @@ const horariosDFloAl = [
     {
         "nombre": "12:40",
         "salida": 12.4,
-        "recorrido": "Finca Finca Mayo → Fortín → Esquina Lastra → Talar → Alderetes → Banda R.S. → Terminal"
+        "recorrido": "Finca Mayo → Fortín → Esquina Lastra → Talar → Alderetes → Banda R.S. → Terminal"
     },
     {
         "nombre": "14:45",
@@ -1123,7 +1123,7 @@ const horariosDSMAl = [
         "salida": 16,
         "recorrido": "Terminal → Banda R.S. → Alderetes → Talar → Esquina Lastra → Fortín → Colonia 4 (Florida)"
     },
-    {
+    { 
         "nombre": "16:50",
         "salida": 16.5,
         "recorrido": "Terminal → Banda R.S. → Alderetes → Talar → B° La Cancha"
@@ -2114,7 +2114,7 @@ const ralosTerminalLaV = [
     {
         "nombre": "07:50",
         "salida": 7.5,
-        "recorrido": "La Marta → Finca Finca Mayo → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
+        "recorrido": "La Marta → Finca Mayo → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
     },
     {
         "nombre": "08:10",
@@ -2125,7 +2125,7 @@ const ralosTerminalLaV = [
     {
         "nombre": "08:15",
         "salida": 8.15,
-        "recorrido": "La Marta → Finca Finca Mayo → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
+        "recorrido": "La Marta → Finca Mayo → Los Ralos → Llona → Cevil Pozo → Banda R.S. → Terminal"
     },
     {
         "nombre": "08:30",
