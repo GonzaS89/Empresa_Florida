@@ -1428,7 +1428,7 @@ background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
 
   .mensaje2 {
     display: none;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
     position: fixed;
     left: 0;
