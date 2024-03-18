@@ -1015,7 +1015,7 @@ select:focus {
   overflow-y: scroll;
   margin: 10px auto;
   /* border-radius: 20px; */
-  height: 440px;
+  height: 350px;
 }
 .resultados-cont::-webkit-scrollbar {
   -webkit-appearance: none;
@@ -1307,8 +1307,7 @@ background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
   border-radius: 15px;
   margin-top: 30px;
   padding: 20px;
-  /* animation: ondaBoton 1s linear 0.5s infinite; */
-  transform: translateY(75px);
+  animation: ondaBoton 1s linear 0.5s infinite;
 }
 
 .indicacion {
