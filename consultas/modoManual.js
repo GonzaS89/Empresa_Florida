@@ -89,7 +89,7 @@ function busquedaManual() {
         $('.menu4').css('display', 'none');
         $('#ingHora').css('display', 'flex');
         $('#selector4').css('display', 'none');
-        $('.origenCapital').css('background', 'var(--fondoAzulLinear');
+        $('.origenCapital').css('background', '#1D2B53');
         $('.origenCapital').css('color', 'white');
         $('.origenCapital').css('transform', 'scale(1.1)');
         $('.capitalDestino').css('background', 'var(--fondoGrisLinear');
@@ -111,7 +111,7 @@ function busquedaManual() {
         $('.menu4').css('display', 'flex');
         $('.menu5').css('display', 'flex');
         $('.menu6').css('display', 'flex');
-        $('.capitalDestino').css('background', 'var(--fondoAzulLinear)');
+        $('.capitalDestino').css('background', '#1D2B53');
         $('.capitalDestino').css('color', 'white');
         $('.capitalDestino').css('transform', 'scale(1.1)');
         $('.origenCapital').css('background', 'var(--fondoGrisLinear');
