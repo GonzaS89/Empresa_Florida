@@ -151,6 +151,7 @@ onload = ()=> {
 }
 
     boton.addEventListener('click', () => {
+
         // Definimos la posicion del selector 1
         definirPosicion(selector,valores,valorSeleccionado,posicion)
         // Definimos la posicion del selector 2
@@ -272,58 +273,7 @@ onload = ()=> {
                 }
             });
                 rutaObtenida = grillaOcasionalVacia;
-            
-
-            // if(posicion == 2 ){
-            //     grillaOcasional.forEach(element => {
-            //         if(element.salida <= 20.3){
-            //             grillaOcasionalVacia.push(element)
-            //         }
-            //     });
-            //     rutaObtenida = grillaOcasionalVacia;
-            // }
-
-            // if(posicion == 4){
-            //     grillaOcasional.forEach(element => {
-            //         if(element.salida <= 21.1){
-            //             grillaOcasionalVacia.push(element)
-            //         }
-            //     });
-            //     rutaObtenida = grillaOcasionalVacia;
-            // }
-
-            // if(posicion2 > 0){
-            //     grillaOcasional.forEach(element => {
-            //         if(element.salida <= 20.3) {
-            //             grillaOcasionalVacia.push(element)
-            //         }
-            //     })
-            //     rutaObtenida = grillaOcasionalVacia;
-            // }
-
-            // if(posicion2 == 7){
-            //     grillaOcasional.forEach(element => {
-            //         if(element.salida <= 18.30) {
-            //             grillaOcasionalVacia.push(element)
-            //         }
-            //     })
-            //     rutaObtenida = grillaOcasionalVacia;
-            // }
-            
         }
-
-
-        // else if(fecha == 1){
-        //     let grillaOcasional;
-        //     let grillaOcasionalVacia = [];
-        //     grillaOcasional = obtenerDiaRuta(0);
-        //     grillaOcasional.forEach(elemento => {
-        //         if(elemento.salida >= 14) {
-        //             grillaOcasionalVacia.push(elemento)
-        //         }
-        //     });
-        //     rutaObtenida = grillaOcasionalVacia;
-        // }
 
         
 
@@ -528,11 +478,13 @@ onload = ()=> {
                     if (listaDiferencias[i] <= 5 && listaDiferencias[i] > 2) {
                         estadoServicio.textContent = 'Inició su recorrido hace menos de 5 minutos'
                     }
-                    if (Math.abs(listaDiferencias[i]) <= 2){
+                    if (Math.abs(Math.round(listaDiferencias[i]) <= 2)){
                         estadoServicio.textContent = 'Está iniciando su recorrido'
                     }
+
                     recorridoServicio.textContent = `Recorrido: ${rutaObtenida[i].recorrido}`;
                 }
+                console.log(Math.abs(listaDiferencias[i]))
             }
             else {
                 if ((Object.keys(rutaObtenida[i])).length > 3) {
@@ -622,10 +574,6 @@ onload = ()=> {
             
         // }, 1);
     })
-
-
-
-
 
 
 resultadoscont.addEventListener('touchmove', () => {
