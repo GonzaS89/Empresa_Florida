@@ -143,11 +143,12 @@ const crearBotonesDeSalida = (listadelocalidades)=> {
 
     for (let i = 0; i < listadelocalidades.length; i++) {
         const botonParada = document.createElement('DIV');
-        const imagenBoton = document.createElement('SPAN');
+        const imagenBoton = document.createElement('IMG');
         const textoBoton = document.createElement('P'); 
         textoBoton.innerHTML = listadelocalidades[i];
         botonParada.classList.add('boton-parada');
         imagenBoton.classList.add('imagen-boton')
+        // imagenBoton.src = `../Imagenes/${textoBoton.innerHTML}.jpg`;
         botonParada.appendChild(imagenBoton)
         botonParada.appendChild(textoBoton)
         contenedorOpciones.appendChild(botonParada);
