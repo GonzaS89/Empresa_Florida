@@ -211,7 +211,7 @@ const efectoPulsado = (elemento)=> {
     )
 }
 
-const todosBotonesParadas = document.querySelectorAll('.boton-parada P');
+const todosBotonesParadas = document.querySelectorAll('.boton-parada');
 
 const botonvolver = document.querySelector('.botonvolver-contenedor');
 
@@ -232,15 +232,16 @@ for (let i = 0; i < paradasContenedor.length; i++) {
 
 let todosBotonesDestino;
 todosBotonesParadas.forEach(elemento => {
-    elemento.addEventListener('click', ()=> {
+    elemento.addEventListener('click', (e)=> {
+
 
             contenedorFiltros.classList.add('contenedor-filtro-animacionOUT')
 
-            efectoPulsado(elemento.parentNode);
+            efectoPulsado(elemento);
     
                 const referencia = document.querySelector('.contenedor-titulo H1');
                 referencia.innerHTML = 'Elegí el destino donde quieras ir'
-                paradaSeleccionada = elemento.innerHTML;
+                paradaSeleccionada = e.target.nextSibling.innerHTML;
                 posiblesDestinos = destinosCompartidos(paradaSeleccionada,valorDelDiaSelect);
                 botonvolver.classList.add('visible');
                 borrarBotones()
