@@ -204,7 +204,7 @@ body::-webkit-scrollbar-track {
     position: fixed;
     overflow: scroll;
     background: #363062;
-    background: #1D5D9B;
+    background: var(--fondoAzulFuerte);
     height: 100%;
     width: 100%;
     top: 0;
@@ -424,12 +424,14 @@ body::-webkit-scrollbar-track {
 }
 
 .contenedor-filtro-animacionOUT{
+ 
     animation: desaparece-contenedor-filtro .5s forwards;
 }
 
 @keyframes desaparece-contenedor-filtro {
-    0%{transform: scale(1);}
-    100%{transform: scale(0);}
+    0%{filter: opacity(1);}
+    100%{filter: opacity(0);
+        z-index: -1;}
 }
 
 
