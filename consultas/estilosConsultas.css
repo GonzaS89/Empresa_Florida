@@ -67,7 +67,7 @@ body::-webkit-scrollbar-track {
     /* justify-content: flex-start; */
     align-items: center;
     /* justify-content: center; */
-    background: #1D5D9B;
+    background: var(--fondoAzulFuerte);
     width: 50%;
     border-radius: 50px;
     margin: 30px auto;
