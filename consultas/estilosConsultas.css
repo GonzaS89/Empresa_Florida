@@ -528,8 +528,7 @@ body::-webkit-scrollbar-track {
         transform: scale(0);
         text-align: center;
         position: absolute;
-        top: 0;
-        left: 0;
+        bottom: 0;
         width: 100%;
         height: 20%;
         background-color: rgba(0, 0, 0, 0.102);
