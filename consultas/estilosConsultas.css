@@ -492,11 +492,12 @@ body::-webkit-scrollbar-track {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 95%;
+    width: 40%;
+    min-width: 40%;
     height: 100px;
     border: 2px solid rgba(128, 128, 128, 0.291);
-    /* border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px; */
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
     border: none;
     text-transform: uppercase;
     font-size: 14px;
@@ -509,17 +510,21 @@ body::-webkit-scrollbar-track {
     box-shadow: 10px 10px 5px 1px rgba(0, 0, 0, 0.575);
     cursor: pointer;
     overflow: hidden;
-    background-color: #FBAB7E;
-background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    && IMG {
+        width: 100%;
+        height: 100%;
+        object-fit:fill;
+        filter: brightness(65%);
+    }
 
-    ;
+    
 }
 
 .boton-parada p {
     z-index: 100;
         color: white;
         font-family: var(--fuente7ma);
-        font-size: 30px;
+        font-size: 15px;
         transform: scale(0);
         text-align: center;
         animation: entrarTexto 1s forwards;
@@ -555,16 +560,6 @@ background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
     text-align: center;
 }
 
-.imagen-boton, .imagen-boton-destino{
-    position: absolute;
-    background-image: url(../Imagenes/terminal.webp);
-    /* width: 100%;
-    height: 100%; */
-    filter: brightness(50%) blur(1px);
-    background-size: cover;
-    transform: scale(10);
-    animation: moverImagen 1s forwards;
-}
 
 @keyframes moverImagen {
     0%{transform: scale(10)}

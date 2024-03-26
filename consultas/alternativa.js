@@ -148,7 +148,7 @@ const crearBotonesDeSalida = (listadelocalidades)=> {
         textoBoton.innerHTML = listadelocalidades[i];
         botonParada.classList.add('boton-parada');
         imagenBoton.classList.add('imagen-boton')
-        // imagenBoton.src = `../Imagenes/${textoBoton.innerHTML}.jpg`;
+        imagenBoton.src = `../Imagenes/${textoBoton.innerHTML}.jpg`;
         botonParada.appendChild(imagenBoton)
         botonParada.appendChild(textoBoton)
         contenedorOpciones.appendChild(botonParada);
