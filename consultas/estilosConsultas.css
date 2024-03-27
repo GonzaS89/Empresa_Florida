@@ -348,7 +348,7 @@ body::-webkit-scrollbar-track {
     text-transform: uppercase;
     color: white;
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     text-align: center;
 
@@ -483,11 +483,11 @@ body::-webkit-scrollbar-track {
 }
 
 .contenedor-opciones {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    height: 300px;
+    /* height: 330px; */
     gap: 10px;
     overflow-y: scroll;
     margin-top: 30px;
