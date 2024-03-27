@@ -343,7 +343,7 @@ body::-webkit-scrollbar-track {
     background-color: var(--rojo2);
     font-family: var(--fuente6ta);
     font-size: 11px;
-    height: 60px;
+    height: 100px;
     font-weight: bold;
     text-transform: uppercase;
     color: white;
