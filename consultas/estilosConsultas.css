@@ -488,7 +488,7 @@ body::-webkit-scrollbar-track {
     align-items: center;
     justify-content: center;
     /* height: 330px; */
-    /* gap: 10px; */
+    gap: 5px;
     overflow-y: scroll;
     margin-top: 30px;
     margin-bottom: 50px;
