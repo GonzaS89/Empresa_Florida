@@ -105,6 +105,7 @@ body::-webkit-scrollbar-track {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    margin-top: 20px;
 }
 
 
@@ -388,7 +389,7 @@ body::-webkit-scrollbar-track {
     display: flex;
     justify-content: center;
     z-index: 100;
-    height: 100px;
+    height: 120px;
     width: 100%;
     overflow: hidden;
 }
