@@ -210,7 +210,7 @@ onload = ()=> {
         let tipoDeDia;
 
         const definirDia = (fecha, mes)=> {
-            tipoDeDia = (dia == 1 || dia == 2 && mes == 3) ? 'feriado' : 'normal';
+            tipoDeDia = (fecha == 1 || fecha == 2 && mes == 3) ? 'feriado' : 'normal';
             switch (tipoDeDia) {
                 case 'feriado':
                     tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo `;
@@ -226,13 +226,13 @@ onload = ()=> {
 
         definirDia (fecha, mes)
 
-        if(dia == 28 && mes == 2) {
-        rutaObtenida = obtenerDiaRuta(6);
-        tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} santo : Circulación como dia sábado`};
+        if(fecha == 28 && mes == 2) {
+            rutaObtenida = obtenerDiaRuta(6);
+            tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} santo :    Circulación como dia sábado`};
 
-        if(dia == 29 && mes == 2) {
+        if(fecha == 29 && mes == 2) {
             rutaObtenida = obtenerDiaRuta(0);
-            tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase} santo : Circulación como día domingo`
+            tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} santo : Circulación como día domingo`
         }
 
         if((fecha == 14) && (mes == 1)) { //Definir feriado previo
