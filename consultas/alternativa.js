@@ -59,9 +59,6 @@ tiposDeDias.forEach(element => {
 });
 
 
-
-
-
 opcionesDeDias.forEach(elemento => {
     if(elemento.innerHTML !== diaPorDefecto) {
         elemento.parentElement.parentElement.classList.add('opcionDiaOculta')}
@@ -169,21 +166,14 @@ const crearBotonesDeSalida = (listadelocalidades)=> {
 const crearBotonesConDestinos = (listadelocalidades)=> {
     for (let i = 0; i < listadelocalidades.length; i++) {
         const botonDestino = document.createElement('DIV');
-        const paradaSalida = document.createElement('H4'); 
-        const imagenBoton = document.createElement('SPAN');
+        const imagenBoton = document.createElement('IMG');
         const paradaDestino = document.createElement('P');
-        const fondoBoton = document.createElement('SPAN');
         botonDestino.classList.add('boton-destino');
-        paradaSalida.innerHTML = paradaSeleccionada;
-        paradaSalida.classList.add('sobre')
-        paradaDestino.classList.add('sobre-derecho')
-        imagenBoton.classList.add('imagen-boton-destino');
-        fondoBoton.classList.add('fondo-boton-destino')
+        imagenBoton.src = `../Imagenes/${listadelocalidades[i]}.jpg`
         paradaDestino.innerHTML = listadelocalidades[i];
-        botonDestino.appendChild(paradaSalida);
         botonDestino.appendChild(imagenBoton);
         botonDestino.appendChild(paradaDestino); 
-        botonDestino.appendChild(fondoBoton)
+        // botonDestino.appendChild(fondoBoton)
         contenedorOpciones.appendChild(botonDestino);
         botonDestino.animate ( [
             {transform:'scale(0)'},
@@ -240,8 +230,8 @@ todosBotonesParadas.forEach(elemento => {
             efectoPulsado(elemento);
     
                 const referencia = document.querySelector('.contenedor-titulo H1');
-                referencia.innerHTML = 'Elegí el destino donde quieras ir'
                 paradaSeleccionada = e.target.nextSibling.innerHTML;
+                referencia.innerHTML = `¿Hasta donde querés ir desde ${paradaSeleccionada}?`
                 posiblesDestinos = destinosCompartidos(paradaSeleccionada,valorDelDiaSelect);
                 botonvolver.classList.add('visible');
                 borrarBotones()

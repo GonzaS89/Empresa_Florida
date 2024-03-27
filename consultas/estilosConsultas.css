@@ -257,7 +257,7 @@ body::-webkit-scrollbar-track {
 }
 
 .indicacion {
-    font-family: var(--fuente4ta);
+    font-family: var(--fuente6ta);
     font-size: 25px;
     text-transform: uppercase;
     font-weight: bold;
@@ -515,13 +515,12 @@ body::-webkit-scrollbar-track {
         width: 100%;
         height: 100%;
         object-fit:fill;
-        filter: brightness(80%);
+        filter: brightness(75%);
     } 
 }
 
-
 .boton-parada p {
-    z-index: 100;
+        z-index: 100;
         color: white;
         font-family: var(--fuente6ta);
         letter-spacing: 1px;
@@ -536,26 +535,38 @@ body::-webkit-scrollbar-track {
         align-items: center;
         justify-content: center;
         background-color: rgba(0, 0, 0, 0.15);
+        pointer-events: none;
         animation: entrarTexto .5s forwards;
 }
 
 @keyframes entrarTexto {
-    100%{
-        transform: scale(1);
-    }
+    100%{transform: scale(1);}
 }
 
 .boton-destino{
-    flex-direction: column;
-    font-size:13px;
     height: 100px;
     overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    width: 75%;
+
+    && p{
+        z-index: 100;
+        color: white;
+        font-family: var(--fuente6ta);
+        letter-spacing: 1px;
+        font-size: 15px;
+        transform: scale(0);
+        text-align: center;
+        width: 100%;
+        height: 20%;
+        background-color: rgba(0, 0, 0, 0.15);
+        pointer-events: none;
+        animation: entrarTexto .5s forwards 
+}
 }
 
-.boton-destino h4 p{
-    margin: 0;
 
-}
 
 .contenedor-imagenboton{
     display: flex;
