@@ -226,12 +226,13 @@ todosBotonesParadas.forEach(elemento => {
 
 
             contenedorFiltros.classList.add('contenedor-filtro-animacionOUT')
+            contenedorFiltros
 
             efectoPulsado(elemento);
     
                 const referencia = document.querySelector('.contenedor-titulo H1');
                 paradaSeleccionada = e.target.nextSibling.innerHTML;
-                referencia.innerHTML = `¿Hasta donde querés ir desde ${paradaSeleccionada}?`
+                referencia.innerHTML = `¿Hasta dónde querés ir desde ${paradaSeleccionada}?`
                 posiblesDestinos = destinosCompartidos(paradaSeleccionada,valorDelDiaSelect);
                 botonvolver.classList.add('visible');
                 borrarBotones()
