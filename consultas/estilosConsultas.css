@@ -483,6 +483,7 @@ body::-webkit-scrollbar-track {
     text-align: center;
     text-transform: uppercase;
     font-family: var(--fuente6ta);
+    margin: 0 5px;
 }
 
 .contenedor-opciones {
