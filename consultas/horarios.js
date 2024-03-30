@@ -542,6 +542,11 @@ const horariosLvFloPo = [
  "recorrido": bCanchaFloridaPosse
  },
  {
+   "nombre": "06:50",
+   "salida": 6.5,
+   "recorrido": fortinFloridaPosse
+   },
+ {
  "nombre": "07:20",
  "salida": 7.2,
  "recorrido": bCanchaFloridaPosse
@@ -560,8 +565,8 @@ const horariosLvFloPo = [
  },
 
  {
- "nombre": "09:05",
- "salida": 9.05,
+ "nombre": "09:10",
+ "salida": 9.1,
  "recorrido": bCanchaFloridaPosse
  },
 
@@ -603,8 +608,8 @@ const horariosLvFloPo = [
 
  },
  {
-    "nombre": "13:20",
-    "salida": 13.2,
+    "nombre": "13:25",
+    "salida": 13.25,
     "recorrido": fortinFloridaPosse
     },
  {
@@ -632,26 +637,31 @@ const horariosLvFloPo = [
  "salida": 17.5,
  "recorrido": bCanchaFloridaPosse
  },
- {
- "nombre": "17:50",
- "salida": 17.5,
- "recorrido": col4fondaPosse
- },
+//  {
+//  "nombre": "17:50",
+//  "salida": 17.5,
+//  "recorrido": col4fondaPosse
+//  },
  {
  "nombre": "18:50",
  "salida": 18.5,
  "recorrido": bCanchaFloridaPosse
  },
  {
- "nombre": "19:20",
- "salida": 19.2,
- "recorrido": bCanchaFloridaPosse
+ "nombre": "19:25",
+ "salida": 19.25,
+ "recorrido": fortinFloridaPosse
  },
  {
  "nombre": "19:50",
  "salida": 19.5,
- "recorrido": col4FloridaPosse
+ "recorrido": bCanchaFloridaPosse
  },
+ {
+   "nombre": "20:20",
+   "salida": 20.2,
+   "recorrido": bCanchaFloridaPosse
+   },
  {
  "nombre": "20:50",
  "salida": 20.5,
@@ -1345,7 +1355,7 @@ const horariosLvSMPo = [
  {
  "nombre": "08:15",
  "salida": 8.15,
- "recorrido": posseLastra
+ "recorrido": posseCancha
  },
  {
  "nombre": "09:00",
@@ -1360,7 +1370,7 @@ const horariosLvSMPo = [
  {
  "nombre": "10:00",
  "salida": 10,
- "recorrido": [terminal,bandaRS,cevilPozo,llona,posse,dispensario,paraiso,florida,bCancha,col4Luisiana]
+ "recorrido": posseCancha
  },
  {
  "nombre": "10:30",
@@ -1378,13 +1388,18 @@ const horariosLvSMPo = [
  "recorrido": posseFortin
  },
  {
+   "nombre": "11:35",
+   "salida": 11.35,
+   "recorrido": posseCancha
+   },
+ {
  "nombre": "11:45",
  "salida": 11.45,
  "recorrido": posseCancha
  },
  {
- "nombre": "12:25",
- "salida": 12.25,
+ "nombre": "12:30",
+ "salida": 12.3,
  "recorrido": posseFortin
  },
  {
@@ -1397,11 +1412,21 @@ const horariosLvSMPo = [
  "salida": 13,
  "recorrido": posseCancha
  },
+//  {
+//    "nombre": "13:00",
+//    "salida": 13,
+//    "recorrido": posseCancha
+//    },
  {
  "nombre": "13:30",
  "salida": 13.3,
  "recorrido": posseLastra
  },
+ {
+   "nombre": "13:45",
+   "salida": 13.45,
+   "recorrido": posseFortin
+   },
  {
  "nombre": "14:05",
  "salida": 14.05,
@@ -1427,11 +1452,11 @@ const horariosLvSMPo = [
  "salida": 17,
  "recorrido": posseCancha
  },
- {
- "nombre": "17:30",
- "salida": 17.3,
- "recorrido": posseFortin
- },
+//  {
+//  "nombre": "17:30",
+//  "salida": 17.3,
+//  "recorrido": posseFortin
+//  },
  {
  "nombre": "18:00",
  "salida": 18,
@@ -1443,10 +1468,15 @@ const horariosLvSMPo = [
  "recorrido": posseFortin
  },
  {
- "nombre": "19:10",
- "salida": 19.1,
- "recorrido": [terminal,bandaRS,cevilPozo,llona,posse,dispensario,paraiso,florida,bCancha,col4Luisiana]
+ "nombre": "19:00",
+ "salida": 19,
+ "recorrido": posseCancha
  },
+ {
+   "nombre": "19:15",
+   "salida": 19.15,
+   "recorrido": posseCancha
+   },
  {
  "nombre": "19:30",
  "salida": 19.3,
@@ -1462,15 +1492,15 @@ const horariosLvSMPo = [
  "salida": 20.3,
  "recorrido": posseCancha
  },
- {
- "nombre": "20:45",
- "salida": 20.45,
- "recorrido": posseCancha
- },
+//  {
+//  "nombre": "20:45",
+//  "salida": 20.45,
+//  "recorrido": posseCancha
+//  },
  {
  "nombre": "21:00",
  "salida": 21,
- "recorrido":[terminal,bandaRS,cevilPozo,filaMedio,posse,dispensario,paraiso,florida,bCancha]
+ "recorrido":posseCancha
  },
  {
  "nombre": "21:30",
@@ -2163,13 +2193,13 @@ const ralosTerminalLaV = [
  {
     "nombre": "05:25",
     "salida": 5.25,
-    "recorrido": [cejas,lolitaS,cerco2,ralos,llona,cevilPozo,bandaRS,terminal]
+    "recorrido": ralosVillaT
     },
- {
- "nombre": "05:30",
- "salida": 5.3,
- "recorrido": [villaTercera,ralos,llona,cevilPozo,bandaRS,terminal]
- },
+//  {
+//  "nombre": "05:30",
+//  "salida": 5.3,
+//  "recorrido": [villaTercera,ralos,llona,cevilPozo,bandaRS,terminal]
+//  },
  {
     "nombre": "05:30",
     "salida": 5.3,
@@ -2180,6 +2210,11 @@ const ralosTerminalLaV = [
  "salida": 6.05,
  "recorrido": ralosTermi
  },
+ {
+   "nombre": "06:10",
+   "salida": 6.1,
+   "recorrido": ralosTermi
+   },
  {
  "nombre": "06:10",
  "salida": 6.1,

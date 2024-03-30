@@ -3,6 +3,7 @@
     "editor.fontFamily": "as",
 
     "livePreview.defaultPreviewPath": "/index.html",
-    "editor.fontFamily": "CaskaydiaCove Nerd Font Mono, Mono,Victor Mono,CaskaydiaCove Nerd Font Mono, CaskaydiaCove Nerd Font,jetBrains Mono"
+    "editor.fontFamily": "CaskaydiaCove Nerd Font Mono, Mono,Victor Mono,CaskaydiaCove Nerd Font Mono, CaskaydiaCove Nerd Font,jetBrains Mono",
+    "editor.fontSize": 18
 
 }
