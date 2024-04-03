@@ -2661,7 +2661,7 @@ const posseTerminalLaV = [
   {
     nombre: "05:55",
     salida: 5.55,
-    recorrido: dispenFilaM,
+    recorrido: dispenFilaO,
   },
   {
     nombre: "06:00",
@@ -2681,25 +2681,17 @@ const posseTerminalLaV = [
   {
     nombre: "06:35",
     salida: 6.35,
-    recorrido: bosqueFilaM,
+    recorrido: [bosque,filaOrilla,llona,cevilPozo,bandaRS,terminal],
   },
   {
     nombre: "06:35",
     salida: 6.35,
-    recorrido: dispenFilaO,
+    recorrido: dispenFilaM,
   },
   {
     nombre: "07:08",
     salida: 7.08,
-    recorrido: [
-      dispensario,
-      posse,
-      bosque,
-      filaMedio,
-      cevilPozo,
-      bandaRS,
-      terminal,
-    ],
+    recorrido: dispenFilaO
   },
   {
     nombre: "07:08",
@@ -2709,12 +2701,12 @@ const posseTerminalLaV = [
   {
     nombre: "07:40",
     salida: 7.4,
-    recorrido: bosqueFilaM,
+    recorrido: dispenFilaO,
   },
   {
-    nombre: "07:40",
-    salida: 7.4,
-    recorrido: dispenFilaO,
+    nombre: "07:45",
+    salida: 7.45,
+    recorrido: bosqueFilaM,
   },
   {
     nombre: "08:10",
@@ -2746,11 +2738,11 @@ const posseTerminalLaV = [
     salida: 11.1,
     recorrido: dispenFilaO,
   },
-  {
-    nombre: "12:50",
-    salida: 12.5,
-    recorrido: dispenFilaO,
-  },
+//   {
+//     nombre: "12:50",
+//     salida: 12.5,
+//     recorrido: dispenFilaO,
+//   },
   {
     nombre: "13:00",
     salida: 13,
@@ -2775,35 +2767,45 @@ const posseTerminalLaV = [
     ],
   },
   {
-    nombre: "15:10",
-    salida: 15.1,
-    recorrido: [bosque, filaOrilla, llona, cevilPozo, bandaRS, terminal],
+    nombre: "15:00",
+    salida: 15,
+    recorrido: [plaza,posse,filaOrilla, llona, cevilPozo, bandaRS, terminal],
   },
   {
     nombre: "16:00",
     salida: 16,
-    recorrido: dispenFilaO,
+    recorrido: [plaza,posse,filaOrilla, llona, cevilPozo, bandaRS, terminal]
   },
   {
     nombre: "16:10",
     salida: 16.1,
-    recorrido: dispenFilaM,
+    recorrido: [plaza,posse,filaM, cevilPozo, bandaRS, terminal]
   },
   {
     nombre: "17:00",
     salida: 17,
-    recorrido: dispenFilaO,
+    recorrido: [plaza,posse,filaOrilla, llona, cevilPozo, bandaRS, terminal]
   },
   {
     nombre: "17:10",
     salida: 17.1,
-    recorrido: dispenFilaO,
+    recorrido: [plaza,posse,filaM, cevilPozo, bandaRS, terminal]
   },
   {
     nombre: "17:45",
     salida: 17.45,
     recorrido: dispenFilaM,
   },
+  {
+   nombre: "18:10",
+   salida: 18.1,
+   recorrido: dispenFilaO,
+ },
+ {
+   nombre: "19:10",
+   salida: 19.1,
+   recorrido: dispenFilaO,
+ },
 ];
 const posseTerminalS = [
   {
@@ -2911,20 +2913,25 @@ const posseTerminalD = [
 ];
 const terminalPosseLaV = [
   {
-    nombre: "05:25",
-    salida: 5.25,
-    recorrido: filaMBosqueDispen,
+    nombre: "05:30",
+    salida: 5.3,
+    recorrido: [terminal,bandaRS,cevilPozo,llona,filaOrilla,posse,bosque,dispensario],
   },
   {
     nombre: "08:30",
     salida: 8.3,
-    recorrido: [terminal, bandaRS, cevilPozo, filaMedio, dispensario],
+    recorrido: filaMBosqueDispen
   },
   {
-    nombre: "13:00",
-    salida: 13,
-    recorrido: [terminal, bandaRS, cevilPozo, filaMedio, bosque],
-  },
+   nombre: "12:15",
+   salida: 12.15,
+   recorrido: filaMBosqueDispen
+ },
+//   {
+//     nombre: "13:00",
+//     salida: 13,
+//     recorrido: [terminal, bandaRS, cevilPozo, filaMedio, bosque],
+//   },
   {
     nombre: "13:30",
     salida: 13.3,
@@ -2946,20 +2953,35 @@ const terminalPosseLaV = [
     recorrido: filaMBosqueDispen,
   },
   {
-    nombre: "17:25",
-    salida: 17.25,
-    recorrido: filaMBosqueDispen,
+    nombre: "17:20",
+    salida: 17.2,
+    recorrido: [terminal,bandaRS,cevilPozo,llona,filaOrilla,posse,bosque,dispensario]
   },
+  {
+   nombre: "17:20",
+   salida: 17.2,
+   recorrido: [terminal,bandaRS,cevilPozo,llona,filaOrilla,posse,dispensario]
+ },
   {
     nombre: "19:00",
     salida: 19,
     recorrido: filaMBosqueDispen,
   },
   {
-    nombre: "21:00",
-    salida: 21,
-    recorrido: [terminal, bandaRS, cevilPozo, filaMedio, bosque],
+   nombre: "20:20",
+   salida: 20.2,
+   recorrido: filaMBosqueDispen,
+ },
+  {
+    nombre: "21:20",
+    salida: 21.2,
+    recorrido: filaMBosqueDispen,
   },
+  {
+   nombre: "22:20",
+   salida: 22.2,
+   recorrido: [terminal,bandaRS,cevilPozo,filaM,posse,dispensario],
+ },
 ];
 const terminalPosseS = [
   {
