@@ -2779,7 +2779,7 @@ const posseTerminalLaV = [
   {
     nombre: "16:10",
     salida: 16.1,
-    recorrido: [plaza,posse,filaM, cevilPozo, bandaRS, terminal]
+    recorrido: [plaza,posse,filaMedio, cevilPozo, bandaRS, terminal]
   },
   {
     nombre: "17:00",
@@ -2789,7 +2789,7 @@ const posseTerminalLaV = [
   {
     nombre: "17:10",
     salida: 17.1,
-    recorrido: [plaza,posse,filaM, cevilPozo, bandaRS, terminal]
+    recorrido: [plaza,posse,filaMedio, cevilPozo, bandaRS, terminal]
   },
   {
     nombre: "17:45",
@@ -2980,7 +2980,7 @@ const terminalPosseLaV = [
   {
    nombre: "22:20",
    salida: 22.2,
-   recorrido: [terminal,bandaRS,cevilPozo,filaM,posse,dispensario],
+   recorrido: [terminal,bandaRS,cevilPozo,filaMedio,posse,dispensario],
  },
 ];
 const terminalPosseS = [
