@@ -158,12 +158,17 @@ const horariosLvFloAl = [
     {
         "nombre": "16:20",
         "salida": 16.2,
-        "recorrido": "La Marta ★ Colonia 4 (Luisiana) (16:50) ★ B° La Cancha ★ Talar ★ Alternativa ★ Terminal"
+        "recorrido": "La Marta ★ Plaza Finca Mayo ★ Colonia 4 (Luisiana) (16:50) ★ B° La Cancha ★ Talar ★ Alternativa ★ Terminal"
     },
+    {
+      "nombre": "16:40",
+      "salida": 16.4,
+      "recorrido": "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alternativa ★ Terminal",
+  
+  },
     {
         "nombre": "16:50",
         "salida": 16.5,
-        // "recorrido": "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alternativa ★ Terminal",
         "recorrido":"Colonia 4 (Florida) ★ Fortín ★ Esquina Lastra ★ Talar ★ Alderetes ★ Banda R.S. ★ Terminal"
     },
     {
@@ -1207,6 +1212,11 @@ const horariosLvSMPo = [
         "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ B° La Cancha"
     },
     {
+      "nombre": "10:20",
+      "salida": 10.2,
+      "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ B° Esquina Longo"
+  },
+    {
         "nombre": "10:30",
         "salida": 10.3,
         "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ B° La Cancha"
@@ -1740,7 +1750,7 @@ const posseTerminalLaV = [
     {
         "nombre": "16:00",
         "salida": 16,
-        "recorrido": "Plaza ★ Fila de la orilla ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
+        "recorrido": "Dispensario ★ Fila de la orilla ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
     },
     {
         "nombre": "16:10",
@@ -1903,6 +1913,11 @@ const terminalPosseLaV = [
         "salida": 12.15,
         "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Fila del medio ★ Bosque ★ Dispensario"
     },
+    {
+      "nombre": "12:45",
+      "salida": 12.45,
+      "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Fila del medio ★ Bosque ★ Dispensario"
+  },
     // {
     //     "nombre": "13:00",
     //     "salida": 13,
@@ -1921,7 +1936,7 @@ const terminalPosseLaV = [
     {
         "nombre": "15:00",
         "salida": 15,
-        "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Fila del medio ★ Bosque ★ Dispensario"
+        "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Fila del medio ★ Bosque"
     },
     {
         "nombre": "15:30",
@@ -1948,6 +1963,11 @@ const terminalPosseLaV = [
         "salida": 19,
         "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Fila del medio ★ Bosque ★ Dispensario"
     },
+    {
+      "nombre": "20:20",
+      "salida": 20.2,
+      "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Fila del medio ★ Bosque"
+  },
     {
         "nombre": "21:20",
         "salida": 21.2,
@@ -2104,7 +2124,7 @@ const ralosTerminalLaV = [
         "nombre": "07:30",
         "salida": 7.3,
         "recorrido": "Los Ralos ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal",
-        "recorrido2": "Lolita Sur ★ Los Ralos ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
+        "recorrido2": "Lolita Sur ★ Lolita Norte ★ Los Ralos ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
     },
     {
         "nombre": "07:35",
@@ -2713,7 +2733,7 @@ const terminalRalosLaV = [
     {
         "nombre": "17:50",
         "salida": 17.5,
-        "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Los Ralos (ingresa por infiernillo)"
+        "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Los Ralos ★ Villa Tercera"
     },
     {
         "nombre": "18:00",
@@ -3346,9 +3366,9 @@ const lasCejasTerminalLaV = [
         "recorrido": "Las Cejas ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
     },
     {
-        "nombre": "15:00",
-        "salida": 15,
-        "recorrido": "Pozo Hondo ★ Las Cejas (15:40) ★ Los Ralos ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
+        "nombre": "15:40",
+        "salida": 15.4,
+        "recorrido": "Las Cejas ★ Los Ralos ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
     },
     {
         "nombre": "18:15",
