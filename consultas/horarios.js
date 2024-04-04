@@ -24,11 +24,11 @@ const horariosLvFloAl = [
         "recorrido": "Fortín ★ Esquina Lastra ★ Talar ★ Alderetes ★ Banda R.S. ★ Terminal",
         "recorrido2": "Colonia 10 ★ Colonia 4 (Luisiana) ★ B° La Cancha ★ Cochuchal ★ Alderetes ★ Autopista ★ Terminal"
     },
-    {
-        "nombre": "06:20",
-        "salida": 6.2,
-        "recorrido": "Colonia 5 (Florida) ★ Finca Mayo ★ Fortín ★ Esquina Lastra ★ Talar ★ Alternativa ★ Terminal"
-    },
+    // {
+    //     "nombre": "06:20",
+    //     "salida": 6.2,
+    //     "recorrido": "Colonia 5 (Florida) ★ Finca Mayo ★ Fortín ★ Esquina Lastra ★ Talar ★ Alternativa ★ Terminal"
+    // },
     // {
     //     "nombre": "06:40",
     //     "salida": 6.4,
@@ -60,14 +60,14 @@ const horariosLvFloAl = [
     {
         "nombre": "07:50",
         "salida": 7.5,
-        "recorrido": "Colonia 4 (Luisiana) ★ Fonda ★ Talar ★ Alternativa ★ Terminal",
+        // "recorrido": "Colonia 4 (Luisiana) ★ Fonda ★ Talar ★ Alternativa ★ Terminal",
         "recorrido2": "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alderetes ★ Autopista ★ Terminal"
     },
-    {
-        "nombre": "07:55",
-        "salida": 7.55,
-        "recorrido": "B° La Cancha ★ Talar ★ Alderetes ★ Autopista ★ Terminal"
-    },
+    // {
+    //     "nombre": "07:55",
+    //     "salida": 7.55,
+    //     "recorrido": "B° La Cancha ★ Talar ★ Alderetes ★ Autopista ★ Terminal"
+    // },
     {
         "nombre": "08:20",
         "salida": 8.2,
