@@ -1559,16 +1559,18 @@ background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
 }
 
 .mensaje-cuadro {
-  width: 320px;
-  height: 320px;
+  width: 85%;
+  height: 50%;
   /* position: relative; */
   animation: mensajein 0.5s forwards;
 
   && img{
     width: 100%;
     height: 100%;
+    object-fit: fill;;
   }
 }
+
 
 @keyframes mensajein {
   from {
