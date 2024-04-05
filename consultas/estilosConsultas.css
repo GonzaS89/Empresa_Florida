@@ -1561,6 +1561,7 @@ background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
 .mensaje-cuadro {
   width: 85%;
   height: 50%;
+  position: absolute;
   /* position: relative; */
   animation: mensajein .5s forwards;
 
