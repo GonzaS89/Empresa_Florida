@@ -1563,7 +1563,7 @@ background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
   height: 50%;
 
   /* position: relative; */
-  animation: mensajein .3s forwards;
+  animation: mensajein .5s forwards;
 
   && img{
     width: 100%;
