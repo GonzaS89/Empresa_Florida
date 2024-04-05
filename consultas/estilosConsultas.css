@@ -1559,11 +1559,15 @@ background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
 }
 
 .mensaje-cuadro {
-  width: 75%;
-  height: 45%;
-  background: white;
+  width: 85%;
+  height: 55%;
   /* position: relative; */
   animation: mensajein 0.5s forwards;
+
+  && img{
+    width: 100%;
+    height: 100%;
+  }
 }
 
 @keyframes mensajein {
@@ -1605,7 +1609,7 @@ background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 25%;
+  height: 20%;
   width: 100%;
   background: var(--rojo2Linear);
 }
@@ -1642,3 +1646,4 @@ background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
   width: 40%;
   margin-top: 10px;
 }
+
