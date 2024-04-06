@@ -326,7 +326,7 @@ const horariosDFloAl = [
     {
         "nombre": "10:30",
         "salida": 10.30,
-        "recorrido": "Colonia 2 ★ Fortín ★ Esquina Lastra ★ Talar ★ Alderetes ★ Banda R.S. ★ Terminal"
+        "recorrido": "Colonia 2 (Florida) ★ Fortín ★ Esquina Lastra ★ Talar ★ Alderetes ★ Banda R.S. ★ Terminal"
     },
     {
         "nombre": "12:40",
@@ -703,11 +703,11 @@ const horariosDFloPo = [
         "salida": 9.55,
         "recorrido": "B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
     },
-    {
-        "nombre": "10:55",
-        "salida": 10.55,
-        "recorrido": "B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
-    },
+    // {
+    //     "nombre": "10:55",
+    //     "salida": 10.55,
+    //     "recorrido": "B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
+    // },
     {
         "nombre": "11:55",
         "salida": 11.55,
