@@ -1487,11 +1487,11 @@ const horariosSSMPo = [
         "salida": 18.3,
         "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ Esquina Lastra ★ Fortín"
     },
-    {
-        "nombre": "19:10",
-        "salida": 19.10,
-        "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ Colonia 4 (Luisiana)"
-    },
+    // {
+    //     "nombre": "19:10",
+    //     "salida": 19.10,
+    //     "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ Colonia 4 (Luisiana)"
+    // },
     {
         "nombre": "19:30",
         "salida": 19.3,
@@ -2966,11 +2966,11 @@ const terminalRalosS = [
         "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Los Ralos ★ Finca Mayo ★ Alabama",
         // "recorrido2": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Los Ralos"
     },
-    {
-        "nombre": "21:00",
-        "salida": 21,
-        "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Los Ralos",
-    },
+    // {
+    //     "nombre": "21:00",
+    //     "salida": 21,
+    //     "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Los Ralos",
+    // },
     {
         "nombre": "21:30",
         "salida": 21.3,
