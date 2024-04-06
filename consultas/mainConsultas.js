@@ -12,6 +12,7 @@ let momentoActual = new Date();
 let hora = momentoActual.getHours();
 let fecha = momentoActual.getDate();
 let mes = momentoActual.getMonth();
+let dia = momentoActual.getDay()
 
 /* Funcion para determinar la localidad de posicion*/
 
@@ -144,7 +145,8 @@ const definirPosicion = (sel, val, valorSel, pos) => {
     return pos
 }
 
-let displayMensaje = (fecha >= 1 && fecha <= 15 && mes && hora <= 15) ? 'flex' : 'none';
+
+let displayMensaje = ((fecha >= 1 && fecha <= 15) && (mes) && (hora <= 15) && (dia <= 5 && dia >= 1)) ? 'flex' : 'none';
 
 onload = ()=> {
     $('.mensaje-contenedor').css('display' , `${displayMensaje}`);
