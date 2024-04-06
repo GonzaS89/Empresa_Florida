@@ -41,11 +41,11 @@ const horariosLvFloAl = [
         "recorrido2": "Colonia 4 (Luisiana) ★ Fonda ★ Talar ★ Alderetes ★ Autopista ★ Terminal"
         // "recorrido2": "Colonia 4 (Luisiana) ★ Fonda ★ Talar ★ Autopista ★ Terminal",
     },
-    {
-        "nombre": "07:20",
-        "salida": 7.2,
-        "recorrido": "B° La Cancha ★ Talar ★ Alternativa ★ Terminal"
-    },
+    // {
+    //     "nombre": "07:20",
+    //     "salida": 7.2,
+    //     "recorrido": "B° La Cancha ★ Talar ★ Alternativa ★ Terminal"
+    // },
     {
         "nombre": "07:20",
         "salida": 7.2,
@@ -61,7 +61,7 @@ const horariosLvFloAl = [
         "nombre": "07:50",
         "salida": 7.5,
         // "recorrido": "Colonia 4 (Luisiana) ★ Fonda ★ Talar ★ Alternativa ★ Terminal",
-        "recorrido2": "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alderetes ★ Autopista ★ Terminal"
+        "recorrido": "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alderetes ★ Autopista ★ Terminal"
     },
     // {
     //     "nombre": "07:55",
@@ -81,8 +81,8 @@ const horariosLvFloAl = [
         // "recorrido2": "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alternativa ★ Terminal"
     },
     {
-        "nombre": "09:20",
-        "salida": 9.2,
+        "nombre": "09:30",
+        "salida": 9.3,
         "recorrido": "Fortín ★ Esquina Lastra ★ Talar ★ Alderetes ★ Banda R.S. ★ Terminal"
     },
     {
@@ -100,21 +100,21 @@ const horariosLvFloAl = [
         "salida": 11.40,
         "recorrido": "Fortín ★ Esquina Lastra ★ Talar ★ Alderetes ★ Banda R.S. ★ Terminal"
     },
-    // {
-    //     "nombre": "12:20",
-    //     "salida": 12.2,
-    //     "recorrido": "Fortín ★ Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alderetes ★ Autopista ★ Terminal"
-    // },
+    {
+        "nombre": "12:20",
+        "salida": 12.2,
+        "recorrido": "Fortín ★ Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alderetes ★ Autopista ★ Terminal"
+    },
     {
         "nombre": "12:30",
         "salida": 12.3,
-        "recorrido": "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alderetes ★ Autopista ★ Terminal"
+        "recorrido": "La Marta ★ Finca Mayo ★ Colonia 4 (FLorida) ★ Colonia 10 (Luisiana) ★ Colonia 4 (Luisiana) (13:15) ★ B° La Cancha ★ Alderetes ★ Talar ★ Alternativa ★ Terminal"
     },
     {
         "nombre": "12:50",
         "salida": 12.5,
         "recorrido": "Finca Mayo ★ Fortín ★ Esquina Lastra ★ Talar ★ Alderetes ★ Banda R.S. ★ Terminal",
-        "recorrido2": "La Marta ★ Colonia 10 ★ Colonia 4 (Luisiana) (13:15) ★ B° La Cancha ★ Alderetes ★ Autopista ★ Terminal",
+        // "recorrido2": "La Marta ★ Colonia 10 ★ Colonia 4 (Luisiana) (13:15) ★ B° La Cancha ★ Alderetes ★ Autopista ★ Terminal",
 
     },
     {
@@ -139,12 +139,12 @@ const horariosLvFloAl = [
         "recorrido": "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alderetes ★ Autopista ★ Terminal",
         // "recorrido": "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alderetes ★ Banda R.S. ★ Terminal"
     },
-    {
-        "nombre": "15:40",
-        "salida": 15.4,
-        "recorrido": "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alternativa ★ Terminal",
-        // "recorrido": "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alderetes ★ Banda R.S. ★ Terminal"
-    },
+    // {
+    //     "nombre": "15:40",
+    //     "salida": 15.4,
+    //     "recorrido": "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alternativa ★ Terminal",
+    //     // "recorrido": "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alderetes ★ Banda R.S. ★ Terminal"
+    // },
     {
         "nombre": "15:47",
         "salida": 15.47,
@@ -187,19 +187,19 @@ const horariosLvFloAl = [
     //     "recorrido": "Fortín ★ Esquina Lastra ★ Talar ★ Alderetes ★ Banda R.S. ★ Terminal"
     // },
     {
-        "nombre": "18:15",
-        "salida": 18.15,
+        "nombre": "18:10",
+        "salida": 18.1,
         "recorrido": "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alternativa ★ Terminal"
     },
-    {
-        "nombre": "18:30",
-        "salida": 18.30,
-        "recorrido": "Fortín ★ Esquina Lastra ★ Talar ★ Alderetes ★ Banda R.S. ★ Terminal"
-    },
+    // {
+    //     "nombre": "18:30",
+    //     "salida": 18.30,
+    //     "recorrido": "Fortín ★ Esquina Lastra ★ Talar ★ Alderetes ★ Banda R.S. ★ Terminal"
+    // },
     {
         "nombre": "19:00",
         "salida": 19,
-        "recorrido": "La Marta ★ Colonia 3 ★ B° La Cancha (19:15) ★ Talar ★ Alderetes ★ Banda R.S. ★ Terminal"
+        "recorrido": "La Marta ★ Colonia 3 (Luisiana) ★ B° La Cancha (19:15) ★ Talar ★ Alderetes ★ Banda R.S. ★ Terminal"
     },
     {
         "nombre": "20:55",
@@ -369,7 +369,7 @@ const horariosLvFloPo = [
     {
         "nombre": "04:50",
         "salida": 4.5,
-        "recorrido": "B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
+        "recorrido": "Fonda ★ B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
     },
     {
         "nombre": "05:50",
@@ -385,7 +385,7 @@ const horariosLvFloPo = [
         "nombre": "06:50",
         "salida": 6.5,
         "recorrido": "B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal",
-        "recorrido2": "Fortín ★ Esquina Lastra ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
+        // "recorrido2": "Fortín ★ Esquina Lastra ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
     },
     {
         "nombre": "07:20",
@@ -440,17 +440,18 @@ const horariosLvFloPo = [
         "salida": 12.40,
         "recorrido": "B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
     },
-    {
-        "nombre": "13:20",
-        "salida": 13.2,
-        // "recorrido": "B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal",
-        "recorrido": "B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
-    },
+    
     {
         "nombre": "13:25",
         "salida": 13.25,
         // "recorrido": "B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal",
         "recorrido": "Fortín ★ Esquina Lastra ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
+    },
+    {
+        "nombre": "13:30",
+        "salida": 13.3,
+        // "recorrido": "B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal",
+        "recorrido": "B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
     },
     {
         "nombre": "13:50",
@@ -480,8 +481,8 @@ const horariosLvFloPo = [
     {
         "nombre": "17:50",
         "salida": 17.5,
-        "recorrido": "B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
-        // "recorrido2": "Colonia 4 (Luisiana) ★ Fonda ★ Paraiso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
+        "recorrido": "Escuela Croacia ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal",
+        "recorrido2": "B° La Cancha ★ Paraiso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
     },
     {
         "nombre": "18:50",
@@ -489,14 +490,19 @@ const horariosLvFloPo = [
         "recorrido": "B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
     },
     {
-        "nombre": "19:25",
-        "salida": 19.25,
+        "nombre": "19:30",
+        "salida": 19.3,
         "recorrido": "Fortín ★ Esquina Lastra ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
     },
     {
         "nombre": "19:50",
         "salida": 19.5,
         "recorrido": "B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
+    },
+    {
+        "nombre": "20:00",
+        "salida": 20,
+        "recorrido": "Colonia 4 (Luisiana) ★ B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda R.S. ★ Terminal"
     },
     {
         "nombre": "20:20",
@@ -772,8 +778,8 @@ const horariosDFloPo = [
 const horariosLvSMAl = [
 
     {
-        "nombre": "05:20",
-        "salida": 5.2,
+        "nombre": "05:25",
+        "salida": 5.25,
         "recorrido": "Terminal ★ Catalinas Park ★ Autopista ★ Alderetes ★ Talar ★ B° La Cancha"
     },
     {
@@ -789,7 +795,7 @@ const horariosLvSMAl = [
     {
         "nombre": "07:15",
         "salida": 7.15,
-        "recorrido": "Terminal ★ Banda R.S. ★ Alderetes ★ Talar ★ Fonda ★ Colonia 4 (Luisiana) ★ Colonia 10 ★ Finca Mayo ★ La Marta"
+        "recorrido": "Terminal ★ Banda R.S. ★ Alderetes ★ Talar ★ Fonda ★ Colonia 4 (Luisiana) ★ Colonia 10 ★ Colonia 4 (Florida) ★ Finca Mayo ★ La Marta"
     },
     {
         "nombre": "08:00",
@@ -801,11 +807,11 @@ const horariosLvSMAl = [
         "salida": 8.35,
         "recorrido": "Terminal ★ Banda R.S. ★ Alderetes ★ Talar ★ Esquina Lastra ★ Fortín"
     },
-    {
-        "nombre": "09:00",
-        "salida": 9,
-        "recorrido": "Terminal ★ Catalinas Park ★ Autopista ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana) "
-    },
+    // {
+    //     "nombre": "09:00",
+    //     "salida": 9,
+    //     "recorrido": "Terminal ★ Catalinas Park ★ Autopista ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana) "
+    // },
     {
         "nombre": "09:45",
         "salida": 9.45,
@@ -815,18 +821,15 @@ const horariosLvSMAl = [
         "nombre": "10:45",
         "salida": 10.45,
         // "recorrido": "Terminal ★ Banda R.S. ★ Alderetes ★ Talar ★ Colonia 4 (Luisiana)",
-        "recorrido": "Terminal ★ Alternativa ★ Talar ★ Esquina Lastra ★ Fortín",
+        "recorrido": "Terminal ★ Catalinas Park ★ Alternativa ★ Talar ★ Esquina Lastra ★ Fortín",
 
     },
-    {
-        "nombre": "10:55",
-        "salida": 10.55,
-        "recorrido": "Banda R.S. ★ Alderetes ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana)"
-    },
+  
+    
     {
         "nombre": "11:15",
         "salida": 11.15,
-        "recorrido": "Terminal ★ Catalinas Park ★ Autopista ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana) ★ La Marta"
+        "recorrido": "Terminal ★ Catalinas Park ★ Autopista ★ Talar ★ B° La Cancha ★ Colonia 10 (Luisiana) ★ La Marta"
     },
     {
         "nombre": "11:40",
@@ -836,12 +839,12 @@ const horariosLvSMAl = [
     {
         "nombre": "12:15",
         "salida": 12.15,
-        "recorrido": "Terminal ★ Catalinas Park ★ Autopista ★ Alderetes ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana)"
+        "recorrido": "Terminal ★ Catalinas Park ★ Alternativa ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana)"
     },
     {
         "nombre": "12:20",
         "salida": 12.2,
-        "recorrido": "Terminal ★ Catalinas Park ★ Autopista ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana)"
+        "recorrido": "Terminal ★ Catalinas Park ★ Autopista ★ Talar ★ Colonia 4 (Luisiana)"
     },
     {
         "nombre": "12:45",
@@ -857,40 +860,41 @@ const horariosLvSMAl = [
     {
         "nombre": "13:30",
         "salida": 13.3,
-        "recorrido": "Terminal ★ Catalinas Park ★ Autopista ★ Alderetes ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana) ★ Finca Mayo ★ La Marta"
+        "recorrido": "Terminal ★ Catalinas Park ★ Alternativa ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana)",
+        "recorrido2":"Terminal ★ Catalinas Park ★ Autopista ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana) ★ Finca Mayo ★ La Marta"
     },
     {
         "nombre": "14:00",
         "salida": 14,
-        "recorrido": "Terminal ★ Banda R.S. ★ Alderetes ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana)"
+        "recorrido": "Terminal ★ Banda R.S. ★ Alderetes ★ Talar ★ Fortin ★ B° La Cancha ★ Colonia 4 (Luisiana)"
     },
     {
         "nombre": "14:50",
         "salida": 14.5,
-        "recorrido": "Terminal ★ Banda R.S. ★ Alderetes ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana)",
+        "recorrido": "Terminal ★ Banda R.S. ★ Alderetes ★ Talar ★ Colonia 4 (Luisiana)",
         "recorrido2": "Terminal ★ Comisaria 11 ★ Alternativa ★ Talar ★ Esquina Lastra ★ Fortín"
     },
     {
         "nombre": "15:50",
         "salida": 15.5,
         "recorrido": "Terminal ★ Banda R.S. ★ Alderetes ★ Talar ★ Esquina Lastra ★ Fortín ★ Colonia 4 (Florida)",
-        "recorrido2": "Terminal ★ Comisaria 11 ★ Alternativa ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana)"
+        "recorrido2": "Terminal ★ Comisaria 11 ★ Alternativa ★ Talar ★ Colonia 4 (Luisiana)"
     },
     {
         "nombre": "16:50",
         "salida": 16.5,
         "recorrido": "Terminal ★ Banda R.S. ★ Alderetes ★ Cochuchal ★ Esquina Lastra ★ Fortín",
-        "recorrido2": "Terminal ★ Comisaria 11 ★ Alternativa ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana)"
+        "recorrido2": "Terminal ★ Comisaria 11 ★ Alternativa ★ Talar ★ Colonia 4 (Luisiana)"
     },
-    {
-        "nombre": "17:40",
-        "salida": 17.4,
-        "recorrido": "Terminal ★ Comisaria 11 ★ Alternativa ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana)"
-    },
+    // {
+    //     "nombre": "17:40",
+    //     "salida": 17.4,
+    //     "recorrido": "Terminal ★ Comisaria 11 ★ Alternativa ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana)"
+    // },
     {
         "nombre": "17:45",
         "salida": 17.45,
-        "recorrido": "Terminal ★ Banda R.S. ★ Alderetes ★ Talar ★ B° La Cancha ★ Finca Mayo ★ La Marta"
+        "recorrido": "Terminal ★ Comisaria 11 ★ Alternativa ★ Talar ★ Colonia 4 (Luisiana)"
     },
     // {
     //     "nombre": "18:20",
@@ -910,24 +914,24 @@ const horariosLvSMAl = [
     {
         "nombre": "19:00",
         "salida": 19,
-        "recorrido": "Terminal ★ Banda R.S. ★ Alderetes ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana)"
+        "recorrido": "Terminal ★ Banda R.S. ★ Alderetes ★ Talar ★ Colonia 4 (Luisiana)"
     },
-    {
-        "nombre": "19:40",
-        "salida": 19.4,
-        "recorrido": "Terminal ★ Comisaria 11 ★ Alternativa ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana)"
-    },
+    // {
+    //     "nombre": "19:40",
+    //     "salida": 19.4,
+    //     "recorrido": "Terminal ★ Comisaria 11 ★ Alternativa ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana)"
+    // },
     {
         "nombre": "19:45",
         "salida": 19.45,
-        "recorrido": "Terminal ★ Banda R.S. ★ Alderetes ★ Talar ★ Esqiuina Lastra ★ Fortín ★ Finca Mayo",
-        // "recorrido2": "Terminal ★ Comisaria 11 ★ Alternativa ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana)"
+        "recorrido": "Terminal ★ Banda R.S. ★ Alderetes ★ Talar ★ Finca Mayo",
+        "recorrido2": "Terminal ★ Comisaria 11 ★ Alternativa ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana)"
     },
-    {
-        "nombre": "20:20",
-        "salida": 20.2,
-        "recorrido": "Terminal ★ Comisaria 11 ★ Alternativa ★ Talar ★ B° La Cancha"
-    },
+    // {
+    //     "nombre": "20:20",
+    //     "salida": 20.2,
+    //     "recorrido": "Terminal ★ Comisaria 11 ★ Alternativa ★ Talar ★ B° La Cancha"
+    // },
     {
         "nombre": "20:30",
         "salida": 20.3,
@@ -936,7 +940,7 @@ const horariosLvSMAl = [
     {
         "nombre": "21:00",
         "salida": 21,
-        "recorrido": "Terminal ★ Comisaria 11 ★ Autopista ★ Alderetes ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana)"
+        "recorrido": "Terminal ★ Comisaria 11 ★ Autopista ★ Alderetes ★ Talar ★ Colonia 4 (Luisiana)"
     },
     {
         "nombre": "21:30",
@@ -951,7 +955,7 @@ const horariosLvSMAl = [
     {
         "nombre": "22:30",
         "salida": 22.3,
-        "recorrido": "Terminal ★ Comisaria 11 ★ Autopista ★ Alderetes ★ Talar ★ Esquina Lastra ★ Fortín ★ B° La Cancha" 
+        "recorrido": "Terminal ★ Comisaria 11 ★ Autopista ★ Alderetes ★ Talar ★ Esquina Lastra ★ Fortín ★ B° La Cancha ★ Colonia 4 (Luisiana)" 
     },
     {
         "nombre": "23:30",
@@ -1169,7 +1173,7 @@ const horariosLvSMPo = [
     {
         "nombre": "06:00",
         "salida": 6,
-        "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ B° La Cancha ★ Colonia 4 (Luisiana)"
+        "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ B° La Cancha"
     },
     {
         "nombre": "06:30",
@@ -1227,12 +1231,12 @@ const horariosLvSMPo = [
         "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ Esquina Lastra ★ Fortín",
         // "recorrido2": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ B° La Cancha"
     },
-    {
-        "nombre": "11:35",
-        "salida": 11.35,
-        "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ B° La Cancha",
-        // "recorrido2": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ B° La Cancha"
-    },
+    // {
+    //     "nombre": "11:35",
+    //     "salida": 11.35,
+    //     "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ B° La Cancha",
+    //     // "recorrido2": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ B° La Cancha"
+    // },
     {
         "nombre": "11:45",
         "salida": 11.45,
@@ -1253,12 +1257,12 @@ const horariosLvSMPo = [
     {
         "nombre": "13:30",
         "salida": 13.3,
-        "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ Esquina Lastra ★ Fortín"
+        "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ Esquina Lastra"
     },
     {
         "nombre": "13:45",
         "salida": 13.45,
-        "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ Esquina Lastra"
+        "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ Esquina Lastra ★ Fortin"
     },
     {
         "nombre": "14:05",
@@ -1285,11 +1289,16 @@ const horariosLvSMPo = [
         "salida": 17,
         "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ B° La Cancha"
     },
-    // {
-    //     "nombre": "17:30",
-    //     "salida": 17.3,
-    //     "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ Esquina Lastra ★ Fortín"
-    // },
+    {
+        "nombre": "17:30",
+        "salida": 17.3,
+        "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ Esquina Lastra ★ Fortín"
+    },
+    {
+        "nombre": "17:50",
+        "salida": 17.5,
+        "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ Esquina Lastra ★ Fortín ★ B° La Cancha ★ Colonia 4 (Luisiana)"
+    },
     {
         "nombre": "18:00",
         "salida": 18,
@@ -1300,16 +1309,16 @@ const horariosLvSMPo = [
         "salida": 18.3,
         "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ Esquina Lastra ★ Fortín"
     },
-    {
-        "nombre": "19:00",
-        "salida": 19,
-        "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ B° La Cancha"
-    },
-    {
-        "nombre": "19:15",
-        "salida": 19.15,
-        "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ B° La Cancha"
-    },
+    // {
+    //     "nombre": "19:00",
+    //     "salida": 19,
+    //     "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ B° La Cancha"
+    // },
+    // {
+    //     "nombre": "19:15",
+    //     "salida": 19.15,
+    //     "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ B° La Cancha"
+    // },
     {
         "nombre": "19:30",
         "salida": 19.3,
@@ -1319,7 +1328,7 @@ const horariosLvSMPo = [
         "nombre": "20:00",
         "salida": 20,
         "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ B° La Cancha",
-        // "recorrido2" : "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ Esquina Longo"
+        "recorrido2" : "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ Esquina Longo"
     },
     {
         "nombre": "20:30",
@@ -1336,11 +1345,11 @@ const horariosLvSMPo = [
         "salida": 21,
         "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Posse ★ Paraíso ★ B° La Cancha"
     },
-    // {
-    //     "nombre": "21:30",
-    //     "salida": 21.3,
-    //     "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Fila del Medio ★ Bosque ★ Posse ★ Paraíso ★ B° La Cancha"
-    // },
+    {
+        "nombre": "21:20",
+        "salida": 21.2,
+        "recorrido": "Terminal ★ Banda R.S. ★ Cevil Pozo ★ Fila del Medio ★ Bosque ★ Posse ★ Paraíso ★ Colonia 4 (Luisiana)"
+    },
     {
         "nombre": "21:30",
         "salida": 21.3,
