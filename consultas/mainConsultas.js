@@ -43,6 +43,8 @@ let titulo = document.getElementById('titulo');
 let resolucion = document.documentElement.clientWidth;
 
 
+
+
 botonDeCambio.addEventListener('click',  ()=> {
     $('.menu2').css('display', 'flex');
     $('.origen').css('display', 'flex');
@@ -199,15 +201,19 @@ onload = ()=> {
         function obtenerDiaRuta(x) {
     
             if (x == 0) diaRango = ruta[0].slice(0, ruta[0].length);
-            else if (dia == 1 || semiFeriado || feriadoPrevio && posicion2 == 2)
+            else if ((dia == 1 || semiFeriado || feriadoPrevio) && posicion2 == 2)
             diaRango = ruta[1].slice(1, ruta[1].length)
             else if(fecha == 6 && mes == 6 && posicion2 == 2) diaRango = ruta[1].slice(0, ruta[1].length - 1)
-            else if (x >= 1 && x <= 5) diaRango = ruta[1].slice(0, ruta[1].length);
+            else if (x >= 2 && x <= 6) diaRango = ruta[1].slice(0, ruta[1].length);
             else if (x == 6) diaRango = ruta[2].slice(0, ruta[2].length);
-        
+            else diaRango = ruta[1]
+            
+            console.log(diaRango)
             return diaRango
         }
 
+
+    
         let rutaObtenida;
         let tipoDeDia;
 
@@ -223,8 +229,12 @@ onload = ()=> {
                     rutaObtenida = obtenerDiaRuta(dia);
                     break;  
             }
+
             return tipoDeDia;
+            
         }
+
+
 
         definirDia (fecha, mes)
 
@@ -277,7 +287,6 @@ onload = ()=> {
             let grillaOcasional;
             let grillaOcasionalVacia = [];
             grillaOcasional = obtenerDiaRuta(dia);
-            console.log(grillaOcasional)
             grillaOcasional.forEach(element => {
                 if(element.salida <= 19){
                     grillaOcasionalVacia.push(element)
@@ -293,6 +302,7 @@ onload = ()=> {
                 // Aqui usamos la lista con los salidaes y las pasamos a numero enteros junto con los minutos
                 return listaDelDia
             }
+
         
         
         let listaObtenida = obtenerLista(rutaObtenida)
@@ -380,7 +390,7 @@ onload = ()=> {
                 }
             }
         }
-    
+      
         contruirGlobos(rutaObtenida,resultadoscontainer,resultadoscont);
     
         function irAlObjeto() {
@@ -495,7 +505,7 @@ onload = ()=> {
 
                     recorridoServicio.textContent = `Recorrido: ${rutaObtenida[i].recorrido}`;
                 }
-                console.log(Math.abs(listaDiferencias[i]))
+                
             }
             else {
                 if ((Object.keys(rutaObtenida[i])).length > 3) {

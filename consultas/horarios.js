@@ -60,7 +60,7 @@ const horariosLvFloAl = [
     {
         "nombre": "07:50",
         "salida": 7.5,
-        // "recorrido": "Colonia 4 (Luisiana) ★ Fonda ★ Talar ★ Alternativa ★ Terminal",
+        "recorrido": "Colonia 4 (Luisiana) ★ Fonda ★ Talar ★ Alternativa ★ Terminal",
         "recorrido": "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alderetes ★ Autopista ★ Terminal"
     },
     // {
@@ -191,11 +191,11 @@ const horariosLvFloAl = [
         "salida": 18.1,
         "recorrido": "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alternativa ★ Terminal"
     },
-    // {
-    //     "nombre": "18:30",
-    //     "salida": 18.30,
-    //     "recorrido": "Fortín ★ Esquina Lastra ★ Talar ★ Alderetes ★ Banda del Río Salí ★ Terminal"
-    // },
+    {
+        "nombre": "18:25",
+        "salida": 18.25,
+        "recorrido": "Fortín ★ Esquina Lastra ★ Talar ★ Alderetes ★ Banda del Río Salí ★ Terminal"
+    },
     {
         "nombre": "19:00",
         "salida": 19,
@@ -807,11 +807,11 @@ const horariosLvSMAl = [
         "salida": 8.35,
         "recorrido": "Terminal ★ Banda del Río Salí ★ Alderetes ★ Talar ★ Esquina Lastra ★ Fortín"
     },
-    // {
-    //     "nombre": "09:00",
-    //     "salida": 9,
-    //     "recorrido": "Terminal ★ Catalinas Park ★ Autopista ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana) "
-    // },
+    {
+        "nombre": "09:00",
+        "salida": 9,
+        "recorrido": "Terminal ★ Catalinas Park ★ Autopista ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana) "
+    },
     {
         "nombre": "09:45",
         "salida": 9.45,
@@ -1314,11 +1314,11 @@ const horariosLvSMPo = [
     //     "salida": 19,
     //     "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ B° La Cancha"
     // },
-    // {
-    //     "nombre": "19:15",
-    //     "salida": 19.15,
-    //     "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ B° La Cancha"
-    // },
+    {
+        "nombre": "19:10",
+        "salida": 19.1,
+        "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ B° La Cancha ★ Colonia 4 (Luisiana)"
+    },
     {
         "nombre": "19:30",
         "salida": 19.3,
@@ -1726,11 +1726,11 @@ const posseTerminalLaV = [
     //     "salida": 11.1,
     //     "recorrido": "Dispensario ★ Fila de la orilla ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
     // },
-    // {
-    //     "nombre": "12:50",
-    //     "salida": 12.5,
-    //     "recorrido": "Dispensario ★ Fila de la orilla ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
-    // },
+    {
+        "nombre": "12:45",
+        "salida": 12.45,
+        "recorrido": "Dispensario ★ Fila de la orilla ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
+    },
     {
         "nombre": "13:00",
         "salida": 13,
