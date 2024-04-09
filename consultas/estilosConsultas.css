@@ -662,7 +662,7 @@ body::-webkit-scrollbar-track {
 .panel-izquierdo-logo{
     background-image: url(../Imagenes/Logo_sinfondo\(webp\).webp);
     width: 100px;
-    height: 200px;
+    height: 100px;
     background-size: 80%;
     background-repeat: no-repeat;
     position: absolute;

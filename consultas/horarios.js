@@ -4307,7 +4307,7 @@ const ralosCruzAltaTerminalLaV = [
   {
    nombre: "06:05",
    salida: 6.05,
-   recorrido: [ralos,cruzAlta,filaOrilla,llona,cevilPozo,bandaRS,terminal],
+   recorrido: [ralos,cruzAlta,llona,cevilPozo,bandaRS,terminal],
  },
   {
     nombre: "07:20",
