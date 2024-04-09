@@ -714,7 +714,7 @@ body::-webkit-scrollbar-track {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background: #C70039 ;
+    background: var(--rojo2Linear) ;
     /* background: var(--rojo2Linear); */
     padding: 10px;
     flex-basis: 70%;
