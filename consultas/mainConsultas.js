@@ -40,6 +40,14 @@ const mensaje = document.querySelector('.mensaje-cuadro')
 //     scrollcont.children[0].classList.add('manito')
 // })
 
+const cuerpoHorarios = document.querySelector('.cuerpo');
+const botonConsultaHorarios = document.querySelector('.cajahorarios')
+
+botonConsultaHorarios.addEventListener('click' , ()=> {
+    $(cuerpoHorarios).css('display' , 'flex');
+})
+
+
 function borrarGlobos() {
     let arrayResultados = Array.prototype.slice.call(document.getElementsByClassName("contenedor-vista"), 0);
     for (element of arrayResultados) {
