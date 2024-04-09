@@ -4,12 +4,12 @@
 
 const terminal = "Terminal";
 const alderetes = "Alderetes";
-const bandaRS = "Banda Río Salí";
+const bandaRS = "Banda del Río Salí";
 const autopista = "Autopista";
 const alternativa = "Alternativa";
 const talar = "El Talar";
-const cochuchal = "Cochuchal";
-const florida = "Florida";
+const cochuchal = "El Cochuchal";
+const florida = "La Florida";
 const bCancha = "B° La Cancha";
 const fortin = "Fortín";
 const esqLastra = "Esquina Lastra";
@@ -36,7 +36,7 @@ const filaMedio = "Fila del Medio";
 const bosque = "Bosque (Delfín Gallo)";
 const filaOrilla = "Fila de la orilla";
 const plaza = "Plaza (Delfín Gallo)";
-const posse = "Posse";
+const posse = "W. Posse";
 
 // Destinos (TERMINAL / ALDERETES / ALTERNATIVA)
 
@@ -46,7 +46,7 @@ const todasColoniasVuelta = "Colonia 5/4/3/2 (Florida)";
 
 // Destino (RALOS / CEJAS / 7 de Abril)
 
-const ralos = "Ralos";
+const ralos = "Los Ralos";
 const villaTercera = "Villa Tercera";
 const cerco2 = "Cerco 2";
 const vias = "Las Vias";
