@@ -914,7 +914,7 @@ body::-webkit-scrollbar-track {
 }
 
 .efectoBotonPresionado {
-    animation: botonpresionado .5s forwards;
+    animation: botonpresionado .25s forwards;
 }
 
 @keyframes botonpresionado {
