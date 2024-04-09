@@ -208,7 +208,7 @@ body::-webkit-scrollbar-track {
     overflow: scroll;
     background: #363062;
     background: var(--fondoAzulFuerte);
-    height: 100%;
+    height: calc(100% - 50px);
     width: 100%;
     top: 0;
     left: 0;
