@@ -44,7 +44,11 @@ const cuerpoHorarios = document.querySelector('.cuerpo');
 const botonConsultaHorarios = document.querySelector('.cajahorarios')
 
 botonConsultaHorarios.addEventListener('click' , ()=> {
-    $(cuerpoHorarios).css('display' , 'flex');
+
+    botonConsultaHorarios.classList.add('efectoBotonPresionado')
+    setTimeout(() => {
+        $(cuerpoHorarios).css('display' , 'flex');
+    }, 500);
 })
 
 

@@ -911,9 +911,13 @@ body::-webkit-scrollbar-track {
         font-size:15px;
         color: black;
     }
+}
 
-    &&:active{
-        transform: scale(.95);
-        box-shadow: none;
-    }
+.efectoBotonPresionado {
+    animation: botonpresionado .5s forwards;
+}
+
+@keyframes botonpresionado {
+    0%{transform: scale(.95);}
+    100%{transform: scale(1);}
 }
