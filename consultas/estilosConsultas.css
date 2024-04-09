@@ -895,7 +895,7 @@ body::-webkit-scrollbar-track {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--rojo2Linear);
+    background: var(--fondoGrisLinear);
 
     && img{
         width: 60%;
