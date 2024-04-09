@@ -226,8 +226,7 @@ todosBotonesParadas.forEach(elemento => {
 
 
             contenedorFiltros.classList.add('contenedor-filtro-animacionOUT')
-            contenedorFiltros
-
+            
             efectoPulsado(elemento);
     
                 const referencia = document.querySelector('.contenedor-titulo H1');
