@@ -863,6 +863,8 @@ body::-webkit-scrollbar-track {
         color: white;
         font-weight: 100;
         text-transform: uppercase;
+        text-align: center;
+        font-size:20px;
     }
 }
 
@@ -893,11 +895,23 @@ body::-webkit-scrollbar-track {
     background-color: white;
     border-radius: 10px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     background: var(--fondoGrisLinear);
+    box-shadow: 5px 2px 5px black;
 
     && img{
         width: 60%;
+    }
+
+    && h3 {
+        font-size:15px;
+        color: black;
+    }
+
+    &&:active{
+        transform: scale(.95);
+        box-shadow: none;
     }
 }
