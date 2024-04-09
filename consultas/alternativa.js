@@ -7,8 +7,8 @@ let diaObtenido;
 let indiceObtenido;
 let valorDelDiaSelect;
 
-function borrarBotones() {
-    let arrayResultados = Array.prototype.slice.call(document.getElementsByClassName("boton-parada"), 0);
+function borrarBotones(claseBoton) {
+    let arrayResultados = Array.prototype.slice.call(document.getElementsByClassName(claseBoton), 0);
     for (element of arrayResultados) {
         element.remove();
     }
@@ -205,9 +205,6 @@ const todosBotonesParadas = document.querySelectorAll('.boton-parada');
 
 const botonvolver = document.querySelector('.botonvolver-contenedor');
 
-botonvolver.addEventListener('click', ()=> {
-    location.reload()
-})
 
 const paradasContenedor = document.querySelectorAll('.parada-contenedor');
 const lineasRecorrido = document.querySelectorAll('.linearecorrido2');
@@ -224,6 +221,7 @@ let todosBotonesDestino;
 todosBotonesParadas.forEach(elemento => {
     elemento.addEventListener('click', (e)=> {
 
+            $(indicacioncont).css('display' , 'flex')
 
             contenedorFiltros.classList.add('contenedor-filtro-animacionOUT')
             
@@ -233,8 +231,8 @@ todosBotonesParadas.forEach(elemento => {
                 paradaSeleccionada = e.target.nextSibling.innerHTML;
                 referencia.innerHTML = `¿Hacia dónde querés ir desde ${paradaSeleccionada}?`
                 posiblesDestinos = destinosCompartidos(paradaSeleccionada,valorDelDiaSelect);
-                botonvolver.classList.add('visible');
-                borrarBotones()
+                // botonvolver.classList.add('visible');
+                borrarBotones('boton-parada')
                 crearBotonesConDestinos(posiblesDestinos);
 
             contenedorOpciones.scrollTo(0, 0);
@@ -281,10 +279,22 @@ resultadoscont.addEventListener('touchmove', () => {
     }
 })
 
+let contadorClickVolver = 0;
+
 indicacioncont.addEventListener('click', () => {
-    $('.indicacion-cont').css('display', 'none');
+   
+    contadorClickVolver++;
+    console.log(contadorClickVolver)
+
+    
+    contadorClickVolver == 1 && 
+    borrarBotones('boton-destino');
+    crearBotonesDeSalida(listaTodosDestino)
+    // contadorClickVolver == 3 || 
+    
+ 
     mensaje2.classList.replace('mensajeAparece', 'mensajeIrse')
-    resultadoscont.children[0].classList.remove('resultadosOpcion2');
+    // resultadoscont.children[0].classList.remove('resultadosOpcion2');
     resultadoscont.classList.replace('opacarFondo','normalizarFondo');
     borrarGlobos()
 

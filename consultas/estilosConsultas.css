@@ -74,7 +74,7 @@ body::-webkit-scrollbar-track {
     position: relative;
     box-sizing: border-box;
     min-height: 100vh;
-    z-index: 150;
+ 
 }
 
 

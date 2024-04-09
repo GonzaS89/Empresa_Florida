@@ -48,6 +48,8 @@ botonConsultaHorarios.addEventListener('click' , ()=> {
     botonConsultaHorarios.classList.add('efectoBotonPresionado')
     setTimeout(() => {
         $(cuerpoHorarios).css('display' , 'flex');
+        $(cuerpoHorarios).css('zIndex' , '150');
+        
     }, 500);
 })
 
