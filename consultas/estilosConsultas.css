@@ -918,6 +918,21 @@ select:focus {
   filter: opacity(20%);
 }
 
+.sobretodo{
+  position: absolute;
+  z-index: 100;
+  background:var(--fondoAzulFuerte);
+  width: 100%;
+  height: 100%;
+  animation: destapar .2s .1s ease-in forwards;
+}
+
+@keyframes destapar {
+  100%{
+    width: 0;
+  }
+}
+
 /* .scroll{
     width: 20px;
     height: 20px;
@@ -1122,10 +1137,11 @@ select:focus {
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
+  border-radius: 10px;
+  /* border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px; */
   margin: 15px;
-  border: none;
+  overflow: hidden;
   /* border: 0.5px solid white; */
   background-color: white;
   position: relative;
@@ -1397,10 +1413,23 @@ select:focus {
   .resultados {
     width: 90%;
     padding: 10px 0;
-    border-left: 15px solid var(--fondoAzulFuerte);
     min-height: 50%;
     max-height: 75%;
+
+    animation: kka .25s .1s forwards;
   }
+
+  @keyframes kka {
+    100%{
+      border-left: 15px solid var(--fondoAzulFuerte);
+    }
+  }
+
+  /* @keyframes bordeIzq {
+    100%{
+      border-left: 15px solid var(--fondoAzulLinear);
+    }
+  } */
 
   .resultadosGrande {
     min-height: 65%;
