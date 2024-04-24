@@ -924,14 +924,9 @@ select:focus {
   background:var(--fondoAzulFuerte);
   width: 100%;
   height: 100%;
-  animation: destapar .2s .1s ease-in forwards;
 }
 
-@keyframes destapar {
-  100%{
-    width: 0;
-  }
-}
+
 
 /* .scroll{
     width: 20px;
@@ -1415,15 +1410,10 @@ select:focus {
     padding: 10px 0;
     min-height: 50%;
     max-height: 75%;
+    border-left: 15px solid var(--fondoAzulFuerte);
 
-    animation: kka .25s .1s forwards;
   }
 
-  @keyframes kka {
-    100%{
-      border-left: 15px solid var(--fondoAzulFuerte);
-    }
-  }
 
   /* @keyframes bordeIzq {
     100%{

@@ -358,7 +358,7 @@ onload = ()=> {
                 resultado.appendChild(p1);
                 resultado.appendChild(p2);
                 resultado.appendChild(p3);
-                resultado.appendChild(sobreTodo);
+                // resultado.appendChild(sobreTodo);
                 if ((Object.keys(ruta[0])).length > 3) {
                     let p4 = document.createElement('P');
                     p4.classList.add('actual4');
@@ -393,7 +393,7 @@ onload = ()=> {
                     }
                     contHijo.appendChild(resultado);
                     contPadre.appendChild(contHijo)
-                    resultado.appendChild(sobreTodo);
+                    // resultado.appendChild(sobreTodo);
                 }
             }
         }
@@ -609,6 +609,7 @@ resultadoscont.addEventListener('touchmove', () => {
         if (i < indiceDeBusqueda || i > indiceDeBusqueda) 
             resultadoscont.children[i].classList.replace('opacar', 'normalizar');
             resultadoscont.children[indiceDeBusqueda].classList.replace('resaltado', 'normalizarResaltado');
+            resultadoscont.children[indiceDeBusqueda].classList.add('')
             scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
             scrollcont.children[0].classList.remove('manitoAnimacionArriba');
             scrollcont.children[0].classList.remove('manitoAnimacionCentro');
