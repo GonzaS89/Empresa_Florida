@@ -609,7 +609,7 @@ resultadoscont.addEventListener('touchmove', () => {
         if (i < indiceDeBusqueda || i > indiceDeBusqueda) 
             resultadoscont.children[i].classList.replace('opacar', 'normalizar');
             resultadoscont.children[indiceDeBusqueda].classList.replace('resaltado', 'normalizarResaltado');
-            resultadoscont.children[indiceDeBusqueda].classList.add('')
+
             scrollcont.children[0].classList.remove('manitoAnimacionAbajo');
             scrollcont.children[0].classList.remove('manitoAnimacionArriba');
             scrollcont.children[0].classList.remove('manitoAnimacionCentro');
