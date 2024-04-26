@@ -619,8 +619,6 @@ resultadoscont.addEventListener('touchmove', () => {
 
 
 
-
-
 indicacioncont.addEventListener('click', () => {
     opcionbase.selected = true;
     opcionbase2.selected = true;
