@@ -822,11 +822,8 @@ const horariosLvSMAl = [
         "nombre": "10:45",
         "salida": 10.45,
         // "recorrido": "Terminal ★ Banda del Río Salí ★ Alderetes ★ Talar ★ Colonia 4 (Luisiana)",
-        "recorrido": "Terminal ★ Catalinas Park ★ Alternativa ★ Talar ★ Esquina Lastra ★ Fortín",
-
-    },
-  
-    
+        "recorrido": "Terminal ★ Catalinas Park ★ Autopista ★ Alderetes ★ Talar ★ Esquina Lastra ★ Fortín",
+    },  
     {
         "nombre": "11:15",
         "salida": 11.15,
@@ -1149,11 +1146,11 @@ const horariosDSMAl = [
         "salida": 19.45,
         "recorrido": "Terminal ★ Banda del Río Salí ★ Alderetes ★ Talar ★ Finca Mayo"
     },
-    {
-        "nombre": "20:30",
-        "salida": 20.3,
-        "recorrido": "Terminal ★ Banda del Río Salí ★ Alderetes ★ Talar ★ Esquina Lastra ★ Fortín"
-    },
+    // {
+    //     "nombre": "20:30",
+    //     "salida": 20.3,
+    //     "recorrido": "Terminal ★ Banda del Río Salí ★ Alderetes ★ Talar ★ Esquina Lastra ★ Fortín"
+    // },
     {
         "nombre": "21:00",
         "salida": 21,
@@ -3365,9 +3362,9 @@ const terminalSieteDeAbrilS = [
 ]
 const terminalSieteDeAbrilD = [
     {
-        "nombre": "15:00",
+        "nombre": "15:30",
         "salida": 15,
-        "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Las Cejas ★ 7 de Abril"
+        "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos ★Las Cejas ★ 7 de Abril"
     }
     // {
     //     "nombre": "18:30",
