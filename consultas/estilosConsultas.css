@@ -586,6 +586,8 @@ select:focus {
 
 .botonActivo {
   background: rgb(12, 12, 60);
+
+  border: none;
 }
 
 #ingHora {
