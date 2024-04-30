@@ -329,16 +329,16 @@ const horariosDFloAl = [
         "salida": 12.4,
         "recorrido": "Finca Mayo ★ Fortín ★ Esquina Lastra ★ Talar ★ Alderetes ★ Banda del Río Salí ★ Terminal"
     },
-    {
-        "nombre": "14:45",
-        "salida": 14.45,
-        "recorrido": "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alderetes ★ Banda del Río Salí ★ Terminal"
-    },
-    {
-        "nombre": "15:50",
-        "salida": 15.5,
-        "recorrido": "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alderetes ★ Banda del Río Salí ★ Terminal"
-    },
+    // {
+    //     "nombre": "14:45",
+    //     "salida": 14.45,
+    //     "recorrido": "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alderetes ★ Banda del Río Salí ★ Terminal"
+    // },
+    // {
+    //     "nombre": "15:50",
+    //     "salida": 15.5,
+    //     "recorrido": "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alderetes ★ Banda del Río Salí ★ Terminal"
+    // },
     {
         "nombre": "16:50",
         "salida": 16.5,
@@ -759,11 +759,11 @@ const horariosDFloPo = [
     //     "salida": 21,
     //     "recorrido": "B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
     // },
-    {
-        "nombre": "21:25",
-        "salida": 21.25,
-        "recorrido": "B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
-    },
+    // {
+    //     "nombre": "21:25",
+    //     "salida": 21.25,
+    //     "recorrido": "B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
+    // },
     {
         "nombre": "22:25",
         "salida": 22.25,
@@ -1111,26 +1111,26 @@ const horariosDSMAl = [
         "salida": 11.40,
         "recorrido": "Terminal ★ Banda del Río Salí ★ Alderetes ★ Cochuchal ★ Finca Mayo"
     },
-    {
-        "nombre": "14:00",
-        "salida": 14,
-        "recorrido": "Terminal ★ Banda del Río Salí ★ Alderetes ★ Talar ★ Colonia 4 (Luisiana)"
-    },
-    {
-        "nombre": "14:50",
-        "salida": 14.5,
-        "recorrido": "Terminal ★ Banda del Río Salí ★ Alderetes ★ Talar ★ Colonia 4 (Luisiana)"
-    },
+    // {
+    //     "nombre": "14:00",
+    //     "salida": 14,
+    //     "recorrido": "Terminal ★ Banda del Río Salí ★ Alderetes ★ Talar ★ Colonia 4 (Luisiana)"
+    // },
+    // {
+    //     "nombre": "14:50",
+    //     "salida": 14.5,
+    //     "recorrido": "Terminal ★ Banda del Río Salí ★ Alderetes ★ Talar ★ Colonia 4 (Luisiana)"
+    // },
     {
         "nombre": "16:00",
         "salida": 16,
         "recorrido": "Terminal ★ Banda del Río Salí ★ Alderetes ★ Talar ★ Esquina Lastra ★ Fortín ★ Colonia 4 (Florida)"
     },
-    { 
-        "nombre": "16:50",
-        "salida": 16.5,
-        "recorrido": "Terminal ★ Banda del Río Salí ★ Alderetes ★ Talar ★ B° La Cancha"
-    },
+    // { 
+    //     "nombre": "16:50",
+    //     "salida": 16.5,
+    //     "recorrido": "Terminal ★ Banda del Río Salí ★ Alderetes ★ Talar ★ B° La Cancha"
+    // },
     {
         "nombre": "17:45",
         "salida": 17.45,
@@ -1151,16 +1151,16 @@ const horariosDSMAl = [
     //     "salida": 20.3,
     //     "recorrido": "Terminal ★ Banda del Río Salí ★ Alderetes ★ Talar ★ Esquina Lastra ★ Fortín"
     // },
-    {
-        "nombre": "21:00",
-        "salida": 21,
-        "recorrido": "Terminal ★ Banda del Río Salí ★ Alderetes ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana)"
-    },
-    {
-        "nombre": "22:30",
-        "salida": 22.3,
-        "recorrido": "Terminal ★ Comisaria 11 ★ Autopista ★ Alderetes ★ Talar ★ Esquina Lastra ★ Fortín ★ B° La Cancha ★ Colonia 4 (Luisiana)"
-    },
+    // {
+    //     "nombre": "21:00",
+    //     "salida": 21,
+    //     "recorrido": "Terminal ★ Banda del Río Salí ★ Alderetes ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana)"
+    // },
+    // {
+    //     "nombre": "22:30",
+    //     "salida": 22.3,
+    //     "recorrido": "Terminal ★ Comisaria 11 ★ Autopista ★ Alderetes ★ Talar ★ Esquina Lastra ★ Fortín ★ B° La Cancha ★ Colonia 4 (Luisiana)"
+    // },
 
 ]
 const horariosLvSMPo = [
@@ -1608,11 +1608,11 @@ const horariosDSMPo = [
         "salida": 18.3,
         "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ Esquina Lastra ★ Fortín"
     },
-    {
-        "nombre": "19:00",
-        "salida": 19,
-        "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ B° La Cancha"
-    },
+    // {
+    //     "nombre": "19:00",
+    //     "salida": 19,
+    //     "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ B° La Cancha"
+    // },
     {
         "nombre": "19:30",
         "salida": 19.3,
@@ -1894,11 +1894,11 @@ const posseTerminalD = [
     //     "salida": 17.1,
     //     "recorrido": "Dispensario ★ Fila de la orilla ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
     // },
-    {
-        "nombre": "18:05",
-        "salida": 18.05,
-        "recorrido": "Dispensario ★ Fila de la orilla ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
-    }
+    // {
+    //     "nombre": "18:05",
+    //     "salida": 18.05,
+    //     "recorrido": "Dispensario ★ Fila de la orilla ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
+    // }
 ];
 const terminalPosseLaV = [
     {
@@ -2065,11 +2065,11 @@ const terminalPosseD = [
     //     "salida": 19.5,
     //     "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Fila de la orilla ★ Llona ★ Dispensario"
     // },
-    // {
-    //     "nombre": "21:20",
-    //     "salida": 21.2,
-    //     "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Fila de la orilla ★ Llona ★ Dispensario"
-    // },
+    {
+        "nombre": "21:20",
+        "salida": 21.2,
+        "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Fila de la orilla ★ Llona ★ Dispensario"
+    },
     // {
     //     "nombre": "22:00",
     //     "salida": 22,
@@ -2540,16 +2540,16 @@ const ralosTerminalD = [
     //     "salida": 15.1,
     //     "recorrido": "Los Ralos ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
     // },
-    // {
-    //     "nombre": "15:25",
-    //     "salida": 15.25,
-    //     "recorrido": "Los Ralos ★ Villa Tercera ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
-    // },
-        {
-        "nombre": "16:20",
-        "salida": 16.2,
+    {
+        "nombre": "15:25",
+        "salida": 15.25,
         "recorrido": "Los Ralos ★ Villa Tercera ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
     },
+    //     {
+    //     "nombre": "16:20",
+    //     "salida": 16.2,
+    //     "recorrido": "Los Ralos ★ Villa Tercera ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
+    // },
     {
         "nombre": "16:25",
         "salida": 16.25,
@@ -2559,7 +2559,7 @@ const ralosTerminalD = [
         "nombre": "17:15",
         "salida": 17.15,
         "recorrido": "Alabama ★ Finca Mayo ★ Los Ralos ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal",
-        "recorrido2": "Los Ralos ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
+        // "recorrido2": "Los Ralos ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
     },
     {
         "nombre": "18:10",
@@ -3074,27 +3074,27 @@ const terminalRalosD = [
         "salida": 13,
         "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos ★ Villa Tercera"
     },
-    {
-        "nombre": "14:00",
-        "salida": 14,
-        // "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos",
-        "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos ★ Las Cejas"
-    },
+    // {
+    //     "nombre": "14:00",
+    //     "salida": 14,
+    //     // "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos",
+    //     "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos ★ Las Cejas"
+    // },
     {
         "nombre": "14:30",
         "salida": 14.3,
         "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos ★ Villa Tercera"
     },
-    {
-        "nombre": "15:00",
-        "salida": 15,
-        "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos ★ Las Cejas ★ 7 de Abril"
-    },
-    {
-        "nombre": "15:30",
-        "salida": 15.3,
-        "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos"
-    },
+    // {
+    //     "nombre": "15:00",
+    //     "salida": 15,
+    //     "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos ★ Las Cejas ★ 7 de Abril"
+    // },
+    // {
+    //     "nombre": "15:30",
+    //     "salida": 15.3,
+    //     "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos"
+    // },
     {
         "nombre": "16:15",
         "salida": 16.15,
@@ -3116,12 +3116,12 @@ const terminalRalosD = [
     //     "salida": 18.25,
     //     "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos"
     // },
-    {
-        "nombre": "18:30",
-        "salida": 18.3,
-        "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos ★ Las Cejas",
-        // "recorrido2": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos"
-    },
+    // {
+    //     "nombre": "18:30",
+    //     "salida": 18.3,
+    //     "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos ★ Las Cejas",
+    //     // "recorrido2": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos"
+    // },
     {
         "nombre": "19:00",
         "salida": 19,
@@ -3134,16 +3134,16 @@ const terminalRalosD = [
     //     // "recorrido2": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos"
         
     // },
-    {
-        "nombre": "20:00",
-        "salida": 20,
-        // "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos",
-        "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos ★ Cruz Alta"
-    },
+    // {
+    //     "nombre": "20:00",
+    //     "salida": 20,
+    //     // "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos",
+    //     "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos ★ Cruz Alta"
+    // },
     {
         "nombre": "20:30",
         "salida": 20.3,
-        "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos ★  Finca Mayo"
+        "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos ★ Finca Mayo"
     },
     // {
     //     "nombre": "21:00",
@@ -3295,8 +3295,8 @@ const terminalCruzAltaRalosS = [
 ];
 const terminalCruzAltaRalosD = [
     {
-        "nombre": "19:30",
-        "valor": 19.3,
+        "nombre": "20:00",
+        "valor": 20,
         "recorrido": "Terminal ★ Banda del Rio Sali ★ Cevil Pozo ★ Cruz Alta ★ Los Ralos"
     }
 ]
@@ -3331,8 +3331,8 @@ const sieteDeAbrilTerminalS = [
 ]
 const sieteDeAbrilTerminalD = [
     {
-        "nombre": "17:30",
-        "salida": 17.3,
+        "nombre": "18:00",
+        "salida": 18,
         "recorrido": "7 de Abril ★ Las Cejas ★ Los Ralos ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
     }
 ]
@@ -3472,11 +3472,11 @@ const lasCejasTerminalD = [
     //     "salida": 15.5,
     //     "recorrido": "Las Cejas ★ Los Ralos ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
     // },
-    // {
-    //     "nombre": "18:00",
-    //     "salida": 18,
-    //     "recorrido": "7 de Abril ★ Las Cejas ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
-    // },
+    {
+        "nombre": "18:00",
+        "salida": 18,
+        "recorrido": "7 de Abril ★ Las Cejas ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
+    },
     {
         "nombre": "19:50",
         "salida": 19.5,
@@ -3584,16 +3584,21 @@ const terminalLasCejasD = [
     //     "salida": 10.3,
     //     "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos ★ Las Cejas"
     // },
-    {
-        "nombre": "14:00",
-        "salida": 15,
-        "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos ★ Las Cejas"
-    },
+    // {
+    //     "nombre": "14:00",
+    //     "salida": 15,
+    //     "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos ★ Las Cejas"
+    // },
     // {
     //     "nombre": "15:00",
     //     "salida": 15,
     //     "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Las Cejas ★ 7 de Abril"
     // },
+    {
+            "nombre": "15:30",
+            "salida": 15,
+            "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Los Ralos ★ Las Cejas ★ 7 de Abril"
+        },
     {
         "nombre": "18:30",
         "salida": 18.3,

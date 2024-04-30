@@ -2,7 +2,7 @@
 
     "editor.fontFamily": "CaskaydiaCove Nerd Font Mono, Mono,Victor Mono,CaskaydiaCove Nerd Font Mono, CaskaydiaCove Nerd Font,jetBrains Mono,Victor Mono SemiBold",
 
-    "livePreview.defaultPreviewPath": "/index.html",
+    "livePreview.defaultPreviewPath": "/consultas/consultas.html",
     "editor.fontFamily": "CaskaydiaCove Nerd Font Mono, Mono,Victor Mono,CaskaydiaCove Nerd Font Mono, CaskaydiaCove Nerd Font,jetBrains Mono"
 
 }
