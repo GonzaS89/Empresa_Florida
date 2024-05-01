@@ -247,7 +247,7 @@ onload = ()=> {
             tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} santo : Circulación como día domingo`
         }
 
-        if((fecha == 14) && (mes == 1)) { //Definir feriado previo
+        if((fecha == 2) && (mes == 4)) { //Definir feriado previo
             feriadoPrevio = true; 
             rutaObtenida = obtenerDiaRuta(dia);
             tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
