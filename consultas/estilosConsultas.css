@@ -1393,7 +1393,7 @@ select:focus {
     width: 320px;
   }
   #tituloResultado {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   #linea1,
@@ -1401,7 +1401,11 @@ select:focus {
   #linea3,
   #linea4,
   #linea5 {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .linea1{
+    display: none;
   }
   .resultados-cont {
     width: 100%;
