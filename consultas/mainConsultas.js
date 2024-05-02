@@ -148,7 +148,7 @@ const definirPosicion = (sel, val, valorSel, pos) => {
 }
 
 
-// let displayMensaje = ((fecha >= 1 && fecha <= 15) && (mes) && (hora <= 15) && (dia <= 5 && dia >= 1)) ? 'flex' : 'none';
+let displayMensaje = ((fecha >= 1 && fecha <= 14) && (mes) && (hora <= 15) && (dia <= 5 && dia >= 1)) ? 'flex' : 'none';
 
 onload = ()=> {
     $('.mensaje-contenedor').css('display' , `${displayMensaje}`);
@@ -623,7 +623,7 @@ resultadoscont.addEventListener('touchmove', () => {
 indicacioncont.addEventListener('click', () => {
     opcionbase.selected = true;
     opcionbase2.selected = true;
-    linea1.textContent = '';
+    // linea1.textContent = '';
     linea2.textContent = '';
     tituloResultado.textContent = '';
     mensaje2.classList.replace('mensajeAparece', 'mensajeIrse')
