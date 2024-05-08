@@ -283,17 +283,17 @@ onload = ()=> {
             rutaObtenida = semiParoGrilla;
         }
         
-        else if((fecha == 1 && mes == 4)){
+        else if((fecha == 8 && mes == 4)){
             let grillaOcasional;
             let grillaOcasionalVacia = [];
             grillaOcasional = obtenerDiaRuta(0);
             grillaOcasional.forEach(element => {
-                if(element.salida >= 13.55){
+                if(element.salida <= 23.3){
                     grillaOcasionalVacia.push(element)
                 }
             });
                 rutaObtenida = grillaOcasionalVacia;
-                tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo`;
+                // tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo`;
         }
 
         
