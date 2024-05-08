@@ -1219,10 +1219,11 @@ select:focus {
 }
 
 .mensaje3 {
-  position: fixed;
+  position: absolute;
   height: 100vh;
   width: 100%;
   display: none;
+  z-index: 100;
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.945);
@@ -1557,7 +1558,7 @@ select:focus {
   justify-content: center;
   align-items: center;
   position: absolute;
-  z-index: 100;
+  z-index: 90;
   width: 100%;
   height: 100vh;
   overflow: hidden;

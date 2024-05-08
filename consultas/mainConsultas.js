@@ -130,9 +130,9 @@ function activarBoton ()  {
 })
 }
 
-if (fecha == 9 || fecha == 10 && mes == 6) $('.mensaje3').css('display', 'flex')
+if (fecha == 9 && mes == 4) $('.mensaje3').css('display', 'flex')
 
-activarBoton()
+activarBoton();
 
 
 let indiceDeBusqueda;
@@ -247,7 +247,7 @@ onload = ()=> {
             tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} santo : Circulación como día domingo`
         }
 
-        if((fecha == 2) && (mes == 4)) { //Definir feriado previo
+        if((fecha == 10) && (mes == 4)) { //Definir feriado previo
             feriadoPrevio = true; 
             rutaObtenida = obtenerDiaRuta(dia);
             tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
