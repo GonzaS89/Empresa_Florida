@@ -1660,7 +1660,7 @@ select:focus {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  font-family: var(--fuentePrincipal);
+  font-family: var(--fuente5ta);
   padding: 20px;
   text-align: center;
   text-transform: uppercase;
@@ -1674,7 +1674,7 @@ select:focus {
 }
 
 #contenido {
-  font-size: 12px;
+  font-size: 13px;
 }
 #mensaje-logo img {
   width: 40%;
