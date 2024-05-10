@@ -130,7 +130,7 @@ function activarBoton ()  {
 })
 }
 
-// if (fecha == 9 && mes == 4) $('.mensaje3').css('display', 'flex')
+if (fecha == 9 && mes == 4) $('.mensaje3').css('display', 'flex')
 
 activarBoton();
 
