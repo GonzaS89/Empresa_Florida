@@ -204,15 +204,15 @@ onload = ()=> {
             else if ((dia == 1 || semiFeriado || feriadoPrevio) && posicion2 == 2)
             diaRango = ruta[1].slice(1, ruta[1].length)
             else if(fecha == 6 && mes == 6 && posicion2 == 2) diaRango = ruta[1].slice(0, ruta[1].length - 1)
-            else if (x >= 2 && x <= 6) diaRango = ruta[1].slice(0, ruta[1].length);
+            else if (x >= 2 && x < 6) diaRango = ruta[1].slice(0, ruta[1].length);
             else if (x == 6) diaRango = ruta[2].slice(0, ruta[2].length);
             else diaRango = ruta[1]
             
-            console.log(diaRango)
+    
             return diaRango
         }
 
-
+        
     
         let rutaObtenida;
         let tipoDeDia;
@@ -238,63 +238,63 @@ onload = ()=> {
 
         definirDia (fecha, mes)
 
-        if(fecha == 28 && mes == 2) {
-            rutaObtenida = obtenerDiaRuta(6);
-            tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} santo :    Circulación como dia sábado`};
+        // if(fecha == 28 && mes == 2) {
+        //     rutaObtenida = obtenerDiaRuta(6);
+        //     tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} santo :    Circulación como dia sábado`};
 
-        if(fecha == 29 && mes == 2) {
-            rutaObtenida = obtenerDiaRuta(0);
-            tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} santo : Circulación como día domingo`
-        }
+        // if(fecha == 29 && mes == 2) {
+        //     rutaObtenida = obtenerDiaRuta(0);
+        //     tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} santo : Circulación como día domingo`
+        // }
 
-        if((fecha == 10) && (mes == 4)) { //Definir feriado previo
-            feriadoPrevio = true; 
-            rutaObtenida = obtenerDiaRuta(dia);
-            tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
-        }
+        // if((fecha == 10) && (mes == 4)) { //Definir feriado previo
+        //     feriadoPrevio = true; 
+        //     rutaObtenida = obtenerDiaRuta(dia);
+        //     tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
+        // }
     
-        else if ((fecha == 2) && (mes == 10)) {
-            semiFeriado = true;
-            rutaObtenida = obtenerDiaRuta(6);
-            tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día sábado `;
-        }
+        // else if ((fecha == 2) && (mes == 10)) {
+        //     semiFeriado = true;
+        //     rutaObtenida = obtenerDiaRuta(6);
+        //     tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día sábado `;
+        // }
 
-        else if ((fecha == 24) && (mes == 10)){
-            let semiParoGrilla;
-            semiParoGrilla = obtenerDiaRuta(1);
-            let posicion = 0;
-            let posiciones = [];
-            for (const horario of semiParoGrilla) {
-                if(horario.salida >= 8.30 && horario.salida < 11){
-                    posicion = (semiParoGrilla.indexOf(horario))
-                    posiciones.push(posicion);
-                }
-            }
-            semiParoGrilla.splice(posiciones[0], posiciones.length)
-            posicion = 0;
-            posiciones = [];
-            for (const horario of semiParoGrilla) {
-                if(horario.salida >= 14.3 && horario.salida < 17){
-                    posicion = (semiParoGrilla.indexOf(horario))
-                    posiciones.push(posicion);
-                }
-            }
-            semiParoGrilla.splice(posiciones[0], posiciones.length)
-            rutaObtenida = semiParoGrilla;
-        }
+        // else if ((fecha == 24) && (mes == 10)){
+        //     let semiParoGrilla;
+        //     semiParoGrilla = obtenerDiaRuta(1);
+        //     let posicion = 0;
+        //     let posiciones = [];
+        //     for (const horario of semiParoGrilla) {
+        //         if(horario.salida >= 8.30 && horario.salida < 11){
+        //             posicion = (semiParoGrilla.indexOf(horario))
+        //             posiciones.push(posicion);
+        //         }
+        //     }
+        //     semiParoGrilla.splice(posiciones[0], posiciones.length)
+        //     posicion = 0;
+        //     posiciones = [];
+        //     for (const horario of semiParoGrilla) {
+        //         if(horario.salida >= 14.3 && horario.salida < 17){
+        //             posicion = (semiParoGrilla.indexOf(horario))
+        //             posiciones.push(posicion);
+        //         }
+        //     }
+        //     semiParoGrilla.splice(posiciones[0], posiciones.length)
+        //     rutaObtenida = semiParoGrilla;
+        // }
         
-        else if((fecha == 8 && mes == 4)){
-            let grillaOcasional;
-            let grillaOcasionalVacia = [];
-            grillaOcasional = obtenerDiaRuta(0);
-            grillaOcasional.forEach(element => {
-                if(element.salida <= 23.3){
-                    grillaOcasionalVacia.push(element)
-                }
-            });
-                rutaObtenida = grillaOcasionalVacia;
-                // tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo`;
-        }
+        // else if((fecha == 8 && mes == 4)){
+        //     let grillaOcasional;
+        //     let grillaOcasionalVacia = [];
+        //     grillaOcasional = obtenerDiaRuta(0);
+        //     grillaOcasional.forEach(element => {
+        //         if(element.salida <= 23.3){
+        //             grillaOcasionalVacia.push(element)
+        //         }
+        //     });
+        //         rutaObtenida = grillaOcasionalVacia;
+        //         // tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo`;
+        // }
 
         
 
@@ -305,7 +305,7 @@ onload = ()=> {
             }
 
         
-        
+
         let listaObtenida = obtenerLista(rutaObtenida)
         
     
