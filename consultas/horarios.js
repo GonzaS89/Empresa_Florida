@@ -170,7 +170,7 @@ const horariosLvFloAl = [
         "nombre": "16:50",
         "salida": 16.5,
         // "recorrido":"Colonia 4 (Florida) ★ Fortín ★ Esquina Lastra ★ Talar ★ Alderetes ★ Banda del Río Salí ★ Terminal",
-        "recorrido1" : "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alternativa ★ Terminal"
+        "recorrido" : "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alternativa ★ Terminal"
     },
     {
         "nombre": "17:35",

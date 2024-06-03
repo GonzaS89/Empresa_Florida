@@ -130,7 +130,7 @@ function activarBoton ()  {
 })
 }
 
-if (fecha == 9 && mes == 4) $('.mensaje3').css('display', 'flex')
+// if (fecha == 9 && mes == 4) $('.mensaje3').css('display', 'flex')
 
 activarBoton();
 
@@ -148,7 +148,7 @@ const definirPosicion = (sel, val, valorSel, pos) => {
 }
 
 
-let displayMensaje = fecha == 16 ? 'flex' : 'none';
+let displayMensaje = fecha == 3 && (hora >= 8 && hora <= 15) && (dia >= 1 && dia <= 5) ? 'flex' : 'none';
 
 onload = ()=> {
     $('.mensaje-contenedor').css('display' , `${displayMensaje}`);
