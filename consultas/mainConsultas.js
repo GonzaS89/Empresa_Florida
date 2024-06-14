@@ -218,7 +218,7 @@ onload = ()=> {
         let tipoDeDia;
 
         const definirDia = (fecha, mes)=> {
-            tipoDeDia = (fecha == 25 && mes == 4) ? 'feriado' : 'normal';
+            tipoDeDia = (fecha == 17 && mes == 5) ? 'feriado' : 'normal';
             switch (tipoDeDia) {
                 case 'feriado':
                     tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo `;
