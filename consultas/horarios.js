@@ -111,9 +111,9 @@ const horariosLvFloAl = [
         "recorrido": "La Marta ★ Finca Mayo ★ Colonia 4 (FLorida) ★ Colonia 10 (Luisiana) ★ Colonia 4 (Luisiana) (13:15) ★ B° La Cancha ★ Alderetes ★ Talar ★ Alternativa ★ Terminal"
     },
     {
-        "nombre": "12:50",
-        "salida": 12.5,
-        "recorrido": "Finca Mayo ★ Talar ★ Alderetes ★ Banda del Río Salí ★ Terminal",
+        "nombre": "12:40",
+        "salida": 12.40,
+        "recorrido": "Finca Mayo ★ Fortín (12:55) ★ Talar ★ Alderetes ★ Banda del Río Salí ★ Terminal",
         // "recorrido2": "La Marta ★ Colonia 10 ★ Colonia 4 (Luisiana) (13:15) ★ B° La Cancha ★ Alderetes ★ Autopista ★ Terminal",
 
     },
@@ -170,7 +170,7 @@ const horariosLvFloAl = [
         "nombre": "16:50",
         "salida": 16.5,
         // "recorrido":"Colonia 4 (Florida) ★ Fortín ★ Esquina Lastra ★ Talar ★ Alderetes ★ Banda del Río Salí ★ Terminal",
-        "recorrido1" : "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alternativa ★ Terminal"
+        "recorrido" : "Colonia 4 (Luisiana) ★ B° La Cancha ★ Talar ★ Alternativa ★ Terminal"
     },
     {
         "nombre": "17:35",
