@@ -53,7 +53,7 @@ botonDeCambio.addEventListener('click',  ()=> {
     $('.menu').css('display', 'none');
     $('.botonDeCambio').css('display', 'none');
     opcionbase.selected = true;
-    linea1.textContent = '';
+    // linea1.textContent = '';
     linea2.textContent = '';
 })
 
@@ -130,7 +130,7 @@ function activarBoton ()  {
 })
 }
 
-if (fecha == 9 && mes == 4) $('.mensaje3').css('display', 'flex')
+// if (fecha == 9 && mes == 4) $('.mensaje3').css('display', 'flex')
 
 activarBoton();
 
@@ -208,14 +208,17 @@ onload = ()=> {
             else if (x == 6) diaRango = ruta[2].slice(0, ruta[2].length);
             else diaRango = ruta[1]
             
-            console.log(diaRango)
             return diaRango
+
         }
 
 
     
         let rutaObtenida;
         let tipoDeDia;
+
+
+        
 
         const definirDia = (fecha, mes)=> {
             tipoDeDia = (fecha == 1 || fecha == 2 && mes == 3) ? 'feriado' : 'normal';
@@ -247,11 +250,11 @@ onload = ()=> {
             tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} santo : Circulación como día domingo`
         }
 
-        if((fecha == 10) && (mes == 4)) { //Definir feriado previo
-            feriadoPrevio = true; 
-            rutaObtenida = obtenerDiaRuta(dia);
-            tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
-        }
+        // if((fecha == 10) && (mes == 4)) { //Definir feriado previo
+        //     feriadoPrevio = true; 
+        //     rutaObtenida = obtenerDiaRuta(dia);
+        //     tituloResultado.textContent = `Hoy, ${diaSemana.toLowerCase()}, tenés éstos servicios`
+        // }
     
         else if ((fecha == 2) && (mes == 10)) {
             semiFeriado = true;
@@ -296,7 +299,6 @@ onload = ()=> {
                 // tituloResultado.textContent = `Hoy, ${diasDeLaSemana[dia].toLowerCase()} (feriado): Circulación como día domingo`;
         }
 
-        
 
             function obtenerLista(x) {
                 for (i = 0; i < x.length; i++) listaDelDia.push(x[i].salida);
@@ -308,7 +310,6 @@ onload = ()=> {
         
         let listaObtenida = obtenerLista(rutaObtenida)
         
-    
     
         for (let i = 0; i < listaObtenida.length; i++) {
             let horasEnEnteros = (Math.trunc(listaObtenida[i])) * 60;
