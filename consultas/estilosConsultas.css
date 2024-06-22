@@ -1587,7 +1587,7 @@ select:focus {
 
 .mensaje-cuadro {
   width: 85%;
-  height: 40%;
+  height: 55%;
   position: absolute;
   /* position: relative; */
   animation: mensajein .5s forwards;
