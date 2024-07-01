@@ -148,9 +148,9 @@ const definirPosicion = (sel, val, valorSel, pos) => {
 }
 
 
-// let displayMensaje = (fecha >= 3 && fecha <= 14) && (hora >= 8 && hora <= 15) && (dia >= 1 && dia <= 5) ? 'flex' : 'none';
+let displayMensaje = (fecha >= 1 && fecha <= 12) && (hora >= 8 && hora <= 15) && (dia >= 1 && dia <= 5) ? 'flex' : 'none';
 
-let displayMensaje = fecha <= 28 && hora ? 'flex' : 'none';
+
 
 onload = ()=> {
     $('.mensaje-contenedor').css('display' , `${displayMensaje}`);
