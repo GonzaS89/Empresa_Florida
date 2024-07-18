@@ -453,16 +453,16 @@ const horariosLvFloPo = [
         "salida": 13.5,
         "recorrido": "B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
     },
-    {
-        "nombre": "14:50",
-        "salida": 14.5,
-        "recorrido": "B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
-    },
     // {
-    //     "nombre": "15:00",
-    //     "salida": 15.5,
-    //     "recorrido": "Fortín ★ Esquina Lastra ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
+    //     "nombre": "14:50",
+    //     "salida": 14.5,
+    //     "recorrido": "B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
     // },
+    {
+        "nombre": "15:00",
+        "salida": 15.5,
+        "recorrido": "Fortín ★ Esquina Lastra ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
+    },
     {
         "nombre": "15:55",
         "salida": 15.55,
@@ -1265,7 +1265,7 @@ const horariosLvSMPo = [
     {
         "nombre": "14:15",
         "salida": 14.15,
-        "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ B° La Cancha"
+        "recorrido": "Terminal ★ Banda del Río Salí ★ Cevil Pozo ★ Llona ★ Posse ★ Paraíso ★ Esquina Lastra ★ Fortín"
     },
     // {
     //     "nombre": "14:30",
