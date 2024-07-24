@@ -425,11 +425,11 @@ const horariosLvFloPo = [
         "salida": 11.2,
         "recorrido": "B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
     },
-    // {
-    //     "nombre": "11:50",
-    //     "salida": 11.5,
-    //     "recorrido": "B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
-    // },
+    {
+        "nombre": "11:50",
+        "salida": 11.5,
+        "recorrido": "B° La Cancha ★ Paraíso ★ Posse ★ Llona ★ Cevil Pozo ★ Banda del Río Salí ★ Terminal"
+    },
     {
         "nombre": "12:40",
         "salida": 12.40,
