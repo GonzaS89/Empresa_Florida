@@ -925,15 +925,20 @@ const horariosLvSMAl = [
         "recorrido": "Terminal ★ Banda del Río Salí ★ Alderetes ★ Talar ★ Esquina Lastra ★ Fortín ★ Finca Mayo",
         "recorrido2": "Terminal ★ Comisaria 11 ★ Alternativa ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana)"
     },
-    {
-        "nombre": "20:20",
-        "salida": 20.2,
-        "recorrido": "Terminal ★ Comisaria 11 ★ Alternativa ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana)"
-    },
+    // {
+    //     "nombre": "20:20",
+    //     "salida": 20.2,
+    //     "recorrido": "Terminal ★ Comisaria 11 ★ Alternativa ★ Talar ★ B° La Cancha ★ Colonia 4 (Luisiana)"
+    // },
     {
         "nombre": "20:30",
         "salida": 20.3,
-        "recorrido": "Terminal ★ Banda del Río Salí ★ Alderetes ★ Talar ★ Esquina Lastra ★ Fortín"
+        "recorrido": "Terminal ★ Alternativa ★ Talar ★ Esquina Lastra ★ Fortín ★ B° La Cancha ★ Colonia 4 (Luisiana)"
+    },
+    {
+        "nombre": "20:45",
+        "salida": 20.45,
+        "recorrido": "Banda del Río Salí (Chango Más) ★ Alderetes ★ Talar ★ Esquina Lastra ★ Fortín"
     },
     {
         "nombre": "21:00",
