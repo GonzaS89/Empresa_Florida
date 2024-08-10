@@ -1020,7 +1020,7 @@ const horariosSSMAl = [
     {
         "nombre": "13:30",
         "salida": 13.3,
-        "recorrido": "Terminal ★ Banda del Río Salí ★ Alderetes ★ Cochuchal ★ Colonia 4 (Luisiana) ★ Finca Mayo"
+        "recorrido": "Terminal ★ Banda del Río Salí ★ Alderetes ★ Talar ★ Colonia 4 (Luisiana) ★ Finca Mayo"
     },
     {
         "nombre": "14:00",
