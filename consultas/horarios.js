@@ -2,7 +2,6 @@
 
 
 const horariosLvFloAl = [
-
     {
         "nombre": "04:40",
         "salida": 4.4,
