@@ -30,6 +30,7 @@ const definirPrecioBoleto = (inicio, final, recorrido) => {
         if (final == bandaRS) { return codigo_26 }
         if (final == terminal) { return codigo_27 }
     }
+    
     if (inicio == alderetes) {
         if (final == bandaRS || final == cochuchal || final == talar) { return codigo_06 };
         if (final == florida || final == terminal || final == col4Luisiana || final == fortin) { return codigo_08 };
