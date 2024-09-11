@@ -240,7 +240,7 @@ body::-webkit-scrollbar-track {
 }
 #minutos,
 #mes {
-  width: 100%;
+  min-width: 100%;
   background: var(--fondoAzulFuerte);
   padding: 5px;
 }
