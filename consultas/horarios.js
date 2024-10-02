@@ -1,7 +1,7 @@
 // Grilla horaria
 
 
-const horaRíosLvFloAl = [
+const horariosLvFloAl = [
     {
         "nombre": "04:40",
         "salida": 4.4,
@@ -203,7 +203,7 @@ const horaRíosLvFloAl = [
     // }
 
 ]
-const horaRíosSFloAl = [
+const horariosSFloAl = [
     {
         "nombre": "04:40",
         "salida": 4.4,
@@ -311,7 +311,7 @@ const horaRíosSFloAl = [
     }
 
 ]
-const horaRíosDFloAl = [
+const horariosDFloAl = [
 
     {
         "nombre": "07:40",
@@ -359,7 +359,7 @@ const horaRíosDFloAl = [
         "recorrido": "Finca Mayo → Colonia 10 → Colonia 4 (Luisiana) B° La Cancha → Talar → Alderetes → Banda del Río Salí → Terminal"
     }
 ]
-const horaRíosLvFloPo = [
+const horariosLvFloPo = [
 
     {
         "nombre": "04:50",
@@ -525,7 +525,7 @@ const horaRíosLvFloPo = [
     //     "recorrido": "B° La Cancha → Paraíso → Posse → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     // }
 ]
-const horaRíosSFloPo = [
+const horariosSFloPo = [
     {
         "nombre": "04:50",
         "salida": 4.5,
@@ -667,7 +667,7 @@ const horaRíosSFloPo = [
         "recorrido": "B° La Cancha → Paraíso → Posse → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     }
 ]
-const horaRíosDFloPo = [
+const horariosDFloPo = [
     {
         "nombre": "04:50",
         "salida": 4.5,
@@ -770,7 +770,7 @@ const horaRíosDFloPo = [
     },
 
 ]
-const horaRíosLvSMAl = [
+const horariosLvSMAl = [
 
     {
         "nombre": "05:20",
@@ -966,7 +966,7 @@ const horaRíosLvSMAl = [
     //     "recorrido": "Terminal → Comisaria 11 → Autopista → Alderetes → Talar → Esquina Lastra → Fortín → Colonia 4 (Luisiana)"
     // }
 ]
-const horaRíosSSMAl = [
+const horariosSSMAl = [
     {
         "nombre": "05:20",
         "salida": 5.2,
@@ -1098,7 +1098,7 @@ const horaRíosSSMAl = [
         "recorrido": "Terminal → Comisaria 11 → Autopista → Alderetes → Talar → Esquina Lastra → Fortín → Colonia 4 (Luisiana)"
     }
 ]
-const horaRíosDSMAl = [
+const horariosDSMAl = [
 
     {
         "nombre": "06:40",
@@ -1167,7 +1167,7 @@ const horaRíosDSMAl = [
     },
 
 ]
-const horaRíosLvSMPo = [
+const horariosLvSMPo = [
     {
         "nombre": "00:30",
         "salida": 0.3,
@@ -1404,7 +1404,7 @@ const horaRíosLvSMPo = [
         "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraíso → B° La Cancha"
     }
 ]
-const horaRíosSSMPo = [
+const horariosSSMPo = [
     {
         "nombre":"00:30",
         "salida":0.3,
@@ -1561,7 +1561,7 @@ const horaRíosSSMPo = [
         "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraíso → Esquina Lastra → Fortín → Fonda → Colonia 4 (Luisiana)"
     },
 ]
-const horaRíosDSMPo = [
+const horariosDSMPo = [
     {
         "nombre": "06:00",
         "salida": 6,
@@ -3437,16 +3437,16 @@ const terminalSieteDeAbrilLaV = [
     //     "salida": 6.15,
     //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Las Cejas → 7 de Abril"
     // },
-    {
-        "nombre": "12:45",
-        "salida": 12.3,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Las Cejas → 7 de Abril"
-    },
     // {
-    //     "nombre": "15:45",
-    //     "salida": 15.45,
+    //     "nombre": "12:45",
+    //     "salida": 12.3,
     //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Las Cejas → 7 de Abril"
-    // }
+    // },
+    {
+        "nombre": "15:45",
+        "salida": 15.45,
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Las Cejas → 7 de Abril"
+    }
 ]
 const terminalSieteDeAbrilS = [
     {
@@ -3705,10 +3705,10 @@ const terminalLasCejasD = [
         "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos → Las Cejas"
     },
 ]
-const floridaAldTucuman = [horaRíosDFloAl, horaRíosLvFloAl, horaRíosSFloAl];
-const terminalAldFlorida = [horaRíosDSMAl, horaRíosLvSMAl, horaRíosSSMAl];
-const floridaPosseTucuman = [horaRíosDFloPo, horaRíosLvFloPo, horaRíosSFloPo];
-const terminalPosseFlorida = [horaRíosDSMPo, horaRíosLvSMPo, horaRíosSSMPo];
+const floridaAldTucuman = [horariosDFloAl, horariosLvFloAl, horariosSFloAl];
+const terminalAldFlorida = [horariosDSMAl, horariosLvSMAl, horariosSSMAl];
+const floridaPosseTucuman = [horariosDFloPo, horariosLvFloPo, horariosSFloPo];
+const terminalPosseFlorida = [horariosDSMPo, horariosLvSMPo, horariosSSMPo];
 const posseLTerminal = [posseTerminalD, posseTerminalLaV, posseTerminalS];
 const terminalPosseL = [terminalPosseD, terminalPosseLaV, terminalPosseS];
 const ralosTerminal = [ralosTerminalD, ralosTerminalLaV, ralosTerminalS];
