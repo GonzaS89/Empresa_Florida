@@ -3437,16 +3437,16 @@ const terminalSieteDeAbrilLaV = [
     //     "salida": 6.15,
     //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Las Cejas → 7 de Abril"
     // },
-    {
-        "nombre": "12:45",
-        "salida": 12.3,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Las Cejas → 7 de Abril"
-    },
     // {
-    //     "nombre": "15:45",
-    //     "salida": 15.45,
+    //     "nombre": "12:45",
+    //     "salida": 12.3,
     //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Las Cejas → 7 de Abril"
-    // }
+    // },
+    {
+        "nombre": "15:45",
+        "salida": 15.45,
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Las Cejas → 7 de Abril"
+    }
 ]
 const terminalSieteDeAbrilS = [
     {
