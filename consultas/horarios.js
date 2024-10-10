@@ -1,7 +1,7 @@
 // Grilla horaria
 
 
-const horaRíosLvFloAl = [
+const horariosLvFloAl = [
     {
         "nombre": "04:40",
         "salida": 4.4,
@@ -203,7 +203,7 @@ const horaRíosLvFloAl = [
     // }
 
 ]
-const horaRíosSFloAl = [
+const horariosSFloAl = [
     {
         "nombre": "04:40",
         "salida": 4.4,
@@ -311,7 +311,7 @@ const horaRíosSFloAl = [
     }
 
 ]
-const horaRíosDFloAl = [
+const horariosDFloAl = [
 
     {
         "nombre": "07:40",
@@ -359,7 +359,7 @@ const horaRíosDFloAl = [
         "recorrido": "Finca Mayo → Colonia 10 → Colonia 4 (Luisiana) B° La Cancha → Talar → Alderetes → Banda del Río Salí → Terminal"
     }
 ]
-const horaRíosLvFloPo = [
+const horariosLvFloPo = [
 
     {
         "nombre": "04:50",
@@ -525,7 +525,7 @@ const horaRíosLvFloPo = [
     //     "recorrido": "B° La Cancha → Paraíso → Posse → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     // }
 ]
-const horaRíosSFloPo = [
+const horariosSFloPo = [
     {
         "nombre": "04:50",
         "salida": 4.5,
@@ -667,7 +667,7 @@ const horaRíosSFloPo = [
         "recorrido": "B° La Cancha → Paraíso → Posse → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     }
 ]
-const horaRíosDFloPo = [
+const horariosDFloPo = [
     {
         "nombre": "04:50",
         "salida": 4.5,
@@ -678,11 +678,11 @@ const horaRíosDFloPo = [
         "salida": 5.55,
         "recorrido": "B° La Cancha → Paraíso → Posse → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
-    {
-        "nombre": "06:55",
-        "salida": 6.55,
-        "recorrido": "Fortín → Esquina Lastra → Paraíso → Posse → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
-    },
+    // {
+    //     "nombre": "06:55",
+    //     "salida": 6.55,
+    //     "recorrido": "Fortín → Esquina Lastra → Paraíso → Posse → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+    // },
     {
         "nombre": "07:55",
         "salida": 7.55,
@@ -736,7 +736,7 @@ const horaRíosDFloPo = [
     {
         "nombre": "17:55",
         "salida": 17.55,
-        "recorrido": "B° La Cancha → Paraíso → Posse → DispensaRío → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "B° La Cancha → Paraíso → Posse → Dispensario → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
         "nombre": "18:55",
@@ -770,7 +770,7 @@ const horaRíosDFloPo = [
     },
 
 ]
-const horaRíosLvSMAl = [
+const horariosLvSMAl = [
 
     {
         "nombre": "05:20",
@@ -966,7 +966,7 @@ const horaRíosLvSMAl = [
     //     "recorrido": "Terminal → Comisaria 11 → Autopista → Alderetes → Talar → Esquina Lastra → Fortín → Colonia 4 (Luisiana)"
     // }
 ]
-const horaRíosSSMAl = [
+const horariosSSMAl = [
     {
         "nombre": "05:20",
         "salida": 5.2,
@@ -1098,7 +1098,7 @@ const horaRíosSSMAl = [
         "recorrido": "Terminal → Comisaria 11 → Autopista → Alderetes → Talar → Esquina Lastra → Fortín → Colonia 4 (Luisiana)"
     }
 ]
-const horaRíosDSMAl = [
+const horariosDSMAl = [
 
     {
         "nombre": "06:40",
@@ -1167,7 +1167,7 @@ const horaRíosDSMAl = [
     },
 
 ]
-const horaRíosLvSMPo = [
+const horariosLvSMPo = [
     {
         "nombre": "00:30",
         "salida": 0.3,
@@ -1404,7 +1404,7 @@ const horaRíosLvSMPo = [
         "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraíso → B° La Cancha"
     }
 ]
-const horaRíosSSMPo = [
+const horariosSSMPo = [
     {
         "nombre":"00:30",
         "salida":0.3,
@@ -1561,7 +1561,7 @@ const horaRíosSSMPo = [
         "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraíso → Esquina Lastra → Fortín → Fonda → Colonia 4 (Luisiana)"
     },
 ]
-const horaRíosDSMPo = [
+const horariosDSMPo = [
     {
         "nombre": "06:00",
         "salida": 6,
@@ -1637,11 +1637,11 @@ const horaRíosDSMPo = [
         "salida": 18.3,
         "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraíso → Esquina Lastra → Fortín"
     },
-    {
-        "nombre": "19:00",
-        "salida": 19,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraíso → B° La Cancha"
-    },
+    // {
+    //     "nombre": "19:00",
+    //     "salida": 19,
+    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraíso → B° La Cancha"
+    // },
     {
         "nombre": "19:30",
         "salida": 19.3,
@@ -1657,11 +1657,11 @@ const horaRíosDSMPo = [
         "salida": 20.30,
         "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraíso → B° La Cancha"
     },
-    {
-        "nombre": "21:00",
-        "salida": 21,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraíso → B° La Cancha → Colonia 4 (Luisiana)"
-    },
+    // {
+    //     "nombre": "21:00",
+    //     "salida": 21,
+    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Posse → Paraíso → B° La Cancha → Colonia 4 (Luisiana)"
+    // },
     {
         "nombre": "21:30",
         "salida": 21.3,
@@ -1692,39 +1692,39 @@ const posseTerminalLaV = [
     // {
     //     "nombre": "05:55",
     //     "salida": 5.55,
-    //     "recorrido": "DispensaRío → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+    //     "recorrido": "Dispensario → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     // },
     {
         "nombre": "06:05",
         "salida": 6.05,
-        "recorrido": "DispensaRío → Fila de la orilla → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Dispensario → Fila de la orilla → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     // {
     //     "nombre": "06:08",
     //     "salida": 6.08,
-    //     "recorrido": "DispensaRío → Fila del medio → Cevil Pozo → Banda del Río Salí → Terminal"
+    //     "recorrido": "Dispensario → Fila del medio → Cevil Pozo → Banda del Río Salí → Terminal"
     // },
     {
         "nombre": "06:30",
         "salida": 6.3,
-        "recorrido": "DispensaRío → Bosque → Fila del Medio → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Dispensario → Bosque → Fila del Medio → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     // {
     //     "nombre": "06:35",
     //     "salida": 6.35,
     //     "recorrido": "Bosque → Fila del medio → Cevil Pozo → Banda del Río Salí → Terminal",
-    //     "recorrido2": "DispensaRío → Fila del medio → Cevil Pozo → Banda del Río Salí → Terminal"
+    //     "recorrido2": "Dispensario → Fila del medio → Cevil Pozo → Banda del Río Salí → Terminal"
     // },
     {
         "nombre": "07:08",
         "salida": 7.08,
-        "recorrido": "DispensaRío → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal",
+        "recorrido": "Dispensario → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal",
         "recorrido2": "Bosque → Fila del Medio → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
         "nombre": "07:40",
         "salida": 7.40,
-        "recorrido": "DispensaRío → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Dispensario → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     // {
     //     "nombre": "07:40",
@@ -1736,43 +1736,43 @@ const posseTerminalLaV = [
         "nombre": "08:10",
         "salida": 8.1,
         "recorrido": "Bosque → Fila del medio → Cevil Pozo → Banda del Río Salí → Terminal",
-        "recorrido2": "DispensaRío → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido2": "Dispensario → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
         "nombre": "08:35",
         "salida": 8.35,
-        "recorrido": "DispensaRío → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Dispensario → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
         "nombre": "09:10",
         "salida": 9.1,
-        "recorrido": "DispensaRío → Fila del medio → Cevil Pozo → Banda del Río Salí → Terminal",
-        "recorrido2": "DispensaRío → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Dispensario → Fila del medio → Cevil Pozo → Banda del Río Salí → Terminal",
+        "recorrido2": "Dispensario → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
         "nombre": "10:10",
         "salida": 10.1,
-        "recorrido": "DispensaRío → Fila del medio → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Dispensario → Fila del medio → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
         "nombre": "11:10",
         "salida": 11.1,
-        "recorrido": "DispensaRío → Fila de la orilla → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Dispensario → Fila de la orilla → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     // {
     //     "nombre": "12:50",
     //     "salida": 12.5,
-    //     "recorrido": "DispensaRío → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+    //     "recorrido": "Dispensario → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     // },
     // {
     //     "nombre": "13:00",
     //     "salida": 13,
-    //     "recorrido": "DispensaRío → Fila del Medio → Cevil Pozo → Banda del Río Salí → Terminal"
+    //     "recorrido": "Dispensario → Fila del Medio → Cevil Pozo → Banda del Río Salí → Terminal"
     // },
     {
         "nombre": "14:10",
         "salida": 14.1,
-        "recorrido": "DispensaRío → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Dispensario → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
         "nombre": "14:40",
@@ -1787,40 +1787,40 @@ const posseTerminalLaV = [
     {
         "nombre": "16:00",
         "salida": 16,
-        "recorrido": "DispensaRío → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Dispensario → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
         "nombre": "16:10",
         "salida": 16.1,
-        "recorrido": "DispensaRío → Fila del Medio → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Dispensario → Fila del Medio → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
         "nombre": "17:10",
         "salida": 17.1,
-        "recorrido": "DispensaRío → Fila del medio → Cevil Pozo → Banda del Río Salí → Terminal",
+        "recorrido": "Dispensario → Fila del medio → Cevil Pozo → Banda del Río Salí → Terminal",
         "recorrido2": "Plaza → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     // {
     //     "nombre": "17:45",
     //     "salida": 17.45,
-    //     "recorrido": "DispensaRío → Fila del medio → Cevil Pozo → Banda del Río Salí → Terminal"
+    //     "recorrido": "Dispensario → Fila del medio → Cevil Pozo → Banda del Río Salí → Terminal"
     // },
     {
         "nombre": "18:10",
         "salida": 18.1,
-        "recorrido": "DispensaRío → Fila del medio → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Dispensario → Fila del medio → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     // {
     //     "nombre": "19:10",
     //     "salida": 19.1,
-    //     "recorrido": "DispensaRío → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+    //     "recorrido": "Dispensario → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     // },
 ]
 const posseTerminalS = [
     {
         "nombre": "06:05",
         "salida": 6.05,
-        "recorrido": "DispensaRío → Fila del Medio → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Dispensario → Fila del Medio → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
         "nombre": "07:05",
@@ -1830,7 +1830,7 @@ const posseTerminalS = [
     {
         "nombre": "08:05",
         "salida": 8.05,
-        "recorrido": "DispensaRío → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Dispensario → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
         "nombre": "08:10",
@@ -1840,47 +1840,47 @@ const posseTerminalS = [
     {
         "nombre": "09:10",
         "salida": 9.1,
-        "recorrido": "DispensaRío → Fila del Medio → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Dispensario → Fila del Medio → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     // {
     //     "nombre": "10:10",
     //     "salida": 10.1,
-    //     "recorrido": "DispensaRío → Fila del Medio → Cevil Pozo → Banda del Río Salí → Terminal"
+    //     "recorrido": "Dispensario → Fila del Medio → Cevil Pozo → Banda del Río Salí → Terminal"
     // },
     {
         "nombre": "13:00",
         "salida": 13,
-        "recorrido": "DispensaRío → Fila del Medio → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Dispensario → Fila del Medio → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     // {
     //     "nombre": "15:05",
     //     "salida": 13,
-    //     "recorrido": "DispensaRío → Fila de la orilla → Cevil Pozo → Banda del Río Salí → Terminal"
+    //     "recorrido": "Dispensario → Fila de la orilla → Cevil Pozo → Banda del Río Salí → Terminal"
     // },
     {
         "nombre": "16:10",
         "salida": 16.1,
-        "recorrido": "DispensaRío → Fila del Medio → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Dispensario → Fila del Medio → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     // {
     //     "nombre": "17:05",
     //     "salida": 17.05,
-    //     "recorrido": "DispensaRío → Fila de la orilla → Cevil Pozo → Banda del Río Salí → Terminal"
+    //     "recorrido": "Dispensario → Fila de la orilla → Cevil Pozo → Banda del Río Salí → Terminal"
     // },
     {
         "nombre": "17:10",
         "salida": 17.1,
-        "recorrido": "DispensaRío → Fila del Medio → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Dispensario → Fila del Medio → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
         "nombre": "18:10",
         "salida": 18.10,
-        "recorrido": "DispensaRío → Fila dela orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Dispensario → Fila dela orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     }
     // {
     //     "nombre": "19:05",
     //     "salida": 19.05,
-    //     "recorrido": "DispensaRío → Fila dela orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+    //     "recorrido": "Dispensario → Fila dela orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     // }
 ]
 const posseTerminalD = [
@@ -1888,31 +1888,31 @@ const posseTerminalD = [
     {
         "nombre": "06:08",
         "salida": 6.08,
-        "recorrido": "DispensaRío → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Dispensario → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },{
         "nombre": "09:10",
         "salida": 9.1,
-        "recorrido": "DispensaRío → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Dispensario → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     {
         "nombre": "10:10",
         "salida": 10.1,
-        "recorrido": "DispensaRío → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+        "recorrido": "Dispensario → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     },
     // {
     //     "nombre": "11:10",
     //     "salida": 11.1,
-    //     "recorrido": "DispensaRío → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+    //     "recorrido": "Dispensario → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     // },
     // {
     //     "nombre": "12:10",
     //     "salida": 12.1,
-    //     "recorrido": "DispensaRío → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+    //     "recorrido": "Dispensario → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     // },
     // {
     //     "nombre": "15:05",
     //     "salida": 15.05,
-    //     "recorrido": "DispensaRío → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+    //     "recorrido": "Dispensario → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     // },
     // {
     //     "nombre": "16:10",
@@ -1922,13 +1922,13 @@ const posseTerminalD = [
     // {
     //     "nombre": "17:10",
     //     "salida": 17.1,
-    //     "recorrido": "DispensaRío → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+    //     "recorrido": "Dispensario → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
     // },
-    {
-        "nombre": "18:05",
-        "salida": 18.05,
-        "recorrido": "DispensaRío → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
-    }
+    // {
+    //     "nombre": "18:05",
+    //     "salida": 18.05,
+    //     "recorrido": "Dispensario → Fila de la orilla → Esquina Llona → Cevil Pozo → Banda del Río Salí → Terminal"
+    // }
 ];
 const terminalPosseLaV = [
     {
@@ -1939,7 +1939,7 @@ const terminalPosseLaV = [
     // {
     //     "nombre": "08:10",
     //     "salida": 8.1,
-    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → → DispensaRío"
+    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → → Dispensario"
     // },
     {
         "nombre": "08:30",
@@ -1949,17 +1949,17 @@ const terminalPosseLaV = [
        {
         "nombre": "10:25",
         "salida": 11.35,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → DispensaRío"
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → Dispensario"
     },
     {
         "nombre": "11:35",
         "salida": 11.35,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → DispensaRío"
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → Dispensario"
     },
     // {
     //     "nombre": "12:00",
     //     "salida": 12,
-    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → DispensaRío"
+    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → Dispensario"
     // },
     {
         "nombre": "12:15",
@@ -1969,33 +1969,33 @@ const terminalPosseLaV = [
        {
         "nombre": "12:25",
         "salida": 12.25,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → DispensaRío"
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → Dispensario"
     },
 //     {
 //       "nombre": "12:45",
 //       "salida": 12.45,
-//       "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Fila del medio → Bosque → DispensaRío"
+//       "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Fila del medio → Bosque → Dispensario"
 //   },
     {
         "nombre": "13:00",
         "salida": 13,
         "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Fila del medio → Bosque",
-        "recorrido2" :"Terminal → Banda del Río Salí → Cevil Pozo → Fila del medio → DispensaRío"
+        "recorrido2" :"Terminal → Banda del Río Salí → Cevil Pozo → Fila del medio → Dispensario"
     },
     // {
     //     "nombre": "13:30",
     //     "salida": 13.3,
-    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Fila del medio → Bosque → DispensaRío → Paraiso → Florida"
+    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Fila del medio → Bosque → Dispensario → Paraiso → Florida"
     // },
     {
         "nombre": "14:05",
         "salida": 14.05,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → DispensaRío"
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → Dispensario"
     },
     {
         "nombre": "15:00",
         "salida": 15,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Fila del medio → Bosque → DispensaRío"
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Fila del medio → Bosque → Dispensario"
     },
     {
         "nombre": "15:30",
@@ -2005,7 +2005,7 @@ const terminalPosseLaV = [
        {
         "nombre": "16:00",
         "salida": 16,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → DispensaRío"
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → Dispensario"
     },
     {
         "nombre": "16:30",
@@ -2020,7 +2020,7 @@ const terminalPosseLaV = [
     {
         "nombre": "17:55",
         "salida": 17.55,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Fila de la orilla → DispensaRío"
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Fila de la orilla → Dispensario"
     },
     {
         "nombre": "18:55",
@@ -2030,44 +2030,44 @@ const terminalPosseLaV = [
     {
         "nombre": "19:25",
         "salida": 19.25,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → DispensaRío"
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → Dispensario"
     },
     {
         "nombre": "20:00",
         "salida": 20,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → DispensaRío"
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → Dispensario"
     },
     {
       "nombre": "20:25",
       "salida": 20.25,
-      "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → DispensaRío"
+      "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → Dispensario"
   },
     {
         "nombre": "21:25",
         "salida": 21.2,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → DispensaRío"
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → Dispensario"
     },
     {
         "nombre": "21:50",
         "salida": 21.5,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → DispensaRío"
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → Dispensario"
     },
     // {
     //     "nombre": "22:20",
     //     "salida": 22.2,
-    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Fila del medio → DispensaRío"
+    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Fila del medio → Dispensario"
     // },
       {
         "nombre": "23:20",
         "salida": 23.2,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → DispensaRío"
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → Dispensario"
     },
 ]
 const terminalPosseS = [
     {
         "nombre": "05:25",
         "salida": 5.25,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → Bosque → DispensaRío"
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → Bosque → Dispensario"
     },
     {
         "nombre": "08:30",
@@ -2077,7 +2077,7 @@ const terminalPosseS = [
     {
         "nombre": "11:40",
         "salida": 11.4,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → DispensaRío"
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → Dispensario"
     },
     {
         "nombre": "12:15",
@@ -2092,12 +2092,12 @@ const terminalPosseS = [
     // {
     //     "nombre": "14:05",
     //     "salida": 14.05,
-    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → DispensaRío"
+    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → Dispensario"
     // },
     // {
     //     "nombre": "15:00",
     //     "salida": 15,
-    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → DispensaRío"
+    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → Dispensario"
     // },
     {
         "nombre": "15:30",
@@ -2112,39 +2112,39 @@ const terminalPosseS = [
     {
         "nombre": "17:30",
         "salida": 17.3,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → DispensaRío"
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → Dispensario"
     },
     // {
     //     "nombre": "19:00",
     //     "salida": 19,
-    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → DispensaRío"
+    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Fila de la orilla → Dispensario"
     // },
     {
         "nombre": "23:30",
         "salida": 23.3,
-        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Fila de la orilla → DispensaRío"
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Fila de la orilla → Dispensario"
     },
 ]
 const terminalPosseD = [
     // {
     //     "nombre": "19:50",
     //     "salida": 19.5,
-    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Fila de la orilla → Esquina Llona → DispensaRío"
+    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Fila de la orilla → Esquina Llona → Dispensario"
     // },
-    // {
-    //     "nombre": "21:20",
-    //     "salida": 21.2,
-    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Fila de la orilla → Esquina Llona → DispensaRío"
-    // },
+    {
+        "nombre": "21:15",
+        "salida": 21.15,
+        "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Fila de la orilla → Esquina Llona → Dispensario"
+    },
     // {
     //     "nombre": "22:00",
     //     "salida": 22,
-    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Fila de la orilla → Esquina Llona → DispensaRío"
+    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Fila de la orilla → Esquina Llona → Dispensario"
     // },
     // {
     //     "nombre": "22:20",
     //     "salida": 22.2,
-    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Fila de la orilla → Esquina Llona → DispensaRío"
+    //     "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Fila de la orilla → Esquina Llona → Dispensario"
     // }
 ];
 const ralosTerminalLaV = [
@@ -3705,10 +3705,10 @@ const terminalLasCejasD = [
         "recorrido": "Terminal → Banda del Río Salí → Cevil Pozo → Esquina Llona → Los Ralos → Las Cejas"
     },
 ]
-const floridaAldTucuman = [horaRíosDFloAl, horaRíosLvFloAl, horaRíosSFloAl];
-const terminalAldFlorida = [horaRíosDSMAl, horaRíosLvSMAl, horaRíosSSMAl];
-const floridaPosseTucuman = [horaRíosDFloPo, horaRíosLvFloPo, horaRíosSFloPo];
-const terminalPosseFlorida = [horaRíosDSMPo, horaRíosLvSMPo, horaRíosSSMPo];
+const floridaAldTucuman = [horariosDFloAl, horariosLvFloAl, horariosSFloAl];
+const terminalAldFlorida = [horariosDSMAl, horariosLvSMAl, horariosSSMAl];
+const floridaPosseTucuman = [horariosDFloPo, horariosLvFloPo, horariosSFloPo];
+const terminalPosseFlorida = [horariosDSMPo, horariosLvSMPo, horariosSSMPo];
 const posseLTerminal = [posseTerminalD, posseTerminalLaV, posseTerminalS];
 const terminalPosseL = [terminalPosseD, terminalPosseLaV, terminalPosseS];
 const ralosTerminal = [ralosTerminalD, ralosTerminalLaV, ralosTerminalS];
